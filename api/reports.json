@@ -1,0 +1,126 @@
+{
+  "version": 2,
+  "lastUpdated": "2026-05-27T00:00:00Z",
+  "reports": [
+    {
+      "id": "1",
+      "title": "Grandparent Emergency Scam",
+      "summary": "Scammers call pretending to be your grandchild in trouble — arrested, in an accident, or at the hospital — and urgently need bail money or medical fees sent via gift cards or wire transfer.",
+      "category": "Phone Scam",
+      "firstReported": "2020-01-01T00:00:00Z",
+      "reportCount": 2847,
+      "relatedScams": ["AI Voice Clone Scam", "IRS Impersonation Scam"],
+      "safetyTips": [
+        "Never send money without calling the person directly on a number you already know.",
+        "Create a secret family code word that only your real family members would know.",
+        "Real emergencies don't require gift cards — that is always a scam.",
+        "Hang up and call your grandchild's known phone number to verify."
+      ]
+    },
+    {
+      "id": "2",
+      "title": "AI Voice Clone Scam",
+      "summary": "Using just a few seconds of audio from social media, scammers clone a loved one's voice with AI and call you claiming to be in an emergency. The voice sounds completely real.",
+      "category": "AI Scam",
+      "firstReported": "2023-03-15T00:00:00Z",
+      "reportCount": 1243,
+      "relatedScams": ["Grandparent Emergency Scam"],
+      "safetyTips": [
+        "Establish a family safe word that AI cannot know — use it to verify identity.",
+        "Hang up and call back on a number stored in your own contacts.",
+        "Be suspicious of any caller who immediately asks for money.",
+        "Make your social media voice content private to limit what AI can clone."
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Fake IRS Tax Refund Scam",
+      "summary": "Calls, texts, or emails claiming you owe back taxes and will be arrested, or that you are owed a refund that requires you to pay a processing fee first — often via gift cards.",
+      "category": "Government Scam",
+      "firstReported": "2015-06-01T00:00:00Z",
+      "reportCount": 3921,
+      "relatedScams": ["Social Security Impersonation"],
+      "safetyTips": [
+        "The IRS never calls demanding immediate payment or gift cards.",
+        "The IRS never threatens arrest over the phone.",
+        "Verify any IRS notice by calling 1-800-829-1040 directly.",
+        "The IRS contacts taxpayers by mail first, never phone or email."
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Tech Support Pop-Up Scam",
+      "summary": "A scary browser pop-up claims your computer is infected with viruses and displays a 'Microsoft' or 'Apple' phone number. Calling it connects you to scammers who request remote access to your computer.",
+      "category": "Tech Scam",
+      "firstReported": "2016-04-01T00:00:00Z",
+      "reportCount": 2156,
+      "relatedScams": ["Remote Access Scam"],
+      "safetyTips": [
+        "Never call a phone number shown in a browser pop-up.",
+        "Legitimate companies like Microsoft and Apple do not make unsolicited support calls.",
+        "Close the browser tab and restart your browser to clear the pop-up.",
+        "Never allow remote access to your computer from an unsolicited caller."
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Romance / Military Scam",
+      "summary": "Fake online dating profiles — often claiming to be deployed military, offshore oil workers, or traveling doctors — build a relationship over weeks before creating a financial crisis requiring money.",
+      "category": "Romance Scam",
+      "firstReported": "2010-01-01T00:00:00Z",
+      "reportCount": 1872,
+      "relatedScams": ["Crypto Investment Scam"],
+      "safetyTips": [
+        "Never send money to someone you have not met in person.",
+        "Do a reverse image search on their profile photos — they are often stolen.",
+        "Be suspicious of anyone who refuses to video chat or always cancels.",
+        "Deployed US military personnel have access to military banking and don't need money wired."
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Crypto Investment Scam",
+      "summary": "Promises of guaranteed high returns on cryptocurrency or forex investments, often introduced through social media, fake apps, or romance relationships. Victims lose everything when they try to withdraw.",
+      "category": "Investment Scam",
+      "firstReported": "2019-01-01T00:00:00Z",
+      "reportCount": 4103,
+      "relatedScams": ["Romance Scam", "Pig Butchering Scam"],
+      "safetyTips": [
+        "No legitimate investment guarantees returns — that claim is always a lie.",
+        "Verify any investment firm with the SEC at investor.gov or FINRA at BrokerCheck.",
+        "Never invest money you cannot afford to lose completely.",
+        "If someone you met online is suggesting investments, that is a major red flag."
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Medicare / Health Insurance Scam",
+      "summary": "Callers pretend to be from Medicare or a health insurance company offering free equipment or coverage updates, then steal your Medicare number to commit fraud and bill for services you never received.",
+      "category": "Government Scam",
+      "firstReported": "2018-01-01T00:00:00Z",
+      "reportCount": 1654,
+      "relatedScams": ["IRS Impersonation Scam"],
+      "safetyTips": [
+        "Medicare will never call you asking for your Medicare number.",
+        "Guard your Medicare number like a credit card number.",
+        "Review your Medicare Summary Notice for charges you don't recognize.",
+        "Report suspected fraud to 1-800-MEDICARE."
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Lottery / Prize Notification Scam",
+      "summary": "You receive a letter, call, or email claiming you've won a lottery or sweepstakes you never entered. To claim the prize you must first pay taxes, fees, or customs charges upfront.",
+      "category": "Phone Scam",
+      "firstReported": "2005-01-01T00:00:00Z",
+      "reportCount": 2390,
+      "relatedScams": ["Advance Fee Fraud"],
+      "safetyTips": [
+        "You cannot win a contest you never entered.",
+        "Legitimate prizes never require upfront fees or taxes to claim.",
+        "Winning notifications are never sent by email, phone, or letter.",
+        "The only real lottery is one you purchased a ticket for yourself."
+      ]
+    }
+  ]
+}

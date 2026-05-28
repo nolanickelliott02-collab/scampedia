@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scampedia — Know the Scam Before It Hits</title>
+  <meta name="description" content="Browse the Scampedia database — a living encyclopedia of documented scams with safety tips updated continuously by AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">
+        <span class="shield-icon">🛡️</span>
+        <span>Scampedia</span>
+      </a>
+      <div class="nav-links">
+        <a href="scampedia.html" class="active">Scam Database</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#download" class="btn btn-primary btn-sm">Download Free</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="scampedia-hero">
+    <div class="container">
+      <div class="section-badge">Scam Database</div>
+      <h1>Know the Scam Before It Hits</h1>
+      <p>A living encyclopedia of documented scams — updated continuously by our AI and community reports.</p>
+
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search" placeholder="Search scams, categories, keywords..." />
+      </div>
+
+      <div class="category-filters" id="filters">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="Phone Scam">📞 Phone</button>
+        <button class="filter-btn" data-cat="AI Scam">🤖 AI</button>
+        <button class="filter-btn" data-cat="Government Scam">🏛️ Government</button>
+        <button class="filter-btn" data-cat="Tech Scam">💻 Tech</button>
+        <button class="filter-btn" data-cat="Romance Scam">💔 Romance</button>
+        <button class="filter-btn" data-cat="Investment Scam">💰 Investment</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div id="stats-bar" class="stats-bar">
+        <span id="report-count">Loading...</span>
+        <span class="stats-sep">·</span>
+        <span>Updated continuously</span>
+        <span class="stats-sep">·</span>
+        <span id="last-updated">Synced just now</span>
+      </div>
+      <div id="scam-grid" class="scam-grid"></div>
+      <div id="no-results" class="no-results hidden">
+        <div class="no-results-icon">🔍</div>
+        <p>No scams found matching your search.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAIL MODAL -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="shield-icon">🛡️</span>
+        <span class="footer-name">Scampedia</span>
+        <span class="footer-copy">© 2026 Scampedia. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="scampedia.html">Scam Database</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
