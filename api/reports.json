@@ -1,126 +1,783 @@
 {
-  "version": 2,
-  "lastUpdated": "2026-05-27T00:00:00Z",
+  "version": 5,
+  "lastUpdated": "2026-07-08T00:00:00Z",
   "reports": [
     {
       "id": "1",
+      "slug": "grandparent-emergency-scam",
       "title": "Grandparent Emergency Scam",
       "summary": "Scammers call pretending to be your grandchild in trouble — arrested, in an accident, or at the hospital — and urgently need bail money or medical fees sent via gift cards or wire transfer.",
       "category": "Phone Scam",
       "firstReported": "2020-01-01T00:00:00Z",
       "reportCount": 2847,
-      "relatedScams": ["AI Voice Clone Scam", "IRS Impersonation Scam"],
+      "relatedScams": [
+        "AI Voice Clone Scam",
+        "Fake IRS Tax Refund Scam",
+        "Virtual Kidnapping Scam"
+      ],
       "safetyTips": [
         "Never send money without calling the person directly on a number you already know.",
         "Create a secret family code word that only your real family members would know.",
         "Real emergencies don't require gift cards — that is always a scam.",
         "Hang up and call your grandchild's known phone number to verify."
-      ]
+      ],
+      "datePublished": "2020-01-01T00:00:00Z",
+      "howItWorks": "A scammer calls or texts pretending to be a grandchild in a sudden crisis — arrested, in a car accident, or hospitalized in another state or country. They beg the victim not to tell anyone else in the family \"to avoid embarrassment,\" then hand the phone to a fake lawyer, bail bondsman, or doctor who pressures for immediate payment, almost always via gift cards, wire transfer, or a cash pickup courier — all of which are nearly impossible to trace or reverse.",
+      "redFlags": [
+        "Caller insists on secrecy and tells you not to call other family members to verify.",
+        "Payment is demanded via gift cards, wire transfer, or a courier pickup — never a normal payment method.",
+        "The situation is manufactured to feel extremely urgent, leaving no time to think.",
+        "The voice sounds \"a little different\" but is explained away as a bad connection or a swollen jaw from the accident."
+      ],
+      "realExamples": [
+        "A grandmother in Ohio sent $9,000 in Target gift cards after a caller claiming to be her grandson said he needed bail money after a DUI arrest.",
+        "A retired couple wired $12,000 to a \"lawyer\" after their granddaughter's voice appeared to describe a car accident abroad — the granddaughter was safe at home the entire time."
+      ],
+      "source": "FTC Consumer Alerts + VerifyGuard user-submitted reports",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Text Messages",
+        "Voicemail"
+      ],
+      "isAIDiscovered": false
     },
     {
       "id": "2",
+      "slug": "ai-voice-clone-scam",
       "title": "AI Voice Clone Scam",
       "summary": "Using just a few seconds of audio from social media, scammers clone a loved one's voice with AI and call you claiming to be in an emergency. The voice sounds completely real.",
       "category": "AI Scam",
       "firstReported": "2023-03-15T00:00:00Z",
       "reportCount": 1243,
-      "relatedScams": ["Grandparent Emergency Scam"],
+      "relatedScams": [
+        "Grandparent Emergency Scam",
+        "Virtual Kidnapping Scam",
+        "Deepfake Celebrity Endorsement Scam"
+      ],
       "safetyTips": [
         "Establish a family safe word that AI cannot know — use it to verify identity.",
         "Hang up and call back on a number stored in your own contacts.",
         "Be suspicious of any caller who immediately asks for money.",
         "Make your social media voice content private to limit what AI can clone."
-      ]
+      ],
+      "datePublished": "2023-03-15T00:00:00Z"
     },
     {
       "id": "3",
+      "slug": "fake-irs-tax-refund-scam",
       "title": "Fake IRS Tax Refund Scam",
       "summary": "Calls, texts, or emails claiming you owe back taxes and will be arrested, or that you are owed a refund that requires you to pay a processing fee first — often via gift cards.",
       "category": "Government Scam",
       "firstReported": "2015-06-01T00:00:00Z",
       "reportCount": 3921,
-      "relatedScams": ["Social Security Impersonation"],
+      "relatedScams": [
+        "Medicare / Health Insurance Scam",
+        "Grandparent Emergency Scam",
+        "Social Security Number Suspended Scam"
+      ],
       "safetyTips": [
         "The IRS never calls demanding immediate payment or gift cards.",
         "The IRS never threatens arrest over the phone.",
         "Verify any IRS notice by calling 1-800-829-1040 directly.",
         "The IRS contacts taxpayers by mail first, never phone or email."
-      ]
+      ],
+      "datePublished": "2015-06-01T00:00:00Z"
     },
     {
       "id": "4",
+      "slug": "tech-support-pop-up-scam",
       "title": "Tech Support Pop-Up Scam",
       "summary": "A scary browser pop-up claims your computer is infected with viruses and displays a 'Microsoft' or 'Apple' phone number. Calling it connects you to scammers who request remote access to your computer.",
       "category": "Tech Scam",
       "firstReported": "2016-04-01T00:00:00Z",
       "reportCount": 2156,
-      "relatedScams": ["Remote Access Scam"],
+      "relatedScams": [
+        "Fake Antivirus / Scareware Scam"
+      ],
       "safetyTips": [
         "Never call a phone number shown in a browser pop-up.",
         "Legitimate companies like Microsoft and Apple do not make unsolicited support calls.",
         "Close the browser tab and restart your browser to clear the pop-up.",
         "Never allow remote access to your computer from an unsolicited caller."
-      ]
+      ],
+      "datePublished": "2016-04-01T00:00:00Z"
     },
     {
       "id": "5",
+      "slug": "romance-military-scam",
       "title": "Romance / Military Scam",
       "summary": "Fake online dating profiles — often claiming to be deployed military, offshore oil workers, or traveling doctors — build a relationship over weeks before creating a financial crisis requiring money.",
       "category": "Romance Scam",
       "firstReported": "2010-01-01T00:00:00Z",
       "reportCount": 1872,
-      "relatedScams": ["Crypto Investment Scam"],
+      "relatedScams": [
+        "Crypto Investment Scam",
+        "Catfishing Scam",
+        "Pig Butchering Scam"
+      ],
       "safetyTips": [
         "Never send money to someone you have not met in person.",
         "Do a reverse image search on their profile photos — they are often stolen.",
         "Be suspicious of anyone who refuses to video chat or always cancels.",
         "Deployed US military personnel have access to military banking and don't need money wired."
-      ]
+      ],
+      "datePublished": "2010-01-01T00:00:00Z"
     },
     {
       "id": "6",
+      "slug": "crypto-investment-scam",
       "title": "Crypto Investment Scam",
       "summary": "Promises of guaranteed high returns on cryptocurrency or forex investments, often introduced through social media, fake apps, or romance relationships. Victims lose everything when they try to withdraw.",
       "category": "Investment Scam",
       "firstReported": "2019-01-01T00:00:00Z",
       "reportCount": 4103,
-      "relatedScams": ["Romance Scam", "Pig Butchering Scam"],
+      "relatedScams": [
+        "Romance / Military Scam",
+        "Pig Butchering Scam",
+        "Ponzi Scheme",
+        "Pump and Dump Scam"
+      ],
       "safetyTips": [
         "No legitimate investment guarantees returns — that claim is always a lie.",
         "Verify any investment firm with the SEC at investor.gov or FINRA at BrokerCheck.",
         "Never invest money you cannot afford to lose completely.",
         "If someone you met online is suggesting investments, that is a major red flag."
-      ]
+      ],
+      "datePublished": "2019-01-01T00:00:00Z"
     },
     {
       "id": "7",
+      "slug": "medicare-health-insurance-scam",
       "title": "Medicare / Health Insurance Scam",
       "summary": "Callers pretend to be from Medicare or a health insurance company offering free equipment or coverage updates, then steal your Medicare number to commit fraud and bill for services you never received.",
       "category": "Government Scam",
       "firstReported": "2018-01-01T00:00:00Z",
       "reportCount": 1654,
-      "relatedScams": ["IRS Impersonation Scam"],
+      "relatedScams": [
+        "Fake IRS Tax Refund Scam",
+        "Social Security Number Suspended Scam"
+      ],
       "safetyTips": [
         "Medicare will never call you asking for your Medicare number.",
         "Guard your Medicare number like a credit card number.",
         "Review your Medicare Summary Notice for charges you don't recognize.",
         "Report suspected fraud to 1-800-MEDICARE."
-      ]
+      ],
+      "datePublished": "2018-01-01T00:00:00Z"
     },
     {
       "id": "8",
+      "slug": "lottery-prize-notification-scam",
       "title": "Lottery / Prize Notification Scam",
       "summary": "You receive a letter, call, or email claiming you've won a lottery or sweepstakes you never entered. To claim the prize you must first pay taxes, fees, or customs charges upfront.",
       "category": "Phone Scam",
       "firstReported": "2005-01-01T00:00:00Z",
       "reportCount": 2390,
-      "relatedScams": ["Advance Fee Fraud"],
+      "relatedScams": [
+        "Advance Fee Loan Scam"
+      ],
       "safetyTips": [
         "You cannot win a contest you never entered.",
         "Legitimate prizes never require upfront fees or taxes to claim.",
         "Winning notifications are never sent by email, phone, or letter.",
         "The only real lottery is one you purchased a ticket for yourself."
-      ]
+      ],
+      "datePublished": "2005-01-01T00:00:00Z"
+    },
+    {
+      "id": "9",
+      "slug": "wangiri-one-ring-callback-scam",
+      "title": "Wangiri / One-Ring Callback Scam",
+      "summary": "A call rings once from an unfamiliar international number and hangs up before you can answer, banking on curiosity making you call back. The returned call connects to a premium-rate line that racks up enormous per-minute charges, a cut of which goes to the scammer.",
+      "category": "Phone Scam",
+      "firstReported": "2016-01-01T00:00:00Z",
+      "reportCount": 1560,
+      "relatedScams": [],
+      "safetyTips": [
+        "Don't call back unfamiliar international numbers, especially after just one ring.",
+        "Check the country code before dialing back — unrecognized codes are a red flag.",
+        "Block and report the number instead of returning the call.",
+        "Contact your carrier if you're billed for a call you never intentionally placed."
+      ],
+      "datePublished": "2016-01-01T00:00:00Z"
+    },
+    {
+      "id": "10",
+      "slug": "can-you-hear-me-robocall-scam",
+      "title": "\"Can You Hear Me?\" Robocall Scam",
+      "summary": "A robocall or live scammer opens with a simple yes-or-no question like \"can you hear me?\" hoping to record you saying \"yes,\" which they claim can later be used to authorize charges you never agreed to.",
+      "category": "Phone Scam",
+      "firstReported": "2017-01-01T00:00:00Z",
+      "reportCount": 980,
+      "relatedScams": [],
+      "safetyTips": [
+        "Simply hang up on robocalls instead of engaging, even to say \"no.\"",
+        "Answer with a neutral greeting rather than \"yes\" or \"no\" if you must respond.",
+        "Never confirm personal details to an unsolicited caller, recorded or not.",
+        "Register your number on the National Do Not Call Registry to cut down on robocalls."
+      ],
+      "datePublished": "2017-01-01T00:00:00Z"
+    },
+    {
+      "id": "11",
+      "slug": "fake-bank-fraud-alert-scam",
+      "title": "Fake Bank Fraud Alert Scam",
+      "summary": "A text or call appears to come from your bank warning of suspicious activity and asks you to \"verify\" your account by providing your card number, PIN, or a one-time passcode — information a real bank never requests this way.",
+      "category": "Phone Scam",
+      "firstReported": "2019-01-01T00:00:00Z",
+      "reportCount": 2210,
+      "relatedScams": [
+        "Fake IRS Tax Refund Scam",
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Hang up and call the number on the back of your card, never a number from the text or call itself.",
+        "Never share a one-time passcode with anyone, even someone claiming to be your bank.",
+        "Banks never ask for your full PIN or password over phone or text.",
+        "Log in directly through your bank's official app or website to check for real alerts."
+      ],
+      "datePublished": "2019-01-01T00:00:00Z"
+    },
+    {
+      "id": "12",
+      "slug": "jury-duty-scam",
+      "title": "Jury Duty Scam",
+      "summary": "A caller claims to be a sheriff or court officer saying you missed jury duty and now face arrest unless you immediately pay a fine — usually via gift cards or a prepaid card — to avoid being taken into custody.",
+      "category": "Government Scam",
+      "firstReported": "2014-01-01T00:00:00Z",
+      "reportCount": 1340,
+      "relatedScams": [
+        "Fake IRS Tax Refund Scam",
+        "USCIS / Immigration Scam"
+      ],
+      "safetyTips": [
+        "Courts never demand payment over the phone to avoid arrest.",
+        "Gift cards are never a legitimate form of payment for any government fee or fine.",
+        "Hang up and call your local courthouse directly using a number you look up yourself.",
+        "Law enforcement does not call ahead to warn of an imminent arrest."
+      ],
+      "datePublished": "2014-01-01T00:00:00Z"
+    },
+    {
+      "id": "13",
+      "slug": "social-security-number-suspended-scam",
+      "title": "Social Security Number Suspended Scam",
+      "summary": "An automated call or voicemail claims your Social Security number has been \"suspended\" due to suspicious activity and instructs you to press a number or call back, aiming to extract your SSN and other personal details.",
+      "category": "Government Scam",
+      "firstReported": "2018-01-01T00:00:00Z",
+      "reportCount": 2670,
+      "relatedScams": [
+        "Fake IRS Tax Refund Scam",
+        "Medicare / Health Insurance Scam",
+        "Unemployment Benefits Identity Theft Scam"
+      ],
+      "safetyTips": [
+        "The Social Security Administration cannot suspend your number and will never call to tell you so.",
+        "Never give your Social Security number to an unsolicited caller.",
+        "Hang up and call the SSA directly using their official number to check your account status.",
+        "Report suspicious calls to the SSA Office of the Inspector General."
+      ],
+      "datePublished": "2018-01-01T00:00:00Z"
+    },
+    {
+      "id": "14",
+      "slug": "unemployment-benefits-identity-theft-scam",
+      "title": "Unemployment Benefits Identity Theft Scam",
+      "summary": "Criminals use stolen personal information to file fraudulent unemployment claims in a victim's name, often surfacing only when the real person receives a tax form for benefits they never applied for or received.",
+      "category": "Government Scam",
+      "firstReported": "2020-01-01T00:00:00Z",
+      "reportCount": 1890,
+      "relatedScams": [
+        "Social Security Number Suspended Scam"
+      ],
+      "safetyTips": [
+        "Check your credit report regularly for unfamiliar accounts or inquiries.",
+        "If you receive an unexpected tax form for benefits you never claimed, report it to your state unemployment office immediately.",
+        "Freeze your credit with the three major bureaus if you suspect identity theft.",
+        "File a report with the FTC at IdentityTheft.gov if you're a victim."
+      ],
+      "datePublished": "2020-01-01T00:00:00Z"
+    },
+    {
+      "id": "15",
+      "slug": "student-loan-forgiveness-scam",
+      "title": "Student Loan Forgiveness Scam",
+      "summary": "Companies advertise guaranteed student loan forgiveness or dramatically reduced payments for an upfront fee, then either do nothing, enroll borrowers in a plan they could have gotten for free, or steal the login credentials used to \"help.\"",
+      "category": "Government Scam",
+      "firstReported": "2015-01-01T00:00:00Z",
+      "reportCount": 1420,
+      "relatedScams": [],
+      "safetyTips": [
+        "Legitimate loan forgiveness and repayment programs are always free to apply for directly through your loan servicer.",
+        "Never pay an upfront fee for loan forgiveness or consolidation help.",
+        "Never share your Federal Student Aid (FSA) ID with a third party.",
+        "Verify any offer directly at StudentAid.gov."
+      ],
+      "datePublished": "2015-01-01T00:00:00Z"
+    },
+    {
+      "id": "16",
+      "slug": "uscis-immigration-scam",
+      "title": "USCIS / Immigration Scam",
+      "summary": "Scammers posing as immigration officials contact applicants claiming a fee must be paid immediately by phone to avoid deportation or a denied application, exploiting fear around immigration status.",
+      "category": "Government Scam",
+      "firstReported": "2013-01-01T00:00:00Z",
+      "reportCount": 1105,
+      "relatedScams": [
+        "Jury Duty Scam"
+      ],
+      "safetyTips": [
+        "USCIS does not accept payment over the phone or via gift cards.",
+        "Government agencies communicate official actions by mail, not urgent phone calls.",
+        "Verify your case status directly on the official USCIS website.",
+        "Consult a licensed immigration attorney if you're unsure about a communication."
+      ],
+      "datePublished": "2013-01-01T00:00:00Z"
+    },
+    {
+      "id": "17",
+      "slug": "phishing-email-scam",
+      "title": "Phishing Email Scam",
+      "summary": "A fraudulent email impersonates a trusted company or contact, urging the recipient to click a link and log in on a fake page that steals their username and password, or to open an attachment that installs malware.",
+      "category": "Tech Scam",
+      "firstReported": "2010-01-01T00:00:00Z",
+      "reportCount": 5230,
+      "relatedScams": [
+        "Smishing Text Message Scam",
+        "Fake Bank Fraud Alert Scam",
+        "QR Code Scam"
+      ],
+      "safetyTips": [
+        "Hover over links to check the real destination before clicking.",
+        "Look closely at the sender's actual email address, not just the display name.",
+        "Never enter your password after clicking a link in an unsolicited email.",
+        "Enable two-factor authentication so a stolen password alone isn't enough to break in."
+      ],
+      "datePublished": "2010-01-01T00:00:00Z"
+    },
+    {
+      "id": "18",
+      "slug": "smishing-text-message-scam",
+      "title": "Smishing Text Message Scam",
+      "summary": "Phishing conducted over SMS text message, often impersonating a delivery service, bank, or government agency with a link to a fake site designed to steal login credentials or payment information.",
+      "category": "Tech Scam",
+      "firstReported": "2017-01-01T00:00:00Z",
+      "reportCount": 3100,
+      "relatedScams": [
+        "Phishing Email Scam",
+        "Package Delivery Text Scam"
+      ],
+      "safetyTips": [
+        "Don't tap links in unexpected text messages, even if they look official.",
+        "Go directly to the official app or website instead of using a link from a text.",
+        "Forward suspicious texts to 7726 (SPAM) to report them, then delete.",
+        "Never enter a one-time passcode on a page you reached through a text link."
+      ],
+      "datePublished": "2017-01-01T00:00:00Z"
+    },
+    {
+      "id": "19",
+      "slug": "qr-code-scam",
+      "title": "QR Code Scam",
+      "summary": "A malicious QR code — placed over a legitimate one on a parking meter, menu, or poster, or sent digitally — redirects victims to a fake payment or login page designed to steal money or credentials.",
+      "category": "Tech Scam",
+      "firstReported": "2021-01-01T00:00:00Z",
+      "reportCount": 740,
+      "relatedScams": [
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Check for a sticker placed over another QR code before scanning in public.",
+        "Preview the destination URL before opening it, if your camera app supports it.",
+        "Avoid entering payment or login details on a page reached by scanning an untrusted QR code.",
+        "Use the official app or website directly instead of scanning when possible."
+      ],
+      "datePublished": "2021-01-01T00:00:00Z"
+    },
+    {
+      "id": "20",
+      "slug": "fake-antivirus-scareware-scam",
+      "title": "Fake Antivirus / Scareware Scam",
+      "summary": "A pop-up or fake scan result falsely claims your device is riddled with viruses and pressures you to buy bogus security software or call a \"support\" number, which leads straight into a tech support scam.",
+      "category": "Tech Scam",
+      "firstReported": "2009-01-01T00:00:00Z",
+      "reportCount": 1980,
+      "relatedScams": [
+        "Tech Support Pop-Up Scam"
+      ],
+      "safetyTips": [
+        "Real antivirus software doesn't sell itself through browser pop-ups.",
+        "Close the browser tab or restart your device rather than clicking anything in the pop-up.",
+        "Only install security software directly from a vendor's official website.",
+        "Run a scan with security software you installed yourself if you're worried about infection."
+      ],
+      "datePublished": "2009-01-01T00:00:00Z"
+    },
+    {
+      "id": "21",
+      "slug": "social-media-account-takeover-scam",
+      "title": "Social Media Account Takeover Scam",
+      "summary": "A hacked or cloned social media account messages the victim's friends and family asking for money, gift cards, or a \"favor\" verification code, exploiting the trust of an existing relationship.",
+      "category": "Tech Scam",
+      "firstReported": "2016-01-01T00:00:00Z",
+      "reportCount": 2050,
+      "relatedScams": [
+        "SIM Swap Scam"
+      ],
+      "safetyTips": [
+        "Call or video chat to confirm identity before sending money to anyone contacting you on social media, even a close friend.",
+        "Never share a login verification code you receive by text, even if a friend asks for it.",
+        "Enable two-factor authentication on all of your social accounts.",
+        "Report and alert your contacts immediately if your account is compromised."
+      ],
+      "datePublished": "2016-01-01T00:00:00Z"
+    },
+    {
+      "id": "22",
+      "slug": "sim-swap-scam",
+      "title": "SIM Swap Scam",
+      "summary": "A scammer convinces your mobile carrier to transfer your phone number to a SIM card they control, letting them intercept the text-message codes used to reset passwords and drain bank or crypto accounts.",
+      "category": "Tech Scam",
+      "firstReported": "2018-01-01T00:00:00Z",
+      "reportCount": 890,
+      "relatedScams": [
+        "Social Media Account Takeover Scam",
+        "Crypto Investment Scam"
+      ],
+      "safetyTips": [
+        "Add a PIN or passcode to your mobile account that's required for any SIM changes.",
+        "Use an authenticator app instead of SMS for two-factor authentication where possible.",
+        "Watch for an unexpected loss of cell signal, which can indicate your number was just transferred.",
+        "Contact your carrier immediately if your phone suddenly loses service without explanation."
+      ],
+      "datePublished": "2018-01-01T00:00:00Z"
+    },
+    {
+      "id": "23",
+      "slug": "virtual-kidnapping-scam",
+      "title": "Virtual Kidnapping Scam",
+      "summary": "A caller claims to be holding a family member hostage and demands an immediate ransom payment, sometimes using an AI-cloned voice of the \"victim\" crying for help, even though the person is actually safe.",
+      "category": "AI Scam",
+      "firstReported": "2022-01-01T00:00:00Z",
+      "reportCount": 610,
+      "relatedScams": [
+        "AI Voice Clone Scam",
+        "Grandparent Emergency Scam"
+      ],
+      "safetyTips": [
+        "Try to contact the supposedly kidnapped person directly on their own phone before doing anything else.",
+        "Stay calm and ask questions only the real person would know the answer to.",
+        "Never wire money or buy gift cards based on a phone threat alone.",
+        "Contact local police immediately — they have protocols for these calls."
+      ],
+      "datePublished": "2022-01-01T00:00:00Z"
+    },
+    {
+      "id": "24",
+      "slug": "deepfake-celebrity-endorsement-scam",
+      "title": "Deepfake Celebrity Endorsement Scam",
+      "summary": "AI-generated video or audio shows a celebrity or public figure appearing to endorse an investment platform, giveaway, or product they have never actually endorsed, used to lend false credibility to a scam.",
+      "category": "AI Scam",
+      "firstReported": "2023-01-01T00:00:00Z",
+      "reportCount": 1320,
+      "relatedScams": [
+        "Crypto Investment Scam",
+        "AI Voice Clone Scam"
+      ],
+      "safetyTips": [
+        "Be skeptical of any celebrity \"endorsement\" for a financial product seen only in an ad or video.",
+        "Check the celebrity's own verified social accounts or official site for confirmation.",
+        "Look for subtle glitches in lip-sync, lighting, or audio that can reveal an AI fake.",
+        "Remember that real investment opportunities are never promoted through unsolicited video ads."
+      ],
+      "datePublished": "2023-01-01T00:00:00Z"
+    },
+    {
+      "id": "25",
+      "slug": "ai-chatbot-romance-scam",
+      "title": "AI Chatbot Romance Scam",
+      "summary": "An AI-powered chatbot, sometimes on a dating app, carries on a convincingly personal conversation for weeks or months before steering the victim toward sending money, gifts, or investing in a fraudulent scheme.",
+      "category": "AI Scam",
+      "firstReported": "2023-01-01T00:00:00Z",
+      "reportCount": 540,
+      "relatedScams": [
+        "Romance / Military Scam",
+        "AI Voice Clone Scam"
+      ],
+      "safetyTips": [
+        "Be cautious of a match who is available to chat constantly at all hours but avoids calls or video.",
+        "Watch for oddly generic or repetitive phrasing that can indicate an automated response.",
+        "Never send money or financial details to someone you've only spoken to online.",
+        "Ask specific, personal follow-up questions that a scripted bot is likely to answer inconsistently."
+      ],
+      "datePublished": "2023-01-01T00:00:00Z"
+    },
+    {
+      "id": "26",
+      "slug": "catfishing-scam",
+      "title": "Catfishing Scam",
+      "summary": "Someone creates a fake online identity, often using stolen photos of an attractive stranger, to build a relationship for emotional manipulation, financial gain, or simply to deceive without necessarily asking for money.",
+      "category": "Romance Scam",
+      "firstReported": "2008-01-01T00:00:00Z",
+      "reportCount": 1760,
+      "relatedScams": [
+        "Romance / Military Scam",
+        "Sextortion Scam"
+      ],
+      "safetyTips": [
+        "Reverse image search profile photos to check if they've been stolen from someone else.",
+        "Insist on a live video call early in any online relationship.",
+        "Be wary of inconsistent details about their job, location, or life story.",
+        "Trust your instincts if something about their story doesn't add up."
+      ],
+      "datePublished": "2008-01-01T00:00:00Z"
+    },
+    {
+      "id": "27",
+      "slug": "sextortion-scam",
+      "title": "Sextortion Scam",
+      "summary": "A scammer coerces or tricks a victim into sharing intimate photos or video, then threatens to release them to friends, family, or publicly unless paid, often escalating demands after the first payment.",
+      "category": "Romance Scam",
+      "firstReported": "2015-01-01T00:00:00Z",
+      "reportCount": 1490,
+      "relatedScams": [
+        "Catfishing Scam"
+      ],
+      "safetyTips": [
+        "Stop all contact and payment — paying rarely stops the threats and often increases them.",
+        "Report the account to the platform and preserve evidence with screenshots.",
+        "Contact the National Center for Missing & Exploited Children or local law enforcement, especially if a minor is involved.",
+        "Remember you are the victim of a crime, not someone at fault for being deceived."
+      ],
+      "datePublished": "2015-01-01T00:00:00Z"
+    },
+    {
+      "id": "28",
+      "slug": "ponzi-scheme",
+      "title": "Ponzi Scheme",
+      "summary": "An investment scheme pays early investors with money from new investors rather than actual profit, creating the illusion of a successful business until new money stops flowing in and the scheme collapses.",
+      "category": "Investment Scam",
+      "firstReported": "1920-01-01T00:00:00Z",
+      "reportCount": 2230,
+      "relatedScams": [
+        "Crypto Investment Scam"
+      ],
+      "safetyTips": [
+        "Be suspicious of consistently high returns regardless of market conditions.",
+        "Verify any investment manager is registered with the SEC or your state securities regulator.",
+        "Ask how the underlying business actually generates the returns being promised.",
+        "Be cautious of pressure to recruit new investors as part of the \"opportunity.\""
+      ],
+      "datePublished": "1920-01-01T00:00:00Z"
+    },
+    {
+      "id": "29",
+      "slug": "pump-and-dump-scam",
+      "title": "Pump and Dump Scam",
+      "summary": "Promoters hype a low-value stock or cryptocurrency through social media and unsolicited messages to inflate its price, then sell their own holdings at the peak, leaving new buyers with a worthless investment.",
+      "category": "Investment Scam",
+      "firstReported": "2000-01-01T00:00:00Z",
+      "reportCount": 1340,
+      "relatedScams": [
+        "Crypto Investment Scam"
+      ],
+      "safetyTips": [
+        "Be skeptical of unsolicited stock or crypto tips promising huge, fast gains.",
+        "Research a company's fundamentals independently before buying based on social media hype.",
+        "Watch for coordinated promotion of the same ticker across many accounts at once.",
+        "Never invest based on pressure to \"buy now before it's too late.\""
+      ],
+      "datePublished": "2000-01-01T00:00:00Z"
+    },
+    {
+      "id": "30",
+      "slug": "fake-trading-app-scam",
+      "title": "Fake Trading App Scam",
+      "summary": "Victims are convinced to download a fraudulent investment or trading app that shows fabricated, ever-increasing account balances, but withdrawals are blocked or additional \"fees\" are demanded before any money can be returned.",
+      "category": "Investment Scam",
+      "firstReported": "2021-01-01T00:00:00Z",
+      "reportCount": 1670,
+      "relatedScams": [
+        "Pig Butchering Scam",
+        "Crypto Investment Scam"
+      ],
+      "safetyTips": [
+        "Only download trading apps from official app stores, and verify the developer.",
+        "Try withdrawing a small amount early to test whether the platform is legitimate.",
+        "Be suspicious of any app that requires an additional fee before allowing a withdrawal.",
+        "Verify the platform is registered with financial regulators like the SEC or CFTC."
+      ],
+      "datePublished": "2021-01-01T00:00:00Z"
+    },
+    {
+      "id": "31",
+      "slug": "pig-butchering-scam",
+      "title": "Pig Butchering Scam",
+      "summary": "Named for the practice of fattening livestock before slaughter, scammers build a long-term relationship — often starting as a romance or friendship — before gradually persuading the victim to invest increasing amounts into a fake trading platform, ultimately taking everything.",
+      "category": "Investment Scam",
+      "firstReported": "2019-01-01T00:00:00Z",
+      "reportCount": 2480,
+      "relatedScams": [
+        "Romance / Military Scam",
+        "Fake Trading App Scam"
+      ],
+      "safetyTips": [
+        "Be wary of a new online contact who eventually steers conversation toward an investment opportunity.",
+        "Never move funds to a trading platform recommended by someone you've only met online.",
+        "Independently verify any platform's registration before depositing money.",
+        "Cut off contact and report to authorities as soon as investment pressure begins."
+      ],
+      "datePublished": "2019-01-01T00:00:00Z"
+    },
+    {
+      "id": "32",
+      "slug": "advance-fee-loan-scam",
+      "title": "Advance Fee Loan Scam",
+      "summary": "A \"guaranteed approval\" loan offer, often targeting people with poor credit, requires an upfront fee for insurance, processing, or collateral before the loan is disbursed — but the loan never actually arrives.",
+      "category": "Investment Scam",
+      "firstReported": "2005-01-01T00:00:00Z",
+      "reportCount": 990,
+      "relatedScams": [
+        "Lottery / Prize Notification Scam"
+      ],
+      "safetyTips": [
+        "Legitimate lenders deduct fees from the loan amount — they don't require payment upfront.",
+        "Be suspicious of any lender who guarantees approval without checking your credit.",
+        "Verify a lender is licensed to operate in your state.",
+        "Never wire money or use gift cards to pay a loan \"fee.\""
+      ],
+      "datePublished": "2005-01-01T00:00:00Z"
+    },
+    {
+      "id": "33",
+      "slug": "fake-online-store-scam",
+      "title": "Fake Online Store Scam",
+      "summary": "A convincing but fraudulent online store, often advertised through social media, offers heavily discounted name-brand products, takes payment, and either ships nothing, a counterfeit, or a completely different item.",
+      "category": "Shopping Scam",
+      "firstReported": "2015-01-01T00:00:00Z",
+      "reportCount": 2670,
+      "relatedScams": [
+        "Online Marketplace Buyer Scam"
+      ],
+      "safetyTips": [
+        "Search the store name plus \"scam\" or \"reviews\" before ordering.",
+        "Be cautious of prices that are dramatically lower than anywhere else.",
+        "Pay with a credit card rather than a debit card or wire transfer for purchase protection.",
+        "Check for a real physical address and working customer service contact."
+      ],
+      "datePublished": "2015-01-01T00:00:00Z"
+    },
+    {
+      "id": "34",
+      "slug": "online-marketplace-buyer-scam",
+      "title": "Online Marketplace Buyer Scam",
+      "summary": "A \"buyer\" on a marketplace app sends a fake payment confirmation screenshot or overpays with a bad check, then asks the seller to ship the item or refund the difference before the payment actually clears.",
+      "category": "Shopping Scam",
+      "firstReported": "2014-01-01T00:00:00Z",
+      "reportCount": 1580,
+      "relatedScams": [
+        "Fake Online Store Scam",
+        "Mystery Shopper Check Scam"
+      ],
+      "safetyTips": [
+        "Confirm payment has actually landed in your account, not just a screenshot, before shipping anything.",
+        "Be suspicious of any buyer who overpays and asks for a refund of the difference.",
+        "Meet locally for cash when possible instead of shipping to unverified buyers.",
+        "Use the marketplace's built-in, verified payment system rather than outside apps."
+      ],
+      "datePublished": "2014-01-01T00:00:00Z"
+    },
+    {
+      "id": "35",
+      "slug": "fake-job-offer-scam",
+      "title": "Fake Job Offer Scam",
+      "summary": "A recruiter offers a remote job with little to no interview, then asks the \"new hire\" to pay for training materials, equipment, or a background check upfront, or to deposit a check and wire back the difference.",
+      "category": "Employment Scam",
+      "firstReported": "2012-01-01T00:00:00Z",
+      "reportCount": 2010,
+      "relatedScams": [
+        "Mystery Shopper Check Scam"
+      ],
+      "safetyTips": [
+        "Be suspicious of any job offer that skips a real interview process.",
+        "Never pay upfront for equipment, training, or a background check.",
+        "Research the company independently, including looking for a real office and other employees.",
+        "Never deposit a check and wire money back to an \"employer.\""
+      ],
+      "datePublished": "2012-01-01T00:00:00Z"
+    },
+    {
+      "id": "36",
+      "slug": "mystery-shopper-check-scam",
+      "title": "Mystery Shopper Check Scam",
+      "summary": "A fake mystery shopping job sends the victim a check to deposit, instructing them to keep a \"payment\" and wire the rest to evaluate a money transfer service — but the original check later bounces, leaving the victim owing the full amount.",
+      "category": "Employment Scam",
+      "firstReported": "2010-01-01T00:00:00Z",
+      "reportCount": 1230,
+      "relatedScams": [
+        "Fake Job Offer Scam",
+        "Online Marketplace Buyer Scam"
+      ],
+      "safetyTips": [
+        "Be suspicious of any job that pays you by having you deposit and forward a check.",
+        "Remember that a bank clearing a check temporarily doesn't mean it won't later be discovered as fraudulent.",
+        "Never wire money based on funds from a check you just deposited.",
+        "Verify legitimate mystery shopping companies through the Mystery Shopping Professionals Association."
+      ],
+      "datePublished": "2010-01-01T00:00:00Z"
+    },
+    {
+      "id": "37",
+      "slug": "package-delivery-text-scam",
+      "title": "Package Delivery Text Scam",
+      "summary": "A text message claims a package couldn't be delivered due to an unpaid fee or incomplete address, with a link to a fake carrier site designed to steal payment card details.",
+      "category": "Delivery Scam",
+      "firstReported": "2020-01-01T00:00:00Z",
+      "reportCount": 3340,
+      "relatedScams": [
+        "Smishing Text Message Scam"
+      ],
+      "safetyTips": [
+        "Track packages directly through the retailer or carrier's official app or website.",
+        "Delivery carriers don't typically require a small fee by text message to redeliver a package.",
+        "Don't click links in unexpected delivery texts — go to the official site instead.",
+        "Forward suspicious delivery texts to 7726 (SPAM) to report them."
+      ],
+      "datePublished": "2020-01-01T00:00:00Z"
+    },
+    {
+      "id": "38",
+      "slug": "fake-charity-disaster-relief-scam",
+      "title": "Fake Charity / Disaster Relief Scam",
+      "summary": "In the wake of a natural disaster or tragedy, fraudulent charities solicit donations through calls, texts, or social media using names deceptively similar to real, established relief organizations.",
+      "category": "Charity Scam",
+      "firstReported": "2005-01-01T00:00:00Z",
+      "reportCount": 1120,
+      "relatedScams": [],
+      "safetyTips": [
+        "Give directly through a charity's official website rather than through a link in a text or email.",
+        "Check a charity's legitimacy on Charity Navigator or the BBB Wise Giving Alliance.",
+        "Be wary of high-pressure requests for immediate donations right after a disaster.",
+        "Never donate using gift cards or wire transfers."
+      ],
+      "datePublished": "2005-01-01T00:00:00Z"
+    },
+    {
+      "id": "39",
+      "slug": "fake-rental-listing-scam",
+      "title": "Fake Rental Listing Scam",
+      "summary": "A rental listing — sometimes copied from a real property that isn't actually for rent — advertises an attractive price and asks for a deposit or first month's rent before the \"landlord,\" who is never available to meet in person, disappears.",
+      "category": "Rental Scam",
+      "firstReported": "2013-01-01T00:00:00Z",
+      "reportCount": 1490,
+      "relatedScams": [],
+      "safetyTips": [
+        "Never pay a deposit before viewing a property in person or via a verified live video call.",
+        "Search the listing photos online to check if they've been copied from another listing.",
+        "Verify property ownership through public county property records.",
+        "Be suspicious of a landlord who is always \"out of the country\" or unavailable to meet."
+      ],
+      "datePublished": "2013-01-01T00:00:00Z"
     }
   ]
 }

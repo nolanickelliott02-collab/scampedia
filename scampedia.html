@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scampedia — Know the Scam Before It Hits</title>
-  <meta name="description" content="Browse the Scampedia database — a living encyclopedia of documented scams with safety tips updated continuously by AI." />
+  <title>Scampedia — The Encyclopedia of Scams</title>
+  <meta name="description" content="Scampedia is a living, community- and AI-updated encyclopedia of scams — the same database that powers real-time detection inside the VerifyGuard app." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -26,52 +26,39 @@
     </div>
   </nav>
 
-  <section class="scampedia-hero">
-    <div class="container">
-      <div class="section-badge">Scam Database</div>
-      <h1>Know the Scam Before It Hits</h1>
-      <p>A living encyclopedia of documented scams — updated continuously by our AI and community reports.</p>
+  <div class="wiki-shell container">
 
-      <div class="search-bar">
+    <!-- SIDEBAR -->
+    <aside class="wiki-sidebar">
+      <div class="sidebar-search">
         <span class="search-icon">🔍</span>
-        <input type="text" id="search" placeholder="Search scams, categories, keywords..." />
+        <input type="text" id="search" placeholder="Search Scampedia…" />
       </div>
 
-      <div class="category-filters" id="filters">
-        <button class="filter-btn active" data-cat="all">All</button>
-        <button class="filter-btn" data-cat="Phone Scam">📞 Phone</button>
-        <button class="filter-btn" data-cat="AI Scam">🤖 AI</button>
-        <button class="filter-btn" data-cat="Government Scam">🏛️ Government</button>
-        <button class="filter-btn" data-cat="Tech Scam">💻 Tech</button>
-        <button class="filter-btn" data-cat="Romance Scam">💔 Romance</button>
-        <button class="filter-btn" data-cat="Investment Scam">💰 Investment</button>
-      </div>
-    </div>
-  </section>
+      <nav class="sidebar-section">
+        <div class="sidebar-heading">Browse</div>
+        <a href="#/" class="sidebar-link" data-nav="all">📚 All Articles</a>
+        <a href="#/az" class="sidebar-link" data-nav="az">🔤 A–Z Index</a>
+        <a href="#" class="sidebar-link" id="random-link">🎲 Random Scam</a>
+      </nav>
 
-  <section class="section">
-    <div class="container">
-      <div id="stats-bar" class="stats-bar">
-        <span id="report-count">Loading...</span>
-        <span class="stats-sep">·</span>
-        <span>Updated continuously</span>
-        <span class="stats-sep">·</span>
-        <span id="last-updated">Synced just now</span>
-      </div>
-      <div id="scam-grid" class="scam-grid"></div>
-      <div id="no-results" class="no-results hidden">
-        <div class="no-results-icon">🔍</div>
-        <p>No scams found matching your search.</p>
-      </div>
-    </div>
-  </section>
+      <nav class="sidebar-section">
+        <div class="sidebar-heading">Categories</div>
+        <div id="sidebar-cats"></div>
+      </nav>
 
-  <!-- DETAIL MODAL -->
-  <div id="modal-overlay" class="modal-overlay hidden">
-    <div class="modal" id="modal">
-      <button class="modal-close" id="modal-close">✕</button>
-      <div id="modal-content"></div>
-    </div>
+      <div class="sidebar-section sidebar-stats">
+        <div id="report-count">Loading…</div>
+        <div id="last-updated" class="sidebar-substat">Synced just now</div>
+        <div class="sidebar-substat">Same database used inside the app</div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="wiki-main" id="wiki-main">
+      <!-- JS renders browse grid, A-Z index, or a full article here -->
+    </main>
+
   </div>
 
   <footer class="footer">
