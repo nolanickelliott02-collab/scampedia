@@ -117,6 +117,8 @@ img { max-width: 100%; }
   color: var(--text-1);
 }
 .shield-icon { font-size: 22px; }
+.nav-logo-img { height: 22px; width: auto; display: block; }
+.footer-icon { width: 26px; height: 26px; border-radius: 7px; display: block; }
 .nav-links {
   display: flex;
   align-items: center;
