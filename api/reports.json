@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "lastUpdated": "2026-07-09T00:00:00Z",
   "reports": [
     {
@@ -52,7 +52,8 @@
       "relatedScams": [
         "Grandparent Emergency Scam",
         "Virtual Kidnapping Scam",
-        "Deepfake Celebrity Endorsement Scam"
+        "Deepfake Celebrity Endorsement Scam",
+        "Video Call Deepfake Extortion Scam"
       ],
       "safetyTips": [
         "Establish a family safe word that AI cannot know — use it to verify identity.",
@@ -1311,6 +1312,42 @@
         "Fake Websites",
         "Email",
         "Text Messages"
+      ],
+      "isAIDiscovered": false
+    },
+    {
+      "id": "40",
+      "slug": "video-call-deepfake-extortion-scam",
+      "title": "Video Call Deepfake Extortion Scam",
+      "summary": "A stranger video calls you out of nowhere (FaceTime, WhatsApp, or similar), keeps you on briefly while secretly capturing your face, then contacts you later with an AI-manipulated image designed to falsely implicate you in something serious — demanding payment to keep it quiet.",
+      "category": "AI Scam",
+      "firstReported": "2024-01-01T00:00:00Z",
+      "datePublished": "2026-07-09T00:00:00Z",
+      "reportCount": 640,
+      "relatedScams": [
+        "AI Voice Clone Scam"
+      ],
+      "safetyTips": [
+        "Don't accept video calls from unknown or unfamiliar numbers — let them go to voicemail.",
+        "Cover your camera when it's not in active, intentional use.",
+        "Never send money because of a threat alone — the image is fabricated, not real evidence.",
+        "Save screenshots of every message and the threat itself as evidence before doing anything else.",
+        "Report it to the FBI's Internet Crime Complaint Center (ic3.gov) and your local police — you are the victim of a crime, not a suspect."
+      ],
+      "howItWorks": "The scam starts with an unsolicited video call from a number you don't recognize, sometimes with the caller claiming it's a wrong number or pretending to know you. The call is often brief, and the scammer's real goal is just to get a few seconds of your face on camera, which they screen-record. Days or weeks later, using AI image-generation tools, they digitally alter the captured footage into a fabricated image meant to make it look like you did something illegal or deeply shameful. They then contact you demanding immediate, untraceable payment — usually gift cards, wire transfer, or cryptocurrency — threatening to send the fake image to your family, employer, or the police if you don't pay.",
+      "redFlags": [
+        "An unexpected video call from an unknown or international number that ends abruptly.",
+        "The caller seems more focused on getting you on camera than having an actual conversation.",
+        "Sudden contact later, out of nowhere, with a threatening message and an attached image.",
+        "Extreme urgency paired with a demand for immediate, anonymous payment.",
+        "The person refuses to slow down, answer questions, or let you verify anything — pure pressure."
+      ],
+      "realExamples": [],
+      "source": "FBI Internet Crime Complaint Center (IC3)",
+      "spreadPlatforms": [
+        "Video Calls (FaceTime/WhatsApp)",
+        "Text Messages",
+        "Email"
       ],
       "isAIDiscovered": false
     }
