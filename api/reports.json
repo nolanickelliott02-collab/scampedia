@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "lastUpdated": "2026-07-09T00:00:00Z",
   "reports": [
     {
@@ -1330,9 +1330,10 @@
       "safetyTips": [
         "Don't accept video calls from unknown or unfamiliar numbers — let them go to voicemail.",
         "Cover your camera when it's not in active, intentional use.",
-        "Never send money because of a threat alone — the image is fabricated, not real evidence.",
-        "Save screenshots of every message and the threat itself as evidence before doing anything else.",
-        "Report it to the FBI's Internet Crime Complaint Center (ic3.gov) and your local police — you are the victim of a crime, not a suspect."
+        "Never send money because of a threat alone — the image is fabricated, not real evidence, and paying almost never makes it stop.",
+        "Save screenshots of every message and the threat itself as evidence, then block the sender — don't negotiate or engage further.",
+        "If a fabricated intimate image is involved, StopNCII.org (for adults 18+) can help get it removed from participating platforms without ever uploading the image itself.",
+        "Report it to the FBI's Internet Crime Complaint Center (ic3.gov) and your local police — you are the victim of a crime, not a suspect, and this is a recognized, well-documented scam pattern."
       ],
       "howItWorks": "The scam starts with an unsolicited video call from a number you don't recognize, sometimes with the caller claiming it's a wrong number or pretending to know you. The call is often brief, and the scammer's real goal is just to get a few seconds of your face on camera, which they screen-record. Days or weeks later, using AI image-generation tools, they digitally alter the captured footage into a fabricated image meant to make it look like you did something illegal or deeply shameful. They then contact you demanding immediate, untraceable payment — usually gift cards, wire transfer, or cryptocurrency — threatening to send the fake image to your family, employer, or the police if you don't pay.",
       "redFlags": [
@@ -1340,7 +1341,8 @@
         "The caller seems more focused on getting you on camera than having an actual conversation.",
         "Sudden contact later, out of nowhere, with a threatening message and an attached image.",
         "Extreme urgency paired with a demand for immediate, anonymous payment.",
-        "The person refuses to slow down, answer questions, or let you verify anything — pure pressure."
+        "The person refuses to slow down, answer questions, or let you verify anything — pure pressure.",
+        "The call often opens with a 'wrong number' or 'do I know you?' pretext to get you talking on camera."
       ],
       "realExamples": [],
       "source": "FBI Internet Crime Complaint Center (IC3)",
