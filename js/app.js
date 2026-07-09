@@ -57,9 +57,26 @@ async function initScampedia() {
   renderSidebarCategories();
   bindSidebarSearch();
   bindRandomLink();
+  bindTocScrolling(main);
+  bindReportForm();
 
   window.addEventListener('hashchange', route);
   route();
+}
+
+// In-article "Contents" box links (#how-it-works, #red-flags, etc.) must NOT
+// touch location.hash — this app uses the hash for routing (#/wiki/slug), so
+// letting a plain in-page anchor change it makes the router think you
+// navigated away and replaces the whole article with the browse grid.
+// Intercept the click and scroll manually instead.
+function bindTocScrolling(main) {
+  main.addEventListener('click', e => {
+    const link = e.target.closest('.wiki-toc a');
+    if (!link) return;
+    e.preventDefault();
+    const id = link.getAttribute('href').slice(1);
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 }
 
 function bindRandomLink() {
@@ -69,6 +86,35 @@ function bindRandomLink() {
     e.preventDefault();
     const pick = allReports[Math.floor(Math.random() * allReports.length)];
     if (pick) location.hash = `#/wiki/${pick.slug}`;
+  });
+}
+
+function bindReportForm() {
+  const btn = document.getElementById('report-scam-btn');
+  const form = document.getElementById('report-scam-form');
+  if (!btn || !form) return;
+
+  btn.addEventListener('click', () => {
+    form.classList.toggle('hidden');
+    if (!form.classList.contains('hidden')) {
+      document.getElementById('report-scam-details')?.focus();
+    }
+  });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const details = document.getElementById('report-scam-details').value.trim();
+    const email = document.getElementById('report-scam-email').value.trim();
+    if (!details) return;
+
+    const subject = encodeURIComponent('Scampedia Scam Report');
+    const body = encodeURIComponent(
+      `${details}\n\n${email ? `Reporter email: ${email}` : '(no email provided)'}`
+    );
+    window.location.href = `mailto:support@officialverifyguard.com?subject=${subject}&body=${body}`;
+
+    form.reset();
+    form.classList.add('hidden');
   });
 }
 
