@@ -141,6 +141,14 @@ img { max-width: 100%; }
   gap: 60px;
   align-items: center;
 }
+.hero-inner--single {
+  grid-template-columns: 1fr;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-inner--single .hero-cta { justify-content: center; }
+.hero-inner--single .hero-sub { margin-left: auto; margin-right: auto; }
 .hero-badge {
   display: inline-block;
   background: rgba(52,211,153,.12);

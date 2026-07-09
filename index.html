@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scampedia — AI Scam & Deepfake Protection</title>
-  <meta name="description" content="Scampedia uses on-device AI to instantly detect scams, deepfakes, and AI-generated content. Free iOS app — no account required." />
+  <title>Scampedia — The Encyclopedia of Scams</title>
+  <meta name="description" content="Scampedia is a free, public encyclopedia documenting how scams work — written and continuously updated by VerifyGuard's AI, sourced from real reports." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
@@ -20,55 +20,28 @@
         <img src="assets/logo-wordmark-dark.svg" alt="Scampedia" class="nav-logo-img" />
       </a>
       <div class="nav-links">
-        <a href="scampedia.html">Scam Database</a>
+        <a href="scampedia.html">Browse Database</a>
         <a href="#how-it-works">How It Works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#download" class="btn btn-primary btn-sm">Download Free</a>
+        <a href="https://officialverifyguard.com" class="btn btn-primary btn-sm">Get VerifyGuard</a>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-badge">Trusted by 10,000+ users</div>
+    <div class="container hero-inner hero-inner--single">
+      <div class="hero-badge">Free &amp; public · Updated continuously</div>
       <h1 class="hero-title">
-        Stop Scams.<br />
-        Spot Deepfakes.<br />
-        <span class="gradient-text">Stay Protected.</span>
+        Know the scam,<br />
+        <span class="gradient-text">before it gets you.</span>
       </h1>
       <p class="hero-sub">
-        Scampedia uses on-device AI to instantly detect scams, deepfakes, and AI-generated content —
-        before you become a victim.
+        Scampedia is a living encyclopedia of scam patterns — how they work, the red flags, and how to
+        protect yourself. Written and kept up to date by VerifyGuard's AI, sourced from real reports.
       </p>
       <div class="hero-cta">
-        <a href="#download" class="btn btn-primary btn-lg">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          Download for iOS — Free
-        </a>
-        <a href="scampedia.html" class="btn btn-secondary btn-lg">Browse Scam Database →</a>
-      </div>
-      <div class="hero-phone">
-        <div class="phone-mockup">
-          <div class="phone-screen">
-            <div class="phone-header">
-              <span class="phone-title">Scampedia</span>
-              <span class="phone-sub">AI scam &amp; deepfake protection</span>
-            </div>
-            <div class="phone-scan-btn">
-              <div class="phone-shield">🛡️</div>
-              <div class="phone-scan-label">Verify Content</div>
-              <div class="phone-scan-sub">Tap to scan anything</div>
-            </div>
-            <div class="phone-limit">5 free scans left today</div>
-            <div class="phone-grid">
-              <div class="phone-grid-item blue">📷 Photo</div>
-              <div class="phone-grid-item green">🔗 Link</div>
-              <div class="phone-grid-item yellow">📰 News</div>
-              <div class="phone-grid-item red">📢 Ad</div>
-            </div>
-          </div>
-        </div>
+        <a href="scampedia.html" class="btn btn-primary btn-lg">Browse the Database →</a>
+        <a href="https://officialverifyguard.com" class="btn btn-secondary btn-lg">Get the VerifyGuard app</a>
       </div>
     </div>
   </section>
@@ -78,7 +51,7 @@
     <div class="container stats-grid">
       <div class="stat">
         <div class="stat-number">47M+</div>
-        <div class="stat-label">Scams detected globally per year</div>
+        <div class="stat-label">Scams reported globally per year</div>
       </div>
       <div class="stat">
         <div class="stat-number">$10B+</div>
@@ -89,8 +62,8 @@
         <div class="stat-label">Adults over 60 targeted by scammers</div>
       </div>
       <div class="stat">
-        <div class="stat-number">94%</div>
-        <div class="stat-label">Scampedia detection accuracy</div>
+        <div class="stat-number" id="entry-count-stat">—</div>
+        <div class="stat-label">Documented scam patterns on Scampedia</div>
       </div>
     </div>
   </section>
@@ -99,28 +72,28 @@
   <section class="section" id="how-it-works">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">How It Works</div>
-        <h2>Instant protection in 3 steps</h2>
-        <p>No accounts, no uploads to the cloud. Everything runs on your device.</p>
+        <div class="section-badge">How Scampedia Works</div>
+        <h2>From new scam to published article</h2>
+        <p>Every entry starts as a real pattern, gets written up in plain language, and stays connected to live protection.</p>
       </div>
       <div class="steps-grid">
         <div class="step-card">
           <div class="step-num">01</div>
-          <div class="step-icon">📲</div>
-          <h3>Scan Anything</h3>
-          <p>Photo, link, news article, ad, or text message. Just tap and scan.</p>
+          <div class="step-icon">🧠</div>
+          <h3>AI Brain Discovers</h3>
+          <p>VerifyGuard's AI mines emerging scam tactics from scan activity and public reporting in real time.</p>
         </div>
         <div class="step-card">
           <div class="step-num">02</div>
-          <div class="step-icon">🧠</div>
-          <h3>AI Brain Analyzes</h3>
-          <p>Our on-device AI checks against thousands of known scam patterns and deepfake signals in real time.</p>
+          <div class="step-icon">✍️</div>
+          <h3>Written &amp; Sourced</h3>
+          <p>Each pattern becomes an article — how it works, red flags, safety tips — cited back to a real source.</p>
         </div>
         <div class="step-card">
           <div class="step-num">03</div>
-          <div class="step-icon">✅</div>
-          <h3>Clear Verdict</h3>
-          <p>Safe, Suspicious, or Dangerous — explained in plain language, even read aloud for you.</p>
+          <div class="step-icon">🔄</div>
+          <h3>Published &amp; Synced</h3>
+          <p>The entry goes live here and syncs directly into the VerifyGuard app, so protection updates automatically.</p>
         </div>
       </div>
     </div>
@@ -130,39 +103,39 @@
   <section class="section features-section">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">Features</div>
-        <h2>Built for everyone,<br/>especially seniors</h2>
+        <div class="section-badge">What's Here</div>
+        <h2>A real encyclopedia,<br/>not a listicle</h2>
       </div>
       <div class="features-grid">
         <div class="feature-card accent">
-          <div class="feature-icon">🛡️</div>
-          <h3>Scam Detection</h3>
-          <p>Catches grandparent scams, IRS fraud, romance scams, crypto schemes, and more.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🤖</div>
-          <h3>Deepfake Detection</h3>
-          <p>Identifies AI-generated faces, cloned voices, and synthetic media before you trust it.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔊</div>
-          <h3>Speaks Results Aloud</h3>
-          <p>Text-to-speech reads every result clearly — no squinting at small text required.</p>
-        </div>
-        <div class="feature-card">
           <div class="feature-icon">📚</div>
-          <h3>Scam Database</h3>
-          <p>A growing encyclopedia of known scams with safety tips, updated continuously.</p>
+          <h3>Every Scam, Documented</h3>
+          <p>Grandparent scams, IRS fraud, romance scams, crypto schemes, AI voice clones, and more — each with its own article.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🔒</div>
-          <h3>100% On-Device</h3>
-          <p>Your photos and messages never leave your phone. No accounts, no data collection.</p>
+          <div class="feature-icon">🔤</div>
+          <h3>Categories &amp; A-Z Index</h3>
+          <p>Browse by scam type or alphabetically, with cross-links between related patterns — wiki-style.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🧬</div>
-          <h3>Self-Learning AI</h3>
-          <p>The AI Brain learns from every scan, getting smarter the more you use it.</p>
+          <div class="feature-icon">🧠</div>
+          <h3>AI-Discovered, Source-Cited</h3>
+          <p>New entries are surfaced by VerifyGuard's AI and written with real, cited sourcing — not guesswork.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔗</div>
+          <h3>Synced to VerifyGuard</h3>
+          <p>Every article here is also live inside the VerifyGuard app, so what you read powers real-time detection.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🕓</div>
+          <h3>Continuously Updated</h3>
+          <p>New scam patterns are added as they emerge — this isn't a static list that goes stale.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔓</div>
+          <h3>Free &amp; Public</h3>
+          <p>No account, no paywall. Scampedia is a public safety resource, for anyone.</p>
         </div>
       </div>
     </div>
@@ -172,9 +145,9 @@
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">Scam Database</div>
+        <div class="section-badge">Latest Entries</div>
         <h2>Know your enemy</h2>
-        <p>Browse our database of documented scams, each with safety tips written in plain English.</p>
+        <p>A sample of documented scams, each with safety tips written in plain English.</p>
       </div>
       <div id="scam-preview" class="scam-cards"></div>
       <div class="center-btn">
@@ -183,80 +156,12 @@
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="section" id="pricing">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Pricing</div>
-        <h2>Simple, honest pricing</h2>
-      </div>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="pricing-tier">Free</div>
-          <div class="pricing-price">$0<span>/month</span></div>
-          <ul class="pricing-features">
-            <li>✓ 3 scans per day</li>
-            <li>✓ On-device Vision + NLP detection</li>
-            <li>✓ Scampedia encyclopedia access</li>
-            <li class="dim">✗ AI image deepfake detection</li>
-            <li class="dim">✗ Priority scam alerts</li>
-            <li class="dim">✗ Family sharing</li>
-          </ul>
-          <a href="#download" class="btn btn-secondary btn-lg">Get Started Free</a>
-        </div>
-        <div class="pricing-card">
-          <div class="pricing-tier">Basic</div>
-          <div class="pricing-price">$9.99<span>/month</span></div>
-          <ul class="pricing-features">
-            <li>✓ <strong>20 scans per day</strong></li>
-            <li>✓ AI image deepfake detection</li>
-            <li>✓ Full AI Brain pattern matching</li>
-            <li>✓ Scampedia encyclopedia</li>
-            <li class="dim">✗ Priority scam alerts</li>
-            <li class="dim">✗ Family sharing</li>
-          </ul>
-          <a href="#download" class="btn btn-secondary btn-lg">Start Basic</a>
-        </div>
-        <div class="pricing-card featured">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-tier">Pro</div>
-          <div class="pricing-price">$19.99<span>/month</span></div>
-          <ul class="pricing-features">
-            <li>✓ <strong>75 scans per day</strong></li>
-            <li>✓ AI image deepfake detection</li>
-            <li>✓ Full AI Brain pattern matching</li>
-            <li>✓ Scampedia + priority alerts</li>
-            <li>✓ <strong>Real-time scam alert notifications</strong></li>
-            <li class="dim">✗ Family sharing</li>
-          </ul>
-          <a href="#download" class="btn btn-primary btn-lg">Start Pro</a>
-        </div>
-        <div class="pricing-card">
-          <div class="pricing-tier">Guardian</div>
-          <div class="pricing-price">$29.99<span>/month</span></div>
-          <ul class="pricing-features">
-            <li>✓ <strong>200 scans per day</strong></li>
-            <li>✓ AI image deepfake detection</li>
-            <li>✓ Full AI Brain pattern matching</li>
-            <li>✓ Scampedia + priority alerts</li>
-            <li>✓ Real-time scam alert notifications</li>
-            <li>✓ <strong>Family sharing — protect up to 5 people</strong></li>
-          </ul>
-          <a href="#download" class="btn btn-secondary btn-lg">Start Guardian</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DOWNLOAD -->
-  <section class="section download-section" id="download">
+  <!-- GET THE APP CTA -->
+  <section class="section download-section" id="get-app">
     <div class="container download-inner">
-      <h2>Download Scampedia today</h2>
-      <p>Free to download. No account required. Protect yourself and your family in minutes.</p>
-      <a href="#" class="btn btn-primary btn-lg app-store-btn">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        Download on the App Store
-      </a>
+      <h2>Want real-time protection, not just information?</h2>
+      <p>Scampedia documents the scams. VerifyGuard is the app that scans your photos, links, and news for them — free to start.</p>
+      <a href="https://officialverifyguard.com" class="btn btn-primary btn-lg app-store-btn">Get VerifyGuard →</a>
     </div>
   </section>
 
@@ -269,9 +174,10 @@
       </div>
       <div class="footer-links">
         <a href="scampedia.html">Scam Database</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Contact</a>
+        <a href="https://officialverifyguard.com">VerifyGuard App</a>
+        <a href="https://officialverifyguard.com/privacy.html">Privacy Policy</a>
+        <a href="https://officialverifyguard.com/terms.html">Terms of Service</a>
+        <a href="mailto:support@officialverifyguard.com">Contact</a>
       </div>
     </div>
   </footer>

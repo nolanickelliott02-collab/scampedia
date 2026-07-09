@@ -16,6 +16,14 @@ async function fetchReports() {
   }
 }
 
+// ---- Home page: live entry count stat ----
+async function renderEntryCountStat() {
+  const el = document.getElementById('entry-count-stat');
+  if (!el) return;
+  const reports = await fetchReports();
+  el.textContent = `${reports.length}+`;
+}
+
 // ---- Home page: scam preview cards (link straight into Scampedia articles) ----
 async function renderHomePreview() {
   const el = document.getElementById('scam-preview');
@@ -380,6 +388,7 @@ function renderArticle(slug) {
 // ---- Init ----
 document.addEventListener('DOMContentLoaded', () => {
   renderHomePreview();
+  renderEntryCountStat();
   initScampedia();
 });
 
