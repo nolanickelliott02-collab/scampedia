@@ -111,7 +111,7 @@ function bindReportForm() {
     const body = encodeURIComponent(
       `${details}\n\n${email ? `Reporter email: ${email}` : '(no email provided)'}`
     );
-    window.location.href = `mailto:supportverifyguard@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:verifyguardsupport@gmail.com?subject=${subject}&body=${body}`;
 
     form.reset();
     form.classList.add('hidden');
