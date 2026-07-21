@@ -1,6 +1,7 @@
 // VerifyGuard / Scampedia website JS
 
 const API_BASE = './api';
+const REPORT_API_BASE = 'https://clever-bravery-production-2d5f.up.railway.app';
 
 function slugify(str) {
   return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -101,21 +102,53 @@ function bindReportForm() {
     }
   });
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const details = document.getElementById('report-scam-details').value.trim();
     const email = document.getElementById('report-scam-email').value.trim();
     if (!details) return;
 
-    const subject = encodeURIComponent('Scampedia Scam Report');
-    const body = encodeURIComponent(
-      `${details}\n\n${email ? `Reporter email: ${email}` : '(no email provided)'}`
-    );
-    window.location.href = `mailto:verifyguardsupport@gmail.com?subject=${subject}&body=${body}`;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    setReportStatus(form, null);
 
-    form.reset();
-    form.classList.add('hidden');
+    try {
+      const res = await fetch(`${REPORT_API_BASE}/api/scam-report`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ details, email: email || undefined }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) throw new Error(data.error || `Request failed (${res.status})`);
+
+      form.reset();
+      setReportStatus(form, { ok: true, message: '✅ Thanks — we\'ll review your report.' });
+      setTimeout(() => form.classList.add('hidden'), 2500);
+    } catch (err) {
+      setReportStatus(form, { ok: false, message: '⚠️ Could not send your report. Please try again.' });
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
   });
+}
+
+function setReportStatus(form, result) {
+  let el = form.querySelector('.report-status');
+  if (!result) {
+    el?.remove();
+    return;
+  }
+  if (!el) {
+    el = document.createElement('div');
+    el.className = 'report-status';
+    form.appendChild(el);
+  }
+  el.textContent = result.message;
+  el.classList.toggle('report-status-ok', result.ok);
+  el.classList.toggle('report-status-error', !result.ok);
 }
 
 function bindSidebarSearch() {

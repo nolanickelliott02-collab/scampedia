@@ -441,6 +441,9 @@ img { max-width: 100%; }
 .sidebar-report-form textarea::placeholder,
 .sidebar-report-form input::placeholder { color: var(--text-3); }
 .sidebar-report-form .btn { width: 100%; justify-content: center; }
+.report-status { margin-top: 8px; font-size: 12.5px; line-height: 1.5; }
+.report-status-ok { color: var(--accent); }
+.report-status-error { color: #ff6b6b; }
 
 /* ---- Browse view (grid of articles) ---- */
 .wiki-browse-header { margin-bottom: 28px; }
