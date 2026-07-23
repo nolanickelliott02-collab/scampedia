@@ -1,0 +1,15 @@
+{
+  "name": "scampedia-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scampedia static site + daily AI-researched scam entry pipeline",
+  "scripts": {
+    "generate-daily-scam": "node scripts/generate-daily-scam.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
