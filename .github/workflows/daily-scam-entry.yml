@@ -28,12 +28,16 @@ jobs:
         run: node scripts/generate-daily-scam.js
       - name: Commit and push if a new entry was written
         if: steps.generate.outputs.result == 'written'
+        env:
+          # Passed via env, not interpolated directly into the script below —
+          # these strings come from model output and could contain quotes or
+          # shell metacharacters, so treat them as untrusted input.
+          ENTRY_TITLE: ${{ steps.generate.outputs.title }}
+          ENTRY_CITATION: ${{ steps.generate.outputs.citation }}
         run: |
           git config user.name "scampedia-bot"
           git config user.email "actions@github.com"
           git add api/reports.json
-          git commit -m "Add scam entry: ${{ steps.generate.outputs.title }}
-
-          Source: ${{ steps.generate.outputs.citation }}"
+          git commit -m "Add scam entry: $ENTRY_TITLE" -m "Source: $ENTRY_CITATION"
           git pull --rebase origin main
           git push origin main
