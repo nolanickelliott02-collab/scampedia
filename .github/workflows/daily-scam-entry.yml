@@ -1,0 +1,39 @@
+name: Daily Scam Entry
+
+on:
+  schedule:
+    - cron: '37 8 * * *'
+  workflow_dispatch: {}
+
+concurrency:
+  group: daily-scam-entry
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci
+      - name: Generate daily scam entry
+        id: generate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-daily-scam.js
+      - name: Commit and push if a new entry was written
+        if: steps.generate.outputs.result == 'written'
+        run: |
+          git config user.name "scampedia-bot"
+          git config user.email "actions@github.com"
+          git add api/reports.json
+          git commit -m "Add scam entry: ${{ steps.generate.outputs.title }}
+
+          Source: ${{ steps.generate.outputs.citation }}"
+          git pull --rebase origin main
+          git push origin main
