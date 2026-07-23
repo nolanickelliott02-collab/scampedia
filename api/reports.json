@@ -1,6 +1,6 @@
 {
-  "version": 8,
-  "lastUpdated": "2026-07-09T00:00:00Z",
+  "version": 9,
+  "lastUpdated": "2026-07-23T22:31:39.409Z",
   "reports": [
     {
       "id": "1",
@@ -1352,6 +1352,45 @@
         "Email"
       ],
       "isAIDiscovered": false
+    },
+    {
+      "id": "41",
+      "slug": "task-based-gamified-job-scam",
+      "title": "Task-Based \"Gamified\" Job Scam",
+      "summary": "Scammers lure remseekers with texts or WhatsApp messages offering easy remote \"tasks\" like liking videos or rating products, then trap them in a game-like app that requires crypto deposits to \"unlock\" fake earnings.",
+      "category": "Employment Scam",
+      "firstReported": "2023-01-01",
+      "reportCount": 20000,
+      "relatedScams": [],
+      "safetyTips": [
+        "Never pay money, crypto, or fees to 'unlock' wages you supposedly already earned \n require your own money upfront to get paid",
+        "Do not respond to unsolicited job texts or messages on WhatsApp/Telegram, especially from unknown numbers with generic greetings",
+        "Research the hiring company independently through its official website and legitimate job boards before engaging",
+        "Stop immediately if a 'job' asks you to top up a balance in cryptocurrency or claims your account has a negative balance",
+        "Report suspected task scams to the FTC at ReportFraud.ftc.gov and the FBI's IC3 at ic3.gov, and keep screenshots of messages and transactions as evidence"
+      ],
+      "datePublished": "2026-07-23T22:31:39.409Z",
+      "howItWorks": "Victims receive an unsolicited text, WhatsApp, or Telegram message offering a well-paid remote job doing simple repetitive tasks such as liking videos, \"optimizing\" apps, boosting product listings, or rating products/hotels on an unfamiliar platform. After a short interview-style chat, they're directed to download an app or visit a site where they complete tasks in sets (often 40 per round) and watch a fake balance grow, sometimes receiving a small real payout via PayPal, CashApp, or crypto to build trust. Once invested, the platform introduces \"combo\" or \"lucky\" tasks that require the victim to deposit their own money (usually cryptocurrency) to keep their balance positive or to \"unlock\" the ability to withdraw accumulated earnings; each deposit is followed by a new excuse (a \"negative balance,\" a \"tax,\" or a \"withdrawal fee\") demanding more money, and the platform ultimately freezes the account or disappears once the victim stops paying.",
+      "redFlags": [
+        "Unsolicited job offer arrives by text, WhatsApp, or Telegram with no formal application or interview process",
+        "Job involves simple repetitive tasks (liking videos, rating apps/products/hotels) organized into gamified 'levels' or sets of tasks",
+        "You're asked to deposit your own money or cryptocurrency to 'unlock' further tasks, fix a 'negative balance,' or withdraw earnings",
+        "Small early payouts are used to build trust before larger deposits are demanded",
+        "Pay is unusually high for extremely simple work with no real interview or verifiable employer"
+      ],
+      "realExamples": [
+        "The FTC's December 2024 Data Spotlight found task/gamified job scam reports jumped from about 5,000 in 2023 to roughly 20,000 in just the first half of 2024.",
+        "A Fox News report described a man who lost $10,000 within days after a text about an 'app optimization' job evolved into demands for cryptocurrency deposits.",
+        "BBB's 2026 employment scam update documented victims recruited via text for 'app optimization' or 'product boosting' tasks who were asked to leave fake reviews before being pressured for payments, with some individual losses exceeding $100,000."
+      ],
+      "source": "Federal Trade Commission Data Spotlight (Dec. 2024), via Malwarebytes summary: https://www.malwarebytes.com/blog/news/2024/12/task-scams-surge-by-400-but-what-are-they ; BBB 2026 Employment Scams Update: https://www.bbb.org/all/scamstudies/jobscams/employment-scams-2026-update",
+      "spreadPlatforms": [
+        "Text Messages",
+        "WhatsApp",
+        "Telegram",
+        "Social Media"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
