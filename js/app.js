@@ -32,7 +32,7 @@ async function renderHomePreview() {
   const reports = await fetchReports();
   const preview = reports.slice(0, 3);
   el.innerHTML = preview.map(r => `
-    <a class="scam-card" href="scampedia.html#/wiki/${r.slug}">
+    <a class="scam-card" href="scams/${r.slug}.html">
       <div class="scam-cat">${r.category}</div>
       <h3>${r.title}</h3>
       <p>${r.summary.slice(0, 110)}…</p>
@@ -58,26 +58,10 @@ async function initScampedia() {
   renderSidebarCategories();
   bindSidebarSearch();
   bindRandomLink();
-  bindTocScrolling(main);
   bindReportForm();
 
   window.addEventListener('hashchange', route);
   route();
-}
-
-// In-article "Contents" box links (#how-it-works, #red-flags, etc.) must NOT
-// touch location.hash — this app uses the hash for routing (#/wiki/slug), so
-// letting a plain in-page anchor change it makes the router think you
-// navigated away and replaces the whole article with the browse grid.
-// Intercept the click and scroll manually instead.
-function bindTocScrolling(main) {
-  main.addEventListener('click', e => {
-    const link = e.target.closest('.wiki-toc a');
-    if (!link) return;
-    e.preventDefault();
-    const id = link.getAttribute('href').slice(1);
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
 }
 
 function bindRandomLink() {
@@ -86,7 +70,7 @@ function bindRandomLink() {
   link.addEventListener('click', e => {
     e.preventDefault();
     const pick = allReports[Math.floor(Math.random() * allReports.length)];
-    if (pick) location.hash = `#/wiki/${pick.slug}`;
+    if (pick) location.href = `scams/${pick.slug}.html`;
   });
 }
 
@@ -195,7 +179,9 @@ function route() {
   const [seg, ...rest] = hash.split('/');
   const param = rest.join('/');
 
-  if (seg === 'wiki' && param) return renderArticle(param);
+  // Legacy hash-routed article view — now a real static page at /scams/<slug>.html
+  // (crawlable, shareable, works with zero JS). Redirect old #/wiki/ links there.
+  if (seg === 'wiki' && param) { location.replace(`scams/${param}.html`); return; }
   if (seg === 'category' && param) return renderBrowse({ categorySlug: param });
   if (seg === 'search' && param) return renderBrowse({ query: decodeURIComponent(param) });
   if (seg === 'az') return renderAZIndex();
@@ -264,7 +250,7 @@ function formatDate(iso) {
 function cardHtml(r) {
   const date = formatDate(r.datePublished || r.firstReported);
   return `
-    <a class="scam-card" href="#/wiki/${r.slug}">
+    <a class="scam-card" href="scams/${r.slug}.html">
       <div class="scam-card-meta">
         <span class="scam-cat">${r.category}</span>
         ${date ? `<span>·</span><span class="scam-card-date">${date}</span>` : ''}
@@ -294,7 +280,7 @@ function renderAZIndex() {
       <div class="az-group-letter">${letter}</div>
       <div class="az-group-items">
         ${groups[letter].map(r => `
-          <a class="az-item" href="#/wiki/${r.slug}">
+          <a class="az-item" href="scams/${r.slug}.html">
             <span>${r.title}</span>
             <span class="az-item-cat">${r.category}</span>
           </a>
@@ -310,158 +296,6 @@ function renderAZIndex() {
     </div>
     <div class="az-list">${groupsHtml}</div>
   `;
-}
-
-// ---- Article page ----
-function renderArticle(slug) {
-  const main = document.getElementById('wiki-main');
-  const report = allReports.find(r => r.slug === slug);
-  setActiveSidebar(null, null);
-
-  if (!report) {
-    main.innerHTML = `
-      <div class="no-results">
-        <div class="no-results-icon">❓</div>
-        <p>That article doesn't exist yet.</p>
-        <a class="wiki-back-link" href="#/">← Back to all scams</a>
-      </div>
-    `;
-    return;
-  }
-
-  const tipsHtml = report.safetyTips.map(t => `<li>${t}</li>`).join('');
-
-  const relatedReports = (report.relatedScams || [])
-    .map(title => allReports.find(r => r.title === title))
-    .filter(Boolean);
-  const relatedHtml = relatedReports.length
-    ? `<div class="wiki-related">${relatedReports.map(r => `<a class="wiki-related-pill" href="#/wiki/${r.slug}">${r.title} →</a>`).join('')}</div>`
-    : `<p class="wiki-no-related">No related scams documented yet.</p>`;
-
-  const firstReportedYear = report.firstReported ? new Date(report.firstReported).getFullYear() : '—';
-  const publishedDate = formatDate(report.datePublished || report.firstReported);
-  const howItWorks = report.howItWorks || '';
-  const redFlags = report.redFlags || [];
-  const realExamples = report.realExamples || [];
-  const spreadPlatforms = report.spreadPlatforms || [];
-  const source = report.source || 'Multiple user reports';
-
-  // Sections present drive both the Contents box and the body — kept in sync in one place.
-  const sections = [
-    { id: 'overview', label: 'Overview', show: true },
-    { id: 'how-it-works', label: 'How It Works', show: !!howItWorks },
-    { id: 'red-flags', label: 'Red Flags', show: redFlags.length > 0 },
-    { id: 'real-examples', label: 'Real Examples', show: realExamples.length > 0 },
-    { id: 'platforms', label: 'Where It Spreads', show: spreadPlatforms.length > 0 },
-    { id: 'protect', label: 'How to Protect Yourself', show: tipsHtml.length > 0 },
-    { id: 'related', label: 'Related Scams', show: true },
-  ].filter(s => s.show);
-
-  const tocHtml = `
-    <div class="wiki-toc">
-      <div class="wiki-toc-title">Contents</div>
-      <ol>${sections.map(s => `<li><a href="#${s.id}">${s.label}</a></li>`).join('')}</ol>
-    </div>
-  `;
-
-  main.innerHTML = `
-    <div class="wiki-breadcrumb">
-      <a href="#/">Scampedia</a>
-      <span class="sep">›</span>
-      <a href="#/category/${slugify(report.category)}">${report.category}</a>
-      <span class="sep">›</span>
-      <span>${report.title}</span>
-    </div>
-
-    <div class="wiki-article-header">
-      <div class="wiki-cat-tag">${report.category}</div>
-      <h1>${report.title}</h1>
-      <div class="wiki-byline">
-        ${publishedDate ? `<span>Added ${publishedDate}</span><span class="sep">·</span>` : ''}
-        ${report.isAIDiscovered ? `<span class="ai-pill">🧠 Discovered by VerifyGuard AI Brain</span><span class="sep">·</span>` : ''}
-        <span>Source: ${source}</span>
-      </div>
-    </div>
-
-    <div class="wiki-body">
-      <div class="wiki-main-col">
-        <div class="wiki-section" id="overview">
-          <div class="wiki-section-heading">Overview</div>
-          <p class="wiki-summary">${report.summary}</p>
-        </div>
-
-        ${tocHtml}
-
-        ${howItWorks ? `
-        <div class="wiki-section" id="how-it-works">
-          <div class="wiki-section-heading">How It Works</div>
-          <p class="wiki-summary">${howItWorks}</p>
-        </div>` : ''}
-
-        ${redFlags.length ? `
-        <div class="wiki-section" id="red-flags">
-          <div class="wiki-section-heading">Red Flags</div>
-          <ul class="wiki-redflags">${redFlags.map(f => `<li>${f}</li>`).join('')}</ul>
-        </div>` : ''}
-
-        ${realExamples.length ? `
-        <div class="wiki-section" id="real-examples">
-          <div class="wiki-section-heading">Real Examples</div>
-          <ul class="wiki-examples">${realExamples.map(e => `<li>${e}</li>`).join('')}</ul>
-        </div>` : ''}
-
-        ${spreadPlatforms.length ? `
-        <div class="wiki-section" id="platforms">
-          <div class="wiki-section-heading">Where It Spreads</div>
-          <div class="wiki-platforms">${spreadPlatforms.map(p => `<span class="wiki-platform-pill">${p}</span>`).join('')}</div>
-        </div>` : ''}
-
-        <div class="wiki-section" id="protect">
-          <div class="wiki-section-heading">How to Protect Yourself</div>
-          <ul class="wiki-tips">${tipsHtml}</ul>
-        </div>
-
-        <div class="wiki-section" id="related">
-          <div class="wiki-section-heading">Related Scams</div>
-          ${relatedHtml}
-        </div>
-
-        <div class="wiki-citation">
-          <strong>Source:</strong> ${source} &nbsp;·&nbsp;
-          <strong>First reported:</strong> ${firstReportedYear} &nbsp;·&nbsp;
-          This entry is part of the same Scampedia database synced into the VerifyGuard app.
-        </div>
-
-        <a class="wiki-back-link" href="#/">← Back to all scams</a>
-      </div>
-
-      <div class="wiki-infobox">
-        <div class="wiki-infobox-title">Quick Facts</div>
-        <div class="wiki-infobox-row">
-          <span class="wiki-infobox-label">Category</span>
-          <span class="wiki-infobox-value">${report.category}</span>
-        </div>
-        <div class="wiki-infobox-row">
-          <span class="wiki-infobox-label">First Reported</span>
-          <span class="wiki-infobox-value">${firstReportedYear}</span>
-        </div>
-        <div class="wiki-infobox-row">
-          <span class="wiki-infobox-label">Reports Filed</span>
-          <span class="wiki-infobox-value">🚨 ${report.reportCount.toLocaleString()}</span>
-        </div>
-        <div class="wiki-infobox-row">
-          <span class="wiki-infobox-label">Detected By</span>
-          <span class="wiki-infobox-value">VerifyGuard AI</span>
-        </div>
-        ${report.isAIDiscovered ? `
-        <div class="wiki-infobox-row">
-          <span class="wiki-infobox-label">Discovery</span>
-          <span class="wiki-infobox-value">🧠 AI Discovered</span>
-        </div>` : ''}
-      </div>
-    </div>
-  `;
-  window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 // ---- Init ----

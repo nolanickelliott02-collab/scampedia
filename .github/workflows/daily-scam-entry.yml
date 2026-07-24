@@ -26,6 +26,9 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/generate-daily-scam.js
+      - name: Rebuild static scam pages
+        if: steps.generate.outputs.result == 'written'
+        run: npm run build:scams
       - name: Commit and push if a new entry was written
         if: steps.generate.outputs.result == 'written'
         env:
@@ -37,7 +40,7 @@ jobs:
         run: |
           git config user.name "scampedia-bot"
           git config user.email "actions@github.com"
-          git add api/reports.json
+          git add api/reports.json scams/ sitemap.xml
           git commit -m "Add scam entry: $ENTRY_TITLE" -m "Source: $ENTRY_CITATION"
           git pull --rebase origin main
           git push origin main

@@ -4,7 +4,8 @@
   "private": true,
   "description": "Scampedia static site + daily AI-researched scam entry pipeline",
   "scripts": {
-    "generate-daily-scam": "node scripts/generate-daily-scam.js"
+    "generate-daily-scam": "node scripts/generate-daily-scam.js",
+    "build:scams": "node scripts/build-scam-pages.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.0"

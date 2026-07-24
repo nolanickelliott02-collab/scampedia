@@ -621,6 +621,17 @@ img { max-width: 100%; }
 }
 .wiki-citation strong { color: var(--text-2); }
 
+.wiki-cta {
+  margin-top: 32px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+.wiki-cta-title { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+.wiki-cta p { color: var(--text-2); font-size: 14.5px; line-height: 1.6; margin-bottom: 16px; }
+
 .wiki-infobox {
   background: var(--surface);
   border: 1px solid var(--border);
