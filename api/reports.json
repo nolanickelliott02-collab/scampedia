@@ -1,6 +1,6 @@
 {
-  "version": 9,
-  "lastUpdated": "2026-07-23T22:31:39.409Z",
+  "version": 10,
+  "lastUpdated": "2026-07-24T10:40:52.731Z",
   "reports": [
     {
       "id": "1",
@@ -1389,6 +1389,45 @@
         "WhatsApp",
         "Telegram",
         "Social Media"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "42",
+      "slug": "ftc-official-impersonation-bitcoin-atm-scam",
+      "title": "FTC Official Impersonation Bitcoin ATM Scam",
+      "summary": "Scammers are cold-calling consumers claiming to be real, named FTC leaders like Chief Privacy Officer John Krebs or Chairman Andrew Ferguson, falsely accusing them of crimes like money laundering and pressuring them to \"resolve\" the matter by depositing cash into a Bitcoin ATM.",
+      "category": "Government Scam",
+      "firstReported": "2025-09-01",
+      "reportCount": 1500,
+      "relatedScams": [],
+      "safetyTips": [
+        "Know that the FTC will never call you out of the blue and tell you to move or send money to 'protect' it",
+        "Hang up immediately and do not call back any number provided by the caller",
+        "Never deposit money into a cryptocurrency ATM, buy gift cards, or send funds via payment apps at the request of an unexpected caller",
+        "Independently verify by looking up official contact info yourself rather than trusting caller ID or numbers given during the call",
+        "Report the call to the FTC at ReportFraud.ftc.gov and to DoNotCall.gov"
+      ],
+      "datePublished": "2026-07-24T10:40:52.730Z",
+      "howItWorks": "A victim receives an unexpected call from someone using the name and title of an actual senior FTC official (such as \"agent\" John Krebs, or a sitting FTC Commissioner or the Chairman). The caller uses a spoofed caller ID to make the call appear to come from a legitimate government number, and may text a photo of a fake FTC badge or ID card as \"proof\" of identity. The caller falsely claims the victim is under investigation for money laundering or another serious crime and that their money is at risk. To \"fix\" the problem or avoid arrest, the caller instructs the victim to withdraw funds and deposit them into a cryptocurrency ATM, or to move money via gift cards or payment apps like Zelle, Cash App, or Venmo, under the pretense of \"protecting\" it. In reality, the money goes straight to the scammer, and the FTC has no \"agents\" and never contacts people this way to demand payment.",
+      "redFlags": [
+        "Unexpected call from someone claiming to be an FTC 'agent' or named commissioner (the FTC has no 'agents')",
+        "Caller says you're under investigation and must act immediately to avoid arrest or financial loss",
+        "Instructions to withdraw money and deposit it into a Bitcoin/cryptocurrency ATM",
+        "Caller ID appears to show a government or FTC-linked number (easily spoofed)",
+        "A texted photo of a badge or ID card offered as 'proof' of authority",
+        "Pressure to move money via gift cards or peer-to-peer payment apps to 'protect' it"
+      ],
+      "realExamples": [
+        "FTC consumer alert (Dec. 9, 2025) describing callers posing as 'agent' John Krebs who accuse targets of money laundering and demand Bitcoin ATM deposits",
+        "FTC alert (Sept. 2025) describing scammers falsely claiming to be FTC Commissioners, using spoofed numbers and threats of legal action",
+        "Consumer alert describing scammers impersonating FTC Chairman Andrew Ferguson as the 'latest twist' in these schemes"
+      ],
+      "source": "FTC Consumer Advice, \"Scammers are impersonating FTC Chief Privacy Officer John Krebs,\" Dec. 9, 2025, https://consumer.ftc.gov/consumer-alerts/2025/12/scammers-are-impersonating-ftc-chief-privacy-officer-john-krebs",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Text Messages",
+        "Robocalls"
       ],
       "isAIDiscovered": true
     }
