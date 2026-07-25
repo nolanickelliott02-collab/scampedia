@@ -1,6 +1,6 @@
 {
-  "version": 10,
-  "lastUpdated": "2026-07-24T10:40:52.731Z",
+  "version": 11,
+  "lastUpdated": "2026-07-25T10:14:24.933Z",
   "reports": [
     {
       "id": "1",
@@ -1428,6 +1428,46 @@
         "Phone Calls",
         "Text Messages",
         "Robocalls"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "43",
+      "slug": "fake-captcha-clickfix-malware-scam",
+      "title": "Fake CAPTCHA \"ClickFix\" Malware Scam",
+      "summary": "Scammers plant fake \"I'm not a robot\" CAPTCHA verification screens on compromised or malicious websites that trick visitors into manually running a hidden malicious command, infecting their own device with password- and data-stealing malware.",
+      "category": "Tech Scam",
+      "firstReported": "2025-03-01",
+      "reportCount": 5000,
+      "relatedScams": [],
+      "safetyTips": [
+        "Never follow instructions to press Windows+R, paste content, and press Enter as part of any CAPTCHA or verification process — legitimate CAPTCHAs never require this",
+        "If you accidentally pasted and ran a command, disconnect the device from the internet immediately and run a full malware/antivirus scan",
+        "Change passwords for email, banking, and other sensitive accounts from a different, uninfected device if you suspect you ran a malicious command",
+        "Keep browser and operating system security settings up to date and avoid clicking links or ads from unfamiliar or unsolicited sources",
+        "Report suspected fake CAPTCHA or malware pop-ups to the FTC at ReportFraud.ftc.gov"
+      ],
+      "datePublished": "2026-07-25T10:14:24.932Z",
+      "howItWorks": "Victims land on a compromised or scam website (often reached via a phishing link, malicious ad, or search result) and are shown a CAPTCHA-style popup that looks like a normal \"verify you're human\" check. Unlike a real CAPTCHA, which asks you to identify images or type displayed characters, this fake version secretly copies a malicious script to the device's clipboard the moment the user clicks the verification button. It then instructs the victim to \"prove they're human\" by pressing a keyboard shortcut to open the Run dialog, pasting the clipboard contents, and hitting Enter. Doing so executes a PowerShell or other command-line script that silently downloads and installs information-stealing malware (commonly known as clipboard-hijacking or \"ClickFix\" attacks), which can harvest saved passwords, browser data, email credentials, and other sensitive information without the victim realizing anything happened.",
+      "redFlags": [
+        "A CAPTCHA or verification screen asks you to press a keyboard shortcut like Windows+R (or Windows+V) instead of simply clicking images or typing displayed text",
+        "You're instructed to paste something and hit Enter to 'verify' you're human",
+        "The prompt appears on an unfamiliar site, after clicking a link in an unsolicited text/email, or on a page reached through a suspicious search result or ad",
+        "The pop-up creates urgency or claims your device needs immediate verification/security confirmation",
+        "Any request to run a command, open a system dialog box, or execute code as part of a 'human verification' step"
+      ],
+      "realExamples": [
+        "The FTC issued a June 2026 consumer alert describing reports of fake CAPTCHA phishing pages that trick users into installing malware on their own devices",
+        "Security researchers and malware removal forums have documented widespread 'Fake Captcha (WIN+R, Ctrl+V, Enter)' incidents tied to infostealer malware such as Lumma Stealer",
+        "Security vendors have tracked and named this attack pattern 'ClickFix,' describing clipboard-hijacking campaigns that silently copy malicious commands to a victim's clipboard when they click a fake verification button"
+      ],
+      "source": "FTC Consumer Advice, \"How to spot a CAPTCHA scam,\" June 8, 2026, https://consumer.ftc.gov/consumer-alerts/2026/06/how-spot-captcha-scam",
+      "spreadPlatforms": [
+        "Compromised Websites",
+        "Phishing Emails",
+        "Malicious Ads",
+        "Text Messages",
+        "Search Engine Results"
       ],
       "isAIDiscovered": true
     }
