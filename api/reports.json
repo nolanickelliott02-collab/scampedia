@@ -1,6 +1,6 @@
 {
-  "version": 11,
-  "lastUpdated": "2026-07-25T10:14:24.933Z",
+  "version": 12,
+  "lastUpdated": "2026-07-26T10:23:41.533Z",
   "reports": [
     {
       "id": "1",
@@ -1468,6 +1468,48 @@
         "Malicious Ads",
         "Text Messages",
         "Search Engine Results"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "44",
+      "slug": "ic3-fbi-recovery-impersonation-scam",
+      "title": "IC3/FBI Recovery Impersonation Scam",
+      "summary": "Scammers impersonate FBI and Internet Crime Complaint Center (IC3) personnel — now using AI deepfake videos and spoofed IC3 websites — to \"revictimize\" people who already lost money to a scam by falsely offering to recover their funds.",
+      "category": "Government Scam",
+      "firstReported": "2025-04-18",
+      "reportCount": 500,
+      "relatedScams": [],
+      "safetyTips": [
+        "Only file or check complaints at the official site by typing www.ic3.gov directly into your browser, never via a link sent to you",
+        "Know that the IC3 will never ask for payment, gift cards, or crypto to recover lost funds, nor refer you to a company that charges recovery fees",
+        "Do not share personal or financial information with anyone you've only met online or by phone, even if they claim to be law enforcement",
+        "Verify any claimed FBI contact by calling your local FBI field office directly using a number you look up independently",
+        "Be skeptical of unsolicited videos of officials on social media, which can be AI-generated deepfakes",
+        "If you're a repeat contact target after reporting a scam, treat any follow-up 'recovery' outreach as highly suspicious and report it to IC3"
+      ],
+      "datePublished": "2026-07-26T10:23:41.532Z",
+      "howItWorks": "Criminals target people who have already fallen victim to a scam (or who mention online that they plan to file a fraud report) and pose as FBI agents or IC3 staff reaching out via social media, email, or phone to \"help\" with the case. They may create fake IC3 social media pages or infiltrate online scam-victim support groups, direct victims to convincing spoofed versions of the real ic3.gov complaint portal, or even show AI-generated deepfake videos of senior FBI officials to build credibility. The scammer then claims funds have been recovered or offers \"assistance\" recovering lost money, but the real goal is to harvest additional personal and financial information or extract upfront \"recovery fees,\" compounding the victim's original loss.",
+      "redFlags": [
+        "Being contacted out of the blue by someone claiming to be FBI/IC3 staff after a prior scam or online complaint",
+        "Any request for payment, gift cards, or cryptocurrency to \"recover\" lost funds",
+        "Social media profiles or pages claiming to represent IC3 or offering fund recovery services",
+        "Being directed to a website that looks like ic3.gov but arrived via a link in a message rather than typed directly",
+        "Video calls or recordings featuring FBI officials that were unsolicited or shared via social media DM",
+        "Pressure to act quickly or share sensitive personal/financial details to 'verify' a recovered case"
+      ],
+      "realExamples": [
+        "FBI/IC3 issued a July 2026 update to its earlier PSA warning that scammers are impersonating FBI personnel facilitating IC3 complaints, now incorporating AI-generated deepfake videos of senior FBI officials and spoofed IC3 websites to re-target prior fraud victims.",
+        "IC3 reported that almost all complainants in the scheme said scammers claimed to have recovered the victim's lost funds or offered to assist in recovery, which turned out to be a ruse to revictimize people who had already lost money to scams.",
+        "Reports describe scammers creating fraudulent social media profiles and pages impersonating FBI/IC3 personnel, infiltrating online fraud-victim support groups, and directing victims to fake IC3 'case update' pages or messaging apps to continue the scam."
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), Public Service Announcement PSA260720, \"FBI Warns of Scammers Impersonating the IC3\" - https://www.ic3.gov/PSA/2026/PSA260720",
+      "spreadPlatforms": [
+        "Social Media",
+        "Email",
+        "Phone Calls",
+        "Messaging Apps",
+        "Fake Websites"
       ],
       "isAIDiscovered": true
     }
