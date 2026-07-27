@@ -1,6 +1,6 @@
 {
-  "version": 12,
-  "lastUpdated": "2026-07-26T10:23:41.533Z",
+  "version": 13,
+  "lastUpdated": "2026-07-27T12:01:23.985Z",
   "reports": [
     {
       "id": "1",
@@ -1510,6 +1510,47 @@
         "Phone Calls",
         "Messaging Apps",
         "Fake Websites"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "45",
+      "slug": "fake-relief-check-phishing-scam",
+      "title": "Fake \"Relief Check\" Phishing Scam",
+      "summary": "Scammers are calling, texting, and emailing people claiming they have an unclaimed \"relief check\" worth thousands of dollars waiting for them, directing victims to phishing sites to \"search their name\" and steal personal and financial data.",
+      "category": "Government Scam",
+      "firstReported": "2025-08-01",
+      "reportCount": 900,
+      "relatedScams": [],
+      "safetyTips": [
+        "Never click links in unsolicited texts, emails, or voicemails about unclaimed government money",
+        "Verify any claimed government payment directly through official .gov websites or by calling the agency using a number you look up independently",
+        "Do not enter personal or banking information on websites referenced in unsolicited calls or texts",
+        "Hang up on robocalls or voicemails claiming to be from government relief programs and do not call back the number provided",
+        "Report suspicious messages to the BBB Scam Tracker, the FTC at reportfraud.ftc.gov, and your phone carrier"
+      ],
+      "datePublished": "2026-07-27T12:01:23.984Z",
+      "howItWorks": "Victims receive a call, voicemail, or text — often from someone identifying himself as \"Dan\" — claiming government records show a specific dollar amount (commonly cited around $5,286) is waiting for them in a relief check tied to \"past relief programs or federal assistance payments.\" The message urges the victim to visit a website such as myreliefcheck.com or myreliefclaim.com to search their name and \"collect it before it's returned.\" The site is not affiliated with any real government agency; instead, it prompts victims to enter personal identifying information and banking details to \"claim\" the payment. Handing over this data exposes victims to identity theft, drained bank accounts, and continued follow-up contact from scammers via additional calls, texts, or emails attempting to extract more money or information. The scam has been amplified by news coverage of the recent federal government shutdown, which scammers exploit to make the \"relief payment\" premise feel more plausible.",
+      "redFlags": [
+        "Unsolicited call, voicemail, or text claiming you have an unclaimed government relief check waiting",
+        "You're told to visit a third-party website (not a .gov domain) and \"search your name\" to claim money",
+        "A vague personal name like \"Dan\" is used with no verifiable agency affiliation",
+        "Urgency pressure to act \"before it's returned\"",
+        "Requests for personal identifying information or bank details to \"release\" a payment",
+        "Ties the offer to current news events like a government shutdown or old COVID-era relief programs"
+      ],
+      "realExamples": [
+        "BBB Scam Tracker received over 900 reports nationally about the myreliefcheck.com/myreliefclaim.com scheme, with victims reporting calls, voicemails, and texts from a caller identifying himself as \"Dan\" claiming a specific dollar amount was waiting for them",
+        "Local BBB chapters in Michigan and North Alabama reported the scam spreading to their regions within the past two months, with over 800 reports logged during that period",
+        "Victims reported the scam intensifying alongside news coverage of the federal government shutdown, with fraudsters exploiting shutdown-related anxiety about federal payments"
+      ],
+      "source": "Better Business Bureau, \"BBB Scam Alert: Fake relief check phone calls claim you have money waiting\" - https://www.bbb.org/all/consumer/scam/fake-relief-check-scam",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Voicemail",
+        "Text Messages",
+        "Email",
+        "Social Media"
       ],
       "isAIDiscovered": true
     }
