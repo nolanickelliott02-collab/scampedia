@@ -1,6 +1,6 @@
 {
-  "version": 13,
-  "lastUpdated": "2026-07-27T12:01:23.985Z",
+  "version": 14,
+  "lastUpdated": "2026-07-28T11:01:08.698Z",
   "reports": [
     {
       "id": "1",
@@ -1551,6 +1551,45 @@
         "Text Messages",
         "Email",
         "Social Media"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "46",
+      "slug": "gold-bar-bulk-cash-courier-scam",
+      "title": "Gold Bar & Bulk Cash Courier Scam",
+      "summary": "Scammers impersonating grandchildren, government agents, or tech support convince mostly elderly victims to withdraw cash or buy gold bars, then send an in-person courier to physically collect the loot from the victim's home.",
+      "category": "Government Scam",
+      "firstReported": "2023-01-01",
+      "reportCount": 1737,
+      "relatedScams": [],
+      "safetyTips": [
+        "Never give cash, gold, or valuables to a courier sent by someone who contacted you unsolicited by phone, email, or pop-up",
+        "Independently verify any claim of a relative's emergency or government/legal trouble by calling them or the agency directly using a number you look up yourself",
+        "Real government agencies (FBI, IRS, Social Security, etc.) will never ask you to buy gold bars or hand cash to a courier",
+        "Talk to a trusted family member or your bank before withdrawing large sums or buying precious metals under pressure",
+        "Report suspected courier pickup scams to the FBI's IC3.gov and local police immediately, even if you're embarrassed"
+      ],
+      "datePublished": "2026-07-28T11:01:08.697Z",
+      "howItWorks": "A fraudster first gains a victim's trust through a grandparent-emergency call, a government/law-enforcement impersonation call, or a tech-support pop-up, convincing the victim their money is at risk or a relative is in trouble. Instead of asking for a wire transfer or gift cards, the scammer instructs the victim to withdraw large amounts of cash or, increasingly, to purchase physical gold bars from a dealer \"to protect the funds.\" The criminal then arranges for a courier, sometimes an unwitting rideshare driver and sometimes a knowing accomplice, to come to the victim's home or a nearby meeting point to physically pick up the cash or gold. To make the handoff seem legitimate, the scammer often gives the victim a verification \"code,\" \"password,\" or \"serial number\" that the courier must recite before the victim hands over the money or gold.",
+      "redFlags": [
+        "A caller you don't know instructs you to withdraw cash or buy gold bars and hand them to a stranger who comes to your door",
+        "You're told to give a courier a special code, password, or serial number to verify who should receive the money",
+        "Urgent claims that a family member is in legal trouble, your accounts are compromised, or the government needs you to move your money to \"protect\" it",
+        "Instructions to keep the transaction secret from other family members or bank staff",
+        "Pressure to act immediately with no time to verify the story independently"
+      ],
+      "realExamples": [
+        "FBI Boston documented 103 gold bar and bulk cash courier scam cases across New England from 2023 to May 2025, with losses totaling over $26 million, about 98% involving victims over age 60.",
+        "Nationwide, the FBI documented at least 1,737 instances of courier pickups of bulk cash or gold bars during the same period, with losses of roughly $186 million.",
+        "A South Boston man was indicted for allegedly defrauding a 75-year-old man in Berkshire County out of $500,000 through this scheme."
+      ],
+      "source": "FBI Boston Division, \"FBI Boston Warns of Increase in Gold Bar and Bulk Cash Courier Scams,\" September 22, 2025, https://www.fbi.gov/contact-us/field-offices/boston/news/fbi-boston-warns-of-increase-in-gold-bar-and-bulk-cash-courier-scams",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "In-Person",
+        "Tech Support Pop-Ups",
+        "Text Messages"
       ],
       "isAIDiscovered": true
     }
