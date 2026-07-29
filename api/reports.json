@@ -1,6 +1,6 @@
 {
-  "version": 10,
-  "lastUpdated": "2026-07-24T10:40:52.731Z",
+  "version": 15,
+  "lastUpdated": "2026-07-29T11:08:41.709Z",
   "reports": [
     {
       "id": "1",
@@ -1428,6 +1428,209 @@
         "Phone Calls",
         "Text Messages",
         "Robocalls"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "43",
+      "slug": "fake-captcha-clickfix-malware-scam",
+      "title": "Fake CAPTCHA \"ClickFix\" Malware Scam",
+      "summary": "Scammers plant fake \"I'm not a robot\" CAPTCHA verification screens on compromised or malicious websites that trick visitors into manually running a hidden malicious command, infecting their own device with password- and data-stealing malware.",
+      "category": "Tech Scam",
+      "firstReported": "2025-03-01",
+      "reportCount": 5000,
+      "relatedScams": [],
+      "safetyTips": [
+        "Never follow instructions to press Windows+R, paste content, and press Enter as part of any CAPTCHA or verification process — legitimate CAPTCHAs never require this",
+        "If you accidentally pasted and ran a command, disconnect the device from the internet immediately and run a full malware/antivirus scan",
+        "Change passwords for email, banking, and other sensitive accounts from a different, uninfected device if you suspect you ran a malicious command",
+        "Keep browser and operating system security settings up to date and avoid clicking links or ads from unfamiliar or unsolicited sources",
+        "Report suspected fake CAPTCHA or malware pop-ups to the FTC at ReportFraud.ftc.gov"
+      ],
+      "datePublished": "2026-07-25T10:14:24.932Z",
+      "howItWorks": "Victims land on a compromised or scam website (often reached via a phishing link, malicious ad, or search result) and are shown a CAPTCHA-style popup that looks like a normal \"verify you're human\" check. Unlike a real CAPTCHA, which asks you to identify images or type displayed characters, this fake version secretly copies a malicious script to the device's clipboard the moment the user clicks the verification button. It then instructs the victim to \"prove they're human\" by pressing a keyboard shortcut to open the Run dialog, pasting the clipboard contents, and hitting Enter. Doing so executes a PowerShell or other command-line script that silently downloads and installs information-stealing malware (commonly known as clipboard-hijacking or \"ClickFix\" attacks), which can harvest saved passwords, browser data, email credentials, and other sensitive information without the victim realizing anything happened.",
+      "redFlags": [
+        "A CAPTCHA or verification screen asks you to press a keyboard shortcut like Windows+R (or Windows+V) instead of simply clicking images or typing displayed text",
+        "You're instructed to paste something and hit Enter to 'verify' you're human",
+        "The prompt appears on an unfamiliar site, after clicking a link in an unsolicited text/email, or on a page reached through a suspicious search result or ad",
+        "The pop-up creates urgency or claims your device needs immediate verification/security confirmation",
+        "Any request to run a command, open a system dialog box, or execute code as part of a 'human verification' step"
+      ],
+      "realExamples": [
+        "The FTC issued a June 2026 consumer alert describing reports of fake CAPTCHA phishing pages that trick users into installing malware on their own devices",
+        "Security researchers and malware removal forums have documented widespread 'Fake Captcha (WIN+R, Ctrl+V, Enter)' incidents tied to infostealer malware such as Lumma Stealer",
+        "Security vendors have tracked and named this attack pattern 'ClickFix,' describing clipboard-hijacking campaigns that silently copy malicious commands to a victim's clipboard when they click a fake verification button"
+      ],
+      "source": "FTC Consumer Advice, \"How to spot a CAPTCHA scam,\" June 8, 2026, https://consumer.ftc.gov/consumer-alerts/2026/06/how-spot-captcha-scam",
+      "spreadPlatforms": [
+        "Compromised Websites",
+        "Phishing Emails",
+        "Malicious Ads",
+        "Text Messages",
+        "Search Engine Results"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "44",
+      "slug": "ic3-fbi-recovery-impersonation-scam",
+      "title": "IC3/FBI Recovery Impersonation Scam",
+      "summary": "Scammers impersonate FBI and Internet Crime Complaint Center (IC3) personnel — now using AI deepfake videos and spoofed IC3 websites — to \"revictimize\" people who already lost money to a scam by falsely offering to recover their funds.",
+      "category": "Government Scam",
+      "firstReported": "2025-04-18",
+      "reportCount": 500,
+      "relatedScams": [],
+      "safetyTips": [
+        "Only file or check complaints at the official site by typing www.ic3.gov directly into your browser, never via a link sent to you",
+        "Know that the IC3 will never ask for payment, gift cards, or crypto to recover lost funds, nor refer you to a company that charges recovery fees",
+        "Do not share personal or financial information with anyone you've only met online or by phone, even if they claim to be law enforcement",
+        "Verify any claimed FBI contact by calling your local FBI field office directly using a number you look up independently",
+        "Be skeptical of unsolicited videos of officials on social media, which can be AI-generated deepfakes",
+        "If you're a repeat contact target after reporting a scam, treat any follow-up 'recovery' outreach as highly suspicious and report it to IC3"
+      ],
+      "datePublished": "2026-07-26T10:23:41.532Z",
+      "howItWorks": "Criminals target people who have already fallen victim to a scam (or who mention online that they plan to file a fraud report) and pose as FBI agents or IC3 staff reaching out via social media, email, or phone to \"help\" with the case. They may create fake IC3 social media pages or infiltrate online scam-victim support groups, direct victims to convincing spoofed versions of the real ic3.gov complaint portal, or even show AI-generated deepfake videos of senior FBI officials to build credibility. The scammer then claims funds have been recovered or offers \"assistance\" recovering lost money, but the real goal is to harvest additional personal and financial information or extract upfront \"recovery fees,\" compounding the victim's original loss.",
+      "redFlags": [
+        "Being contacted out of the blue by someone claiming to be FBI/IC3 staff after a prior scam or online complaint",
+        "Any request for payment, gift cards, or cryptocurrency to \"recover\" lost funds",
+        "Social media profiles or pages claiming to represent IC3 or offering fund recovery services",
+        "Being directed to a website that looks like ic3.gov but arrived via a link in a message rather than typed directly",
+        "Video calls or recordings featuring FBI officials that were unsolicited or shared via social media DM",
+        "Pressure to act quickly or share sensitive personal/financial details to 'verify' a recovered case"
+      ],
+      "realExamples": [
+        "FBI/IC3 issued a July 2026 update to its earlier PSA warning that scammers are impersonating FBI personnel facilitating IC3 complaints, now incorporating AI-generated deepfake videos of senior FBI officials and spoofed IC3 websites to re-target prior fraud victims.",
+        "IC3 reported that almost all complainants in the scheme said scammers claimed to have recovered the victim's lost funds or offered to assist in recovery, which turned out to be a ruse to revictimize people who had already lost money to scams.",
+        "Reports describe scammers creating fraudulent social media profiles and pages impersonating FBI/IC3 personnel, infiltrating online fraud-victim support groups, and directing victims to fake IC3 'case update' pages or messaging apps to continue the scam."
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), Public Service Announcement PSA260720, \"FBI Warns of Scammers Impersonating the IC3\" - https://www.ic3.gov/PSA/2026/PSA260720",
+      "spreadPlatforms": [
+        "Social Media",
+        "Email",
+        "Phone Calls",
+        "Messaging Apps",
+        "Fake Websites"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "45",
+      "slug": "fake-relief-check-phishing-scam",
+      "title": "Fake \"Relief Check\" Phishing Scam",
+      "summary": "Scammers are calling, texting, and emailing people claiming they have an unclaimed \"relief check\" worth thousands of dollars waiting for them, directing victims to phishing sites to \"search their name\" and steal personal and financial data.",
+      "category": "Government Scam",
+      "firstReported": "2025-08-01",
+      "reportCount": 900,
+      "relatedScams": [],
+      "safetyTips": [
+        "Never click links in unsolicited texts, emails, or voicemails about unclaimed government money",
+        "Verify any claimed government payment directly through official .gov websites or by calling the agency using a number you look up independently",
+        "Do not enter personal or banking information on websites referenced in unsolicited calls or texts",
+        "Hang up on robocalls or voicemails claiming to be from government relief programs and do not call back the number provided",
+        "Report suspicious messages to the BBB Scam Tracker, the FTC at reportfraud.ftc.gov, and your phone carrier"
+      ],
+      "datePublished": "2026-07-27T12:01:23.984Z",
+      "howItWorks": "Victims receive a call, voicemail, or text — often from someone identifying himself as \"Dan\" — claiming government records show a specific dollar amount (commonly cited around $5,286) is waiting for them in a relief check tied to \"past relief programs or federal assistance payments.\" The message urges the victim to visit a website such as myreliefcheck.com or myreliefclaim.com to search their name and \"collect it before it's returned.\" The site is not affiliated with any real government agency; instead, it prompts victims to enter personal identifying information and banking details to \"claim\" the payment. Handing over this data exposes victims to identity theft, drained bank accounts, and continued follow-up contact from scammers via additional calls, texts, or emails attempting to extract more money or information. The scam has been amplified by news coverage of the recent federal government shutdown, which scammers exploit to make the \"relief payment\" premise feel more plausible.",
+      "redFlags": [
+        "Unsolicited call, voicemail, or text claiming you have an unclaimed government relief check waiting",
+        "You're told to visit a third-party website (not a .gov domain) and \"search your name\" to claim money",
+        "A vague personal name like \"Dan\" is used with no verifiable agency affiliation",
+        "Urgency pressure to act \"before it's returned\"",
+        "Requests for personal identifying information or bank details to \"release\" a payment",
+        "Ties the offer to current news events like a government shutdown or old COVID-era relief programs"
+      ],
+      "realExamples": [
+        "BBB Scam Tracker received over 900 reports nationally about the myreliefcheck.com/myreliefclaim.com scheme, with victims reporting calls, voicemails, and texts from a caller identifying himself as \"Dan\" claiming a specific dollar amount was waiting for them",
+        "Local BBB chapters in Michigan and North Alabama reported the scam spreading to their regions within the past two months, with over 800 reports logged during that period",
+        "Victims reported the scam intensifying alongside news coverage of the federal government shutdown, with fraudsters exploiting shutdown-related anxiety about federal payments"
+      ],
+      "source": "Better Business Bureau, \"BBB Scam Alert: Fake relief check phone calls claim you have money waiting\" - https://www.bbb.org/all/consumer/scam/fake-relief-check-scam",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Voicemail",
+        "Text Messages",
+        "Email",
+        "Social Media"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "46",
+      "slug": "gold-bar-bulk-cash-courier-scam",
+      "title": "Gold Bar & Bulk Cash Courier Scam",
+      "summary": "Scammers impersonating grandchildren, government agents, or tech support convince mostly elderly victims to withdraw cash or buy gold bars, then send an in-person courier to physically collect the loot from the victim's home.",
+      "category": "Government Scam",
+      "firstReported": "2023-01-01",
+      "reportCount": 1737,
+      "relatedScams": [],
+      "safetyTips": [
+        "Never give cash, gold, or valuables to a courier sent by someone who contacted you unsolicited by phone, email, or pop-up",
+        "Independently verify any claim of a relative's emergency or government/legal trouble by calling them or the agency directly using a number you look up yourself",
+        "Real government agencies (FBI, IRS, Social Security, etc.) will never ask you to buy gold bars or hand cash to a courier",
+        "Talk to a trusted family member or your bank before withdrawing large sums or buying precious metals under pressure",
+        "Report suspected courier pickup scams to the FBI's IC3.gov and local police immediately, even if you're embarrassed"
+      ],
+      "datePublished": "2026-07-28T11:01:08.697Z",
+      "howItWorks": "A fraudster first gains a victim's trust through a grandparent-emergency call, a government/law-enforcement impersonation call, or a tech-support pop-up, convincing the victim their money is at risk or a relative is in trouble. Instead of asking for a wire transfer or gift cards, the scammer instructs the victim to withdraw large amounts of cash or, increasingly, to purchase physical gold bars from a dealer \"to protect the funds.\" The criminal then arranges for a courier, sometimes an unwitting rideshare driver and sometimes a knowing accomplice, to come to the victim's home or a nearby meeting point to physically pick up the cash or gold. To make the handoff seem legitimate, the scammer often gives the victim a verification \"code,\" \"password,\" or \"serial number\" that the courier must recite before the victim hands over the money or gold.",
+      "redFlags": [
+        "A caller you don't know instructs you to withdraw cash or buy gold bars and hand them to a stranger who comes to your door",
+        "You're told to give a courier a special code, password, or serial number to verify who should receive the money",
+        "Urgent claims that a family member is in legal trouble, your accounts are compromised, or the government needs you to move your money to \"protect\" it",
+        "Instructions to keep the transaction secret from other family members or bank staff",
+        "Pressure to act immediately with no time to verify the story independently"
+      ],
+      "realExamples": [
+        "FBI Boston documented 103 gold bar and bulk cash courier scam cases across New England from 2023 to May 2025, with losses totaling over $26 million, about 98% involving victims over age 60.",
+        "Nationwide, the FBI documented at least 1,737 instances of courier pickups of bulk cash or gold bars during the same period, with losses of roughly $186 million.",
+        "A South Boston man was indicted for allegedly defrauding a 75-year-old man in Berkshire County out of $500,000 through this scheme."
+      ],
+      "source": "FBI Boston Division, \"FBI Boston Warns of Increase in Gold Bar and Bulk Cash Courier Scams,\" September 22, 2025, https://www.fbi.gov/contact-us/field-offices/boston/news/fbi-boston-warns-of-increase-in-gold-bar-and-bulk-cash-courier-scams",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "In-Person",
+        "Tech Support Pop-Ups",
+        "Text Messages"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "47",
+      "slug": "deepfake-job-candidate-fake-ai-employee-scam",
+      "title": "Deepfake Job Candidate / Fake AI Employee Scam",
+      "summary": "Scammers, many linked to North Korean state-sponsored operations, use AI deepfake video/audio, stolen identities, and ChatGPT-polished resumes to get hired into remote jobs, then use the position to steal company data, plant malware, or funnel salary payments overseas.",
+      "category": "AI Scam",
+      "firstReported": "2024-07-15",
+      "reportCount": 300,
+      "relatedScams": [],
+      "safetyTips": [
+        "Verify identity documents in person or via a live, unscripted video check where you ask the candidate to turn their head to the side or perform an unscripted action a deepfake would struggle to replicate",
+        "Cross-check the shipping address for company equipment against the candidate's stated home address and reject freight-forwarding or unfamiliar third-party addresses",
+        "Use identity-verification and deepfake-detection tools during high-stakes remote hiring for sensitive IT or data-access roles",
+        "Limit new remote hires' system access and monitor for anomalous VPN logins, unusual work hours, or connections from unexpected countries during onboarding",
+        "Train HR and hiring managers to recognize red flags of AI-generated resumes, synthetic photos, and coached video interviews, and report suspected cases to the FBI/IC3"
+      ],
+      "datePublished": "2026-07-29T11:08:41.708Z",
+      "howItWorks": "A fraudster builds a fake professional identity using a stolen or synthetic Social Security number, an AI-generated or \"face-swapped\" profile photo, and an AI-polished resume, then applies for legitimate remote tech or IT jobs. During video interviews, the applicant uses real-time deepfake face-swap and voice-cloning software (sometimes with a live \"coach\" typing answers) to appear as a different, more qualified or more \"American-sounding\" person than they really are. Once hired, the fake employee (in many documented cases tied to North Korean IT worker schemes) receives a company laptop, often routed to a US-based \"laptop farm,\" logs in via VPN, and either collects a legitimate salary that gets funneled overseas to fund weapons programs, or uses insider access to exfiltrate sensitive data, install malware, or extort the employer after termination. Security researchers report the fraud has scaled dramatically, with some hiring managers estimating a huge share of remote-job applicants are now fake AI-generated candidates.",
+      "redFlags": [
+        "Candidate's lip movements, blinking, or facial edges look slightly out of sync or glitchy during video calls, especially at profile angles or with rapid head movement",
+        "Applicant refuses to turn on camera for parts of the interview or gives excuses for poor video/audio quality",
+        "Resume, LinkedIn history, and interview answers feel AI-polished but generic, or the candidate's home address, bank routing details, and shipping address for equipment don't match",
+        "Candidate insists on having a company laptop shipped to an address that turns out to be a freight-forwarding or 'laptop farm' location rather than their stated home",
+        "Multiple candidates for different job postings share similar resume phrasing, photos, or reference contacts",
+        "New hire immediately requests VPN access, remote log-in tools, or asks to reroute the equipment shortly after onboarding"
+      ],
+      "realExamples": [
+        "Cybersecurity training firm KnowBe4 disclosed in July 2024 that it unknowingly hired a North Korean IT worker who used a stolen US identity and an AI-enhanced photo to pass background checks and interviews, and was caught only after malware activity was flagged on his first day.",
+        "Voice-security firm Pindrop's CEO described catching a fake remote-job candidate dubbed \"Ivan X\" who used deepfake software and generative AI tools during interviews to try to get hired at the company.",
+        "The FBI and IC3 have issued multiple advisories since 2022 warning businesses about North Korean IT workers using witting and unwitting US-based facilitators, fraudulent documents, and now increasingly deepfake technology to secure remote technical jobs at US companies."
+      ],
+      "source": "FBI/IC3 Advisory \"North Korean IT Workers Conducting Data Extortion\" (ic3.gov/PSA/2025/PSA250123); NYSBA \"Addressing the Threat of Fake Job Candidates\" (nysba.org, May 2026); CNBC \"Fake job seekers use AI to interview for remote jobs\" (April 8, 2025)",
+      "spreadPlatforms": [
+        "Video Conferencing (Zoom/Teams)",
+        "Job Boards & LinkedIn",
+        "Freelance Platforms",
+        "Email",
+        "Remote Work Software"
       ],
       "isAIDiscovered": true
     }
