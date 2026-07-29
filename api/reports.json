@@ -1,6 +1,6 @@
 {
-  "version": 14,
-  "lastUpdated": "2026-07-28T11:01:08.698Z",
+  "version": 15,
+  "lastUpdated": "2026-07-29T11:08:41.709Z",
   "reports": [
     {
       "id": "1",
@@ -1590,6 +1590,47 @@
         "In-Person",
         "Tech Support Pop-Ups",
         "Text Messages"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "47",
+      "slug": "deepfake-job-candidate-fake-ai-employee-scam",
+      "title": "Deepfake Job Candidate / Fake AI Employee Scam",
+      "summary": "Scammers, many linked to North Korean state-sponsored operations, use AI deepfake video/audio, stolen identities, and ChatGPT-polished resumes to get hired into remote jobs, then use the position to steal company data, plant malware, or funnel salary payments overseas.",
+      "category": "AI Scam",
+      "firstReported": "2024-07-15",
+      "reportCount": 300,
+      "relatedScams": [],
+      "safetyTips": [
+        "Verify identity documents in person or via a live, unscripted video check where you ask the candidate to turn their head to the side or perform an unscripted action a deepfake would struggle to replicate",
+        "Cross-check the shipping address for company equipment against the candidate's stated home address and reject freight-forwarding or unfamiliar third-party addresses",
+        "Use identity-verification and deepfake-detection tools during high-stakes remote hiring for sensitive IT or data-access roles",
+        "Limit new remote hires' system access and monitor for anomalous VPN logins, unusual work hours, or connections from unexpected countries during onboarding",
+        "Train HR and hiring managers to recognize red flags of AI-generated resumes, synthetic photos, and coached video interviews, and report suspected cases to the FBI/IC3"
+      ],
+      "datePublished": "2026-07-29T11:08:41.708Z",
+      "howItWorks": "A fraudster builds a fake professional identity using a stolen or synthetic Social Security number, an AI-generated or \"face-swapped\" profile photo, and an AI-polished resume, then applies for legitimate remote tech or IT jobs. During video interviews, the applicant uses real-time deepfake face-swap and voice-cloning software (sometimes with a live \"coach\" typing answers) to appear as a different, more qualified or more \"American-sounding\" person than they really are. Once hired, the fake employee (in many documented cases tied to North Korean IT worker schemes) receives a company laptop, often routed to a US-based \"laptop farm,\" logs in via VPN, and either collects a legitimate salary that gets funneled overseas to fund weapons programs, or uses insider access to exfiltrate sensitive data, install malware, or extort the employer after termination. Security researchers report the fraud has scaled dramatically, with some hiring managers estimating a huge share of remote-job applicants are now fake AI-generated candidates.",
+      "redFlags": [
+        "Candidate's lip movements, blinking, or facial edges look slightly out of sync or glitchy during video calls, especially at profile angles or with rapid head movement",
+        "Applicant refuses to turn on camera for parts of the interview or gives excuses for poor video/audio quality",
+        "Resume, LinkedIn history, and interview answers feel AI-polished but generic, or the candidate's home address, bank routing details, and shipping address for equipment don't match",
+        "Candidate insists on having a company laptop shipped to an address that turns out to be a freight-forwarding or 'laptop farm' location rather than their stated home",
+        "Multiple candidates for different job postings share similar resume phrasing, photos, or reference contacts",
+        "New hire immediately requests VPN access, remote log-in tools, or asks to reroute the equipment shortly after onboarding"
+      ],
+      "realExamples": [
+        "Cybersecurity training firm KnowBe4 disclosed in July 2024 that it unknowingly hired a North Korean IT worker who used a stolen US identity and an AI-enhanced photo to pass background checks and interviews, and was caught only after malware activity was flagged on his first day.",
+        "Voice-security firm Pindrop's CEO described catching a fake remote-job candidate dubbed \"Ivan X\" who used deepfake software and generative AI tools during interviews to try to get hired at the company.",
+        "The FBI and IC3 have issued multiple advisories since 2022 warning businesses about North Korean IT workers using witting and unwitting US-based facilitators, fraudulent documents, and now increasingly deepfake technology to secure remote technical jobs at US companies."
+      ],
+      "source": "FBI/IC3 Advisory \"North Korean IT Workers Conducting Data Extortion\" (ic3.gov/PSA/2025/PSA250123); NYSBA \"Addressing the Threat of Fake Job Candidates\" (nysba.org, May 2026); CNBC \"Fake job seekers use AI to interview for remote jobs\" (April 8, 2025)",
+      "spreadPlatforms": [
+        "Video Conferencing (Zoom/Teams)",
+        "Job Boards & LinkedIn",
+        "Freelance Platforms",
+        "Email",
+        "Remote Work Software"
       ],
       "isAIDiscovered": true
     }
