@@ -1,6 +1,6 @@
 {
-  "version": 15,
-  "lastUpdated": "2026-07-29T11:08:41.709Z",
+  "version": 16,
+  "lastUpdated": "2026-07-30T10:40:49.402Z",
   "reports": [
     {
       "id": "1",
@@ -1631,6 +1631,47 @@
         "Freelance Platforms",
         "Email",
         "Remote Work Software"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "48",
+      "slug": "ai-cloned-fake-vehicle-dealership-scam",
+      "title": "AI-Cloned Fake Vehicle Dealership Scam",
+      "summary": "Scammers use AI tools to clone real dealership websites or build entirely fake auto/RV dealership sites and Facebook ad campaigns, then convince buyers to wire large sums for vehicles that don't exist.",
+      "category": "Shopping Scam",
+      "firstReported": "2026-03-24",
+      "reportCount": 150,
+      "relatedScams": [],
+      "safetyTips": [
+        "Independently look up the dealership's phone number and address rather than using contact info from the ad or website, and call to verify the vehicle and transaction directly",
+        "Visit the dealership in person or verify its physical existence via Google Street View before wiring any funds",
+        "Never wire money for a vehicle sight-unseen; use verifiable, traceable payment methods and complete the purchase at a legitimate, confirmed dealership location",
+        "Reverse-image-search listing photos to check if they've been copied or AI-altered from another source",
+        "Be suspicious of deals advertised primarily through social media ads offering prices well below market value"
+      ],
+      "datePublished": "2026-07-30T10:40:49.401Z",
+      "howItWorks": "Fraudsters build convincing dealership websites using AI-generated or AI-altered photos, sometimes cloning an existing legitimate dealer's name, staff listings, and inventory, or inventing a fake company entirely. They advertise heavily on Facebook and other social platforms, often listing a real-looking business address that turns out to be an empty lot or unrelated location. When a buyer inquires, scammers engage in days- or weeks-long conversations to build trust and answer questions convincingly before pressuring the victim to wire money for a vehicle that was never actually for sale, at which point communication stops and the money is gone. Risk-management researchers have identified over a hundred of these \"dealership cloning\" sites impersonating active or defunct dealers.",
+      "redFlags": [
+        "Dealership's website photos look slightly off, too polished, or have inconsistent details when zoomed in (AI-altered images)",
+        "Seller insists on a wire transfer before you can see the vehicle in person or meet at the dealership",
+        "Listed business address turns out to be a parking lot, empty building, or unrelated business when checked on Google Maps",
+        "Misspelled business name or slight variations from a real, known dealership name",
+        "Heavy pressure to move quickly on a 'too good to be true' price advertised via a Facebook or social media ad",
+        "Communication happens only by text/chat/email with no way to verify a real, listed phone number"
+      ],
+      "realExamples": [
+        "A North Carolina buyer wired $77,300 for a Lexus GX 550 after scammers cloned a real dealership's online identity; the vehicle and transaction were entirely fraudulent and the real dealership had no involvement.",
+        "The BBB warned about a fake RV dealership, listed as Accelerated Motors LLC, that advertised on Facebook with a Baton Rouge address that was actually an empty parking lot with no RVs, using AI-altered photos and a misspelled business name.",
+        "Risk management firm Point Predictive identified more than 100 'dealership cloning' websites impersonating active or defunct dealerships nationwide."
+      ],
+      "source": "Auto Finance News, autofinancenews.net/allposts/risk-management/ai-cloning-scam-impersonates-dealerships-with-fake-websites/; Autoblog, autoblog.com/news/ai-is-making-fake-car-dealerships-look-real-and-its-costing-buyers-thousands; WAFB, wafb.com/2026/07/22/bbb-warns-ai-powered-rv-dealer-scam-targeting-facebook-users/",
+      "spreadPlatforms": [
+        "Facebook",
+        "Social Media Ads",
+        "Fake Websites",
+        "Text Messages",
+        "Email"
       ],
       "isAIDiscovered": true
     }
