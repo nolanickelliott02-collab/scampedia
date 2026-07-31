@@ -1,6 +1,6 @@
 {
-  "version": 16,
-  "lastUpdated": "2026-07-30T10:40:49.402Z",
+  "version": 17,
+  "lastUpdated": "2026-07-31T11:11:14.612Z",
   "reports": [
     {
       "id": "1",
@@ -1672,6 +1672,44 @@
         "Fake Websites",
         "Text Messages",
         "Email"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "49",
+      "slug": "spoofed-ic3-fbi-fraud-reporting-website-scam",
+      "title": "Spoofed IC3/FBI Fraud-Reporting Website Scam",
+      "summary": "Criminals are building near-exact clones of the FBI's official Internet Crime Complaint Center (IC3.gov) website to steal personal and financial data from people who are trying to report a scam they were already victimized by.",
+      "category": "Government Scam",
+      "firstReported": "2025-09-19",
+      "reportCount": 500,
+      "relatedScams": [],
+      "safetyTips": [
+        "Type www.ic3.gov directly into your browser's address bar instead of searching for it, and never click 'sponsored' search results",
+        "Double-check that the URL ends in .gov and reads exactly www.ic3.gov before entering any information",
+        "Never send money or provide banking passwords to anyone contacting you about a complaint you filed or offering to recover lost funds",
+        "If you suspect you used a spoofed site, monitor your accounts, place a fraud alert with credit bureaus, and file a genuine report directly on ic3.gov"
+      ],
+      "datePublished": "2026-07-31T11:11:14.611Z",
+      "howItWorks": "Scam victims searching online for how to report fraud, or who click a \"sponsored\" search ad, social media post, or link shared in a scam-recovery group, land on a fake site built to look like the real IC3.gov complaint portal, often using a domain with slight misspellings or a different top-level domain. The cloned page mimics the FBI seal, banner text, and even the genuine site's own warning about impersonators, then presents a \"complaint form\" that harvests names, addresses, emails, phone numbers, and banking details. Some versions follow up by emailing a fake confirmation of the \"report,\" or by having a scammer posing as IC3/FBI personnel contact the victim on messaging apps to offer fund \"recovery,\" pushing them toward a second round of financial loss.",
+      "redFlags": [
+        "Arriving at 'ic3' or 'FBI' report sites through a search ad, social media post, or a link someone else sent rather than typing the address yourself",
+        "URL that is close to but not exactly www.ic3.gov (extra words, hyphens, or a non-.gov ending)",
+        "Being contacted afterward by someone claiming to be FBI/IC3 staff offering to help recover money you reported losing",
+        "Low-quality graphics, odd phrasing, or a complaint form asking for banking log-in details or payment before it will 'process' your report"
+      ],
+      "realExamples": [
+        "The FBI's IC3 identified the first wave of these fraudulent sites on September 18, 2025, after visitors reported receiving deceptive emails confirming fake IC3 report submissions.",
+        "Security researchers found cloned pages reproducing the FBI seal, IC3 banner, and complaint form, making them nearly indistinguishable from the authentic site.",
+        "Reported instances describe cybercrime groups using Facebook and search-engine ads to spread the phishing sites and drive traffic to them."
+      ],
+      "source": "FBI Internet Crime Complaint Center, PSA \"Threat Actors Spoofing the FBI IC3 Website for Possible Malicious Activity,\" https://www.ic3.gov/PSA/2025/PSA250919",
+      "spreadPlatforms": [
+        "Search Engine Ads",
+        "Social Media",
+        "Email",
+        "Messaging Apps",
+        "Fake Websites"
       ],
       "isAIDiscovered": true
     }
