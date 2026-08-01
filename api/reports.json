@@ -1,6 +1,6 @@
 {
-  "version": 17,
-  "lastUpdated": "2026-07-31T11:11:14.612Z",
+  "version": 18,
+  "lastUpdated": "2026-08-01T10:20:02.670Z",
   "reports": [
     {
       "id": "1",
@@ -1710,6 +1710,46 @@
         "Email",
         "Messaging Apps",
         "Fake Websites"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "50",
+      "slug": "ghost-tapping-contactless-payment-scam",
+      "title": "\"Ghost Tapping\" Contactless Payment Scam",
+      "summary": "Scammers exploit NFC \"tap-to-pay\" technology to charge victims' cards or phones without authorization, often by posing as vendors or charity collectors at crowded markets, fairs, and festivals.",
+      "category": "Shopping Scam",
+      "firstReported": "2025-10-21",
+      "reportCount": 150,
+      "relatedScams": [],
+      "safetyTips": [
+        "Keep cards and NFC-enabled phones in an RFID-blocking wallet or sleeve when not actively paying",
+        "Always glance at the terminal screen to confirm the merchant name and exact amount before tapping",
+        "Set up real-time transaction alerts with your bank or card issuer so you're notified of every charge immediately",
+        "Avoid storing more cards than necessary in mobile wallet apps to limit exposure if a device is compromised",
+        "Regularly review bank and card statements for small, unrecognized charges, especially after crowded public events",
+        "Verify charity collectors' identification and prefer donating directly through an organization's official website instead of an in-person tap-to-pay request"
+      ],
+      "datePublished": "2026-08-01T10:20:02.669Z",
+      "howItWorks": "\"Ghost tapping\" abuses Near Field Communication (NFC), the wireless technology that lets contactless cards and mobile wallets exchange payment data at very close range. In one version, a fraudster poses as a market vendor, food stall, or charity fundraiser who only accepts tap-to-pay, approaches the victim closely, and uses an altered or portable card reader to charge far more than the agreed amount while rushing the victim so they don't check the terminal screen or get a receipt. In another version, criminals use a hidden RFID/NFC reader to \"bump\" or get within a couple of inches of an unprotected card or phone in a crowd (subway, concert, festival) and skim payment credentials, sometimes loading them into a relay app on another phone to make fraudulent purchases elsewhere. Victims often don't notice anything happened until small, repeated unauthorized charges appear on their statements later.",
+      "redFlags": [
+        "A vendor, fundraiser, or seller who insists on tap-to-pay only and refuses cash or chip/PIN alternatives",
+        "The person rushes you through the transaction, blocks your view of the card reader screen, or doesn't give you a receipt",
+        "Someone stands unusually close to you or bumps into you in a crowded place like a fair, festival, or public transit",
+        "Small, unfamiliar charges appear on your card or digital wallet statement after visiting a crowded event",
+        "A door-to-door 'charity' collector asks for tap-to-pay donations without proper identification or paperwork"
+      ],
+      "realExamples": [
+        "BBB Scam Tracker received a report of an individual going door-to-door claiming to collect charity donations who accepted only tap-to-pay and charged victims' accounts amounts ranging from roughly $537 to $1,100 without authorization.",
+        "Consumers reported scammers posing as vendors at markets, pop-ups, or craft fairs who used altered card terminals to overcharge tap-to-pay customers while rushing them and withholding receipts.",
+        "Security researchers have tracked a rise in 'Ghost Tap' Android malware that relays stolen NFC/tap-to-pay credentials to cash-out networks, with hundreds of thousands of dollars in fraudulent transactions linked to illicitly obtained POS terminals advertised on Telegram."
+      ],
+      "source": "Better Business Bureau / Fox News, \"How to protect yourself from ghost-tapping payment card scams nationwide,\" https://www.foxnews.com/tech/ghost-tapping-scam-targets-tap-to-pay-users",
+      "spreadPlatforms": [
+        "In-Person/Public Places",
+        "Mobile Payment Apps",
+        "Text Messages",
+        "Social Media"
       ],
       "isAIDiscovered": true
     }
