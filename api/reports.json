@@ -1,6 +1,6 @@
 {
-  "version": 18,
-  "lastUpdated": "2026-08-01T10:20:02.670Z",
+  "version": 19,
+  "lastUpdated": "2026-08-03T12:03:41.036Z",
   "reports": [
     {
       "id": "1",
@@ -1749,6 +1749,45 @@
         "In-Person/Public Places",
         "Mobile Payment Apps",
         "Text Messages",
+        "Social Media"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "51",
+      "slug": "fake-vpn-app-malware-scam",
+      "title": "Fake VPN App Malware Scam",
+      "summary": "Cybercriminals are distributing malicious apps and browser extensions disguised as popular VPN services to secretly install info-stealing and banking malware on victims' devices.",
+      "category": "Tech Scam",
+      "firstReported": "2025-11-06",
+      "reportCount": 50,
+      "relatedScams": [],
+      "safetyTips": [
+        "Only download VPN apps from official app stores and the provider's verified official domain, double-checking for misspellings",
+        "Avoid free VPN services that request permissions unrelated to VPN functionality, like access to contacts or messages",
+        "Research the VPN provider's reputation and reviews before installing, and prefer well-established, paid providers with transparent privacy policies",
+        "Enable enhanced protection features (e.g., Chrome's Safe Browsing Enhanced Protection) that warn against malicious sites and fraudulent downloads",
+        "Remember a VPN masks your IP address but does not guarantee total anonymity or safety—treat any app claiming otherwise with skepticism"
+      ],
+      "datePublished": "2026-08-03T12:03:41.035Z",
+      "howItWorks": "Scammers build convincing lookalike VPN apps or browser extensions that impersonate well-known, trusted VPN brands, then distribute them through official app stores, ads, and other platforms using misleading marketing, sexually suggestive ads, or trending geopolitical headlines to drive downloads. Once a victim installs the fake VPN, instead of adding privacy protection it does the opposite: it delivers malware payloads such as info-stealers, remote access trojans (RATs), and banking trojans. These payloads exfiltrate sensitive data including browsing history, private messages, financial credentials, and cryptocurrency wallet information, and can give attackers remote access to the device.",
+      "redFlags": [
+        "A 'VPN' app or extension promising complete anonymity or unusually broad privacy claims",
+        "Free VPN apps that request excessive permissions, such as access to contacts, messages, or storage",
+        "Apps found outside official stores, or promoted via aggressive/suggestive ads or sensational geopolitical headlines",
+        "Slight misspellings or subtle URL/branding differences from the real VPN provider's official app or website",
+        "Unverified developer names or a fraudulent 'security firm' publishing multiple similar VPN apps"
+      ],
+      "realExamples": [
+        "Google's November 2025 frauds and scams advisory identified threat actors distributing malicious applications disguised as legitimate VPN services across multiple platforms, impersonating trusted enterprise and consumer VPN brands.",
+        "Reported cases included a fraudulent security firm publishing malicious VPN apps on official app stores to spread malware and scams, affecting Android users globally.",
+        "Security researchers noted malicious VPN apps used sexually suggestive ads, geopolitical headlines, and fake privacy claims to lure victims into quick downloads."
+      ],
+      "source": "Google Safety & Security Blog, \"Google's November 2025 frauds and scams advisory,\" https://blog.google/innovation-and-ai/technology/safety-security/fraud-and-scams-advisory-november-2025/; Forbes, https://www.forbes.com/sites/daveywinder/2025/11/11/google-issues-critical-vpn-threat-warning-for-billions-of-users/",
+      "spreadPlatforms": [
+        "Mobile App Stores",
+        "Browser Extensions",
+        "Online Advertisements",
         "Social Media"
       ],
       "isAIDiscovered": true
