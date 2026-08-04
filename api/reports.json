@@ -1,6 +1,6 @@
 {
-  "version": 19,
-  "lastUpdated": "2026-08-03T12:03:41.036Z",
+  "version": 20,
+  "lastUpdated": "2026-08-04T11:08:47.623Z",
   "reports": [
     {
       "id": "1",
@@ -1789,6 +1789,46 @@
         "Browser Extensions",
         "Online Advertisements",
         "Social Media"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "52",
+      "slug": "spyloan-predatory-loan-app-scam",
+      "title": "SpyLoan Predatory Loan App Scam",
+      "summary": "Malicious \"instant loan\" apps on Google Play and the Apple App Store lure people with promises of quick cash, then harvest contacts, photos, and messages from their phones to blackmail and harass them into paying inflated fees.",
+      "category": "Tech Scam",
+      "firstReported": "2024-11-25",
+      "reportCount": 150000,
+      "relatedScams": [],
+      "safetyTips": [
+        "Only download lending or finance apps from well-established, verified financial institutions and check developer legitimacy before installing",
+        "Review and deny any permission requests (contacts, photos, SMS, camera) that are not essential to a loan app's function",
+        "Verify any lender's registration with your country's financial regulator before submitting personal or banking information",
+        "Uninstall suspicious loan apps immediately, revoke their permissions, and change any passwords or PINs shared with the app",
+        "Report predatory or extortionate loan apps to the app store and to consumer protection agencies like the FTC or BBB"
+      ],
+      "datePublished": "2026-08-04T11:08:47.622Z",
+      "howItWorks": "Scammers publish seemingly legitimate personal-loan or finance apps on official app stores or push them through social media ads and SMS links. During setup, the app demands excessive permissions unrelated to lending, such as access to contacts, SMS history, photos, camera, and call logs. Once a \"loan\" is issued (often smaller than promised and with hidden fees or predatory interest), the operators use the stolen personal data to harass, publicly shame, or threaten the victim and people in their contact list in order to pressure repayment at inflated rates, turning a loan request into extortion and financial exploitation.",
+      "redFlags": [
+        "App requests permissions with no clear connection to lending, such as contacts, photos, SMS, or camera access",
+        "Loan is advertised as instant, no-credit-check, with minimal documentation required",
+        "App was discovered via a social media ad or unsolicited text link rather than a trusted financial institution",
+        "Fees, interest rates, or repayment terms change after the loan is disbursed",
+        "Threats to contact or expose the borrower's friends/family if payment is late"
+      ],
+      "realExamples": [
+        "McAfee's mobile research team identified a global surge of 'SpyLoan' apps on Android in late 2024, flagging 15 apps that had amassed over 8 million cumulative downloads and used social engineering to extract sensitive data for extortion and harassment.",
+        "Check Point researchers reported in September 2025 that a malicious loan app called 'RapiPlata,' which had been downloaded an estimated 150,000 times from both the Google Play Store and Apple App Store before removal, exploited extensive device permissions to target users, notably in Colombia.",
+        "Google's November 2025 and June 2026 Frauds and Scams Advisories both flagged continued growth in mobile extortion via malicious banking and finance apps that request excessive permissions and use stolen data to extort and publicly shame victims."
+      ],
+      "source": "Check Point Research Blog, \"Malicious Loan App Removed from iOS and Google Play App Store Posed Severe Risks to Users,\" Sept. 9, 2025, https://blog.checkpoint.com/research/malicious-loan-app-removed-from-ios-and-google-play-app-store-posed-severe-risks-to-users/; corroborated by McAfee Labs Blog (Nov. 25, 2024) and Google's November 2025 Frauds and Scams Advisory (blog.google)",
+      "spreadPlatforms": [
+        "Mobile Apps",
+        "Google Play Store",
+        "Apple App Store",
+        "Social Media Ads",
+        "SMS/Text Messages"
       ],
       "isAIDiscovered": true
     }
