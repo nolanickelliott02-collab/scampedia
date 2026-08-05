@@ -7,6 +7,14 @@ function slugify(str) {
   return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
 
+// Report data includes AI-researched content and user-submitted search
+// queries — never trust it in an innerHTML sink without escaping first.
+function escapeHtml(str) {
+  return String(str ?? '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  }[c]));
+}
+
 async function fetchReports() {
   try {
     const res = await fetch(`${API_BASE}/reports.json`);
@@ -32,10 +40,10 @@ async function renderHomePreview() {
   const reports = await fetchReports();
   const preview = reports.slice(0, 3);
   el.innerHTML = preview.map(r => `
-    <a class="scam-card" href="scams/${r.slug}.html">
-      <div class="scam-cat">${r.category}</div>
-      <h3>${r.title}</h3>
-      <p>${r.summary.slice(0, 110)}…</p>
+    <a class="scam-card" href="scams/${encodeURIComponent(r.slug)}.html">
+      <div class="scam-cat">${escapeHtml(r.category)}</div>
+      <h3>${escapeHtml(r.title)}</h3>
+      <p>${escapeHtml(r.summary.slice(0, 110))}…</p>
       <div class="scam-count">🚨 ${r.reportCount.toLocaleString()} reports</div>
     </a>
   `).join('');
@@ -160,8 +168,8 @@ function renderSidebarCategories() {
     'Charity Scam': '❤️', 'Rental Scam': '🏠'
   };
   el.innerHTML = Object.keys(counts).sort().map(cat => `
-    <a href="#/category/${slugify(cat)}" class="sidebar-cat-link" data-cat="${cat}">
-      <span>${icons[cat] || '⚠️'} ${cat}</span>
+    <a href="#/category/${slugify(cat)}" class="sidebar-cat-link" data-cat="${escapeHtml(cat)}">
+      <span>${icons[cat] || '⚠️'} ${escapeHtml(cat)}</span>
       <span class="sidebar-cat-count">${counts[cat]}</span>
     </a>
   `).join('');
@@ -169,8 +177,8 @@ function renderSidebarCategories() {
 
 function setActiveSidebar(navKey, catSlug) {
   document.querySelectorAll('.sidebar-link, .sidebar-cat-link').forEach(el => el.classList.remove('active'));
-  if (navKey) document.querySelector(`.sidebar-link[data-nav="${navKey}"]`)?.classList.add('active');
-  if (catSlug) document.querySelector(`.sidebar-cat-link[href="#/category/${catSlug}"]`)?.classList.add('active');
+  if (navKey) document.querySelector(`.sidebar-link[data-nav="${CSS.escape(navKey)}"]`)?.classList.add('active');
+  if (catSlug) document.querySelector(`.sidebar-cat-link[href="#/category/${CSS.escape(catSlug)}"]`)?.classList.add('active');
 }
 
 // ---- Router ----
@@ -232,8 +240,8 @@ function renderBrowse({ categorySlug, query }) {
 
   main.innerHTML = `
     <div class="wiki-browse-header">
-      <h1>${heading}</h1>
-      <p>${sub}</p>
+      <h1>${escapeHtml(heading)}</h1>
+      <p>${escapeHtml(sub)}</p>
     </div>
     ${isFeed ? `<div class="wiki-feed-note"><span class="live-dot"></span> Synced live with the VerifyGuard app</div>` : ''}
     ${gridHtml}
@@ -244,20 +252,23 @@ function formatDate(iso) {
   if (!iso) return null;
   const d = new Date(iso);
   if (isNaN(d)) return null;
-  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  // Pinned to UTC so every visitor sees the same date regardless of their
+  // local timezone — date-only ISO strings parse as UTC midnight, which
+  // otherwise rolls back a day for anyone west of UTC.
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 }
 
 function cardHtml(r) {
   const date = formatDate(r.datePublished || r.firstReported);
   return `
-    <a class="scam-card" href="scams/${r.slug}.html">
+    <a class="scam-card" href="scams/${encodeURIComponent(r.slug)}.html">
       <div class="scam-card-meta">
-        <span class="scam-cat">${r.category}</span>
-        ${date ? `<span>·</span><span class="scam-card-date">${date}</span>` : ''}
+        <span class="scam-cat">${escapeHtml(r.category)}</span>
+        ${date ? `<span>·</span><span class="scam-card-date">${escapeHtml(date)}</span>` : ''}
         ${r.isAIDiscovered ? `<span class="ai-pill">🧠 AI Discovered</span>` : ''}
       </div>
-      <h3>${r.title}</h3>
-      <p>${r.summary.slice(0, 120)}…</p>
+      <h3>${escapeHtml(r.title)}</h3>
+      <p>${escapeHtml(r.summary.slice(0, 120))}…</p>
       <div class="scam-count">🚨 ${r.reportCount.toLocaleString()} reports</div>
     </a>
   `;
@@ -277,12 +288,12 @@ function renderAZIndex() {
 
   const groupsHtml = Object.keys(groups).sort().map(letter => `
     <div>
-      <div class="az-group-letter">${letter}</div>
+      <div class="az-group-letter">${escapeHtml(letter)}</div>
       <div class="az-group-items">
         ${groups[letter].map(r => `
-          <a class="az-item" href="scams/${r.slug}.html">
-            <span>${r.title}</span>
-            <span class="az-item-cat">${r.category}</span>
+          <a class="az-item" href="scams/${encodeURIComponent(r.slug)}.html">
+            <span>${escapeHtml(r.title)}</span>
+            <span class="az-item-cat">${escapeHtml(r.category)}</span>
           </a>
         `).join('')}
       </div>

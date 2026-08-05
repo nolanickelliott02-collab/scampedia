@@ -37,7 +37,10 @@ function formatDate(iso) {
   if (!iso) return null;
   const d = new Date(iso);
   if (isNaN(d)) return null;
-  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  // Date-only ISO strings parse as UTC midnight — without pinning the
+  // timeZone here, the displayed date shifts by a day depending on
+  // whichever timezone the build happens to run in.
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 }
 
 // Every scam page needs at least 3 "Related Scams" cross-links for internal
@@ -85,7 +88,7 @@ function pageShell({ title, description, canonical, ogImage, jsonLd, bodyHtml, a
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="icon" type="image/png" sizes="128x128" href="../assets/favicon/favicon-128.png" />
   <link rel="apple-touch-icon" href="../assets/favicon/favicon-180.png" />
-  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+  <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>
 </head>
 <body>
 
@@ -136,7 +139,10 @@ function scamPageHtml(report, allReports) {
   const description = metaDescription(report.summary);
   const ogImage = `${SITE_ORIGIN}/assets/og/scampedia-share.png`;
   const publishedDate = formatDate(report.datePublished || report.firstReported);
-  const firstReportedYear = report.firstReported ? new Date(report.firstReported).getFullYear() : null;
+  // getUTCFullYear, not getFullYear — a date-only ISO string parses as UTC
+  // midnight, so local getFullYear() rolls back a year for anyone west of
+  // UTC when firstReported falls on/near Jan 1.
+  const firstReportedYear = report.firstReported ? new Date(report.firstReported).getUTCFullYear() : null;
 
   const relatedTitles = withPaddedRelated(report, allReports);
   const relatedReports = relatedTitles.map(t => allReports.find(r => r.title === t)).filter(Boolean);
