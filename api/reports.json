@@ -1,6 +1,6 @@
 {
-  "version": 20,
-  "lastUpdated": "2026-08-04T11:08:47.623Z",
+  "version": 21,
+  "lastUpdated": "2026-08-06T11:06:11.763Z",
   "reports": [
     {
       "id": "1",
@@ -1829,6 +1829,46 @@
         "Apple App Store",
         "Social Media Ads",
         "SMS/Text Messages"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "53",
+      "slug": "fake-loan-approval-follow-up-text-scam",
+      "title": "Fake Loan Approval/Follow-Up Text Scam",
+      "summary": "Scammers send unsolicited texts claiming to \"follow up\" on a large loan application (often $10,000) that the recipient never submitted, pressuring them to click a link or reply to \"cancel\" it and steal personal data instead.",
+      "category": "Phone Scam",
+      "firstReported": "2026-01-20",
+      "reportCount": 3000,
+      "relatedScams": [],
+      "safetyTips": [
+        "Don't reply to or click links in unsolicited loan texts \\u2014 delete them",
+        "Never give a Social Security number or bank account number in response to an unexpected text",
+        "Forward suspicious texts to 7726 (SPAM) and report them at ReportFraud.ftc.gov",
+        "Verify any loan offer independently by contacting a lender through its official, verified website or phone number, not the one in the text",
+        "Talk to a trusted friend or family member before responding if you're unsure",
+        "If you already shared personal information, visit IdentityTheft.gov for recovery steps"
+      ],
+      "datePublished": "2026-08-06T11:06:11.762Z",
+      "howItWorks": "Victims receive an out-of-the-blue text saying they've been preapproved for a loan or that representatives are following up on a loan application, even though they never applied. The message creates false urgency with phrases like \"this is the last step\" or asks the recipient to reply YES to confirm or NO to cancel, which merely confirms the number is active. If the person calls the listed number or clicks the link, the \"lender\" asks for a Social Security number or bank account number to \"finish\" the application. In reality there is no loan and no lender; the goal is to harvest personal information for identity theft or to extract fees, and the operation frequently rotates through invented company names to dodge spam filters and negative reviews.",
+      "redFlags": [
+        "An unsolicited text about a loan you never applied for",
+        "Promises of guaranteed pre-approval for a large, specific dollar amount",
+        "Requests for a Social Security number or bank account number to \"complete\" an application",
+        "Urgency language like \"this is the last step\" or instructions to reply YES/NO",
+        "A callback number embedded in the text rather than a verifiable company website",
+        "Company name that has no findable, verifiable lending license or history"
+      ],
+      "realExamples": [
+        "FTC Consumer Alert (Jan. 20, 2026) describing a text \\\"supposedly following up on a $10,000 loan application\\\" from someone who never applied",
+        "New Hampshire Banking Department reissued the FTC's fake loan text alert to warn state residents in January 2026",
+        "Reports describe a persistent operation using the name \\\"CNFI USA\\\" and an \\\"Alexis\\\" persona sending nearly identical pre-approval texts, with complaints filed with BBB and ScamPulse between 2025 and early 2026",
+        "Military Consumer (a federal consumer-protection site) republished the FTC guidance on spotting fake loan texts in January 2026"
+      ],
+      "source": "Federal Trade Commission, Consumer Alert \"Can you spot a fake loan text scam?\" (Jan. 20, 2026), consumer.ftc.gov/consumer-alerts/2026/01/can-you-spot-fake-loan-text-scam",
+      "spreadPlatforms": [
+        "Text Messages",
+        "Robocalls"
       ],
       "isAIDiscovered": true
     }
