@@ -1,6 +1,6 @@
 {
-  "version": 21,
-  "lastUpdated": "2026-08-06T11:06:11.763Z",
+  "version": 22,
+  "lastUpdated": "2026-08-07T09:37:40.636Z",
   "reports": [
     {
       "id": "1",
@@ -1869,6 +1869,44 @@
       "spreadPlatforms": [
         "Text Messages",
         "Robocalls"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "54",
+      "slug": "fake-toll-road-text-scam",
+      "title": "Fake Toll Road Text Scam",
+      "summary": "Scammers send text messages impersonating toll agencies like E-ZPass, SunPass, FasTrak, and TxTag, claiming the recipient owes money for an unpaid toll and must pay immediately via a malicious link.",
+      "category": "Government Scam",
+      "firstReported": "2024-04-01",
+      "reportCount": 50000,
+      "relatedScams": [],
+      "safetyTips": [
+        "Don't click links in unsolicited toll-payment texts; go directly to the toll agency's official website or app by typing the address yourself",
+        "Check your actual toll account balance by logging in independently or calling the agency's verified customer service number",
+        "Delete or report suspicious toll texts (forward to 7726/SPAM) and report them to the FTC at ReportFraud.ftc.gov",
+        "Never enter your Social Security number, full credit card number, or account login through a link sent via text",
+        "Monitor your bank and credit card statements for unauthorized charges if you've already clicked a suspicious toll link, and consider freezing your credit"
+      ],
+      "datePublished": "2026-08-07T09:37:40.635Z",
+      "howItWorks": "Victims receive an unsolicited SMS or iMessage claiming they have an outstanding toll balance or violation on a real regional toll system, often threatening late fees, suspended registration, or legal action if they don't pay right away. The message includes a link to a spoofed website that closely mimics the real toll agency's site, where victims are prompted to \"log in\" or enter payment details, Social Security numbers, or other personal data to resolve the supposed debt. Instead of paying a toll, victims hand their credit card numbers and personal information directly to criminals, who can then make fraudulent charges or commit identity theft. The scam has become the leading driver of a broader surge in government-impersonation fraud reported to the FTC.",
+      "redFlags": [
+        "Unexpected text about an unpaid toll, especially if you don't use that toll road or an EZ-Pass/SunPass/FasTrak/TxTag account",
+        "Urgent, high-pressure language like 'final notice' or threats of late fees, fines, or legal action for not paying immediately",
+        "A link in the text rather than being told to log into the toll agency's official app or website directly",
+        "Generic greetings like 'Dear Customer' instead of your name or actual account/license plate details",
+        "Requests for payment via gift cards, cryptocurrency, or other non-standard payment methods",
+        "Misspellings, odd phrasing, or a sender number/domain that doesn't match the toll agency's official contact information"
+      ],
+      "realExamples": [
+        "The FTC reported that in 2025 it received more than 1 million imposter scam reports with losses up nearly 20% to $3.5 billion, and that government imposter scam reports rose 40%, driven in part by bogus overdue-toll texts spoofing programs like E-ZPass, SunPass, FasTrak, and TxTag.",
+        "Trend Micro documented scam text campaigns impersonating Florida's SunPass and Massachusetts' EZDriveMA toll systems that direct recipients to fake websites designed to harvest credit card numbers and Social Security numbers.",
+        "Consumer Reports and state toll authorities (including Georgia's Peach Pass, Illinois's I-Pass, and Indiana's E-ZPass) have publicly confirmed they never request personal or account information via text or email, after being impersonated in mass phishing campaigns."
+      ],
+      "source": "FTC Consumer Advice, \"New trends in reports of imposter scams,\" https://consumer.ftc.gov/consumer-alerts/2026/05/new-trends-reports-imposter-scams",
+      "spreadPlatforms": [
+        "Text Messages (SMS/iMessage)",
+        "Email"
       ],
       "isAIDiscovered": true
     }
