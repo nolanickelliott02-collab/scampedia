@@ -1,6 +1,6 @@
 {
-  "version": 22,
-  "lastUpdated": "2026-08-07T09:37:40.636Z",
+  "version": 23,
+  "lastUpdated": "2026-08-08T09:22:04.058Z",
   "reports": [
     {
       "id": "1",
@@ -1906,6 +1906,49 @@
       "source": "FTC Consumer Advice, \"New trends in reports of imposter scams,\" https://consumer.ftc.gov/consumer-alerts/2026/05/new-trends-reports-imposter-scams",
       "spreadPlatforms": [
         "Text Messages (SMS/iMessage)",
+        "Email"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "55",
+      "slug": "fake-heavy-equipment-vehicle-dealer-website-scam",
+      "title": "Fake Heavy Equipment & Vehicle Dealer Website Scam",
+      "summary": "Scammers clone or impersonate real heavy equipment, farm machinery, and vehicle dealerships with convincing fake websites and Marketplace ads, luring buyers with below-market prices and then vanishing after victims wire large payments.",
+      "category": "Shopping Scam",
+      "firstReported": "2025-02-20",
+      "reportCount": 400,
+      "relatedScams": [],
+      "safetyTips": [
+        "Research the business at BBB.org or call your local BBB before sending any money",
+        "Contact the real dealership directly using a phone number or website you find independently, not one provided in the ad",
+        "Never wire money or use ACH transfer to purchase equipment or vehicles from a seller you haven't verified in person",
+        "Insist on an in-person inspection or a live video walkthrough of the actual item before paying anything",
+        "Check how recently the seller's website domain was registered using a WHOIS lookup",
+        "Verify serial numbers or VINs directly with the manufacturer or DMV rather than trusting documents the seller provides"
+      ],
+      "datePublished": "2026-08-08T09:22:04.057Z",
+      "howItWorks": "Fraudsters build a professional-looking website (or Facebook Marketplace ad) that copies the name, logo, photos, and even fabricated regulatory license numbers of a real, often long-established or now-closed, equipment or vehicle dealership. They list tractors, excavators, skid steers, trucks, or cars at prices noticeably below market value to create urgency. When a buyer inquires, the \"seller\" provides wiring or ACH instructions, sometimes sending a fake shipping confirmation, invoice, or even a real-looking VIN, and pressures the buyer to pay quickly, often before ever seeing the equipment in person. Once payment clears, the scammers cut off phone and email contact, the equipment never arrives, and the buyer discovers the impersonated business had no knowledge of the sale. In some cases scammers use compromised servers to run dozens of similar fake dealer sites simultaneously, each claiming to be based in a different U.S. region, and some have even tried filing false business update requests with the BBB to shift blame onto uninvolved local companies.",
+      "redFlags": [
+        "Price is well below market value for the make, model, or equipment type",
+        "Seller insists on wire transfer or ACH payment and refuses other secure payment methods",
+        "Seller avoids phone calls or video verification and won't allow an in-person inspection before payment",
+        "Website or ad was created very recently, or contact information doesn't match the real dealership's official listing",
+        "Seller becomes unreachable (disconnected phone, bounced email) immediately after payment is sent",
+        "Listing photos and descriptions appear identical across multiple unrelated 'dealer' websites"
+      ],
+      "realExamples": [
+        "BBB warned that a fake online retailer impersonating Missouri's Cook Equipment & Trucking cost consumers nationwide more than $223,000, including a $45,000 loss on a skid steer loader in Oak Hills, California",
+        "BBB investigation found the fraudulent website 'Rock Line Equipment' had hijacked the identities of two legitimate Kansas businesses and was linked to at least $51,000 in reported losses",
+        "An Arizona woman wired $76,015 to 'Nations Remarketing Group,' a car auction site using a stolen Kansas business identity, after scammers sent a fake shipping confirmation before going silent",
+        "A nationwide BBB study found over 200 Scam Tracker reports since 2022 plus 140 additional complaints involving fake vehicle and heavy equipment dealer websites, including one Lithuania-based server hosting nearly 30 fraudulent sites impersonating businesses across multiple states"
+      ],
+      "source": "Better Business Bureau, \"BBB Study: Impostor scammers target consumers, businesses and BBB,\" https://www.bbb.org/article/news-releases/31436-bbb-study-watch-out-for-vehicle-and-equipment-impostor-scams; and \"BBB Scam Alert: BBB warns of online equipment scam, impersonating Missouri dealer,\" https://www.bbb.org/article/scams/32122-bbb-warns-of-online-equipment-scam-impersonating-missouri-dealer",
+      "spreadPlatforms": [
+        "Fake Websites",
+        "Facebook Marketplace",
+        "Online Classified Ads",
+        "Search Engine Ads",
         "Email"
       ],
       "isAIDiscovered": true
