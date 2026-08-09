@@ -9,6 +9,41 @@
   --text-body: 1.125rem; /* ~18px against a 16px root — see css/styles.css for why this is a variable, not a hardcoded value */
 }
 
+/* ---- Real nav fix, scoped to course pages ----
+   The shared stylesheet's @media (max-width: 600px) hides every non-button
+   nav link outright (`.nav-links a:not(.btn) { display: none; }`), with no
+   hamburger or any other way to reach them — confirmed by searching the
+   whole repo, there isn't one. It's not an incomplete hamburger pattern,
+   it's a dead end: at 200% zoom on a standard window (the exact case this
+   course is built for), every course page loses primary navigation,
+   including the crisis page, where a reader who just lost money needs to
+   be able to get to Report It or back to Learn.
+
+   The underlying reason the hide-rule exists at all: .nav-links has no
+   flex-wrap, so without it, links would squish/overlap at narrow widths
+   instead of dropping to a new line. The real fix is flex-wrap, not
+   deleting the links. Scoped to .course-page rather than site-wide so
+   this doesn't risk the legacy marketing/database pages, which haven't
+   been checked against this change — see REVIEW-QUEUE.md. */
+.course-page .nav-links {
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+.course-page .nav-links a:not(.btn) {
+  display: inline-block !important;
+}
+/* .nav-inner has a fixed height: 64px + align-items: center in the shared
+   stylesheet — fine for one row, but once .nav-links wraps to two rows
+   under it, a fixed height doesn't grow to fit, so the centered content
+   overflows both above and below the visible nav bar instead of the nav
+   bar growing. Letting height grow with content fixes the clipping. */
+.course-page .nav-inner {
+  height: auto;
+  min-height: 64px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
 
 .course-page body,
 body.course-page {
