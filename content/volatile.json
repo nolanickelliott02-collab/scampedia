@@ -1,0 +1,118 @@
+{
+  "_schema_note": "Every perishable fact referenced by a lesson lives here, keyed by an id lessons reference via frontmatter volatileRefs and inline {{volatile:<key>}} placeholders in lesson body markdown. Never type a volatile fact directly into lesson prose. Each entry requires lastVerified (ISO date) and checkUrl (where to re-verify it). The build fails if any entry's lastVerified is more than 180 days old. 'methods' is an array of {title, steps[]} rendered as structured HTML by build-learn-pages.js; 'value' is a short plain-text fallback used in tooling warnings only.",
+
+  "reverse-image-search-iphone-steps": {
+    "value": "On iPhone/iPad you can search by image three ways: from a Google Images result via press-and-hold, from a photo inside any app the same way (Chrome or the Google app only), or from a photo already saved on your phone via google.com's camera icon (works in Safari too).",
+    "methods": [
+      {
+        "title": "Starting from a Google Images result",
+        "steps": [
+          "Type what you're looking for into Google Images, the same as any search, and open the photo you want to check.",
+          "Press and hold your finger on the photo. A menu will pop up — tap \"Search image with Google Lens.\""
+        ]
+      },
+      {
+        "title": "Starting from a photo inside a message, post, or website",
+        "steps": [
+          "This works on a photo wherever you find it — a webpage, a social media post, anywhere. Open it in the Google app or Chrome. (Only have Safari? Skip to the next method below — it covers the same ground a different way.)",
+          "Press and hold your finger on the photo until a menu pops up.",
+          "Tap the search option in that menu — worded \"Search inside image\" in the Google app, \"Search image with Google\" in Chrome.",
+          "Scroll down to see what turns up. There's usually also a way to add a word or two if you want to narrow it down."
+        ]
+      },
+      {
+        "title": "Starting from a photo already saved on your phone",
+        "steps": [
+          "This one works in Safari, too. Open the Google app, or open Chrome or Safari and go to google.com.",
+          "Tap the small camera icon inside the search box — that's Google Lens.",
+          "Choose the photo from your camera roll instead of taking a new one.",
+          "Scroll down to see what comes up."
+        ]
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "checkUrl": "https://support.google.com/websearch/answer/1325808?hl=en&co=GENIE.Platform%3DiOS",
+    "sourceNote": "Google's own official support documentation. Fetched and verified directly on 2026-08-08 for accuracy — the wording on our page is our own, written by re-describing the actions, not copied from Google's phrasing. checkUrl is the source to re-verify against, not something we've reproduced."
+  },
+
+  "reverse-image-search-desktop-steps": {
+    "value": "On a computer you can search by image four ways: upload the file directly, drag it into the search box, paste the image's web address, or (in Chrome specifically) right-click and choose Search with Google Lens.",
+    "methods": [
+      {
+        "title": "Upload the file directly",
+        "steps": [
+          "Go to google.com and click \"Search by image,\" then \"Upload a file.\"",
+          "Pick the photo from your computer and open it."
+        ]
+      },
+      {
+        "title": "Drag it in",
+        "steps": [
+          "Find the image file wherever it's saved on your computer.",
+          "Drag it straight into the Google search box — no menus needed."
+        ]
+      },
+      {
+        "title": "Search using the photo's web address",
+        "steps": [
+          "If the photo is already on a webpage, right-click it and choose \"Copy image address.\"",
+          "Go to google.com, click \"Search by image,\" and paste that address in.",
+          "Run the search."
+        ]
+      },
+      {
+        "title": "The one-click version, if you use Chrome",
+        "steps": [
+          "Right-click the image directly on the page you found it on.",
+          "Choose \"Search with Google Lens\" and the results open in a panel beside the page — no need to leave it."
+        ]
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "checkUrl": "https://support.google.com/websearch/answer/1325808?hl=en&co=GENIE.Platform%3DDesktop",
+    "sourceNote": "Google's own official support documentation. Fetched and verified directly on 2026-08-08 for accuracy — the wording on our page is our own, written by re-describing the actions, not copied from Google's phrasing. checkUrl is the source to re-verify against, not something we've reproduced."
+  },
+
+  "crisis-reporting-resources": {
+    "value": "Real US fraud-reporting resources: FTC (reportfraud.ftc.gov), FBI/IC3 (ic3.gov), FTC identity theft recovery (identitytheft.gov), SSA Office of Inspector General (oig.ssa.gov/report) for Social Security impersonation.",
+    "resources": [
+      {
+        "name": "FTC — Federal Trade Commission",
+        "url": "https://reportfraud.ftc.gov/",
+        "whenToUse": "The general starting point for reporting almost any scam — money lost, an attempt that didn't work, or anything in between."
+      },
+      {
+        "name": "FBI Internet Crime Complaint Center (IC3)",
+        "url": "https://www.ic3.gov/",
+        "whenToUse": "For scams that happened online or by email — this goes to federal law enforcement, not just a consumer database."
+      },
+      {
+        "name": "IdentityTheft.gov (run by the FTC)",
+        "url": "https://www.identitytheft.gov/",
+        "whenToUse": "If a Social Security number, bank login, or other personal information was shared — walks through a personal recovery plan step by step."
+      },
+      {
+        "name": "Social Security Administration Office of the Inspector General",
+        "url": "https://oig.ssa.gov/report/",
+        "whenToUse": "Specifically if the scam involved someone claiming to be from Social Security."
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "checkUrl": "https://reportfraud.ftc.gov/",
+    "sourceNote": "Every URL confirmed live and real via direct HTTP request (HTTP 200, correct page title matching the organization) on 2026-08-08, not recalled from training data. General 'act fast, contact whoever you paid through' guidance for payment-type-specific recovery cross-checked against the FTC's own real published guidance (consumer.ftc.gov/gift-card-scams, consumer.ftc.gov/all-scams/wire-transfer-scams) via live search, but the wording on our page is our own — not copied."
+  },
+
+  "c2pa-verify-tool": {
+    "value": "The real, official Content Credentials verification tool is at verify.contentauthenticity.org (contentcredentials.org/verify redirects there) — upload a file or paste a URL, it shows the credential chain if one exists. Run by the Content Authenticity Initiative, the same group behind the C2PA standard.",
+    "lastVerified": "2026-08-09",
+    "checkUrl": "https://verify.contentauthenticity.org/",
+    "sourceNote": "Verified live via direct HTTP request on 2026-08-09 (contentcredentials.org/verify returns a real 301 to verify.contentauthenticity.org, which returns HTTP 200, page title \"Content Credentials\"). Not recalled from training data."
+  },
+
+  "c2pa-metadata-limitations": {
+    "value": "C2PA's own FAQ acknowledges Content Credentials can be separated from a file, accidentally or intentionally — the standard's answer to this is 'soft bindings' (invisible watermarking/fingerprinting) meant to help rediscover a credential even after removal, but this doesn't mean every image carries one or that removal is rare. No source found for exactly how common stripping is on specific platforms — deliberately not naming individual platforms or citing a stripping rate, since the only sources found for platform-specific claims were unverified aggregator blogs, not primary documentation.",
+    "lastVerified": "2026-08-09",
+    "checkUrl": "https://c2pa.org/faqs/",
+    "sourceNote": "Direct quote confirmed from c2pa.org's own FAQ on 2026-08-09: \"While C2PA Manifests are typically embedded in the asset, they can be separated. To address this, C2PA supports durable credentials via soft bindings...\" This is the standards body acknowledging its own limitation — the strongest available source for this specific claim. Explicitly did NOT use aggregator-blog claims about which named platforms (Instagram, TikTok, etc.) strip metadata or how fast, since no primary source could be found for those specifics — per the no-unsourced-adoption-claims rule, that content was left out of the lesson rather than asserted."
+  }
+}

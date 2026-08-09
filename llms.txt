@@ -1,0 +1,21 @@
+# Scampedia
+
+> Scampedia is a free scam and AI-generated-content education site: a scam database, a photo/video/link detector (via the VerifyGuard app), and plain-language lessons on verifying what you see online.
+
+## If you think you've already been scammed
+
+- [I Think I've Already Been Scammed](https://scampedia.net/learn/i-think-ive-been-scammed.html): If you sent money in the last few hours, stop reading and contact whoever you sent it through immediately — tell them it was fraud and ask if it can be stopped. Everything below tells you exactly who that is and what to say, for however you paid.
+
+## Learn
+
+- [Where Did This Come From?](https://scampedia.net/learn/where-did-this-come-from.html): Before you look at anything else, notice one thing — did you go looking for this, or did it arrive on its own? Something you didn't ask for deserves a different level of attention than something you went and found yourself.
+- [Reverse Image Search](https://scampedia.net/learn/reverse-image-search.html): Reverse image search shows you every other place a photo has shown up online — which reveals whether it's an old stock photo, a picture of someone else being used without their knowledge, or something that's been circulating for years before it landed in your message. It's free, takes under a minute, and works from your phone or a computer.
+- [What Is It Actually Asking You to Do?](https://scampedia.net/learn/what-is-it-asking-you-to-do.html): Four things show up in almost every scam request — urgency, secrecy, an unusual payment method, and pressure to keep it from people who'd normally help — and they're not four separate warning signs, they're one system working together. A real photo or a familiar voice attached to a request shaped like that is still a scam.
+- [Content Credentials and C2PA](https://scampedia.net/learn/content-credentials-and-c2pa.html): Some photos and videos now carry a real, checkable record of where they came from, called Content Credentials — but most images never had one, and a photo missing one is not more suspicious than any other ordinary photo. Presence can tell you something real; absence tells you nothing at all.
+- [Why "Just Look at the Hands" Stopped Working](https://scampedia.net/learn/why-hands-stopped-working.html): Counting fingers or looking for garbled text used to be a real way to catch an AI-generated image — it doesn't work reliably anymore. Every visual flaw that became well-known enough to teach is exactly the flaw a model's next version gets built to fix.
+- [What to Do When You're Not Sure](https://scampedia.net/learn/what-to-do-when-not-sure.html): When you can't tell whether something's real, the fix isn't to look closer — it's to reach out a different way than the message reached you. Call the number already saved in your phone, not the one you were just given.
+
+## Scam Database
+
+- [Scam Database](https://scampedia.net/scams/): every documented scam pattern, organized by category
+- [A–Z Index](https://scampedia.net/scams/az.html): every documented scam, alphabetically
