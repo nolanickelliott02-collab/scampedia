@@ -21,6 +21,15 @@ jobs:
         with:
           node-version: '22'
       - run: npm ci
+      - name: Course content health (signal only — never blocks this pipeline)
+        # Scam-database entries are time-sensitive safety content; the
+        # course is not. An overdue lesson must not stop a real scam
+        # report from publishing. This logs the same warnings/failures
+        # `npm run build` would enforce, but `|| true` means its exit
+        # code can never fail this job or block the push below. The real
+        # gate is local: `npm run build` fails for real before anyone
+        # archives/deploys course content on purpose.
+        run: npm run check-content || true
       - name: Generate daily scam entry
         id: generate
         env:

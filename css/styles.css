@@ -22,6 +22,15 @@
   --radius-md:  12px;
   --radius-lg:  16px;
   --radius-xl:  24px;
+
+  /* Semantic body-text size — legacy pages and course/learn pages both
+     read this same variable, at different values (course pages override
+     it via .course-page, see css/course.css). 1rem here is the same
+     16px the site has always shipped; nothing visually changes for
+     existing pages. When the legacy scam pages migrate to the shared
+     static-generation pattern, bumping the whole site to the course
+     value is a one-line change here instead of a template-wide edit. */
+  --text-body: 1rem;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,7 +41,7 @@ body {
   background: var(--bg);
   color: var(--text-1);
   font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 16px;
+  font-size: var(--text-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }

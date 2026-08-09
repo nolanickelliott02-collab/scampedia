@@ -5,10 +5,14 @@
   "description": "Scampedia static site + daily AI-researched scam entry pipeline",
   "scripts": {
     "generate-daily-scam": "node scripts/generate-daily-scam.js",
-    "build:scams": "node scripts/build-scam-pages.js"
+    "build:scams": "node scripts/build-scam-pages.js",
+    "build:learn": "node scripts/build-learn-pages.js",
+    "check-content": "node scripts/check-content-health.js",
+    "build": "npm run check-content && npm run build:scams && npm run build:learn"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.32.0"
+    "@anthropic-ai/sdk": "^0.32.0",
+    "marked": "^18.0.9"
   },
   "devDependencies": {
     "dotenv": "^16.4.5"
