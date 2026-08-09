@@ -69,6 +69,131 @@ function findQualityIssues(report) {
   return issues;
 }
 
+// Structural completeness (above) says nothing about whether a citation is
+// real. A model can produce a well-formed, plausible-looking source string
+// that doesn't resolve, or resolves to something else entirely — this
+// actually happened in this database's own launch data (40 legacy entries
+// shipped with generic labels like "FTC Consumer Alerts" and no link at
+// all). Every entry from this point on must cite at least one URL, and
+// every URL cited must actually resolve, checked for real over the network,
+// not assumed from the string looking right.
+const URL_PATTERN = /https?:\/\/[^\s;,)"'<>]+/g;
+
+async function verifyCitationUrls(source) {
+  const urls = [...String(source || '').matchAll(URL_PATTERN)].map(m => m[0].replace(/[.,;]+$/, ''));
+  if (urls.length === 0) {
+    return { ok: false, issues: ['source citation contains no URL at all — a citation must be checkable, not just a claimed organization name'] };
+  }
+
+  const issues = [];
+  for (const url of urls) {
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 10_000);
+      let res;
+      try {
+        res = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: controller.signal });
+        // Some servers reject HEAD outright even though the real page is fine — retry with GET before concluding the URL is dead.
+        if (res.status === 405 || res.status === 403) {
+          res = await fetch(url, { method: 'GET', redirect: 'follow', signal: controller.signal });
+        }
+      } finally {
+        clearTimeout(timeout);
+      }
+      if (!res.ok) issues.push(`citation URL returned HTTP ${res.status}, not a real page: ${url}`);
+    } catch (err) {
+      issues.push(`citation URL failed to resolve (${err.message}): ${url}`);
+    }
+  }
+  return { ok: issues.length === 0, issues };
+}
+
+// A URL returning 200 only proves a page exists — it doesn't prove the page
+// is actually about this scam. The likelier fabrication pattern isn't a
+// dead link, it's a real, live citation pointing at a news site's homepage
+// or an unrelated article instead of the specific piece that supposedly
+// backs this entry. This fetches the cited page's real text and checks
+// whether it actually mentions what the entry claims it's a source for.
+const STOPWORDS = new Set([
+  'the', 'a', 'an', 'of', 'to', 'in', 'is', 'are', 'and', 'or', 'for', 'with',
+  'this', 'that', 'it', 'its', 'on', 'at', 'from', 'by', 'as', 'be', 'been',
+  'was', 'were', 'has', 'have', 'had', 'new', 'scam',
+]);
+
+// "scam" is excluded on purpose — it's in nearly every title in this
+// database by construction, so it would pass against almost any page about
+// any topic and add nothing to the check.
+function significantWords(text) {
+  return [...new Set(
+    String(text || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter(w => w.length > 2 && !STOPWORDS.has(w))
+  )];
+}
+
+function stripHtmlToText(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&[a-z]+;|&#\d+;/gi, ' ')
+    .toLowerCase();
+}
+
+// At least half of the title's significant words must appear in the page.
+// Titles here are required to be "short, specific" by the tool schema, so
+// even a modest 50% overlap is a real signal — a citation pointing at an
+// unrelated page matching half the words of a specific multi-word scam
+// title by chance is very unlikely, while 50% (not 100%) still tolerates
+// one term being paraphrased by the source article's own wording.
+const RELEVANCE_THRESHOLD = 0.5;
+
+async function checkContentRelevance(report) {
+  const words = significantWords(report.title);
+  if (words.length === 0) {
+    return { ok: false, issues: ['title produced no significant words to check relevance against — title itself may be malformed'] };
+  }
+
+  const urls = [...String(report.source || '').matchAll(URL_PATTERN)].map(m => m[0].replace(/[.,;]+$/, ''));
+  const attempts = [];
+
+  for (const url of urls) {
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 10_000);
+      let res;
+      try {
+        res = await fetch(url, { redirect: 'follow', signal: controller.signal });
+      } finally {
+        clearTimeout(timeout);
+      }
+      if (!res.ok) { attempts.push({ url, matched: 0, of: words.length, error: `HTTP ${res.status}` }); continue; }
+      const html = await res.text();
+      const pageText = stripHtmlToText(html);
+      const matched = words.filter(w => pageText.includes(w));
+      attempts.push({ url, matched: matched.length, of: words.length, ratio: matched.length / words.length });
+    } catch (err) {
+      attempts.push({ url, matched: 0, of: words.length, error: err.message });
+    }
+  }
+
+  const best = attempts.find(a => a.ratio >= RELEVANCE_THRESHOLD);
+  if (best) {
+    console.log(`Relevance check passed: ${best.url} matched ${best.matched}/${best.of} title words (${words.join(', ')}).`);
+    return { ok: true, issues: [] };
+  }
+
+  return {
+    ok: false,
+    issues: [
+      `no cited URL's page content matched enough of the title's significant words (need ${Math.ceil(words.length * RELEVANCE_THRESHOLD)}/${words.length}: ${words.join(', ')}) — ` +
+      attempts.map(a => `${a.url} matched ${a.matched}/${a.of}${a.error ? ` (${a.error})` : ''}`).join('; '),
+    ],
+  };
+}
+
 function writeGithubOutput(fields) {
   const file = process.env.GITHUB_OUTPUT;
   if (!file) return;
@@ -267,6 +392,24 @@ async function run() {
   if (issues.length > 0) {
     console.error('Quality gate failed, refusing to write:', issues);
     writeGithubOutput({ result: 'error', error: `Quality gate failed: ${issues.join('; ')}` });
+    process.exitCode = 1;
+    return;
+  }
+
+  console.log('Verifying citation URL(s) resolve...');
+  const citationCheck = await verifyCitationUrls(newReport.source);
+  if (!citationCheck.ok) {
+    console.error('Citation verification failed, refusing to write:', citationCheck.issues);
+    writeGithubOutput({ result: 'error', error: `Citation verification failed: ${citationCheck.issues.join('; ')}` });
+    process.exitCode = 1;
+    return;
+  }
+
+  console.log('Checking cited page content is actually relevant...');
+  const relevanceCheck = await checkContentRelevance(newReport);
+  if (!relevanceCheck.ok) {
+    console.error('Content relevance check failed, refusing to write:', relevanceCheck.issues);
+    writeGithubOutput({ result: 'error', error: `Content relevance check failed: ${relevanceCheck.issues.join('; ')}` });
     process.exitCode = 1;
     return;
   }
