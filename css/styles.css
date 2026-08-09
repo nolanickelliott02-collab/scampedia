@@ -243,8 +243,8 @@ img { max-width: 100%; }
   padding: 50px 0;
 }
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 32px;
   text-align: center;
 }
@@ -629,6 +629,8 @@ img { max-width: 100%; }
   line-height: 1.7;
 }
 .wiki-citation strong { color: var(--text-2); }
+.wiki-citation a { color: var(--accent-bright); text-decoration: underline; }
+.wiki-citation-note { font-style: italic; }
 
 .wiki-cta {
   margin-top: 32px;
@@ -805,7 +807,6 @@ img { max-width: 100%; }
 @media (max-width: 900px) {
   .hero-inner          { grid-template-columns: 1fr; }
   .hero-phone          { display: none; }
-  .stats-grid          { grid-template-columns: repeat(2, 1fr); }
   .steps-grid          { grid-template-columns: 1fr; }
   .features-grid       { grid-template-columns: repeat(2, 1fr); }
   .scam-cards          { grid-template-columns: repeat(2, 1fr); }

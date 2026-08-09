@@ -19,9 +19,17 @@ async function fetchReports() {
   try {
     const res = await fetch(`${API_BASE}/reports.json`);
     const data = await res.json();
-    return (data.reports || []).map(r => ({ ...r, slug: r.slug || slugify(r.title) }));
+    const reports = (data.reports || []).map(r => ({ ...r, slug: r.slug || slugify(r.title) }));
+    // Attached to the array itself (arrays are objects in JS) rather than
+    // changing the return shape — every existing caller still gets a plain
+    // array back, but callers that need it (the sidebar's real timestamp)
+    // can read reports.lastUpdated without a second fetch of the same file.
+    reports.lastUpdated = data.lastUpdated || null;
+    return reports;
   } catch {
-    return FALLBACK_REPORTS.map(r => ({ ...r, slug: r.slug || slugify(r.title) }));
+    const reports = FALLBACK_REPORTS.map(r => ({ ...r, slug: r.slug || slugify(r.title) }));
+    reports.lastUpdated = null;
+    return reports;
   }
 }
 
@@ -62,6 +70,14 @@ async function initScampedia() {
 
   const countEl = document.getElementById('report-count');
   if (countEl) countEl.textContent = `${allReports.length} documented scams`;
+
+  // Was a hardcoded "Synced just now" that never changed regardless of
+  // actual data age — a real timestamp or nothing, never a claimed one.
+  const lastUpdatedEl = document.getElementById('last-updated');
+  if (lastUpdatedEl) {
+    const formatted = formatDate(allReports.lastUpdated);
+    lastUpdatedEl.textContent = formatted ? `Last updated ${formatted}` : '';
+  }
 
   renderSidebarCategories();
   bindSidebarSearch();

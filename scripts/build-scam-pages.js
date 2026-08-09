@@ -26,6 +26,33 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
+// A "Source:" line that just names an organization ("FTC Consumer Alerts")
+// isn't actually checkable — 40 of the 52 entries in this database were
+// launched that way, before entries were required to cite a real, resolvable
+// URL. This renders a real citation as an actual link, and honestly flags
+// the ones that aren't, right where a reader is deciding whether to trust
+// the entry — not just in a homepage explainer most visitors won't see first.
+const SOURCE_URL_PATTERN = /https?:\/\/[^\s;,)"'<>]+/;
+
+function renderSourceCitation(source) {
+  const segments = String(source || '').split(';').map(s => s.trim()).filter(Boolean);
+  if (segments.length === 0) return escapeHtml(source || '');
+
+  const rendered = segments.map(seg => {
+    const match = SOURCE_URL_PATTERN.exec(seg);
+    if (!match) return escapeHtml(seg);
+    const url = match[0].replace(/[.,;]+$/, '');
+    const label = seg.slice(0, match.index).replace(/[,;]\s*$/, '').trim() || url;
+    return `<a href="${escapeHtml(url)}" rel="noopener noreferrer" target="_blank">${escapeHtml(label)}</a>`;
+  });
+
+  const hasAnyUrl = segments.some(seg => SOURCE_URL_PATTERN.test(seg));
+  const joined = rendered.join(', ');
+  return hasAnyUrl
+    ? joined
+    : `${joined} <span class="wiki-citation-note">(general reference, not linked to a specific article)</span>`;
+}
+
 function metaDescription(summary) {
   const clean = summary.trim();
   if (clean.length <= 155) return clean;
@@ -99,6 +126,7 @@ function pageShell({ title, description, canonical, ogImage, jsonLd, bodyHtml, a
       </a>
       <div class="nav-links">
         <a href="../scampedia.html" class="${activeNav === 'database' ? 'active' : ''}">Scam Database</a>
+        <a href="../learn/index.html">Learn</a>
         <a href="../index.html#how-it-works">How It Works</a>
         <a href="https://officialverifyguard.com#pricing">Pricing</a>
         <a href="https://officialverifyguard.com">Official Site</a>
@@ -195,7 +223,7 @@ function scamPageHtml(report, allReports) {
       <div class="wiki-byline">
         ${publishedDate ? `<span>Added ${publishedDate}</span><span class="sep">·</span>` : ''}
         ${report.isAIDiscovered ? `<span class="ai-pill">🧠 Discovered by VerifyGuard AI Brain</span><span class="sep">·</span>` : ''}
-        <span>Source: ${escapeHtml(source)}</span>
+        <span>Source: ${renderSourceCitation(source)}</span>
       </div>
     </div>
 
@@ -246,7 +274,7 @@ function scamPageHtml(report, allReports) {
         </div>
 
         <div class="wiki-citation">
-          <strong>Source:</strong> ${escapeHtml(source)} &nbsp;·&nbsp;
+          <strong>Source:</strong> ${renderSourceCitation(source)} &nbsp;·&nbsp;
           ${firstReportedYear ? `<strong>First reported:</strong> ${firstReportedYear} &nbsp;·&nbsp;` : ''}
           This entry is part of the same Scampedia database synced into the VerifyGuard app.
         </div>
