@@ -1,6 +1,6 @@
 {
-  "version": 23,
-  "lastUpdated": "2026-08-08T09:22:04.058Z",
+  "version": 24,
+  "lastUpdated": "2026-08-09T09:23:20.942Z",
   "reports": [
     {
       "id": "1",
@@ -1950,6 +1950,47 @@
         "Online Classified Ads",
         "Search Engine Ads",
         "Email"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "56",
+      "slug": "seo-poisoning-bank-account-takeover-scam",
+      "title": "SEO Poisoning Bank Account Takeover Scam",
+      "summary": "Criminals buy fake search-engine ads or build lookalike phishing sites that outrank real bank, payroll, and health savings account login pages, then trick victims into handing over passwords and one-time codes to drain their accounts.",
+      "category": "Phone Scam",
+      "firstReported": "2025-11-25",
+      "reportCount": 5100,
+      "relatedScams": [],
+      "safetyTips": [
+        "Never provide login credentials, passwords, or one-time passcodes to anyone who contacts you, even if they claim to be from your bank",
+        "Navigate directly to your financial institution's website by typing the known URL yourself rather than clicking search ads or links",
+        "If a caller claims to be from your bank, hang up and call back using the number on the back of your card or official statement",
+        "Enable strong, unique passwords and multi-factor authentication, and avoid posting personal details online that could help attackers guess security answers",
+        "Report suspected account takeover attempts to your financial institution immediately and file a complaint with IC3.gov using the keywords 'account takeover' or 'SEO poisoning'"
+      ],
+      "datePublished": "2026-08-09T09:23:20.941Z",
+      "howItWorks": "Scammers use a technique called \"SEO poisoning,\" purchasing search ads or optimizing fraudulent pages so they appear above or alongside a real financial institution's website when someone searches for their bank's login or customer support number. Victims click the fake ad or link, land on a convincing clone of the real site or speak to a fake \"support\" agent, and are manipulated through social engineering (calls, texts, emails, or fraudulent websites) into revealing login credentials, multi-factor authentication codes, or one-time passcodes. Once criminals gain account access, they quickly wire funds to other criminal-controlled accounts, many linked to cryptocurrency wallets, making the money extremely difficult to recover. The scheme targets not just personal bank accounts but also business accounts, payroll systems, and health savings accounts.",
+      "redFlags": [
+        "An unsolicited call, text, or email from someone claiming to be your bank's support staff asking you to verify login credentials, MFA codes, or OTPs",
+        "Search results or ads for your bank's 'customer service number' or login page that look slightly different from the official URL",
+        "Being asked to read back a one-time passcode or multi-factor authentication code to 'verify your identity'",
+        "Urgent pressure to act immediately on a supposed account problem, fraud alert, or login issue",
+        "A support number found via a search engine ad rather than the number printed on your card or official bank statement"
+      ],
+      "realExamples": [
+        "FBI IC3 issued PSA I-112525-PSA on November 25, 2025 warning that since January 2025 it received more than 5,100 complaints of account takeover fraud via financial institution impersonation, with losses exceeding $262 million",
+        "Cybercriminals purchased search ads mimicking legitimate bank ads so fraudulent phishing sites ranked prominently in search results, tricking users searching for their bank's website into entering login information",
+        "Reports describe attackers impersonating financial institution, payroll provider, and health savings account support staff via calls, texts, emails, and social media/forums to obtain credentials and MFA/OTP codes before wiring stolen funds to crypto wallets"
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), Public Service Announcement I-112525-PSA, https://www.ic3.gov/PSA/2025/PSA251125",
+      "spreadPlatforms": [
+        "Search Engine Ads",
+        "Phishing Websites",
+        "Phone Calls",
+        "Text Messages",
+        "Email",
+        "Social Media"
       ],
       "isAIDiscovered": true
     }
