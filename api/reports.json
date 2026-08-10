@@ -1,6 +1,6 @@
 {
-  "version": 24,
-  "lastUpdated": "2026-08-09T09:23:20.942Z",
+  "version": 25,
+  "lastUpdated": "2026-08-10T10:02:24.474Z",
   "reports": [
     {
       "id": "1",
@@ -1990,6 +1990,44 @@
         "Phone Calls",
         "Text Messages",
         "Email",
+        "Social Media"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "57",
+      "slug": "ftc-impersonator-fake-employee-id-refund-recovery-scam",
+      "title": "FTC Impersonator Fake Employee ID Refund Recovery Scam",
+      "summary": "Scammers text or WhatsApp victims claiming to be FTC \"agents\" who can help recover money lost in a previous scam, sending a photo of a fake employee badge/ID to seem legitimate before stealing money or financial data.",
+      "category": "Government Scam",
+      "firstReported": "2026-06-01",
+      "reportCount": 1500,
+      "relatedScams": [],
+      "safetyTips": [
+        "Remember a real FTC employee will never contact you by text or messaging app to discuss a case or refund",
+        "Know that the FTC never texts photos of employee IDs or badges to 'verify' identity",
+        "Never pay a fee, wire money, or send crypto/gift cards to anyone claiming they can recover scam losses",
+        "Do not share bank account numbers or Social Security numbers with unsolicited contacts claiming to be government officials",
+        "Verify by going directly to official FTC.gov contact channels rather than replying to the text or calling numbers it provides"
+      ],
+      "datePublished": "2026-08-10T10:02:17.897Z",
+      "howItWorks": "Fraudsters contact people—often those who already lost money to an earlier scam or filed a fraud report—via text message or a messaging app like WhatsApp, claiming to be an FTC employee or \"agent\" who can help recover their prior losses. To build trust, the scammer sends a photo of what looks like an official government employee ID card and badge, all of which are fabricated. Once the victim is convinced, the scammer asks them to pay a fee, move money into an account the scammer controls, or hand over bank account or Social Security information supposedly needed to process the \"refund.\" In reality the FTC has no such recovery agents, never initiates contact this way, and the victim's money or data is simply stolen.",
+      "redFlags": [
+        "Contact by text message or WhatsApp from someone claiming to be an FTC employee or 'agent'",
+        "Being sent a photo of an employee ID or badge as 'proof' of identity",
+        "Any claim that a government employee can personally help recover money lost in a past scam",
+        "Requests to pay a fee, move money to a specified account, or share bank/Social Security details to receive a refund",
+        "Urgency or pressure to act quickly to 'secure' recovered funds"
+      ],
+      "realExamples": [
+        "FTC consumer alert describing victims receiving texts from people claiming to be FTC employees who send fake photo IDs and badges before requesting money or financial information for a bogus refund/recovery service",
+        "Consumer coverage describing the scam specifically targeting people who had already reported being defrauded, exploiting their hope of recovering losses"
+      ],
+      "source": "FTC Consumer Advice, \"A real FTC employee won't text you their photo ID to 'verify' their identity,\" https://consumer.ftc.gov/consumer-alerts/2026/06/real-ftc-employee-wont-text-you-their-photo-id-verify-their-identity",
+      "spreadPlatforms": [
+        "Text Messages",
+        "WhatsApp",
+        "Phone Calls",
         "Social Media"
       ],
       "isAIDiscovered": true
