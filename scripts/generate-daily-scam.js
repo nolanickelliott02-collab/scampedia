@@ -388,11 +388,17 @@ async function run() {
 
   console.log('Would write entry:', JSON.stringify(newReport, null, 2));
 
+  // A gate rejecting a candidate is the safety net working as designed, not
+  // a pipeline failure — it must not fail the Action run (no red X, no
+  // exitCode 1). That would make "the gate caught something" and "the
+  // pipeline is broken" look identical in run history. Only genuine
+  // infrastructure problems (missing key, truncated response, an actual
+  // thrown error) should fail the job; a rejected candidate just means no
+  // entry publishes today, same as the model's own voluntary skip above.
   const issues = findQualityIssues(newReport);
   if (issues.length > 0) {
     console.error('Quality gate failed, refusing to write:', issues);
-    writeGithubOutput({ result: 'error', error: `Quality gate failed: ${issues.join('; ')}` });
-    process.exitCode = 1;
+    writeGithubOutput({ result: 'gate-rejected', reason: `Quality gate: ${issues.join('; ')}` });
     return;
   }
 
@@ -400,8 +406,7 @@ async function run() {
   const citationCheck = await verifyCitationUrls(newReport.source);
   if (!citationCheck.ok) {
     console.error('Citation verification failed, refusing to write:', citationCheck.issues);
-    writeGithubOutput({ result: 'error', error: `Citation verification failed: ${citationCheck.issues.join('; ')}` });
-    process.exitCode = 1;
+    writeGithubOutput({ result: 'gate-rejected', reason: `Citation verification: ${citationCheck.issues.join('; ')}` });
     return;
   }
 
@@ -409,8 +414,7 @@ async function run() {
   const relevanceCheck = await checkContentRelevance(newReport);
   if (!relevanceCheck.ok) {
     console.error('Content relevance check failed, refusing to write:', relevanceCheck.issues);
-    writeGithubOutput({ result: 'error', error: `Content relevance check failed: ${relevanceCheck.issues.join('; ')}` });
-    process.exitCode = 1;
+    writeGithubOutput({ result: 'gate-rejected', reason: `Content relevance: ${relevanceCheck.issues.join('; ')}` });
     return;
   }
 
