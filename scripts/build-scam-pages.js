@@ -299,10 +299,6 @@ function scamPageHtml(report, allReports) {
           <span class="wiki-infobox-value">${firstReportedYear || '—'}</span>
         </div>
         <div class="wiki-infobox-row">
-          <span class="wiki-infobox-label">Reports Filed</span>
-          <span class="wiki-infobox-value">🚨 ${report.reportCount.toLocaleString()}</span>
-        </div>
-        <div class="wiki-infobox-row">
           <span class="wiki-infobox-label">Detected By</span>
           <span class="wiki-infobox-value">VerifyGuard AI</span>
         </div>
@@ -353,7 +349,6 @@ function indexPageHtml(allReports) {
             </div>
             <h3>${escapeHtml(r.title)}</h3>
             <p>${escapeHtml(r.summary.slice(0, 120))}…</p>
-            <div class="scam-count">🚨 ${r.reportCount.toLocaleString()} reports</div>
           </a>
         `).join('')}
       </div>

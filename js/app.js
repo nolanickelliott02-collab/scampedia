@@ -52,7 +52,6 @@ async function renderHomePreview() {
       <div class="scam-cat">${escapeHtml(r.category)}</div>
       <h3>${escapeHtml(r.title)}</h3>
       <p>${escapeHtml(r.summary.slice(0, 110))}…</p>
-      <div class="scam-count">🚨 ${r.reportCount.toLocaleString()} reports</div>
     </a>
   `).join('');
 }
@@ -285,7 +284,6 @@ function cardHtml(r) {
       </div>
       <h3>${escapeHtml(r.title)}</h3>
       <p>${escapeHtml(r.summary.slice(0, 120))}…</p>
-      <div class="scam-count">🚨 ${r.reportCount.toLocaleString()} reports</div>
     </a>
   `;
 }
@@ -337,19 +335,19 @@ const FALLBACK_REPORTS = [
   {
     id: "1", title: "Grandparent Emergency Scam",
     summary: "Scammers call pretending to be your grandchild in trouble needing urgent money via gift cards.",
-    category: "Phone Scam", firstReported: "2020-01-01T00:00:00Z", reportCount: 2847, relatedScams: ["AI Voice Clone Scam"],
+    category: "Phone Scam", firstReported: "2020-01-01T00:00:00Z", relatedScams: ["AI Voice Clone Scam"],
     safetyTips: ["Never send money without calling back on a known number.", "Create a secret family code word."]
   },
   {
     id: "2", title: "AI Voice Clone Scam",
     summary: "Deepfake voice calls impersonating family members in manufactured emergency situations.",
-    category: "AI Scam", firstReported: "2023-03-15T00:00:00Z", reportCount: 1243, relatedScams: [],
+    category: "AI Scam", firstReported: "2023-03-15T00:00:00Z", relatedScams: [],
     safetyTips: ["Establish a family safe word.", "Hang up and call back on a saved number."]
   },
   {
     id: "3", title: "Fake IRS Tax Refund Scam",
     summary: "Calls claiming you owe back taxes or are due a refund if you pay a fee via gift cards.",
-    category: "Government Scam", firstReported: "2015-06-01T00:00:00Z", reportCount: 3921, relatedScams: [],
+    category: "Government Scam", firstReported: "2015-06-01T00:00:00Z", relatedScams: [],
     safetyTips: ["The IRS never demands gift card payments.", "Verify at IRS.gov."]
   }
 ];

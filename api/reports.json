@@ -1,6 +1,6 @@
 {
-  "version": 26,
-  "lastUpdated": "2026-08-13T02:34:12.000Z",
+  "version": 27,
+  "lastUpdated": "2026-08-13T02:48:31.000Z",
   "reports": [
     {
       "id": "1",
@@ -9,7 +9,6 @@
       "summary": "Scammers call pretending to be your grandchild in trouble — arrested, in an accident, or at the hospital — and urgently need bail money or medical fees sent via gift cards or wire transfer.",
       "category": "Phone Scam",
       "firstReported": "2020-01-01T00:00:00Z",
-      "reportCount": 2847,
       "relatedScams": [
         "AI Voice Clone Scam",
         "Fake IRS Tax Refund Scam",
@@ -48,7 +47,6 @@
       "summary": "Using just a few seconds of audio from social media, scammers clone a loved one's voice with AI and call you claiming to be in an emergency. The voice sounds completely real.",
       "category": "AI Scam",
       "firstReported": "2023-03-15T00:00:00Z",
-      "reportCount": 1243,
       "relatedScams": [
         "Grandparent Emergency Scam",
         "Virtual Kidnapping Scam",
@@ -86,7 +84,6 @@
       "summary": "Calls, texts, or emails claiming you owe back taxes and will be arrested, or that you are owed a refund that requires you to pay a processing fee first — often via gift cards.",
       "category": "Government Scam",
       "firstReported": "2015-06-01T00:00:00Z",
-      "reportCount": 3921,
       "relatedScams": [
         "Medicare / Health Insurance Scam",
         "Grandparent Emergency Scam",
@@ -122,7 +119,6 @@
       "summary": "A scary browser pop-up claims your computer is infected with viruses and displays a 'Microsoft' or 'Apple' phone number. Calling it connects you to scammers who request remote access to your computer.",
       "category": "Tech Scam",
       "firstReported": "2016-04-01T00:00:00Z",
-      "reportCount": 2156,
       "relatedScams": [
         "Fake Antivirus / Scareware Scam"
       ],
@@ -155,7 +151,6 @@
       "summary": "Fake online dating profiles — often claiming to be deployed military, offshore oil workers, or traveling doctors — build a relationship over weeks before creating a financial crisis requiring money.",
       "category": "Romance Scam",
       "firstReported": "2010-01-01T00:00:00Z",
-      "reportCount": 1872,
       "relatedScams": [
         "Crypto Investment Scam",
         "Catfishing Scam",
@@ -191,7 +186,6 @@
       "summary": "Promises of guaranteed high returns on cryptocurrency or forex investments, often introduced through social media, fake apps, or romance relationships. Victims lose everything when they try to withdraw.",
       "category": "Investment Scam",
       "firstReported": "2019-01-01T00:00:00Z",
-      "reportCount": 4103,
       "relatedScams": [
         "Romance / Military Scam",
         "Pig Butchering Scam",
@@ -228,7 +222,6 @@
       "summary": "Callers pretend to be from Medicare or a health insurance company offering free equipment or coverage updates, then steal your Medicare number to commit fraud and bill for services you never received.",
       "category": "Government Scam",
       "firstReported": "2018-01-01T00:00:00Z",
-      "reportCount": 1654,
       "relatedScams": [
         "Fake IRS Tax Refund Scam",
         "Social Security Number Suspended Scam"
@@ -262,7 +255,6 @@
       "summary": "You receive a letter, call, or email claiming you've won a lottery or sweepstakes you never entered. To claim the prize you must first pay taxes, fees, or customs charges upfront.",
       "category": "Phone Scam",
       "firstReported": "2005-01-01T00:00:00Z",
-      "reportCount": 2390,
       "relatedScams": [
         "Advance Fee Loan Scam"
       ],
@@ -296,7 +288,6 @@
       "summary": "A call rings once from an unfamiliar international number and hangs up before you can answer, banking on curiosity making you call back. The returned call connects to a premium-rate line that racks up enormous per-minute charges, a cut of which goes to the scammer.",
       "category": "Phone Scam",
       "firstReported": "2016-01-01T00:00:00Z",
-      "reportCount": 1560,
       "relatedScams": [],
       "safetyTips": [
         "Don't call back unfamiliar international numbers, especially after just one ring.",
@@ -326,7 +317,6 @@
       "summary": "A robocall or live scammer opens with a simple yes-or-no question like \"can you hear me?\" hoping to record you saying \"yes,\" which they claim can later be used to authorize charges you never agreed to.",
       "category": "Phone Scam",
       "firstReported": "2017-01-01T00:00:00Z",
-      "reportCount": 980,
       "relatedScams": [],
       "safetyTips": [
         "Simply hang up on robocalls instead of engaging, even to say \"no.\"",
@@ -356,7 +346,6 @@
       "summary": "A text or call appears to come from your bank warning of suspicious activity and asks you to \"verify\" your account by providing your card number, PIN, or a one-time passcode — information a real bank never requests this way.",
       "category": "Phone Scam",
       "firstReported": "2019-01-01T00:00:00Z",
-      "reportCount": 2210,
       "relatedScams": [
         "Fake IRS Tax Refund Scam",
         "Phishing Email Scam"
@@ -390,7 +379,6 @@
       "summary": "A caller claims to be a sheriff or court officer saying you missed jury duty and now face arrest unless you immediately pay a fine — usually via gift cards or a prepaid card — to avoid being taken into custody.",
       "category": "Government Scam",
       "firstReported": "2014-01-01T00:00:00Z",
-      "reportCount": 1340,
       "relatedScams": [
         "Fake IRS Tax Refund Scam",
         "USCIS / Immigration Scam"
@@ -423,7 +411,6 @@
       "summary": "An automated call or voicemail claims your Social Security number has been \"suspended\" due to suspicious activity and instructs you to press a number or call back, aiming to extract your SSN and other personal details.",
       "category": "Government Scam",
       "firstReported": "2018-01-01T00:00:00Z",
-      "reportCount": 2670,
       "relatedScams": [
         "Fake IRS Tax Refund Scam",
         "Medicare / Health Insurance Scam",
@@ -458,7 +445,6 @@
       "summary": "Criminals use stolen personal information to file fraudulent unemployment claims in a victim's name, often surfacing only when the real person receives a tax form for benefits they never applied for or received.",
       "category": "Government Scam",
       "firstReported": "2020-01-01T00:00:00Z",
-      "reportCount": 1890,
       "relatedScams": [
         "Social Security Number Suspended Scam"
       ],
@@ -491,7 +477,6 @@
       "summary": "Companies advertise guaranteed student loan forgiveness or dramatically reduced payments for an upfront fee, then either do nothing, enroll borrowers in a plan they could have gotten for free, or steal the login credentials used to \"help.\"",
       "category": "Government Scam",
       "firstReported": "2015-01-01T00:00:00Z",
-      "reportCount": 1420,
       "relatedScams": [],
       "safetyTips": [
         "Legitimate loan forgiveness and repayment programs are always free to apply for directly through your loan servicer.",
@@ -523,7 +508,6 @@
       "summary": "Scammers posing as immigration officials contact applicants claiming a fee must be paid immediately by phone to avoid deportation or a denied application, exploiting fear around immigration status.",
       "category": "Government Scam",
       "firstReported": "2013-01-01T00:00:00Z",
-      "reportCount": 1105,
       "relatedScams": [
         "Jury Duty Scam"
       ],
@@ -555,7 +539,6 @@
       "summary": "A fraudulent email impersonates a trusted company or contact, urging the recipient to click a link and log in on a fake page that steals their username and password, or to open an attachment that installs malware.",
       "category": "Tech Scam",
       "firstReported": "2010-01-01T00:00:00Z",
-      "reportCount": 5230,
       "relatedScams": [
         "Smishing Text Message Scam",
         "Fake Bank Fraud Alert Scam",
@@ -589,7 +572,6 @@
       "summary": "Phishing conducted over SMS text message, often impersonating a delivery service, bank, or government agency with a link to a fake site designed to steal login credentials or payment information.",
       "category": "Tech Scam",
       "firstReported": "2017-01-01T00:00:00Z",
-      "reportCount": 3100,
       "relatedScams": [
         "Phishing Email Scam",
         "Package Delivery Text Scam"
@@ -622,7 +604,6 @@
       "summary": "A malicious QR code — placed over a legitimate one on a parking meter, menu, or poster, or sent digitally — redirects victims to a fake payment or login page designed to steal money or credentials.",
       "category": "Tech Scam",
       "firstReported": "2021-01-01T00:00:00Z",
-      "reportCount": 740,
       "relatedScams": [
         "Phishing Email Scam"
       ],
@@ -655,7 +636,6 @@
       "summary": "A pop-up or fake scan result falsely claims your device is riddled with viruses and pressures you to buy bogus security software or call a \"support\" number, which leads straight into a tech support scam.",
       "category": "Tech Scam",
       "firstReported": "2009-01-01T00:00:00Z",
-      "reportCount": 1980,
       "relatedScams": [
         "Tech Support Pop-Up Scam"
       ],
@@ -687,7 +667,6 @@
       "summary": "A hacked or cloned social media account messages the victim's friends and family asking for money, gift cards, or a \"favor\" verification code, exploiting the trust of an existing relationship.",
       "category": "Tech Scam",
       "firstReported": "2016-01-01T00:00:00Z",
-      "reportCount": 2050,
       "relatedScams": [
         "SIM Swap Scam"
       ],
@@ -719,7 +698,6 @@
       "summary": "A scammer convinces your mobile carrier to transfer your phone number to a SIM card they control, letting them intercept the text-message codes used to reset passwords and drain bank or crypto accounts.",
       "category": "Tech Scam",
       "firstReported": "2018-01-01T00:00:00Z",
-      "reportCount": 890,
       "relatedScams": [
         "Social Media Account Takeover Scam",
         "Crypto Investment Scam"
@@ -752,7 +730,6 @@
       "summary": "A caller claims to be holding a family member hostage and demands an immediate ransom payment, sometimes using an AI-cloned voice of the \"victim\" crying for help, even though the person is actually safe.",
       "category": "AI Scam",
       "firstReported": "2022-01-01T00:00:00Z",
-      "reportCount": 610,
       "relatedScams": [
         "AI Voice Clone Scam",
         "Grandparent Emergency Scam"
@@ -785,7 +762,6 @@
       "summary": "AI-generated video or audio shows a celebrity or public figure appearing to endorse an investment platform, giveaway, or product they have never actually endorsed, used to lend false credibility to a scam.",
       "category": "AI Scam",
       "firstReported": "2023-01-01T00:00:00Z",
-      "reportCount": 1320,
       "relatedScams": [
         "Crypto Investment Scam",
         "AI Voice Clone Scam"
@@ -819,7 +795,6 @@
       "summary": "An AI-powered chatbot, sometimes on a dating app, carries on a convincingly personal conversation for weeks or months before steering the victim toward sending money, gifts, or investing in a fraudulent scheme.",
       "category": "AI Scam",
       "firstReported": "2023-01-01T00:00:00Z",
-      "reportCount": 540,
       "relatedScams": [
         "Romance / Military Scam",
         "AI Voice Clone Scam"
@@ -853,7 +828,6 @@
       "summary": "Someone creates a fake online identity, often using stolen photos of an attractive stranger, to build a relationship for emotional manipulation, financial gain, or simply to deceive without necessarily asking for money.",
       "category": "Romance Scam",
       "firstReported": "2008-01-01T00:00:00Z",
-      "reportCount": 1760,
       "relatedScams": [
         "Romance / Military Scam",
         "Sextortion Scam"
@@ -887,7 +861,6 @@
       "summary": "A scammer coerces or tricks a victim into sharing intimate photos or video, then threatens to release them to friends, family, or publicly unless paid, often escalating demands after the first payment.",
       "category": "Romance Scam",
       "firstReported": "2015-01-01T00:00:00Z",
-      "reportCount": 1490,
       "relatedScams": [
         "Catfishing Scam"
       ],
@@ -921,7 +894,6 @@
       "summary": "An investment scheme pays early investors with money from new investors rather than actual profit, creating the illusion of a successful business until new money stops flowing in and the scheme collapses.",
       "category": "Investment Scam",
       "firstReported": "1920-01-01T00:00:00Z",
-      "reportCount": 2230,
       "relatedScams": [
         "Crypto Investment Scam"
       ],
@@ -954,7 +926,6 @@
       "summary": "Promoters hype a low-value stock or cryptocurrency through social media and unsolicited messages to inflate its price, then sell their own holdings at the peak, leaving new buyers with a worthless investment.",
       "category": "Investment Scam",
       "firstReported": "2000-01-01T00:00:00Z",
-      "reportCount": 1340,
       "relatedScams": [
         "Crypto Investment Scam"
       ],
@@ -988,7 +959,6 @@
       "summary": "Victims are convinced to download a fraudulent investment or trading app that shows fabricated, ever-increasing account balances, but withdrawals are blocked or additional \"fees\" are demanded before any money can be returned.",
       "category": "Investment Scam",
       "firstReported": "2021-01-01T00:00:00Z",
-      "reportCount": 1670,
       "relatedScams": [
         "Pig Butchering Scam",
         "Crypto Investment Scam"
@@ -1022,7 +992,6 @@
       "summary": "Named for the practice of fattening livestock before slaughter, scammers build a long-term relationship — often starting as a romance or friendship — before gradually persuading the victim to invest increasing amounts into a fake trading platform, ultimately taking everything.",
       "category": "Investment Scam",
       "firstReported": "2019-01-01T00:00:00Z",
-      "reportCount": 2480,
       "relatedScams": [
         "Romance / Military Scam",
         "Fake Trading App Scam"
@@ -1057,7 +1026,6 @@
       "summary": "A \"guaranteed approval\" loan offer, often targeting people with poor credit, requires an upfront fee for insurance, processing, or collateral before the loan is disbursed — but the loan never actually arrives.",
       "category": "Investment Scam",
       "firstReported": "2005-01-01T00:00:00Z",
-      "reportCount": 990,
       "relatedScams": [
         "Lottery / Prize Notification Scam"
       ],
@@ -1091,7 +1059,6 @@
       "summary": "A convincing but fraudulent online store, often advertised through social media, offers heavily discounted name-brand products, takes payment, and either ships nothing, a counterfeit, or a completely different item.",
       "category": "Shopping Scam",
       "firstReported": "2015-01-01T00:00:00Z",
-      "reportCount": 2670,
       "relatedScams": [
         "Online Marketplace Buyer Scam"
       ],
@@ -1124,7 +1091,6 @@
       "summary": "A \"buyer\" on a marketplace app sends a fake payment confirmation screenshot or overpays with a bad check, then asks the seller to ship the item or refund the difference before the payment actually clears.",
       "category": "Shopping Scam",
       "firstReported": "2014-01-01T00:00:00Z",
-      "reportCount": 1580,
       "relatedScams": [
         "Fake Online Store Scam",
         "Mystery Shopper Check Scam"
@@ -1158,7 +1124,6 @@
       "summary": "A recruiter offers a remote job with little to no interview, then asks the \"new hire\" to pay for training materials, equipment, or a background check upfront, or to deposit a check and wire back the difference.",
       "category": "Employment Scam",
       "firstReported": "2012-01-01T00:00:00Z",
-      "reportCount": 2010,
       "relatedScams": [
         "Mystery Shopper Check Scam"
       ],
@@ -1192,7 +1157,6 @@
       "summary": "A fake mystery shopping job sends the victim a check to deposit, instructing them to keep a \"payment\" and wire the rest to evaluate a money transfer service — but the original check later bounces, leaving the victim owing the full amount.",
       "category": "Employment Scam",
       "firstReported": "2010-01-01T00:00:00Z",
-      "reportCount": 1230,
       "relatedScams": [
         "Fake Job Offer Scam",
         "Online Marketplace Buyer Scam"
@@ -1226,7 +1190,6 @@
       "summary": "A text message claims a package couldn't be delivered due to an unpaid fee or incomplete address, with a link to a fake carrier site designed to steal payment card details.",
       "category": "Delivery Scam",
       "firstReported": "2020-01-01T00:00:00Z",
-      "reportCount": 3340,
       "relatedScams": [
         "Smishing Text Message Scam"
       ],
@@ -1258,7 +1221,6 @@
       "summary": "In the wake of a natural disaster or tragedy, fraudulent charities solicit donations through calls, texts, or social media using names deceptively similar to real, established relief organizations.",
       "category": "Charity Scam",
       "firstReported": "2005-01-01T00:00:00Z",
-      "reportCount": 1120,
       "relatedScams": [],
       "safetyTips": [
         "Give directly through a charity's official website rather than through a link in a text or email.",
@@ -1290,7 +1252,6 @@
       "summary": "A rental listing — sometimes copied from a real property that isn't actually for rent — advertises an attractive price and asks for a deposit or first month's rent before the \"landlord,\" who is never available to meet in person, disappears.",
       "category": "Rental Scam",
       "firstReported": "2013-01-01T00:00:00Z",
-      "reportCount": 1490,
       "relatedScams": [],
       "safetyTips": [
         "Never pay a deposit before viewing a property in person or via a verified live video call.",
@@ -1323,7 +1284,6 @@
       "category": "AI Scam",
       "firstReported": "2024-01-01T00:00:00Z",
       "datePublished": "2026-07-09T00:00:00Z",
-      "reportCount": 640,
       "relatedScams": [
         "AI Voice Clone Scam"
       ],
@@ -1360,7 +1320,6 @@
       "summary": "Scammers lure job seekers with texts or WhatsApp messages offering easy remote \"tasks\" like liking videos or rating products, then trap them in a game-like app that requires crypto deposits to \"unlock\" fake earnings.",
       "category": "Employment Scam",
       "firstReported": "2023-01-01",
-      "reportCount": 20000,
       "relatedScams": [],
       "safetyTips": [
         "Never pay money, crypto, or fees to 'unlock' wages you supposedly already earned \n require your own money upfront to get paid",
@@ -1399,7 +1358,6 @@
       "summary": "Scammers are cold-calling consumers claiming to be real, named FTC leaders like Chief Privacy Officer John Krebs or Chairman Andrew Ferguson, falsely accusing them of crimes like money laundering and pressuring them to \"resolve\" the matter by depositing cash into a Bitcoin ATM.",
       "category": "Government Scam",
       "firstReported": "2025-09-01",
-      "reportCount": 1500,
       "relatedScams": [],
       "safetyTips": [
         "Know that the FTC will never call you out of the blue and tell you to move or send money to 'protect' it",
@@ -1438,7 +1396,6 @@
       "summary": "Scammers plant fake \"I'm not a robot\" CAPTCHA verification screens on compromised or malicious websites that trick visitors into manually running a hidden malicious command, infecting their own device with password- and data-stealing malware.",
       "category": "Tech Scam",
       "firstReported": "2025-03-01",
-      "reportCount": 5000,
       "relatedScams": [],
       "safetyTips": [
         "Never follow instructions to press Windows+R, paste content, and press Enter as part of any CAPTCHA or verification process — legitimate CAPTCHAs never require this",
@@ -1478,7 +1435,6 @@
       "summary": "Scammers impersonate FBI and Internet Crime Complaint Center (IC3) personnel — now using AI deepfake videos and spoofed IC3 websites — to \"revictimize\" people who already lost money to a scam by falsely offering to recover their funds.",
       "category": "Government Scam",
       "firstReported": "2025-04-18",
-      "reportCount": 500,
       "relatedScams": [],
       "safetyTips": [
         "Only file or check complaints at the official site by typing www.ic3.gov directly into your browser, never via a link sent to you",
@@ -1520,7 +1476,6 @@
       "summary": "Scammers are calling, texting, and emailing people claiming they have an unclaimed \"relief check\" worth thousands of dollars waiting for them, directing victims to phishing sites to \"search their name\" and steal personal and financial data.",
       "category": "Government Scam",
       "firstReported": "2025-08-01",
-      "reportCount": 900,
       "relatedScams": [],
       "safetyTips": [
         "Never click links in unsolicited texts, emails, or voicemails about unclaimed government money",
@@ -1561,7 +1516,6 @@
       "summary": "Scammers impersonating grandchildren, government agents, or tech support convince mostly elderly victims to withdraw cash or buy gold bars, then send an in-person courier to physically collect the loot from the victim's home.",
       "category": "Government Scam",
       "firstReported": "2023-01-01",
-      "reportCount": 1737,
       "relatedScams": [],
       "safetyTips": [
         "Never give cash, gold, or valuables to a courier sent by someone who contacted you unsolicited by phone, email, or pop-up",
@@ -1600,7 +1554,6 @@
       "summary": "Scammers, many linked to North Korean state-sponsored operations, use AI deepfake video/audio, stolen identities, and ChatGPT-polished resumes to get hired into remote jobs, then use the position to steal company data, plant malware, or funnel salary payments overseas.",
       "category": "AI Scam",
       "firstReported": "2024-07-15",
-      "reportCount": 300,
       "relatedScams": [],
       "safetyTips": [
         "Verify identity documents in person or via a live, unscripted video check where you ask the candidate to turn their head to the side or perform an unscripted action a deepfake would struggle to replicate",
@@ -1641,7 +1594,6 @@
       "summary": "Scammers use AI tools to clone real dealership websites or build entirely fake auto/RV dealership sites and Facebook ad campaigns, then convince buyers to wire large sums for vehicles that don't exist.",
       "category": "Shopping Scam",
       "firstReported": "2026-03-24",
-      "reportCount": 150,
       "relatedScams": [],
       "safetyTips": [
         "Independently look up the dealership's phone number and address rather than using contact info from the ad or website, and call to verify the vehicle and transaction directly",
@@ -1682,7 +1634,6 @@
       "summary": "Criminals are building near-exact clones of the FBI's official Internet Crime Complaint Center (IC3.gov) website to steal personal and financial data from people who are trying to report a scam they were already victimized by.",
       "category": "Government Scam",
       "firstReported": "2025-09-19",
-      "reportCount": 500,
       "relatedScams": [],
       "safetyTips": [
         "Type www.ic3.gov directly into your browser's address bar instead of searching for it, and never click 'sponsored' search results",
@@ -1720,7 +1671,6 @@
       "summary": "Scammers exploit NFC \"tap-to-pay\" technology to charge victims' cards or phones without authorization, often by posing as vendors or charity collectors at crowded markets, fairs, and festivals.",
       "category": "Shopping Scam",
       "firstReported": "2025-10-21",
-      "reportCount": 150,
       "relatedScams": [],
       "safetyTips": [
         "Keep cards and NFC-enabled phones in an RFID-blocking wallet or sleeve when not actively paying",
@@ -1760,7 +1710,6 @@
       "summary": "Cybercriminals are distributing malicious apps and browser extensions disguised as popular VPN services to secretly install info-stealing and banking malware on victims' devices.",
       "category": "Tech Scam",
       "firstReported": "2025-11-06",
-      "reportCount": 50,
       "relatedScams": [],
       "safetyTips": [
         "Only download VPN apps from official app stores and the provider's verified official domain, double-checking for misspellings",
@@ -1799,7 +1748,6 @@
       "summary": "Malicious \"instant loan\" apps on Google Play and the Apple App Store lure people with promises of quick cash, then harvest contacts, photos, and messages from their phones to blackmail and harass them into paying inflated fees.",
       "category": "Tech Scam",
       "firstReported": "2024-11-25",
-      "reportCount": 150000,
       "relatedScams": [],
       "safetyTips": [
         "Only download lending or finance apps from well-established, verified financial institutions and check developer legitimacy before installing",
@@ -1839,7 +1787,6 @@
       "summary": "Scammers send unsolicited texts claiming to \"follow up\" on a large loan application (often $10,000) that the recipient never submitted, pressuring them to click a link or reply to \"cancel\" it and steal personal data instead.",
       "category": "Phone Scam",
       "firstReported": "2026-01-20",
-      "reportCount": 3000,
       "relatedScams": [],
       "safetyTips": [
         "Don't reply to or click links in unsolicited loan texts \\u2014 delete them",
@@ -1879,7 +1826,6 @@
       "summary": "Scammers send text messages impersonating toll agencies like E-ZPass, SunPass, FasTrak, and TxTag, claiming the recipient owes money for an unpaid toll and must pay immediately via a malicious link.",
       "category": "Government Scam",
       "firstReported": "2024-04-01",
-      "reportCount": 50000,
       "relatedScams": [],
       "safetyTips": [
         "Don't click links in unsolicited toll-payment texts; go directly to the toll agency's official website or app by typing the address yourself",
@@ -1917,7 +1863,6 @@
       "summary": "Scammers clone or impersonate real heavy equipment, farm machinery, and vehicle dealerships with convincing fake websites and Marketplace ads, luring buyers with below-market prices and then vanishing after victims wire large payments.",
       "category": "Shopping Scam",
       "firstReported": "2025-02-20",
-      "reportCount": 400,
       "relatedScams": [],
       "safetyTips": [
         "Research the business at BBB.org or call your local BBB before sending any money",
@@ -1960,7 +1905,6 @@
       "summary": "Criminals buy fake search-engine ads or build lookalike phishing sites that outrank real bank, payroll, and health savings account login pages, then trick victims into handing over passwords and one-time codes to drain their accounts.",
       "category": "Phone Scam",
       "firstReported": "2025-11-25",
-      "reportCount": 5100,
       "relatedScams": [],
       "safetyTips": [
         "Never provide login credentials, passwords, or one-time passcodes to anyone who contacts you, even if they claim to be from your bank",
@@ -2001,7 +1945,6 @@
       "summary": "Scammers text or WhatsApp victims claiming to be FTC \"agents\" who can help recover money lost in a previous scam, sending a photo of a fake employee badge/ID to seem legitimate before stealing money or financial data.",
       "category": "Government Scam",
       "firstReported": "2026-06-01",
-      "reportCount": 1500,
       "relatedScams": [],
       "safetyTips": [
         "Remember a real FTC employee will never contact you by text or messaging app to discuss a case or refund",
@@ -2039,7 +1982,6 @@
       "summary": "Scammers buy and sell lists of people who were previously defrauded, then pose as government agencies, law firms, or consumer groups offering to recover the victim's lost money for an upfront fee — draining them a second time.",
       "category": "Government Scam",
       "firstReported": "2025-11-26",
-      "reportCount": 5000,
       "relatedScams": [],
       "safetyTips": [
         "Never pay an upfront fee or give financial/personal information to get a refund \"no legitimate government agency or company requires this",
