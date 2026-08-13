@@ -1,6 +1,6 @@
 {
-  "version": 25,
-  "lastUpdated": "2026-08-10T10:02:24.474Z",
+  "version": 26,
+  "lastUpdated": "2026-08-13T02:34:12.000Z",
   "reports": [
     {
       "id": "1",
@@ -2029,6 +2029,48 @@
         "WhatsApp",
         "Phone Calls",
         "Social Media"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "58",
+      "slug": "refund-and-recovery-sucker-list-scam",
+      "title": "Refund and Recovery \"Sucker List\" Scam",
+      "summary": "Scammers buy and sell lists of people who were previously defrauded, then pose as government agencies, law firms, or consumer groups offering to recover the victim's lost money for an upfront fee — draining them a second time.",
+      "category": "Government Scam",
+      "firstReported": "2025-11-26",
+      "reportCount": 5000,
+      "relatedScams": [],
+      "safetyTips": [
+        "Never pay an upfront fee or give financial/personal information to get a refund \"no legitimate government agency or company requires this",
+        "If someone contacts you claiming to be from a government agency or law firm about a past scam, independently look up and call that organization directly rather than using contact info they provide",
+        "Search the organization's name online along with words like 'complaint,' 'scam,' or 'review' before engaging further",
+        "Be skeptical of any unsolicited call, text, email, or social media message referencing a scam you previously fell for",
+        "Avoid searching online for 'scam recovery' or similar help services, as this can lead directly to more recovery scammers",
+        "Report suspected refund/recovery scams to the FTC at ReportFraud.ftc.gov"
+      ],
+      "datePublished": "2026-08-12T09:45:49.273Z",
+      "howItWorks": "After someone falls for an initial scam, their contact details and information about how they were scammed often end up on a \"sucker list\" that fraud rings buy and sell. A new scammer then calls, emails, texts, messages on social media, or mails a letter claiming they can help recover the money, prize, or merchandise the person lost. They may claim to be from a federal agency like the FTC, a consumer advocacy group, a law firm, or even the original scammy company offering refunds to \"dissatisfied customers.\" Because they already know details of the original fraud, their pitch sounds credible. Before \"releasing\" the recovered funds, they ask the victim to pay an upfront \"retainer fee,\" \"processing fee,\" \"administrative charge,\" \"tax,\" or \"shipping and handling charge,\" or to hand over a Social Security number or bank/debit account information — which the scammer then uses to steal money or commit identity theft. The FTC also warns scammers are now using AI to make these pitches look and sound more legitimate.",
+      "redFlags": [
+        "Someone contacts you out of the blue claiming they can recover money you lost to a past scam",
+        "You're asked to pay any kind of upfront fee, 'tax,' or 'processing charge' before receiving a promised refund",
+        "The caller already knows details about a prior scam you experienced and uses that to build trust",
+        "They ask for your Social Security number, bank account, or other financial/personal information to 'process' the refund",
+        "They pressure you to pay via cash, gift cards, cryptocurrency, or wire transfer",
+        "They claim to guarantee they can get your name 'to the top of a list' for reimbursement"
+      ],
+      "realExamples": [
+        "FTC consumer alert describes scammers buying lists of previously defrauded people that include names, addresses, phone numbers, the type of scam used, and how much the victim paid.",
+        "News outlets reported scammers posing as federal agencies, consumer advocacy groups, or law firms and asking for upfront fees or financial information to 'recover' lost funds.",
+        "A regional TV consumer report quoted an FTC official warning that scammers are increasingly using AI to look and sound more legitimate when running these refund/recovery pitches."
+      ],
+      "source": "FTC Consumer Advice, \"Refund and Recovery Scams,\" https://consumer.ftc.gov/articles/refund-and-recovery-scams",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Email",
+        "Text Messages",
+        "Social Media",
+        "Postal Mail"
       ],
       "isAIDiscovered": true
     }
