@@ -1,6 +1,6 @@
 {
-  "version": 27,
-  "lastUpdated": "2026-08-13T02:48:31.000Z",
+  "version": 28,
+  "lastUpdated": "2026-08-14T09:41:12.319Z",
   "reports": [
     {
       "id": "1",
@@ -2013,6 +2013,48 @@
         "Text Messages",
         "Social Media",
         "Postal Mail"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "59",
+      "slug": "glp-1-weight-loss-drug-fake-ozempic-scam",
+      "title": "GLP-1 Weight-Loss Drug (Fake Ozempic) Scam",
+      "summary": "Scammers are exploiting the huge demand for GLP-1 weight-loss drugs like Ozempic and Wegovy with fake texts, bogus online pharmacies, and deepfake celebrity or doctor endorsements to steal money and personal data.",
+      "category": "Shopping Scam",
+      "firstReported": "2026-01-07",
+      "relatedScams": [],
+      "safetyTips": [
+        "Only obtain GLP-1 medications through a licensed doctor and a verified, licensed pharmacy",
+        "Never provide payment or personal/insurance information in response to an unsolicited text or call about a prescription",
+        "Verify celebrity or doctor endorsements directly through the person's official website or verified social media, not through an ad link",
+        "Check any online pharmacy's licensing and reviews through resources like BBB.org or your state pharmacy board before ordering",
+        "Don't pay a 'collection' demand for a subscription you never authorized \"e2mdash\" verify directly with the company using contact info you look up independently",
+        "Report suspicious offers to the BBB Scam Tracker or the FTC"
+      ],
+      "datePublished": "2026-08-14T09:41:11.573Z",
+      "howItWorks": "As GLP-1 medications have surged in popularity for both diabetes treatment and weight loss but remain expensive and hard to obtain, scammers are capitalizing on that demand and limited supply. According to BBB reports, criminals send unsolicited texts (sometimes impersonating a \"care coordinator\" claiming a doctor already approved a prescription), run fake online pharmacies advertising steep discounts with no prescription required, and use AI-generated deepfake videos of celebrities or doctors to promote counterfeit pills. Victims who click through and pay are often sent nothing at all, or receive unsafe, watered-down, or counterfeit medication. Some victims are also called later by fake \"collection agencies\" claiming they owe money for a weight-loss subscription and threatened with debt collection if they don't pay immediately.",
+      "redFlags": [
+        "Offers of Ozempic, Wegovy, or other GLP-1 drugs without a prescription",
+        "Unsolicited texts or calls saying a doctor already 'approved' or 'cleared' you for a prescription you never requested",
+        "Prices far below normal market rates or demands for urgent, immediate payment",
+        "Celebrity or doctor endorsements that appear in ads but can't be verified on the person's real official channels",
+        "Requests to pay via gift cards, cryptocurrency, or digital wallet apps",
+        "Sudden collection calls demanding payment for a weight-loss 'subscription' you don't recall signing up for"
+      ],
+      "realExamples": [
+        "BBB Scam Tracker has received many reports of scammers using weight loss and GLP-1 medications to get people's money and personal information, using fake texts, online pharmacies, and impostor doctor's offices.",
+        "A consumer reported a text from a 'Laura at WellnessCare' claiming a doctor had cleared them for a GLP-1 prescription and they were approved to begin treatment, leading to a fraudulent website.",
+        "A consumer reported receiving a call saying they owed $800 for a weight-loss medication subscription and would face a collection agency if they didn't pay.",
+        "Deepfake ads have promoted fabricated celebrity endorsements for weight-loss products such as Lipomax and Prozenith."
+      ],
+      "source": "Better Business Bureau, \"BBB Scam Alert: Weight loss and GLP-1 scams,\" https://www.bbb.org/all/consumer/scam/weight-loss-and-glp-1-scams",
+      "spreadPlatforms": [
+        "Text Messages",
+        "Social Media",
+        "Email",
+        "Fake Websites",
+        "Phone Calls"
       ],
       "isAIDiscovered": true
     }
