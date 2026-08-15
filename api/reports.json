@@ -1,6 +1,6 @@
 {
-  "version": 27,
-  "lastUpdated": "2026-08-13T02:48:31.000Z",
+  "version": 28,
+  "lastUpdated": "2026-08-15T09:00:54.397Z",
   "reports": [
     {
       "id": "1",
@@ -2013,6 +2013,46 @@
         "Text Messages",
         "Social Media",
         "Postal Mail"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "59",
+      "slug": "screen-sharing-remote-access-bank-scam",
+      "title": "Screen-Sharing Remote Access Bank Scam",
+      "summary": "Scammers pose as bank, tech support, or fraud-prevention staff on a phone or video call and talk victims into turning on screen-sharing, then use what they see (or remote-control access) to drain bank and payment accounts.",
+      "category": "Tech Scam",
+      "firstReported": "2023-08-03",
+      "relatedScams": [],
+      "safetyTips": [
+        "Never enable screen-sharing or remote-access software for someone who contacted you first, especially if they claim to be your bank or tech support",
+        "Hang up and call your bank or the company directly using the number on the back of your card or their official website, never a number given to you by the caller",
+        "If your phone shows a scam alert or automatically pauses screen-sharing when you open a financial app, treat it as a serious warning and end the call immediately",
+        "Never read aloud or type in one-time passcodes, PINs, or passwords while someone else can see or control your screen",
+        "Enable your phone's built-in scam-call and screen-sharing protections if available, and keep banking apps updated so they can use these safeguards"
+      ],
+      "datePublished": "2026-08-15T09:00:53.147Z",
+      "howItWorks": "A criminal calls, texts, or video-calls a victim claiming to be from their bank's fraud department, a tech company, or customer support, warning that the victim's account has been compromised or a device has a virus. To \"verify\" the account or \"fix\" the problem, the caller talks the victim into opening a legitimate screen-sharing or remote-access app (such as a built-in phone feature, a video-call screen-share, or a remote-support tool) and sharing their screen while they open their banking or payment app. While the victim believes they're being protected, the scammer either watches them type login credentials and one-time passcodes, or takes remote control of the device to move money out, add themselves as an authorized payee, or make purchases, all while keeping the victim on the phone under pressure so they don't notice the fraudulent transaction happening in real time. The tactic has become common enough that Google and WhatsApp have both built in-app warnings and automatic screen-share pauses specifically to interrupt it.",
+      "redFlags": [
+        "An unsolicited caller claiming to be from your bank, card network, or tech support asks you to start screen-sharing or grant remote access to your phone or computer",
+        "You're pressured to open your banking, crypto, or payment app while a stranger can see or control your screen",
+        "The caller creates urgency, saying your account is being drained right now and only their help can stop it",
+        "You're told to stay on the phone continuously while following step-by-step instructions and not to hang up or contact your bank separately",
+        "The request comes through an unexpected text, pop-up, or call rather than a number or channel you initiated yourself"
+      ],
+      "realExamples": [
+        "Google expanded its Android in-call scam protection pilot to the US in December 2025, partnering with banks like JPMorgan Chase and Cash App to automatically pause screen sharing for 30 seconds and show a warning when a user opens a financial app during a call with an unknown number.",
+        "Google says the feature was first piloted in the UK, where it had already helped thousands of users end suspicious calls and prevent financial losses before being expanded to more app types including peer-to-peer payment apps.",
+        "WhatsApp announced in October 2025 that it would warn users against screen-sharing during calls with unknown contacts to combat scammers using the feature to steal banking details.",
+        "Financial regulators and banks, including the UK's FCA and multiple U.S. credit unions, have published consumer warnings describing fraudsters posing as bank or tech support staff to convince victims to screen-share and hand over account access."
+      ],
+      "source": "Android Authority, \"Android's in-call scam protection goes live in the US to stop screen-sharing fraud,\" https://www.androidauthority.com/android-in-call-scam-protection-us-expansion-3621618/; 9to5Mac, \"WhatsApp will warn scam victims against screen-sharing bank info,\" https://9to5mac.com/2025/10/21/whatsapp-will-now-warn-scam-victims-against-screen-sharing-bank-details/",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Video Calls",
+        "Text Messages",
+        "WhatsApp",
+        "Banking and Payment Apps"
       ],
       "isAIDiscovered": true
     }
