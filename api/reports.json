@@ -1,6 +1,6 @@
 {
-  "version": 27,
-  "lastUpdated": "2026-08-13T02:48:31.000Z",
+  "version": 28,
+  "lastUpdated": "2026-08-17T09:23:32.632Z",
   "reports": [
     {
       "id": "1",
@@ -2013,6 +2013,45 @@
         "Text Messages",
         "Social Media",
         "Postal Mail"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "59",
+      "slug": "ai-deepfake-weight-loss-supplement-scam-pink-salt-trick-lipomax",
+      "title": "AI Deepfake Weight-Loss Supplement Scam (\"Pink Salt Trick\"/LipoMax)",
+      "summary": "Scammers use AI-generated deepfake videos of celebrities like Oprah Winfrey and fake \"doctors\" to push a weight-loss supplement called LipoMax, tied to the viral \"pink salt trick\" trend, then trap buyers in surprise subscriptions and high-pressure upsells.",
+      "category": "Shopping Scam",
+      "firstReported": "2025-11-07",
+      "relatedScams": [],
+      "safetyTips": [
+        "Be skeptical of any advertisement or endorsement promising miracle or immediate weight-loss results, since legitimate products rarely make such claims",
+        "Independently verify celebrity or doctor endorsements through the celebrity's official verified accounts or the doctor's real practice before buying",
+        "Research the company thoroughly, including checking BBB Scam Tracker and business registration, before providing payment information",
+        "Read subscription and billing terms carefully before ordering online supplements to avoid recurring charge traps",
+        "Report suspicious or misleading ads to BBB Ad Truth or BBB Scam Tracker, and dispute unauthorized charges with your bank or card issuer immediately"
+      ],
+      "datePublished": "2026-08-17T09:23:32.233Z",
+      "howItWorks": "Scammers create AI-generated \"deepfake\" videos showing celebrities or physicians endorsing a supplement called LipoMax as a version of the viral \"pink salt trick\" (a wellness trend involving pink Himalayan salt, lemon juice, and water). These videos, spread mainly through social media, falsely claim the celebrity uses, endorses, or even personally funded the product. Consumers who order the product after seeing an ad report being enrolled in unwanted recurring billing, receiving ineffective products, being unable to reach customer service, and then being contacted by a self-described product \"coach\" who pressures them to purchase hundreds of dollars in additional supplements.",
+      "redFlags": [
+        "Video ads or social media posts showing celebrities or doctors making dramatic, instant-results health claims about a supplement",
+        "Product marketed as a shortcut version of a viral home remedy or 'trick' rather than sold through the celebrity's or doctor's verified official channels",
+        "Aggressive follow-up contact from a self-appointed 'coach' pushing extra, costly add-on products after purchase",
+        "Return/refund addresses that don't match the company's registered business location",
+        "Promises of 'miracle' or 'permanent' weight loss with no real medical backing",
+        "Difficulty reaching customer service or canceling recurring subscription charges"
+      ],
+      "realExamples": [
+        "BBB Scam Tracker received over 170 reports in two months about LipoMax, with consumers describing deepfake videos of Oprah Winfrey and alleged physicians endorsing the product on social media",
+        "A West Virginia consumer reported buying LipoMax after seeing a deepfake video of Oprah claiming the weight would 'melt off,' then said they lost no weight and got no response from customer service",
+        "A BBB investigation found LipoMax is trademarked by a Wyoming-registered company but return addresses direct consumers to Lakeland and Largo, Florida, and consumers reported being pressured by a 'coach' to buy up to $800 in additional supplements"
+      ],
+      "source": "Better Business Bureau, \"BBB Scam Alert: Use caution when searching for weight loss products online,\" https://www.bbb.org/article/scams/32431-bbb-scam-alert-use-caution-when-searching-for-weight-loss-products-online",
+      "spreadPlatforms": [
+        "Social Media",
+        "Facebook",
+        "TikTok",
+        "Instagram"
       ],
       "isAIDiscovered": true
     }
