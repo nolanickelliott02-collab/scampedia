@@ -173,7 +173,7 @@ async function checkContentRelevance(report) {
       const html = await res.text();
       const pageText = stripHtmlToText(html);
       const matched = words.filter(w => pageText.includes(w));
-      attempts.push({ url, matched: matched.length, of: words.length, ratio: matched.length / words.length });
+      attempts.push({ url, matched: matched.length, of: words.length, ratio: matched.length / words.length, pageText });
     } catch (err) {
       attempts.push({ url, matched: 0, of: words.length, error: err.message });
     }
@@ -182,7 +182,9 @@ async function checkContentRelevance(report) {
   const best = attempts.find(a => a.ratio >= RELEVANCE_THRESHOLD);
   if (best) {
     console.log(`Relevance check passed: ${best.url} matched ${best.matched}/${best.of} title words (${words.join(', ')}).`);
-    return { ok: true, issues: [] };
+    // Returned so factCheckClaims can verify against the exact text this
+    // check already fetched, instead of re-fetching the same page again.
+    return { ok: true, issues: [], sourceText: best.pageText };
   }
 
   return {
@@ -192,6 +194,74 @@ async function checkContentRelevance(report) {
       attempts.map(a => `${a.url} matched ${a.matched}/${a.of}${a.error ? ` (${a.error})` : ''}`).join('; '),
     ],
   };
+}
+
+// The gates above establish that a citation exists, resolves, and is
+// topically about the same subject — none of them confirm the *specific*
+// facts in the entry (how the scam works, red flags, real examples) are
+// actually supported by that source rather than embellished or invented.
+// This is what replaces the "a human has to read this before it publishes"
+// step: a second, independent Claude pass, given only the generated claims
+// and the real fetched source text, asked to flag anything not actually
+// supported. No web_search here on purpose — the point is scoring the
+// claims against the exact text already verified as relevant, not giving
+// the model a chance to rationalize a claim by finding some other page
+// that happens to agree with it.
+async function factCheckClaims(client, newReport, sourceText) {
+  const claims = [
+    `Title: ${newReport.title}`,
+    `Summary: ${newReport.summary}`,
+    `How it works: ${newReport.howItWorks}`,
+    `Red flags: ${newReport.redFlags.join(' | ')}`,
+    `Real examples: ${newReport.realExamples.join(' | ')}`,
+    `First reported: ${newReport.firstReported}`,
+  ].join('\n');
+
+  const prompt = `You are fact-checking a scam-database entry against its cited source before it
+publishes with no human review. Below are the entry's claims, then the full text of the page it
+cites as its source.
+
+Flag ONLY claims not actually supported by the source text — not stylistic paraphrasing, not a
+claim that's plausible-but-unconfirmed, but a specific fact (a date, a named method, a named
+institution, a statistic, a quote) asserted in the entry that the source text does not contain or
+contradicts. A "real example" describing a pattern that generalizes beyond the source's exact
+wording is fine; a fabricated specific (a made-up dollar figure, a named victim not in the
+source, a statistic not present in the source) is not fine.
+
+--- ENTRY CLAIMS ---
+${claims}
+
+--- SOURCE TEXT (truncated) ---
+${sourceText.slice(0, 12000)}`;
+
+  const response = await client.messages.create({
+    model: MODEL,
+    max_tokens: 1024,
+    system: 'You are a strict fact-checker. Call submit_fact_check exactly once.',
+    tools: [{
+      name: 'submit_fact_check',
+      description: 'Submit your fact-check verdict.',
+      input_schema: {
+        type: 'object',
+        properties: {
+          verified: { type: 'boolean', description: 'true only if every factual claim is supported by the source text' },
+          unsupportedClaims: { type: 'array', items: { type: 'string' }, description: 'Specific claims not supported by the source, if any' },
+        },
+        required: ['verified', 'unsupportedClaims'],
+        additionalProperties: false,
+      },
+      strict: true,
+    }],
+    tool_choice: { type: 'tool', name: 'submit_fact_check' },
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  const call = response.content.find(b => b.type === 'tool_use' && b.name === 'submit_fact_check');
+  if (!call) return { ok: false, issues: ['fact-check pass did not return a verdict'] };
+  if (!call.input.verified) {
+    return { ok: false, issues: [`Fact-check found unsupported claims: ${(call.input.unsupportedClaims || []).join('; ')}`] };
+  }
+  return { ok: true, issues: [] };
 }
 
 function writeGithubOutput(fields) {
@@ -416,6 +486,14 @@ async function run() {
     return;
   }
 
+  console.log('Fact-checking claims against the cited source...');
+  const factCheck = await factCheckClaims(client, newReport, relevanceCheck.sourceText);
+  if (!factCheck.ok) {
+    console.error('Fact-check failed, refusing to write:', factCheck.issues);
+    writeGithubOutput({ result: 'gate-rejected', reason: `Fact-check: ${factCheck.issues.join('; ')}` });
+    return;
+  }
+
   if (process.env.DRY_RUN) {
     console.log('[DRY_RUN] Not writing to reports.json.');
     writeGithubOutput({ result: 'written', title: entry.title, citation: entry.source, dryRun: 'true' });
@@ -428,7 +506,9 @@ async function run() {
   fs.writeFileSync(REPORTS_PATH, JSON.stringify(data, null, 2) + '\n');
 
   console.log(`Wrote new entry "${entry.title}" — version now ${data.version}.`);
-  writeGithubOutput({ result: 'written', title: entry.title, citation: entry.source });
+  // summary/slug are read by the workflow's notify step to build the actual
+  // push notification content — real per-entry text, not a generic string.
+  writeGithubOutput({ result: 'written', title: entry.title, citation: entry.source, summary: entry.summary, slug: newReport.slug });
 }
 
 run().catch(err => {
