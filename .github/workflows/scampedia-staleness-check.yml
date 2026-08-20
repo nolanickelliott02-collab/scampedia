@@ -1,0 +1,45 @@
+name: Scampedia Staleness Check
+
+# Deliberately its own workflow, not a step inside daily-scam-entry.yml — see
+# scripts/check-live-staleness.js for why. Scheduled ~20 minutes after
+# daily-scam-entry's 08:37 UTC run so a same-day failure gets caught
+# promptly, but this fires on its own regardless of whether that pipeline
+# ran, skipped, or never fired at all.
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check live site staleness
+        run: node scripts/check-live-staleness.js
+      - name: Email alert if stale
+        # Only runs if the check above actually failed — `if: failure()`
+        # explicitly opts back in to running after a prior step's failure,
+        # overriding the default "skip the rest of the job" behavior. This
+        # is the "reach my phone" channel — GitHub's own failed-run email
+        # is real but depends on notification settings staying enabled;
+        # this doesn't.
+        if: failure()
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+        run: |
+          curl -sS -X POST https://api.sendgrid.com/v3/mail/send \
+            -H "Authorization: Bearer $SENDGRID_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "personalizations": [{"to": [{"email": "nolanickelliott02@gmail.com"}]}],
+              "from": {"email": "alerts@officialverifyguard.com", "name": "Scampedia Watchdog"},
+              "subject": "Scampedia has gone stale",
+              "content": [{
+                "type": "text/plain",
+                "value": "The live scampedia.net site has not published a new scam entry within the staleness limit. Check github.com/nolanickelliott02-collab/scampedia/actions/workflows/daily-scam-entry.yml for recent runs, and check for open PRs that need attention."
+              }]
+            }'

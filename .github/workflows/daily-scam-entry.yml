@@ -21,15 +21,6 @@ jobs:
         with:
           node-version: '22'
       - run: npm ci
-      - name: Fail loudly if nothing has merged in too long
-        # Real, load-bearing check, not signal-only like the one below.
-        # Review-gating this pipeline (below) trades the old failure mode
-        # (a bad entry publishes unreviewed) for a new one (PRs pile up
-        # unreviewed and the database quietly goes stale) — this is what
-        # catches the second one. api/reports.json's lastUpdated only
-        # changes when a PR actually merges, since nothing pushes to main
-        # directly anymore.
-        run: node scripts/check-staleness.js
       - name: Course content health (signal only — never blocks this pipeline)
         # Scam-database entries are time-sensitive safety content; the
         # course is not. An overdue lesson must not stop a real scam
