@@ -2,12 +2,12 @@ name: Scampedia Staleness Check
 
 # Deliberately its own workflow, not a step inside daily-scam-entry.yml — see
 # scripts/check-live-staleness.js for why. Scheduled ~20 minutes after
-# daily-scam-entry's 08:37 UTC run so a same-day failure gets caught
+# daily-scam-entry's 17:00 UTC run so a same-day failure gets caught
 # promptly, but this fires on its own regardless of whether that pipeline
 # ran, skipped, or never fired at all.
 on:
   schedule:
-    - cron: '0 9 * * *'
+    - cron: '20 17 * * *'
   workflow_dispatch: {}
 
 jobs:

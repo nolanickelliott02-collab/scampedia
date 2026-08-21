@@ -2,7 +2,10 @@ name: Daily Scam Entry
 
 on:
   schedule:
-    - cron: '37 8 * * *'
+    # 17:00 UTC = noon Central (CDT). GitHub Actions cron doesn't shift for
+    # DST, so this lands 11am Central during CST (Nov-Mar) instead — still
+    # solidly midday, just not pinned to the exact minute across the year.
+    - cron: '0 17 * * *'
   workflow_dispatch: {}
 
 concurrency:
