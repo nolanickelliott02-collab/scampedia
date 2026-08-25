@@ -1,0 +1,69 @@
+name: Government Scam Source Scan
+
+# Independent of daily-scam-entry.yml on purpose — this bot only searches
+# primary government sources (see scripts/generate-gov-scam.js) and only
+# publishes when its own extra .gov-domain gate passes, so it can find
+# nothing on a given day without that reflecting on the general daily bot,
+# and vice versa. Scheduled 6 hours after daily-scam-entry.yml's 17:00 UTC
+# run specifically so both jobs are never in flight at once — see the "git
+# pull --rebase" safeguard below for what happens if that's ever violated
+# anyway (e.g. two manual dispatches back to back).
+on:
+  schedule:
+    - cron: '0 23 * * *'
+  workflow_dispatch: {}
+
+concurrency:
+  group: gov-scam-scan
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci
+      - name: Scan government sources for a scam entry
+        id: generate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-gov-scam.js
+      - name: Rebuild static scam pages
+        if: steps.generate.outputs.result == 'written'
+        run: npm run build:scams
+      - name: Publish directly to main
+        # GitHub Pages serves main directly with no separate deploy Action,
+        # so this push is what actually makes it live. The pull --rebase
+        # guards against the (normally impossible, given the 6-hour
+        # schedule offset above) case where daily-scam-entry.yml's own push
+        # landed on main in between this job's checkout and this step.
+        if: steps.generate.outputs.result == 'written'
+        run: |
+          git config user.name "scampedia-bot"
+          git config user.email "actions@github.com"
+          git add api/reports.json scams/ sitemap.xml
+          git commit -m "Add scam entry: ${{ steps.generate.outputs.title }}" -m "Source: ${{ steps.generate.outputs.citation }}" -m "Government-sourced entry (gov-scam-scan)"
+          git pull --rebase origin main
+          git push origin main
+      - name: Notify devices of the new entry
+        if: steps.generate.outputs.result == 'written'
+        env:
+          ENTRY_TITLE: ${{ steps.generate.outputs.title }}
+          ENTRY_SUMMARY: ${{ steps.generate.outputs.summary }}
+          ENTRY_SLUG: ${{ steps.generate.outputs.slug }}
+          NOTIFY_SECRET: ${{ secrets.SCAMPEDIA_NOTIFY_SECRET }}
+        # Best-effort: a failed push send must not fail this job or block
+        # anything — the entry is already live on scampedia.net/reports.json
+        # regardless of whether anyone gets pinged about it.
+        run: |
+          curl -sS -X POST "https://clever-bravery-production-2d5f.up.railway.app/api/notify-new-scam" \
+            -H "Content-Type: application/json" \
+            -H "x-notify-secret: $NOTIFY_SECRET" \
+            -d "$(node -e 'console.log(JSON.stringify({title: process.env.ENTRY_TITLE, summary: process.env.ENTRY_SUMMARY, slug: process.env.ENTRY_SLUG}))')" \
+            || echo "Push notification failed, continuing anyway."

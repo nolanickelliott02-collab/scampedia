@@ -475,17 +475,23 @@ img { max-width: 100%; }
   font-weight: 600;
 }
 .scam-card-date { color: var(--text-3); }
-.ai-pill {
+.ai-pill, .gov-pill {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: rgba(52,211,153,.12);
-  color: var(--success);
   border-radius: 99px;
   padding: 2px 9px;
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: .02em;
+}
+.ai-pill {
+  background: rgba(52,211,153,.12);
+  color: var(--success);
+}
+.gov-pill {
+  background: rgba(45,126,255,.12);
+  color: var(--accent-bright);
 }
 .no-results {
   text-align: center;
@@ -562,7 +568,7 @@ img { max-width: 100%; }
   color: var(--text-3);
 }
 .wiki-byline .sep { color: var(--text-3); }
-.wiki-byline .ai-pill { font-size: 11px; }
+.wiki-byline .ai-pill, .wiki-byline .gov-pill { font-size: 11px; }
 
 .wiki-body { display: grid; grid-template-columns: 1fr 260px; gap: 40px; align-items: start; }
 

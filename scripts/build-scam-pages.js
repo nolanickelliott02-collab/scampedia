@@ -223,6 +223,7 @@ function scamPageHtml(report, allReports) {
       <div class="wiki-byline">
         ${publishedDate ? `<span>Added ${publishedDate}</span><span class="sep">·</span>` : ''}
         ${report.isAIDiscovered ? `<span class="ai-pill">🧠 Discovered by VerifyGuard AI Brain</span><span class="sep">·</span>` : ''}
+        ${report.isGovSourced ? `<span class="gov-pill">🏛️ Government-Verified</span><span class="sep">·</span>` : ''}
         <span>Source: ${renderSourceCitation(source)}</span>
       </div>
     </div>
@@ -307,6 +308,11 @@ function scamPageHtml(report, allReports) {
           <span class="wiki-infobox-label">Discovery</span>
           <span class="wiki-infobox-value">🧠 AI Discovered</span>
         </div>` : ''}
+        ${report.isGovSourced ? `
+        <div class="wiki-infobox-row">
+          <span class="wiki-infobox-label">Source Type</span>
+          <span class="wiki-infobox-value">🏛️ Government-Verified</span>
+        </div>` : ''}
       </div>
     </div>
   `;
@@ -346,6 +352,7 @@ function indexPageHtml(allReports) {
             <div class="scam-card-meta">
               <span class="scam-cat">${escapeHtml(r.category)}</span>
               ${r.isAIDiscovered ? `<span class="ai-pill">🧠 AI Discovered</span>` : ''}
+              ${r.isGovSourced ? `<span class="gov-pill">🏛️ Gov-Verified</span>` : ''}
             </div>
             <h3>${escapeHtml(r.title)}</h3>
             <p>${escapeHtml(r.summary.slice(0, 120))}…</p>

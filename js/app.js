@@ -281,6 +281,7 @@ function cardHtml(r) {
         <span class="scam-cat">${escapeHtml(r.category)}</span>
         ${date ? `<span>·</span><span class="scam-card-date">${escapeHtml(date)}</span>` : ''}
         ${r.isAIDiscovered ? `<span class="ai-pill">🧠 AI Discovered</span>` : ''}
+        ${r.isGovSourced ? `<span class="gov-pill">🏛️ Gov-Verified</span>` : ''}
       </div>
       <h3>${escapeHtml(r.title)}</h3>
       <p>${escapeHtml(r.summary.slice(0, 120))}…</p>
