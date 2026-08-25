@@ -1,6 +1,6 @@
 {
-  "version": 27,
-  "lastUpdated": "2026-08-13T02:48:31.000Z",
+  "version": 28,
+  "lastUpdated": "2026-08-25T23:24:32.604Z",
   "reports": [
     {
       "id": "1",
@@ -2015,6 +2015,44 @@
         "Postal Mail"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "59",
+      "slug": "financial-institution-support-impersonation-account-takeover-scam",
+      "title": "Financial Institution Support Impersonation Account Takeover Scam",
+      "summary": "The FBI warns that criminals are impersonating banks, payroll providers, and health savings account (HSA) administrators to trick people into handing over login credentials and one-time passcodes, then draining or hijacking the accounts.",
+      "category": "Phone Scam",
+      "firstReported": "2025-11-25",
+      "relatedScams": [],
+      "safetyTips": [
+        "Never share your login credentials, MFA codes, or one-time passcodes with anyone who contacts you, even if they claim to be from your bank or employer",
+        "Contact your financial institution, payroll provider, or HSA administrator directly using a phone number or website you look up yourself, not one provided in the suspicious message",
+        "If you suspect your account was accessed, contact your financial institution immediately to request a recall or reversal and a Hold Harmless Letter, and reset all potentially exposed credentials and passwords, including on other sites where you reused them",
+        "Report suspected account takeover fraud to the FBI's Internet Crime Complaint Center at ic3.gov, including the words 'Account Takeover' or 'SEO poisoning' in the description, and notify the impersonated company so it can warn others"
+      ],
+      "datePublished": "2026-08-25T23:24:28.536Z",
+      "howItWorks": "Criminals pose as a financial institution's support staff or replicate its website, then use texts, phone calls, emails, or fraudulent lookalike websites to manipulate the account holder into giving up login credentials, multi-factor authentication (MFA) codes, or one-time passcodes (OTPs). Once the criminal has this information, they log into the victim's actual online banking, payroll, or health savings account and use the access to steal funds, redirect paychecks, or otherwise move money out of the victim's control. The scheme targets individuals as well as businesses and organizations of all sizes across sectors, not just personal bank customers.",
+      "redFlags": [
+        "Unsolicited text, call, or email claiming to be from your bank, payroll provider, or HSA administrator asking you to verify your login or share a code",
+        "A request for your multi-factor authentication code or one-time passcode over the phone or via text/email",
+        "Being directed to click a link or download software to 'resolve' an account issue rather than logging in directly through the official app or website",
+        "A sense of urgency pushing you to act immediately to 'secure' or 'verify' your account",
+        "Slight misspellings or odd URLs in a bank/payroll website link sent to you"
+      ],
+      "realExamples": [
+        "FBI IC3 reports that since January 2025 it received more than 5,100 complaints of account takeover (ATO) fraud via impersonation of financial institution support, with losses exceeding $262 million",
+        "Cyber criminals impersonate a financial institution's staff or website to gain access, often reaching victims through social engineering via texts, calls, and emails or through fraudulent websites",
+        "The scheme has been used to gain unauthorized access not just to bank accounts but also to targeted payroll and health savings accounts"
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), PSA I-112525-PSA, https://www.ic3.gov/PSA/2025/PSA251125",
+      "spreadPlatforms": [
+        "Text Messages",
+        "Phone Calls",
+        "Email",
+        "Fraudulent Websites"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
