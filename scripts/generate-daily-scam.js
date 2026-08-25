@@ -78,9 +78,26 @@ function findQualityIssues(report) {
 // every URL cited must actually resolve, checked for real over the network,
 // not assumed from the string looking right.
 const URL_PATTERN = /https?:\/\/[^\s;,)"'<>]+/g;
+// Fallback for citations that name a bare domain with no scheme, e.g.
+// "bbb.org/article/..." instead of "https://bbb.org/article/..." — the
+// model does this often enough in practice that treating it as "no URL"
+// silently gate-rejected every single entry for ~13 days (2026-08-13 to
+// 2026-08-25) before anyone noticed. Only used when the strict pattern
+// finds nothing, and a bad match still has to actually resolve below —
+// this doesn't relax the "must be a real, checkable source" requirement.
+const BARE_DOMAIN_PATTERN = /\b(?:[a-z0-9-]+\.)+[a-z]{2,}(?:\/[^\s;,)"'<>]*)?/gi;
+
+function extractCitationUrls(source) {
+  const str = String(source || '');
+  const urls = [...str.matchAll(URL_PATTERN)].map(m => m[0].replace(/[.,;]+$/, ''));
+  if (urls.length > 0) return urls;
+  return [...str.matchAll(BARE_DOMAIN_PATTERN)]
+    .map(m => m[0].replace(/[.,;]+$/, ''))
+    .map(u => `https://${u}`);
+}
 
 async function verifyCitationUrls(source) {
-  const urls = [...String(source || '').matchAll(URL_PATTERN)].map(m => m[0].replace(/[.,;]+$/, ''));
+  const urls = extractCitationUrls(source);
   if (urls.length === 0) {
     return { ok: false, issues: ['source citation contains no URL at all — a citation must be checkable, not just a claimed organization name'] };
   }
@@ -156,7 +173,7 @@ async function checkContentRelevance(report) {
     return { ok: false, issues: ['title produced no significant words to check relevance against — title itself may be malformed'] };
   }
 
-  const urls = [...String(report.source || '').matchAll(URL_PATTERN)].map(m => m[0].replace(/[.,;]+$/, ''));
+  const urls = extractCitationUrls(report.source);
   const attempts = [];
 
   for (const url of urls) {
@@ -300,7 +317,7 @@ const toolDefinitions = [
         },
         spreadPlatforms: { type: 'array', items: { type: 'string' }, description: 'e.g. "Text Messages", "Email", "Social Media"' },
         firstReported: { type: 'string', description: 'Best-estimate ISO 8601 date this trend was first reported by your sources' },
-        source: { type: 'string', description: 'Real, specific citation: publication/agency name plus the URL you found it at' },
+        source: { type: 'string', description: 'Real, specific citation: publication/agency name plus the exact URL you found it at, always including the https:// scheme' },
       },
       required: ['title', 'category', 'summary', 'howItWorks', 'redFlags', 'safetyTips', 'realExamples', 'spreadPlatforms', 'firstReported', 'source'],
       additionalProperties: false,
