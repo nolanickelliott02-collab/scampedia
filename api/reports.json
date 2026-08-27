@@ -1,6 +1,6 @@
 {
-  "version": 28,
-  "lastUpdated": "2026-08-25T23:24:32.604Z",
+  "version": 29,
+  "lastUpdated": "2026-08-27T04:13:47.297Z",
   "reports": [
     {
       "id": "1",
@@ -2050,6 +2050,42 @@
         "Phone Calls",
         "Email",
         "Fraudulent Websites"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "60",
+      "slug": "health-insurer-chinese-law-enforcement-impersonation-extortion-scam",
+      "title": "Health Insurer + Chinese Law Enforcement Impersonation Extortion Scam",
+      "summary": "The FBI warns that criminals are targeting Chinese-speaking residents of the U.S. by impersonating health insurance claims departments and then handing the call off to fake Chinese police who threaten extradition unless the victim pays \"bail.\"",
+      "category": "Government Scam",
+      "firstReported": "2025-11-13",
+      "relatedScams": [],
+      "safetyTips": [
+        "Independently verify any health insurance claim by using the phone number or website printed on your insurance card, not one given by the caller",
+        "Do not share personal information, including health insurance account logins, with an unsolicited caller",
+        "Never wire money or pay 'bail' to anyone who calls you, especially foreign law enforcement claiming jurisdiction over a US resident",
+        "Do not install video communication software or allow anyone to maintain live video access to your device",
+        "Hang up and report the call to the FBI's Internet Crime Complaint Center (IC3) with any phone numbers, names, or transaction details"
+      ],
+      "datePublished": "2026-08-27T04:13:42.927Z",
+      "howItWorks": "According to an FBI/IC3 public service announcement, targeted individuals receive a call from a spoofed telephone number belonging to a legitimate U.S. health insurance provider's claims department, conducted in Chinese, asking about recent insurance claims for alleged surgical procedures; the criminal then shows the recipient fraudulent invoices on screen via video communication software and demands payment. If the recipient denies filing the claim, the criminal transfers them to someone posing as Chinese law enforcement, who asks for personal identifying information, threatens extradition or foreign prosecution, and demands a large payment for bail, and may instruct the victim to download video communication software and stay connected for 24-hour \"surveillance.\"",
+      "redFlags": [
+        "An unsolicited call in Chinese claiming to be from a health insurer's claims department about a surgery you never had",
+        "Being shown invoices over video call and pressured to pay immediately",
+        "A second caller claiming to be Chinese police who demands personal ID information and a 'bail' payment",
+        "Instructions to download video software and stay connected around the clock for 'surveillance'",
+        "Threats of extradition or foreign prosecution over an insurance dispute"
+      ],
+      "realExamples": [
+        "FBI/IC3 PSA describing victims receiving spoofed calls from a health insurer's claims department in Chinese, being shown fraudulent invoices via video software, then transferred to a fake Chinese law enforcement officer demanding bail payment and personal ID information",
+        "Reports describe scammers instructing victims to maintain 24-hour video connectivity for 'surveillance' after the extortion call"
+      ],
+      "source": "FBI/IC3, https://www.ic3.gov/PSA/2025/PSA251113",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Video Communication Software"
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
