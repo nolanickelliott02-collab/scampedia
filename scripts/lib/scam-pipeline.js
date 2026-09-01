@@ -87,6 +87,15 @@ function extractCitationUrls(source) {
     .map(u => `https://${u}`);
 }
 
+// Real-world finding (2026-08-30): legitimate, live sources (Washington
+// Times, McAfee's blog) returned HTTP 403 to these checks — not because the
+// page doesn't exist, but because their WAF blocks the generic User-Agent
+// Node's fetch sends by default. Presenting as a normal browser (same
+// pattern already used server-side in VerifyGuard's webTools.js) fixes the
+// false negative without weakening what's actually being verified — the
+// page still has to really resolve and really contain the claimed content.
+const FETCH_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
+
 async function verifyCitationUrls(source) {
   const urls = extractCitationUrls(source);
   if (urls.length === 0) {
@@ -100,10 +109,10 @@ async function verifyCitationUrls(source) {
       const timeout = setTimeout(() => controller.abort(), 10_000);
       let res;
       try {
-        res = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: controller.signal });
+        res = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': FETCH_UA } });
         // Some servers reject HEAD outright even though the real page is fine — retry with GET before concluding the URL is dead.
         if (res.status === 405 || res.status === 403) {
-          res = await fetch(url, { method: 'GET', redirect: 'follow', signal: controller.signal });
+          res = await fetch(url, { method: 'GET', redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': FETCH_UA } });
         }
       } finally {
         clearTimeout(timeout);
@@ -173,7 +182,7 @@ async function checkContentRelevance(report) {
       const timeout = setTimeout(() => controller.abort(), 10_000);
       let res;
       try {
-        res = await fetch(url, { redirect: 'follow', signal: controller.signal });
+        res = await fetch(url, { redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': FETCH_UA } });
       } finally {
         clearTimeout(timeout);
       }
