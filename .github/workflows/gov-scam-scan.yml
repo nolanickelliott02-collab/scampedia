@@ -34,6 +34,38 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/generate-gov-scam.js
+      - name: Email me if nothing published today
+        # Same reasoning as daily-scam-entry.yml's identical step — this bot
+        # shares the same silent-success-without-writing shape (confirmed
+        # 2026-09-08: this run had also gone quiet for days with the job
+        # itself always green) since it uses the same lib/scam-pipeline.js
+        # gates. Surfacing the real reason same-day instead of waiting on
+        # the 5-day staleness alert.
+        if: always() && steps.generate.outputs.result != 'written' && steps.generate.outputs.result != 'already-ran'
+        env:
+          RESULT: ${{ steps.generate.outputs.result }}
+          REASON: ${{ steps.generate.outputs.reason || steps.generate.outputs.error || 'no reason reported' }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+        run: |
+          curl -sS -X POST https://api.sendgrid.com/v3/mail/send \
+            -H "Authorization: Bearer $SENDGRID_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "$(node -e '
+              console.log(JSON.stringify({
+                personalizations: [{ to: [{ email: "nolanickelliott02@gmail.com" }] }],
+                from: { email: "alerts@officialverifyguard.com", name: "Scampedia Watchdog" },
+                subject: "Government Scam Source Scan did not publish today (" + process.env.RESULT + ")",
+                content: [{ type: "text/plain", value:
+                  "Today'"'"'s Government Scam Source Scan run finished without publishing anything.\n\n" +
+                  "Result: " + process.env.RESULT + "\n" +
+                  "Reason: " + process.env.REASON + "\n\n" +
+                  "This is not necessarily broken — a gate rejecting a bad candidate is it working as designed. " +
+                  "But if this reason repeats every day, something structural (likely the citation/relevance " +
+                  "network checks) is probably blocking every candidate. Run: github.com/nolanickelliott02-collab/scampedia/actions/workflows/gov-scam-scan.yml"
+                }]
+              }))
+            ')" \
+            || echo "Email alert failed, continuing anyway."
       - name: Rebuild static scam pages
         if: steps.generate.outputs.result == 'written'
         run: npm run build:scams
