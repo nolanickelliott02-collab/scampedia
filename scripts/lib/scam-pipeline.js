@@ -281,6 +281,108 @@ ${sourceText.slice(0, 12000)}`;
   return { ok: true, issues: [] };
 }
 
+// Phase 3b triage layer: a distinct question from fact-checking (above).
+// Fact-checking asks "is each specific claim actually supported by the
+// source." Triage asks the editorial questions a human reviewer would ask
+// before that: is this really a distinct pattern (or a near-duplicate/
+// variant of something already in the database, beyond what the cheap
+// title/URL dedup gate can catch), how novel and how urgent is it based
+// only on what the source itself says, how credible is the source class,
+// and what category/aliases best fit it. Given only the candidate's own
+// claims and the real fetched source text — same discipline as
+// factCheckClaims, no web_search — so it can't invent information not
+// present in the source to answer these questions.
+const REVIEW_DIR = path.join(__dirname, '..', '..', 'review');
+
+async function triageCandidate(client, newReport, existingReports, sourceText) {
+  const existingSummary = existingReports
+    .map(r => `- ${r.title} (${r.category})`)
+    .join('\n');
+
+  const prompt = `You are the editorial triage step for Scampedia, a public scam-database encyclopedia,
+reviewing ONE candidate entry before it goes through further automated verification. Answer only
+from the candidate's own claims and the real source text below — never from general knowledge or
+anything not present in that text.
+
+--- CANDIDATE ---
+Title: ${newReport.title}
+Category: ${newReport.category}
+Summary: ${newReport.summary}
+How it works: ${newReport.howItWorks}
+
+--- EXISTING DATABASE TITLES (for duplicate/variant judgment only) ---
+${existingSummary}
+
+--- SOURCE TEXT (truncated, the candidate's own cited source) ---
+${sourceText.slice(0, 12000)}`;
+
+  const response = await client.messages.create({
+    model: MODEL,
+    max_tokens: 1024,
+    system: 'You are a careful, conservative editorial triage reviewer. Call submit_triage exactly once. Never assert a fact not present in the source text given to you.',
+    tools: [{
+      name: 'submit_triage',
+      description: 'Submit your triage assessment of this candidate entry.',
+      input_schema: {
+        type: 'object',
+        properties: {
+          isDistinctPattern: { type: 'boolean', description: 'false if this is a near-duplicate or minor variant of an existing database title, not a genuinely distinct scam pattern' },
+          duplicateOf: { type: ['string', 'null'], description: 'The existing title this duplicates/variants, if isDistinctPattern is false; otherwise null' },
+          novelty: { type: 'string', enum: ['new', 'known-variant', 'recurring'], description: 'new = not previously documented here; known-variant = a twist on an existing pattern; recurring = the same pattern resurfacing' },
+          severity: { type: 'string', enum: ['low', 'medium', 'high'], description: 'Based only on what the source states about impact/loss, never guessed' },
+          urgency: { type: 'string', enum: ['low', 'medium', 'high'], description: 'How time-sensitive this is for readers right now, based only on the source' },
+          sourceCredibility: { type: 'string', enum: ['government-agency', 'established-outlet', 'other'], description: 'Classify the cited source itself, not the claim' },
+          suggestedCategory: { type: 'string' },
+          suggestedAliases: { type: 'array', items: { type: 'string' }, description: '0-3 alternate names for this scam pattern, only if the source text itself uses them' },
+          confidence: { type: 'number', description: 'Your confidence (0.0-1.0) that this is a genuinely distinct, well-founded, publish-worthy pattern' },
+          reasoning: { type: 'string', description: 'One or two sentences explaining the assessment' },
+        },
+        required: ['isDistinctPattern', 'duplicateOf', 'novelty', 'severity', 'urgency', 'sourceCredibility', 'suggestedCategory', 'suggestedAliases', 'confidence', 'reasoning'],
+        additionalProperties: false,
+      },
+      strict: true,
+    }],
+    tool_choice: { type: 'tool', name: 'submit_triage' },
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  const call = response.content.find(b => b.type === 'tool_use' && b.name === 'submit_triage');
+  if (!call) return { ok: false, passed: false, issues: ['triage pass did not return an assessment'], assessment: null };
+
+  const assessment = call.input;
+  // Conservative by design: an obvious duplicate the cheap dedup gate
+  // missed, or a low-confidence candidate, goes to the review queue
+  // instead of publication — this is meant to catch what THAT gate
+  // can't (semantic near-duplicates, thin/low-quality sourcing), not
+  // duplicate its exact-key logic.
+  const CONFIDENCE_THRESHOLD = 0.6;
+  const passed = assessment.isDistinctPattern && assessment.confidence >= CONFIDENCE_THRESHOLD;
+
+  if (!passed) {
+    return {
+      ok: true, // the triage step itself ran successfully — "didn't pass triage" is a routing decision, not a pipeline error
+      passed: false,
+      issues: [`confidence ${assessment.confidence} (threshold ${CONFIDENCE_THRESHOLD}), isDistinctPattern=${assessment.isDistinctPattern}${assessment.duplicateOf ? `, possible duplicate of "${assessment.duplicateOf}"` : ''}: ${assessment.reasoning}`],
+      assessment,
+    };
+  }
+  return { ok: true, passed: true, issues: [], assessment };
+}
+
+// Candidates below the triage confidence threshold don't get silently
+// discarded, and they don't publish either — they land here for a human
+// to actually look at, per Phase 3b: "candidates below a confidence
+// threshold go to a review queue... not to publication." A plain directory
+// of dated JSON files rather than a GitHub issue: no extra API call, no
+// extra token/permission surface, and it's just as easy to `ls review/`.
+function writeToReviewQueue(botName, newReport, assessment) {
+  fs.mkdirSync(REVIEW_DIR, { recursive: true });
+  const filename = `${new Date().toISOString().slice(0, 10)}-${newReport.slug}.json`;
+  const filePath = path.join(REVIEW_DIR, filename);
+  fs.writeFileSync(filePath, JSON.stringify({ botName, candidate: newReport, triage: assessment, queuedAt: new Date().toISOString() }, null, 2) + '\n');
+  return filePath;
+}
+
 function writeGithubOutput(fields) {
   const file = process.env.GITHUB_OUTPUT;
   if (!file) return;
@@ -360,7 +462,7 @@ const skipTool = {
 //   alreadyRanToday(data, todayISO) -> bool        (default: reports.json's own lastUpdated)
 //   extraGates: [{ name, check: async (report) => {ok, issues} }]
 //   extraReportFields(entry) -> object             (merged into the written report)
-async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = [], extraReportFields = () => ({}) }) {
+async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = [], extraReportFields = () => ({}), botName = 'daily-scam-entry' }) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     console.error('ANTHROPIC_API_KEY not set.');
@@ -522,6 +624,16 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     }
   }
 
+  console.log('Running editorial triage...');
+  const triage = await triageCandidate(client, newReport, data.reports, relevanceCheck.sourceText);
+  console.log('Triage assessment:', JSON.stringify(triage.assessment));
+  if (!triage.passed) {
+    console.error('Triage did not clear the confidence threshold, sending to review queue instead of publishing:', triage.issues);
+    const reviewPath = writeToReviewQueue(botName, newReport, triage.assessment);
+    writeGithubOutput({ result: 'needs-review', reason: `Triage: ${triage.issues.join('; ')}`, reviewPath });
+    return;
+  }
+
   console.log('Fact-checking claims against the cited source...');
   const factCheck = await factCheckClaims(client, newReport, relevanceCheck.sourceText);
   if (!factCheck.ok) {
@@ -555,6 +667,9 @@ module.exports = {
   extractCitationUrls,
   verifyCitationUrls,
   checkContentRelevance,
+  triageCandidate,
+  writeToReviewQueue,
+  REVIEW_DIR,
   writeGithubOutput,
   runPipeline,
 };
