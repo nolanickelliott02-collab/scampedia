@@ -13,6 +13,10 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    # A single fetch with its own 15s internal timeout — this is real
+    # headroom, not a number picked to match, so a genuine hang still gets
+    # killed promptly instead of riding GitHub's 360-minute default.
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -31,7 +35,7 @@ jobs:
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
         run: |
-          curl -sS -X POST https://api.sendgrid.com/v3/mail/send \
+          curl -sS --max-time 15 -X POST https://api.sendgrid.com/v3/mail/send \
             -H "Authorization: Bearer $SENDGRID_API_KEY" \
             -H "Content-Type: application/json" \
             -d '{
