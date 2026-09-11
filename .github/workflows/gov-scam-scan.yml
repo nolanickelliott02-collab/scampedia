@@ -67,8 +67,17 @@ jobs:
             ')" \
             || echo "Email alert failed, continuing anyway."
       - name: Rebuild static scam pages
+        # Also rebuilds /learn/ (build:learn) — see the identical step in
+        # daily-scam-entry.yml for why build:scams alone silently erases
+        # /learn/'s sitemap entries every time this runs, and why this is
+        # deliberately not `npm run build` (skips check-content's hard
+        # failure mode here on purpose; it already ran non-blocking above
+        # in the sibling workflow's equivalent step — this bot has no
+        # course-content step of its own, and doesn't need one to justify
+        # this call: build:learn only touches /learn/ output, never gates
+        # on course review dates).
         if: steps.generate.outputs.result == 'written'
-        run: npm run build:scams
+        run: npm run build:scams && npm run build:learn
       - name: Publish directly to main
         # GitHub Pages serves main directly with no separate deploy Action,
         # so this push is what actually makes it live. The pull --rebase
