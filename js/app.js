@@ -46,7 +46,9 @@ async function renderHomePreview() {
   const el = document.getElementById('scam-preview');
   if (!el) return;
   const reports = await fetchReports();
-  const preview = reports.slice(0, 3);
+  // Badged "Latest Entries" on the page — must actually be the latest ones.
+  // See js/lib/report-sort.js for why this can't be a plain .slice(0, 3).
+  const preview = sortReportsByNewest(reports).slice(0, 3);
   el.innerHTML = preview.map(r => `
     <a class="scam-card" href="scams/${encodeURIComponent(r.slug)}.html">
       <div class="scam-cat">${escapeHtml(r.category)}</div>
@@ -244,9 +246,7 @@ function renderBrowse({ categorySlug, query }) {
   }
 
   if (isFeed) {
-    reports = [...reports].sort((a, b) =>
-      new Date(b.datePublished || b.firstReported || 0) - new Date(a.datePublished || a.firstReported || 0)
-    );
+    reports = sortReportsByNewest(reports);
   }
 
   const gridHtml = reports.length
