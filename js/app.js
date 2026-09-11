@@ -294,7 +294,7 @@ function renderAZIndex() {
   const main = document.getElementById('wiki-main');
   setActiveSidebar('az', null);
 
-  const sorted = [...allReports].sort((a, b) => a.title.localeCompare(b.title));
+  const sorted = sortReportsAlphabetically(allReports);
   const groups = {};
   sorted.forEach(r => {
     const letter = r.title[0].toUpperCase();

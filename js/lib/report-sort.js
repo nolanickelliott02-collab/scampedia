@@ -17,6 +17,15 @@ function sortReportsByNewest(reports) {
   );
 }
 
+// Used by the A-Z index. Already correct in production (checked during the
+// same Phase 0 audit that found the "newest" bug above) — extracted here
+// anyway so it lives next to its sibling sort, is covered by the same test
+// file, and can't independently drift the way the "newest" sort's duplicate
+// definition did.
+function sortReportsAlphabetically(reports) {
+  return [...reports].sort((a, b) => a.title.localeCompare(b.title));
+}
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { sortReportsByNewest };
+  module.exports = { sortReportsByNewest, sortReportsAlphabetically };
 }

@@ -2,7 +2,7 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { sortReportsByNewest } = require('../report-sort');
+const { sortReportsByNewest, sortReportsAlphabetically } = require('../report-sort');
 
 // Fixture shaped like the real bug: api/reports.json's array order is
 // insertion order (the 40-entry 2026-05-27 launch batch first, id "1"..40,
@@ -44,4 +44,34 @@ test('does not mutate the input array', () => {
   const original = [...LAUNCH_ORDER_FIXTURE];
   sortReportsByNewest(LAUNCH_ORDER_FIXTURE);
   assert.deepEqual(LAUNCH_ORDER_FIXTURE, original);
+});
+
+// A-Z index sort. Confirmed already correct in production during the same
+// Phase 0 audit that found the "newest" bug above — this locks that in so
+// it can't regress unnoticed the way the newest-sort's duplicate definition
+// did.
+test('sortReportsAlphabetically sorts by title, A-Z', () => {
+  const fixture = [
+    { title: 'Wangiri / One-Ring Callback Scam' },
+    { title: 'AI Voice Clone Scam' },
+    { title: '"Can You Hear Me?" Robocall Scam' },
+    { title: 'Grandparent Emergency Scam' },
+  ];
+  const sorted = sortReportsAlphabetically(fixture).map(r => r.title);
+  // localeCompare (en-US, this project's only audience) sorts the leading
+  // `"` before letters — confirmed directly, not assumed — so the quoted
+  // title sorts first here despite starting with "C".
+  assert.deepEqual(sorted, [
+    '"Can You Hear Me?" Robocall Scam',
+    'AI Voice Clone Scam',
+    'Grandparent Emergency Scam',
+    'Wangiri / One-Ring Callback Scam',
+  ]);
+});
+
+test('sortReportsAlphabetically does not mutate the input array', () => {
+  const fixture = [{ title: 'B' }, { title: 'A' }];
+  const original = [...fixture];
+  sortReportsAlphabetically(fixture);
+  assert.deepEqual(fixture, original);
 });
