@@ -499,6 +499,25 @@ img { max-width: 100%; }
   color: var(--text-2);
 }
 .no-results-icon { font-size: 48px; margin-bottom: 16px; }
+.no-results-try { margin-top: 20px; font-size: 14px; }
+.no-results-suggestions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+.no-results-suggestion {
+  padding: 8px 16px;
+  border-radius: 99px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--accent-bright);
+  font-size: 14px;
+  font-weight: 600;
+}
+.no-results-suggestion:hover { background: var(--elevated); }
+.no-results-browse-all { display: inline-block; margin-top: 24px; color: var(--accent-bright); font-weight: 600; }
 
 /* ---- Featured / latest strip (blog front page) ---- */
 .wiki-feed-note {

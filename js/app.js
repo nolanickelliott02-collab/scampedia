@@ -211,6 +211,28 @@ function route() {
   return renderBrowse({});
 }
 
+// A zero-results page shouldn't be a dead end — real category names from
+// the live database (never invented examples), plus a link back to
+// browsing everything. js/lib/search.js's suggestedCategories() picks
+// these from allReports, so they're always real and always current.
+function noResultsHtml(query) {
+  const suggestions = suggestedCategories(allReports);
+  const suggestionLinks = suggestions
+    .map(cat => `<a href="#/category/${slugify(cat)}" class="no-results-suggestion">${escapeHtml(cat)}</a>`)
+    .join('');
+  return `
+    <div class="no-results">
+      <div class="no-results-icon">🔍</div>
+      <p>${query ? `No results for "${escapeHtml(query)}".` : 'No scams found.'}</p>
+      ${suggestions.length ? `
+        <p class="no-results-try">Try a category instead:</p>
+        <div class="no-results-suggestions">${suggestionLinks}</div>
+      ` : ''}
+      <a href="#/" class="no-results-browse-all">Browse all scams →</a>
+    </div>
+  `;
+}
+
 // ---- Browse view (grid, optionally filtered) ----
 function renderBrowse({ categorySlug, query }) {
   const main = document.getElementById('wiki-main');
@@ -227,14 +249,22 @@ function renderBrowse({ categorySlug, query }) {
     isFeed = false;
   } else if (query) {
     const q = query.toLowerCase();
-    reports = reports.filter(r =>
+    const exactMatches = reports.filter(r =>
       r.title.toLowerCase().includes(q) ||
       r.summary.toLowerCase().includes(q) ||
       r.category.toLowerCase().includes(q) ||
       r.safetyTips.some(t => t.toLowerCase().includes(q))
     );
+    // Forgiving, not just fast: a real typo (one wrong/missing letter)
+    // shouldn't return nothing when the pattern it's typo'd from is
+    // right there in the database. Only tried as a fallback — exact
+    // substring match is always preferred when it finds anything.
+    const usedFuzzy = exactMatches.length === 0;
+    reports = usedFuzzy ? fuzzyMatchReports(reports, query) : exactMatches;
     heading = `Search: "${query}"`;
-    sub = `${reports.length} result${reports.length === 1 ? '' : 's'} found.`;
+    sub = usedFuzzy && reports.length > 0
+      ? `${reports.length} close match${reports.length === 1 ? '' : 'es'} for "${query}" — showing similar results.`
+      : `${reports.length} result${reports.length === 1 ? '' : 's'} found.`;
     setActiveSidebar(null, null);
     isFeed = false;
     const input = document.getElementById('search');
@@ -251,7 +281,7 @@ function renderBrowse({ categorySlug, query }) {
 
   const gridHtml = reports.length
     ? `<div class="scam-grid">${reports.map(cardHtml).join('')}</div>`
-    : `<div class="no-results"><div class="no-results-icon">🔍</div><p>No scams found.</p></div>`;
+    : noResultsHtml(query);
 
   main.innerHTML = `
     <div class="wiki-browse-header">
