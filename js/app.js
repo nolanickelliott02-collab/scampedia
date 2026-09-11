@@ -283,7 +283,7 @@ function cardHtml(r) {
         ${r.isAIDiscovered ? `<span class="ai-pill">🧠 AI Discovered</span>` : ''}
         ${r.isGovSourced ? `<span class="gov-pill">🏛️ Gov-Verified</span>` : ''}
       </div>
-      <h3>${escapeHtml(r.title)}</h3>
+      <h2>${escapeHtml(r.title)}</h2>
       <p>${escapeHtml(r.summary.slice(0, 120))}…</p>
     </a>
   `;
