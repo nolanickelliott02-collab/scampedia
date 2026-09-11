@@ -1,6 +1,6 @@
 {
-  "version": 29,
-  "lastUpdated": "2026-08-27T04:13:47.297Z",
+  "version": 30,
+  "lastUpdated": "2026-09-11T19:21:53.624Z",
   "reports": [
     {
       "id": "1",
@@ -2089,6 +2089,39 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "61",
+      "slug": "virtual-casting-call-text-scam",
+      "title": "Virtual Casting Call Text Scam",
+      "summary": "Scammers send unsolicited texts posing as talent scouts offering movie or TV auditions, then pressure victims into paying for fake photo shoots or acting classes.",
+      "category": "Employment Scam",
+      "firstReported": "2025-12-01",
+      "relatedScams": [],
+      "safetyTips": [
+        "Never respond to unexpected texts about acting jobs or casting calls",
+        "Remember that legitimate talent agencies find jobs for you and pay you after the client pays them, rather than charging you upfront",
+        "Report unwanted texts to 7726 (SPAM) or use your phone's 'report junk' feature, then delete the message",
+        "Report the scam to the FTC at ReportFraud.ftc.gov",
+        "Independently verify any casting opportunity by contacting the studio or a known talent agency directly rather than using contact info from the text"
+      ],
+      "datePublished": "2026-09-11T19:21:49.545Z",
+      "howItWorks": "Victims receive an unexpected text message from a supposed \"talent scout\" claiming they've been selected for a virtual audition tied to a well-known movie or television show. The message asks if the recipient is available for a casting call they never actually signed up for. Anyone who responds may be routed into a \"virtual audition\" that turns out to be a high-pressure sales pitch to enroll in bogus paid photo shoots or fake acting classes, with the scammer eventually asking for payment or bank information as a supposed condition of participating in the casting.",
+      "redFlags": [
+        "An unexpected text about an audition or casting call you never applied for",
+        "Being asked to pay for test shoots, headshots, or to 'secure your spot' before any job is confirmed",
+        "High-pressure sales pitch during a so-called virtual audition",
+        "Requests for bank information tied to participating in a casting call",
+        "Name-dropping specific popular movies or shows to seem credible"
+      ],
+      "realExamples": [
+        "FTC's Military Consumer program described texts from a fake 'talent scout' offering auditions for a well-known movie like 'The Devil Wears Prada 2' or a show like 'Ted Lasso,' asking recipients if they were still available for a virtual open call they never signed up for."
+      ],
+      "source": "Military Consumer (FTC-affiliated), https://www.militaryconsumer.gov/blog/lights-camera-scam-spot-virtual-casting-call-scams",
+      "spreadPlatforms": [
+        "Text Messages"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
