@@ -18,6 +18,12 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    # No job here had an explicit timeout — GitHub's default is 360 minutes.
+    # Worst case today (8 model turns, a couple of citation/relevance checks
+    # each with up to 3 retry attempts at a 10s timeout) is a few minutes;
+    # 10 gives real headroom without leaving a hung run tying up the
+    # schedule for six hours before GitHub kills it itself.
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -54,7 +60,7 @@ jobs:
           REASON: ${{ steps.generate.outputs.reason || steps.generate.outputs.error || 'no reason reported' }}
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
         run: |
-          curl -sS -X POST https://api.sendgrid.com/v3/mail/send \
+          curl -sS --max-time 15 -X POST https://api.sendgrid.com/v3/mail/send \
             -H "Authorization: Bearer $SENDGRID_API_KEY" \
             -H "Content-Type: application/json" \
             -d "$(node -e '
@@ -119,7 +125,7 @@ jobs:
         # anything — the entry is already live on scampedia.net/reports.json
         # regardless of whether anyone gets pinged about it.
         run: |
-          curl -sS -X POST "https://clever-bravery-production-2d5f.up.railway.app/api/notify-new-scam" \
+          curl -sS --max-time 15 -X POST "https://clever-bravery-production-2d5f.up.railway.app/api/notify-new-scam" \
             -H "Content-Type: application/json" \
             -H "x-notify-secret: $NOTIFY_SECRET" \
             -d "$(node -e 'console.log(JSON.stringify({title: process.env.ENTRY_TITLE, summary: process.env.ENTRY_SUMMARY, slug: process.env.ENTRY_SLUG}))')" \

@@ -139,6 +139,41 @@ function extractCitationUrls(source) {
 // page still has to really resolve and really contain the claimed content.
 const FETCH_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Phase 2 hardening: every network call already had a per-attempt timeout
+// (AbortSignal), but a single momentary blip — a DNS hiccup, a real, live
+// source's server returning one transient 502/503/504 — used to cost a
+// genuinely good, well-cited candidate its one shot at publishing that day,
+// indistinguishable in the logs from a candidate that was actually bad.
+// Retries with exponential backoff (bounded, no infinite loop) before
+// giving up for real. Retries a 5xx (plausibly transient, server-side) but
+// not a 4xx (the resource genuinely isn't there — retrying won't help) or
+// a plain network failure past the retry budget.
+async function fetchWithRetry(url, options = {}, { retries = 2, baseDelayMs = 500, timeoutMs = 10_000 } = {}) {
+  let lastError;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url, { ...options, signal: AbortSignal.timeout(timeoutMs) });
+      if (res.status >= 500 && res.status < 600 && attempt < retries) {
+        lastError = new Error(`HTTP ${res.status}`);
+        await sleep(baseDelayMs * 2 ** attempt);
+        continue;
+      }
+      return res;
+    } catch (err) {
+      lastError = err;
+      if (attempt < retries) {
+        await sleep(baseDelayMs * 2 ** attempt);
+        continue;
+      }
+    }
+  }
+  throw lastError;
+}
+
 async function verifyCitationUrls(source) {
   const urls = extractCitationUrls(source);
   if (urls.length === 0) {
@@ -148,17 +183,10 @@ async function verifyCitationUrls(source) {
   const issues = [];
   for (const url of urls) {
     try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 10_000);
-      let res;
-      try {
-        res = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': FETCH_UA } });
-        // Some servers reject HEAD outright even though the real page is fine — retry with GET before concluding the URL is dead.
-        if (res.status === 405 || res.status === 403) {
-          res = await fetch(url, { method: 'GET', redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': FETCH_UA } });
-        }
-      } finally {
-        clearTimeout(timeout);
+      let res = await fetchWithRetry(url, { method: 'HEAD', redirect: 'follow', headers: { 'User-Agent': FETCH_UA } });
+      // Some servers reject HEAD outright even though the real page is fine — retry with GET before concluding the URL is dead.
+      if (res.status === 405 || res.status === 403) {
+        res = await fetchWithRetry(url, { method: 'GET', redirect: 'follow', headers: { 'User-Agent': FETCH_UA } });
       }
       if (!res.ok) issues.push(`citation URL returned HTTP ${res.status}, not a real page: ${url}`);
     } catch (err) {
@@ -221,14 +249,7 @@ async function checkContentRelevance(report) {
 
   for (const url of urls) {
     try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 10_000);
-      let res;
-      try {
-        res = await fetch(url, { redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': FETCH_UA } });
-      } finally {
-        clearTimeout(timeout);
-      }
+      const res = await fetchWithRetry(url, { redirect: 'follow', headers: { 'User-Agent': FETCH_UA } });
       if (!res.ok) { attempts.push({ url, matched: 0, of: words.length, error: `HTTP ${res.status}` }); continue; }
       const html = await res.text();
       const pageText = stripHtmlToText(html);
@@ -603,6 +624,7 @@ module.exports = {
   CATEGORIES,
   CITATION_DISCIPLINE,
   extractCitationUrls,
+  fetchWithRetry,
   verifyCitationUrls,
   checkContentRelevance,
   checkNotDuplicate,
