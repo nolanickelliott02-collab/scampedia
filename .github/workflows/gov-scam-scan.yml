@@ -23,6 +23,8 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    # See the identical comment in daily-scam-entry.yml.
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -47,7 +49,7 @@ jobs:
           REASON: ${{ steps.generate.outputs.reason || steps.generate.outputs.error || 'no reason reported' }}
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
         run: |
-          curl -sS -X POST https://api.sendgrid.com/v3/mail/send \
+          curl -sS --max-time 15 -X POST https://api.sendgrid.com/v3/mail/send \
             -H "Authorization: Bearer $SENDGRID_API_KEY" \
             -H "Content-Type: application/json" \
             -d "$(node -e '
@@ -67,8 +69,17 @@ jobs:
             ')" \
             || echo "Email alert failed, continuing anyway."
       - name: Rebuild static scam pages
+        # Also rebuilds /learn/ (build:learn) — see the identical step in
+        # daily-scam-entry.yml for why build:scams alone silently erases
+        # /learn/'s sitemap entries every time this runs, and why this is
+        # deliberately not `npm run build` (skips check-content's hard
+        # failure mode here on purpose; it already ran non-blocking above
+        # in the sibling workflow's equivalent step — this bot has no
+        # course-content step of its own, and doesn't need one to justify
+        # this call: build:learn only touches /learn/ output, never gates
+        # on course review dates).
         if: steps.generate.outputs.result == 'written'
-        run: npm run build:scams
+        run: npm run build:scams && npm run build:learn
       - name: Publish directly to main
         # GitHub Pages serves main directly with no separate deploy Action,
         # so this push is what actually makes it live. The pull --rebase
@@ -94,7 +105,7 @@ jobs:
         # anything — the entry is already live on scampedia.net/reports.json
         # regardless of whether anyone gets pinged about it.
         run: |
-          curl -sS -X POST "https://clever-bravery-production-2d5f.up.railway.app/api/notify-new-scam" \
+          curl -sS --max-time 15 -X POST "https://clever-bravery-production-2d5f.up.railway.app/api/notify-new-scam" \
             -H "Content-Type: application/json" \
             -H "x-notify-secret: $NOTIFY_SECRET" \
             -d "$(node -e 'console.log(JSON.stringify({title: process.env.ENTRY_TITLE, summary: process.env.ENTRY_SUMMARY, slug: process.env.ENTRY_SLUG}))')" \

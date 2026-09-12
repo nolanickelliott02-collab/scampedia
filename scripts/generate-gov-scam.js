@@ -83,6 +83,7 @@ runPipeline({
   alreadyRanToday,
   extraGates: [govSourceGate],
   extraReportFields: () => ({ isGovSourced: true }),
+  botName: 'gov-scam-scan',
 }).catch(err => {
   console.error('Unexpected error:', err);
   writeGithubOutput({ result: 'error', error: err.message });
