@@ -74,8 +74,21 @@ jobs:
             ')" \
             || echo "Email alert failed, continuing anyway."
       - name: Rebuild static scam pages
+        # Also rebuilds /learn/ (build:learn), not just build:scams. Found
+        # 2026-09-11: build:scams's own buildSitemap() fully overwrites
+        # sitemap.xml with scam pages only — it has no idea /learn/ exists —
+        # so every day only build:scams ran here, this step silently erased
+        # any /learn/ sitemap entries a human had previously added by hand
+        # via a full local `npm run build`. build:learn's updateSitemap()
+        # is the half that actually knows how to add them back (it strips
+        # then re-adds /learn/ URLs idempotently), so it has to run every
+        # time this does. Deliberately NOT `npm run build` — that also runs
+        # check-content with no `|| true`, which could hard-fail this step
+        # on an overdue lesson and block a real scam entry from publishing,
+        # the same class of self-inflicted deadlock as the old staleness
+        # watchdog. check-content already ran, non-blocking, above.
         if: steps.generate.outputs.result == 'written'
-        run: npm run build:scams
+        run: npm run build:scams && npm run build:learn
       - name: Publish directly to main
         # Used to open a PR for a human to read before merging. Replaced by
         # an automated fact-check gate inside generate-daily-scam.js (a
@@ -92,7 +105,7 @@ jobs:
         run: |
           git config user.name "scampedia-bot"
           git config user.email "actions@github.com"
-          git add api/reports.json scams/ sitemap.xml
+          git add api/reports.json scams/ learn/ sitemap.xml llms.txt
           git commit -m "Add scam entry: ${{ steps.generate.outputs.title }}" -m "Source: ${{ steps.generate.outputs.citation }}"
           git push origin main
       - name: Notify devices of the new entry
