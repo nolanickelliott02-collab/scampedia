@@ -44,6 +44,49 @@ function toArray(value) {
 // stuffed into the required fields just to satisfy the schema.
 const DEGENERATE_PATTERNS = [/\bplaceholder\b/i, /<cite\b/i, /<item\b/i, /\btodo\b/i, /\blorem ipsum\b/i];
 
+// Idempotency/dedup: the only defense against a duplicate entry today is
+// the model's own judgment (the existingTitles list in the prompt, "case-
+// insensitive, near-duplicates count as matches too") — a soft instruction,
+// not a code-enforced gate. A model can still submit a real near-duplicate
+// (different title wording, same underlying scam and same source), and
+// nothing here would catch it before publish. Dedupes on a stable key
+// (normalized title, and separately the normalized primary source URL) so
+// a rename or a re-submission of the same source can't slip through string
+// equality on the raw title alone.
+function normalizeTitleForDedup(title) {
+  return String(title || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+// hostname + path only: ignores protocol, "www.", trailing slash, and
+// query/fragment, so http://www.ftc.gov/foo/ and https://ftc.gov/foo both
+// key the same. Returns null when there's no URL to compare (the org-name-
+// only legacy pattern) — those entries dedupe on title only.
+function primarySourceKey(source) {
+  const urls = extractCitationUrls(source);
+  if (urls.length === 0) return null;
+  try {
+    const u = new URL(urls[0]);
+    return `${u.hostname.replace(/^www\./, '')}${u.pathname.replace(/\/+$/, '')}`.toLowerCase();
+  } catch {
+    return urls[0].toLowerCase();
+  }
+}
+
+function checkNotDuplicate(newReport, existingReports) {
+  const newTitleKey = normalizeTitleForDedup(newReport.title);
+  const newSourceKey = primarySourceKey(newReport.source);
+
+  for (const existing of existingReports) {
+    if (normalizeTitleForDedup(existing.title) === newTitleKey) {
+      return { ok: false, issues: [`duplicate of existing entry "${existing.title}" (id ${existing.id}) — normalized title matches`] };
+    }
+    if (newSourceKey && primarySourceKey(existing.source) === newSourceKey) {
+      return { ok: false, issues: [`same primary source as existing entry "${existing.title}" (id ${existing.id}): ${newSourceKey}`] };
+    }
+  }
+  return { ok: true, issues: [] };
+}
+
 function findQualityIssues(report) {
   const issues = [];
   const allStrings = [report.summary, report.howItWorks, report.source, ...report.safetyTips, ...report.redFlags, ...report.realExamples];
@@ -496,6 +539,13 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     return;
   }
 
+  const dedupCheck = checkNotDuplicate(newReport, data.reports);
+  if (!dedupCheck.ok) {
+    console.error('Duplicate check failed, refusing to write:', dedupCheck.issues);
+    writeGithubOutput({ result: 'gate-rejected', reason: `Duplicate check: ${dedupCheck.issues.join('; ')}` });
+    return;
+  }
+
   console.log('Verifying citation URL(s) resolve...');
   const citationCheck = await verifyCitationUrls(newReport.source);
   if (!citationCheck.ok) {
@@ -555,6 +605,7 @@ module.exports = {
   extractCitationUrls,
   verifyCitationUrls,
   checkContentRelevance,
+  checkNotDuplicate,
   writeGithubOutput,
   runPipeline,
 };
