@@ -30,6 +30,7 @@ const REPORTS_PATH   = path.join(ROOT, 'api', 'reports.json');
 const LEARN_DIR      = path.join(ROOT, 'learn');
 const SITEMAP_PATH   = path.join(ROOT, 'sitemap.xml');
 const LLMS_PATH       = path.join(ROOT, 'llms.txt');
+const LLMS_FULL_PATH  = path.join(ROOT, 'llms-full.txt');
 const SITE_ORIGIN     = 'https://scampedia.net';
 
 // Read live, not hardcoded — this count changes daily via the real scam-entry
@@ -404,6 +405,57 @@ function buildLlmsTxt(allLessons) {
   fs.writeFileSync(LLMS_PATH, lines.join('\n'));
 }
 
+// llms.txt is the index (links + one-line summaries); llms-full.txt is the
+// same structure with every linked resource's actual content inlined, so a
+// model can read the whole site's real substance in one file with zero
+// crawling — the full lesson body (volatile placeholders already resolved
+// to their real, dated content, the same text that renders on the real
+// page) plus every scam-database entry's real summary/mechanics/red flags/
+// safety tips, not just its title and a link.
+function buildLlmsFullTxt(allLessons, volatile) {
+  const crisisPages     = allLessons.filter(l => l.pageType === 'crisis');
+  const numberedLessons = allLessons.filter(l => l.pageType !== 'crisis');
+
+  let reports = [];
+  try {
+    reports = JSON.parse(fs.readFileSync(REPORTS_PATH, 'utf8')).reports || [];
+  } catch { /* no reports.json yet — llms-full.txt just omits the database section below */ }
+
+  const lessonSection = (title, lessons) => lessons.flatMap(l => [
+    `## ${title}: ${l.title}`,
+    '',
+    `Source: ${SITE_ORIGIN}/learn/${l.slug}.html`,
+    `Last reviewed: ${l.lastReviewed || 'unknown'}`,
+    '',
+    substituteVolatile(l.rawBody, volatile),
+    '',
+  ]);
+
+  const scamSection = reports.flatMap(r => [
+    `## Scam Database: ${r.title}`,
+    '',
+    `Source: ${SITE_ORIGIN}/scams/${r.slug}.html`,
+    `Category: ${r.category}`,
+    `Summary: ${r.summary}`,
+    `How it works: ${r.howItWorks}`,
+    `Red flags: ${(r.redFlags || []).join(' | ')}`,
+    `Safety tips: ${(r.safetyTips || []).join(' | ')}`,
+    `Cited source: ${r.source}`,
+    '',
+  ]);
+
+  const lines = [
+    '# Scampedia — full content',
+    '',
+    '> The complete real content of every page linked from llms.txt, inlined. Generated from the same source data that renders the live site — see llms.txt for just the index.',
+    '',
+    ...lessonSection('Crisis', crisisPages),
+    ...lessonSection('Learn', numberedLessons),
+    ...scamSection,
+  ];
+  fs.writeFileSync(LLMS_FULL_PATH, lines.join('\n'));
+}
+
 // ---- Main ---------------------------------------------------------
 
 function main() {
@@ -428,8 +480,9 @@ function main() {
 
   updateSitemap(lessons);
   buildLlmsTxt(lessons);
+  buildLlmsFullTxt(lessons, volatile);
 
-  console.log(`Built ${lessons.length} page(s) (${numberedLessons.length} lesson, ${crisisPages.length} crisis) + learn/index.html, updated sitemap.xml + llms.txt`);
+  console.log(`Built ${lessons.length} page(s) (${numberedLessons.length} lesson, ${crisisPages.length} crisis) + learn/index.html, updated sitemap.xml + llms.txt + llms-full.txt`);
 }
 
 main();
