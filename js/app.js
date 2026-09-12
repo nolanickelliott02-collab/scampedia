@@ -46,7 +46,9 @@ async function renderHomePreview() {
   const el = document.getElementById('scam-preview');
   if (!el) return;
   const reports = await fetchReports();
-  const preview = reports.slice(0, 3);
+  // Badged "Latest Entries" on the page — must actually be the latest ones.
+  // See js/lib/report-sort.js for why this can't be a plain .slice(0, 3).
+  const preview = sortReportsByNewest(reports).slice(0, 3);
   el.innerHTML = preview.map(r => `
     <a class="scam-card" href="scams/${encodeURIComponent(r.slug)}.html">
       <div class="scam-cat">${escapeHtml(r.category)}</div>
@@ -244,9 +246,7 @@ function renderBrowse({ categorySlug, query }) {
   }
 
   if (isFeed) {
-    reports = [...reports].sort((a, b) =>
-      new Date(b.datePublished || b.firstReported || 0) - new Date(a.datePublished || a.firstReported || 0)
-    );
+    reports = sortReportsByNewest(reports);
   }
 
   const gridHtml = reports.length
@@ -283,7 +283,7 @@ function cardHtml(r) {
         ${r.isAIDiscovered ? `<span class="ai-pill">🧠 AI Discovered</span>` : ''}
         ${r.isGovSourced ? `<span class="gov-pill">🏛️ Gov-Verified</span>` : ''}
       </div>
-      <h3>${escapeHtml(r.title)}</h3>
+      <h2>${escapeHtml(r.title)}</h2>
       <p>${escapeHtml(r.summary.slice(0, 120))}…</p>
     </a>
   `;
@@ -294,7 +294,7 @@ function renderAZIndex() {
   const main = document.getElementById('wiki-main');
   setActiveSidebar('az', null);
 
-  const sorted = [...allReports].sort((a, b) => a.title.localeCompare(b.title));
+  const sorted = sortReportsAlphabetically(allReports);
   const groups = {};
   sorted.forEach(r => {
     const letter = r.title[0].toUpperCase();

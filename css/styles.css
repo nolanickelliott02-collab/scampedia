@@ -15,7 +15,14 @@
   --neutral:    #94A3B8;
   --text-1:     #F0F4FF;
   --text-2:     #8892A4;
-  --text-3:     #4A5568;
+  /* Was #4A5568 (2.63:1 against --bg — fails WCAG AA's 4.5:1 for normal
+     text). Confirmed via a real Lighthouse run against the live site
+     (color-contrast audit, hit on footer copy, sidebar labels, card
+     dates, the live-feed note). #7A8699 computes to ~5.4:1 — passes AA
+     with real headroom — while staying visibly more muted than --text-2
+     (~6.9:1), so the tertiary/secondary distinction this token exists
+     for is preserved, not flattened. */
+  --text-3:     #7A8699;
   --divider:    #1E2030;
   --border:     #252840;
   --radius-sm:  8px;
@@ -325,7 +332,14 @@ img { max-width: 100%; }
   letter-spacing: .06em;
   margin-bottom: 8px;
 }
-.scam-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+/* Two different tags on purpose: the homepage preview's cards sit under a
+   real <h2> section heading ("Know your enemy") so their own titles are
+   correctly <h3>; the browse/database grid's cards sit directly under the
+   page's <h1> with no heading in between, so theirs are <h2> (see
+   js/app.js's cardHtml — fixed a real h1→h3 heading-order skip there,
+   caught by a live Lighthouse accessibility audit). Same visual size
+   either way. */
+.scam-card h2, .scam-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
 .scam-card p  { color: var(--text-2); font-size: 14px; line-height: 1.6; }
 .scam-count {
   margin-top: 14px;
