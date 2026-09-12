@@ -352,6 +352,41 @@ function writeGithubOutput(fields) {
   fs.appendFileSync(file, lines.join('\n') + '\n');
 }
 
+// Phase 2 hardening: "each run produces a machine-readable summary...
+// surfaced in the workflow summary." Every terminal outcome already called
+// writeGithubOutput with a `result` plus whatever diagnostic fields it had
+// (reason, title, citation, ...) — this wraps that exact call so every one
+// of those paths also (a) logs a single-line JSON summary to stdout, so a
+// run's outcome is grep-able across raw logs without reconstructing it from
+// scattered console.log calls, and (b) appends a real Markdown block to
+// $GITHUB_STEP_SUMMARY, which GitHub renders directly in the run's own
+// Summary tab — so "what happened and why" is visible at a glance instead
+// of requiring someone to open and read raw step logs.
+const RESULT_EMOJI = { written: '✅', skipped: '⏭️', 'gate-rejected': '🚫', error: '❌', 'already-ran': '☑️' };
+
+function recordOutcome(botName, fields) {
+  writeGithubOutput(fields);
+
+  const summary = { bot: botName, timestamp: new Date().toISOString(), ...fields };
+  console.log('RUN_SUMMARY_JSON: ' + JSON.stringify(summary));
+
+  const summaryFile = process.env.GITHUB_STEP_SUMMARY;
+  if (!summaryFile) return; // not running in Actions (e.g. local testing) — nothing to append to
+
+  const lines = [
+    `### ${botName} — ${RESULT_EMOJI[fields.result] || ''} ${fields.result}`,
+    '',
+    '| Field | Value |',
+    '|---|---|',
+    `| timestamp | ${summary.timestamp} |`,
+  ];
+  for (const [key, value] of Object.entries(fields)) {
+    if (key === 'result') continue;
+    lines.push(`| ${key} | ${String(value).slice(0, 300).replace(/\|/g, '\\|').replace(/\n/g, ' ')} |`);
+  }
+  fs.appendFileSync(summaryFile, lines.join('\n') + '\n\n');
+}
+
 // Every fact must trace back to a real source actually fetched today — not
 // only "don't invent facts" but "don't attribute a real fact to a source you
 // didn't fetch," which is a distinct failure mode the fact-check gate caught
@@ -424,11 +459,12 @@ const skipTool = {
 //   alreadyRanToday(data, todayISO) -> bool        (default: reports.json's own lastUpdated)
 //   extraGates: [{ name, check: async (report) => {ok, issues} }]
 //   extraReportFields(entry) -> object             (merged into the written report)
-async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = [], extraReportFields = () => ({}) }) {
+//   botName: string                                (labels the structured run summary; default below)
+async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = [], extraReportFields = () => ({}), botName = 'daily-scam-entry' }) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     console.error('ANTHROPIC_API_KEY not set.');
-    writeGithubOutput({ result: 'error', error: 'ANTHROPIC_API_KEY not set' });
+    recordOutcome(botName, { result: 'error', error: 'ANTHROPIC_API_KEY not set' });
     process.exitCode = 1;
     return;
   }
@@ -440,7 +476,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
 
   if (ranToday && !process.env.DRY_RUN) {
     console.log('Already ran today. Skipping without calling the API.');
-    writeGithubOutput({ result: 'already-ran' });
+    recordOutcome(botName, { result: 'already-ran' });
     return;
   }
 
@@ -474,7 +510,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     // didn't finish naturally.
     if (response.stop_reason === 'max_tokens') {
       console.error('Response was truncated (stop_reason=max_tokens) — refusing to trust its tool call.');
-      writeGithubOutput({ result: 'error', error: 'Response truncated at max_tokens' });
+      recordOutcome(botName, { result: 'error', error: 'Response truncated at max_tokens' });
       process.exitCode = 1;
       return;
     }
@@ -482,7 +518,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     const toolCalls = response.content.filter(b => b.type === 'tool_use');
     if (toolCalls.length === 0) {
       console.error('Model stopped without calling a tool.');
-      writeGithubOutput({ result: 'error', error: 'Model stopped without calling a tool' });
+      recordOutcome(botName, { result: 'error', error: 'Model stopped without calling a tool' });
       process.exitCode = 1;
       return;
     }
@@ -512,14 +548,14 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
 
   if (!outcome) {
     console.error('Did not converge within the turn limit.');
-    writeGithubOutput({ result: 'error', error: 'Did not converge within the turn limit' });
+    recordOutcome(botName, { result: 'error', error: 'Did not converge within the turn limit' });
     process.exitCode = 1;
     return;
   }
 
   if (outcome.type === 'skip') {
     console.log('Skipped:', outcome.input.reason);
-    writeGithubOutput({ result: 'skipped', reason: outcome.input.reason });
+    recordOutcome(botName, { result: 'skipped', reason: outcome.input.reason });
     return;
   }
 
@@ -556,7 +592,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   const issues = findQualityIssues(newReport);
   if (issues.length > 0) {
     console.error('Quality gate failed, refusing to write:', issues);
-    writeGithubOutput({ result: 'gate-rejected', reason: `Quality gate: ${issues.join('; ')}` });
+    recordOutcome(botName, { result: 'gate-rejected', reason: `Quality gate: ${issues.join('; ')}` });
     return;
   }
 
@@ -571,7 +607,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   const citationCheck = await verifyCitationUrls(newReport.source);
   if (!citationCheck.ok) {
     console.error('Citation verification failed, refusing to write:', citationCheck.issues);
-    writeGithubOutput({ result: 'gate-rejected', reason: `Citation verification: ${citationCheck.issues.join('; ')}` });
+    recordOutcome(botName, { result: 'gate-rejected', reason: `Citation verification: ${citationCheck.issues.join('; ')}` });
     return;
   }
 
@@ -579,7 +615,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   const relevanceCheck = await checkContentRelevance(newReport);
   if (!relevanceCheck.ok) {
     console.error('Content relevance check failed, refusing to write:', relevanceCheck.issues);
-    writeGithubOutput({ result: 'gate-rejected', reason: `Content relevance: ${relevanceCheck.issues.join('; ')}` });
+    recordOutcome(botName, { result: 'gate-rejected', reason: `Content relevance: ${relevanceCheck.issues.join('; ')}` });
     return;
   }
 
@@ -588,7 +624,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     const result = await gate.check(newReport);
     if (!result.ok) {
       console.error(`${gate.name} failed, refusing to write:`, result.issues);
-      writeGithubOutput({ result: 'gate-rejected', reason: `${gate.name}: ${result.issues.join('; ')}` });
+      recordOutcome(botName, { result: 'gate-rejected', reason: `${gate.name}: ${result.issues.join('; ')}` });
       return;
     }
   }
@@ -597,13 +633,13 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   const factCheck = await factCheckClaims(client, newReport, relevanceCheck.sourceText);
   if (!factCheck.ok) {
     console.error('Fact-check failed, refusing to write:', factCheck.issues);
-    writeGithubOutput({ result: 'gate-rejected', reason: `Fact-check: ${factCheck.issues.join('; ')}` });
+    recordOutcome(botName, { result: 'gate-rejected', reason: `Fact-check: ${factCheck.issues.join('; ')}` });
     return;
   }
 
   if (process.env.DRY_RUN) {
     console.log('[DRY_RUN] Not writing to reports.json.');
-    writeGithubOutput({ result: 'written', title: entry.title, citation: entry.source, dryRun: 'true' });
+    recordOutcome(botName, { result: 'written', title: entry.title, citation: entry.source, dryRun: 'true' });
     return;
   }
 
@@ -615,7 +651,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   console.log(`Wrote new entry "${entry.title}" — version now ${data.version}.`);
   // summary/slug are read by the workflow's notify step to build the actual
   // push notification content — real per-entry text, not a generic string.
-  writeGithubOutput({ result: 'written', title: entry.title, citation: entry.source, summary: entry.summary, slug: newReport.slug });
+  recordOutcome(botName, { result: 'written', title: entry.title, citation: entry.source, summary: entry.summary, slug: newReport.slug });
 }
 
 module.exports = {
@@ -629,5 +665,6 @@ module.exports = {
   checkContentRelevance,
   checkNotDuplicate,
   writeGithubOutput,
+  recordOutcome,
   runPipeline,
 };
