@@ -198,7 +198,8 @@ function courseShell({ title, description, canonical, ogImage, jsonLd, bodyHtml,
       <div class="footer-links">
         <a href="../learn/index.html">Learn</a>
         <a href="https://officialverifyguard.com">Official Site</a>
-        <a href="https://officialverifyguard.com/privacy.html">Privacy Policy</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms of Service</a>
         <a href="mailto:verifyguardsupport@gmail.com">Contact</a>
       </div>
     </div>

@@ -44,6 +44,49 @@ function toArray(value) {
 // stuffed into the required fields just to satisfy the schema.
 const DEGENERATE_PATTERNS = [/\bplaceholder\b/i, /<cite\b/i, /<item\b/i, /\btodo\b/i, /\blorem ipsum\b/i];
 
+// Idempotency/dedup: the only defense against a duplicate entry today is
+// the model's own judgment (the existingTitles list in the prompt, "case-
+// insensitive, near-duplicates count as matches too") — a soft instruction,
+// not a code-enforced gate. A model can still submit a real near-duplicate
+// (different title wording, same underlying scam and same source), and
+// nothing here would catch it before publish. Dedupes on a stable key
+// (normalized title, and separately the normalized primary source URL) so
+// a rename or a re-submission of the same source can't slip through string
+// equality on the raw title alone.
+function normalizeTitleForDedup(title) {
+  return String(title || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+// hostname + path only: ignores protocol, "www.", trailing slash, and
+// query/fragment, so http://www.ftc.gov/foo/ and https://ftc.gov/foo both
+// key the same. Returns null when there's no URL to compare (the org-name-
+// only legacy pattern) — those entries dedupe on title only.
+function primarySourceKey(source) {
+  const urls = extractCitationUrls(source);
+  if (urls.length === 0) return null;
+  try {
+    const u = new URL(urls[0]);
+    return `${u.hostname.replace(/^www\./, '')}${u.pathname.replace(/\/+$/, '')}`.toLowerCase();
+  } catch {
+    return urls[0].toLowerCase();
+  }
+}
+
+function checkNotDuplicate(newReport, existingReports) {
+  const newTitleKey = normalizeTitleForDedup(newReport.title);
+  const newSourceKey = primarySourceKey(newReport.source);
+
+  for (const existing of existingReports) {
+    if (normalizeTitleForDedup(existing.title) === newTitleKey) {
+      return { ok: false, issues: [`duplicate of existing entry "${existing.title}" (id ${existing.id}) — normalized title matches`] };
+    }
+    if (newSourceKey && primarySourceKey(existing.source) === newSourceKey) {
+      return { ok: false, issues: [`same primary source as existing entry "${existing.title}" (id ${existing.id}): ${newSourceKey}`] };
+    }
+  }
+  return { ok: true, issues: [] };
+}
+
 function findQualityIssues(report) {
   const issues = [];
   const allStrings = [report.summary, report.howItWorks, report.source, ...report.safetyTips, ...report.redFlags, ...report.realExamples];
@@ -96,6 +139,41 @@ function extractCitationUrls(source) {
 // page still has to really resolve and really contain the claimed content.
 const FETCH_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Phase 2 hardening: every network call already had a per-attempt timeout
+// (AbortSignal), but a single momentary blip — a DNS hiccup, a real, live
+// source's server returning one transient 502/503/504 — used to cost a
+// genuinely good, well-cited candidate its one shot at publishing that day,
+// indistinguishable in the logs from a candidate that was actually bad.
+// Retries with exponential backoff (bounded, no infinite loop) before
+// giving up for real. Retries a 5xx (plausibly transient, server-side) but
+// not a 4xx (the resource genuinely isn't there — retrying won't help) or
+// a plain network failure past the retry budget.
+async function fetchWithRetry(url, options = {}, { retries = 2, baseDelayMs = 500, timeoutMs = 10_000 } = {}) {
+  let lastError;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url, { ...options, signal: AbortSignal.timeout(timeoutMs) });
+      if (res.status >= 500 && res.status < 600 && attempt < retries) {
+        lastError = new Error(`HTTP ${res.status}`);
+        await sleep(baseDelayMs * 2 ** attempt);
+        continue;
+      }
+      return res;
+    } catch (err) {
+      lastError = err;
+      if (attempt < retries) {
+        await sleep(baseDelayMs * 2 ** attempt);
+        continue;
+      }
+    }
+  }
+  throw lastError;
+}
+
 async function verifyCitationUrls(source) {
   const urls = extractCitationUrls(source);
   if (urls.length === 0) {
@@ -105,17 +183,10 @@ async function verifyCitationUrls(source) {
   const issues = [];
   for (const url of urls) {
     try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 10_000);
-      let res;
-      try {
-        res = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': FETCH_UA } });
-        // Some servers reject HEAD outright even though the real page is fine — retry with GET before concluding the URL is dead.
-        if (res.status === 405 || res.status === 403) {
-          res = await fetch(url, { method: 'GET', redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': FETCH_UA } });
-        }
-      } finally {
-        clearTimeout(timeout);
+      let res = await fetchWithRetry(url, { method: 'HEAD', redirect: 'follow', headers: { 'User-Agent': FETCH_UA } });
+      // Some servers reject HEAD outright even though the real page is fine — retry with GET before concluding the URL is dead.
+      if (res.status === 405 || res.status === 403) {
+        res = await fetchWithRetry(url, { method: 'GET', redirect: 'follow', headers: { 'User-Agent': FETCH_UA } });
       }
       if (!res.ok) issues.push(`citation URL returned HTTP ${res.status}, not a real page: ${url}`);
     } catch (err) {
@@ -178,14 +249,7 @@ async function checkContentRelevance(report) {
 
   for (const url of urls) {
     try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 10_000);
-      let res;
-      try {
-        res = await fetch(url, { redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': FETCH_UA } });
-      } finally {
-        clearTimeout(timeout);
-      }
+      const res = await fetchWithRetry(url, { redirect: 'follow', headers: { 'User-Agent': FETCH_UA } });
       if (!res.ok) { attempts.push({ url, matched: 0, of: words.length, error: `HTTP ${res.status}` }); continue; }
       const html = await res.text();
       const pageText = stripHtmlToText(html);
@@ -390,6 +454,41 @@ function writeGithubOutput(fields) {
   fs.appendFileSync(file, lines.join('\n') + '\n');
 }
 
+// Phase 2 hardening: "each run produces a machine-readable summary...
+// surfaced in the workflow summary." Every terminal outcome already called
+// writeGithubOutput with a `result` plus whatever diagnostic fields it had
+// (reason, title, citation, ...) — this wraps that exact call so every one
+// of those paths also (a) logs a single-line JSON summary to stdout, so a
+// run's outcome is grep-able across raw logs without reconstructing it from
+// scattered console.log calls, and (b) appends a real Markdown block to
+// $GITHUB_STEP_SUMMARY, which GitHub renders directly in the run's own
+// Summary tab — so "what happened and why" is visible at a glance instead
+// of requiring someone to open and read raw step logs.
+const RESULT_EMOJI = { written: '✅', skipped: '⏭️', 'gate-rejected': '🚫', error: '❌', 'already-ran': '☑️' };
+
+function recordOutcome(botName, fields) {
+  writeGithubOutput(fields);
+
+  const summary = { bot: botName, timestamp: new Date().toISOString(), ...fields };
+  console.log('RUN_SUMMARY_JSON: ' + JSON.stringify(summary));
+
+  const summaryFile = process.env.GITHUB_STEP_SUMMARY;
+  if (!summaryFile) return; // not running in Actions (e.g. local testing) — nothing to append to
+
+  const lines = [
+    `### ${botName} — ${RESULT_EMOJI[fields.result] || ''} ${fields.result}`,
+    '',
+    '| Field | Value |',
+    '|---|---|',
+    `| timestamp | ${summary.timestamp} |`,
+  ];
+  for (const [key, value] of Object.entries(fields)) {
+    if (key === 'result') continue;
+    lines.push(`| ${key} | ${String(value).slice(0, 300).replace(/\|/g, '\\|').replace(/\n/g, ' ')} |`);
+  }
+  fs.appendFileSync(summaryFile, lines.join('\n') + '\n\n');
+}
+
 // Every fact must trace back to a real source actually fetched today — not
 // only "don't invent facts" but "don't attribute a real fact to a source you
 // didn't fetch," which is a distinct failure mode the fact-check gate caught
@@ -462,11 +561,12 @@ const skipTool = {
 //   alreadyRanToday(data, todayISO) -> bool        (default: reports.json's own lastUpdated)
 //   extraGates: [{ name, check: async (report) => {ok, issues} }]
 //   extraReportFields(entry) -> object             (merged into the written report)
+//   botName: string                                (labels the structured run summary; default below)
 async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = [], extraReportFields = () => ({}), botName = 'daily-scam-entry' }) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     console.error('ANTHROPIC_API_KEY not set.');
-    writeGithubOutput({ result: 'error', error: 'ANTHROPIC_API_KEY not set' });
+    recordOutcome(botName, { result: 'error', error: 'ANTHROPIC_API_KEY not set' });
     process.exitCode = 1;
     return;
   }
@@ -478,7 +578,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
 
   if (ranToday && !process.env.DRY_RUN) {
     console.log('Already ran today. Skipping without calling the API.');
-    writeGithubOutput({ result: 'already-ran' });
+    recordOutcome(botName, { result: 'already-ran' });
     return;
   }
 
@@ -512,7 +612,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     // didn't finish naturally.
     if (response.stop_reason === 'max_tokens') {
       console.error('Response was truncated (stop_reason=max_tokens) — refusing to trust its tool call.');
-      writeGithubOutput({ result: 'error', error: 'Response truncated at max_tokens' });
+      recordOutcome(botName, { result: 'error', error: 'Response truncated at max_tokens' });
       process.exitCode = 1;
       return;
     }
@@ -520,7 +620,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     const toolCalls = response.content.filter(b => b.type === 'tool_use');
     if (toolCalls.length === 0) {
       console.error('Model stopped without calling a tool.');
-      writeGithubOutput({ result: 'error', error: 'Model stopped without calling a tool' });
+      recordOutcome(botName, { result: 'error', error: 'Model stopped without calling a tool' });
       process.exitCode = 1;
       return;
     }
@@ -550,14 +650,14 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
 
   if (!outcome) {
     console.error('Did not converge within the turn limit.');
-    writeGithubOutput({ result: 'error', error: 'Did not converge within the turn limit' });
+    recordOutcome(botName, { result: 'error', error: 'Did not converge within the turn limit' });
     process.exitCode = 1;
     return;
   }
 
   if (outcome.type === 'skip') {
     console.log('Skipped:', outcome.input.reason);
-    writeGithubOutput({ result: 'skipped', reason: outcome.input.reason });
+    recordOutcome(botName, { result: 'skipped', reason: outcome.input.reason });
     return;
   }
 
@@ -594,7 +694,14 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   const issues = findQualityIssues(newReport);
   if (issues.length > 0) {
     console.error('Quality gate failed, refusing to write:', issues);
-    writeGithubOutput({ result: 'gate-rejected', reason: `Quality gate: ${issues.join('; ')}` });
+    recordOutcome(botName, { result: 'gate-rejected', reason: `Quality gate: ${issues.join('; ')}` });
+    return;
+  }
+
+  const dedupCheck = checkNotDuplicate(newReport, data.reports);
+  if (!dedupCheck.ok) {
+    console.error('Duplicate check failed, refusing to write:', dedupCheck.issues);
+    recordOutcome(botName, { result: 'gate-rejected', reason: `Duplicate check: ${dedupCheck.issues.join('; ')}` });
     return;
   }
 
@@ -602,7 +709,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   const citationCheck = await verifyCitationUrls(newReport.source);
   if (!citationCheck.ok) {
     console.error('Citation verification failed, refusing to write:', citationCheck.issues);
-    writeGithubOutput({ result: 'gate-rejected', reason: `Citation verification: ${citationCheck.issues.join('; ')}` });
+    recordOutcome(botName, { result: 'gate-rejected', reason: `Citation verification: ${citationCheck.issues.join('; ')}` });
     return;
   }
 
@@ -610,7 +717,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   const relevanceCheck = await checkContentRelevance(newReport);
   if (!relevanceCheck.ok) {
     console.error('Content relevance check failed, refusing to write:', relevanceCheck.issues);
-    writeGithubOutput({ result: 'gate-rejected', reason: `Content relevance: ${relevanceCheck.issues.join('; ')}` });
+    recordOutcome(botName, { result: 'gate-rejected', reason: `Content relevance: ${relevanceCheck.issues.join('; ')}` });
     return;
   }
 
@@ -619,7 +726,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     const result = await gate.check(newReport);
     if (!result.ok) {
       console.error(`${gate.name} failed, refusing to write:`, result.issues);
-      writeGithubOutput({ result: 'gate-rejected', reason: `${gate.name}: ${result.issues.join('; ')}` });
+      recordOutcome(botName, { result: 'gate-rejected', reason: `${gate.name}: ${result.issues.join('; ')}` });
       return;
     }
   }
@@ -630,7 +737,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   if (!triage.passed) {
     console.error('Triage did not clear the confidence threshold, sending to review queue instead of publishing:', triage.issues);
     const reviewPath = writeToReviewQueue(botName, newReport, triage.assessment);
-    writeGithubOutput({ result: 'needs-review', reason: `Triage: ${triage.issues.join('; ')}`, reviewPath });
+    recordOutcome(botName, { result: 'needs-review', reason: `Triage: ${triage.issues.join('; ')}`, reviewPath });
     return;
   }
 
@@ -638,13 +745,13 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   const factCheck = await factCheckClaims(client, newReport, relevanceCheck.sourceText);
   if (!factCheck.ok) {
     console.error('Fact-check failed, refusing to write:', factCheck.issues);
-    writeGithubOutput({ result: 'gate-rejected', reason: `Fact-check: ${factCheck.issues.join('; ')}` });
+    recordOutcome(botName, { result: 'gate-rejected', reason: `Fact-check: ${factCheck.issues.join('; ')}` });
     return;
   }
 
   if (process.env.DRY_RUN) {
     console.log('[DRY_RUN] Not writing to reports.json.');
-    writeGithubOutput({ result: 'written', title: entry.title, citation: entry.source, dryRun: 'true' });
+    recordOutcome(botName, { result: 'written', title: entry.title, citation: entry.source, dryRun: 'true' });
     return;
   }
 
@@ -656,7 +763,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   console.log(`Wrote new entry "${entry.title}" — version now ${data.version}.`);
   // summary/slug are read by the workflow's notify step to build the actual
   // push notification content — real per-entry text, not a generic string.
-  writeGithubOutput({ result: 'written', title: entry.title, citation: entry.source, summary: entry.summary, slug: newReport.slug });
+  recordOutcome(botName, { result: 'written', title: entry.title, citation: entry.source, summary: entry.summary, slug: newReport.slug });
 }
 
 module.exports = {
@@ -665,11 +772,14 @@ module.exports = {
   CATEGORIES,
   CITATION_DISCIPLINE,
   extractCitationUrls,
+  fetchWithRetry,
   verifyCitationUrls,
   checkContentRelevance,
   triageCandidate,
   writeToReviewQueue,
   REVIEW_DIR,
+  checkNotDuplicate,
   writeGithubOutput,
+  recordOutcome,
   runPipeline,
 };
