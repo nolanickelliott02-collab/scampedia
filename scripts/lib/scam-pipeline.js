@@ -599,7 +599,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
   const dedupCheck = checkNotDuplicate(newReport, data.reports);
   if (!dedupCheck.ok) {
     console.error('Duplicate check failed, refusing to write:', dedupCheck.issues);
-    writeGithubOutput({ result: 'gate-rejected', reason: `Duplicate check: ${dedupCheck.issues.join('; ')}` });
+    recordOutcome(botName, { result: 'gate-rejected', reason: `Duplicate check: ${dedupCheck.issues.join('; ')}` });
     return;
   }
 
