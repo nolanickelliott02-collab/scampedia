@@ -111,7 +111,10 @@ function pageShell({ title, description, canonical, ogImage, jsonLd, bodyHtml, a
   <meta name="twitter:image" content="${ogImage}" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" /></noscript>
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="icon" type="image/png" sizes="128x128" href="../assets/favicon/favicon-128.png" />
   <link rel="apple-touch-icon" href="../assets/favicon/favicon-180.png" />
@@ -122,7 +125,7 @@ function pageShell({ title, description, canonical, ogImage, jsonLd, bodyHtml, a
   <nav class="nav">
     <div class="nav-inner container">
       <a href="../index.html" class="nav-logo">
-        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="nav-logo-img" />
+        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="nav-logo-img" width="332" height="24" />
       </a>
       <div class="nav-links">
         <a href="../scampedia.html" class="${activeNav === 'database' ? 'active' : ''}">Scam Database</a>
@@ -144,7 +147,7 @@ function pageShell({ title, description, canonical, ogImage, jsonLd, bodyHtml, a
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="footer-logo-img" />
+        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="footer-logo-img" width="249" height="18" />
         <span class="footer-copy">© 2026 Scampedia. All rights reserved.</span>
       </div>
       <div class="footer-links">
@@ -231,7 +234,7 @@ function scamPageHtml(report, allReports) {
     <div class="wiki-body">
       <div class="wiki-main-col">
         <div class="wiki-section" id="overview">
-          <div class="wiki-section-heading">Overview</div>
+          <h2 class="wiki-section-heading">Overview</h2>
           <p class="wiki-summary">${escapeHtml(report.summary)}</p>
         </div>
 
@@ -242,35 +245,35 @@ function scamPageHtml(report, allReports) {
 
         ${howItWorks ? `
         <div class="wiki-section" id="how-it-works">
-          <div class="wiki-section-heading">How It Works</div>
+          <h2 class="wiki-section-heading">How It Works</h2>
           <p class="wiki-summary">${escapeHtml(howItWorks)}</p>
         </div>` : ''}
 
         ${redFlags.length ? `
         <div class="wiki-section" id="red-flags">
-          <div class="wiki-section-heading">Red Flags</div>
+          <h2 class="wiki-section-heading">Red Flags</h2>
           <ul class="wiki-redflags">${redFlags.map(f => `<li>${escapeHtml(f)}</li>`).join('')}</ul>
         </div>` : ''}
 
         ${realExamples.length ? `
         <div class="wiki-section" id="real-examples">
-          <div class="wiki-section-heading">Real Examples</div>
+          <h2 class="wiki-section-heading">Real Examples</h2>
           <ul class="wiki-examples">${realExamples.map(e => `<li>${escapeHtml(e)}</li>`).join('')}</ul>
         </div>` : ''}
 
         ${spreadPlatforms.length ? `
         <div class="wiki-section" id="platforms">
-          <div class="wiki-section-heading">Where It Spreads</div>
+          <h2 class="wiki-section-heading">Where It Spreads</h2>
           <div class="wiki-platforms">${spreadPlatforms.map(p => `<span class="wiki-platform-pill">${escapeHtml(p)}</span>`).join('')}</div>
         </div>` : ''}
 
         <div class="wiki-section" id="protect">
-          <div class="wiki-section-heading">How to Protect Yourself</div>
+          <h2 class="wiki-section-heading">How to Protect Yourself</h2>
           <ul class="wiki-tips">${safetyTips.map(t => `<li>${escapeHtml(t)}</li>`).join('')}</ul>
         </div>
 
         <div class="wiki-section" id="related">
-          <div class="wiki-section-heading">Related Scams</div>
+          <h2 class="wiki-section-heading">Related Scams</h2>
           <div class="wiki-related">${relatedReports.map(r => `<a class="wiki-related-pill" href="${r.slug}.html">${escapeHtml(r.title)} →</a>`).join('')}</div>
         </div>
 
@@ -345,7 +348,7 @@ function indexPageHtml(allReports) {
 
   const categoriesHtml = Object.keys(byCategory).sort().map(cat => `
     <div class="wiki-section" id="${slugify(cat)}">
-      <div class="wiki-section-heading">${icons[cat] || '⚠️'} ${escapeHtml(cat)} <span class="scam-card-date">(${byCategory[cat].length})</span></div>
+      <h2 class="wiki-section-heading">${icons[cat] || '⚠️'} ${escapeHtml(cat)} <span class="scam-card-date">(${byCategory[cat].length})</span></h2>
       <div class="scam-grid">
         ${byCategory[cat].map(r => `
           <a class="scam-card" href="${r.slug}.html">

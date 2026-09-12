@@ -30,6 +30,7 @@ const REPORTS_PATH   = path.join(ROOT, 'api', 'reports.json');
 const LEARN_DIR      = path.join(ROOT, 'learn');
 const SITEMAP_PATH   = path.join(ROOT, 'sitemap.xml');
 const LLMS_PATH       = path.join(ROOT, 'llms.txt');
+const LLMS_FULL_PATH  = path.join(ROOT, 'llms-full.txt');
 const SITE_ORIGIN     = 'https://scampedia.net';
 
 // Read live, not hardcoded — this count changes daily via the real scam-entry
@@ -160,7 +161,10 @@ function courseShell({ title, description, canonical, ogImage, jsonLd, bodyHtml,
   <meta name="twitter:image" content="${ogImage}" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" /></noscript>
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="../css/course.css" />
   <link rel="icon" type="image/png" sizes="128x128" href="../assets/favicon/favicon-128.png" />
@@ -172,7 +176,7 @@ function courseShell({ title, description, canonical, ogImage, jsonLd, bodyHtml,
   <nav class="nav">
     <div class="nav-inner container">
       <a href="../index.html" class="nav-logo">
-        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="nav-logo-img" />
+        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="nav-logo-img" width="332" height="24" />
       </a>
       <div class="nav-links">
         <a href="../scams/">Scam Database</a>
@@ -192,13 +196,14 @@ function courseShell({ title, description, canonical, ogImage, jsonLd, bodyHtml,
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="footer-logo-img" />
+        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="footer-logo-img" width="249" height="18" />
         <span class="footer-copy">© 2026 Scampedia. All rights reserved.</span>
       </div>
       <div class="footer-links">
         <a href="../learn/index.html">Learn</a>
         <a href="https://officialverifyguard.com">Official Site</a>
-        <a href="https://officialverifyguard.com/privacy.html">Privacy Policy</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms of Service</a>
         <a href="mailto:verifyguardsupport@gmail.com">Contact</a>
       </div>
     </div>
@@ -403,6 +408,57 @@ function buildLlmsTxt(allLessons) {
   fs.writeFileSync(LLMS_PATH, lines.join('\n'));
 }
 
+// llms.txt is the index (links + one-line summaries); llms-full.txt is the
+// same structure with every linked resource's actual content inlined, so a
+// model can read the whole site's real substance in one file with zero
+// crawling — the full lesson body (volatile placeholders already resolved
+// to their real, dated content, the same text that renders on the real
+// page) plus every scam-database entry's real summary/mechanics/red flags/
+// safety tips, not just its title and a link.
+function buildLlmsFullTxt(allLessons, volatile) {
+  const crisisPages     = allLessons.filter(l => l.pageType === 'crisis');
+  const numberedLessons = allLessons.filter(l => l.pageType !== 'crisis');
+
+  let reports = [];
+  try {
+    reports = JSON.parse(fs.readFileSync(REPORTS_PATH, 'utf8')).reports || [];
+  } catch { /* no reports.json yet — llms-full.txt just omits the database section below */ }
+
+  const lessonSection = (title, lessons) => lessons.flatMap(l => [
+    `## ${title}: ${l.title}`,
+    '',
+    `Source: ${SITE_ORIGIN}/learn/${l.slug}.html`,
+    `Last reviewed: ${l.lastReviewed || 'unknown'}`,
+    '',
+    substituteVolatile(l.rawBody, volatile),
+    '',
+  ]);
+
+  const scamSection = reports.flatMap(r => [
+    `## Scam Database: ${r.title}`,
+    '',
+    `Source: ${SITE_ORIGIN}/scams/${r.slug}.html`,
+    `Category: ${r.category}`,
+    `Summary: ${r.summary}`,
+    `How it works: ${r.howItWorks}`,
+    `Red flags: ${(r.redFlags || []).join(' | ')}`,
+    `Safety tips: ${(r.safetyTips || []).join(' | ')}`,
+    `Cited source: ${r.source}`,
+    '',
+  ]);
+
+  const lines = [
+    '# Scampedia — full content',
+    '',
+    '> The complete real content of every page linked from llms.txt, inlined. Generated from the same source data that renders the live site — see llms.txt for just the index.',
+    '',
+    ...lessonSection('Crisis', crisisPages),
+    ...lessonSection('Learn', numberedLessons),
+    ...scamSection,
+  ];
+  fs.writeFileSync(LLMS_FULL_PATH, lines.join('\n'));
+}
+
 // ---- Main ---------------------------------------------------------
 
 function main() {
@@ -427,8 +483,9 @@ function main() {
 
   updateSitemap(lessons);
   buildLlmsTxt(lessons);
+  buildLlmsFullTxt(lessons, volatile);
 
-  console.log(`Built ${lessons.length} page(s) (${numberedLessons.length} lesson, ${crisisPages.length} crisis) + learn/index.html, updated sitemap.xml + llms.txt`);
+  console.log(`Built ${lessons.length} page(s) (${numberedLessons.length} lesson, ${crisisPages.length} crisis) + learn/index.html, updated sitemap.xml + llms.txt + llms-full.txt`);
 }
 
 main();

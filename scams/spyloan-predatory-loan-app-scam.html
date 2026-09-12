@@ -19,7 +19,10 @@
   <meta name="twitter:image" content="https://scampedia.net/assets/og/scampedia-share.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" /></noscript>
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="icon" type="image/png" sizes="128x128" href="../assets/favicon/favicon-128.png" />
   <link rel="apple-touch-icon" href="../assets/favicon/favicon-180.png" />
@@ -30,7 +33,7 @@
   <nav class="nav">
     <div class="nav-inner container">
       <a href="../index.html" class="nav-logo">
-        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="nav-logo-img" />
+        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="nav-logo-img" width="332" height="24" />
       </a>
       <div class="nav-links">
         <a href="../scampedia.html" class="active">Scam Database</a>
@@ -68,7 +71,7 @@
     <div class="wiki-body">
       <div class="wiki-main-col">
         <div class="wiki-section" id="overview">
-          <div class="wiki-section-heading">Overview</div>
+          <h2 class="wiki-section-heading">Overview</h2>
           <p class="wiki-summary">Malicious &quot;instant loan&quot; apps on Google Play and the Apple App Store lure people with promises of quick cash, then harvest contacts, photos, and messages from their phones to blackmail and harass them into paying inflated fees.</p>
         </div>
 
@@ -79,35 +82,35 @@
 
         
         <div class="wiki-section" id="how-it-works">
-          <div class="wiki-section-heading">How It Works</div>
+          <h2 class="wiki-section-heading">How It Works</h2>
           <p class="wiki-summary">Scammers publish seemingly legitimate personal-loan or finance apps on official app stores or push them through social media ads and SMS links. During setup, the app demands excessive permissions unrelated to lending, such as access to contacts, SMS history, photos, camera, and call logs. Once a &quot;loan&quot; is issued (often smaller than promised and with hidden fees or predatory interest), the operators use the stolen personal data to harass, publicly shame, or threaten the victim and people in their contact list in order to pressure repayment at inflated rates, turning a loan request into extortion and financial exploitation.</p>
         </div>
 
         
         <div class="wiki-section" id="red-flags">
-          <div class="wiki-section-heading">Red Flags</div>
+          <h2 class="wiki-section-heading">Red Flags</h2>
           <ul class="wiki-redflags"><li>App requests permissions with no clear connection to lending, such as contacts, photos, SMS, or camera access</li><li>Loan is advertised as instant, no-credit-check, with minimal documentation required</li><li>App was discovered via a social media ad or unsolicited text link rather than a trusted financial institution</li><li>Fees, interest rates, or repayment terms change after the loan is disbursed</li><li>Threats to contact or expose the borrower&#39;s friends/family if payment is late</li></ul>
         </div>
 
         
         <div class="wiki-section" id="real-examples">
-          <div class="wiki-section-heading">Real Examples</div>
+          <h2 class="wiki-section-heading">Real Examples</h2>
           <ul class="wiki-examples"><li>McAfee&#39;s mobile research team identified a global surge of &#39;SpyLoan&#39; apps on Android in late 2024, flagging 15 apps that had amassed over 8 million cumulative downloads and used social engineering to extract sensitive data for extortion and harassment.</li><li>Check Point researchers reported in September 2025 that a malicious loan app called &#39;RapiPlata,&#39; which had been downloaded an estimated 150,000 times from both the Google Play Store and Apple App Store before removal, exploited extensive device permissions to target users, notably in Colombia.</li><li>Google&#39;s November 2025 and June 2026 Frauds and Scams Advisories both flagged continued growth in mobile extortion via malicious banking and finance apps that request excessive permissions and use stolen data to extort and publicly shame victims.</li></ul>
         </div>
 
         
         <div class="wiki-section" id="platforms">
-          <div class="wiki-section-heading">Where It Spreads</div>
+          <h2 class="wiki-section-heading">Where It Spreads</h2>
           <div class="wiki-platforms"><span class="wiki-platform-pill">Mobile Apps</span><span class="wiki-platform-pill">Google Play Store</span><span class="wiki-platform-pill">Apple App Store</span><span class="wiki-platform-pill">Social Media Ads</span><span class="wiki-platform-pill">SMS/Text Messages</span></div>
         </div>
 
         <div class="wiki-section" id="protect">
-          <div class="wiki-section-heading">How to Protect Yourself</div>
+          <h2 class="wiki-section-heading">How to Protect Yourself</h2>
           <ul class="wiki-tips"><li>Only download lending or finance apps from well-established, verified financial institutions and check developer legitimacy before installing</li><li>Review and deny any permission requests (contacts, photos, SMS, camera) that are not essential to a loan app&#39;s function</li><li>Verify any lender&#39;s registration with your country&#39;s financial regulator before submitting personal or banking information</li><li>Uninstall suspicious loan apps immediately, revoke their permissions, and change any passwords or PINs shared with the app</li><li>Report predatory or extortionate loan apps to the app store and to consumer protection agencies like the FTC or BBB</li></ul>
         </div>
 
         <div class="wiki-section" id="related">
-          <div class="wiki-section-heading">Related Scams</div>
+          <h2 class="wiki-section-heading">Related Scams</h2>
           <div class="wiki-related"><a class="wiki-related-pill" href="tech-support-pop-up-scam.html">Tech Support Pop-Up Scam →</a><a class="wiki-related-pill" href="phishing-email-scam.html">Phishing Email Scam →</a><a class="wiki-related-pill" href="smishing-text-message-scam.html">Smishing Text Message Scam →</a></div>
         </div>
 
@@ -155,7 +158,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="footer-logo-img" />
+        <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="footer-logo-img" width="249" height="18" />
         <span class="footer-copy">© 2026 Scampedia. All rights reserved.</span>
       </div>
       <div class="footer-links">
