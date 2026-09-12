@@ -9,6 +9,7 @@
     "build:learn": "node scripts/build-learn-pages.js",
     "check-content": "node scripts/check-content-health.js",
     "build": "npm run check-content && npm run build:scams && npm run build:learn",
+    "rollback:last-entry": "node scripts/rollback-last-entry.js",
     "test": "node --test '**/__tests__/**/*.test.js'"
   },
   "dependencies": {
