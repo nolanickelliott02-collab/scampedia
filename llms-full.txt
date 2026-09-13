@@ -268,7 +268,7 @@ Summary: Scammers call pretending to be your grandchild in trouble — arrested,
 How it works: A scammer calls or texts pretending to be a grandchild in a sudden crisis — arrested, in a car accident, or hospitalized in another state or country. They beg the victim not to tell anyone else in the family "to avoid embarrassment," then hand the phone to a fake lawyer, bail bondsman, or doctor who pressures for immediate payment, almost always via gift cards, wire transfer, or a cash pickup courier — all of which are nearly impossible to trace or reverse.
 Red flags: Caller insists on secrecy and tells you not to call other family members to verify. | Payment is demanded via gift cards, wire transfer, or a courier pickup — never a normal payment method. | The situation is manufactured to feel extremely urgent, leaving no time to think. | The voice sounds "a little different" but is explained away as a bad connection or a swollen jaw from the accident.
 Safety tips: Never send money without calling the person directly on a number you already know. | Create a secret family code word that only your real family members would know. | Real emergencies don't require gift cards — that is always a scam. | Hang up and call your grandchild's known phone number to verify.
-Cited source: FTC Consumer Alerts + VerifyGuard user-submitted reports
+Cited source: FTC Consumer Advice, "Family Emergency Scams," https://consumer.ftc.gov/all-scams/family-emergency-scams
 
 ## Scam Database: AI Voice Clone Scam
 
@@ -278,7 +278,7 @@ Summary: Using just a few seconds of audio from social media, scammers clone a l
 How it works: Scammers scrape a short audio clip of a target's voice from social media videos, voicemail greetings, or podcasts, then feed it into inexpensive or free AI voice-cloning software that can reproduce speech patterns after just a few seconds of source audio. Once the clone is ready, the scammer calls a family member, plays a script in the cloned voice claiming to be in a car accident, arrested, or kidnapped, and hands the call off to a fake lawyer, officer, or kidnapper who pressures for an urgent wire transfer or gift card payment before the target has time to verify what's really happening.
 Red flags: The cloned voice sounds slightly flat, oddly paced, or emotionless despite the supposedly dire situation. | The call quickly hands off to a second person before the family member can be asked detailed questions. | Extreme urgency paired with instructions not to hang up or call anyone else. | Payment is requested via gift cards, wire transfer, or cryptocurrency. | The "family member" avoids or fumbles a question only the real person would know.
 Safety tips: Establish a family safe word that AI cannot know — use it to verify identity. | Hang up and call back on a number stored in your own contacts. | Be suspicious of any caller who immediately asks for money. | Make your social media voice content private to limit what AI can clone.
-Cited source: FBI IC3 (Internet Crime Complaint Center)
+Cited source: FBI Internet Crime Complaint Center (IC3), 2025 Internet Crime Report, https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf
 
 ## Scam Database: Fake IRS Tax Refund Scam
 
@@ -288,7 +288,7 @@ Summary: Calls, texts, or emails claiming you owe back taxes and will be arreste
 How it works: A caller, robocall, text, or email impersonates the IRS, claiming the victim owes back taxes and will be arrested, sued, or have their wages garnished unless they pay immediately, or alternatively dangling an unexpected refund that requires paying a "processing fee" first. The message manufactures panic, directs the victim to pay via gift cards, wire transfer, or a prepaid debit card, and often spoofs caller ID to display a Washington D.C. area code or an official-looking name to appear legitimate.
 Red flags: Threats of immediate arrest, deportation, or license revocation for unpaid taxes. | Demand for payment specifically via gift cards, wire transfer, or cryptocurrency. | Caller ID is spoofed to look like a government number. | Refusal to let the taxpayer ask questions or call back through an official number.
 Safety tips: The IRS never calls demanding immediate payment or gift cards. | The IRS never threatens arrest over the phone. | Verify any IRS notice by calling 1-800-829-1040 directly. | The IRS contacts taxpayers by mail first, never phone or email.
-Cited source: FTC Consumer Alerts
+Cited source: IRS.gov, "How taxpayers can protect themselves from gift card scams," https://www.irs.gov/newsroom/how-taxpayers-can-protect-themselves-from-gift-card-scams
 
 ## Scam Database: Tech Support Pop-Up Scam
 
@@ -298,7 +298,7 @@ Summary: A scary browser pop-up claims your computer is infected with viruses an
 How it works: While browsing, a victim's browser is hijacked by a malicious ad or script that displays a full-screen warning designed to look like a Windows or macOS system alert, complete with fake virus scan animations, alarming sound effects, and a phone number to call for "urgent" support. The pop-up is often built to lock or freeze the browser so it can't easily be closed, pressuring the victim to call the number, where a scammer posing as Microsoft or Apple support talks them into installing remote-access software, then charges for fake "repairs" or uses the access to steal financial information.
 Red flags: A pop-up claims to be from Microsoft, Apple, or your ISP and lists a phone number to call. | The browser appears frozen or won't close normally, with a countdown timer or alarm sound. | You're asked to install remote-access software like AnyDesk or TeamViewer for a stranger. | Payment is requested via gift card, wire transfer, or a "protection plan" subscription.
 Safety tips: Never call a phone number shown in a browser pop-up. | Legitimate companies like Microsoft and Apple do not make unsolicited support calls. | Close the browser tab and restart your browser to clear the pop-up. | Never allow remote access to your computer from an unsolicited caller.
-Cited source: FTC Consumer Alerts
+Cited source: FTC Consumer Advice, "How To Spot, Avoid, and Report Tech Support Scams," https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams
 
 ## Scam Database: Romance / Military Scam
 
@@ -308,7 +308,7 @@ Summary: Fake online dating profiles — often claiming to be deployed military,
 How it works: A scammer builds a fake dating or social media profile, often using photos stolen from a real service member, doctor, or engineer, and reaches out with flattering, attentive messages that quickly escalate into a whirlwind long-distance romance. Because the persona is "deployed overseas," "on an oil rig," or "on a humanitarian mission," they always have a built-in excuse for never video calling or meeting in person, and after weeks or months of relationship-building they introduce a sudden financial emergency and ask the victim to wire money or buy gift cards.
 Red flags: The relationship moves to declarations of love very quickly despite never meeting in person. | Consistent excuses to avoid video calls or in-person meetings. | A sudden financial emergency requiring money to be wired or sent via gift cards. | Profile photos are professionally lit, model-like, or reused across other profiles.
 Safety tips: Never send money to someone you have not met in person. | Do a reverse image search on their profile photos — they are often stolen. | Be suspicious of anyone who refuses to video chat or always cancels. | Deployed US military personnel have access to military banking and don't need money wired.
-Cited source: FTC Consumer Alerts
+Cited source: Military Consumer (FTC-affiliated), "Military Consumers and Romance Scams," https://www.militaryconsumer.gov/blog/military-consumers-romance-scams
 
 ## Scam Database: Crypto Investment Scam
 
@@ -318,7 +318,7 @@ Summary: Promises of guaranteed high returns on cryptocurrency or forex investme
 How it works: Victims are approached through social media ads, unsolicited messages, or an online relationship by someone who presents themselves as a savvy crypto trader with a "proven" strategy or exclusive platform. The scammer directs the victim to a slick-looking trading app or website that shows a small initial investment growing rapidly, encouraging larger deposits. When the victim eventually tries to withdraw, the platform demands additional "taxes," "fees," or "verification deposits," and once those are paid it either disappears or keeps stalling indefinitely.
 Red flags: Guaranteed or unusually high, consistent returns with little to no risk. | Pressure to invest more money right as you try to withdraw. | Unexpected fees or taxes required before a withdrawal can be processed. | The platform or advisor was found through an unsolicited message or online romantic contact.
 Safety tips: No legitimate investment guarantees returns — that claim is always a lie. | Verify any investment firm with the SEC at investor.gov or FINRA at BrokerCheck. | Never invest money you cannot afford to lose completely. | If someone you met online is suggesting investments, that is a major red flag.
-Cited source: FBI IC3 (Internet Crime Complaint Center)
+Cited source: FBI Internet Crime Complaint Center (IC3), "The FBI Warns of a Spike in Cryptocurrency Investment Schemes," https://www.ic3.gov/PSA/2023/psa230314
 
 ## Scam Database: Medicare / Health Insurance Scam
 
@@ -328,7 +328,7 @@ Summary: Callers pretend to be from Medicare or a health insurance company offer
 How it works: A caller claims to represent Medicare or a health insurance company and offers something enticing — free genetic testing, a back or knee brace, or an updated Medicare card — but needs to "verify" the victim's Medicare number and other personal details first. The stolen Medicare number is then used to submit fraudulent claims for equipment or services the victim never received, which can max out benefits and complicate coverage for legitimate future care.
 Red flags: An unsolicited call or text offering free medical equipment or a "new" Medicare card. | A request to confirm your Medicare number over the phone. | Pressure to accept a product or service you didn't ask for. | Claims to be a Medicare representative but calls from an unfamiliar or spoofed number.
 Safety tips: Medicare will never call you asking for your Medicare number. | Guard your Medicare number like a credit card number. | Review your Medicare Summary Notice for charges you don't recognize. | Report suspected fraud to 1-800-MEDICARE.
-Cited source: AARP Fraud Watch Network
+Cited source: HHS Office of Inspector General, "Fraud Alert: Genetic Testing Scam," https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-genetic-testing-scam
 
 ## Scam Database: Lottery / Prize Notification Scam
 
@@ -338,7 +338,7 @@ Summary: You receive a letter, call, or email claiming you've won a lottery or s
 How it works: The victim receives a letter, phone call, or email announcing they've won a large cash prize, foreign lottery, or sweepstakes, often referencing a contest they don't remember entering. To "release" the winnings, they're told to first pay taxes, customs duties, insurance, or a processing fee, usually via wire transfer or gift card, and once that payment is sent the scammer either disappears or invents another fee, repeating the cycle for as long as the victim keeps paying.
 Red flags: Notification of winning a contest or lottery you never entered. | A requirement to pay fees or taxes before receiving the prize. | Payment requested via gift card, wire transfer, or cryptocurrency. | Urgency to claim the prize within a short deadline.
 Safety tips: You cannot win a contest you never entered. | Legitimate prizes never require upfront fees or taxes to claim. | Winning notifications are never sent by email, phone, or letter. | The only real lottery is one you purchased a ticket for yourself.
-Cited source: FTC Consumer Alerts
+Cited source: FTC Consumer Advice, "Don't pay for a prize (scam)," https://consumer.ftc.gov/consumer-alerts/2025/06/dont-pay-prize-scam
 
 ## Scam Database: Wangiri / One-Ring Callback Scam
 
@@ -348,7 +348,7 @@ Summary: A call rings once from an unfamiliar international number and hangs up 
 How it works: An automated system dials thousands of numbers and lets each ring exactly once before hanging up, leaving a missed call from an unfamiliar international number. Curious or concerned victims call back, unknowingly connecting to a premium-rate number set up by the scammer, and the call is deliberately kept going with hold music, fake menus, or a "please stay on the line" recording so it racks up per-minute international charges, a portion of which is paid out to whoever set up the number.
 Red flags: A missed call from an unfamiliar international number that only rang once. | An unrecognized country code, especially ones associated with premium-rate scams. | The callback connects to hold music, silence, or a confusing automated menu that stalls. | An unusually large charge for a single international call appears on your phone bill.
 Safety tips: Don't call back unfamiliar international numbers, especially after just one ring. | Check the country code before dialing back — unrecognized codes are a red flag. | Block and report the number instead of returning the call. | Contact your carrier if you're billed for a call you never intentionally placed.
-Cited source: FTC Consumer Alerts
+Cited source: Montgomery County (MD) Police Department, "One Ring Scam," https://www.montgomerycountymd.gov/montgomery-county-police-department/how-do-i/frauds-scams/one-ring-scam
 
 ## Scam Database: "Can You Hear Me?" Robocall Scam
 
@@ -358,7 +358,7 @@ Summary: A robocall or live scammer opens with a simple yes-or-no question like 
 How it works: A robocall or live scammer opens with an innocuous-sounding question such as "Can you hear me?" hoping the victim instinctively answers "yes." Scammers have claimed a recorded "yes" can be spliced together with an unrelated recorded question to fake consent for a purchase or service the victim never agreed to. Whether the direct fraud through this exact recording is common has been debated by researchers, but the tactic remains widely used as an opener to keep victims engaged for further social engineering.
 Red flags: The call opens with a simple yes/no question from an unfamiliar or robotic-sounding caller. | The caller pushes to keep you talking and answering questions after the opener. | The number calling appears local but doesn't match anyone you know (neighbor spoofing). | You're later asked to confirm personal or account information on the same or a follow-up call.
 Safety tips: Simply hang up on robocalls instead of engaging, even to say "no." | Answer with a neutral greeting rather than "yes" or "no" if you must respond. | Never confirm personal details to an unsolicited caller, recorded or not. | Register your number on the National Do Not Call Registry to cut down on robocalls.
-Cited source: FTC Consumer Alerts
+Cited source: Minnesota Attorney General's Office, "'Can You Hear Me?' Scam Calls," https://www.ag.state.mn.us/consumer/Publications/CanYouHearMe.asp
 
 ## Scam Database: Fake Bank Fraud Alert Scam
 
@@ -368,7 +368,7 @@ Summary: A text or call appears to come from your bank warning of suspicious act
 How it works: A text or spoofed phone call appears to come from the victim's real bank, warning of a suspicious charge or login attempt and asking them to "verify" their identity. The victim is directed to reply to the text, click a link to a fake bank login page, or stay on the phone with a fake "fraud department" representative, who then asks for the debit card number, PIN, or a one-time passcode the bank just sent by text — a code that, once handed over, lets the scammer complete a real transaction or password reset on the victim's actual account.
 Red flags: An unsolicited text or call about a "fraud alert" asking you to confirm account details. | A request for a one-time passcode you just received by text. | Caller ID spoofed to display your real bank's name or number. | Urgency to act immediately to "stop" a charge that supposedly is in progress.
 Safety tips: Hang up and call the number on the back of your card, never a number from the text or call itself. | Never share a one-time passcode with anyone, even someone claiming to be your bank. | Banks never ask for your full PIN or password over phone or text. | Log in directly through your bank's official app or website to check for real alerts.
-Cited source: FTC Consumer Alerts
+Cited source: FTC Consumer Advice, "Got a call about fraud activity on your bank account? It could be a scammer," https://consumer.ftc.gov/consumer-alerts/2024/06/got-call-about-fraud-activity-your-bank-account-it-could-be-scammer
 
 ## Scam Database: Jury Duty Scam
 
@@ -378,7 +378,7 @@ Summary: A caller claims to be a sheriff or court officer saying you missed jury
 How it works: A caller impersonating a sheriff's deputy or court officer tells the victim they missed a jury duty summons and now have an active warrant for their arrest, which can only be resolved by immediately paying a fine. The caller uses official-sounding titles, badge numbers, and case numbers to sound credible, insists the payment must be made right away via gift cards or a prepaid debit card to avoid being taken into custody, and often warns the victim not to hang up or contact the courthouse directly while the "payment" is processed.
 Red flags: A claim that you'll be arrested imminently unless you pay a fine right now. | Payment demanded through gift cards or a prepaid card. | Instructions not to hang up or verify the claim by calling the courthouse yourself. | Use of official-sounding badge or case numbers to sound legitimate.
 Safety tips: Courts never demand payment over the phone to avoid arrest. | Gift cards are never a legitimate form of payment for any government fee or fine. | Hang up and call your local courthouse directly using a number you look up yourself. | Law enforcement does not call ahead to warn of an imminent arrest.
-Cited source: FTC Consumer Alerts
+Cited source: FTC Consumer Advice, "Did you get a call or email saying you missed jury duty and need to pay? It's a scam," https://consumer.ftc.gov/consumer-alerts/2024/09/did-you-get-call-or-email-saying-you-missed-jury-duty-and-need-pay-its-scam
 
 ## Scam Database: Social Security Number Suspended Scam
 
@@ -388,7 +388,7 @@ Summary: An automated call or voicemail claims your Social Security number has b
 How it works: An automated call or voicemail claims the victim's Social Security number has been linked to criminal activity and "suspended," instructing them to press a number to speak with an "agent." The agent claims the only way to protect their remaining benefits or avoid arrest is to verify their SSN, date of birth, and bank information, or to move their money to a "safe" government-controlled account — which is really an account the scammer controls, or simply a pretext to collect enough personal data to commit identity theft.
 Red flags: A claim that your Social Security number has been "suspended" — this isn't something SSA does. | Pressure to confirm your SSN or bank details over an unsolicited call. | Instructions to move money into a new or "safe" account. | Threats of arrest or loss of benefits for not complying immediately.
 Safety tips: The Social Security Administration cannot suspend your number and will never call to tell you so. | Never give your Social Security number to an unsolicited caller. | Hang up and call the SSA directly using their official number to check your account status. | Report suspicious calls to the SSA Office of the Inspector General.
-Cited source: AARP Fraud Watch Network
+Cited source: Social Security Administration, "Protect Yourself from Social Security Scams," https://www.ssa.gov/scam/
 
 ## Scam Database: Unemployment Benefits Identity Theft Scam
 
@@ -398,7 +398,7 @@ Summary: Criminals use stolen personal information to file fraudulent unemployme
 How it works: Using personal information stolen in prior data breaches or phishing scams, criminals file a fraudulent unemployment claim in the victim's name with a state labor agency, directing payments to a bank account or prepaid card they control. Because the application is filed remotely and states have often been overwhelmed with claim volume, the fraud usually isn't caught until the real person receives a 1099-G tax form reporting benefits income they never applied for or received, or their actual employer gets a notice about a claim filed while they were still working.
 Red flags: Receiving a 1099-G tax form for unemployment benefits you never claimed. | A notice from your state unemployment office about a claim you didn't file. | Your employer receives a claim notice while you're still actively employed. | Unexplained mail from unfamiliar state unemployment agencies.
 Safety tips: Check your credit report regularly for unfamiliar accounts or inquiries. | If you receive an unexpected tax form for benefits you never claimed, report it to your state unemployment office immediately. | Freeze your credit with the three major bureaus if you suspect identity theft. | File a report with the FTC at IdentityTheft.gov if you're a victim.
-Cited source: FTC Consumer Alerts
+Cited source: U.S. Department of Labor, "Report Unemployment Identity Fraud," https://www.dol.gov/agencies/eta/UIIDtheft
 
 ## Scam Database: Student Loan Forgiveness Scam
 
@@ -408,7 +408,7 @@ Summary: Companies advertise guaranteed student loan forgiveness or dramatically
 How it works: A company advertises through social media, robocalls, or email claiming to offer guaranteed loan forgiveness, dramatically reduced payments, or enrollment in a "limited-time" federal program, and asks for an upfront enrollment fee or monthly payment routed through them instead of the real loan servicer. In many cases the company simply enrolls the borrower in an income-driven repayment plan they could have signed up for free directly with their servicer, or it collects the victim's FSA ID and login credentials and uses them to redirect the loan account or apply for aid fraudulently.
 Red flags: A request for an upfront fee to apply for loan forgiveness or consolidation. | Claims of a "limited-time" or "special" government program you must act on immediately. | A request for your Federal Student Aid (FSA) ID or password. | Contact came from an unsolicited call, text, or social media ad rather than your actual loan servicer.
 Safety tips: Legitimate loan forgiveness and repayment programs are always free to apply for directly through your loan servicer. | Never pay an upfront fee for loan forgiveness or consolidation help. | Never share your Federal Student Aid (FSA) ID with a third party. | Verify any offer directly at StudentAid.gov.
-Cited source: FTC Consumer Alerts
+Cited source: FTC Consumer Advice, "Scammers follow the news about student loan forgiveness," https://consumer.ftc.gov/consumer-alerts/2024/04/scammers-follow-news-about-student-loan-forgiveness
 
 ## Scam Database: USCIS / Immigration Scam
 
@@ -418,7 +418,7 @@ Summary: Scammers posing as immigration officials contact applicants claiming a 
 How it works: A scammer posing as a USCIS official, immigration attorney, or ICE agent contacts an applicant or their family, claiming there's a problem with their immigration case — a missing fee, an error in paperwork, or an impending deportation — that can only be resolved by paying immediately over the phone. The caller exploits fear around immigration status to pressure quick, untraceable payment via gift cards or wire transfer, sometimes spoofing caller ID to show a Washington D.C. number or referencing real USCIS form numbers to sound credible.
 Red flags: A demand for payment over the phone to resolve an immigration case. | Threats of immediate deportation or denial unless you pay right away. | Payment requested via gift cards or wire transfer. | Caller ID spoofed to appear as a government agency.
 Safety tips: USCIS does not accept payment over the phone or via gift cards. | Government agencies communicate official actions by mail, not urgent phone calls. | Verify your case status directly on the official USCIS website. | Consult a licensed immigration attorney if you're unsure about a communication.
-Cited source: FTC Consumer Alerts
+Cited source: USCIS, "Common Scams," https://www.uscis.gov/scams-fraud-and-misconduct/avoid-scams/common-scams
 
 ## Scam Database: Phishing Email Scam
 
@@ -428,7 +428,7 @@ Summary: A fraudulent email impersonates a trusted company or contact, urging th
 How it works: An email is crafted to look like it comes from a trusted company, coworker, or service — spoofing the sender name and copying real logos and formatting — and creates a reason to click a link, such as a "suspicious login," an invoice, or an account suspension warning. The link leads to a convincing fake login page that captures whatever username and password the victim enters, or the email carries an attachment that installs malware when opened, giving the attacker access to accounts, files, or the ability to launch further attacks from the victim's own contacts.
 Red flags: The sender's actual email address doesn't match the company it claims to be from. | A generic greeting like "Dear Customer" instead of your actual name. | Urgent language about account suspension, security alerts, or unpaid invoices. | A link that, when hovered over, points to an unfamiliar or misspelled domain.
 Safety tips: Hover over links to check the real destination before clicking. | Look closely at the sender's actual email address, not just the display name. | Never enter your password after clicking a link in an unsolicited email. | Enable two-factor authentication so a stolen password alone isn't enough to break in.
-Cited source: FBI IC3 (Internet Crime Complaint Center)
+Cited source: FTC Consumer Advice, "How To Recognize and Avoid Phishing Scams," https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams
 
 ## Scam Database: Smishing Text Message Scam
 
@@ -438,7 +438,7 @@ Summary: Phishing conducted over SMS text message, often impersonating a deliver
 How it works: A text message impersonates a delivery company, bank, or government agency and includes a link claiming there's a problem to resolve — an undeliverable package, a locked account, or an unexpected charge. Tapping the link leads to a fake website designed to look like the real company's site, where the victim is prompted to "log in" or enter payment details, handing their credentials or card number directly to the scammer.
 Red flags: An unexpected text about a delivery, bank issue, or bill with a link to click. | The link uses a shortened or unfamiliar URL rather than the company's real domain. | Poor grammar, odd spacing, or a sense of urgency in the message. | A request to enter a password or one-time code on the linked page.
 Safety tips: Don't tap links in unexpected text messages, even if they look official. | Go directly to the official app or website instead of using a link from a text. | Forward suspicious texts to 7726 (SPAM) to report them, then delete. | Never enter a one-time passcode on a page you reached through a text link.
-Cited source: FTC Consumer Alerts
+Cited source: Federal Communications Commission, "How to Identify and Avoid Package Delivery Scams," https://www.fcc.gov/how-identify-and-avoid-package-delivery-scams
 
 ## Scam Database: QR Code Scam
 
@@ -448,7 +448,7 @@ Summary: A malicious QR code — placed over a legitimate one on a parking meter
 How it works: A scammer prints a fraudulent QR code sticker and places it over a legitimate one on a parking meter, restaurant menu, or event poster, or sends one directly in an email or flyer. Scanning it redirects the victim to a fake payment or login page that looks like the real service, where they're prompted to enter card details or account credentials that go straight to the scammer instead of the intended business.
 Red flags: A QR code sticker looks slightly crooked or pasted over another one. | The scanned link leads to a generic-looking or misspelled payment page. | The QR code was in an unsolicited email, text, or unattended public flyer. | You're asked for card details on a page that doesn't match the business's usual branding.
 Safety tips: Check for a sticker placed over another QR code before scanning in public. | Preview the destination URL before opening it, if your camera app supports it. | Avoid entering payment or login details on a page reached by scanning an untrusted QR code. | Use the official app or website directly instead of scanning when possible.
-Cited source: FTC Consumer Alerts
+Cited source: FTC Consumer Advice, "See a QR code parked somewhere? Don't scan it...yet!" September 2026, https://consumer.ftc.gov/consumer-alerts/2026/09/see-qr-code-parked-somewhere-dont-scan-ityet
 
 ## Scam Database: Fake Antivirus / Scareware Scam
 
@@ -458,7 +458,7 @@ Summary: A pop-up or fake scan result falsely claims your device is riddled with
 How it works: A pop-up ad or malicious website displays a fake "scan" that rapidly fills the screen with alarming red warnings claiming dozens of viruses were found. It urges the victim to immediately purchase a specific antivirus program to "clean" the device, and paying often either does nothing, installs real malware disguised as security software, or funnels the victim into calling a number that leads directly into a tech support scam where a scammer requests remote access.
 Red flags: A pop-up claims to have already scanned your device and found viruses. | Flashing warnings, sirens, or a countdown pressuring immediate purchase. | A prompt to buy security software directly from the pop-up itself. | A phone number displayed to call for "immediate removal."
 Safety tips: Real antivirus software doesn't sell itself through browser pop-ups. | Close the browser tab or restart your device rather than clicking anything in the pop-up. | Only install security software directly from a vendor's official website. | Run a scan with security software you installed yourself if you're worried about infection.
-Cited source: FTC Consumer Alerts
+Cited source: Federal Trade Commission, "Operator of Deceptive 'Scareware' Scheme Will Pay More than $8 Million to Settle FTC Charges," https://www.ftc.gov/news-events/news/press-releases/2011/01/operator-deceptive-scareware-scheme-will-pay-more-8-million-settle-ftc-charges
 
 ## Scam Database: Social Media Account Takeover Scam
 
@@ -468,7 +468,7 @@ Summary: A hacked or cloned social media account messages the victim's friends a
 How it works: A scammer gains access to a real person's social media account, usually through a prior phishing link or a reused, breached password, then messages the account's friends and family from inside the trusted account. Posing as the real owner, they claim to be in a bind and ask for a quick loan, gift cards, or help receiving a "verification code" that's actually the code needed to take over the recipient's own account next, spreading the takeover through the victim's social circle.
 Red flags: A friend suddenly asks for money or gift cards through a direct message. | A request to share a verification code you just received by text. | The message doesn't sound like how your friend normally writes. | The friend is unreachable by phone or other means to confirm the request.
 Safety tips: Call or video chat to confirm identity before sending money to anyone contacting you on social media, even a close friend. | Never share a login verification code you receive by text, even if a friend asks for it. | Enable two-factor authentication on all of your social accounts. | Report and alert your contacts immediately if your account is compromised.
-Cited source: FTC Consumer Alerts
+Cited source: FTC Consumer Advice, "That friend request could be from a scammer," https://consumer.ftc.gov/consumer-alerts/2023/10/friend-request-could-be-scammer
 
 ## Scam Database: SIM Swap Scam
 
@@ -478,7 +478,7 @@ Summary: A scammer convinces your mobile carrier to transfer your phone number t
 How it works: A scammer gathers enough personal information about a target — often through phishing or data broker sites — to impersonate them to their mobile carrier, either by calling customer support or tricking an employee, and requests that the victim's phone number be transferred to a new SIM card the scammer controls. Once the swap goes through, the victim's phone loses service entirely while the scammer starts receiving all their calls and texts, including the one-time passcodes needed to reset passwords on email, banking, and cryptocurrency accounts.
 Red flags: Your phone suddenly loses all signal or shows "No Service" with no explanation. | You stop receiving calls or texts you were expecting. | You get a notification that your SIM or phone number was changed without your action. | You're locked out of accounts that use text messages for two-factor authentication.
 Safety tips: Add a PIN or passcode to your mobile account that's required for any SIM changes. | Use an authenticator app instead of SMS for two-factor authentication where possible. | Watch for an unexpected loss of cell signal, which can indicate your number was just transferred. | Contact your carrier immediately if your phone suddenly loses service without explanation.
-Cited source: FBI IC3 (Internet Crime Complaint Center)
+Cited source: FTC Consumer Advice, "SIM Swap Scams: How to Protect Yourself," https://consumer.ftc.gov/consumer-alerts/2019/10/sim-swap-scams-how-protect-yourself
 
 ## Scam Database: Virtual Kidnapping Scam
 
@@ -488,7 +488,7 @@ Summary: A caller claims to be holding a family member hostage and demands an im
 How it works: A scammer calls claiming to be holding a family member hostage, often having researched the victim's family and travel plans online to sound convincing, and sometimes plays a recording or AI-cloned voice of a person crying or screaming for help in the background. The caller demands an immediate wire transfer or gift card payment to secure release and insists the victim stay on the phone continuously and not contact police or try to reach the "kidnapped" person, all while that person is actually safe and completely unaware a call is taking place.
 Red flags: A caller demands you stay on the line continuously and not hang up to check on anyone. | Instructions not to contact police under threat of harm to the "hostage." | Immediate demand for ransom via wire transfer or gift cards. | The "kidnapped" person's voice sounds distorted, distant, or slightly off.
 Safety tips: Try to contact the supposedly kidnapped person directly on their own phone before doing anything else. | Stay calm and ask questions only the real person would know the answer to. | Never wire money or buy gift cards based on a phone threat alone. | Contact local police immediately — they have protocols for these calls.
-Cited source: FBI IC3 (Internet Crime Complaint Center)
+Cited source: FBI Internet Crime Complaint Center (IC3), "Criminals Using Altered Proof-of-Life Media to Extort Victims in Virtual Kidnapping for Ransom Scams," https://www.ic3.gov/PSA/2025/PSA251205
 
 ## Scam Database: Deepfake Celebrity Endorsement Scam
 
@@ -498,7 +498,7 @@ Summary: AI-generated video or audio shows a celebrity or public figure appearin
 How it works: Scammers use AI video and voice generation tools to create a fake but convincing clip of a well-known celebrity, news anchor, or business figure appearing to endorse a cryptocurrency platform, investment opportunity, or giveaway. The video is spread through social media ads or fake news articles, lending false credibility that pressures viewers to sign up and deposit money on a platform that has nothing to do with the celebrity and is really just designed to collect and keep victim deposits.
 Red flags: A celebrity appears to endorse an investment or giveaway only in an ad or shared video. | The celebrity's own official channels make no mention of the endorsement. | Slight glitches in lip-sync, unnatural blinking, or robotic-sounding audio. | The ad links to an unfamiliar trading platform or "double your money" giveaway.
 Safety tips: Be skeptical of any celebrity "endorsement" for a financial product seen only in an ad or video. | Check the celebrity's own verified social accounts or official site for confirmation. | Look for subtle glitches in lip-sync, lighting, or audio that can reveal an AI fake. | Remember that real investment opportunities are never promoted through unsolicited video ads.
-Cited source: FTC Consumer Alerts
+Cited source: Federal Trade Commission, "FTC Proposes New Protections to Combat AI Impersonation of Individuals," February 2024, https://www.ftc.gov/news-events/news/press-releases/2024/02/ftc-proposes-new-protections-combat-ai-impersonation-individuals
 
 ## Scam Database: AI Chatbot Romance Scam
 
@@ -508,7 +508,7 @@ Summary: An AI-powered chatbot, sometimes on a dating app, carries on a convinci
 How it works: A scammer deploys an AI chatbot on a dating app or messaging platform, sometimes paired with an appealing stolen profile photo, to carry on an engaging and emotionally responsive conversation around the clock. Because the bot can chat instantly at any hour and adapt its tone to keep the victim interested, it builds a sense of closeness over weeks before steering the conversation toward a financial ask — a crypto "investment opportunity," travel money, or gifts — sometimes with a human operator taking over once the victim is emotionally invested enough to pay.
 Red flags: Replies come instantly at all hours, even very late at night. | Conversation feels emotionally intense very quickly but avoids specific, personal follow-ups. | The match consistently avoids or postpones video calls. | The relationship eventually pivots toward an investment tip or financial request.
 Safety tips: Be cautious of a match who is available to chat constantly at all hours but avoids calls or video. | Watch for oddly generic or repetitive phrasing that can indicate an automated response. | Never send money or financial details to someone you've only spoken to online. | Ask specific, personal follow-up questions that a scripted bot is likely to answer inconsistently.
-Cited source: FTC Consumer Alerts
+Cited source: Federal Trade Commission, "FTC Launches Inquiry into AI Chatbots Acting as Companions," September 2025, https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions
 
 ## Scam Database: Catfishing Scam
 
@@ -518,7 +518,7 @@ Summary: Someone creates a fake online identity, often using stolen photos of an
 How it works: Someone builds a fake online persona using photos and details stolen from a real person's social media, then reaches out to targets on dating apps, social media, or messaging platforms to build a relationship under the false identity. The motive varies — some catfish for financial gain, some for emotional validation or control, and some simply to deceive without ever asking for money — but the relationship is built entirely on a fabricated identity that unravels under any real scrutiny, like a video call or an in-person meeting.
 Red flags: Profile photos look professionally shot or model-quality for an average dating profile. | Inconsistent details about their job, hometown, or daily life across conversations. | Constant excuses to avoid meeting in person or video chatting. | A reverse image search shows the photos belong to someone else entirely.
 Safety tips: Reverse image search profile photos to check if they've been stolen from someone else. | Insist on a live video call early in any online relationship. | Be wary of inconsistent details about their job, location, or life story. | Trust your instincts if something about their story doesn't add up.
-Cited source: FTC Consumer Alerts
+Cited source: FTC Consumer Advice, "What To Know About Romance Scams," https://consumer.ftc.gov/articles/what-know-about-romance-scams
 
 ## Scam Database: Sextortion Scam
 
@@ -528,7 +528,7 @@ Summary: A scammer coerces or tricks a victim into sharing intimate photos or vi
 How it works: A scammer, often posing as an attractive stranger, quickly builds rapport online and convinces the victim to share intimate photos or video, or in some cases records a video call without the victim's knowledge or uses a fabricated image. Once they have the material, the scammer reveals their real intent, threatening to send the images to the victim's friends, family, or employer unless a payment is made, and frequently continues demanding more money even after the first payment is sent.
 Red flags: A new online contact pushes quickly toward exchanging intimate photos or video. | A sudden shift from friendly conversation to threats and demands for payment. | Screenshots or a list of your social media contacts are shown as proof they can reach them. | Demands continue or increase even after a payment is made.
 Safety tips: Stop all contact and payment — paying rarely stops the threats and often increases them. | Report the account to the platform and preserve evidence with screenshots. | Contact the National Center for Missing & Exploited Children or local law enforcement, especially if a minor is involved. | Remember you are the victim of a crime, not someone at fault for being deceived.
-Cited source: FBI IC3 (Internet Crime Complaint Center)
+Cited source: FBI, "Sextortion," https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/sextortion
 
 ## Scam Database: Ponzi Scheme
 
@@ -538,7 +538,7 @@ Summary: An investment scheme pays early investors with money from new investors
 How it works: An operator collects money from investors while promising steady, above-market returns, but instead of investing the funds in any real business, they simply pay "returns" to earlier investors using money deposited by newer ones. The scheme can appear legitimate for months or years as long as enough new money keeps coming in to cover withdrawals, but it inevitably collapses once new investment slows or a large number of investors try to cash out at once, leaving most participants with total losses.
 Red flags: Consistently high returns that don't fluctuate with overall market conditions. | Vague or overly complex explanations of how the investment actually makes money. | Pressure to recruit other investors as part of the opportunity. | Difficulty or delays when trying to withdraw funds.
 Safety tips: Be suspicious of consistently high returns regardless of market conditions. | Verify any investment manager is registered with the SEC or your state securities regulator. | Ask how the underlying business actually generates the returns being promised. | Be cautious of pressure to recruit new investors as part of the "opportunity."
-Cited source: FTC Consumer Alerts
+Cited source: Investor.gov (U.S. SEC), "Ponzi Schemes," https://www.investor.gov/additional-resources/general-resources/glossary/ponzi-schemes
 
 ## Scam Database: Pump and Dump Scam
 
@@ -548,7 +548,7 @@ Summary: Promoters hype a low-value stock or cryptocurrency through social media
 How it works: A group of promoters accumulates shares of a low-value, thinly traded stock or a new cryptocurrency token, then floods social media, messaging groups, and unsolicited emails with hype claiming the price is about to explode. As unsuspecting buyers rush in and drive the price up, the promoters quietly sell their own holdings at the inflated price, and once they've cashed out the promotion stops, the price collapses, and everyone who bought in during the hype is left holding a worthless or near-worthless investment.
 Red flags: Unsolicited "hot tip" messages pushing a specific stock or crypto token. | Coordinated hype about the same ticker appearing across many accounts at once. | Claims of guaranteed, imminent, massive price gains. | Pressure to buy immediately before "it's too late."
 Safety tips: Be skeptical of unsolicited stock or crypto tips promising huge, fast gains. | Research a company's fundamentals independently before buying based on social media hype. | Watch for coordinated promotion of the same ticker across many accounts at once. | Never invest based on pressure to "buy now before it's too late."
-Cited source: FTC Consumer Alerts
+Cited source: Investor.gov (U.S. SEC), "Social Media and Stock Tip Scams – Investor Alert," https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/social-media-stock-scams
 
 ## Scam Database: Fake Trading App Scam
 
@@ -558,7 +558,7 @@ Summary: Victims are convinced to download a fraudulent investment or trading ap
 How it works: A victim is persuaded — often by an online contact or advertisement — to download a trading or investment app that appears professional and fully functional. The app displays a fabricated account balance that climbs steadily as the victim deposits more money, creating the illusion of consistent profit, but when the victim tries to withdraw any funds, the app blocks the transaction or claims additional "taxes," "fees," or "verification deposits" must be paid first, a cycle that continues indefinitely while the deposited money is never actually invested anywhere.
 Red flags: An investment app was downloaded outside the official app store or recommended by an online contact. | The account balance grows rapidly and consistently with no losses. | Withdrawal requests are blocked or trigger a demand for an additional fee. | Customer support is unreachable except through the same contact who introduced the app.
 Safety tips: Only download trading apps from official app stores, and verify the developer. | Try withdrawing a small amount early to test whether the platform is legitimate. | Be suspicious of any app that requires an additional fee before allowing a withdrawal. | Verify the platform is registered with financial regulators like the SEC or CFTC.
-Cited source: FTC Consumer Alerts
+Cited source: FINRA, "Be Alert to Signs of Imposter Investment Scams," https://www.finra.org/investors/insights/be-alert-signs-imposter-investment-scams
 
 ## Scam Database: Pig Butchering Scam
 
@@ -568,7 +568,7 @@ Summary: Named for the practice of fattening livestock before slaughter, scammer
 How it works: A scammer initiates contact through a dating app, social media, or even a "wrong number" text, then spends weeks building trust and an emotional connection before mentioning that they, or a relative, have been making significant money trading crypto. They walk the victim through opening a small account on a professional-looking but fake trading platform, showing early "wins" to build confidence, and gradually encourage larger and larger deposits — sometimes urging the victim to take out loans or drain savings — before cutting off contact and disappearing with everything once withdrawals are attempted or the amount invested peaks.
 Red flags: A new online contact, sometimes from an unexpected text, builds a personal relationship before mentioning investing. | Early "trades" show quick, easy profits to build confidence. | Increasing pressure to deposit larger amounts, sometimes suggesting loans. | The platform is unfamiliar and was recommended only by this one contact.
 Safety tips: Be wary of a new online contact who eventually steers conversation toward an investment opportunity. | Never move funds to a trading platform recommended by someone you've only met online. | Independently verify any platform's registration before depositing money. | Cut off contact and report to authorities as soon as investment pressure begins.
-Cited source: FBI IC3 (Internet Crime Complaint Center)
+Cited source: FinCEN, "Alert on Prevalent Virtual Currency Investment Scam Commonly Known as 'Pig Butchering'" (FIN-2023-Alert005), September 8, 2023, https://www.fincen.gov/system/files/shared/FinCEN_Alert_Pig_Butchering_FINAL_508c.pdf
 
 ## Scam Database: Advance Fee Loan Scam
 
@@ -578,7 +578,7 @@ Summary: A "guaranteed approval" loan offer, often targeting people with poor cr
 How it works: A lender advertises loans with guaranteed approval regardless of credit history, appealing to people who have been turned down elsewhere. After the victim applies, they're told an upfront payment is required for insurance, processing, or as refundable collateral before the loan can be disbursed, and after that fee is paid the "lender" either invents another fee or disappears entirely, with the promised loan never materializing.
 Red flags: Guaranteed loan approval with no credit check. | A required upfront fee before the loan is disbursed. | Pressure to pay via gift card, wire transfer, or prepaid card. | The lender isn't licensed in your state or has no verifiable physical address.
 Safety tips: Legitimate lenders deduct fees from the loan amount — they don't require payment upfront. | Be suspicious of any lender who guarantees approval without checking your credit. | Verify a lender is licensed to operate in your state. | Never wire money or use gift cards to pay a loan "fee."
-Cited source: FTC Consumer Alerts
+Cited source: Michigan Department of Attorney General, "Advance-Fee Loan Scams," https://www.michigan.gov/consumerprotection/protect-yourself/consumer-alerts/credit/advance-fee-loan-scams
 
 ## Scam Database: Fake Online Store Scam
 
@@ -588,7 +588,7 @@ Summary: A convincing but fraudulent online store, often advertised through soci
 How it works: A scammer builds a professional-looking online store, often advertised through targeted social media ads featuring name-brand products at steep discounts, and copies real product photos and descriptions to appear legitimate. After the victim pays, the store either ships nothing at all, a cheap counterfeit, or an entirely different item, and by the time the victim tries to dispute the charge or contact customer service, the store's contact information is fake or unresponsive, and the site may disappear entirely.
 Red flags: Prices are dramatically lower than any other retailer for the same brand-name item. | The store was discovered through a social media ad rather than a search or direct visit. | No verifiable physical address or working customer service contact. | Checkout only accepts unusual payment methods like wire transfer or cryptocurrency.
 Safety tips: Search the store name plus "scam" or "reviews" before ordering. | Be cautious of prices that are dramatically lower than anywhere else. | Pay with a credit card rather than a debit card or wire transfer for purchase protection. | Check for a real physical address and working customer service contact.
-Cited source: BBB Scam Tracker
+Cited source: Better Business Bureau, "Think twice before buying from these social media ads," https://www.bbb.org/all/social-media-scams/think-twice-before-buying-from-these-social-media-ads
 
 ## Scam Database: Online Marketplace Buyer Scam
 
@@ -598,7 +598,7 @@ Summary: A "buyer" on a marketplace app sends a fake payment confirmation screen
 How it works: A "buyer" contacts a seller on a marketplace app and sends what looks like a payment confirmation screenshot or claims to have overpaid by mistake, then asks the seller to ship the item immediately or refund the "extra" amount before the payment has actually cleared or arrived. Because the seller sees only a fake screenshot or a check that later bounces, they end up shipping merchandise or wiring a refund for money that was never really sent, losing both the item and the "refunded" cash.
 Red flags: A buyer sends a payment screenshot instead of you confirming funds in your own account. | The buyer claims to have accidentally overpaid and asks for a refund of the difference. | Payment arrives as a check for more than the asking price. | Pressure to ship or refund quickly before you've verified the payment cleared.
 Safety tips: Confirm payment has actually landed in your account, not just a screenshot, before shipping anything. | Be suspicious of any buyer who overpays and asks for a refund of the difference. | Meet locally for cash when possible instead of shipping to unverified buyers. | Use the marketplace's built-in, verified payment system rather than outside apps.
-Cited source: BBB Scam Tracker
+Cited source: FTC Consumer Advice, "The bottom line on fake checks scams," https://consumer.ftc.gov/consumer-alerts/2020/02/ftc-bottom-line-fake-checks-scams
 
 ## Scam Database: Fake Job Offer Scam
 
@@ -608,7 +608,7 @@ Summary: A recruiter offers a remote job with little to no interview, then asks 
 How it works: A scammer posts an appealing remote job listing or messages candidates directly, offering a position with little to no real interview process. Once "hired," the victim is asked to pay upfront for training materials, equipment, or a background check, or is sent a check to deposit with instructions to use part of it to purchase equipment from a specific vendor and wire back the remainder — with the original check later bouncing and leaving the victim responsible for the full amount and out any money they wired.
 Red flags: A job offer arrives with minimal or no real interview. | A request to pay for training, equipment, or a background check upfront. | Instructions to deposit a check and wire back a portion of it. | Communication happens only through chat or personal email, never a verifiable company account.
 Safety tips: Be suspicious of any job offer that skips a real interview process. | Never pay upfront for equipment, training, or a background check. | Research the company independently, including looking for a real office and other employees. | Never deposit a check and wire money back to an "employer."
-Cited source: FTC Consumer Alerts
+Cited source: FTC Consumer Advice, "Job Scams," https://consumer.ftc.gov/articles/job-scams
 
 ## Scam Database: Mystery Shopper Check Scam
 
@@ -618,7 +618,7 @@ Summary: A fake mystery shopping job sends the victim a check to deposit, instru
 How it works: A victim is recruited for a "mystery shopping" assignment that involves evaluating the customer service of a money transfer company, and is mailed a check to deposit into their own bank account. They're instructed to keep a portion as payment and wire the rest through the money transfer service as part of the "evaluation," but the original check is fraudulent and takes days or weeks to bounce — well after the wired money is already gone — leaving the victim's bank holding them responsible for the full amount of the bad check.
 Red flags: A "job" that pays by having you deposit a check and wire part of it elsewhere. | The assignment specifically involves evaluating a money transfer or wire service. | The check arrives before any real vetting or interview process. | You're rushed to wire the money quickly after depositing the check.
 Safety tips: Be suspicious of any job that pays you by having you deposit and forward a check. | Remember that a bank clearing a check temporarily doesn't mean it won't later be discovered as fraudulent. | Never wire money based on funds from a check you just deposited. | Verify legitimate mystery shopping companies through the Mystery Shopping Professionals Association.
-Cited source: FTC Consumer Alerts
+Cited source: FTC Consumer Advice, "Mystery Shopping Scams," https://consumer.ftc.gov/articles/mystery-shopping-scams
 
 ## Scam Database: Package Delivery Text Scam
 
@@ -628,7 +628,7 @@ Summary: A text message claims a package couldn't be delivered due to an unpaid 
 How it works: A text message claims a package couldn't be delivered because of a small unpaid fee or an incomplete address, impersonating a well-known carrier like USPS, FedEx, or UPS, and includes a link to "resolve" the issue. The link leads to a fake site styled to match the real carrier's branding, where the victim is prompted to enter payment card details to pay the small fee, which are then captured and can be used for larger unauthorized charges or sold to other scammers.
 Red flags: An unexpected text about a delivery problem or small unpaid fee. | The link goes to a domain that doesn't match the carrier's official website. | Request for full card details to pay a fee of just a dollar or two. | Poor grammar or a generic greeting instead of your name or tracking number.
 Safety tips: Track packages directly through the retailer or carrier's official app or website. | Delivery carriers don't typically require a small fee by text message to redeliver a package. | Don't click links in unexpected delivery texts — go to the official site instead. | Forward suspicious delivery texts to 7726 (SPAM) to report them.
-Cited source: FTC Consumer Alerts
+Cited source: United States Postal Inspection Service, "Smishing: Package Tracking Text Scams," https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams
 
 ## Scam Database: Fake Charity / Disaster Relief Scam
 
@@ -638,7 +638,7 @@ Summary: In the wake of a natural disaster or tragedy, fraudulent charities soli
 How it works: In the immediate aftermath of a hurricane, wildfire, mass shooting, or other tragedy, scammers quickly set up fake charities with names deceptively similar to real, well-known relief organizations and solicit donations through cold calls, texts, social media posts, and crowdfunding pages. They rely on the emotional urgency of the moment to bypass the scrutiny a donor might otherwise apply, collecting donations that never reach any actual disaster victims.
 Red flags: A charity name is very similar to, but slightly different from, a well-known organization. | High-pressure solicitation for immediate donations right after a disaster. | Vague answers about how the donation will specifically be used. | Requests to donate via gift card, wire transfer, or cash only.
 Safety tips: Give directly through a charity's official website rather than through a link in a text or email. | Check a charity's legitimacy on Charity Navigator or the BBB Wise Giving Alliance. | Be wary of high-pressure requests for immediate donations right after a disaster. | Never donate using gift cards or wire transfers.
-Cited source: BBB Scam Tracker
+Cited source: FBI, "Charity and Disaster Fraud," https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/charity-and-disaster-fraud
 
 ## Scam Database: Fake Rental Listing Scam
 
@@ -648,7 +648,7 @@ Summary: A rental listing — sometimes copied from a real property that isn't a
 How it works: A scammer copies photos and details from a real property listing, or invents one entirely, and posts it online at an attractively low price to generate quick interest. When a prospective renter reaches out, the "landlord" always has an excuse for being unavailable to meet in person — out of the country, deployed, or dealing with a family emergency — and pressures the renter to send a security deposit and first month's rent to hold the unit sight unseen, after which the landlord stops responding and the property often turns out not to be for rent at all.
 Red flags: The listed rent is noticeably below market rate for the area. | The landlord is always unavailable to meet in person or show the unit live. | Pressure to send a deposit before viewing the property. | Listing photos match another property listed for sale or rent elsewhere online.
 Safety tips: Never pay a deposit before viewing a property in person or via a verified live video call. | Search the listing photos online to check if they've been copied from another listing. | Verify property ownership through public county property records. | Be suspicious of a landlord who is always "out of the country" or unavailable to meet.
-Cited source: BBB Scam Tracker
+Cited source: FTC Consumer Advice, "Rental Listing Scams," https://consumer.ftc.gov/articles/rental-listing-scams
 
 ## Scam Database: Video Call Deepfake Extortion Scam
 
@@ -658,7 +658,7 @@ Summary: A stranger video calls you out of nowhere (FaceTime, WhatsApp, or simil
 How it works: The scam starts with an unsolicited video call from a number you don't recognize, sometimes with the caller claiming it's a wrong number or pretending to know you. The call is often brief, and the scammer's real goal is just to get a few seconds of your face on camera, which they screen-record. Days or weeks later, using AI image-generation tools, they digitally alter the captured footage into a fabricated image meant to make it look like you did something illegal or deeply shameful. They then contact you demanding immediate, untraceable payment — usually gift cards, wire transfer, or cryptocurrency — threatening to send the fake image to your family, employer, or the police if you don't pay.
 Red flags: An unexpected video call from an unknown or international number that ends abruptly. | The caller seems more focused on getting you on camera than having an actual conversation. | Sudden contact later, out of nowhere, with a threatening message and an attached image. | Extreme urgency paired with a demand for immediate, anonymous payment. | The person refuses to slow down, answer questions, or let you verify anything — pure pressure. | The call often opens with a 'wrong number' or 'do I know you?' pretext to get you talking on camera.
 Safety tips: Don't accept video calls from unknown or unfamiliar numbers — let them go to voicemail. | Cover your camera when it's not in active, intentional use. | Never send money because of a threat alone — the image is fabricated, not real evidence, and paying almost never makes it stop. | Save screenshots of every message and the threat itself as evidence, then block the sender — don't negotiate or engage further. | If a fabricated intimate image is involved, StopNCII.org (for adults 18+) can help get it removed from participating platforms without ever uploading the image itself. | Report it to the FBI's Internet Crime Complaint Center (ic3.gov) and your local police — you are the victim of a crime, not a suspect, and this is a recognized, well-documented scam pattern.
-Cited source: FBI Internet Crime Complaint Center (IC3)
+Cited source: FBI Internet Crime Complaint Center (IC3), "Malicious Actors Manipulating Photos and Videos to Create Explicit Content and Sextortion Schemes," https://www.ic3.gov/PSA/2023/psa230605
 
 ## Scam Database: Task-Based "Gamified" Job Scam
 

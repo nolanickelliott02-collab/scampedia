@@ -32,7 +32,7 @@
         "A grandmother in Ohio sent $9,000 in Target gift cards after a caller claiming to be her grandson said he needed bail money after a DUI arrest.",
         "A retired couple wired $12,000 to a \"lawyer\" after their granddaughter's voice appeared to describe a car accident abroad — the granddaughter was safe at home the entire time."
       ],
-      "source": "FTC Consumer Alerts + VerifyGuard user-submitted reports",
+      "source": "FTC Consumer Advice, \"Family Emergency Scams,\" https://consumer.ftc.gov/all-scams/family-emergency-scams",
       "spreadPlatforms": [
         "Phone Calls",
         "Text Messages",
@@ -69,7 +69,7 @@
         "The \"family member\" avoids or fumbles a question only the real person would know."
       ],
       "realExamples": [],
-      "source": "FBI IC3 (Internet Crime Complaint Center)",
+      "source": "FBI Internet Crime Complaint Center (IC3), 2025 Internet Crime Report, https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",
       "spreadPlatforms": [
         "Phone Calls",
         "Voicemail",
@@ -104,7 +104,7 @@
         "Refusal to let the taxpayer ask questions or call back through an official number."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "IRS.gov, \"How taxpayers can protect themselves from gift card scams,\" https://www.irs.gov/newsroom/how-taxpayers-can-protect-themselves-from-gift-card-scams",
       "spreadPlatforms": [
         "Phone Calls",
         "Email",
@@ -137,7 +137,7 @@
         "Payment is requested via gift card, wire transfer, or a \"protection plan\" subscription."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "FTC Consumer Advice, \"How To Spot, Avoid, and Report Tech Support Scams,\" https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams",
       "spreadPlatforms": [
         "Fake Websites",
         "Phone Calls"
@@ -171,7 +171,7 @@
         "Profile photos are professionally lit, model-like, or reused across other profiles."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "Military Consumer (FTC-affiliated), \"Military Consumers and Romance Scams,\" https://www.militaryconsumer.gov/blog/military-consumers-romance-scams",
       "spreadPlatforms": [
         "Dating Apps",
         "Social Media",
@@ -207,7 +207,7 @@
         "The platform or advisor was found through an unsolicited message or online romantic contact."
       ],
       "realExamples": [],
-      "source": "FBI IC3 (Internet Crime Complaint Center)",
+      "source": "FBI Internet Crime Complaint Center (IC3), \"The FBI Warns of a Spike in Cryptocurrency Investment Schemes,\" https://www.ic3.gov/PSA/2023/psa230314",
       "spreadPlatforms": [
         "Social Media",
         "Dating Apps",
@@ -241,7 +241,7 @@
         "Claims to be a Medicare representative but calls from an unfamiliar or spoofed number."
       ],
       "realExamples": [],
-      "source": "AARP Fraud Watch Network",
+      "source": "HHS Office of Inspector General, \"Fraud Alert: Genetic Testing Scam,\" https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-genetic-testing-scam",
       "spreadPlatforms": [
         "Phone Calls",
         "Text Messages"
@@ -273,7 +273,7 @@
         "Urgency to claim the prize within a short deadline."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "FTC Consumer Advice, \"Don't pay for a prize (scam),\" https://consumer.ftc.gov/consumer-alerts/2025/06/dont-pay-prize-scam",
       "spreadPlatforms": [
         "Phone Calls",
         "Email",
@@ -304,7 +304,7 @@
         "An unusually large charge for a single international call appears on your phone bill."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "Montgomery County (MD) Police Department, \"One Ring Scam,\" https://www.montgomerycountymd.gov/montgomery-county-police-department/how-do-i/frauds-scams/one-ring-scam",
       "spreadPlatforms": [
         "Phone Calls"
       ],
@@ -333,7 +333,7 @@
         "You're later asked to confirm personal or account information on the same or a follow-up call."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "Minnesota Attorney General's Office, \"'Can You Hear Me?' Scam Calls,\" https://www.ag.state.mn.us/consumer/Publications/CanYouHearMe.asp",
       "spreadPlatforms": [
         "Phone Calls"
       ],
@@ -365,7 +365,7 @@
         "Urgency to act immediately to \"stop\" a charge that supposedly is in progress."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "FTC Consumer Advice, \"Got a call about fraud activity on your bank account? It could be a scammer,\" https://consumer.ftc.gov/consumer-alerts/2024/06/got-call-about-fraud-activity-your-bank-account-it-could-be-scammer",
       "spreadPlatforms": [
         "Text Messages",
         "Phone Calls"
@@ -398,7 +398,7 @@
         "Use of official-sounding badge or case numbers to sound legitimate."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "FTC Consumer Advice, \"Did you get a call or email saying you missed jury duty and need to pay? It's a scam,\" https://consumer.ftc.gov/consumer-alerts/2024/09/did-you-get-call-or-email-saying-you-missed-jury-duty-and-need-pay-its-scam",
       "spreadPlatforms": [
         "Phone Calls"
       ],
@@ -431,7 +431,7 @@
         "Threats of arrest or loss of benefits for not complying immediately."
       ],
       "realExamples": [],
-      "source": "AARP Fraud Watch Network",
+      "source": "Social Security Administration, \"Protect Yourself from Social Security Scams,\" https://www.ssa.gov/scam/",
       "spreadPlatforms": [
         "Phone Calls",
         "Voicemail"
@@ -463,7 +463,7 @@
         "Unexplained mail from unfamiliar state unemployment agencies."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "U.S. Department of Labor, \"Report Unemployment Identity Fraud,\" https://www.dol.gov/agencies/eta/UIIDtheft",
       "spreadPlatforms": [
         "Fake Websites",
         "Email"
@@ -493,7 +493,7 @@
         "Contact came from an unsolicited call, text, or social media ad rather than your actual loan servicer."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "FTC Consumer Advice, \"Scammers follow the news about student loan forgiveness,\" https://consumer.ftc.gov/consumer-alerts/2024/04/scammers-follow-news-about-student-loan-forgiveness",
       "spreadPlatforms": [
         "Phone Calls",
         "Email",
@@ -526,7 +526,7 @@
         "Caller ID spoofed to appear as a government agency."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "USCIS, \"Common Scams,\" https://www.uscis.gov/scams-fraud-and-misconduct/avoid-scams/common-scams",
       "spreadPlatforms": [
         "Phone Calls"
       ],
@@ -559,7 +559,7 @@
         "A link that, when hovered over, points to an unfamiliar or misspelled domain."
       ],
       "realExamples": [],
-      "source": "FBI IC3 (Internet Crime Complaint Center)",
+      "source": "FTC Consumer Advice, \"How To Recognize and Avoid Phishing Scams,\" https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams",
       "spreadPlatforms": [
         "Email"
       ],
@@ -591,7 +591,7 @@
         "A request to enter a password or one-time code on the linked page."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "Federal Communications Commission, \"How to Identify and Avoid Package Delivery Scams,\" https://www.fcc.gov/how-identify-and-avoid-package-delivery-scams",
       "spreadPlatforms": [
         "Text Messages"
       ],
@@ -622,7 +622,7 @@
         "You're asked for card details on a page that doesn't match the business's usual branding."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "FTC Consumer Advice, \"See a QR code parked somewhere? Don't scan it...yet!\" September 2026, https://consumer.ftc.gov/consumer-alerts/2026/09/see-qr-code-parked-somewhere-dont-scan-ityet",
       "spreadPlatforms": [
         "Fake Websites",
         "Text Messages"
@@ -654,7 +654,7 @@
         "A phone number displayed to call for \"immediate removal.\""
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "Federal Trade Commission, \"Operator of Deceptive 'Scareware' Scheme Will Pay More than $8 Million to Settle FTC Charges,\" https://www.ftc.gov/news-events/news/press-releases/2011/01/operator-deceptive-scareware-scheme-will-pay-more-8-million-settle-ftc-charges",
       "spreadPlatforms": [
         "Fake Websites"
       ],
@@ -685,7 +685,7 @@
         "The friend is unreachable by phone or other means to confirm the request."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "FTC Consumer Advice, \"That friend request could be from a scammer,\" https://consumer.ftc.gov/consumer-alerts/2023/10/friend-request-could-be-scammer",
       "spreadPlatforms": [
         "Social Media"
       ],
@@ -717,7 +717,7 @@
         "You're locked out of accounts that use text messages for two-factor authentication."
       ],
       "realExamples": [],
-      "source": "FBI IC3 (Internet Crime Complaint Center)",
+      "source": "FTC Consumer Advice, \"SIM Swap Scams: How to Protect Yourself,\" https://consumer.ftc.gov/consumer-alerts/2019/10/sim-swap-scams-how-protect-yourself",
       "spreadPlatforms": [
         "Phone Calls"
       ],
@@ -749,7 +749,7 @@
         "The \"kidnapped\" person's voice sounds distorted, distant, or slightly off."
       ],
       "realExamples": [],
-      "source": "FBI IC3 (Internet Crime Complaint Center)",
+      "source": "FBI Internet Crime Complaint Center (IC3), \"Criminals Using Altered Proof-of-Life Media to Extort Victims in Virtual Kidnapping for Ransom Scams,\" https://www.ic3.gov/PSA/2025/PSA251205",
       "spreadPlatforms": [
         "Phone Calls"
       ],
@@ -781,7 +781,7 @@
         "The ad links to an unfamiliar trading platform or \"double your money\" giveaway."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "Federal Trade Commission, \"FTC Proposes New Protections to Combat AI Impersonation of Individuals,\" February 2024, https://www.ftc.gov/news-events/news/press-releases/2024/02/ftc-proposes-new-protections-combat-ai-impersonation-individuals",
       "spreadPlatforms": [
         "Social Media",
         "Fake Websites"
@@ -814,7 +814,7 @@
         "The relationship eventually pivots toward an investment tip or financial request."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "Federal Trade Commission, \"FTC Launches Inquiry into AI Chatbots Acting as Companions,\" September 2025, https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions",
       "spreadPlatforms": [
         "Dating Apps",
         "Social Media"
@@ -847,7 +847,7 @@
         "A reverse image search shows the photos belong to someone else entirely."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "FTC Consumer Advice, \"What To Know About Romance Scams,\" https://consumer.ftc.gov/articles/what-know-about-romance-scams",
       "spreadPlatforms": [
         "Dating Apps",
         "Social Media"
@@ -879,7 +879,7 @@
         "Demands continue or increase even after a payment is made."
       ],
       "realExamples": [],
-      "source": "FBI IC3 (Internet Crime Complaint Center)",
+      "source": "FBI, \"Sextortion,\" https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/sextortion",
       "spreadPlatforms": [
         "Social Media",
         "Dating Apps",
@@ -912,7 +912,7 @@
         "Difficulty or delays when trying to withdraw funds."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "Investor.gov (U.S. SEC), \"Ponzi Schemes,\" https://www.investor.gov/additional-resources/general-resources/glossary/ponzi-schemes",
       "spreadPlatforms": [
         "Social Media",
         "Email"
@@ -944,7 +944,7 @@
         "Pressure to buy immediately before \"it's too late.\""
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "Investor.gov (U.S. SEC), \"Social Media and Stock Tip Scams – Investor Alert,\" https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/social-media-stock-scams",
       "spreadPlatforms": [
         "Social Media",
         "Email",
@@ -978,7 +978,7 @@
         "Customer support is unreachable except through the same contact who introduced the app."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "FINRA, \"Be Alert to Signs of Imposter Investment Scams,\" https://www.finra.org/investors/insights/be-alert-signs-imposter-investment-scams",
       "spreadPlatforms": [
         "Social Media",
         "Fake Websites"
@@ -1011,7 +1011,7 @@
         "The platform is unfamiliar and was recommended only by this one contact."
       ],
       "realExamples": [],
-      "source": "FBI IC3 (Internet Crime Complaint Center)",
+      "source": "FinCEN, \"Alert on Prevalent Virtual Currency Investment Scam Commonly Known as 'Pig Butchering'\" (FIN-2023-Alert005), September 8, 2023, https://www.fincen.gov/system/files/shared/FinCEN_Alert_Pig_Butchering_FINAL_508c.pdf",
       "spreadPlatforms": [
         "Dating Apps",
         "Social Media",
@@ -1044,7 +1044,7 @@
         "The lender isn't licensed in your state or has no verifiable physical address."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "Michigan Department of Attorney General, \"Advance-Fee Loan Scams,\" https://www.michigan.gov/consumerprotection/protect-yourself/consumer-alerts/credit/advance-fee-loan-scams",
       "spreadPlatforms": [
         "Phone Calls",
         "Email",
@@ -1077,7 +1077,7 @@
         "Checkout only accepts unusual payment methods like wire transfer or cryptocurrency."
       ],
       "realExamples": [],
-      "source": "BBB Scam Tracker",
+      "source": "Better Business Bureau, \"Think twice before buying from these social media ads,\" https://www.bbb.org/all/social-media-scams/think-twice-before-buying-from-these-social-media-ads",
       "spreadPlatforms": [
         "Social Media",
         "Fake Websites"
@@ -1110,7 +1110,7 @@
         "Pressure to ship or refund quickly before you've verified the payment cleared."
       ],
       "realExamples": [],
-      "source": "BBB Scam Tracker",
+      "source": "FTC Consumer Advice, \"The bottom line on fake checks scams,\" https://consumer.ftc.gov/consumer-alerts/2020/02/ftc-bottom-line-fake-checks-scams",
       "spreadPlatforms": [
         "Fake Websites",
         "Text Messages"
@@ -1142,7 +1142,7 @@
         "Communication happens only through chat or personal email, never a verifiable company account."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "FTC Consumer Advice, \"Job Scams,\" https://consumer.ftc.gov/articles/job-scams",
       "spreadPlatforms": [
         "Email",
         "Social Media",
@@ -1176,7 +1176,7 @@
         "You're rushed to wire the money quickly after depositing the check."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "FTC Consumer Advice, \"Mystery Shopping Scams,\" https://consumer.ftc.gov/articles/mystery-shopping-scams",
       "spreadPlatforms": [
         "Email",
         "Fake Websites"
@@ -1208,7 +1208,7 @@
         "Poor grammar or a generic greeting instead of your name or tracking number."
       ],
       "realExamples": [],
-      "source": "FTC Consumer Alerts",
+      "source": "United States Postal Inspection Service, \"Smishing: Package Tracking Text Scams,\" https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams",
       "spreadPlatforms": [
         "Text Messages"
       ],
@@ -1237,7 +1237,7 @@
         "Requests to donate via gift card, wire transfer, or cash only."
       ],
       "realExamples": [],
-      "source": "BBB Scam Tracker",
+      "source": "FBI, \"Charity and Disaster Fraud,\" https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/charity-and-disaster-fraud",
       "spreadPlatforms": [
         "Phone Calls",
         "Social Media",
@@ -1268,7 +1268,7 @@
         "Listing photos match another property listed for sale or rent elsewhere online."
       ],
       "realExamples": [],
-      "source": "BBB Scam Tracker",
+      "source": "FTC Consumer Advice, \"Rental Listing Scams,\" https://consumer.ftc.gov/articles/rental-listing-scams",
       "spreadPlatforms": [
         "Fake Websites",
         "Email",
@@ -1305,7 +1305,7 @@
         "The call often opens with a 'wrong number' or 'do I know you?' pretext to get you talking on camera."
       ],
       "realExamples": [],
-      "source": "FBI Internet Crime Complaint Center (IC3)",
+      "source": "FBI Internet Crime Complaint Center (IC3), \"Malicious Actors Manipulating Photos and Videos to Create Explicit Content and Sextortion Schemes,\" https://www.ic3.gov/PSA/2023/psa230605",
       "spreadPlatforms": [
         "Video Calls (FaceTime/WhatsApp)",
         "Text Messages",
