@@ -68,6 +68,21 @@ jobs:
               }))
             ')" \
             || echo "Email alert failed, continuing anyway."
+      - name: Save triage-rejected candidate to the review queue
+        # Same gap as daily-scam-entry.yml's identical step, found
+        # 2026-09-13 — writeToReviewQueue() only writes to this runner's own
+        # disk; without a commit here, a needs-review result left zero
+        # durable record and zero real notification (the email above goes
+        # through the same SendGrid pipeline already confirmed dead). The
+        # pull --rebase guards the same rare race as the publish step below.
+        if: steps.generate.outputs.result == 'needs-review'
+        run: |
+          git config user.name "scampedia-bot"
+          git config user.email "actions@github.com"
+          git add review/
+          git commit -m "Queue for review: ${{ steps.generate.outputs.reviewPath }}" -m "Reason: ${{ steps.generate.outputs.reason }}" -m "Government-sourced candidate (gov-scam-scan)"
+          git pull --rebase origin main
+          git push origin main
       - name: Rebuild static scam pages
         # Also rebuilds /learn/ (build:learn) — see the identical step in
         # daily-scam-entry.yml for why build:scams alone silently erases
