@@ -334,7 +334,7 @@ function indexPageHtml(numberedLessons, crisisPages) {
     </div>
 
     <p class="course-lead">
-      Part of Scampedia's scam-database work${scamCount ? ` — ${scamCount}+ real, documented scams and counting` : ''} — and the same real-time detection used in the <a href="https://officialverifyguard.com">VerifyGuard app</a>. Every fact here that can go out of date (which tool to use, which number to call) is checked against its real, current source before it's published, and reviewed on a set schedule — the "Last reviewed" date on each lesson is real, not a deploy timestamp.
+      Part of Scampedia's scam-database work${scamCount ? ` — ${scamCount}+ real, documented scams and counting` : ''} — and the same real-time detection used in the <a href="https://apps.apple.com/us/app/verifyguard-scam-detector/id6794175364">VerifyGuard app</a>. Every fact here that can go out of date (which tool to use, which number to call) is checked against its real, current source before it's published, and reviewed on a set schedule — the "Last reviewed" date on each lesson is real, not a deploy timestamp.
     </p>
     ${crisisHtml ? `<div class="course-list">${crisisHtml}</div><div style="margin-bottom:32px"></div>` : ''}
     <div class="course-list">${listHtml}</div>

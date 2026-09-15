@@ -1,6 +1,6 @@
 # Content Review Queue
 
-Generated 2026-09-13 by `scripts/check-content-health.js`. Sorted soonest-due first. Re-run after any content change.
+Generated 2026-09-15 by `scripts/check-content-health.js`. Sorted soonest-due first. Re-run after any content change.
 
 ## Lessons — reviewBy date
 
@@ -18,11 +18,11 @@ Generated 2026-09-13 by `scripts/check-content-health.js`. Sorted soonest-due fi
 
 | Age | Key | checkUrl | Status |
 |---|---|---|---|
-| 36d | reverse-image-search-iphone-steps | https://support.google.com/websearch/answer/1325808?hl=en&co=GENIE.Platform%3DiOS | ok |
-| 36d | reverse-image-search-desktop-steps | https://support.google.com/websearch/answer/1325808?hl=en&co=GENIE.Platform%3DDesktop | ok |
-| 36d | crisis-reporting-resources | https://reportfraud.ftc.gov/ | ok |
-| 35d | c2pa-verify-tool | https://verify.contentauthenticity.org/ | ok |
-| 35d | c2pa-metadata-limitations | https://c2pa.org/faqs/ | ok |
+| 38d | reverse-image-search-iphone-steps | https://support.google.com/websearch/answer/1325808?hl=en&co=GENIE.Platform%3DiOS | ok |
+| 38d | reverse-image-search-desktop-steps | https://support.google.com/websearch/answer/1325808?hl=en&co=GENIE.Platform%3DDesktop | ok |
+| 38d | crisis-reporting-resources | https://reportfraud.ftc.gov/ | ok |
+| 37d | c2pa-verify-tool | https://verify.contentauthenticity.org/ | ok |
+| 37d | c2pa-metadata-limitations | https://c2pa.org/faqs/ | ok |
 
 ## Screenshots — assets/learn/
 
