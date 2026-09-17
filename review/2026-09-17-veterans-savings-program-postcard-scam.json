@@ -1,0 +1,54 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "62",
+    "slug": "veterans-savings-program-postcard-scam",
+    "title": "\"Veterans Savings Program\" Postcard Scam",
+    "summary": "Scammers are mailing veterans official-looking postcards claiming they qualify for extra money through a fake \"Veterans Savings Program,\" pressuring them to call a number and hand over Social Security and bank details.",
+    "category": "Government Scam",
+    "firstReported": "2025-08-01",
+    "relatedScams": [],
+    "safetyTips": [
+      "Do not call the number printed on the postcard; instead contact the VA Benefits Hotline directly at 1-800-827-1000",
+      "Never give your Social Security number or bank details to someone who contacted you first",
+      "Remember that legitimate VA communications will not pressure you to respond immediately or share sensitive information over the phone",
+      "Verify any benefit offer by going directly to VA.gov or calling a number you know is real",
+      "Report suspicious postcards to the FTC at ReportFraud.ftc.gov and to the VA at VSAFE.gov or 1-833-38V-SAFE"
+    ],
+    "datePublished": "2026-09-17T19:56:51.934Z",
+    "howItWorks": "Fraudsters send physical postcards to veterans that mimic official VA mail, referencing real benefit programs like CHAMPVA or TRICARE For Life to appear legitimate and even listing the veteran's home state to add credibility. The postcard promises \"extra money\" through a so-called Veterans Savings Program (which does not exist) and urges the recipient to call a phone number immediately or risk missing out. Once a veteran calls, the scammer on the line pressures them to provide sensitive information such as their Social Security number or bank account details under the guise of processing the \"benefit.\"",
+    "redFlags": [
+      "Postcard advertises a 'Veterans Savings Program' — a program that does not actually exist",
+      "Message creates urgency, insisting you call right away or lose out on funds",
+      "Request to call an unfamiliar phone number rather than contacting the VA directly",
+      "Caller asks for a Social Security number or bank account information over the phone",
+      "Mail mimics real VA benefit names (like CHAMPVA or TRICARE For Life) to appear more legitimate"
+    ],
+    "realExamples": [
+      "The FTC and Military Consumer issued a joint alert describing scammers mailing postcards promising a fake 'Veterans Savings Program' and referencing real VA benefits like CHAMPVA and TRICARE For Life to seem legitimate.",
+      "The scam postcards arrived around the same time as a legitimate VA mailing: from Aug. 13 through Sept. 11, the VA sent 'Choose VA' postcards to 3.8 million veterans not enrolled in VA healthcare, creating confusion between the real and fake mailings.",
+      "The FTC and American Legion issued warnings that the fake postcard program was designed specifically to steal veterans' Social Security numbers and bank information."
+    ],
+    "source": "FTC Consumer Advice, https://consumer.ftc.gov/consumer-alerts/2026/08/how-spot-postcard-scam-targeting-veterans",
+    "spreadPlatforms": [
+      "Postal Mail",
+      "Phone"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "other",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Veterans Postcard Scam"
+    ],
+    "confidence": 0.3,
+    "reasoning": "The candidate describes a specific postcard-based scam targeting veterans referencing CHAMPVA/TRICARE, distinct from the existing Medicare/Health Insurance Scam entry which targets a different population and channel; however, the provided source text is mostly unrelated FTC website boilerplate/navigation content and does not actually substantiate the postcard scam's details, so this claim could not be verified from the source itself."
+  },
+  "queuedAt": "2026-09-17T19:56:59.024Z"
+}
