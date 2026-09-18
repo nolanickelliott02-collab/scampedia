@@ -69,27 +69,31 @@ jobs:
               }))
             ')" \
             || echo "Email alert failed, continuing anyway."
-      - name: Save triage-rejected candidate to the review queue
+      - name: Save any triage-rejected candidates to the review queue
         # Same gap as daily-scam-entry.yml's identical step, found
         # 2026-09-13 — writeToReviewQueue() only writes to this runner's own
         # disk; without a commit here, a needs-review result left zero
-        # durable record and zero real notification (the email above goes
-        # through the same SendGrid pipeline already confirmed dead). The
-        # pull --rebase guards the same rare race as the publish step below.
-        if: steps.generate.outputs.result == 'needs-review'
-        env:
-          # env: + "$VAR", not ${{ }} spliced into the script — see the
-          # identical comment in daily-scam-entry.yml's equivalent step for
-          # the real production break (2026-09-18) that motivated this.
-          REVIEW_PATH: ${{ steps.generate.outputs.reviewPath }}
-          REASON: ${{ steps.generate.outputs.reason }}
+        # durable record and zero real notification. Runs unconditionally
+        # (if: always()) as of 2026-09-18, not gated on result ==
+        # 'needs-review' — see the fuller comment on daily-scam-entry.yml's
+        # identical step for why: maxAttempts > 1 means the run's *final*
+        # result no longer reliably says whether review/ has anything new,
+        # confirmed for real the same day this bot's own run wrote two
+        # review files from two separate attempts. The pull --rebase guards
+        # the same rare race as the publish step below; the diff-check guard
+        # makes this a fast no-op on a run with nothing new.
+        if: always()
         run: |
           git config user.name "scampedia-bot"
           git config user.email "actions@github.com"
           git add review/
-          git commit -m "Queue for review: $REVIEW_PATH" -m "Reason: $REASON" -m "Government-sourced candidate (gov-scam-scan)"
-          git pull --rebase origin main
-          git push origin main
+          if git diff --cached --quiet; then
+            echo "No new review-queue files this run."
+          else
+            git commit -m "Queue candidate(s) for review from this run (gov-scam-scan)"
+            git pull --rebase origin main
+            git push origin main
+          fi
       - name: Rebuild static scam pages
         # Also rebuilds /learn/ (build:learn) — see the identical step in
         # daily-scam-entry.yml for why build:scams alone silently erases
