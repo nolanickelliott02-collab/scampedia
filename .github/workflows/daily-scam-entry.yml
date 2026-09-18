@@ -19,11 +19,19 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     # No job here had an explicit timeout — GitHub's default is 360 minutes.
-    # Worst case today (8 model turns, a couple of citation/relevance checks
-    # each with up to 3 retry attempts at a 10s timeout) is a few minutes;
-    # 10 gives real headroom without leaving a hung run tying up the
+    # One attempt (8 model turns, a couple of citation/relevance checks each
+    # with up to 3 retry attempts at a 10s timeout) is a few minutes; 10
+    # gave real headroom for that without leaving a hung run tying up the
     # schedule for six hours before GitHub kills it itself.
-    timeout-minutes: 10
+    #
+    # Raised 10 -> 30 on 2026-09-18: maxAttempts: 3 (added the same day as
+    # the per-run cap it replaced) means a run that actually finds and
+    # processes multiple real candidates can genuinely take up to ~3x as
+    # long — confirmed for real the same day a manually-dispatched run hit
+    # the old 10-minute cap mid-run ("The job has exceeded the maximum
+    # execution time") and got killed. 30 is that same "one attempt's
+    # headroom" budget, multiplied by maxAttempts, not a guess.
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -184,7 +192,15 @@ jobs:
         # here means this step runs whenever ANY earlier step in this job
         # failed, regardless of which one — the one signal that should
         # never depend on someone coincidentally noticing.
-        if: failure()
+        #
+        # || cancelled() added the same day: a real run got silently killed
+        # by the job's own timeout-minutes (confirmed via "The job has
+        # exceeded the maximum execution time"), and GitHub Actions'
+        # failure() alone does NOT return true for a timeout-cancellation —
+        # only for an actual step failure. Without cancelled() here, that
+        # exact case (the whole run just vanishing partway through, no
+        # RUN_SUMMARY_JSON at all) would have gone unreported too.
+        if: failure() || cancelled()
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

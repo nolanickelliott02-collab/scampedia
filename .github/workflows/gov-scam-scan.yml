@@ -23,8 +23,9 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    # See the identical comment in daily-scam-entry.yml.
-    timeout-minutes: 10
+    # See the identical comment in daily-scam-entry.yml, including the
+    # 2026-09-18 raise from 10 to 30 for maxAttempts: 3.
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -141,7 +142,10 @@ jobs:
         # Same reasoning as the identical step in daily-scam-entry.yml —
         # found 2026-09-18 when this exact bot's job failed for a real
         # reason (a quoting bug) and nobody found out except by chance.
-        if: failure()
+        # || cancelled() covers a timeout-kill too — see the fuller comment
+        # on daily-scam-entry.yml's identical step for why failure() alone
+        # doesn't catch that case.
+        if: failure() || cancelled()
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
