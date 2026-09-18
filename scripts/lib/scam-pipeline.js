@@ -221,12 +221,45 @@ function significantWords(text) {
   )];
 }
 
-function stripHtmlToText(html) {
+// Found 2026-09-18: this used to strip tags from the WHOLE document with no
+// attempt to isolate the real article from surrounding site chrome — for a
+// page like consumer.ftc.gov with heavy nav/header/footer markup, the
+// resulting "source text" handed to checkContentRelevance/triageCandidate/
+// factCheckClaims was mostly cookie-banner and menu boilerplate
+// ("skip to main content", "here's how you know", ...) with the real
+// article content buried or absent. Confirmed live: a real, correctly-cited
+// FTC pet-scam article's relevance check technically passed (title words
+// matched *somewhere* in the noise) but the sourceText itself was garbage —
+// which then starves the fact-check pass of real content to verify claims
+// against, very plausibly behind a meaningful share of this week's
+// "source doesn't actually contain the claimed content" false rejections
+// on otherwise-real, well-cited candidates.
+//
+// Prefer a real content container (<main>, then <article>) if the page has
+// one — most modern sites, including consumer.ftc.gov, do. Falling back to
+// stripping <nav>/<header>/<footer>/<aside> out of the whole document before
+// flattening if neither container is found, rather than assuming the whole
+// body is safe to flatten as before.
+function extractMainContent(html) {
+  const main = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
+  if (main && main[1].trim().length > 200) return main[1];
+  const article = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
+  if (article && article[1].trim().length > 200) return article[1];
   return html
+    .replace(/<nav[\s\S]*?<\/nav>/gi, ' ')
+    .replace(/<header[\s\S]*?<\/header>/gi, ' ')
+    .replace(/<footer[\s\S]*?<\/footer>/gi, ' ')
+    .replace(/<aside[\s\S]*?<\/aside>/gi, ' ');
+}
+
+function stripHtmlToText(html) {
+  return extractMainContent(html)
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
     .replace(/<style[\s\S]*?<\/style>/gi, ' ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&[a-z]+;|&#\d+;/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
     .toLowerCase();
 }
 
