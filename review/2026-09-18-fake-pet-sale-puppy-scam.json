@@ -1,0 +1,57 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "62",
+    "slug": "fake-pet-sale-puppy-scam",
+    "title": "Fake Pet Sale / Puppy Scam",
+    "summary": "Scammers post fake online ads for puppies and other pets, take payment for an animal that doesn't exist, then vanish with the money.",
+    "category": "Shopping Scam",
+    "firstReported": "2014-11-01",
+    "relatedScams": [],
+    "safetyTips": [
+      "Consider adopting from a local rescue or animal shelter instead of buying from an online ad",
+      "Research the breeder, rescue, or shelter online before sending any payment, and look for reviews or complaints",
+      "Never pay by gift card, payment app, cryptocurrency, or wire transfer for a pet purchase since that money is very hard to recover",
+      "Insist on picking up the animal yourself or meeting the seller in person rather than relying on shipping",
+      "Be skeptical of any request for additional 'permit' or delay fees after you've already paid — legitimate government agencies do not charge fees for pet movement within the U.S."
+    ],
+    "datePublished": "2026-09-18T01:29:24.805Z",
+    "howItWorks": "Scammers place attractive ads — especially for purebred puppies — online or on streetcorners, often pricing them far below market value to create urgency to act fast before the animal is \"gone.\" After a buyer agrees to purchase and sends money, the seller may introduce a shipping arrangement with a third-party \"transporter\" who then contacts the buyer demanding additional upfront fees that keep increasing, sometimes claiming the animal is being held at a stopover and needs a special government permit fee to continue. In reality, no pet exists, no transporter is coming, and every payment sent — whether by gift card, payment app, cryptocurrency, or wire transfer — disappears along with the seller.\n\nThe FTC notes that after payment, the buyer's supposed pet and the \"breeder\" simply vanish along with the cash.",
+    "redFlags": [
+      "Prices advertised far below normal cost for the breed to create urgency",
+      "Seller pushes you to act fast before the pet is gone",
+      "Requests to pay only by gift card, payment app, cryptocurrency, or wire transfer service like Western Union or MoneyGram",
+      "A 'transporter' contacts you after purchase asking for extra, escalating fees for permits, shipping, or a stopover delay",
+      "Seller cannot arrange for local pickup or an in-person visit to see the animal"
+    ],
+    "realExamples": [
+      "FTC's December 2024 consumer alert describing ads for purebred puppies priced at a few hundred dollars when they normally cost thousands, pressuring buyers to act quickly",
+      "Indiana State Board of Animal Health warning describing transporters who contact buyers post-sale demanding escalating fees, including a fake claim that the animal is detained during a stopover and needs a government permit fee",
+      "New York Department of State's Division of Consumer Protection alert citing reports that a large share of sponsored pet ads may be fake, with buyers losing money or receiving a sick, stolen, or different animal than advertised"
+    ],
+    "source": "FTC Consumer Advice, \"Getting a pet? Avoid scams\" - https://consumer.ftc.gov/consumer-alerts/2024/12/getting-pet-avoid-scams",
+    "spreadPlatforms": [
+      "Online Classified Ads",
+      "Social Media",
+      "Streetcorner Flyers/Ads",
+      "Websites and Listservs"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "new",
+    "severity": "medium",
+    "urgency": "low",
+    "sourceCredibility": "other",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Puppy Scam"
+    ],
+    "confidence": 0.4,
+    "reasoning": "The candidate describes a distinct pet-sale/puppy scam pattern not matching existing shopping scam entries like Fake Online Store or Online Marketplace Buyer Scam. However, the provided source text is a generic FTC consumer alerts page listing unrelated scam topics (car dealership spoofing, tax debt, QR codes, jury duty) and does not actually contain the puppy/pet scam content or the FTC quote claimed in the summary, so the citation cannot be verified against the given source."
+  },
+  "queuedAt": "2026-09-18T01:29:29.947Z"
+}

@@ -1,0 +1,58 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "62",
+    "slug": "fake-online-pet-sale-scam",
+    "title": "Fake Online Pet Sale Scam",
+    "summary": "Scammers post fake online or streetcorner ads for puppies and other pets at bargain prices, then demand upfront payment through untraceable methods before disappearing without ever delivering an animal.",
+    "category": "Shopping Scam",
+    "firstReported": "2014-11-01",
+    "relatedScams": [],
+    "safetyTips": [
+      "Research the seller by searching their name or business online along with words like 'review,' 'scam,' or 'complaint'",
+      "Do a reverse image search on the pet's photo to check whether it has been copied from another site",
+      "Insist on an in-person or video visit with the actual animal before paying anything",
+      "Never pay with a gift card, wire transfer, payment app, or cryptocurrency for a pet purchase",
+      "Consider adopting from a local rescue or animal shelter instead of an online seller",
+      "Report suspected pet scams to the FTC at ReportFraud.ftc.gov"
+    ],
+    "datePublished": "2026-09-18T01:25:30.155Z",
+    "howItWorks": "According to the FTC, scammers post ads (particularly for puppies) on social media, marketplace sites, or streetcorners, advertising purebred animals for a few hundred dollars when they normally cost thousands, and pressure buyers to act fast before the pet is \"gone.\" The scammer relies on an appealing photo to draw the buyer in and insists on payment up front. Once payment is sent, the buyer never receives the pet, who may not even exist, and the money is gone. Some variations add extra \"surprise\" fees, such as claims that the animal is stuck at a shipping stopover and needs additional payment for permits or transport, which government agencies do not actually charge for domestic pet movement.",
+    "redFlags": [
+      "Seller insists on payment before you can see or meet the pet in person or by video",
+      "Price seems far below what that breed normally costs and the seller pushes you to act fast",
+      "Payment is only accepted via gift card, payment app, cryptocurrency, or wire transfer service like Western Union or MoneyGram",
+      "Additional 'surprise' fees appear after payment, such as shipping, permits, or customs charges",
+      "The pet's photo turns up elsewhere online in a reverse image search, suggesting it was stolen from another listing"
+    ],
+    "realExamples": [
+      "FTC alert describing ads for purebred puppies priced at a few hundred dollars when they typically cost thousands, pressuring buyers to pay upfront before the puppy is sold to someone else",
+      "Pattern of sellers arranging pet transportation and then contacting buyers for repeated extra fees, claiming the animal is detained during a shipping stopover and needs a permit fee, as described by state animal health officials"
+    ],
+    "source": "FTC Consumer Advice, \"Getting a pet? Avoid scams,\" https://consumer.ftc.gov/consumer-alerts/2024/12/getting-pet-avoid-scams",
+    "spreadPlatforms": [
+      "Social Media",
+      "Online Marketplaces",
+      "Classified Ads Websites",
+      "Streetcorner/Physical Flyers"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "new",
+    "severity": "medium",
+    "urgency": "low",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Puppy Scam",
+      "Pet Adoption Scam"
+    ],
+    "confidence": 0.55,
+    "reasoning": "This is a specific pet-sale scam pattern not covered by existing generic titles like Fake Online Store Scam or Online Marketplace Buyer Scam, which focus on different mechanics (fake storefronts, buyer-side scams). However, the actual source text provided is FTC's general consumer alerts page and does not contain the specific pet scam details claimed in the candidate summary/how-it-works, so the claims cannot be verified against the given source text."
+  },
+  "queuedAt": "2026-09-18T01:25:38.020Z"
+}
