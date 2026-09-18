@@ -1,6 +1,6 @@
 {
-  "version": 33,
-  "lastUpdated": "2026-09-18T21:55:36.058Z",
+  "version": 34,
+  "lastUpdated": "2026-09-18T21:58:18.049Z",
   "reports": [
     {
       "id": "1",
@@ -2228,6 +2228,43 @@
         "Online Job Ads"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "65",
+      "slug": "fake-online-pet-sale-scam",
+      "title": "Fake Online Pet Sale Scam",
+      "summary": "Scammers post fake ads for puppies and other pets, often priced far below what the breed normally costs, then demand upfront payment through untraceable methods before disappearing without ever delivering an animal.",
+      "category": "Shopping Scam",
+      "firstReported": "2024-12-01",
+      "relatedScams": [],
+      "safetyTips": [
+        "Research the seller by searching their name or business online along with words like \"review,\" \"scam,\" or \"complaint\"",
+        "Watch how you're asked to pay \u2014 only scammers insist on gift cards, a payment app, cryptocurrency, or a wire transfer service like Western Union or MoneyGram, since that money is hard to get back",
+        "Consider adopting from a local rescue or animal shelter instead, where you can often adopt for a small fee",
+        "If you already sent money to a scammer, look up what steps you can still take to try to recover it",
+        "Report suspected pet scams to the FTC at ReportFraud.ftc.gov"
+      ],
+      "datePublished": "2026-09-18T21:45:00.000Z",
+      "howItWorks": "Scammers post ads, particularly for puppies, on social media, online marketplaces, or streetcorner flyers, using an appealing photo to draw buyers in. The animals are often priced at a few hundred dollars when that breed would normally cost thousands, and the listing pressures buyers to act fast before the pet is gone. The scammer insists on payment up front, before any in-person meeting or video call with the animal. Once payment is sent, the buyer never receives the pet, who may not even exist, and the money is gone for good.",
+      "redFlags": [
+        "Seller insists on payment before you can see or meet the pet in person or by video",
+        "Price seems far below what that breed normally costs, and the seller pushes you to act fast before it's gone",
+        "Payment is only accepted via gift card, payment app, cryptocurrency, or a wire transfer service like Western Union or MoneyGram",
+        "Little or no information available when you search the seller's name or business online"
+      ],
+      "realExamples": [
+        "The FTC's own December 2024 consumer alert describes exactly this pattern: purebred puppies advertised for a few hundred dollars when they typically cost thousands, with sellers pushing buyers to act fast before the animal goes to someone else",
+        "The same FTC alert warns that paying with a gift card, payment app, cryptocurrency, or wire transfer service is the clearest sign of a scam, since those payment methods are specifically what make it so hard to ever get the money back"
+      ],
+      "source": "FTC Consumer Advice, \"Getting a pet? Avoid scams,\" December 2024, https://consumer.ftc.gov/consumer-alerts/2024/12/getting-pet-avoid-scams",
+      "spreadPlatforms": [
+        "Social Media",
+        "Online Marketplaces",
+        "Classified Ads Websites",
+        "Streetcorner Flyers"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
