@@ -173,3 +173,36 @@ jobs:
             -H "x-notify-secret: $NOTIFY_SECRET" \
             -d "$(node -e 'console.log(JSON.stringify({title: process.env.ENTRY_TITLE, summary: process.env.ENTRY_SUMMARY, slug: process.env.ENTRY_SLUG}))')" \
             || echo "Push notification failed, continuing anyway."
+      - name: Alert on a real job failure (any step, not just "didn't publish")
+        # Found 2026-09-18: a real bug (quoting — see the commit that added
+        # env: to the two git-commit steps above) broke a step and lost a
+        # real candidate, and nobody found out except by chance — the
+        # "Email me if nothing published today" step only watches the
+        # *generate* step's own outcome (skip/gate-rejected/needs-review),
+        # not whether a LATER step in this same job actually failed. A red
+        # X on a run nobody's watching is not a working alert. if: failure()
+        # here means this step runs whenever ANY earlier step in this job
+        # failed, regardless of which one — the one signal that should
+        # never depend on someone coincidentally noticing.
+        if: failure()
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          curl -sS --max-time 15 -X POST https://api.sendgrid.com/v3/mail/send \
+            -H "Authorization: Bearer $SENDGRID_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "$(node -e '
+              console.log(JSON.stringify({
+                personalizations: [{ to: [{ email: "nolanickelliott02@gmail.com" }] }],
+                from: { email: "alerts@officialverifyguard.com", name: "Scampedia Watchdog" },
+                subject: "Daily Scam Entry job FAILED for real (not a gate rejection)",
+                content: [{ type: "text/plain", value:
+                  "A step in today'"'"'s Daily Scam Entry run actually failed — this is a real bug, not a gate " +
+                  "working as designed (that path emails you separately, with a different subject line).\n\n" +
+                  "Run: " + process.env.RUN_URL + "\n\n" +
+                  "Open it and check which step failed and why before assuming this will fix itself tomorrow."
+                }]
+              }))
+            ')" \
+            || echo "Failure alert email failed too — nothing more this job can do."

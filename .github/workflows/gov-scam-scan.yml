@@ -137,3 +137,29 @@ jobs:
             -H "x-notify-secret: $NOTIFY_SECRET" \
             -d "$(node -e 'console.log(JSON.stringify({title: process.env.ENTRY_TITLE, summary: process.env.ENTRY_SUMMARY, slug: process.env.ENTRY_SLUG}))')" \
             || echo "Push notification failed, continuing anyway."
+      - name: Alert on a real job failure (any step, not just "didn't publish")
+        # Same reasoning as the identical step in daily-scam-entry.yml —
+        # found 2026-09-18 when this exact bot's job failed for a real
+        # reason (a quoting bug) and nobody found out except by chance.
+        if: failure()
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          curl -sS --max-time 15 -X POST https://api.sendgrid.com/v3/mail/send \
+            -H "Authorization: Bearer $SENDGRID_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "$(node -e '
+              console.log(JSON.stringify({
+                personalizations: [{ to: [{ email: "nolanickelliott02@gmail.com" }] }],
+                from: { email: "alerts@officialverifyguard.com", name: "Scampedia Watchdog" },
+                subject: "Government Scam Source Scan job FAILED for real (not a gate rejection)",
+                content: [{ type: "text/plain", value:
+                  "A step in today'"'"'s Government Scam Source Scan run actually failed — this is a real bug, " +
+                  "not a gate working as designed (that path emails you separately, with a different subject line).\n\n" +
+                  "Run: " + process.env.RUN_URL + "\n\n" +
+                  "Open it and check which step failed and why before assuming this will fix itself tomorrow."
+                }]
+              }))
+            ')" \
+            || echo "Failure alert email failed too — nothing more this job can do."
