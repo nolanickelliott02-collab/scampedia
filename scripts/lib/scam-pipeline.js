@@ -858,6 +858,7 @@ module.exports = {
   fetchWithRetry,
   verifyCitationUrls,
   checkContentRelevance,
+  stripHtmlToText,
   triageCandidate,
   writeToReviewQueue,
   REVIEW_DIR,
