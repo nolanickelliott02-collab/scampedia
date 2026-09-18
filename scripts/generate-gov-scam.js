@@ -19,14 +19,25 @@ try { require('dotenv').config(); } catch { /* optional in CI, where env is inje
 
 const { CITATION_DISCIPLINE, extractCitationUrls, runPipeline, writeGithubOutput } = require('./lib/scam-pipeline');
 
+// Broadened 2026-09-17 (was: "genuinely current scam or fraud alert" only)
+// — same reasoning as generate-daily-scam.js's identical change: a
+// long-established pattern that a .gov agency still actively warns about
+// today is just as worth documenting as a brand-new alert. The .gov-primary-
+// source requirement is unchanged and still enforced for real by
+// govSourceGate below regardless of how old the underlying pattern is.
 function buildSystemPrompt(existingTitles, forceSkip) {
   const base = `You are a research analyst for Scampedia, a public scam-database encyclopedia. Use
-web_search to find ONE genuinely current scam or fraud alert published DIRECTLY by a government
-consumer-protection agency — for example the FTC (ftc.gov / consumer.ftc.gov), FBI/IC3 (ic3.gov,
-fbi.gov), CFPB (consumerfinance.gov), SSA Office of Inspector General (oig.ssa.gov), USPS OIG
-(uspsoig.gov), the DOJ (justice.gov), HHS-OIG (oig.hhs.gov), the IRS (irs.gov), or a state Attorney
-General's office (any .gov domain). Try search queries like "site:ftc.gov scam alert",
-"site:ic3.gov" plus a current topic, or "[your state] attorney general scam alert".
+web_search to find ONE genuinely real, currently-active scam or fraud pattern that a government
+consumer-protection agency has published a page about — either a new/current alert, or an older,
+well-established pattern the agency still actively warns consumers about today (agencies often keep
+evergreen pages up for long-running scams, not just breaking-news alerts; either kind counts, as
+long as the page is real and current). Agencies include the FTC (ftc.gov / consumer.ftc.gov),
+FBI/IC3 (ic3.gov, fbi.gov), CFPB (consumerfinance.gov), SSA Office of Inspector General
+(oig.ssa.gov), USPS OIG (uspsoig.gov), the DOJ (justice.gov), HHS-OIG (oig.hhs.gov), the IRS
+(irs.gov), or a state Attorney General's office (any .gov domain). Try search queries like
+"site:ftc.gov scam alert", "site:ic3.gov" plus a topic, or "[your state] attorney general scam
+alert" — for an older pattern, drop the recency angle from the query and just search for the scam
+type itself plus "site:ftc.gov" or similar.
 
 Your cited source MUST be the government page itself, not a news article that merely reports on
 one — if you only find a news article describing a government warning, go find and cite the actual
@@ -34,12 +45,12 @@ government page it's describing instead. If you cannot find a genuine primary .g
 grounds to skip, not a reason to cite the news article instead.
 
 Do NOT invent, guess, or extrapolate from training data alone — every fact must trace back to a
-real .gov page you actually fetched today. ${CITATION_DISCIPLINE} Do NOT propose anything already in
+real .gov page you actually fetched today, even for a long-established pattern. ${CITATION_DISCIPLINE} Do NOT propose anything already in
 this existing titles list (case-insensitive, near-duplicates count as matches too):
 ${existingTitles.map(t => `- ${t}`).join('\n')}
 
-If you find a solid, well-cited, genuinely distinct trend with a real primary .gov source, call
-submit_scam_entry exactly once. If you don't find anything that meets that bar, call
+If you find a solid, well-cited, genuinely distinct pattern (new or old) with a real primary .gov
+source, call submit_scam_entry exactly once. If you don't find anything that meets that bar, call
 skip_no_confident_finding exactly once — do not submit a low-confidence or thin entry, and do not
 substitute a non-government source, just to have something to publish today.`;
 
@@ -78,12 +89,17 @@ function alreadyRanToday(data, todayISO) {
   return data.reports.some(r => r.isGovSourced && String(r.datePublished || '').slice(0, 10) === todayISO);
 }
 
+// maxAttempts raised 2026-09-17 — see the identical comment in
+// generate-daily-scam.js for the reasoning and the real per-run cost
+// tradeoff (up to ~3x this bot's own real API cost on days it finds that
+// much); same moderate starting value.
 runPipeline({
   buildSystemPrompt,
   alreadyRanToday,
   extraGates: [govSourceGate],
   extraReportFields: () => ({ isGovSourced: true }),
   botName: 'gov-scam-scan',
+  maxAttempts: 3,
 }).catch(err => {
   console.error('Unexpected error:', err);
   writeGithubOutput({ result: 'error', error: err.message });
