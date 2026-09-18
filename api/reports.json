@@ -1,6 +1,6 @@
 {
-  "version": 32,
-  "lastUpdated": "2026-09-18T21:50:27.584Z",
+  "version": 33,
+  "lastUpdated": "2026-09-18T21:55:36.058Z",
   "reports": [
     {
       "id": "1",
@@ -2192,6 +2192,40 @@
       "spreadPlatforms": [
         "Postal Mail",
         "Phone"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "64",
+      "slug": "car-wrap-advertising-scam",
+      "title": "Car Wrap Advertising Scam",
+      "summary": "Scammers offer people hundreds of dollars a week to drive around with their car wrapped in a major brand's advertising, then send a fake cashier's check that leaves victims owing the bank money after they wire funds to a \"vendor.\"",
+      "category": "Employment Scam",
+      "firstReported": "2020-06-01",
+      "relatedScams": [],
+      "safetyTips": [
+        "Never spend money from a deposited check or send any of it elsewhere before the check has fully cleared, which can take weeks even if the funds appear available sooner",
+        "Know that banks are allowed to make a check's funds available before the transfer is actually verified \u2014 a check can look \"cleared\" and spendable for days before the bank discovers it's fake and reverses it",
+        "Contact the brand named in the ad directly through its official website to verify whether it actually runs a car wrap advertising program",
+        "Only use payment apps like Venmo or Cash App to send money to people you personally know, never a \"vendor\" a stranger tells you to pay",
+        "Report suspected car wrap scams to BBB Scam Tracker and the FTC"
+      ],
+      "datePublished": "2026-09-18T21:30:00.000Z",
+      "howItWorks": "A victim sees an ad or gets a text claiming a major brand will pay them hundreds of dollars a week to wrap their car in company advertising. After filling out an application, a \"boss\" contacts them by text with instructions and mails a cashier's check meant to cover the cost of installing the wrap. The victim is told to deposit the check and use part of it to pay a specific \"local vendor\" via Venmo or Cash App who will supposedly install the wrap. Because the check initially appears to clear, the victim sends real money to the scammer-controlled vendor before the bank discovers the check is counterfeit, leaving the victim responsible for repaying the full fake amount.",
+      "redFlags": [
+        "Unsolicited offer to pay hundreds of dollars a week just for driving with an ad wrap on your car",
+        "You're sent a check and told to deposit it, then immediately send part of the money elsewhere via Venmo or Cash App",
+        "The employer contacts you only through text message and never in person or via a verifiable company channel",
+        "You never met the \"vendor\" and were told exactly which one to pay",
+        "The job requires no interview and pays out before any actual work (driving/advertising) has occurred"
+      ],
+      "realExamples": [
+        "In BBB's own reporting, one victim described the scam directly: told to deposit the check and pay a vendor through Venmo once it cleared, they sent $3,500 \u2014 then waited two days for someone to come wrap their car. No one ever came, and the vendor kept making excuses when contacted."
+      ],
+      "source": "Better Business Bureau, \"BBB Scam Alert: Car wrap scams hook job seekers with promise of easy money,\" February 19, 2021, https://www.bbb.org/article/news-releases/17538-bbb-urges-people-to-be-wary-of-promises-of-easy-money-in-vehicle-wrap-schemes",
+      "spreadPlatforms": [
+        "Text Messages",
+        "Online Job Ads"
       ],
       "isAIDiscovered": true
     }
