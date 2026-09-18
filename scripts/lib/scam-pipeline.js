@@ -562,16 +562,35 @@ const skipTool = {
 //   extraGates: [{ name, check: async (report) => {ok, issues} }]
 //   extraReportFields(entry) -> object             (merged into the written report)
 //   botName: string                                (labels the structured run summary; default below)
-async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = [], extraReportFields = () => ({}), botName = 'daily-scam-entry' }) {
+//   maxAttempts: number                            (default 1 — try to find/write up to this many
+//                                                    distinct entries in one run, each independently
+//                                                    gated exactly as before; see below)
+//
+// maxAttempts > 1 (added 2026-09-17, per Nick's request to publish more of
+// what this pipeline can actually find — both bots were hard-capped at
+// exactly one entry per run regardless of how many good, distinct,
+// well-cited candidates existed) loops the same single-attempt search+gate
+// sequence below, re-deriving existingTitles from the in-memory data.reports
+// each time so an entry written earlier in the SAME run is correctly seen as
+// "already exists" by the next attempt. Every gate still runs, unchanged,
+// against every candidate — this only changes how many attempts happen
+// before the run ends, not what counts as a passing entry. For the default
+// maxAttempts=1, behavior is byte-for-byte identical to before this change:
+// a real infra error (missing key, truncated response, no tool call, no
+// convergence) still aborts the run immediately; a skip/gate-rejection/
+// needs-review with no attempts left still produces the exact same single
+// recordOutcome call the old code made. DRY_RUN still short-circuits after
+// one successful candidate, exactly as before, regardless of maxAttempts.
+async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = [], extraReportFields = () => ({}), botName = 'daily-scam-entry', maxAttempts = 1, client: injectedClient, reportsPath = REPORTS_PATH }) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) {
+  if (!injectedClient && !apiKey) {
     console.error('ANTHROPIC_API_KEY not set.');
     recordOutcome(botName, { result: 'error', error: 'ANTHROPIC_API_KEY not set' });
     process.exitCode = 1;
     return;
   }
 
-  const data = JSON.parse(fs.readFileSync(REPORTS_PATH, 'utf8'));
+  const data = JSON.parse(fs.readFileSync(reportsPath, 'utf8'));
   const todayISO = new Date().toISOString().slice(0, 10);
   const defaultAlreadyRan = (d, today) => (d.lastUpdated || '').slice(0, 10) === today;
   const ranToday = (alreadyRanToday || defaultAlreadyRan)(data, todayISO);
@@ -582,8 +601,11 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     return;
   }
 
-  const existingTitles = data.reports.map(r => r.title);
-  const client = new Anthropic({ apiKey });
+  // injectedClient (test-only — real callers never pass this) lets a test
+  // exercise the real multi-attempt loop/gates against a fake model instead
+  // of the real Anthropic API, the same dependency-injection shape
+  // triageCandidate/factCheckClaims already used for the same reason.
+  const client = injectedClient || new Anthropic({ apiKey });
   const forceSkip = !!process.env.FORCE_SKIP_TEST;
 
   const toolDefinitions = [
@@ -592,178 +614,206 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     skipTool,
   ];
 
-  const messages = [{ role: 'user', content: 'Find and submit (or skip) today\'s scam trend entry.' }];
-  let outcome = null;
+  const writtenTitles = [];
+  let lastWritten = null;
+  let lastNonWrittenOutcome = null;
 
-  for (let turn = 0; turn < 8 && !outcome; turn++) {
-    const response = await client.messages.create({
-      model: MODEL,
-      max_tokens: 16000,
-      system: buildSystemPrompt(existingTitles, forceSkip),
-      tools: toolDefinitions,
-      messages,
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
+    const existingTitles = data.reports.map(r => r.title);
+    const messages = [{ role: 'user', content: 'Find and submit (or skip) today\'s scam trend entry.' }];
+    let outcome = null;
+
+    for (let turn = 0; turn < 8 && !outcome; turn++) {
+      const response = await client.messages.create({
+        model: MODEL,
+        max_tokens: 16000,
+        system: buildSystemPrompt(existingTitles, forceSkip),
+        tools: toolDefinitions,
+        messages,
+      });
+
+      messages.push({ role: 'assistant', content: response.content });
+
+      // A truncated response can still contain a syntactically-valid tool_use
+      // block with the model's own stub/placeholder content stuffed into the
+      // required fields to close out the JSON — never trust it if generation
+      // didn't finish naturally.
+      if (response.stop_reason === 'max_tokens') {
+        console.error('Response was truncated (stop_reason=max_tokens) — refusing to trust its tool call.');
+        recordOutcome(botName, { result: 'error', error: 'Response truncated at max_tokens' });
+        process.exitCode = 1;
+        return;
+      }
+
+      const toolCalls = response.content.filter(b => b.type === 'tool_use');
+      if (toolCalls.length === 0) {
+        console.error('Model stopped without calling a tool.');
+        recordOutcome(botName, { result: 'error', error: 'Model stopped without calling a tool' });
+        process.exitCode = 1;
+        return;
+      }
+
+      const submit = toolCalls.find(c => c.name === 'submit_scam_entry');
+      const skip = toolCalls.find(c => c.name === 'skip_no_confident_finding');
+
+      if (submit) {
+        outcome = { type: 'submit', input: submit.input };
+        break;
+      }
+      if (skip) {
+        outcome = { type: 'skip', input: skip.input };
+        break;
+      }
+
+      // Only web_search calls left — the SDK/API executes these server-side
+      // automatically as part of the same turn, so this loop mainly exists to
+      // let the model take multiple search rounds before deciding.
+      const toolResults = toolCalls.map(c => ({
+        type: 'tool_result',
+        tool_use_id: c.id,
+        content: 'ok',
+      }));
+      messages.push({ role: 'user', content: toolResults });
+    }
+
+    if (!outcome) {
+      console.error('Did not converge within the turn limit.');
+      recordOutcome(botName, { result: 'error', error: 'Did not converge within the turn limit' });
+      process.exitCode = 1;
+      return;
+    }
+
+    if (outcome.type === 'skip') {
+      console.log('Skipped:', outcome.input.reason);
+      lastNonWrittenOutcome = { result: 'skipped', reason: outcome.input.reason };
+      continue;
+    }
+
+    const entry = outcome.input;
+    const nextId = String(Math.max(0, ...data.reports.map(r => parseInt(r.id, 10) || 0)) + 1);
+    const newReport = {
+      id: nextId,
+      slug: slugify(entry.title),
+      title: entry.title,
+      summary: entry.summary,
+      category: entry.category,
+      firstReported: entry.firstReported,
+      relatedScams: toArray(entry.relatedScams).filter(t => existingTitles.includes(t)),
+      safetyTips: toArray(entry.safetyTips),
+      datePublished: new Date().toISOString(),
+      howItWorks: entry.howItWorks,
+      redFlags: toArray(entry.redFlags),
+      realExamples: toArray(entry.realExamples),
+      source: entry.source,
+      spreadPlatforms: toArray(entry.spreadPlatforms),
+      isAIDiscovered: true,
+      ...extraReportFields(entry),
+    };
+
+    console.log('Would write entry:', JSON.stringify(newReport, null, 2));
+
+    // A gate rejecting a candidate is the safety net working as designed, not
+    // a pipeline failure — it must not fail the Action run (no red X, no
+    // exitCode 1). That would make "the gate caught something" and "the
+    // pipeline is broken" look identical in run history. Only genuine
+    // infrastructure problems (missing key, truncated response, an actual
+    // thrown error) should fail the job; a rejected candidate just means this
+    // particular attempt doesn't publish, same as the model's own voluntary
+    // skip above — the run still moves on to try another attempt, if any remain.
+    const issues = findQualityIssues(newReport);
+    if (issues.length > 0) {
+      console.error('Quality gate failed, refusing to write:', issues);
+      lastNonWrittenOutcome = { result: 'gate-rejected', reason: `Quality gate: ${issues.join('; ')}` };
+      continue;
+    }
+
+    const dedupCheck = checkNotDuplicate(newReport, data.reports);
+    if (!dedupCheck.ok) {
+      console.error('Duplicate check failed, refusing to write:', dedupCheck.issues);
+      lastNonWrittenOutcome = { result: 'gate-rejected', reason: `Duplicate check: ${dedupCheck.issues.join('; ')}` };
+      continue;
+    }
+
+    console.log('Verifying citation URL(s) resolve...');
+    const citationCheck = await verifyCitationUrls(newReport.source);
+    if (!citationCheck.ok) {
+      console.error('Citation verification failed, refusing to write:', citationCheck.issues);
+      lastNonWrittenOutcome = { result: 'gate-rejected', reason: `Citation verification: ${citationCheck.issues.join('; ')}` };
+      continue;
+    }
+
+    console.log('Checking cited page content is actually relevant...');
+    const relevanceCheck = await checkContentRelevance(newReport);
+    if (!relevanceCheck.ok) {
+      console.error('Content relevance check failed, refusing to write:', relevanceCheck.issues);
+      lastNonWrittenOutcome = { result: 'gate-rejected', reason: `Content relevance: ${relevanceCheck.issues.join('; ')}` };
+      continue;
+    }
+
+    let extraGateFailed = false;
+    for (const gate of extraGates) {
+      console.log(`Running extra gate: ${gate.name}...`);
+      const result = await gate.check(newReport);
+      if (!result.ok) {
+        console.error(`${gate.name} failed, refusing to write:`, result.issues);
+        lastNonWrittenOutcome = { result: 'gate-rejected', reason: `${gate.name}: ${result.issues.join('; ')}` };
+        extraGateFailed = true;
+        break;
+      }
+    }
+    if (extraGateFailed) continue;
+
+    console.log('Running editorial triage...');
+    const triage = await triageCandidate(client, newReport, data.reports, relevanceCheck.sourceText);
+    console.log('Triage assessment:', JSON.stringify(triage.assessment));
+    if (!triage.passed) {
+      console.error('Triage did not clear the confidence threshold, sending to review queue instead of publishing:', triage.issues);
+      const reviewPath = writeToReviewQueue(botName, newReport, triage.assessment);
+      lastNonWrittenOutcome = { result: 'needs-review', reason: `Triage: ${triage.issues.join('; ')}`, reviewPath };
+      continue;
+    }
+
+    console.log('Fact-checking claims against the cited source...');
+    const factCheck = await factCheckClaims(client, newReport, relevanceCheck.sourceText);
+    if (!factCheck.ok) {
+      console.error('Fact-check failed, refusing to write:', factCheck.issues);
+      lastNonWrittenOutcome = { result: 'gate-rejected', reason: `Fact-check: ${factCheck.issues.join('; ')}` };
+      continue;
+    }
+
+    if (process.env.DRY_RUN) {
+      console.log('[DRY_RUN] Not writing to reports.json.');
+      recordOutcome(botName, { result: 'written', title: entry.title, citation: entry.source, dryRun: 'true' });
+      return;
+    }
+
+    data.reports.push(newReport);
+    data.version = (data.version || 0) + 1;
+    data.lastUpdated = new Date().toISOString();
+    fs.writeFileSync(reportsPath, JSON.stringify(data, null, 2) + '\n');
+
+    console.log(`Wrote new entry "${entry.title}" — version now ${data.version}.`);
+    writtenTitles.push(entry.title);
+    lastWritten = { title: entry.title, citation: entry.source, summary: entry.summary, slug: newReport.slug };
+    lastNonWrittenOutcome = null;
+  }
+
+  if (writtenTitles.length > 0) {
+    // summary/slug/citation describe only the LAST entry written this run —
+    // the workflow's notify step sends one push per run, not one per entry,
+    // and its commit message wants a single citation to quote, so a multi-
+    // entry run only carries those fields for the final one. count/titles
+    // carry the full picture for the commit message/logs.
+    recordOutcome(botName, {
+      result: 'written',
+      ...lastWritten,
+      count: String(writtenTitles.length),
+      titles: writtenTitles.join(' | '),
     });
-
-    messages.push({ role: 'assistant', content: response.content });
-
-    // A truncated response can still contain a syntactically-valid tool_use
-    // block with the model's own stub/placeholder content stuffed into the
-    // required fields to close out the JSON — never trust it if generation
-    // didn't finish naturally.
-    if (response.stop_reason === 'max_tokens') {
-      console.error('Response was truncated (stop_reason=max_tokens) — refusing to trust its tool call.');
-      recordOutcome(botName, { result: 'error', error: 'Response truncated at max_tokens' });
-      process.exitCode = 1;
-      return;
-    }
-
-    const toolCalls = response.content.filter(b => b.type === 'tool_use');
-    if (toolCalls.length === 0) {
-      console.error('Model stopped without calling a tool.');
-      recordOutcome(botName, { result: 'error', error: 'Model stopped without calling a tool' });
-      process.exitCode = 1;
-      return;
-    }
-
-    const submit = toolCalls.find(c => c.name === 'submit_scam_entry');
-    const skip = toolCalls.find(c => c.name === 'skip_no_confident_finding');
-
-    if (submit) {
-      outcome = { type: 'submit', input: submit.input };
-      break;
-    }
-    if (skip) {
-      outcome = { type: 'skip', input: skip.input };
-      break;
-    }
-
-    // Only web_search calls left — the SDK/API executes these server-side
-    // automatically as part of the same turn, so this loop mainly exists to
-    // let the model take multiple search rounds before deciding.
-    const toolResults = toolCalls.map(c => ({
-      type: 'tool_result',
-      tool_use_id: c.id,
-      content: 'ok',
-    }));
-    messages.push({ role: 'user', content: toolResults });
-  }
-
-  if (!outcome) {
-    console.error('Did not converge within the turn limit.');
-    recordOutcome(botName, { result: 'error', error: 'Did not converge within the turn limit' });
-    process.exitCode = 1;
     return;
   }
 
-  if (outcome.type === 'skip') {
-    console.log('Skipped:', outcome.input.reason);
-    recordOutcome(botName, { result: 'skipped', reason: outcome.input.reason });
-    return;
-  }
-
-  const entry = outcome.input;
-  const nextId = String(Math.max(0, ...data.reports.map(r => parseInt(r.id, 10) || 0)) + 1);
-  const newReport = {
-    id: nextId,
-    slug: slugify(entry.title),
-    title: entry.title,
-    summary: entry.summary,
-    category: entry.category,
-    firstReported: entry.firstReported,
-    relatedScams: toArray(entry.relatedScams).filter(t => existingTitles.includes(t)),
-    safetyTips: toArray(entry.safetyTips),
-    datePublished: new Date().toISOString(),
-    howItWorks: entry.howItWorks,
-    redFlags: toArray(entry.redFlags),
-    realExamples: toArray(entry.realExamples),
-    source: entry.source,
-    spreadPlatforms: toArray(entry.spreadPlatforms),
-    isAIDiscovered: true,
-    ...extraReportFields(entry),
-  };
-
-  console.log('Would write entry:', JSON.stringify(newReport, null, 2));
-
-  // A gate rejecting a candidate is the safety net working as designed, not
-  // a pipeline failure — it must not fail the Action run (no red X, no
-  // exitCode 1). That would make "the gate caught something" and "the
-  // pipeline is broken" look identical in run history. Only genuine
-  // infrastructure problems (missing key, truncated response, an actual
-  // thrown error) should fail the job; a rejected candidate just means no
-  // entry publishes today, same as the model's own voluntary skip above.
-  const issues = findQualityIssues(newReport);
-  if (issues.length > 0) {
-    console.error('Quality gate failed, refusing to write:', issues);
-    recordOutcome(botName, { result: 'gate-rejected', reason: `Quality gate: ${issues.join('; ')}` });
-    return;
-  }
-
-  const dedupCheck = checkNotDuplicate(newReport, data.reports);
-  if (!dedupCheck.ok) {
-    console.error('Duplicate check failed, refusing to write:', dedupCheck.issues);
-    recordOutcome(botName, { result: 'gate-rejected', reason: `Duplicate check: ${dedupCheck.issues.join('; ')}` });
-    return;
-  }
-
-  console.log('Verifying citation URL(s) resolve...');
-  const citationCheck = await verifyCitationUrls(newReport.source);
-  if (!citationCheck.ok) {
-    console.error('Citation verification failed, refusing to write:', citationCheck.issues);
-    recordOutcome(botName, { result: 'gate-rejected', reason: `Citation verification: ${citationCheck.issues.join('; ')}` });
-    return;
-  }
-
-  console.log('Checking cited page content is actually relevant...');
-  const relevanceCheck = await checkContentRelevance(newReport);
-  if (!relevanceCheck.ok) {
-    console.error('Content relevance check failed, refusing to write:', relevanceCheck.issues);
-    recordOutcome(botName, { result: 'gate-rejected', reason: `Content relevance: ${relevanceCheck.issues.join('; ')}` });
-    return;
-  }
-
-  for (const gate of extraGates) {
-    console.log(`Running extra gate: ${gate.name}...`);
-    const result = await gate.check(newReport);
-    if (!result.ok) {
-      console.error(`${gate.name} failed, refusing to write:`, result.issues);
-      recordOutcome(botName, { result: 'gate-rejected', reason: `${gate.name}: ${result.issues.join('; ')}` });
-      return;
-    }
-  }
-
-  console.log('Running editorial triage...');
-  const triage = await triageCandidate(client, newReport, data.reports, relevanceCheck.sourceText);
-  console.log('Triage assessment:', JSON.stringify(triage.assessment));
-  if (!triage.passed) {
-    console.error('Triage did not clear the confidence threshold, sending to review queue instead of publishing:', triage.issues);
-    const reviewPath = writeToReviewQueue(botName, newReport, triage.assessment);
-    recordOutcome(botName, { result: 'needs-review', reason: `Triage: ${triage.issues.join('; ')}`, reviewPath });
-    return;
-  }
-
-  console.log('Fact-checking claims against the cited source...');
-  const factCheck = await factCheckClaims(client, newReport, relevanceCheck.sourceText);
-  if (!factCheck.ok) {
-    console.error('Fact-check failed, refusing to write:', factCheck.issues);
-    recordOutcome(botName, { result: 'gate-rejected', reason: `Fact-check: ${factCheck.issues.join('; ')}` });
-    return;
-  }
-
-  if (process.env.DRY_RUN) {
-    console.log('[DRY_RUN] Not writing to reports.json.');
-    recordOutcome(botName, { result: 'written', title: entry.title, citation: entry.source, dryRun: 'true' });
-    return;
-  }
-
-  data.reports.push(newReport);
-  data.version = (data.version || 0) + 1;
-  data.lastUpdated = new Date().toISOString();
-  fs.writeFileSync(REPORTS_PATH, JSON.stringify(data, null, 2) + '\n');
-
-  console.log(`Wrote new entry "${entry.title}" — version now ${data.version}.`);
-  // summary/slug are read by the workflow's notify step to build the actual
-  // push notification content — real per-entry text, not a generic string.
-  recordOutcome(botName, { result: 'written', title: entry.title, citation: entry.source, summary: entry.summary, slug: newReport.slug });
+  recordOutcome(botName, lastNonWrittenOutcome || { result: 'skipped', reason: 'no candidate found' });
 }
 
 module.exports = {

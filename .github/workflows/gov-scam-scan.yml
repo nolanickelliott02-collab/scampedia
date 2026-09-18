@@ -106,7 +106,7 @@ jobs:
           git config user.name "scampedia-bot"
           git config user.email "actions@github.com"
           git add api/reports.json scams/ sitemap.xml
-          git commit -m "Add scam entry: ${{ steps.generate.outputs.title }}" -m "Source: ${{ steps.generate.outputs.citation }}" -m "Government-sourced entry (gov-scam-scan)"
+          git commit -m "Add ${{ steps.generate.outputs.count }} scam entr$([ "${{ steps.generate.outputs.count }}" = "1" ] && echo y || echo ies): ${{ steps.generate.outputs.titles }}" -m "Last: ${{ steps.generate.outputs.title }}" -m "Source: ${{ steps.generate.outputs.citation }}" -m "Government-sourced entry (gov-scam-scan)"
           git pull --rebase origin main
           git push origin main
       - name: Notify devices of the new entry
