@@ -76,11 +76,17 @@ jobs:
         # through the same SendGrid pipeline already confirmed dead). The
         # pull --rebase guards the same rare race as the publish step below.
         if: steps.generate.outputs.result == 'needs-review'
+        env:
+          # env: + "$VAR", not ${{ }} spliced into the script — see the
+          # identical comment in daily-scam-entry.yml's equivalent step for
+          # the real production break (2026-09-18) that motivated this.
+          REVIEW_PATH: ${{ steps.generate.outputs.reviewPath }}
+          REASON: ${{ steps.generate.outputs.reason }}
         run: |
           git config user.name "scampedia-bot"
           git config user.email "actions@github.com"
           git add review/
-          git commit -m "Queue for review: ${{ steps.generate.outputs.reviewPath }}" -m "Reason: ${{ steps.generate.outputs.reason }}" -m "Government-sourced candidate (gov-scam-scan)"
+          git commit -m "Queue for review: $REVIEW_PATH" -m "Reason: $REASON" -m "Government-sourced candidate (gov-scam-scan)"
           git pull --rebase origin main
           git push origin main
       - name: Rebuild static scam pages
@@ -102,11 +108,17 @@ jobs:
         # schedule offset above) case where daily-scam-entry.yml's own push
         # landed on main in between this job's checkout and this step.
         if: steps.generate.outputs.result == 'written'
+        env:
+          COUNT: ${{ steps.generate.outputs.count }}
+          TITLES: ${{ steps.generate.outputs.titles }}
+          LAST_TITLE: ${{ steps.generate.outputs.title }}
+          CITATION: ${{ steps.generate.outputs.citation }}
         run: |
           git config user.name "scampedia-bot"
           git config user.email "actions@github.com"
           git add api/reports.json scams/ sitemap.xml
-          git commit -m "Add ${{ steps.generate.outputs.count }} scam entr$([ "${{ steps.generate.outputs.count }}" = "1" ] && echo y || echo ies): ${{ steps.generate.outputs.titles }}" -m "Last: ${{ steps.generate.outputs.title }}" -m "Source: ${{ steps.generate.outputs.citation }}" -m "Government-sourced entry (gov-scam-scan)"
+          PLURAL="ies"; [ "$COUNT" = "1" ] && PLURAL="y"
+          git commit -m "Add $COUNT scam entr$PLURAL: $TITLES" -m "Last: $LAST_TITLE" -m "Source: $CITATION" -m "Government-sourced entry (gov-scam-scan)"
           git pull --rebase origin main
           git push origin main
       - name: Notify devices of the new entry

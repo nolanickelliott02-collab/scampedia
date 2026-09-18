@@ -90,11 +90,27 @@ jobs:
         # record and zero real notification. This step is what actually
         # persists it so a human can find it in review/ later.
         if: steps.generate.outputs.result == 'needs-review'
+        env:
+          # Passed via env, not spliced into the script below, on purpose:
+          # REASON is free text the model wrote based on real scraped web
+          # content. Found 2026-09-18 — a real reason containing literal
+          # `"QR Code Scam"` broke a prior version of this step that
+          # interpolated ${{ }} directly into the shell command: the
+          # embedded quotes closed the intended string early and the rest
+          # got parsed as bare `git` arguments ("pathspec 'Code' did not
+          # match any file(s)"). That's not just a formatting bug — it's the
+          # shape of a real command-injection risk in a job with `contents:
+          # write` and push access to main, since this text ultimately
+          # traces back to whatever a scraped page said. env: + "$VAR" is
+          # the safe pattern: bash treats it as one opaque string no matter
+          # what characters it contains.
+          REVIEW_PATH: ${{ steps.generate.outputs.reviewPath }}
+          REASON: ${{ steps.generate.outputs.reason }}
         run: |
           git config user.name "scampedia-bot"
           git config user.email "actions@github.com"
           git add review/
-          git commit -m "Queue for review: ${{ steps.generate.outputs.reviewPath }}" -m "Reason: ${{ steps.generate.outputs.reason }}"
+          git commit -m "Queue for review: $REVIEW_PATH" -m "Reason: $REASON"
           git push origin main
       - name: Rebuild static scam pages
         # Also rebuilds /learn/ (build:learn), not just build:scams. Found
@@ -125,11 +141,21 @@ jobs:
         # written). GitHub Pages serves main directly with no separate
         # deploy Action, so this push is what actually makes it live.
         if: steps.generate.outputs.result == 'written'
+        env:
+          # env: + "$VAR" for the same reason as the review-queue step above
+          # — title/citation/titles are free text traceable back to a
+          # scraped page, never safe to splice directly into a shell script
+          # via ${{ }}.
+          COUNT: ${{ steps.generate.outputs.count }}
+          TITLES: ${{ steps.generate.outputs.titles }}
+          LAST_TITLE: ${{ steps.generate.outputs.title }}
+          CITATION: ${{ steps.generate.outputs.citation }}
         run: |
           git config user.name "scampedia-bot"
           git config user.email "actions@github.com"
           git add api/reports.json scams/ learn/ sitemap.xml llms.txt
-          git commit -m "Add ${{ steps.generate.outputs.count }} scam entr$([ "${{ steps.generate.outputs.count }}" = "1" ] && echo y || echo ies): ${{ steps.generate.outputs.titles }}" -m "Last: ${{ steps.generate.outputs.title }}" -m "Source: ${{ steps.generate.outputs.citation }}"
+          PLURAL="ies"; [ "$COUNT" = "1" ] && PLURAL="y"
+          git commit -m "Add $COUNT scam entr$PLURAL: $TITLES" -m "Last: $LAST_TITLE" -m "Source: $CITATION"
           git push origin main
       - name: Notify devices of the new entry
         if: steps.generate.outputs.result == 'written'
