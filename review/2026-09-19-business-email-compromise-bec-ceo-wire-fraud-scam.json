@@ -1,0 +1,54 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "67",
+    "slug": "business-email-compromise-bec-ceo-wire-fraud-scam",
+    "title": "Business Email Compromise (BEC) / CEO Wire Fraud Scam",
+    "summary": "Criminals hijack or spoof a company executive's, vendor's, or attorney's email account to trick an employee into wiring money or changing payment details to a fraudulent account. It remains one of the costliest scams tracked by the FBI, with billions lost every year.",
+    "category": "Employment Scam",
+    "firstReported": "2013-01-01",
+    "relatedScams": [],
+    "safetyTips": [
+      "Verify any request to wire money or change payment/banking details by calling the requester on a known, previously verified phone number — never one provided in the email",
+      "Require dual approval and a formal callback procedure for all wire transfers and vendor payment-detail changes",
+      "Enable multi-factor authentication on all corporate email accounts to prevent account takeover",
+      "Scrutinize sender addresses carefully for lookalike domains or subtle misspellings before acting on any payment request",
+      "Train employees to treat urgency and secrecy in financial requests as red flags, not reasons to skip verification"
+    ],
+    "datePublished": "2026-09-19T19:04:23.985Z",
+    "howItWorks": "Scammers either hack into a real employee or executive email account or create a nearly identical spoofed address, then study the company's normal communication style and ongoing transactions. Posing as a CEO, finance officer, vendor, or even an attorney, they email someone in the finance or accounting department with an urgent, confidential request — typically to wire funds for a \"time-sensitive deal,\" pay a supposedly overdue vendor invoice, or update the bank routing details for future payments. Because the message appears to come from a trusted, authoritative source and often invokes secrecy or urgency, employees skip normal verification steps and send the payment directly into an account controlled by the criminals, who quickly move the funds beyond recovery.",
+    "redFlags": [
+      "Urgent or confidential wire transfer requests that pressure you to bypass normal approval steps",
+      "A request to suddenly change vendor bank account or payment routing details",
+      "Email addresses that look almost identical to a real executive's or vendor's, differing by one letter or domain character",
+      "Pressure to keep the transaction secret from colleagues or to avoid verbal confirmation",
+      "Requests arriving outside normal business hours or while the supposed sender is traveling and 'unreachable by phone'"
+    ],
+    "realExamples": [
+      "The FBI's 2025 IC3 Internet Crime Report identifies business email compromise as the second-costliest crime type by total losses, with $3.04 billion lost in 2025 compared to $2.77 billion the year before.",
+      "IC3 data reported to Nacha showed nearly $8.5 billion in BEC losses reported between 2022 and 2024.",
+      "Security researchers describe common BEC tactics including attorney impersonation, where a scammer poses as a lawyer to pressure an employee into an urgent wire transfer, and account compromise schemes that redirect vendor invoice payments to fraudulent accounts."
+    ],
+    "source": "FBI IC3 2025 Internet Crime Report analysis via SpyCloud, https://spycloud.com/blog/fbi-internet-crime-report-2025/",
+    "spreadPlatforms": [
+      "Email"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "new",
+    "severity": "high",
+    "urgency": "medium",
+    "sourceCredibility": "other",
+    "suggestedCategory": "Financial/Business Scam",
+    "suggestedAliases": [
+      "BEC",
+      "CEO Fraud"
+    ],
+    "confidence": 0.55,
+    "reasoning": "BEC/CEO wire fraud is a distinct, well-established pattern not represented among existing titles (closest are Fake Job Offer/Employment scams, which are unrelated). However, the source is a vendor blog (SpyCloud) analyzing an FBI IC3 report rather than a primary government source, and the category 'Employment Scam' is a mismatch since this targets business finance/accounting staff, not job seekers; the source confirms high financial losses ($3.04B in 2025) but doesn't state 'billions lost every year' as a general historical claim beyond the two years cited."
+  },
+  "queuedAt": "2026-09-19T19:04:30.181Z"
+}
