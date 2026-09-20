@@ -1,0 +1,52 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "67",
+    "slug": "digital-arrest-scam",
+    "title": "Digital Arrest Scam",
+    "summary": "Scammers impersonate police, narcotics, or financial regulatory officials on a live video call and tell victims they are under \"digital arrest\" for an alleged crime, keeping them isolated on camera for hours until they transfer their life savings.",
+    "category": "Government Scam",
+    "firstReported": "2024-11-30",
+    "relatedScams": [],
+    "safetyTips": [
+      "Know that no real law enforcement or government agency arrests, investigates, or resolves a criminal case over a phone or video call",
+      "Hang up immediately and independently verify the claim by contacting the relevant agency through official published contact numbers",
+      "Never transfer money, share OTPs, banking credentials, or grant remote device access to anyone claiming legal authority over the phone",
+      "Report suspected incidents promptly to national cybercrime reporting channels rather than complying with demands"
+    ],
+    "datePublished": "2026-09-20T00:30:40.635Z",
+    "howItWorks": "A victim receives a call or message from someone posing as a police officer, CBI/ED agent, narcotics official, or bank/telecom regulator, often using a spoofed number and fake official documents like FIRs or arrest warrants. The caller falsely accuses the victim of crimes such as money laundering or drug trafficking, then moves the conversation to a sustained video call, sometimes lasting many hours, during which the victim is told they are under \"digital arrest\" and forbidden from telling anyone or leaving the camera's view. Under this manufactured psychological pressure and isolation, the victim is instructed to transfer money into \"investigation\" or \"safe\" accounts to prove innocence or avoid prosecution, or to hand over banking credentials, OTPs, or remote access to their devices, with false promises the funds will later be returned.",
+    "redFlags": [
+      "A caller claims to be police, CBI, ED, RBI, or narcotics officials and says you must stay on a video call under threat of arrest",
+      "You are told to keep the matter completely secret and not discuss it with family, friends, or a lawyer",
+      "You are pressured to transfer money to a personal or 'safe government' bank account to avoid arrest or prove your innocence",
+      "Legal or investigative demands are made entirely over phone/video call rather than in person or through official written summons"
+    ],
+    "realExamples": [
+      "Indian media reported a victim ordered to stay on a video call for nearly 20 hours straight who transferred ₹48 lakh after being threatened, with police later linking the racket to individuals in Telangana and Maharashtra tied to Chinese scammers.",
+      "A senior Indian police officer, contacted without the scammers realizing his identity, was falsely told a criminal case had been registered against him and his bank accounts would be frozen before he exposed the attempted fraud by switching to video in uniform.",
+      "India's Ministry of Home Affairs, through the Indian Cyber Crime Coordination Centre, issued a March 2025 advisory identifying digital arrest scams as an organized economic online crime amid a surge of reported cases."
+    ],
+    "source": "The Print, https://theprint.in/india/cybercrime-saw-24-spike-in-2025-indians-lost-rs-22495-crore-mainly-in-investment-scams/2859930/ ; Wikipedia, https://en.wikipedia.org/wiki/Digital_arrest_scam",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Video Calls (WhatsApp/Skype)",
+      "Text Messages",
+      "Email"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "new",
+    "severity": "high",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [],
+    "confidence": 0.55,
+    "reasoning": "The source confirms \"digital arrests\" are a real, tracked cybercrime category in India (9% of losses, 6% of cases) distinct from existing entries like Virtual Kidnapping or IC3/FBI impersonation scams, but the article itself only briefly names the category without detailing the mechanics described in the candidate's \"how it works\" section, which appear to come from outside knowledge not present in this source text."
+  },
+  "queuedAt": "2026-09-20T00:30:45.183Z"
+}
