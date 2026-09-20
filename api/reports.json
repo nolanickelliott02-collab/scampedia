@@ -1,6 +1,6 @@
 {
   "version": 34,
-  "lastUpdated": "2026-09-18T22:51:01.430Z",
+  "lastUpdated": "2026-09-20T00:34:38.184Z",
   "reports": [
     {
       "id": "1",
@@ -2303,6 +2303,45 @@
       "source": "FTC Consumer Advice, \"How To Avoid Scams After Weather Emergencies and Natural Disasters,\" https://consumer.ftc.gov/articles/how-avoid-scams-after-weather-emergencies-and-natural-disasters",
       "spreadPlatforms": [
         "In-Person"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "67",
+      "slug": "tariff-rebate-tariff-dividend-check-scam",
+      "title": "Tariff Rebate / \"Tariff Dividend\" Check Scam",
+      "summary": "Scammers are exploiting news coverage of proposed $2,000 \"tariff dividend\" or rebate checks by sending fake texts, emails, and even fraudulent paper checks claiming recipients must act immediately to claim tariff-related refund money.",
+      "category": "Government Scam",
+      "firstReported": "2025-11-01",
+      "relatedScams": [],
+      "safetyTips": [
+        "Remember that government agencies do not send texts offering money or demanding a response to qualify for a payment",
+        "Know that no tariff rebate/dividend program has actually been approved by Congress, so any message claiming to pay one out is fraudulent",
+        "Never click links in unsolicited refund texts or emails; go directly to official government websites instead",
+        "If you receive a surprise check, don't deposit it or send money back before verifying its legitimacy with your bank and the relevant agency",
+        "Report suspicious tariff refund messages to your state attorney general's consumer protection division"
+      ],
+      "datePublished": "2026-09-20T00:34:38.184Z",
+      "howItWorks": "Fraudsters send unsolicited texts, emails, or social media messages claiming the recipient is owed a \"tariff refund\" or \"tariff dividend,\" a hook made believable by real news coverage of a proposed $2,000 rebate tied to tariff income. The messages use bold, capitalized language and false deadlines to pressure victims into clicking a link and entering personal or banking information, or in some variants, victims receive an actual paper check in the mail and are told to deposit it and wire back a portion for \"fees\" or \"processing\" before the check later bounces. Scammers count on the fact that most people don't understand how legitimate customs or tariff refunds actually work, since real refunds require formal filings and documentation and are never issued spontaneously via unsolicited text.\n\n",
+      "redFlags": [
+        "An unexpected message about a tariff refund or rebate arriving by text, email, or social media rather than official government mail",
+        "Bold, capitalized wording and an urgent deadline claiming the check will be withheld or expire if you don't act immediately",
+        "A request to click a link and provide personal information or bank details to \"claim\" the money",
+        "A surprise paper check arriving despite never filing any claim or paperwork",
+        "Instructions to deposit a check and send back part of the funds for fees or processing"
+      ],
+      "realExamples": [
+        "Idaho Attorney General Raúl Labrador's office warned residents in late 2025/early 2026 about text messages telling recipients they must click a link and provide personal information to collect a $2,000 tariff rebate check, even though no such policy has been approved by Congress",
+        "The Idaho Attorney General's office described the scam texts as featuring bold, capitalized words claiming the recipient's check would be withheld unless they clicked a link and responded immediately",
+        "Consumer-facing reporting identified fake tariff refund/rebate checks as a distinct scam type where victims are told to deposit a check and send back part of the funds for \"fees\" or \"processing\""
+      ],
+      "source": "Idaho Office of the Attorney General, https://www.ag.idaho.gov/newsroom/attorney-general-labrador-warns-idahoans-about-tariff-rebate-text-scam/ ; Kitsap Credit Union, https://kitsapcu.org/blog/tariff-refund-scams-what-you-need-to-know/",
+      "spreadPlatforms": [
+        "Text Messages",
+        "Email",
+        "Social Media",
+        "Postal Mail"
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
