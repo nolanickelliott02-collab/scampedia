@@ -1,0 +1,51 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "68",
+    "slug": "fake-social-security-statement-email-scam",
+    "title": "Fake Social Security Statement Email Scam",
+    "summary": "Scammers are mass-emailing fake \"Social Security Statement\" notifications designed to look like official SSA correspondence, tricking recipients into clicking malicious links or downloading harmful attachments.",
+    "category": "Government Scam",
+    "firstReported": "2026-02-20",
+    "relatedScams": [],
+    "safetyTips": [
+      "Never click links or open attachments in unsolicited emails claiming to be from Social Security",
+      "Go directly to ssa.gov/myaccount to access or set up your Social Security account instead of using links in an email",
+      "Verify that any email claiming to be from SSA originates from an address ending in \".gov\" before trusting it",
+      "If you clicked a link, downloaded an attachment, or gave out personal information, stop all contact with the sender and report the incident immediately",
+      "Report suspicious SSA-related emails to the Social Security Administration's Office of the Inspector General"
+    ],
+    "datePublished": "2026-09-22T01:30:12.913Z",
+    "howItWorks": "Fraudsters send emails that falsely claim to give the recipient access to their Social Security Statement, using official-looking language, logos, colors, and formatting to imitate real government correspondence. Unlike genuine SSA emails, which only come from addresses ending in \".gov,\" these scam messages are sent from lookalike or unofficial domains and contain links or attachments that, once clicked or opened, can lead to identity theft, financial loss, or compromised personal data.",
+    "redFlags": [
+      "Email claims to provide your Social Security Statement but doesn't come from an address ending in \".gov\"",
+      "Official-looking logos, colors, and formatting used to imitate a real government agency",
+      "Links or attachments included that you're urged to click or download to \"view\" your statement",
+      "Unsolicited message about your Social Security account arriving out of the blue"
+    ],
+    "realExamples": [
+      "SSA OIG reported a significant increase in government imposter emails falsely claiming to provide access to a recipient's Social Security Statement, with officials noting a sharp increase in fraudulent emails designed to look like official SSA communications."
+    ],
+    "source": "SSA Office of the Inspector General, https://oig.ssa.gov/scam-alerts/2026-02-20-ssa-office-of-the-inspector-general-warns-public-of-surge-in-fraudulent-social-security-statement-emails/",
+    "spreadPlatforms": [
+      "Email"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Social Security Number Suspended Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "SSA Statement Phishing Email Scam"
+    ],
+    "confidence": 0.55,
+    "reasoning": "This is an SSA impersonation phishing email scam, closely overlapping with the existing 'Social Security Number Suspended Scam' entry under the same Government Scam category and same impersonated agency; while the specific lure (fake statement notification vs. suspension threat) differs, both are SSA-impersonation phishing/social-engineering scams targeting the same victim base via similar mechanisms, making this more of a variant than a wholly distinct pattern."
+  },
+  "queuedAt": "2026-09-22T01:30:19.333Z"
+}
