@@ -1,0 +1,57 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "68",
+    "slug": "fake-dmv-traffic-ticket-text-scam",
+    "title": "Fake DMV/Traffic Ticket Text Scam",
+    "summary": "Scammers send text messages impersonating a state DMV, claiming the recipient has an unpaid traffic ticket and threatening license or registration suspension unless they pay immediately via a link.",
+    "category": "Government Scam",
+    "firstReported": "2025-06-05",
+    "relatedScams": [],
+    "safetyTips": [
+      "Do not click links in unexpected texts about traffic tickets; verify any outstanding tickets directly through your state DMV's official website or by calling its published number",
+      "Remember that most state DMVs and highway patrol agencies will not contact you via text message demanding immediate payment",
+      "Check for official government domain endings (e.g., '.gov') rather than trusting a link's appearance alone",
+      "Report and delete suspicious texts using your phone's 'report junk' feature, then block the sender",
+      "Report incidents to the FTC and file a complaint with IC3.gov if you clicked a link or provided information"
+    ],
+    "datePublished": "2026-09-26T19:30:57.935Z",
+    "howItWorks": "Victims receive an unsolicited text claiming to be from their state's Department of Motor Vehicles or highway patrol, stating they have an outstanding traffic ticket that must be paid by a specific deadline. The message threatens that failing to pay will result in the violation being reported, driving privileges suspended, or vehicle registration revoked, creating urgency. The text includes a link to a website designed to look like the official state DMV site, where victims are prompted to enter payment card details and personal information, which the scammers then steal. Some versions instruct recipients to reply \"Y\" and reopen the message to activate the link, a technique used to bypass spam filters on iPhones and Android devices.",
+    "redFlags": [
+      "Unsolicited text message claiming to be from the DMV demanding immediate payment",
+      "Urgent threats of license suspension, vehicle registration revocation, or legal action tied to a strict deadline",
+      "A link to a website that only mimics the real state DMV site rather than the actual government domain",
+      "Instructions to reply with a specific letter or reopen the message before clicking the link",
+      "Sender address is a random phone number, out-of-country area code, or personal email rather than an official government domain"
+    ],
+    "realExamples": [
+      "Tennessee Department of Safety and Homeland Security and the Tennessee Highway Patrol warned in June 2025 of texts claiming to be from the 'Tennessee Department of Vehicles' referencing an outstanding traffic ticket with a link to a fake site mimicking the official Tennessee site.",
+      "Nashville's Traffic Violation Bureau reported in June 2025 a surge in calls from residents receiving these scam texts referencing an outstanding traffic ticket with a link to a fake state website.",
+      "The Virginia DMV alerted customers to a text scam where fraudsters posed as the Virginia DMV, falsely claiming recipients owed a fine and needed to pay to avoid license and registration suspension.",
+      "Florida's Department of Highway Safety and Motor Vehicles warned drivers of a similar text scam claiming an unpaid traffic ticket and threatening suspension of license and registration if not paid immediately.",
+      "Tennessee government imposter scams involving these DMV-branded texts were reported among the state's top reported scams in 2025."
+    ],
+    "source": "Tennessee Department of Safety and Homeland Security, https://www.tn.gov/safety/news/2025/6/5/tennessee-department-of-safety-and-homeland-security-and-tennessee-highway-patrol-warn-of--outstanding-traffic-ticket--scam.html",
+    "spreadPlatforms": [
+      "Text Messages",
+      "SMS/iMessage",
+      "Email"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Fake Toll Road Text Scam",
+    "novelty": "known-variant",
+    "severity": "low",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Outstanding Traffic Ticket Scam"
+    ],
+    "confidence": 0.75,
+    "reasoning": "This is a smishing scam impersonating a government agency (DMV/highway patrol) using a fake unpaid fine/urgency link, structurally identical to the existing \"Fake Toll Road Text Scam\" and broader Smishing pattern already in the database; the source itself explicitly compares it to the toll scam. It's a targeted variant (traffic tickets vs. tolls) rather than a fundamentally new mechanism."
+  },
+  "queuedAt": "2026-09-26T19:31:05.271Z"
+}
