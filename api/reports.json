@@ -1,6 +1,6 @@
 {
-  "version": 34,
-  "lastUpdated": "2026-09-20T00:34:38.184Z",
+  "version": 35,
+  "lastUpdated": "2026-10-01T02:42:14.137Z",
   "reports": [
     {
       "id": "1",
@@ -2345,6 +2345,47 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "68",
+      "slug": "utility-company-shutoff-scam",
+      "title": "Utility Company Shutoff Scam",
+      "summary": "Scammers pose as your gas, electric, or water company and threaten to shut off your service unless you pay immediately, usually by wire transfer, gift card, payment app, or cryptocurrency.",
+      "category": "Phone Scam",
+      "firstReported": "2018-09-01",
+      "relatedScams": [
+        "Fake Charity / Disaster Relief Scam",
+        "Disaster Recovery Contractor Scam",
+        "Smishing Text Message Scam"
+      ],
+      "safetyTips": [
+        "Know that real utility companies will not demand immediate payment to avoid same-day disconnection",
+        "Hang up, and contact your utility yourself using the number on your bill or the company website, never a number the caller gave you",
+        "Never pay anyone who demands payment by wire transfer, gift card, cryptocurrency, or payment app",
+        "When searching online for your utility, scroll past the paid ads at the top, since some impersonate real utility companies",
+        "Report utility scams to your real utility company, to the FTC at ReportFraud.ftc.gov, and to your state attorney general"
+      ],
+      "datePublished": "2026-10-01T02:42:14.137Z",
+      "howItWorks": "Someone calls, texts, emails, or even shows up at your door claiming to be from your gas, electric, or water company. They say you have a past-due bill and that your service will be shut off unless you pay right away, sometimes the same day. The goal is to scare you into paying before you have time to check. They insist you can only pay one way, such as wiring money through Western Union or MoneyGram, buying gift cards and reading them the numbers on the back, using a payment app, or sending cryptocurrency, because that money is hard to get back. After big storms and power outages, scammers also send messages that look like they come from your utility, with links designed to steal your personal information, sometimes promising to restore your service faster if you pay.",
+      "redFlags": [
+        "A threat to shut off your gas, electric, or water service unless you pay immediately",
+        "A caller who insists you have a past-due bill even though you know you already paid",
+        "Being told you can only pay by wire transfer, gift card, cash reload card, payment app, or cryptocurrency",
+        "A request for your banking information by phone or email",
+        "A message after a storm or outage offering to restore your service faster if you pay or share your information"
+      ],
+      "realExamples": [
+        "In September 2018 the FTC warned it had been hearing about scammers impersonating utility companies, calling to say electricity or water would be shut off unless a past-due bill was paid, with small businesses among the targets",
+        "In January 2026, after a winter storm left hundreds of thousands without power, the FTC warned of messages that looked like they came from utility companies, with links designed to steal personal information and false promises of faster service restoration for payment"
+      ],
+      "source": "FTC Consumer Advice, https://consumer.ftc.gov/articles/scammers-pretend-be-your-utility-company ; FTC Consumer Alert (Jan 2026), https://consumer.ftc.gov/consumer-alerts/2026/01/avoid-weather-related-utility-scams-after-recent-winter-storm ; FTC Consumer Alert (Sep 2018), https://consumer.ftc.gov/consumer-alerts/2018/09/empower-yourself-against-utility-scams",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Text Messages",
+        "Email",
+        "In-Person"
+      ],
+      "isAIDiscovered": false
     }
   ]
 }
