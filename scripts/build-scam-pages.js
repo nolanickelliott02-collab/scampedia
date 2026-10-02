@@ -42,7 +42,8 @@ function renderSourceCitation(source) {
     const match = SOURCE_URL_PATTERN.exec(seg);
     if (!match) return escapeHtml(seg);
     const url = match[0].replace(/[.,;]+$/, '');
-    const label = seg.slice(0, match.index).replace(/[,;]\s*$/, '').trim() || url;
+    // Also drops a comma left inside a closing quote ("Title," https://...).
+    const label = seg.slice(0, match.index).replace(/[,;]\s*$/, '').replace(/,(["”])\s*$/, '$1').trim() || url;
     return `<a href="${escapeHtml(url)}" rel="noopener noreferrer" target="_blank">${escapeHtml(label)}</a>`;
   });
 
@@ -138,7 +139,7 @@ function pageShell({ title, description, canonical, ogImage, jsonLd, bodyHtml, a
     </div>
   </nav>
 
-  <div class="wiki-shell container">
+  <div class="wiki-shell wiki-shell--article container">
     <main class="wiki-main" id="wiki-main">
       ${bodyHtml}
     </main>
@@ -148,12 +149,14 @@ function pageShell({ title, description, canonical, ogImage, jsonLd, bodyHtml, a
     <div class="container footer-inner">
       <div class="footer-brand">
         <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="footer-logo-img" width="249" height="18" />
-        <span class="footer-copy">© 2026 Scampedia. All rights reserved.</span>
+        <span class="footer-copy">© 2026 Nick Elliott. All rights reserved. Edited by <a href="../about.html">Nick Elliott</a>.</span>
       </div>
       <div class="footer-links">
         <a href="../scampedia.html">Scam Database</a>
         <a href="https://officialverifyguard.com">Official Site</a>
-        <a href="https://officialverifyguard.com/privacy.html">Privacy Policy</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms of Service</a>
+        <a href="../about.html">About &amp; Editorial Policy</a>
         <a href="mailto:verifyguardsupport@gmail.com">Contact</a>
       </div>
     </div>
@@ -186,6 +189,7 @@ function scamPageHtml(report, allReports) {
     datePublished: report.datePublished || report.firstReported,
     dateModified: report.datePublished || report.firstReported,
     author: { '@type': 'Organization', name: 'Scampedia' },
+    editor: { '@type': 'Person', name: 'Nick Elliott', url: `${SITE_ORIGIN}/about.html` },
     publisher: {
       '@type': 'Organization',
       name: 'Scampedia',
@@ -225,8 +229,9 @@ function scamPageHtml(report, allReports) {
       <h1>${escapeHtml(report.title)}</h1>
       <div class="wiki-byline">
         ${publishedDate ? `<span>Added ${publishedDate}</span><span class="sep">·</span>` : ''}
-        ${report.isAIDiscovered ? `<span class="ai-pill">🧠 Discovered by VerifyGuard AI Brain</span><span class="sep">·</span>` : ''}
+        ${report.isAIDiscovered ? `<a class="ai-pill" href="../about.html#how-entries-are-made">🤖 AI-researched</a><span class="sep">·</span>` : ''}
         ${report.isGovSourced ? `<span class="gov-pill">🏛️ Government-Verified</span><span class="sep">·</span>` : ''}
+        <span>Editor: <a href="../about.html">Nick Elliott</a></span><span class="sep">·</span>
         <span>Source: ${renderSourceCitation(source)}</span>
       </div>
     </div>
@@ -303,13 +308,13 @@ function scamPageHtml(report, allReports) {
           <span class="wiki-infobox-value">${firstReportedYear || '—'}</span>
         </div>
         <div class="wiki-infobox-row">
-          <span class="wiki-infobox-label">Detected By</span>
-          <span class="wiki-infobox-value">VerifyGuard AI</span>
+          <span class="wiki-infobox-label">Editor</span>
+          <span class="wiki-infobox-value"><a href="../about.html">Nick Elliott</a></span>
         </div>
         ${report.isAIDiscovered ? `
         <div class="wiki-infobox-row">
           <span class="wiki-infobox-label">Discovery</span>
-          <span class="wiki-infobox-value">🧠 AI Discovered</span>
+          <span class="wiki-infobox-value">🤖 AI-researched</span>
         </div>` : ''}
         ${report.isGovSourced ? `
         <div class="wiki-infobox-row">
@@ -427,6 +432,9 @@ function buildSitemap(allReports) {
     { loc: `${SITE_ORIGIN}/scampedia.html`, priority: '0.9' },
     { loc: `${SITE_ORIGIN}/scams/`, priority: '0.9' },
     { loc: `${SITE_ORIGIN}/scams/az.html`, priority: '0.7' },
+    { loc: `${SITE_ORIGIN}/about.html`, priority: '0.5' },
+    { loc: `${SITE_ORIGIN}/terms.html`, priority: '0.3' },
+    { loc: `${SITE_ORIGIN}/privacy.html`, priority: '0.3' },
   ];
   const scamUrls = allReports.map(r => ({
     loc: `${SITE_ORIGIN}/scams/${r.slug}.html`,

@@ -359,6 +359,11 @@ img { max-width: 100%; }
   align-items: start;
 }
 
+/* Scam pages have no sidebar — without this their article sat in the
+   260px sidebar column on desktop (fixed 2026-10-02). */
+.wiki-shell--article { grid-template-columns: minmax(0, 1fr); }
+a.ai-pill { text-decoration: none; }
+
 /* ---- Sidebar ---- */
 .wiki-sidebar {
   position: sticky;

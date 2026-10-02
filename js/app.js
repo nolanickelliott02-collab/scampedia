@@ -240,7 +240,7 @@ function renderBrowse({ categorySlug, query }) {
   const main = document.getElementById('wiki-main');
   let reports = allReports;
   let heading = 'Latest Scam Reports';
-  let sub = `The living Scampedia database — the same patterns VerifyGuard scans for in real time, newest first.`;
+  let sub = `The Scampedia database — the same entries the VerifyGuard app syncs, newest first.`;
   let isFeed = true;
 
   if (categorySlug) {
@@ -310,7 +310,7 @@ function cardHtml(r) {
       <div class="scam-card-meta">
         <span class="scam-cat">${escapeHtml(r.category)}</span>
         ${date ? `<span>·</span><span class="scam-card-date">${escapeHtml(date)}</span>` : ''}
-        ${r.isAIDiscovered ? `<span class="ai-pill">🧠 AI Discovered</span>` : ''}
+        ${r.isAIDiscovered ? `<span class="ai-pill">🤖 AI-researched</span>` : ''}
         ${r.isGovSourced ? `<span class="gov-pill">🏛️ Gov-Verified</span>` : ''}
       </div>
       <h2>${escapeHtml(r.title)}</h2>
