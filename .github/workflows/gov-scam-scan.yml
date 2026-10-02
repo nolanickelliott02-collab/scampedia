@@ -92,7 +92,7 @@ jobs:
             echo "No new review-queue files this run."
           else
             git commit -m "Queue candidate(s) for review from this run (gov-scam-scan)"
-            git pull --rebase origin main
+            git pull --rebase --autostash origin main
             git push origin main
           fi
       - name: Rebuild static scam pages
@@ -122,10 +122,15 @@ jobs:
         run: |
           git config user.name "scampedia-bot"
           git config user.email "actions@github.com"
-          git add api/reports.json api/patterns.json scams/ sitemap.xml
+          # Found 2026-10-02: this step staged only some of what the build
+          # step changes (build:learn also rewrites learn/, llms.txt and
+          # llms-full.txt), so `git pull --rebase` refused with "You have
+          # unstaged changes" and a fully-gated entry was lost. Stage every
+          # build output, and --autostash anything else unexpected.
+          git add api/reports.json api/patterns.json scams/ learn/ sitemap.xml llms.txt llms-full.txt
           PLURAL="ies"; [ "$COUNT" = "1" ] && PLURAL="y"
           git commit -m "Add $COUNT scam entr$PLURAL: $TITLES" -m "Last: $LAST_TITLE" -m "Source: $CITATION" -m "Government-sourced entry (gov-scam-scan)"
-          git pull --rebase origin main
+          git pull --rebase --autostash origin main
           git push origin main
       - name: Notify devices of the new entry
         if: steps.generate.outputs.result == 'written'
