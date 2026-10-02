@@ -63,7 +63,17 @@ exactly once — do not submit a low-confidence or thin entry just to have somet
 // this directly multiplies real per-run API cost up to ~3x on days it finds
 // that much. Every attempt is gated exactly as before — this changes how
 // many tries happen, not what's allowed to publish.
-runPipeline({ buildSystemPrompt, maxAttempts: 3 }).catch(err => {
+// Only this bot's own entries count as "already ran today". The default
+// check (reports.json lastUpdated is today) is tripped by ANY new entry, so
+// whenever gov-scam-scan published around 01:00 UTC this bot skipped its
+// ~21:00 UTC run the same day (found 2026-10-02, when a recovered gov entry
+// made it skip). Same shape as generate-gov-scam.js's own check.
+function alreadyRanToday(data, todayISO) {
+  return data.reports.some(r =>
+    r.isAIDiscovered && !r.isGovSourced && String(r.datePublished || '').slice(0, 10) === todayISO);
+}
+
+runPipeline({ buildSystemPrompt, alreadyRanToday, maxAttempts: 3 }).catch(err => {
   console.error('Unexpected error:', err);
   writeGithubOutput({ result: 'error', error: err.message });
   process.exitCode = 1;
