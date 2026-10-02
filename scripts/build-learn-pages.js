@@ -197,13 +197,14 @@ function courseShell({ title, description, canonical, ogImage, jsonLd, bodyHtml,
     <div class="container footer-inner">
       <div class="footer-brand">
         <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="footer-logo-img" width="249" height="18" />
-        <span class="footer-copy">© 2026 Scampedia. All rights reserved.</span>
+        <span class="footer-copy">© 2026 Nick Elliott. All rights reserved. Edited by <a href="../about.html">Nick Elliott</a>.</span>
       </div>
       <div class="footer-links">
         <a href="../learn/index.html">Learn</a>
         <a href="https://officialverifyguard.com">Official Site</a>
         <a href="../privacy.html">Privacy Policy</a>
         <a href="../terms.html">Terms of Service</a>
+        <a href="../about.html">About &amp; Editorial Policy</a>
         <a href="mailto:verifyguardsupport@gmail.com">Contact</a>
       </div>
     </div>
@@ -235,6 +236,7 @@ function lessonPageHtml(lesson, numberedLessons, volatile) {
     datePublished: lesson.lastReviewed,
     dateModified: lesson.lastReviewed,
     author: { '@type': 'Organization', name: 'Scampedia' },
+    editor: { '@type': 'Person', name: 'Nick Elliott', url: `${SITE_ORIGIN}/about.html` },
     publisher: {
       '@type': 'Organization',
       name: 'Scampedia',
