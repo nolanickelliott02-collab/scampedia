@@ -90,6 +90,15 @@ function checkNotDuplicate(newReport, existingReports) {
   return { ok: true, issues: [] };
 }
 
+function stripCiteMarkup(value) {
+  if (typeof value === 'string') return value.replace(/<\/?cite\b[^>]*>/gi, '').replace(/[ \t]{2,}/g, ' ');
+  if (Array.isArray(value)) return value.map(stripCiteMarkup);
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, stripCiteMarkup(v)]));
+  }
+  return value;
+}
+
 function findQualityIssues(report) {
   const issues = [];
   const allStrings = [report.summary, report.howItWorks, report.source, ...report.safetyTips, ...report.redFlags, ...report.realExamples];
@@ -177,13 +186,42 @@ async function fetchWithRetry(url, options = {}, { retries = 2, baseDelayMs = 50
   throw lastError;
 }
 
+// Government sites (fbi.gov, transportation.gov, dos.ny.gov, ...) block this
+// fetcher with HTTP 403 even for real, live pages — 8 of the 11 citation
+// rejections 2026-09-17..10-01. When that happens, ask the Internet
+// Archive for its copy: a real page it has archived comes back 200 (and its
+// text feeds the relevance/fact-check gates below), while a URL that never
+// existed comes back 404, so this can't rescue an invented link.
+// The archive answers HTTP 429 to the browser-style FETCH_UA (checked
+// 2026-10-02) but serves an honest bot identity normally.
+const ARCHIVE_UA = 'ScampediaBot/1.0 (+https://scampedia.net/about.html)';
+
+function archiveUrlFor(url) {
+  return `https://web.archive.org/web/${new Date().getUTCFullYear()}id_/${url}`;
+}
+
+async function fetchArchivedCopy(url) {
+  try {
+    const res = await fetchWithRetry(archiveUrlFor(url), { redirect: 'follow', headers: { 'User-Agent': ARCHIVE_UA } }, { retries: 1, timeoutMs: 30_000 });
+    return res.ok ? res : null;
+  } catch {
+    return null;
+  }
+}
+
+// Returns { ok, issues, liveUrls, deadUrls, archived }. ok is true only when
+// every cited URL is live (directly or via the archive). archived maps each
+// URL that was only reachable through the archive to its archive URL.
 async function verifyCitationUrls(source) {
   const urls = extractCitationUrls(source);
   if (urls.length === 0) {
-    return { ok: false, issues: ['source citation contains no URL at all — a citation must be checkable, not just a claimed organization name'] };
+    return { ok: false, issues: ['source citation contains no URL at all — a citation must be checkable, not just a claimed organization name'], liveUrls: [], deadUrls: [], archived: {} };
   }
 
   const issues = [];
+  const liveUrls = [];
+  const deadUrls = [];
+  const archived = {};
   for (const url of urls) {
     try {
       let res = await fetchWithRetry(url, { method: 'HEAD', redirect: 'follow', headers: { 'User-Agent': FETCH_UA } });
@@ -191,12 +229,33 @@ async function verifyCitationUrls(source) {
       if (res.status === 405 || res.status === 403) {
         res = await fetchWithRetry(url, { method: 'GET', redirect: 'follow', headers: { 'User-Agent': FETCH_UA } });
       }
-      if (!res.ok) issues.push(`citation URL returned HTTP ${res.status}, not a real page: ${url}`);
+      if (res.ok) { liveUrls.push(url); continue; }
+      if (res.status === 403 && await fetchArchivedCopy(url)) {
+        archived[url] = archiveUrlFor(url);
+        liveUrls.push(url);
+        continue;
+      }
+      deadUrls.push(url);
+      issues.push(`citation URL returned HTTP ${res.status}, not a real page: ${url}`);
     } catch (err) {
+      deadUrls.push(url);
       issues.push(`citation URL failed to resolve (${err.message}): ${url}`);
     }
   }
-  return { ok: issues.length === 0, issues };
+  return { ok: issues.length === 0, issues, liveUrls, deadUrls, archived };
+}
+
+// Drops dead URLs from a citation string when others still work — one dead
+// link used to sink an entry whose other cited sources were fine. Removes
+// whole ";"-separated segments whose URL is dead. Claims that only the dead
+// source supported still get caught: relevance and fact-check only ever see
+// the live sources' text.
+function pruneDeadCitations(source, deadUrls) {
+  if (deadUrls.length === 0) return source;
+  return String(source).split(';')
+    .map(seg => seg.trim())
+    .filter(seg => seg && !deadUrls.some(u => seg.includes(u)))
+    .join('; ');
 }
 
 // A URL returning 200 only proves a page exists — it doesn't prove the page
@@ -274,7 +333,7 @@ function stripHtmlToText(html) {
 // one term being paraphrased by the source article's own wording.
 const RELEVANCE_THRESHOLD = 0.5;
 
-async function checkContentRelevance(report) {
+async function checkContentRelevance(report, archived = {}) {
   const words = significantWords(report.title);
   if (words.length === 0) {
     return { ok: false, issues: ['title produced no significant words to check relevance against — title itself may be malformed'] };
@@ -285,7 +344,7 @@ async function checkContentRelevance(report) {
 
   for (const url of urls) {
     try {
-      const res = await fetchWithRetry(url, { redirect: 'follow', headers: { 'User-Agent': FETCH_UA } });
+      const res = await fetchWithRetry(archived[url] || url, { redirect: 'follow', headers: { 'User-Agent': archived[url] ? ARCHIVE_UA : FETCH_UA } }, archived[url] ? { retries: 1, timeoutMs: 30_000 } : undefined);
       if (!res.ok) { attempts.push({ url, matched: 0, of: words.length, error: `HTTP ${res.status}` }); continue; }
       const html = await res.text();
       const pageText = stripHtmlToText(html);
@@ -880,7 +939,11 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
       continue;
     }
 
-    const entry = outcome.input;
+    // web_search results carry <cite index="..."> markup that the model
+    // sometimes copies into its fields — all 6 quality-gate rejections
+    // 2026-09-17..10-01. Strip the tags (keeping the text inside) before
+    // the quality gate sees them.
+    const entry = stripCiteMarkup(outcome.input);
     const nextId = String(Math.max(0, ...data.reports.map(r => parseInt(r.id, 10) || 0)) + 1);
     let newReport = {
       id: nextId,
@@ -927,6 +990,14 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
 
     console.log('Verifying citation URL(s) resolve...');
     const citationCheck = await verifyCitationUrls(newReport.source);
+    if (!citationCheck.ok && citationCheck.liveUrls.length > 0) {
+      console.log('Dropping dead citation URL(s), keeping the live ones:', citationCheck.issues);
+      newReport.source = pruneDeadCitations(newReport.source, citationCheck.deadUrls);
+      citationCheck.ok = extractCitationUrls(newReport.source).length > 0;
+    }
+    if (Object.keys(citationCheck.archived).length > 0) {
+      console.log('Using Internet Archive copies for bot-blocked citation(s):', Object.keys(citationCheck.archived));
+    }
     if (!citationCheck.ok) {
       console.error('Citation verification failed, refusing to write:', citationCheck.issues);
       lastNonWrittenOutcome = { result: 'gate-rejected', reason: `Citation verification: ${citationCheck.issues.join('; ')}` };
@@ -934,7 +1005,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     }
 
     console.log('Checking cited page content is actually relevant...');
-    const relevanceCheck = await checkContentRelevance(newReport);
+    const relevanceCheck = await checkContentRelevance(newReport, citationCheck.archived);
     if (!relevanceCheck.ok) {
       console.error('Content relevance check failed, refusing to write:', relevanceCheck.issues);
       lastNonWrittenOutcome = { result: 'gate-rejected', reason: `Content relevance: ${relevanceCheck.issues.join('; ')}` };
@@ -1043,6 +1114,8 @@ module.exports = {
   writeGithubOutput,
   recordOutcome,
   runPipeline,
+  stripCiteMarkup,
+  pruneDeadCitations,
   addScamPhrases,
   normalizePhrase,
 };
