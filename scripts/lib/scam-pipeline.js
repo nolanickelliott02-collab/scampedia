@@ -301,7 +301,15 @@ async function checkContentRelevance(report) {
     console.log(`Relevance check passed: ${best.url} matched ${best.matched}/${best.of} title words (${words.join(', ')}).`);
     // Returned so factCheckClaims can verify against the exact text this
     // check already fetched, instead of re-fetching the same page again.
-    return { ok: true, issues: [], sourceText: best.pageText };
+    // Every successfully fetched cited page is included (best match first),
+    // not just the best one — found 2026-09-30: entries citing two real
+    // sources were being fact-check-rejected for claims that came from the
+    // second cited page, because only the first was ever shown to the checker.
+    const fetched = [best, ...attempts.filter(a => a !== best && a.pageText)];
+    const sourceText = fetched.length === 1
+      ? best.pageText
+      : fetched.map(a => `[source: ${a.url}]\n${a.pageText.slice(0, 12000)}`).join('\n\n');
+    return { ok: true, issues: [], sourceText };
   }
 
   return {
@@ -345,11 +353,15 @@ contradicts. A "real example" describing a pattern that generalizes beyond the s
 wording is fine; a fabricated specific (a made-up dollar figure, a named victim not in the
 source, a statistic not present in the source) is not fine.
 
+"First reported" is shown to readers as a year only. Accept it if its year matches a date the
+source text itself states (e.g. the alert's own publication date, or the earliest dated incident
+it describes); flag it only if the source states no date at all for that year or contradicts it.
+
 --- ENTRY CLAIMS ---
 ${claims}
 
 --- SOURCE TEXT (truncated) ---
-${sourceText.slice(0, 12000)}`;
+${sourceText.slice(0, 24000)}`;
 
   const response = await client.messages.create({
     model: MODEL,
@@ -553,6 +565,89 @@ function addScamPhrases(candidates, report, patternsPath = PATTERNS_PATH) {
   patterns.lastUpdated = new Date().toISOString();
   fs.writeFileSync(patternsPath, JSON.stringify(patterns, null, 2) + '\n');
   return added;
+}
+
+// Found 2026-09-30: 46 of ~70 candidates over the previous two weeks died
+// at the fact-check gate, and nothing published for 11 days. Reading the
+// rejections, almost none were invented scams — the generator researches
+// across many web_search results and then writes in real details from pages
+// it didn't cite (a second outlet's victim story, an older FTC alert's
+// script, a guessed firstReported date). The gate was right to block those
+// details, but throwing out the whole candidate meant one stray sentence
+// sank an otherwise well-sourced entry. This is a single cut-only repair
+// pass: given the exact claims the checker flagged and the same source text,
+// remove or narrow them using only that text. It adds nothing new, and the
+// revised entry still has to pass findQualityIssues and the full fact-check
+// again from scratch — this never lets a flagged claim through, it only
+// gives a candidate one chance to drop it.
+async function reviseToSupportedClaims(client, newReport, unsupportedClaims, sourceText) {
+  const prompt = `A scam-database entry failed fact-checking against its cited source. Revise it so
+every claim is supported by the SOURCE TEXT below. Rules:
+- Remove or narrow each flagged claim. Do not add any fact, name, number, date, or example that is
+  not in the source text.
+- Keep everything else as close to the original wording as possible.
+- Keep at least 3 red flags, 3 safety tips, and 1 real example, all supported by the source text.
+  A real example may describe the pattern exactly as the source describes it.
+- howItWorks stays one plain-English paragraph of at least 150 characters.
+- firstReported must be an ISO 8601 date taken from a date the source text actually states (its
+  publication date or the earliest dated incident it describes).
+
+--- FLAGGED CLAIMS ---
+${unsupportedClaims}
+
+--- ENTRY ---
+${JSON.stringify({
+    title: newReport.title,
+    summary: newReport.summary,
+    howItWorks: newReport.howItWorks,
+    redFlags: newReport.redFlags,
+    safetyTips: newReport.safetyTips,
+    realExamples: newReport.realExamples,
+    firstReported: newReport.firstReported,
+  }, null, 2)}
+
+--- SOURCE TEXT (truncated) ---
+${sourceText.slice(0, 24000)}`;
+
+  const response = await client.messages.create({
+    model: MODEL,
+    max_tokens: 4096,
+    system: 'You are a careful editor. You only cut or narrow claims; you never add new information. Call submit_revised_entry exactly once.',
+    tools: [{
+      name: 'submit_revised_entry',
+      description: 'Submit the revised entry fields.',
+      input_schema: {
+        type: 'object',
+        properties: {
+          summary: { type: 'string' },
+          howItWorks: { type: 'string' },
+          redFlags: { type: 'array', items: { type: 'string' } },
+          safetyTips: { type: 'array', items: { type: 'string' } },
+          realExamples: { type: 'array', items: { type: 'string' } },
+          firstReported: { type: 'string' },
+        },
+        required: ['summary', 'howItWorks', 'redFlags', 'safetyTips', 'realExamples', 'firstReported'],
+        additionalProperties: false,
+      },
+      strict: true,
+    }],
+    tool_choice: { type: 'tool', name: 'submit_revised_entry' },
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  const call = response.content.find(b => b.type === 'tool_use' && b.name === 'submit_revised_entry');
+  if (!call || response.stop_reason === 'max_tokens') return null;
+  const r = call.input;
+  if (Number.isNaN(Date.parse(r.firstReported))) return null;
+  return {
+    ...newReport,
+    summary: r.summary,
+    howItWorks: r.howItWorks,
+    redFlags: toArray(r.redFlags),
+    safetyTips: toArray(r.safetyTips),
+    realExamples: toArray(r.realExamples),
+    firstReported: r.firstReported,
+  };
 }
 
 const RESULT_EMOJI = { written: '✅', skipped: '⏭️', 'gate-rejected': '🚫', error: '❌', 'already-ran': '☑️' };
@@ -787,7 +882,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
 
     const entry = outcome.input;
     const nextId = String(Math.max(0, ...data.reports.map(r => parseInt(r.id, 10) || 0)) + 1);
-    const newReport = {
+    let newReport = {
       id: nextId,
       slug: slugify(entry.title),
       title: entry.title,
@@ -870,7 +965,22 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     }
 
     console.log('Fact-checking claims against the cited source...');
-    const factCheck = await factCheckClaims(client, newReport, relevanceCheck.sourceText);
+    let factCheck = await factCheckClaims(client, newReport, relevanceCheck.sourceText);
+    if (!factCheck.ok) {
+      console.log('Fact-check flagged claims, attempting one cut-only repair pass:', factCheck.issues);
+      const revised = await reviseToSupportedClaims(client, newReport, factCheck.issues.join('; '), relevanceCheck.sourceText);
+      const revisedIssues = revised ? findQualityIssues(revised) : ['repair pass returned no usable revision'];
+      if (revisedIssues.length === 0) {
+        console.log('Re-running fact-check on the revised entry...');
+        factCheck = await factCheckClaims(client, revised, relevanceCheck.sourceText);
+        if (factCheck.ok) {
+          console.log('Revised entry passed fact-check:', JSON.stringify(revised, null, 2));
+          newReport = revised;
+        }
+      } else {
+        factCheck = { ok: false, issues: [...factCheck.issues, `repair pass: ${revisedIssues.join('; ')}`] };
+      }
+    }
     if (!factCheck.ok) {
       console.error('Fact-check failed, refusing to write:', factCheck.issues);
       lastNonWrittenOutcome = { result: 'gate-rejected', reason: `Fact-check: ${factCheck.issues.join('; ')}` };
@@ -892,7 +1002,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
 
     console.log(`Wrote new entry "${entry.title}" — version now ${data.version}.`);
     writtenTitles.push(entry.title);
-    lastWritten = { title: entry.title, citation: entry.source, summary: entry.summary, slug: newReport.slug };
+    lastWritten = { title: entry.title, citation: entry.source, summary: newReport.summary, slug: newReport.slug };
     lastNonWrittenOutcome = null;
   }
 
@@ -925,6 +1035,8 @@ module.exports = {
   checkContentRelevance,
   stripHtmlToText,
   triageCandidate,
+  factCheckClaims,
+  reviseToSupportedClaims,
   writeToReviewQueue,
   REVIEW_DIR,
   checkNotDuplicate,
