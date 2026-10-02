@@ -59,3 +59,29 @@ test('repair returns null when the response was truncated', async () => {
   const out = await reviseToSupportedClaims(fakeClient(REVISED, 'max_tokens'), REPORT, 'x', 'source text');
   assert.equal(out, null);
 });
+
+// 2026-10-02: the fact-check result is decided per claim in code.
+const { factCheckClaims } = require('../lib/scam-pipeline');
+
+function fakeChecker(checkedClaims) {
+  return { messages: { async create() { return { content: [{ type: 'tool_use', name: 'submit_fact_check', input: { checkedClaims } }] }; } } };
+}
+const ENTRY = { title: 't', summary: 's', howItWorks: 'h', redFlags: ['r'], realExamples: ['e'], firstReported: '2024-08-22' };
+
+test('passes when every checked claim is supported (the 2026-10-02 false rejection)', async () => {
+  const out = await factCheckClaims(fakeChecker([
+    { claim: "fake report called an 'ASR report'", supported: true, reason: 'matches source' },
+    { claim: 'First reported 2024-08-22', supported: true, reason: 'BBB article date' },
+  ]), ENTRY, 'source text');
+  assert.equal(out.ok, true);
+});
+
+test('fails and names only the unsupported claims', async () => {
+  const out = await factCheckClaims(fakeChecker([
+    { claim: 'tap report', supported: true, reason: 'matches' },
+    { claim: "FTC warned about '.vin' sites", supported: false, reason: 'FTC and .vin not in source' },
+  ]), ENTRY, 'source text');
+  assert.equal(out.ok, false);
+  assert.match(out.issues[0], /\.vin/);
+  assert.doesNotMatch(out.issues[0], /tap report/);
+});
