@@ -122,7 +122,7 @@ jobs:
         run: |
           git config user.name "scampedia-bot"
           git config user.email "actions@github.com"
-          git add api/reports.json scams/ sitemap.xml
+          git add api/reports.json api/patterns.json scams/ sitemap.xml
           PLURAL="ies"; [ "$COUNT" = "1" ] && PLURAL="y"
           git commit -m "Add $COUNT scam entr$PLURAL: $TITLES" -m "Last: $LAST_TITLE" -m "Source: $CITATION" -m "Government-sourced entry (gov-scam-scan)"
           git pull --rebase origin main
