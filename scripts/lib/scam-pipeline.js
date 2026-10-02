@@ -13,6 +13,9 @@ const path = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
 
 const REPORTS_PATH = path.join(__dirname, '..', '..', 'api', 'reports.json');
+// Phrase list the VerifyGuard app's on-device AI Brain matches scans against
+// (synced via SyncEngine.fetchAndCachePatterns). See addScamPhrases below.
+const PATTERNS_PATH = path.join(__dirname, '..', '..', 'api', 'patterns.json');
 const MODEL = 'claude-sonnet-5';
 
 const CATEGORIES = [
@@ -497,6 +500,61 @@ function writeGithubOutput(fields) {
 // $GITHUB_STEP_SUMMARY, which GitHub renders directly in the run's own
 // Summary tab — so "what happened and why" is visible at a glance instead
 // of requiring someone to open and read raw step logs.
+// Grows the AI Brain phrase list (api/patterns.json) from each published
+// entry, added 2026-10-02 — the list was hand-written and hadn't changed
+// since 2026-05-27, while the bots kept documenting new scams. Each match
+// in the app adds real weight to a scan's verdict, so a generic phrase
+// would flag ordinary messages; every phrase must be 2-6 words, not
+// generic, and appear word-for-word in the entry's own fact-checked text
+// (so it can't be invented). At most 3 per entry. Returns what was added.
+const GENERIC_PHRASES = new Set([
+  'click here', 'your account', 'call us', 'thank you', 'act now', 'contact us',
+  'log in', 'sign in', 'phone number', 'text message', 'credit card', 'bank account',
+  'social media', 'email address', 'personal information', 'customer service',
+]);
+const MAX_PHRASES_PER_ENTRY = 3;
+
+function normalizePhrase(p) {
+  return String(p || '').toLowerCase().replace(/[“”"'‘’]/g, '').replace(/[^a-z0-9$%&\- ]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function acceptableScamPhrase(phrase, entryText, existing) {
+  const words = phrase.split(' ');
+  if (words.length < 2 || words.length > 6) return false;
+  if (phrase.length < 8 || phrase.length > 60) return false;
+  if (GENERIC_PHRASES.has(phrase)) return false;
+  if (words.filter(w => !STOPWORDS.has(w) && w.length > 2).length < 2) return false;
+  if (!entryText.includes(phrase)) return false;
+  // Whole-word overlap only — a plain substring check would reject "first
+  // notice" for containing the existing pattern "irs". Overlapping phrases
+  // are skipped because the app would count both matches.
+  const padded = ` ${phrase} `;
+  if (existing.some(e => e && (padded.includes(` ${e} `) || ` ${e} `.includes(padded)))) return false;
+  return true;
+}
+
+function addScamPhrases(candidates, report, patternsPath = PATTERNS_PATH) {
+  if (!fs.existsSync(patternsPath)) return [];
+  const patterns = JSON.parse(fs.readFileSync(patternsPath, 'utf8'));
+  const existing = (patterns.scamPatterns || []).map(normalizePhrase);
+  const entryText = normalizePhrase([report.summary, report.howItWorks, ...(report.redFlags || []), ...(report.realExamples || [])].join(' '));
+
+  const added = [];
+  for (const raw of candidates) {
+    if (added.length >= MAX_PHRASES_PER_ENTRY) break;
+    const phrase = normalizePhrase(raw);
+    if (!acceptableScamPhrase(phrase, entryText, [...existing, ...added])) continue;
+    added.push(phrase);
+  }
+  if (added.length === 0) return [];
+
+  patterns.scamPatterns = [...(patterns.scamPatterns || []), ...added];
+  patterns.version = (patterns.version || 0) + 1;
+  patterns.lastUpdated = new Date().toISOString();
+  fs.writeFileSync(patternsPath, JSON.stringify(patterns, null, 2) + '\n');
+  return added;
+}
+
 const RESULT_EMOJI = { written: '✅', skipped: '⏭️', 'gate-rejected': '🚫', error: '❌', 'already-ran': '☑️' };
 
 function recordOutcome(botName, fields) {
@@ -560,10 +618,15 @@ function buildScamEntryTool() {
           description: 'Titles of 1-3 related scams, chosen ONLY from the existing-titles list you were given',
         },
         spreadPlatforms: { type: 'array', items: { type: 'string' }, description: 'e.g. "Text Messages", "Email", "Social Media"' },
+        scamPhrases: {
+          type: 'array',
+          items: { type: 'string' },
+          description: '2-4 short, distinctive phrases (2-6 words, lowercase) that the scam messages or calls themselves use, copied word-for-word from your howItWorks/redFlags/realExamples text, e.g. "unpaid toll", "final notice of disconnection". Only phrases a legitimate message would rarely contain — never generic ones like "your account" or "click here".',
+        },
         firstReported: { type: 'string', description: 'Best-estimate ISO 8601 date this trend was first reported by your sources' },
         source: { type: 'string', description: 'Real, specific citation: publication/agency name plus the exact URL you found it at, always including the https:// scheme' },
       },
-      required: ['title', 'category', 'summary', 'howItWorks', 'redFlags', 'safetyTips', 'realExamples', 'spreadPlatforms', 'firstReported', 'source'],
+      required: ['title', 'category', 'summary', 'howItWorks', 'redFlags', 'safetyTips', 'realExamples', 'spreadPlatforms', 'firstReported', 'source', 'scamPhrases'],
       additionalProperties: false,
     },
     strict: true,
@@ -821,6 +884,8 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     }
 
     data.reports.push(newReport);
+    const addedPhrases = addScamPhrases(toArray(entry.scamPhrases), newReport);
+    if (addedPhrases.length > 0) console.log(`Added ${addedPhrases.length} AI Brain phrase(s): ${addedPhrases.join(' | ')}`);
     data.version = (data.version || 0) + 1;
     data.lastUpdated = new Date().toISOString();
     fs.writeFileSync(reportsPath, JSON.stringify(data, null, 2) + '\n');
@@ -866,4 +931,6 @@ module.exports = {
   writeGithubOutput,
   recordOutcome,
   runPipeline,
+  addScamPhrases,
+  normalizePhrase,
 };
