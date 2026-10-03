@@ -150,6 +150,13 @@ function extractCitationUrls(source) {
 // false negative without weakening what's actually being verified — the
 // page still has to really resolve and really contain the claimed content.
 const FETCH_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
+// Some news sites (cbsnews.com) answer HTTP 406 Not Acceptable to a request
+// with no Accept header — found 2026-10-02 on a real, live article.
+const FETCH_HEADERS = {
+  'User-Agent': FETCH_UA,
+  Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'Accept-Language': 'en-US,en;q=0.9',
+};
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -224,13 +231,13 @@ async function verifyCitationUrls(source) {
   const archived = {};
   for (const url of urls) {
     try {
-      let res = await fetchWithRetry(url, { method: 'HEAD', redirect: 'follow', headers: { 'User-Agent': FETCH_UA } });
+      let res = await fetchWithRetry(url, { method: 'HEAD', redirect: 'follow', headers: FETCH_HEADERS });
       // Some servers reject HEAD outright even though the real page is fine — retry with GET before concluding the URL is dead.
-      if (res.status === 405 || res.status === 403) {
-        res = await fetchWithRetry(url, { method: 'GET', redirect: 'follow', headers: { 'User-Agent': FETCH_UA } });
+      if (res.status === 405 || res.status === 403 || res.status === 406) {
+        res = await fetchWithRetry(url, { method: 'GET', redirect: 'follow', headers: FETCH_HEADERS });
       }
       if (res.ok) { liveUrls.push(url); continue; }
-      if (res.status === 403 && await fetchArchivedCopy(url)) {
+      if ((res.status === 403 || res.status === 406) && await fetchArchivedCopy(url)) {
         archived[url] = archiveUrlFor(url);
         liveUrls.push(url);
         continue;
@@ -344,7 +351,7 @@ async function checkContentRelevance(report, archived = {}) {
 
   for (const url of urls) {
     try {
-      const res = await fetchWithRetry(archived[url] || url, { redirect: 'follow', headers: { 'User-Agent': archived[url] ? ARCHIVE_UA : FETCH_UA } }, archived[url] ? { retries: 1, timeoutMs: 30_000 } : undefined);
+      const res = await fetchWithRetry(archived[url] || url, { redirect: 'follow', headers: archived[url] ? { 'User-Agent': ARCHIVE_UA } : FETCH_HEADERS }, archived[url] ? { retries: 1, timeoutMs: 30_000 } : undefined);
       if (!res.ok) { attempts.push({ url, matched: 0, of: words.length, error: `HTTP ${res.status}` }); continue; }
       const html = await res.text();
       const pageText = stripHtmlToText(html);
@@ -432,10 +439,22 @@ ${sourceText.slice(0, 24000)}`;
       input_schema: {
         type: 'object',
         properties: {
-          verified: { type: 'boolean', description: 'true only if every factual claim is supported by the source text' },
-          unsupportedClaims: { type: 'array', items: { type: 'string' }, description: 'Specific claims not supported by the source, if any' },
+          checkedClaims: {
+            type: 'array',
+            description: 'Every specific claim you looked at closely. Use an empty array if nothing needed a closer look.',
+            items: {
+              type: 'object',
+              properties: {
+                claim: { type: 'string' },
+                supported: { type: 'boolean', description: 'true if the source text supports it (paraphrase is fine); false only if the source lacks or contradicts it' },
+                reason: { type: 'string' },
+              },
+              required: ['claim', 'supported', 'reason'],
+              additionalProperties: false,
+            },
+          },
         },
-        required: ['verified', 'unsupportedClaims'],
+        required: ['checkedClaims'],
         additionalProperties: false,
       },
       strict: true,
@@ -446,8 +465,15 @@ ${sourceText.slice(0, 24000)}`;
 
   const call = response.content.find(b => b.type === 'tool_use' && b.name === 'submit_fact_check');
   if (!call) return { ok: false, issues: ['fact-check pass did not return a verdict'] };
-  if (!call.input.verified) {
-    return { ok: false, issues: [`Fact-check found unsupported claims: ${(call.input.unsupportedClaims || []).join('; ')}`] };
+  // Decided per claim in code, not by one overall yes/no from the model.
+  // Found 2026-10-02: the old schema's single `verified: false` sometimes
+  // came back alongside a list where every item said "matches source" /
+  // "fine" — a good, fully-supported entry rejected by the model's own
+  // inconsistency. Now an entry fails only if some claim is marked
+  // unsupported.
+  const unsupported = (call.input.checkedClaims || []).filter(c => c.supported === false);
+  if (unsupported.length > 0) {
+    return { ok: false, issues: [`Fact-check found unsupported claims: ${unsupported.map(c => `${c.claim} (${c.reason})`).join('; ')}`] };
   }
   return { ok: true, issues: [] };
 }
