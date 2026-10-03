@@ -1,6 +1,6 @@
 {
-  "version": 36,
-  "lastUpdated": "2026-10-02T02:00:55.890Z",
+  "version": 38,
+  "lastUpdated": "2026-10-03T01:50:24.148Z",
   "reports": [
     {
       "id": "1",
@@ -2418,6 +2418,76 @@
       "source": "SSA Office of the Inspector General, https://oig.ssa.gov/scam-alerts/2026-02-20-ssa-office-of-the-inspector-general-warns-public-of-surge-in-fraudulent-social-security-statement-emails/",
       "spreadPlatforms": [
         "Email"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "70",
+      "slug": "timeshare-resale-scam",
+      "title": "Timeshare Resale Scam",
+      "summary": "Scammers target timeshare owners trying to sell, promising a quick sale at a big price if the owner first pays an upfront \"registration\" or closing fee — then the company disappears with the money.",
+      "category": "Investment Scam",
+      "firstReported": "2014-05-01",
+      "relatedScams": [],
+      "safetyTips": [
+        "Never pay any fee upfront to a timeshare reseller — it's better to do business with a reseller that takes fees only after the sale is complete",
+        "Check out the reseller with the state attorney general and local consumer protection agency where the company is located, and search their name online with words like \"complaint\" or \"scam\"",
+        "Confirm the reseller's agents are licensed to sell real estate in the state where your timeshare is located",
+        "Be skeptical of guarantees of fast sales, ready buyers, or big guaranteed returns — these are classic signs of a scam"
+      ],
+      "datePublished": "2026-10-03T01:43:21.947Z",
+      "howItWorks": "Timeshare owners who want to sell receive unsolicited calls or emails from people posing as resale agents who claim to have eager buyers lined up, often \"big-name companies\" wanting the timeshare for business travel or events, and who guarantee a fast sale at a hefty price. Before the \"deal\" can close, the company says the owner must pay several hundred to a couple thousand dollars via credit card for \"registration,\" listing, advertising, or closing fees. Once the fee is paid, the promised sale never happens — the company's promises of ready buyers, fast sales, big profits and money-back guarantees turn out to be lies, and owners are left stuck with credit card debt from paying the fee.",
+      "redFlags": [
+        "A caller or company claims the market for your timeshare is \"hot\" and they're \"overwhelmed\" with eager buyers",
+        "You're told they already have a buyer ready to purchase, or they promise to sell your timeshare within a specific short timeframe",
+        "You're asked to pay an upfront fee (reported as $500-$2,000) by credit card before any sale closes, sometimes labeled \"registration\" or closing costs",
+        "They promise a money-back guarantee if the resale doesn't go through",
+        "The company doesn't provide a contract, or provides one that doesn't accurately reflect the conversations you had"
+      ],
+      "realExamples": [
+        "FTC's 2014 consumer alert describes a company, Vacation Property Services, that claimed to represent big-name companies eager to buy timeshares for business travel and events and guaranteed owners hefty returns, then charged $500 to $2,000 in \"registration\" fees before disappearing"
+      ],
+      "source": "FTC, https://consumer.ftc.gov/consumer-alerts/2014/05/be-lookout-timeshare-resale-phonies; FTC, https://consumer.ftc.gov/articles/timeshares-vacation-clubs-and-related-scams; FBI New York, https://www.fbi.gov/contact-us/field-offices/newyork/news/fbi-new-york-warns-of-scams-targeting-timeshare-owners",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Email",
+        "Direct Mail"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "71",
+      "slug": "home-title-lock-insurance-scam",
+      "title": "Home Title Lock Insurance Scam",
+      "summary": "Ads warn homeowners that criminals can steal their home's title and push them to buy \"title lock insurance,\" but the FTC says this product is neither a lock nor insurance and won't actually prevent title fraud.",
+      "category": "Shopping Scam",
+      "firstReported": "2024-08-01",
+      "relatedScams": [],
+      "safetyTips": [
+        "Remember title fraud is a form of identity theft, not a product real insurance covers",
+        "Check your property title for free through your state or county's land records office",
+        "Sign up for your area's free title/deed change notification program if one is available, instead of paying a monthly fee",
+        "Take a breath before reacting to scary ads \"Stop. Take a breath. It's just a ploy to scare you.\" and research any company before paying"
+      ],
+      "datePublished": "2026-10-03T01:50:18.213Z",
+      "howItWorks": "Companies run scary ads claiming thieves can steal the title to your home, designed to frighten homeowners into buying \"title lock insurance.\" According to the FTC, \"title lock insurance\" is not title insurance, which protects you against challenges to the title, like a lien you didn't know about",
+      "redFlags": [
+        "Ads that claim thieves can easily steal your home's title and create panic to sell a product",
+        "A service calling itself 'insurance' or a 'lock' that doesn't actually prevent fraud or restore a stolen title",
+        "Marketing that conflates 'title lock insurance' with real title insurance",
+        "Pressure to subscribe to paid monitoring instead of being told about free alternatives"
+      ],
+      "realExamples": [
+        "FTC consumer alert describing ads that tell homeowners thieves can steal their home's title and then pitch 'title lock insurance' as the fix",
+        "Consumers commenting on the FTC's alert page describe seeing TV commercials that caused panic, with real estate lawyers telling them they'd never heard of an actual title-theft case"
+      ],
+      "source": "FTC Consumer Advice, https://consumer.ftc.gov/consumer-alerts/2024/08/home-title-lock-insurance-not-lock-all",
+      "spreadPlatforms": [
+        "Television Ads",
+        "Online Ads",
+        "Social Media"
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
