@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "lastUpdated": "2026-10-03T01:50:24.148Z",
+  "version": 5,
+  "lastUpdated": "2026-10-03T19:36:01.535Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -91,7 +91,8 @@
     "registration fee",
     "hefty returns",
     "money-back guarantee",
-    "title lock insurance"
+    "title lock insurance",
+    "vehicle history report"
   ],
   "aiTells": [
     "extra fingers",

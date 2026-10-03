@@ -1,6 +1,6 @@
 {
-  "version": 38,
-  "lastUpdated": "2026-10-03T01:50:24.148Z",
+  "version": 39,
+  "lastUpdated": "2026-10-03T19:36:01.535Z",
   "reports": [
     {
       "id": "1",
@@ -2491,6 +2491,43 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "72",
+      "slug": "fake-vehicle-history-report-scam-for-car-sellers",
+      "title": "Fake Vehicle History Report Scam for Car Sellers",
+      "summary": "Scammers posing as interested car buyers on sites like Facebook Marketplace and Craigslist pressure sellers into purchasing a \"vehicle history report\" from an unfamiliar website, which actually steals the seller's credit card and personal information.",
+      "category": "Shopping Scam",
+      "firstReported": "2025-11-20",
+      "relatedScams": [],
+      "safetyTips": [
+        "Do not click buyer-sent links; these often lead to phishing sites or hidden malware downloads",
+        "Never enter payment info on unfamiliar sites \" if a buyer insists you use a website you've never heard of, stop immediately and verify the site's legitimacy before sharing any financial or personal details",
+        "Stick to established, trusted report services like Carfax, AutoCheck, or NMVTIS",
+        "Include your vehicle's VIN in your ad so genuine buyers can run their own reports without needing your involvement",
+        "Report suspicious messages directly to the platform and to the FTC at reportfraud.ftc.gov",
+        "If you already paid on a fake site, contact your bank right away, cancel the card, and monitor your account for unauthorized charges"
+      ],
+      "datePublished": "2026-10-03T19:35:32.381Z",
+      "howItWorks": "A person responds to an online car listing claiming to be a serious buyer, often opening with a vague or friendly message to build rapport. Before \"finalizing\" the purchase, they ask the seller to first obtain a vehicle history report from a specific, unfamiliar service (such as one called \"ASR\" or \"Auto Smart Report\") rather than a trusted service like Carfax, AutoCheck, or NMVTIS. The site looks professional, promising something like a \"complete vehicle history at your fingertips,\" but when the seller enters their personal details and credit card number to pay for the report, the information is harvested by criminals rather than used to generate a real report. The \"buyer\" may also raise the offer price to keep the seller engaged, but once payment is made on the fake site, the buyer disappears, having never intended to purchase the vehicle at all.",
+      "redFlags": [
+        "A buyer who asks you to get a report from an unknown service like \"ASR\" instead of accepting a Carfax, AutoCheck, or NMVTIS report",
+        "Messages that ignore your ad details, such as short, nonsensical first contact or questions showing they haven't read the listing",
+        "Offers above your asking price",
+        "Phrases like \"will you accept cash?\" or \"I just need to see a report first\"",
+        "Generic greetings like \"dear,\" \"brother,\" or \"friend\""
+      ],
+      "realExamples": [
+        "A seller named Nick K. of Washington shared his Craigslist listing and vehicle details with a buyer, who replied asking him to get an \"Auto Smart Report\" from a specific link, then upped his cash offer by $500 to pressure Nick into paying for the report before any sale was finalized."
+      ],
+      "source": "Fox News, https://www.foxnews.com/tech/craigslist-car-report-scam-targets-vehicle-sellers",
+      "spreadPlatforms": [
+        "Facebook Marketplace",
+        "Craigslist",
+        "Text Messages",
+        "Online Classifieds"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
