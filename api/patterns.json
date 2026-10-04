@@ -1,6 +1,6 @@
 {
-  "version": 6,
-  "lastUpdated": "2026-10-04T02:24:17.183Z",
+  "version": 7,
+  "lastUpdated": "2026-10-04T19:56:03.336Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -93,7 +93,8 @@
     "money-back guarantee",
     "title lock insurance",
     "vehicle history report",
-    "vehicle service department"
+    "vehicle service department",
+    "phantom debt"
   ],
   "aiTells": [
     "extra fingers",

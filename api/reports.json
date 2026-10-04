@@ -1,6 +1,6 @@
 {
-  "version": 40,
-  "lastUpdated": "2026-10-04T02:24:17.183Z",
+  "version": 41,
+  "lastUpdated": "2026-10-04T19:56:03.337Z",
   "reports": [
     {
       "id": "1",
@@ -2560,6 +2560,46 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "74",
+      "slug": "phantom-debt-collector-scam",
+      "title": "Phantom Debt Collector Scam",
+      "summary": "Scammers posing as debt collectors or law firms call or mail consumers demanding payment on debts that don't exist, threatening arrest, lawsuits, wage garnishment, or ruined credit if they don't pay immediately.",
+      "category": "Phone Scam",
+      "firstReported": "2017-08-01",
+      "relatedScams": [],
+      "safetyTips": [
+        "Ask for a written validation notice and the collector's name, company, address, and license to collect debts in your state before discussing anything",
+        "Never pay a debt you can't verify; check your own account records and credit report first",
+        "Remember that a real debt collector will never threaten immediate arrest or jail time for an unpaid debt",
+        "Hang up and independently look up the supposed company or law firm's official phone number rather than calling back a number the caller gave you",
+        "Report suspected phantom debt collectors to your state attorney general and the FTC at reportfraud.ftc.gov"
+      ],
+      "datePublished": "2026-10-04T19:55:48.012Z",
+      "howItWorks": "Fraudsters operate under invented or borrowed company and law-firm names and contact consumers by phone, letter, text, email, or social media claiming they owe an old payday loan, credit card balance, or other debt. The callers falsely claim to be lawyers or process servers, even though they have no legal authority to collect anything, and pressure victims with threats of lawsuits, wage garnishment, damaged credit, and even arrest if they don't pay right away, usually demanding payment by phone with a card or other untraceable method. In one FTC case, a scheme operated under names like Blackrock Services, Blackstone Legal Group, Capital Legal Services, Quest Legal Group, and Viking Legal Services, sending deceptive collection letters and calls claiming consumers owed money on a payday loan and that a \"law firm\" was about to sue them, when the debts never existed at all. The operators also violate the Fair Debt Collection Practices Act by never sending the legally required written validation notice and by failing to disclose that they are debt collectors.",
+      "redFlags": [
+        "Caller claims to be a lawyer or law firm but won't provide a callable business address or license information",
+        "You never receive a written validation notice within five days of being contacted, which real debt collectors are legally required to send",
+        "The caller demands immediate payment by phone, prepaid card, wire transfer, or other untraceable method",
+        "Threats of immediate arrest, jail time, or wage garnishment over an unfamiliar or very old debt",
+        "The company name is unfamiliar, slightly altered from a real business, or you cannot verify it independently",
+        "Pressure to pay before you can check your own records or credit report for the debt"
+      ],
+      "realExamples": [
+        "FTC lawsuit and March 2025 federal court order halted a phantom debt collection scheme run under names including Blackrock Services, Blackstone Legal Group, Capital Legal Services, Quest Legal Group, and Viking Legal Services, which sent fictitious debt collection notices and calls nationwide threatening lawsuits, wage garnishment, credit damage, and arrest over debts that never existed",
+        "The FTC filed suit against Global Asset Financial Services Group (GAFS) and fifteen related defendants whose employees falsely claimed to be lawyers or affiliated with law firms despite having no authority to collect debts",
+        "An earlier FTC case against a Charlotte, NC debt collection operation found the 'collectors' used various law-firm-sounding names and threatened people with arrest, jail time, or lawsuits over payday loans or other debts unless they paid immediately by credit or debit card"
+      ],
+      "source": "FTC, https://www.ftc.gov/news-events/news/press-releases/2025/03/ftc-action-leads-court-order-halting-phantom-debt-collection-scheme-took-millions-consumers",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Mail",
+        "Text Messages",
+        "Email",
+        "Social Media"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
