@@ -1,0 +1,55 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "74",
+    "slug": "fake-supreme-court-certificate-letter-scam",
+    "title": "Fake Supreme Court \"Certificate\" Letter Scam",
+    "summary": "Scammers mail Social Security beneficiaries a fake \"certificate\" on forged U.S. Supreme Court letterhead claiming they are suspects in a criminal case and demanding cooperation to avoid having their Social Security number suspended and assets frozen.",
+    "category": "Government Scam",
+    "firstReported": "2025-10-08",
+    "relatedScams": [],
+    "safetyTips": [
+      "The Supreme Court does not send personal letters accusing individuals of crimes or freezing bank accounts",
+      "Government employees will never threaten immediate arrest or demand you move or safeguard your money this way",
+      "Do not call any number or click any link provided in the suspicious letter, text, or email",
+      "Verify by contacting SSA or SSA OIG directly using numbers from official ssa.gov or oig.ssa.gov pages, not the letter",
+      "Report suspected Social Security-related scams at ssa.gov/scam or oig.ssa.gov"
+    ],
+    "datePublished": "2026-10-04T02:25:13.692Z",
+    "howItWorks": "Victims, often Social Security beneficiaries, receive a personally addressed, official-looking letter styled as a \"certificate\" on fake U.S. Supreme Court letterhead bearing forged signatures of real justices. The letter falsely claims the recipient is a primary suspect in legal proceedings and criminal charges, states their Social Security number has been compromised by identity theft, and says SSA will issue them a new SSN. It further falsely claims the Supreme Court has ordered financial institutions to freeze the recipient's assets and that they must cooperate with the \"U.S. Department of the Treasury,\" while also inventing limits on how much money they can keep in bank or investment accounts. The letter closes with threats that the recipient will bear full liability for any losses if they don't safeguard their assets, and scammers typically follow up by phone or text — sometimes texting a \"heads-up\" from the number they'll call from — to make the follow-up call feel authenticated before pressuring the victim to send money or personal information.",
+    "redFlags": [
+      "An unsolicited letter, text, or email claiming to be from the U.S. Supreme Court about a personal legal case",
+      "Official-looking letterhead or \"certificates\" with forged signatures of government officials or justices",
+      "Claims that your Social Security number is suspended or that courts have ordered your bank accounts frozen",
+      "Pressure to cooperate immediately with a named agency \"official\" to avoid arrest or financial loss",
+      "A follow-up text pre-announcing a phone call from a specific number to make it seem legitimate",
+      "Invented rules about how much money you're allowed to hold in bank or investment accounts"
+    ],
+    "realExamples": [
+      "SSA OIG's October 8, 2025 alert described a letter using forged signatures of Chief Justice John Roberts and Associate Justice Sonia Sotomayor, falsely naming an SSA official and an Attorney General, and claiming oversight by the 'Drug Enforcement Agency' (misnamed), warning recipients their SSN was compromised and assets could be frozen."
+    ],
+    "source": "SSA Office of the Inspector General, https://oig.ssa.gov/scam-alerts/2025-10-08-unexpected-letter-text-or-email-from-the-u-s-supreme-court-think-scam-first/",
+    "spreadPlatforms": [
+      "Postal Mail",
+      "Phone Calls",
+      "Text Messages"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Social Security Number Suspended Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Fake Supreme Court Certificate Letter Scam"
+    ],
+    "confidence": 0.72,
+    "reasoning": "This is a specific variant of the existing \"Social Security Number Suspended Scam\" pattern — it uses the same core threat (SSN suspension/compromise, asset freezing, impersonation of federal authority) but with a new delivery method (fake Supreme Court letterhead/certificate mailed letter) rather than being a wholly distinct scam category. The SSA OIG press release source confirms the claims but the underlying fear/coercion mechanism duplicates the existing title."
+  },
+  "queuedAt": "2026-10-04T02:25:18.224Z"
+}
