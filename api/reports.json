@@ -1,6 +1,6 @@
 {
-  "version": 39,
-  "lastUpdated": "2026-10-03T19:36:01.535Z",
+  "version": 40,
+  "lastUpdated": "2026-10-04T02:24:17.183Z",
   "reports": [
     {
       "id": "1",
@@ -2528,6 +2528,38 @@
         "Online Classifieds"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "73",
+      "slug": "auto-warranty-robocall-scam",
+      "title": "Auto Warranty Robocall Scam",
+      "summary": "Illegal recorded robocalls claim your car's manufacturer warranty is about to expire and pressure you to \"renew\" it, but the call isn't from your dealer or manufacturer and the product is an overpriced, often worthless service contract.",
+      "category": "Phone Scam",
+      "firstReported": "2021-05-19",
+      "relatedScams": [],
+      "safetyTips": [
+        "Hang up immediately and don't press any numbers, engaging can lead to more calls",
+        "Use a call-blocking app or device to filter unwanted robocalls",
+        "Report the robocall at DoNotCall.gov"
+      ],
+      "datePublished": "2026-10-04T02:23:52.975Z",
+      "howItWorks": "You answer a call and hear a prerecorded message, sometimes from a voice like \"Susie\" with a \"Vehicle Service Department,\" claiming they've sent several notices about your vehicle's manufacturer warranty and that your file will be closed soon unless you respond. The recording tells you to press one number to renew the \"warranty\" or another to be removed from the call list. In reality, the companies behind these calls have no relationship with your car dealer or manufacturer. The \"extended warranty\" being pitched is actually a service contract that can sell for hundreds or thousands of dollars, and fine-print restrictions often mean it won't actually cover problems with your car.",
+      "redFlags": [
+        "Prerecorded robocall claiming your vehicle's factory warranty is about to expire or has already lapsed",
+        "Caller claims to be from a generic \"Vehicle Service Department\" rather than your actual dealer or manufacturer",
+        "Pressure to press a number immediately to renew coverage before your \"file\" is closed",
+        "Being asked to buy a costly service contract over an unsolicited call rather than through your dealer"
+      ],
+      "realExamples": [
+        "FTC consumer alert describing a recorded message from a caller claiming to be \"Susie\" with the \"Vehicle Service Department\" warning that a vehicle's manufacturer warranty was about to expire"
+      ],
+      "source": "FTC, https://consumer.ftc.gov/consumer-alerts/2021/05/hang-auto-warranty-robocalls",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Robocalls"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
