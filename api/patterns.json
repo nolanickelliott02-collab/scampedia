@@ -1,6 +1,6 @@
 {
-  "version": 7,
-  "lastUpdated": "2026-10-04T19:56:03.336Z",
+  "version": 8,
+  "lastUpdated": "2026-10-05T01:45:07.494Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -94,7 +94,10 @@
     "title lock insurance",
     "vehicle history report",
     "vehicle service department",
-    "phantom debt"
+    "phantom debt",
+    "blessing loom",
+    "the circle game",
+    "money board"
   ],
   "aiTells": [
     "extra fingers",

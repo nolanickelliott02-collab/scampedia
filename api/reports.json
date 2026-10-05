@@ -1,6 +1,6 @@
 {
-  "version": 41,
-  "lastUpdated": "2026-10-04T19:56:03.337Z",
+  "version": 44,
+  "lastUpdated": "2026-10-05T01:45:07.494Z",
   "reports": [
     {
       "id": "1",
@@ -2600,6 +2600,113 @@
         "Social Media"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "75",
+      "slug": "rogue-mover-hostage-load-scam",
+      "title": "Rogue Mover \"Hostage Load\" Scam",
+      "summary": "Dishonest interstate moving companies lure customers with a low, non-binding estimate, then load the customer's entire household onto the truck and refuse to deliver or unload it until an inflated payment is made.",
+      "category": "Shopping Scam",
+      "firstReported": "2013-04-17",
+      "relatedScams": [],
+      "safetyTips": [
+        "Get a written estimate based on an actual in-home inventory walk-through before booking",
+        "Verify the company's registration and complaint history through FMCSA's online resources before booking",
+        "Review FMCSA's moving fraud prevention checklist and tips for a successful move before your move",
+        "If you experience moving fraud, file a complaint with FMCSA's national consumer complaint database or call the nationwide complaint hotline"
+      ],
+      "datePublished": "2026-10-05T01:37:46.966Z",
+      "howItWorks": "A \"rogue mover\" or unregistered broker gives a customer a low estimate without ever doing an in-home survey, and may ask the customer to sign incomplete documents. On moving day, the crew loads every box and piece of furniture onto the truck, then presents a dramatically higher bill — far above the original quote. Because the goods are already loaded, the company holds the shipment \"hostage,\" refusing to unload or deliver it until the customer pays the new, inflated amount. The Federal Motor Carrier Safety Administration (FMCSA), the DOT agency that enforces federal consumer protection regulations related to the interstate shipment of household goods, has run enforcement campaigns against such movers and brokers.",
+      "redFlags": [
+        "No in-home estimate before giving a quote",
+        "Mover asks you to sign incomplete documentation",
+        "Company fails to register with FMCSA"
+      ],
+      "realExamples": [
+        "FMCSA's newsroom describes a nationwide enforcement sweep \"ahead of busy summer moving season\" in which the agency conducted an enforcement sweep and provided consumer resources after complaints about movers holding possessions hostage.",
+        "FMCSA's 2013 \"Protect Your Move\" campaign announcement noted that among the most common complaints in 2012 were shipments being held hostage, loss, damage or delay of shipments, unauthorized movers, and deceptive practices such as overcharges, with New York, Los Angeles, and Chicago topping the list of cities with the most complaints that year."
+      ],
+      "source": "FMCSA, https://www.fmcsa.dot.gov/newsroom/fmcsa-continues-nationwide-crackdown-fraudulent-household-goods-movers-and-brokers and https://www.fmcsa.dot.gov/newsroom/us-department-transportation-launches-protect-your-move-campaign-help-consumers-spot-red",
+      "spreadPlatforms": [
+        "Phone",
+        "Internet/Online Quotes",
+        "In-Person (door-to-door and on moving day)"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "76",
+      "slug": "fake-check-scam-targeting-childcare-providers",
+      "title": "Fake Check Scam Targeting Childcare Providers",
+      "summary": "Scammers pose as parents urgently needing childcare, send providers a check for more than owed, then ask for the \"overpayment\" to be wired or sent back — leaving the provider on the hook when the check bounces.",
+      "category": "Employment Scam",
+      "firstReported": "2026-06-01",
+      "relatedScams": [],
+      "safetyTips": [
+        "Take your time before engaging with someone who contacts you urgently, especially if you haven't worked with or met them before",
+        "Don't accept a check for more than you charge for childcare — that's a sure sign of a scam",
+        "Never send money back to anyone who says they overpaid you by check; only a scammer asks you to repay an overpayment via wire, payment app, gift cards, or crypto",
+        "Remember that a check can look legitimate and funds can appear in your account, but the check can still bounce days later, leaving you liable for the full amount"
+      ],
+      "datePublished": "2026-10-05T01:40:28.177Z",
+      "howItWorks": "Scammers posing as parents contact childcare providers by email, text, social media, or online caregiving platforms, claiming they are moving to the area, often from overseas, and need immediate childcare. They send a check to pay for services in advance, but the check is written for more than the agreed amount. The \"parent\" then explains they \"accidentally overpaid\" and asks the provider to send the extra money back, usually by wire transfer or payment app. The provider deposits the check, sees the funds appear, and sends back the difference — but the check later bounces, leaving the provider responsible for repaying their bank the full amount, while the money they sent to the scammer is gone for good.",
+      "redFlags": [
+        "An unfamiliar \"parent\" reaches out urgently needing childcare, often claiming to be moving from overseas",
+        "You receive a check for more money than you were owed for your services",
+        "The sender asks you to send back the \"overpaid\" amount via wire transfer, payment app, gift cards, or cryptocurrency",
+        "Contact comes out of the blue via email, text, social media, or a caregiving platform before you've even met"
+      ],
+      "realExamples": [
+        "Childcare providers have reported scammers posing as parents moving to the area from overseas who send a check for more than the arranged cost of care and ask for the difference to be wired back or sent via payment app."
+      ],
+      "source": "FTC Consumer Advice, https://consumer.ftc.gov/consumer-alerts/2026/05/fake-check-scam-targets-childcare-providers",
+      "spreadPlatforms": [
+        "Email",
+        "Text Messages",
+        "Social Media",
+        "Online Caregiving Platforms"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "77",
+      "slug": "blessing-loom-circle-game-chain-letter-scam",
+      "title": "Blessing Loom / Circle Game Chain Letter Scam",
+      "summary": "A social-media \"game\" — also called the Blessing Loom, Mandala Game, Infinity Loom, or Money Board — tricks people into paying $100 to join an octagon-shaped payment pyramid, promising an $800 payout that almost never arrives.",
+      "category": "Investment Scam",
+      "firstReported": "2020-05-21",
+      "relatedScams": [],
+      "safetyTips": [
+        "Treat any 'game,' 'loom,' or 'board' that asks you to pay to join and recruit others as an illegal pyramid scheme, not a real investment",
+        "Don't send money through PayPal or other payment apps to strangers or acquaintances to join an online recruitment game",
+        "If a friend or family member invites you to join, warn them it's a scam instead of participating",
+        "Remember that in chain-letter pyramid schemes nearly everyone loses money except those at the very top who got in first",
+        "Report it to the FTC at ftc.gov/complaint if you're invited to join or if you've already lost money"
+      ],
+      "datePublished": "2026-10-05T01:44:38.941Z",
+      "howItWorks": "Scammers recruit through posts or direct messages on Instagram, Facebook, and other social media inviting people to join a \"Circle,\" \"Loom,\" or \"Board.\" To join, a person sends $100 through PayPal or another digital payment app to whoever occupies the center of an octagon-shaped graphic, which secures them a spot on the outer ring. As more people pay to join, the board splits and expands, and players are told they can move toward the center by recruiting new people themselves. Once a player's name finally reaches the center, they are supposed to collect $100 each from eight new recruits on the outer ring before leaving the game or starting over. No product or service is sold and no real investment generates the payouts — the only money coming in is from new recruits, so once people run out of friends or strangers to recruit, the money dries up and everyone still waiting at the outer rings loses what they paid.",
+      "redFlags": [
+        "Invitation arrives as a social media post or DM urging you to join a 'game,' 'circle,' 'loom,' or 'board'",
+        "You're asked to pay another private individual directly via PayPal or a digital payment app to secure a spot",
+        "The pitch promises a fixed large payout (e.g., $800) for a small upfront payment (e.g., $100) with no product or service involved",
+        "Payouts depend entirely on recruiting new participants rather than any real investment or business activity",
+        "Friends or family who've already joined pressure you to sign up too"
+      ],
+      "realExamples": [
+        "FTC consumer alert describes the scheme circulating under names like 'The Circle Game,' 'Blessing Loom,' and 'Money Board,' spreading at a time when many people were out of work and looking for extra cash",
+        "Commenters on the FTC's alert page describe joining after a friend or family member recruited them, paying in along with a relative, and never receiving the promised payout"
+      ],
+      "source": "FTC Consumer Advice, https://consumer.ftc.gov/consumer-alerts/2020/05/game-chain-letter-scam",
+      "spreadPlatforms": [
+        "Social Media",
+        "Instagram",
+        "Facebook",
+        "Direct Messages"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
