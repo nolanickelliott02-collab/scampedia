@@ -1,0 +1,56 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "78",
+    "slug": "fake-call-transfer-to-social-security-oig-scam",
+    "title": "Fake \"Call Transfer\" to Social Security/OIG Scam",
+    "summary": "Scammers posing as a retailer, bank, or other agency claim to \"transfer\" your call directly to the Social Security Administration or its Office of Inspector General, where a second fake agent says your identity has been stolen and pressures you to sign documents or hand over money.",
+    "category": "Government Scam",
+    "firstReported": "2026-07-29",
+    "relatedScams": [
+      "Social Security Number Suspended Scam",
+      "Phantom Debt Collector Scam",
+      "Financial Institution Support Impersonation Account Takeover Scam"
+    ],
+    "safetyTips": [
+      "Know that legitimate companies and government agencies cannot transfer your phone call directly to SSA or OIG \" if they claim they can, it's a scam every time",
+      "Hang up and call SSA or the agency directly using a verified number instead of staying on a transferred call",
+      "Never sign documents or share personal/financial information based on pressure from an unsolicited or transferred call",
+      "Don't trust caller ID alone, since scammers can fake legitimate phone numbers",
+      "Report suspicious calls at oig.ssa.gov/report"
+    ],
+    "datePublished": "2026-10-06T02:41:51.585Z",
+    "howItWorks": "The scam begins with a call from someone claiming to represent a retailer, bank, or another agency, often asking about a suspicious purchase or fraudulent activity the consumer didn't make. When the consumer denies making the purchase, the caller \"transfers\" them to a second scammer posing as an SSA or OIG representative, who claims the consumer's Social Security number has been compromised, linked to identity theft, or used in criminal activity. In one reported case, the fake representative sent a lengthy document to sign, instructed the consumer not to discuss it with anyone, and promised a new Social Security number, all designed to pressure the victim before they had time to verify the story independently.",
+    "redFlags": [
+      "Calls transferred from any company or agency directly to SSA or OIG",
+      "Claims that your Social Security number is suspended, compromised, or being reissued",
+      "Being told not to discuss the call with anyone else",
+      "Pressure to sign a document quickly or share personal information during the same call",
+      "Reliance on caller ID, which scammers can spoof to look legitimate"
+    ],
+    "realExamples": [
+      "A reported call began with someone claiming to be from a major retailer asking about a purchase the consumer didn't make, then transferred the consumer to a person claiming to represent Social Security who said the consumer's identity had been stolen and used to open bank accounts; the caller sent a lengthy document to sign and promised a new Social Security number before the consumer recognized the warning signs and contacted SSA directly."
+    ],
+    "source": "SSA Office of the Inspector General, https://oig.ssa.gov/scam-alerts/2026-07-29-beware-of-fake-call-transfers-to-social-security-or-oig/",
+    "spreadPlatforms": [
+      "Phone Calls"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Social Security Number Suspended Scam",
+    "novelty": "known-variant",
+    "severity": "low",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Fake Call Transfer Scam"
+    ],
+    "confidence": 0.72,
+    "reasoning": "This is the same core SSA/OIG \"your Social Security number is compromised/suspended\" impersonation scam already covered by \"Social Security Number Suspended Scam,\" with the added twist of a fake call transfer from a retailer/bank as the entry vector — a procedural variant rather than a fundamentally new scam pattern. The source states no financial loss occurred in the reported case, supporting a low severity rating."
+  },
+  "queuedAt": "2026-10-06T02:41:56.478Z"
+}
