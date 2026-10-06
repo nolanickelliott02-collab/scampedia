@@ -1,5 +1,5 @@
 {
-  "version": 44,
+  "version": 45,
   "lastUpdated": "2026-10-05T01:45:07.494Z",
   "reports": [
     {
@@ -288,7 +288,11 @@
       "summary": "A call rings once from an unfamiliar international number and hangs up before you can answer, banking on curiosity making you call back. The returned call connects to a premium-rate line that racks up enormous per-minute charges, a cut of which goes to the scammer.",
       "category": "Phone Scam",
       "firstReported": "2016-01-01T00:00:00Z",
-      "relatedScams": [],
+      "relatedScams": [
+        "Lottery / Prize Notification Scam",
+        "\"Can You Hear Me?\" Robocall Scam",
+        "Fake Bank Fraud Alert Scam"
+      ],
       "safetyTips": [
         "Don't call back unfamiliar international numbers, especially after just one ring.",
         "Check the country code before dialing back — unrecognized codes are a red flag.",
@@ -317,7 +321,11 @@
       "summary": "A robocall or live scammer opens with a simple yes-or-no question like \"can you hear me?\" hoping to record you saying \"yes,\" which they claim can later be used to authorize charges you never agreed to.",
       "category": "Phone Scam",
       "firstReported": "2017-01-01T00:00:00Z",
-      "relatedScams": [],
+      "relatedScams": [
+        "Lottery / Prize Notification Scam",
+        "Wangiri / One-Ring Callback Scam",
+        "Grandparent Emergency Scam"
+      ],
       "safetyTips": [
         "Simply hang up on robocalls instead of engaging, even to say \"no.\"",
         "Answer with a neutral greeting rather than \"yes\" or \"no\" if you must respond.",
@@ -477,7 +485,11 @@
       "summary": "Companies advertise guaranteed student loan forgiveness or dramatically reduced payments for an upfront fee, then either do nothing, enroll borrowers in a plan they could have gotten for free, or steal the login credentials used to \"help.\"",
       "category": "Government Scam",
       "firstReported": "2015-01-01T00:00:00Z",
-      "relatedScams": [],
+      "relatedScams": [
+        "Social Security Number Suspended Scam",
+        "Fake IRS Tax Refund Scam",
+        "Advance Fee Loan Scam"
+      ],
       "safetyTips": [
         "Legitimate loan forgiveness and repayment programs are always free to apply for directly through your loan servicer.",
         "Never pay an upfront fee for loan forgiveness or consolidation help.",
@@ -1221,7 +1233,11 @@
       "summary": "In the wake of a natural disaster or tragedy, fraudulent charities solicit donations through calls, texts, or social media using names deceptively similar to real, established relief organizations.",
       "category": "Charity Scam",
       "firstReported": "2005-01-01T00:00:00Z",
-      "relatedScams": [],
+      "relatedScams": [
+        "Disaster Recovery Contractor Scam",
+        "Fake \"Relief Check\" Phishing Scam",
+        "Unemployment Benefits Identity Theft Scam"
+      ],
       "safetyTips": [
         "Give directly through a charity's official website rather than through a link in a text or email.",
         "Check a charity's legitimacy on Charity Navigator or the BBB Wise Giving Alliance.",
@@ -1252,7 +1268,11 @@
       "summary": "A rental listing — sometimes copied from a real property that isn't actually for rent — advertises an attractive price and asks for a deposit or first month's rent before the \"landlord,\" who is never available to meet in person, disappears.",
       "category": "Rental Scam",
       "firstReported": "2013-01-01T00:00:00Z",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake Online Store Scam",
+        "Online Marketplace Buyer Scam",
+        "Advance Fee Loan Scam"
+      ],
       "safetyTips": [
         "Never pay a deposit before viewing a property in person or via a verified live video call.",
         "Search the listing photos online to check if they've been copied from another listing.",
@@ -1320,7 +1340,11 @@
       "summary": "Scammers lure job seekers with texts or WhatsApp messages offering easy remote \"tasks\" like liking videos or rating products, then trap them in a game-like app that requires crypto deposits to \"unlock\" fake earnings.",
       "category": "Employment Scam",
       "firstReported": "2023-01-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake Job Offer Scam",
+        "Mystery Shopper Check Scam",
+        "Fake Trading App Scam"
+      ],
       "safetyTips": [
         "Never pay money, crypto, or fees to 'unlock' wages you supposedly already earned \n require your own money upfront to get paid",
         "Do not respond to unsolicited job texts or messages on WhatsApp/Telegram, especially from unknown numbers with generic greetings",
@@ -1358,7 +1382,11 @@
       "summary": "Scammers are cold-calling consumers claiming to be real, named FTC leaders like Chief Privacy Officer John Krebs or Chairman Andrew Ferguson, falsely accusing them of crimes like money laundering and pressuring them to \"resolve\" the matter by depositing cash into a Bitcoin ATM.",
       "category": "Government Scam",
       "firstReported": "2025-09-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "FTC Impersonator Fake Employee ID Refund Recovery Scam",
+        "Spoofed IC3/FBI Fraud-Reporting Website Scam",
+        "Gold Bar & Bulk Cash Courier Scam"
+      ],
       "safetyTips": [
         "Know that the FTC will never call you out of the blue and tell you to move or send money to 'protect' it",
         "Hang up immediately and do not call back any number provided by the caller",
@@ -1396,7 +1424,11 @@
       "summary": "Scammers plant fake \"I'm not a robot\" CAPTCHA verification screens on compromised or malicious websites that trick visitors into manually running a hidden malicious command, infecting their own device with password- and data-stealing malware.",
       "category": "Tech Scam",
       "firstReported": "2025-03-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Tech Support Pop-Up Scam",
+        "Fake Antivirus / Scareware Scam",
+        "Phishing Email Scam"
+      ],
       "safetyTips": [
         "Never follow instructions to press Windows+R, paste content, and press Enter as part of any CAPTCHA or verification process — legitimate CAPTCHAs never require this",
         "If you accidentally pasted and ran a command, disconnect the device from the internet immediately and run a full malware/antivirus scan",
@@ -1435,7 +1467,11 @@
       "summary": "Scammers impersonate FBI and Internet Crime Complaint Center (IC3) personnel — now using AI deepfake videos and spoofed IC3 websites — to \"revictimize\" people who already lost money to a scam by falsely offering to recover their funds.",
       "category": "Government Scam",
       "firstReported": "2025-04-18",
-      "relatedScams": [],
+      "relatedScams": [
+        "Spoofed IC3/FBI Fraud-Reporting Website Scam",
+        "Refund and Recovery \"Sucker List\" Scam",
+        "FTC Impersonator Fake Employee ID Refund Recovery Scam"
+      ],
       "safetyTips": [
         "Only file or check complaints at the official site by typing www.ic3.gov directly into your browser, never via a link sent to you",
         "Know that the IC3 will never ask for payment, gift cards, or crypto to recover lost funds, nor refer you to a company that charges recovery fees",
@@ -1476,7 +1512,11 @@
       "summary": "Scammers are calling, texting, and emailing people claiming they have an unclaimed \"relief check\" worth thousands of dollars waiting for them, directing victims to phishing sites to \"search their name\" and steal personal and financial data.",
       "category": "Government Scam",
       "firstReported": "2025-08-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Tariff Rebate / \"Tariff Dividend\" Check Scam",
+        "Fake IRS Tax Refund Scam",
+        "Social Security Number Suspended Scam"
+      ],
       "safetyTips": [
         "Never click links in unsolicited texts, emails, or voicemails about unclaimed government money",
         "Verify any claimed government payment directly through official .gov websites or by calling the agency using a number you look up independently",
@@ -1516,7 +1556,11 @@
       "summary": "Scammers impersonating grandchildren, government agents, or tech support convince mostly elderly victims to withdraw cash or buy gold bars, then send an in-person courier to physically collect the loot from the victim's home.",
       "category": "Government Scam",
       "firstReported": "2023-01-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Grandparent Emergency Scam",
+        "FTC Official Impersonation Bitcoin ATM Scam",
+        "FTC Impersonator Fake Employee ID Refund Recovery Scam"
+      ],
       "safetyTips": [
         "Never give cash, gold, or valuables to a courier sent by someone who contacted you unsolicited by phone, email, or pop-up",
         "Independently verify any claim of a relative's emergency or government/legal trouble by calling them or the agency directly using a number you look up yourself",
@@ -1554,7 +1598,11 @@
       "summary": "Scammers, many linked to North Korean state-sponsored operations, use AI deepfake video/audio, stolen identities, and ChatGPT-polished resumes to get hired into remote jobs, then use the position to steal company data, plant malware, or funnel salary payments overseas.",
       "category": "AI Scam",
       "firstReported": "2024-07-15",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake Job Offer Scam",
+        "Video Call Deepfake Extortion Scam",
+        "Deepfake Celebrity Endorsement Scam"
+      ],
       "safetyTips": [
         "Verify identity documents in person or via a live, unscripted video check where you ask the candidate to turn their head to the side or perform an unscripted action a deepfake would struggle to replicate",
         "Cross-check the shipping address for company equipment against the candidate's stated home address and reject freight-forwarding or unfamiliar third-party addresses",
@@ -1594,7 +1642,11 @@
       "summary": "Scammers use AI tools to clone real dealership websites or build entirely fake auto/RV dealership sites and Facebook ad campaigns, then convince buyers to wire large sums for vehicles that don't exist.",
       "category": "Shopping Scam",
       "firstReported": "2026-03-24",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake Heavy Equipment & Vehicle Dealer Website Scam",
+        "Fake Online Store Scam",
+        "Fake Vehicle History Report Scam for Car Sellers"
+      ],
       "safetyTips": [
         "Independently look up the dealership's phone number and address rather than using contact info from the ad or website, and call to verify the vehicle and transaction directly",
         "Visit the dealership in person or verify its physical existence via Google Street View before wiring any funds",
@@ -1634,7 +1686,11 @@
       "summary": "Criminals are building near-exact clones of the FBI's official Internet Crime Complaint Center (IC3.gov) website to steal personal and financial data from people who are trying to report a scam they were already victimized by.",
       "category": "Government Scam",
       "firstReported": "2025-09-19",
-      "relatedScams": [],
+      "relatedScams": [
+        "IC3/FBI Recovery Impersonation Scam",
+        "Refund and Recovery \"Sucker List\" Scam",
+        "Phishing Email Scam"
+      ],
       "safetyTips": [
         "Type www.ic3.gov directly into your browser's address bar instead of searching for it, and never click 'sponsored' search results",
         "Double-check that the URL ends in .gov and reads exactly www.ic3.gov before entering any information",
@@ -1671,7 +1727,11 @@
       "summary": "Scammers exploit NFC \"tap-to-pay\" technology to charge victims' cards or phones without authorization, often by posing as vendors or charity collectors at crowded markets, fairs, and festivals.",
       "category": "Shopping Scam",
       "firstReported": "2025-10-21",
-      "relatedScams": [],
+      "relatedScams": [
+        "QR Code Scam",
+        "Fake Online Store Scam",
+        "Brushing Scam with QR Code Twist"
+      ],
       "safetyTips": [
         "Keep cards and NFC-enabled phones in an RFID-blocking wallet or sleeve when not actively paying",
         "Always glance at the terminal screen to confirm the merchant name and exact amount before tapping",
@@ -1710,7 +1770,11 @@
       "summary": "Cybercriminals are distributing malicious apps and browser extensions disguised as popular VPN services to secretly install info-stealing and banking malware on victims' devices.",
       "category": "Tech Scam",
       "firstReported": "2025-11-06",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake Antivirus / Scareware Scam",
+        "Fake CAPTCHA \"ClickFix\" Malware Scam",
+        "Tech Support Pop-Up Scam"
+      ],
       "safetyTips": [
         "Only download VPN apps from official app stores and the provider's verified official domain, double-checking for misspellings",
         "Avoid free VPN services that request permissions unrelated to VPN functionality, like access to contacts or messages",
@@ -1748,7 +1812,11 @@
       "summary": "Malicious \"instant loan\" apps on Google Play and the Apple App Store lure people with promises of quick cash, then harvest contacts, photos, and messages from their phones to blackmail and harass them into paying inflated fees.",
       "category": "Tech Scam",
       "firstReported": "2024-11-25",
-      "relatedScams": [],
+      "relatedScams": [
+        "Advance Fee Loan Scam",
+        "Fake Loan Approval/Follow-Up Text Scam",
+        "Fake Trading App Scam"
+      ],
       "safetyTips": [
         "Only download lending or finance apps from well-established, verified financial institutions and check developer legitimacy before installing",
         "Review and deny any permission requests (contacts, photos, SMS, camera) that are not essential to a loan app's function",
@@ -1787,7 +1855,11 @@
       "summary": "Scammers send unsolicited texts claiming to \"follow up\" on a large loan application (often $10,000) that the recipient never submitted, pressuring them to click a link or reply to \"cancel\" it and steal personal data instead.",
       "category": "Phone Scam",
       "firstReported": "2026-01-20",
-      "relatedScams": [],
+      "relatedScams": [
+        "Advance Fee Loan Scam",
+        "SpyLoan Predatory Loan App Scam",
+        "Smishing Text Message Scam"
+      ],
       "safetyTips": [
         "Don't reply to or click links in unsolicited loan texts \\u2014 delete them",
         "Never give a Social Security number or bank account number in response to an unexpected text",
@@ -1826,7 +1898,11 @@
       "summary": "Scammers send text messages impersonating toll agencies like E-ZPass, SunPass, FasTrak, and TxTag, claiming the recipient owes money for an unpaid toll and must pay immediately via a malicious link.",
       "category": "Government Scam",
       "firstReported": "2024-04-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Package Delivery Text Scam",
+        "Smishing Text Message Scam",
+        "Fake \"Relief Check\" Phishing Scam"
+      ],
       "safetyTips": [
         "Don't click links in unsolicited toll-payment texts; go directly to the toll agency's official website or app by typing the address yourself",
         "Check your actual toll account balance by logging in independently or calling the agency's verified customer service number",
@@ -1863,7 +1939,11 @@
       "summary": "Scammers clone or impersonate real heavy equipment, farm machinery, and vehicle dealerships with convincing fake websites and Marketplace ads, luring buyers with below-market prices and then vanishing after victims wire large payments.",
       "category": "Shopping Scam",
       "firstReported": "2025-02-20",
-      "relatedScams": [],
+      "relatedScams": [
+        "AI-Cloned Fake Vehicle Dealership Scam",
+        "Fake Online Store Scam",
+        "Fake Online Pet Sale Scam"
+      ],
       "safetyTips": [
         "Research the business at BBB.org or call your local BBB before sending any money",
         "Contact the real dealership directly using a phone number or website you find independently, not one provided in the ad",
@@ -1905,7 +1985,11 @@
       "summary": "Criminals buy fake search-engine ads or build lookalike phishing sites that outrank real bank, payroll, and health savings account login pages, then trick victims into handing over passwords and one-time codes to drain their accounts.",
       "category": "Phone Scam",
       "firstReported": "2025-11-25",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake Bank Fraud Alert Scam",
+        "Financial Institution Support Impersonation Account Takeover Scam",
+        "Phishing Email Scam"
+      ],
       "safetyTips": [
         "Never provide login credentials, passwords, or one-time passcodes to anyone who contacts you, even if they claim to be from your bank",
         "Navigate directly to your financial institution's website by typing the known URL yourself rather than clicking search ads or links",
@@ -1945,7 +2029,11 @@
       "summary": "Scammers text or WhatsApp victims claiming to be FTC \"agents\" who can help recover money lost in a previous scam, sending a photo of a fake employee badge/ID to seem legitimate before stealing money or financial data.",
       "category": "Government Scam",
       "firstReported": "2026-06-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "FTC Official Impersonation Bitcoin ATM Scam",
+        "Refund and Recovery \"Sucker List\" Scam",
+        "IC3/FBI Recovery Impersonation Scam"
+      ],
       "safetyTips": [
         "Remember a real FTC employee will never contact you by text or messaging app to discuss a case or refund",
         "Know that the FTC never texts photos of employee IDs or badges to 'verify' identity",
@@ -1982,7 +2070,11 @@
       "summary": "Scammers buy and sell lists of people who were previously defrauded, then pose as government agencies, law firms, or consumer groups offering to recover the victim's lost money for an upfront fee — draining them a second time.",
       "category": "Government Scam",
       "firstReported": "2025-11-26",
-      "relatedScams": [],
+      "relatedScams": [
+        "IC3/FBI Recovery Impersonation Scam",
+        "FTC Impersonator Fake Employee ID Refund Recovery Scam",
+        "Spoofed IC3/FBI Fraud-Reporting Website Scam"
+      ],
       "safetyTips": [
         "Never pay an upfront fee or give financial/personal information to get a refund \"no legitimate government agency or company requires this",
         "If someone contacts you claiming to be from a government agency or law firm about a past scam, independently look up and call that organization directly rather than using contact info they provide",
@@ -2023,7 +2115,11 @@
       "summary": "The FBI warns that criminals are impersonating banks, payroll providers, and health savings account (HSA) administrators to trick people into handing over login credentials and one-time passcodes, then draining or hijacking the accounts.",
       "category": "Phone Scam",
       "firstReported": "2025-11-25",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake Bank Fraud Alert Scam",
+        "SEO Poisoning Bank Account Takeover Scam",
+        "SIM Swap Scam"
+      ],
       "safetyTips": [
         "Never share your login credentials, MFA codes, or one-time passcodes with anyone who contacts you, even if they claim to be from your bank or employer",
         "Contact your financial institution, payroll provider, or HSA administrator directly using a phone number or website you look up yourself, not one provided in the suspicious message",
@@ -2061,7 +2157,11 @@
       "summary": "The FBI warns that criminals are targeting Chinese-speaking residents of the U.S. by impersonating health insurance claims departments and then handing the call off to fake Chinese police who threaten extradition unless the victim pays \"bail.\"",
       "category": "Government Scam",
       "firstReported": "2025-11-13",
-      "relatedScams": [],
+      "relatedScams": [
+        "Medicare / Health Insurance Scam",
+        "USCIS / Immigration Scam",
+        "Gold Bar & Bulk Cash Courier Scam"
+      ],
       "safetyTips": [
         "Independently verify any health insurance claim by using the phone number or website printed on your insurance card, not one given by the caller",
         "Do not share personal information, including health insurance account logins, with an unsolicited caller",
@@ -2097,7 +2197,11 @@
       "summary": "Scammers send unsolicited texts posing as talent scouts offering movie or TV auditions, then pressure victims into paying for fake photo shoots or acting classes.",
       "category": "Employment Scam",
       "firstReported": "2025-12-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake Job Offer Scam",
+        "Car Wrap Advertising Scam",
+        "Smishing Text Message Scam"
+      ],
       "safetyTips": [
         "Never respond to unexpected texts about acting jobs or casting calls",
         "Remember that legitimate talent agencies find jobs for you and pay you after the client pays them, rather than charging you upfront",
@@ -2167,7 +2271,11 @@
       "summary": "Scammers mail veterans official-looking postcards claiming they qualify for extra money through a fake \"Veterans Savings Program,\" name-dropping real VA benefits like CHAMPVA or TRICARE For Life to seem legitimate, and pressuring them to call a number and hand over Social Security and bank details.",
       "category": "Government Scam",
       "firstReported": "2026-08-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake \"Relief Check\" Phishing Scam",
+        "Tariff Rebate / \"Tariff Dividend\" Check Scam",
+        "Student Loan Forgiveness Scam"
+      ],
       "safetyTips": [
         "Do not call the number printed on the postcard — contact the VA Benefits Hotline directly at 1-800-827-1000 instead",
         "Never give your Social Security number or bank details to someone who contacted you first",
@@ -2202,7 +2310,11 @@
       "summary": "Scammers offer people hundreds of dollars a week to drive around with their car wrapped in a major brand's advertising, then send a fake cashier's check that leaves victims owing the bank money after they wire funds to a \"vendor.\"",
       "category": "Employment Scam",
       "firstReported": "2020-06-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Mystery Shopper Check Scam",
+        "Fake Check Scam Targeting Childcare Providers",
+        "Virtual Casting Call Text Scam"
+      ],
       "safetyTips": [
         "Never spend money from a deposited check or send any of it elsewhere before the check has fully cleared, which can take weeks even if the funds appear available sooner",
         "Know that banks are allowed to make a check's funds available before the transfer is actually verified — a check can look \"cleared\" and spendable for days before the bank discovers it's fake and reverses it",
@@ -2236,7 +2348,11 @@
       "summary": "Scammers post fake ads for puppies and other pets, often priced far below what the breed normally costs, then demand upfront payment through untraceable methods before disappearing without ever delivering an animal.",
       "category": "Shopping Scam",
       "firstReported": "2024-12-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake Online Store Scam",
+        "Online Marketplace Buyer Scam",
+        "Fake Rental Listing Scam"
+      ],
       "safetyTips": [
         "Research the seller by searching their name or business online along with words like \"review,\" \"scam,\" or \"complaint\"",
         "Watch how you're asked to pay — only scammers insist on gift cards, a payment app, cryptocurrency, or a wire transfer service like Western Union or MoneyGram, since that money is hard to get back",
@@ -2314,7 +2430,11 @@
       "summary": "Scammers are exploiting news coverage of proposed $2,000 \"tariff dividend\" or rebate checks by sending fake texts, emails, and even fraudulent paper checks claiming recipients must act immediately to claim tariff-related refund money.",
       "category": "Government Scam",
       "firstReported": "2025-11-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake \"Relief Check\" Phishing Scam",
+        "Fake IRS Tax Refund Scam",
+        "\"Veterans Savings Program\" Postcard Scam"
+      ],
       "safetyTips": [
         "Remember that government agencies do not send texts offering money or demanding a response to qualify for a payment",
         "Know that no tariff rebate/dividend program has actually been approved by Congress, so any message claiming to pay one out is fraudulent",
@@ -2394,7 +2514,11 @@
       "summary": "Scammers are mass-emailing fake notices claiming your Social Security statement is ready to download, tricking recipients into clicking malicious links or opening attachments. The SSA's Office of Inspector General warns this is a surge in government imposter phishing, separate from phone-based SSN \"suspension\" scams.",
       "category": "Government Scam",
       "firstReported": "2026-02-19",
-      "relatedScams": [],
+      "relatedScams": [
+        "Social Security Number Suspended Scam",
+        "Phishing Email Scam",
+        "Fake IRS Tax Refund Scam"
+      ],
       "safetyTips": [
         "Do not click links or open attachments in unsolicited emails claiming to be from SSA",
         "Go directly to ssa.gov/myaccount to access or set up your real Social Security account rather than using any link in an email",
@@ -2429,7 +2553,11 @@
       "summary": "Scammers target timeshare owners trying to sell, promising a quick sale at a big price if the owner first pays an upfront \"registration\" or closing fee — then the company disappears with the money.",
       "category": "Investment Scam",
       "firstReported": "2014-05-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Ponzi Scheme",
+        "Advance Fee Loan Scam",
+        "Refund and Recovery \"Sucker List\" Scam"
+      ],
       "safetyTips": [
         "Never pay any fee upfront to a timeshare reseller — it's better to do business with a reseller that takes fees only after the sale is complete",
         "Check out the reseller with the state attorney general and local consumer protection agency where the company is located, and search their name online with words like \"complaint\" or \"scam\"",
@@ -2464,7 +2592,11 @@
       "summary": "Ads warn homeowners that criminals can steal their home's title and push them to buy \"title lock insurance,\" but the FTC says this product is neither a lock nor insurance and won't actually prevent title fraud.",
       "category": "Shopping Scam",
       "firstReported": "2024-08-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Fake Online Store Scam",
+        "Disaster Recovery Contractor Scam",
+        "Medicare / Health Insurance Scam"
+      ],
       "safetyTips": [
         "Remember title fraud is a form of identity theft, not a product real insurance covers",
         "Check your property title for free through your state or county's land records office",
@@ -2499,7 +2631,11 @@
       "summary": "Scammers posing as interested car buyers on sites like Facebook Marketplace and Craigslist pressure sellers into purchasing a \"vehicle history report\" from an unfamiliar website, which actually steals the seller's credit card and personal information.",
       "category": "Shopping Scam",
       "firstReported": "2025-11-20",
-      "relatedScams": [],
+      "relatedScams": [
+        "Online Marketplace Buyer Scam",
+        "AI-Cloned Fake Vehicle Dealership Scam",
+        "Mystery Shopper Check Scam"
+      ],
       "safetyTips": [
         "Do not click buyer-sent links; these often lead to phishing sites or hidden malware downloads",
         "Never enter payment info on unfamiliar sites \" if a buyer insists you use a website you've never heard of, stop immediately and verify the site's legitimacy before sharing any financial or personal details",
@@ -2536,7 +2672,11 @@
       "summary": "Illegal recorded robocalls claim your car's manufacturer warranty is about to expire and pressure you to \"renew\" it, but the call isn't from your dealer or manufacturer and the product is an overpriced, often worthless service contract.",
       "category": "Phone Scam",
       "firstReported": "2021-05-19",
-      "relatedScams": [],
+      "relatedScams": [
+        "\"Can You Hear Me?\" Robocall Scam",
+        "Wangiri / One-Ring Callback Scam",
+        "Lottery / Prize Notification Scam"
+      ],
       "safetyTips": [
         "Hang up immediately and don't press any numbers, engaging can lead to more calls",
         "Use a call-blocking app or device to filter unwanted robocalls",
@@ -2568,7 +2708,11 @@
       "summary": "Scammers posing as debt collectors or law firms call or mail consumers demanding payment on debts that don't exist, threatening arrest, lawsuits, wage garnishment, or ruined credit if they don't pay immediately.",
       "category": "Phone Scam",
       "firstReported": "2017-08-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Advance Fee Loan Scam",
+        "Refund and Recovery \"Sucker List\" Scam",
+        "Fake Bank Fraud Alert Scam"
+      ],
       "safetyTips": [
         "Ask for a written validation notice and the collector's name, company, address, and license to collect debts in your state before discussing anything",
         "Never pay a debt you can't verify; check your own account records and credit report first",
@@ -2608,7 +2752,11 @@
       "summary": "Dishonest interstate moving companies lure customers with a low, non-binding estimate, then load the customer's entire household onto the truck and refuse to deliver or unload it until an inflated payment is made.",
       "category": "Shopping Scam",
       "firstReported": "2013-04-17",
-      "relatedScams": [],
+      "relatedScams": [
+        "Disaster Recovery Contractor Scam",
+        "Fake Online Store Scam",
+        "Fake Rental Listing Scam"
+      ],
       "safetyTips": [
         "Get a written estimate based on an actual in-home inventory walk-through before booking",
         "Verify the company's registration and complaint history through FMCSA's online resources before booking",
@@ -2642,7 +2790,11 @@
       "summary": "Scammers pose as parents urgently needing childcare, send providers a check for more than owed, then ask for the \"overpayment\" to be wired or sent back — leaving the provider on the hook when the check bounces.",
       "category": "Employment Scam",
       "firstReported": "2026-06-01",
-      "relatedScams": [],
+      "relatedScams": [
+        "Mystery Shopper Check Scam",
+        "Car Wrap Advertising Scam",
+        "Fake Job Offer Scam"
+      ],
       "safetyTips": [
         "Take your time before engaging with someone who contacts you urgently, especially if you haven't worked with or met them before",
         "Don't accept a check for more than you charge for childcare — that's a sure sign of a scam",
@@ -2677,7 +2829,11 @@
       "summary": "A social-media \"game\" — also called the Blessing Loom, Mandala Game, Infinity Loom, or Money Board — tricks people into paying $100 to join an octagon-shaped payment pyramid, promising an $800 payout that almost never arrives.",
       "category": "Investment Scam",
       "firstReported": "2020-05-21",
-      "relatedScams": [],
+      "relatedScams": [
+        "Ponzi Scheme",
+        "Pig Butchering Scam",
+        "Crypto Investment Scam"
+      ],
       "safetyTips": [
         "Treat any 'game,' 'loom,' or 'board' that asks you to pay to join and recruit others as an illegal pyramid scheme, not a real investment",
         "Don't send money through PayPal or other payment apps to strangers or acquaintances to join an online recruitment game",
