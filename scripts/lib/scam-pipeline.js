@@ -806,7 +806,7 @@ function buildScamEntryTool() {
         firstReported: { type: 'string', description: 'Best-estimate ISO 8601 date this trend was first reported by your sources' },
         source: { type: 'string', description: 'Real, specific citation: publication/agency name plus the exact URL you found it at, always including the https:// scheme' },
       },
-      required: ['title', 'category', 'summary', 'howItWorks', 'redFlags', 'safetyTips', 'realExamples', 'spreadPlatforms', 'firstReported', 'source', 'scamPhrases'],
+      required: ['title', 'category', 'summary', 'howItWorks', 'redFlags', 'safetyTips', 'realExamples', 'spreadPlatforms', 'firstReported', 'source', 'scamPhrases', 'relatedScams'],
       additionalProperties: false,
     },
     strict: true,
@@ -978,7 +978,12 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
       summary: entry.summary,
       category: entry.category,
       firstReported: entry.firstReported,
-      relatedScams: toArray(entry.relatedScams).filter(t => existingTitles.includes(t)),
+      // Required since 2026-10-02 — it was optional, so the model always
+      // left it out and every bot entry had no related scams in the app.
+      // Matched case-insensitively and mapped back to the exact title.
+      relatedScams: [...new Set(toArray(entry.relatedScams)
+        .map(t => existingTitles.find(e => e.toLowerCase().trim() === String(t).toLowerCase().trim()))
+        .filter(Boolean))].slice(0, 3),
       safetyTips: toArray(entry.safetyTips),
       datePublished: new Date().toISOString(),
       howItWorks: entry.howItWorks,
