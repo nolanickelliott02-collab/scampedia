@@ -1,6 +1,6 @@
 {
-  "version": 9,
-  "lastUpdated": "2026-10-06T02:43:32.427Z",
+  "version": 10,
+  "lastUpdated": "2026-10-06T21:23:00.680Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -98,7 +98,10 @@
     "blessing loom",
     "the circle game",
     "money board",
-    "free government grant"
+    "free government grant",
+    "mandatory verification appointment",
+    "examining attorney",
+    "abandonment of the trademark application"
   ],
   "aiTells": [
     "extra fingers",

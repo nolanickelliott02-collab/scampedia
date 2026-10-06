@@ -1,6 +1,6 @@
 {
-  "version": 46,
-  "lastUpdated": "2026-10-06T02:43:32.427Z",
+  "version": 48,
+  "lastUpdated": "2026-10-06T21:24:40.078Z",
   "reports": [
     {
       "id": "1",
@@ -2905,6 +2905,86 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "79",
+      "slug": "fake-uspto-trademark-verification-appointment-scam",
+      "title": "Fake USPTO \"Trademark Verification Appointment\" Scam",
+      "summary": "Scammers send official-looking emails impersonating the U.S. Patent and Trademark Office, demanding trademark applicants call an \"examining attorney\" for a mandatory verification appointment or risk losing their trademark.",
+      "category": "Government Scam",
+      "firstReported": "2026-05-20",
+      "relatedScams": [
+        "Phishing Email Scam",
+        "Government Grant Scam",
+        "FTC Impersonator Fake Employee ID Refund Recovery Scam"
+      ],
+      "safetyTips": [
+        "Never call phone numbers listed in unsolicited trademark-related emails; verify application status directly through the USPTO's official TSDR system at tsdr.uspto.gov",
+        "Remember that genuine USPTO communications about your application come in writing via Office Actions filed through TEAS, generally allowing three to six months to respond, not urgent phone deadlines",
+        "If you work with a trademark attorney, have official correspondence routed through their office so you don't have to judge on your own whether an email is real",
+        "Check the sender's full email domain carefully rather than just the display name, since scammers spoof official-sounding addresses",
+        "Report suspicious USPTO impersonation emails to the USPTO and file a complaint with the FTC at reportfraud.ftc.gov rather than replying or calling the number provided"
+      ],
+      "datePublished": "2026-10-06T21:22:30.336Z",
+      "howItWorks": "Because nearly all trademark application data (owner name, serial number, legal entity type, address, and assigned USPTO law office) is publicly searchable in the USPTO's Trademark Status and Document Retrieval database, scammers scrape this real information and mail-merge it into convincing phishing emails. The emails use urgent subject lines and claim the applicant must schedule or attend a \"mandatory verification appointment\" with a supposed examining attorney, warning that failure to do so could result in abandonment of the application. Victims who call the listed phone number may be asked by the scammer to provide payment information, personal identifying information, or both, which can then be used for fraud. The senders use look-alike domains rather than the real @uspto.gov address to make the messages appear legitimate.",
+      "redFlags": [
+        "Email demands a \"mandatory verification appointment\" or phone call with an \"examining attorney\" \" the USPTO does not schedule such calls",
+        "Sender domain is not @uspto.gov (reported lookalikes include domains such as @uspto-trademark.live, @lawoffice119.com, and @uspto-trademark-gov.live)",
+        "Message threatens abandonment of the trademark application if you don't call by a specific date/time",
+        "Caller or email attempts to obtain payment information or personal identifying information over the phone",
+        "Urgent, all-caps subject lines like \"ACTION REQUIRED: MANDATORY VERIFICATION APPOINTMENT\""
+      ],
+      "realExamples": [
+        "Law firms and trademark applicants reported receiving fraudulent emails impersonating the USPTO with subject lines like \"ACTION REQUIRED: MANDATORY VERIFICATION APPOINTMENT\" and \"OFFICIAL NOTICE OF TRADEMARK VERIFICATION APPOINTMENT,\" citing real application details such as serial number, entity type, address, and assigned law office, and sent from domains such as @uspto-trademark.live rather than @uspto.gov."
+      ],
+      "source": "Stites & Harbison PLLC, https://www.stites.com/resources/client-alerts/trademark-applicants-beware-the-latest-uspto-impersonation-scam-using-fake-verification-appointments/",
+      "spreadPlatforms": [
+        "Email"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "80",
+      "slug": "boss-ceo-gift-card-impersonation-bec-scam",
+      "title": "Boss/CEO Gift Card Impersonation (BEC) Scam",
+      "summary": "Scammers impersonate a company executive or boss via spoofed email, text, or phone call, urgently asking an employee to buy gift cards and send back the codes. It's one of the most common and persistent forms of Business Email Compromise (BEC) fraud.",
+      "category": "Phone Scam",
+      "firstReported": "2017-11-01",
+      "relatedScams": [
+        "Fake Job Offer Scam",
+        "Mystery Shopper Check Scam",
+        "AI Voice Clone Scam"
+      ],
+      "safetyTips": [
+        "Never purchase gift cards based solely on an email or text request, no matter how urgent it sounds or who it appears to be from",
+        "Verify any unusual request by contacting the supposed sender directly through a known phone number or in person, not by replying to the message or calling a number it provides",
+        "Watch for mismatched or spoofed email domains and report suspicious messages to your IT or security team",
+        "Remember that legitimate executives, businesses, and government agencies never ask employees or customers to pay via gift card codes",
+        "Report incidents to the FBI's Internet Crime Complaint Center (IC3.gov) so patterns can be tracked and investigated"
+      ],
+      "datePublished": "2026-10-06T21:24:19.510Z",
+      "howItWorks": "A criminal researches a company's leadership on sites like LinkedIn or the corporate website, then impersonates a CEO, HR director, or other authority figure by spoofing their email address or phone number (sometimes buying breached credentials and contact lists to make the impersonation more convincing). The fake \"boss\" contacts an employee claiming to be in meetings or traveling and unable to talk, and asks for an urgent \"favor\": purchasing gift cards (Apple, Google Play, Target, etc.) for clients, staff gifts, or a client reimbursement. The message pressures the employee to act fast and keep it confidential. Once the employee buys the cards, the scammer instructs them to scratch off the back and photograph or text the card numbers and PINs, at which point the funds are cashed out within minutes and the \"boss\" goes silent.",
+      "redFlags": [
+        "Urgent, time-pressured request from a 'boss' or executive asking you to buy gift cards",
+        "Sender claims to be unreachable by phone because they are 'in a meeting' and asks you to just reply to email or text",
+        "Request to send back gift card numbers and PINs (or photos of the scratched-off codes) rather than the physical cards",
+        "Email address or phone number that looks almost identical to the real supervisor's but has a subtle difference (e.g., a swapped letter or different domain)",
+        "Instructions to keep the purchase secret or not mention it to coworkers"
+      ],
+      "realExamples": [
+        "The FBI's Phoenix field office issued a Tech Tuesday bulletin describing BEC scams where a spoofed email or text from a 'CEO or HR director' tells an employee to purchase gift cards for the executive to give away or use for a party, with the employee told to send back the card number and PIN.",
+        "A cybersecurity write-up citing a January 2026 FBI consumer alert titled about bosses asking for gift cards noted that gift card requests are now a common BEC variant, including text requests sent to employees' personal phones, often relying on data harvested from breached accounts to impersonate executives convincingly.",
+        "Proofpoint research found that since March 2020, over 7,000 CEOs or other executives have been impersonated in these schemes, with a single CEO on average impersonated 102 times across a 90-day period.",
+        "An industry analysis reported that gift card schemes represented 37.9% of all BEC incidents in Q1 2024, calling them the top BEC cash-out method."
+      ],
+      "source": "FBI Phoenix Field Office, https://www.fbi.gov/contact-us/field-offices/phoenix/news/press-releases/fbi-tech-tuesday-business-email-compromise-bec-gift-card-fraud",
+      "spreadPlatforms": [
+        "Email",
+        "Text Messages",
+        "Phone Calls",
+        "Social Media"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
