@@ -1,6 +1,6 @@
 {
-  "version": 45,
-  "lastUpdated": "2026-10-05T01:45:07.494Z",
+  "version": 46,
+  "lastUpdated": "2026-10-06T02:43:32.427Z",
   "reports": [
     {
       "id": "1",
@@ -2860,6 +2860,48 @@
         "Instagram",
         "Facebook",
         "Direct Messages"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "78",
+      "slug": "government-grant-scam",
+      "title": "Government Grant Scam",
+      "summary": "Scammers claim you've been approved for a \"free\" government grant to pay bills, home repairs, or education costs, then steal your personal information or demand upfront fees paid in untraceable ways.",
+      "category": "Government Scam",
+      "firstReported": "2022-08-01",
+      "relatedScams": [
+        "Fake Social Security Statement Email Scam",
+        "Tariff Rebate / \"Tariff Dividend\" Check Scam",
+        "Advance Fee Loan Scam"
+      ],
+      "safetyTips": [
+        "Never share your Social Security number, bank account, or card details with anyone who contacts you about a grant",
+        "Remember that real government agencies won't call, text, email, or message you on social media to offer free grants",
+        "Know that the only official source for federal grant listings is grants.gov, and applying is always free",
+        "If you already paid, contact the gift card issuer, money transfer company, or crypto platform immediately to try to reverse the transaction",
+        "Report suspected grant scams to the FTC at ReportFraud.ftc.gov"
+      ],
+      "datePublished": "2026-10-06T02:43:01.852Z",
+      "howItWorks": "A scammer reaches out unsolicited — by phone, text, email, or social media/chat app — claiming you qualify for a free government grant to cover personal expenses like bills, home repairs, medical costs, or education. They first ask for personal information such as your Social Security number to see if you \"qualify\" (you always will), then ask for your bank account information, supposedly to direct-deposit the grant, or demand you pay \"processing\" or other fees via gift card, cash reload card, wire transfer, or cryptocurrency. Some versions impersonate a real agency like the Social Security Administration or use an official-sounding fake name like the \"Federal Grants Administration,\" which doesn't actually exist. Once the scammer has the bank details or fee payment, the money disappears and no grant ever materializes.",
+      "redFlags": [
+        "Being contacted out of the blue about a government grant you never applied for",
+        "Being asked to pay any upfront 'processing' or other fee to receive grant money",
+        "Requests to pay via gift card, cash reload card, wire transfer, or cryptocurrency",
+        "Promises that you're guaranteed to qualify or that you'll get a refund if unsatisfied",
+        "Contact via phone, text, email, or social media claiming to be from a government agency"
+      ],
+      "realExamples": [
+        "Scammers pretend to be with a real government agency like the Social Security Administration, or make up an official-sounding name like the 'Federal Grants Administration,' to convince people they qualify for free government grant money before asking for personal information, bank details, or upfront fees paid by gift card, cash reload card, wire transfer, or cryptocurrency."
+      ],
+      "source": "FTC Consumer Advice, \"Government Grant Scams,\" https://consumer.ftc.gov/articles/government-grant-scams",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Text Messages",
+        "Email",
+        "Social Media",
+        "Classified Ads"
       ],
       "isAIDiscovered": true,
       "isGovSourced": true

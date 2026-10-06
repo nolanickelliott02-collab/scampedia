@@ -1,6 +1,6 @@
 {
-  "version": 8,
-  "lastUpdated": "2026-10-05T01:45:07.494Z",
+  "version": 9,
+  "lastUpdated": "2026-10-06T02:43:32.427Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -97,7 +97,8 @@
     "phantom debt",
     "blessing loom",
     "the circle game",
-    "money board"
+    "money board",
+    "free government grant"
   ],
   "aiTells": [
     "extra fingers",
