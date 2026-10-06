@@ -106,6 +106,7 @@ function bindReportForm() {
 
   btn.addEventListener('click', () => {
     form.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', form.classList.contains('hidden') ? 'false' : 'true');
     if (!form.classList.contains('hidden')) {
       document.getElementById('report-scam-details')?.focus();
     }
@@ -134,7 +135,7 @@ function bindReportForm() {
 
       form.reset();
       setReportStatus(form, { ok: true, message: '✅ Thanks — we\'ll review your report.' });
-      setTimeout(() => form.classList.add('hidden'), 2500);
+      setTimeout(() => { form.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false'); }, 2500);
     } catch (err) {
       setReportStatus(form, { ok: false, message: '⚠️ Could not send your report. Please try again.' });
     } finally {
@@ -156,6 +157,9 @@ function setReportStatus(form, result) {
     form.appendChild(el);
   }
   el.textContent = result.message;
+  // Screen readers announce the result through the form's polite live region.
+  const live = form.querySelector('.report-status-live');
+  if (live) live.textContent = result.message;
   el.classList.toggle('report-status-ok', result.ok);
   el.classList.toggle('report-status-error', !result.ok);
 }

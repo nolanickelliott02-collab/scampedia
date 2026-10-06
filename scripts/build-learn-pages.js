@@ -160,11 +160,8 @@ function courseShell({ title, description, canonical, ogImage, jsonLd, bodyHtml,
   <meta name="twitter:description" content="${escapeHtml(description)}" />
   <meta name="twitter:image" content="${ogImage}" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" /></noscript>
+  <link rel="preload" as="font" type="font/woff2" href="../fonts/Inter-bec94a4d.woff2" crossorigin />
+  <link rel="stylesheet" href="../fonts/fonts.css" />
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="../css/course.css" />
   <link rel="icon" type="image/png" sizes="128x128" href="../assets/favicon/favicon-128.png" />
@@ -172,6 +169,7 @@ function courseShell({ title, description, canonical, ogImage, jsonLd, bodyHtml,
   <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>
 </head>
 <body class="course-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <nav class="nav">
     <div class="nav-inner container">
@@ -188,21 +186,25 @@ function courseShell({ title, description, canonical, ogImage, jsonLd, bodyHtml,
       </div>
     </div>
   </nav>
+  <main id="main">
 
   <div class="course-shell">
     ${bodyHtml}
   </div>
 
+  </main>
+
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
         <img src="../assets/logo-wordmark-dark.svg" alt="Scampedia" class="footer-logo-img" width="249" height="18" />
-        <span class="footer-copy">© 2026 Nick Elliott. All rights reserved. Edited by <a href="../about.html">Nick Elliott</a>.</span>
+        <span class="footer-copy">© 2026 Verify Guard Apps LLC. All rights reserved. Edited by <a href="../about.html">Nick Elliott</a>.</span>
       </div>
       <div class="footer-links">
         <a href="../learn/index.html">Learn</a>
         <a href="https://officialverifyguard.com">Official Site</a>
         <a href="../privacy.html">Privacy Policy</a>
+        <a href="../privacy.html#cookies">Cookies</a>
         <a href="../terms.html">Terms of Service</a>
         <a href="../about.html">About &amp; Editorial Policy</a>
         <a href="mailto:verifyguardsupport@gmail.com">Contact</a>

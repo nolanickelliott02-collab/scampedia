@@ -22,11 +22,14 @@ const assert = require('node:assert/strict');
 
 const ROOT = path.join(__dirname, '..', '..');
 
+// Changed 2026-10-06: fonts are self-hosted (fonts/fonts.css) instead of
+// Google Fonts, so no visitor request goes to Google and there's no
+// third-party stylesheet to block render. The font file is preloaded and
+// fonts.css uses font-display: swap, so text renders immediately either way.
 function assertAsyncFontLoading(html, label) {
-  assert.match(html, /rel="preconnect" href="https:\/\/fonts\.gstatic\.com" crossorigin/, `${label}: missing preconnect to fonts.gstatic.com`);
-  assert.match(html, /rel="preload" as="style" href="https:\/\/fonts\.googleapis\.com\/css2/, `${label}: missing font stylesheet preload`);
-  assert.match(html, /media="print" onload="this\.media='all'"/, `${label}: font stylesheet is not loaded async (render-blocking)`);
-  assert.match(html, /<noscript><link rel="stylesheet" href="https:\/\/fonts\.googleapis\.com\/css2/, `${label}: missing <noscript> fallback for the async font stylesheet`);
+  assert.doesNotMatch(html, /fonts\.googleapis\.com|fonts\.gstatic\.com/, `${label}: still loads Google Fonts`);
+  assert.match(html, /<link rel="preload" as="font" type="font\/woff2" href="(\.\.\/)?fonts\/Inter-[a-f0-9]+\.woff2" crossorigin \/>/, `${label}: missing self-hosted font preload`);
+  assert.match(html, /<link rel="stylesheet" href="(\.\.\/)?fonts\/fonts\.css" \/>/, `${label}: missing self-hosted fonts.css`);
 }
 
 function assertSizedLogo(html, label) {

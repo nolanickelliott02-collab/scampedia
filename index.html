@@ -18,11 +18,8 @@
   <meta name="twitter:description" content="A free, public encyclopedia documenting how scams work — researched daily by AI, automatically fact-checked against its own sources before it publishes." />
   <meta name="twitter:image" content="https://scampedia.net/assets/og/scampedia-share.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" /></noscript>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/Inter-bec94a4d.woff2" crossorigin />
+  <link rel="stylesheet" href="fonts/fonts.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon/favicon-128.png" />
   <link rel="apple-touch-icon" href="assets/favicon/favicon-180.png" />
@@ -39,6 +36,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- NAV -->
   <nav class="nav">
@@ -54,6 +52,7 @@
       </div>
     </div>
   </nav>
+  <main id="main">
 
   <!-- HERO -->
   <section class="hero">
@@ -98,7 +97,7 @@
           <div class="step-num">01</div>
           <div class="step-icon">🧠</div>
           <h3>AI Researches Daily</h3>
-          <p>Once a day, an AI searches real news, FTC, FBI, and BBB sources for a genuinely new scam trend. It never invents one, and skips the day entirely if it doesn't find something solid.</p>
+          <p>Twice a day, two AI research jobs search real news and government sources (FTC, FBI, BBB and others) for real scams that aren't documented here yet. They don't invent entries, and publish nothing on a day they don't find something solid.</p>
         </div>
         <div class="step-card">
           <div class="step-num">02</div>
@@ -137,12 +136,12 @@
         <div class="feature-card">
           <div class="feature-icon">🧠</div>
           <h3>AI-Discovered, Source-Cited</h3>
-          <p>New entries are surfaced by VerifyGuard's AI and written with real, cited sourcing — not guesswork.</p>
+          <p>New entries are found and written by Scampedia's AI research jobs with real, cited sourcing — not guesswork — and marked "AI-researched".</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🔗</div>
           <h3>Synced to VerifyGuard</h3>
-          <p>Every article here is also live inside the VerifyGuard app, so what you read powers real-time detection.</p>
+          <p>Every article here also appears inside the VerifyGuard app, and the scam phrases from new entries are added to the app's scam-pattern checks.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🕓</div>
@@ -176,23 +175,26 @@
   <!-- GET THE APP CTA -->
   <section class="section download-section" id="get-app">
     <div class="container download-inner">
-      <h2>Want real-time protection, not just information?</h2>
+      <h2>Want protection, not just information?</h2>
       <p>Scampedia documents the scams. VerifyGuard is the app that scans your photos, links, and news for them — free to start.</p>
       <a href="https://apps.apple.com/us/app/verifyguard-scam-detector/id6794175364" class="btn btn-primary btn-lg app-store-btn">Get VerifyGuard →</a>
     </div>
   </section>
 
   <!-- FOOTER -->
+  </main>
+
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
         <img src="assets/logo-wordmark-dark.svg" alt="Scampedia" class="footer-logo-img" width="249" height="18" />
-        <span class="footer-copy">© 2026 Nick Elliott. All rights reserved. Edited by <a href="about.html">Nick Elliott</a>.</span>
+        <span class="footer-copy">© 2026 Verify Guard Apps LLC. All rights reserved. Edited by <a href="about.html">Nick Elliott</a>.</span>
       </div>
       <div class="footer-links">
         <a href="scampedia.html">Scam Database</a>
         <a href="https://apps.apple.com/us/app/verifyguard-scam-detector/id6794175364">VerifyGuard App</a>
         <a href="privacy.html">Privacy Policy</a>
+        <a href="privacy.html#cookies">Cookies</a>
         <a href="terms.html">Terms of Service</a>
         <a href="about.html">About &amp; Editorial Policy</a>
         <a href="mailto:verifyguardsupport@gmail.com">Contact</a>
