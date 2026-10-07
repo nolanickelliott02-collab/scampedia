@@ -1,0 +1,57 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "82",
+    "slug": "e-signature-document-phishing-scam",
+    "title": "E-Signature Document Phishing Scam",
+    "summary": "Scammers send an unexpected email that looks like it's from a law firm, DocuSign, or another e-signature service, urging you to \"review and sign\" an attached document right away, when the real goal is to steal your data or install malware.",
+    "category": "Phone Scam",
+    "firstReported": "2025-11-21",
+    "relatedScams": [
+      "Phishing Email Scam",
+      "Phantom Debt Collector Scam",
+      "Boss/CEO Gift Card Impersonation (BEC) Scam"
+    ],
+    "safetyTips": [
+      "Never click links or open attachments in an unsolicited e-signature request; instead, go directly to the sender's official website in a new browser tab to verify",
+      "Call the supposed sender using a phone number you look up independently, not one provided in the email, to confirm the document is real",
+      "Hover over (don't click) any link to check where it actually leads before trusting a 'review document' or 'sign now' button",
+      "Watch for odd phrasing, generic greetings, or small inconsistencies in formatting, which can indicate a forged document even when AI writing makes grammar look clean",
+      "Report suspicious e-signature emails to the FTC and to the e-signature provider or firm being impersonated"
+    ],
+    "datePublished": "2026-10-07T21:42:53.330Z",
+    "howItWorks": "The scam arrives as an email impersonating a law firm or a well-known e-signature brand, with urgent subject lines about a document awaiting your electronic signature. In one widespread November 2025 version, the sender posed as \"Rigsby Law Group\" of Lexington, Kentucky; the email read \"Important – Your attention is needed for a document awaiting review and your electronic signature today\"",
+    "redFlags": [
+      "Receiving a signature request for a document you never expected, from a firm or person you don't recognize or haven't dealt with recently",
+      "The sender's email domain is inactive, misspelled, or doesn't match the real organization's official domain when checked independently",
+      "A link that looks like it goes to an e-signature or document service but actually points somewhere else, such as a generic Google Doc or unrelated site when you hover over it",
+      "Urgent, vague language insisting you review and sign 'today' without naming a specific deal, case, or transaction",
+      "A request to log in, enter personal/financial details, scan a QR code, or download a file to 'view' the document"
+    ],
+    "realExamples": [
+      "ConsumerAffairs confirmed a November 2025 phishing email impersonating 'Rigsby Law Group' of Lexington, Kentucky, asking recipients to electronically sign an attached document; the firm confirmed the message was fraudulent and the link actually led to a Google document rather than a legitimate e-signature company.",
+      "The Identity Theft Resource Center reported its own employees received phishing emails claiming to have an invoice awaiting signature through services mimicking DocuSign and HelloSign.",
+      "A consumer alert described a version impersonating 'DocuSign Electronic Service' that asks recipients to log in to sign a document or download a fraudulent invoice, delivering spyware or ransomware or harvesting personal and financial information."
+    ],
+    "source": "ConsumerAffairs, https://www.consumeraffairs.com/news/if-an-unknown-law-firm-sends-you-an-unexpected-document-to-sign-its-a-scam-112125.html",
+    "spreadPlatforms": [
+      "Email"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Phishing Email Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Tech Scam",
+    "suggestedAliases": [
+      "Rigsby Law Group Scam Email"
+    ],
+    "confidence": 0.75,
+    "reasoning": "This is a specific instance of a phishing email impersonating a law firm/e-signature request to steal data or install malware, which fits within the broader existing 'Phishing Email Scam' category rather than being a structurally distinct pattern; the law firm/e-signature framing is a thematic variant, not a new mechanism."
+  },
+  "queuedAt": "2026-10-07T21:42:59.107Z"
+}
