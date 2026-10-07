@@ -1,6 +1,6 @@
 {
-  "version": 11,
-  "lastUpdated": "2026-10-07T02:11:40.931Z",
+  "version": 12,
+  "lastUpdated": "2026-10-07T21:45:00.103Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -104,7 +104,10 @@
     "abandonment of the trademark application",
     "free solar panels",
     "energy audit",
-    "utility company already signed you up"
+    "utility company already signed you up",
+    "last goodbye",
+    "withdrawal key",
+    "upgrade to vip"
   ],
   "aiTells": [
     "extra fingers",

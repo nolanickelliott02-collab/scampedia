@@ -1,6 +1,6 @@
 {
-  "version": 49,
-  "lastUpdated": "2026-10-07T02:11:40.931Z",
+  "version": 50,
+  "lastUpdated": "2026-10-07T21:45:00.104Z",
   "reports": [
     {
       "id": "1",
@@ -3025,6 +3025,47 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "82",
+      "slug": "tiktok-vip-upgrade-crypto-inheritance-dm-scam",
+      "title": "TikTok \"VIP Upgrade\" Crypto Inheritance DM Scam",
+      "summary": "A brand-new TikTok account DMs strangers a melodramatic \"last goodbye\" story claiming to have left them crypto assets, then lures them to a fake exchange site showing a huge balance that can never actually be withdrawn without paying escalating \"VIP upgrade\" fees.",
+      "category": "Investment Scam",
+      "firstReported": "2025-10-15",
+      "relatedScams": [
+        "Fake Trading App Scam",
+        "Pig Butchering Scam",
+        "Advance Fee Loan Scam"
+      ],
+      "safetyTips": [
+        "Never pay a fee to 'unlock' or withdraw money that is supposedly already yours \\u2014 legitimate platforms do not charge you to access your own funds",
+        "Don't log into any crypto site or wallet using credentials someone else sent you in a DM",
+        "Treat any unsolicited inheritance, gift, or 'last goodbye' message on social media as a scam, especially from brand-new accounts",
+        "Verify any crypto balance independently on a public blockchain explorer rather than trusting an in-app dashboard",
+        "Report and block the account, and avoid providing personal details like your name, email, or phone number through the chat funnel"
+      ],
+      "datePublished": "2026-10-07T21:44:26.396Z",
+      "howItWorks": "The scam starts with a cold DM or comment from a newly created TikTok account telling a sob story — terminal illness, a \"last goodbye,\" or a claim that the sender has left the recipient crypto assets — along with a ready-made username and password for a crypto site the victim has never used. Logging in reveals a large, legitimate-looking balance and a withdraw button, but any attempt to move the funds out triggers a demand for a \"withdrawal key\" supposedly belonging to the original account holder, which the victim doesn't have and support won't provide. Support then steers victims toward an \"Internal Transfer\" option and offers to help them create a new account \"in seconds\" that supposedly has its own key, making the next step feel legitimate; from there, victims are told they must pay to \"upgrade\" to VIP or membership tiers — reported amounts escalate from around 50 USDT at entry level up to 1,000, 3,000, and as much as 50,000 USDT for \"full functionality\" — purportedly to unlock the ability to transfer or withdraw the trapped funds. The displayed balance and all \"proof\" of funds exist only inside the scammer's own dashboard, with no public blockchain ledger ever confirming it, and the whole funnel is optimized for mobile, using large tap targets and persistent chat bubbles to keep victims moving quickly without stopping to verify.",
+      "redFlags": [
+        "Unsolicited DM from a brand-new TikTok account with an emotional story (illness, death, 'last goodbye') offering you crypto assets",
+        "You're given someone else's login credentials to a crypto site you've never signed up for",
+        "A large balance appears instantly but withdrawals are blocked by a mysterious 'key' you don't possess",
+        "Support says you must buy a 'VIP' tier or membership to unlock withdrawals or internal transfers",
+        "No way to verify the funds exist outside the scammer's own dashboard (no public blockchain record, no small test withdrawal allowed)",
+        "Support uses free, informal email addresses rather than official corporate channels"
+      ],
+      "realExamples": [
+        "Malwarebytes documented TikTok DMs using a \"terminal illness, last goodbye\" story with a ready-made crypto site login, where any withdrawal attempt was blocked by a demand for a withdrawal key the victim never had.",
+        "Forbes reported on the same \"VIP Membership Upgrade\" scam, with a researcher explaining that victims see what looks like a real account with a large balance, but withdrawal attempts prompt a requirement for a key the scammer holds.",
+        "PhishFort's analysis described victims being asked to pay escalating 'upgrade' fees \\u2014 from 50 USDT up to 50,000 USDT \\u2014 to supposedly unlock a fabricated locked balance."
+      ],
+      "source": "Malwarebytes, https://www.malwarebytes.com/blog/news/2025/10/tiktok-scam-sells-you-access-to-your-own-fake-money ; Forbes, https://www.forbes.com/sites/daveywinder/2025/10/18/tiktok-users-warned-as-vip-upgrade-attack-strikes/ ; PhishFort, https://phishfort.com/vip-upgrade-crypto-scam/",
+      "spreadPlatforms": [
+        "Social Media",
+        "TikTok Direct Messages"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
