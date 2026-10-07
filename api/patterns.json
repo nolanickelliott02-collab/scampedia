@@ -1,6 +1,6 @@
 {
-  "version": 10,
-  "lastUpdated": "2026-10-06T21:23:00.680Z",
+  "version": 11,
+  "lastUpdated": "2026-10-07T02:11:40.931Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -101,7 +101,10 @@
     "free government grant",
     "mandatory verification appointment",
     "examining attorney",
-    "abandonment of the trademark application"
+    "abandonment of the trademark application",
+    "free solar panels",
+    "energy audit",
+    "utility company already signed you up"
   ],
   "aiTells": [
     "extra fingers",

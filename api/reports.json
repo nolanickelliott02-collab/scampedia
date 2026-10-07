@@ -1,6 +1,6 @@
 {
-  "version": 48,
-  "lastUpdated": "2026-10-06T21:24:40.078Z",
+  "version": 49,
+  "lastUpdated": "2026-10-07T02:11:40.931Z",
   "reports": [
     {
       "id": "1",
@@ -2985,6 +2985,46 @@
         "Social Media"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "81",
+      "slug": "solar-clean-energy-home-improvement-scam",
+      "title": "Solar / Clean Energy Home Improvement Scam",
+      "summary": "Scammers posing as government officials or utility company reps push \"free\" solar panels and energy-efficiency upgrades, then stick homeowners with hidden costs, predatory financing, or no installation at all.",
+      "category": "Shopping Scam",
+      "firstReported": "2024-08-07",
+      "relatedScams": [
+        "Fake Online Store Scam",
+        "Utility Company Shutoff Scam",
+        "Disaster Recovery Contractor Scam"
+      ],
+      "safetyTips": [
+        "Know that 'free' or 'no cost' solar panel offers are always scams \\u2014 check the Department of Energy's or Department of Treasury's official guidance before considering solar",
+        "Take your time; anyone who pressures you into a contract or demands up-front or immediate payment is a scammer",
+        "Legitimate businesses and government agencies don't pressure you to act immediately and won't ask you to pay with cash, gift cards, wire transfers, payment apps, or cryptocurrency",
+        "Protect your personal information; don't respond to unexpected requests online or on social media for your name, address, or other personal information to 'see if you qualify'",
+        "Report solar and clean energy imposters to the FTC at reportfraud.ftc.gov"
+      ],
+      "datePublished": "2026-10-07T02:11:12.657Z",
+      "howItWorks": "The scam usually starts with an unexpected phone call, a social media message, or an in-person visit from someone claiming to represent the government or the homeowner's utility company. The so-called official offers a \"free\" energy audit or tries to sign the homeowner up for a program to make their home more energy efficient with solar panels, falsely claiming the utility company already enrolled them and now they just need to pay. The pitch typically includes promises of big savings on utility bills, free or low-cost solar panels, or huge rebates, tax credits, or utility incentives covering the cost — all of which are lies, since the federal government does not install solar systems in homes for free. Victims who agree can end up locked into unfair financing schemes or predatory contracts that cost tens of thousands of dollars.",
+      "redFlags": [
+        "Claims to be from the government or your utility company offering 'free' or 'no cost' solar panels",
+        "High-pressure tactics demanding you sign a contract or pay immediately",
+        "Says your utility company already signed you up for a solar program and now you owe money",
+        "Requests payment by cash, gift card, wire transfer, payment app, or cryptocurrency"
+      ],
+      "realExamples": [
+        "FTC Consumer Alert describes scammers calling, messaging on social media, or visiting in person claiming to be from the government or a utility, offering a 'free' energy audit or solar sign-up program and claiming the utility already enrolled the homeowner"
+      ],
+      "source": "FTC Consumer Alerts, \"How to avoid getting burned by solar or clean energy scams,\" https://consumer.ftc.gov/consumer-alerts/2024/08/how-avoid-getting-burned-solar-or-clean-energy-scams",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Social Media",
+        "In-Person Door-to-Door Visits",
+        "Text Messages"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
