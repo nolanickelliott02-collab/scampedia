@@ -1,0 +1,55 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "81",
+    "slug": "fake-amazon-product-recall-refund-text-scam",
+    "title": "Fake Amazon \"Product Recall\" Refund Text Scam",
+    "summary": "Scammers send unexpected texts pretending to be Amazon, claiming an item you bought failed a \"quality inspection\" or was recalled, and offer a full refund if you click a link — but it's a phishing scam designed to steal your money or personal information.",
+    "category": "Shopping Scam",
+    "firstReported": "2025-07-24",
+    "relatedScams": [
+      "Package Delivery Text Scam",
+      "Smishing Text Message Scam",
+      "Online Marketplace Buyer Scam"
+    ],
+    "safetyTips": [
+      "Don't click links in unexpected texts — and don't respond to them. If you think the message could be legit, contact the company using a phone number, email, or website you know is real, not the info from the text.",
+      "Check your Amazon account directly by logging in through the Amazon website or app — don't use the link in the text — to see if there's actually a problem with or recall on anything you've ordered.",
+      "Send unwanted texts to 7726 (SPAM) or use your phone's 'report junk' option, then delete the message.",
+      "Report any scam you spot to the FTC at ReportFraud.ftc.gov."
+    ],
+    "datePublished": "2026-10-07T02:06:43.358Z",
+    "howItWorks": "According to the FTC, you get an unexpected text that looks like it's from Amazon. It claims the company did a \"routine quality inspection\" and an item you recently bought doesn't meet Amazon's standards or has been recalled. The text offers you a full refund and says you don't need to return the item — as long as you click a link to request your money back. But there is no refund. Instead, it's a phishing scam to steal your money or personal information.",
+    "redFlags": [
+      "An unexpected text claiming to be from Amazon about a product recall or failed quality inspection",
+      "An offer of a full refund without needing to return the item",
+      "A request to click a link to 'request your money back'",
+      "Urgency around confirming or claiming a refund via text rather than through the official Amazon app or website"
+    ],
+    "realExamples": [
+      "FTC Consumer Alert (July 24, 2025) describing texts claiming an Amazon purchase failed a 'routine quality inspection' or was recalled, offering a full refund via a link that is actually a phishing scam."
+    ],
+    "source": "FTC Consumer Advice, \"Scammy texts offering 'refunds' for Amazon purchases,\" https://www.consumer.ftc.gov/consumer-alerts/2025/07/scammy-texts-offering-refunds-amazon-purchases",
+    "spreadPlatforms": [
+      "Text Messages"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Package Delivery Text Scam",
+    "novelty": "known-variant",
+    "severity": "low",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Amazon Refund Text Scam",
+      "Amazon Product Recall Phishing Scam"
+    ],
+    "confidence": 0.4,
+    "reasoning": "This is essentially a smishing/phishing text scam impersonating Amazon with a refund-click lure, which closely overlaps with existing \"Smishing Text Message Scam\" and \"Package Delivery Text Scam\" patterns already in the database — same mechanism (unexpected text, link click, phishing for money/personal info) with only the pretext (product recall vs. delivery) differing. It could be argued as a narrow variant worth noting but lacks enough unique mechanism to be a wholly distinct entry."
+  },
+  "queuedAt": "2026-10-07T02:06:51.407Z"
+}
