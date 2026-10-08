@@ -1,0 +1,59 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "85",
+    "slug": "fake-parking-ticket-meter-qr-code-scam",
+    "title": "Fake Parking Ticket & Meter QR Code Scam",
+    "summary": "Scammers place counterfeit parking citations under windshield wipers or stick fake QR code labels directly on parking meters/ticket machines, tricking drivers into scanning a code that leads to a fraudulent payment site designed to steal credit card and personal information.",
+    "category": "Shopping Scam",
+    "firstReported": "2022-12-25",
+    "relatedScams": [
+      "QR Code Scam",
+      "Fake Toll Road Text Scam",
+      "Brushing Scam with QR Code Twist"
+    ],
+    "safetyTips": [
+      "Never scan a QR code found on a windshield ticket or a parking meter/ticket machine; instead, pay or verify fines only through the official city app or website",
+      "Check the physical ticket for standard features (correct paper stock, violation code, agency contact info, badge number) before assuming it's legitimate",
+      "If you spot a suspicious sticker or ticket, report it to the city's parking authority or department of transportation so it can be removed and investigated",
+      "Pay for parking with coins, card, or the verified official app instead of any third-party link reached by scanning a code"
+    ],
+    "datePublished": "2026-10-08T21:39:29.023Z",
+    "howItWorks": "Fraudsters print fake parking tickets that mimic real citations — complete with official-looking seals and violation language — and tuck them under windshield wipers, or they stick fraudulent QR code labels onto legitimate parking meters and pay-to-park ticket machines. When a driver scans the QR code to \"pay the fine\" or pay for parking, they are redirected to a convincing but fake third-party website that requests credit card numbers and other personal details, which are then harvested by the scammers instead of going to the city or parking authority. In Houston, officials noted the counterfeit notices were printed on plain white paper rather than the pink stock used for real citations and were missing violation codes, payment instructions, the date/time/location of the alleged violation, and an enforcement officer's name and badge number. In New York City, the scam took the form of fraudulent stickers placed directly on ParkNYC meters rather than paper tickets, redirecting users who scanned them to a phishing site requesting card information.",
+    "redFlags": [
+      "A parking ticket or meter payment option includes a QR code at all — many agencies, like Houston's ParkHouston, state they never use QR codes for payment",
+      "The citation is printed on plain white paper and missing standard details such as violation code, date/time/location, or officer badge number",
+      "The QR code sticker looks slightly different from the surrounding signage, is crooked, or appears layered on top of an official label",
+      "The payment page asks for a credit card number immediately without showing a case/citation lookup tied to the official agency's system"
+    ],
+    "realExamples": [
+      "Houston's ParkHouston warned drivers after fake citations with QR codes appeared on windshields downtown; the fake tickets lacked violation codes, payment instructions, date/time/location, and officer badge numbers, and were printed on plain white paper instead of the pink stock used for real citations.",
+      "Santa Cruz Police warned the public after fake parking tickets using a QR code to direct victims to a payment website were left on cars near the beach in June 2025; a 2022 case saw a 19-year-old arrested for an earlier version of the same scheme.",
+      "New York City's Department of Transportation issued an alert in June 2025 after discovering a fraudulent QR code sticker placed on a ParkNYC meter that redirected users to a third-party site requesting credit card information.",
+      "Perth and Kinross Council in Scotland reported repeated incidents of fake QR code stickers placed on RingGo parking ticket machines, describing scammers imitating its service as a 'daily' and 'ongoing issue.'"
+    ],
+    "source": "Hoodline, https://hoodline.com/2026/09/fake-parking-tickets-with-qr-codes-are-scamming-drivers-across-texas/; NY1, https://ny1.com/nyc/all-boroughs/news/2025/06/09/nyc-parking-meter-scam-fake-qr-codes; STV News, https://news.stv.tv/north/perth-and-kinross-council-car-parks-hit-by-qr-code-scammers",
+    "spreadPlatforms": [
+      "Physical Flyers/Stickers",
+      "QR Codes",
+      "Phishing Websites"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "QR Code Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Quishing Parking Scam",
+      "Fake Parking Citation QR Scam"
+    ],
+    "confidence": 0.65,
+    "reasoning": "This is a specific application of the already-listed \"QR Code Scam\" pattern (quishing) targeting parking meters/tickets, rather than a fundamentally new scam mechanism; the core technique—fake QR stickers/tickets redirecting to phishing payment sites—is the same underlying pattern already covered, just applied to a new context (parking)."
+  },
+  "queuedAt": "2026-10-08T21:39:37.242Z"
+}
