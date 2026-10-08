@@ -1,6 +1,6 @@
 {
-  "version": 13,
-  "lastUpdated": "2026-10-08T02:34:53.466Z",
+  "version": 14,
+  "lastUpdated": "2026-10-08T21:38:09.614Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -108,7 +108,9 @@
     "last goodbye",
     "withdrawal key",
     "upgrade to vip",
-    "remove all negative information"
+    "remove all negative information",
+    "call this number",
+    "click to rebook"
   ],
   "aiTells": [
     "extra fingers",

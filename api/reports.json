@@ -1,6 +1,6 @@
 {
-  "version": 51,
-  "lastUpdated": "2026-10-08T02:34:53.466Z",
+  "version": 52,
+  "lastUpdated": "2026-10-08T21:38:09.614Z",
   "reports": [
     {
       "id": "1",
@@ -3106,6 +3106,46 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "84",
+      "slug": "fake-flight-cancellation-text-scam",
+      "title": "Fake Flight Cancellation Text Scam",
+      "summary": "Scammers send travelers a text that looks like an official airline alert saying their flight was canceled or delayed, pushing them to call a fake \"rebooking\" number or click a link that steals money and personal data.",
+      "category": "Phone Scam",
+      "firstReported": "2025-11-17",
+      "relatedScams": [
+        "Package Delivery Text Scam",
+        "Smishing Text Message Scam",
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Never call a number or click a link provided in an unsolicited flight cancellation text; instead verify status directly through the airline's official app or website",
+        "Use only the customer service number listed in your booking confirmation, the airline's app, or its verified website, not one sent via text or social media message",
+        "Be suspicious of any 'representative' who asks for a rebooking fee, gift card numbers, wire transfers, or your bank login",
+        "Slow down when a message uses high-pressure language like 'call now' or 'act fast'; take a minute to verify independently before responding",
+        "Report suspicious messages by forwarding scam texts to 7726 (SPAM) and reporting fake airline messages to the FTC at reportfraud.ftc.gov"
+      ],
+      "datePublished": "2026-10-08T21:37:38.472Z",
+      "howItWorks": "The scam starts with a text message that appears to come from a real airline and includes personal touches like the traveler's name and actual flight number, along with urgent wording claiming the flight has been canceled or delayed and instructing the recipient to \"call this number\" or \"click to rebook.\" Travelers who call reach a scammer posing as an airline representative who offers to rebook the flight for a fee and may ask for payment details or personal information like a birth date or passport number, sometimes sending official-looking confirmation emails to make the lie more believable, while those who click the link are sent to a phishing page designed to harvest payment and personal information. Many scammers now use AI tools to generate convincing language and fake confirmations that mimic real airline alerts, making these messages harder to spot, and they often arrive during busy travel seasons or storm delays when victims are primed to believe a cancellation notice.",
+      "redFlags": [
+        "Unsolicited text claiming your specific flight is canceled or delayed with a 'call this number' or 'click to rebook' link",
+        "Urgent, pressure-filled language like 'act fast' or 'your seat will be canceled' meant to rush you into responding",
+        "A phone number in the text differs from the one on your actual booking confirmation, the airline's app, or its verified website",
+        "Request for a rebooking fee or payment card details, or personal information like your birth date or passport number, over the phone",
+        "Message arrives during busy travel seasons or storm delays, a tactic scammers use to seem more credible"
+      ],
+      "realExamples": [
+        "Fox News/CyberGuy reported scammers sending texts with the recipient's name and real flight number, telling them to 'call this number' or 'click to rebook' after claiming a flight was canceled or delayed",
+        "The Better Business Bureau reported a surge in fake cancellation notices that include phony phone numbers leading straight to scammers"
+      ],
+      "source": "Fox News/CyberGuy, https://www.foxnews.com/tech/fake-flight-cancellation-texts-target-travelers",
+      "spreadPlatforms": [
+        "Text Messages",
+        "Email",
+        "Social Media"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
