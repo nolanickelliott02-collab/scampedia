@@ -1,6 +1,6 @@
 {
-  "version": 12,
-  "lastUpdated": "2026-10-07T21:45:00.103Z",
+  "version": 13,
+  "lastUpdated": "2026-10-08T02:34:53.466Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -107,7 +107,8 @@
     "utility company already signed you up",
     "last goodbye",
     "withdrawal key",
-    "upgrade to vip"
+    "upgrade to vip",
+    "remove all negative information"
   ],
   "aiTells": [
     "extra fingers",

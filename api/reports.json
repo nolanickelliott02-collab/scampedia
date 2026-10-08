@@ -1,6 +1,6 @@
 {
-  "version": 50,
-  "lastUpdated": "2026-10-07T21:45:00.104Z",
+  "version": 51,
+  "lastUpdated": "2026-10-08T02:34:53.466Z",
   "reports": [
     {
       "id": "1",
@@ -3066,6 +3066,46 @@
         "TikTok Direct Messages"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "83",
+      "slug": "impersonation-credit-repair-scheme-fake-debt-collector-creditor",
+      "title": "Impersonation Credit Repair Scheme (Fake Debt Collector/Creditor)",
+      "summary": "Scammers buy search ads that hijack people looking up real creditors or debt collectors, then pose as that company to charge illegal upfront \"verification\" fees and recurring charges for credit repair that never delivers.",
+      "category": "Government Scam",
+      "firstReported": "2016-01-01",
+      "relatedScams": [
+        "Phantom Debt Collector Scam",
+        "Government Grant Scam"
+      ],
+      "safetyTips": [
+        "Go directly to your creditor's or debt collector's official website or the number on your statement instead of clicking search ads or ad links",
+        "Remember that no company can legally remove accurate, timely negative information from your credit report",
+        "Never pay a credit repair company before it has completed the promised services — upfront fees are illegal under the Credit Repair Organizations Act",
+        "Report suspected credit repair scams to the FTC at ReportFraud.ftc.gov"
+      ],
+      "datePublished": "2026-10-08T02:34:22.865Z",
+      "howItWorks": "According to an FTC complaint, a credit repair network operated under the name Credit Glory and more than a dozen related company names, running since at least 2016. The operation bought paid Google search ads that appeared when consumers searched for specific creditors or debt collectors, including military-related lenders, and used those ads to route consumers to its own telemarketers instead of the real company. Once on the phone, the telemarketers let consumers believe they had reached the actual creditor or debt collector, then charged a fee — often described as needed to \"verify\" the consumer's identity — before signing people up for recurring subscription charges for credit repair services that falsely promised to remove negative information and boost credit scores. The FTC alleges this violated the Credit Repair Organizations Act, which bars charging consumers before credit repair work is completed.",
+      "redFlags": [
+        "A company you find through a search ad claims to be your existing creditor or debt collector",
+        "You're asked to pay a fee before any credit repair work is done, sometimes framed as an 'identity verification' charge",
+        "Promises to remove all negative information from your credit report, even if it's accurate",
+        "Automatic recurring monthly charges you didn't clearly agree to",
+        "No detailed written contract explaining services, costs, and your cancellation rights before you pay"
+      ],
+      "realExamples": [
+        "FTC complaint alleges Credit Glory, a network of 16 related entities and five principals, scammed consumers out of nearly $200 million through unlawful up-front and recurring charges since at least 2016.",
+        "The FTC's complaint notes the defendants used paid search advertising to specifically target military servicemembers owing debts to military-related creditors such as Army & Air Force Exchange Service and USAA, falsely promising to improve their credit."
+      ],
+      "source": "FTC, \"FTC Stops Sprawling Credit Repair Scheme that Scammed Consumers Out of Nearly $200 Million,\" https://www.ftc.gov/news-events/news/press-releases/2026/08/ftc-stops-sprawling-credit-repair-scheme-scammed-consumers-out-nearly-200-million",
+      "spreadPlatforms": [
+        "Search Engine Ads",
+        "Phone/Telemarketing",
+        "Social Media",
+        "Websites"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
