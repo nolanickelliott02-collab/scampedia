@@ -1,6 +1,6 @@
 {
-  "version": 14,
-  "lastUpdated": "2026-10-08T21:38:09.614Z",
+  "version": 16,
+  "lastUpdated": "2026-10-09T21:26:27.451Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -110,7 +110,11 @@
     "upgrade to vip",
     "remove all negative information",
     "call this number",
-    "click to rebook"
+    "click to rebook",
+    "report you to your school",
+    "process server",
+    "lien on your home",
+    "person of interest"
   ],
   "aiTells": [
     "extra fingers",

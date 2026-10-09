@@ -1,6 +1,6 @@
 {
-  "version": 52,
-  "lastUpdated": "2026-10-08T21:38:09.614Z",
+  "version": 54,
+  "lastUpdated": "2026-10-09T21:26:27.451Z",
   "reports": [
     {
       "id": "1",
@@ -3144,6 +3144,86 @@
         "Text Messages",
         "Email",
         "Social Media"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "85",
+      "slug": "homework-helper-test-prep-extortion-scam",
+      "title": "Homework Helper / Test Prep Extortion Scam",
+      "summary": "Students who pay online \"tutoring\" or test-prep companies to do their homework or exams for them find the company later demands more money and threatens to expose them to their school for cheating if they don't pay up.",
+      "category": "Shopping Scam",
+      "firstReported": "2024-07-23",
+      "relatedScams": [
+        "Virtual Casting Call Text Scam",
+        "Sextortion Scam",
+        "Phantom Debt Collector Scam"
+      ],
+      "safetyTips": [
+        "Never pay someone to complete your own assignments or take exams for you; this is cheating and creates blackmail leverage",
+        "Get tutoring referrals from friends, family, teachers, or honor society tutoring programs instead of unknown online companies",
+        "Check references for any tutoring service and speak with at least three past clients before paying",
+        "Agree on availability, rates, and scope of services in writing up front to avoid surprise fees",
+        "Report extortion attempts to BBB Scam Tracker rather than paying the demanded money"
+      ],
+      "datePublished": "2026-10-09T21:22:57.595Z",
+      "howItWorks": "A student struggling in a class searches online for a tutoring company that offers to actually complete assignments or exams rather than teach the material, and pays upfront, often a couple hundred dollars, for help with coursework such as math or technology classes. After payment, instead of delivering the promised help, the company demands additional money, inventing excuses like extra \"research\" fees. If the student refuses to keep paying, the scammers turn to extortion, sending threatening emails or texts claiming they will report the student to their college or university as a cheater using the assignments and message history as \"evidence,\" pushing frightened students to pay thousands of dollars to protect their academic standing.",
+      "redFlags": [
+        "A company offers to complete your homework or exams for you rather than help you learn the material",
+        "You're asked to sign a disclaimer or waiver before work begins, which is later used against you",
+        "Requests for extra, unexplained fees after the initial payment (e.g., for \"additional research\")",
+        "Threats to report you to your school or have you expelled if you stop paying or ask for a refund"
+      ],
+      "realExamples": [
+        "BBB Scam Tracker received a report describing a company that had students sign a disclaimer, then used that document and chat messages to threaten to tell their college to get them expelled",
+        "Another victim reported that when they asked for a refund, the company threatened to email their school or teacher claiming the student had cheated"
+      ],
+      "source": "Better Business Bureau, https://www.bbb.org/article/news-releases/24032-bbb-scam-alert-students-hire-homework-help-and-end-up-in-extortion-con",
+      "spreadPlatforms": [
+        "Online Ads",
+        "Email",
+        "Text Messages",
+        "Tutoring Websites"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "86",
+      "slug": "fake-process-server-phishing-call-scam",
+      "title": "Fake Process Server Phishing Call Scam",
+      "summary": "Scammers call claiming to be a \"process server\" with an urgent, non-existent lawsuit, lien, or warrant against you or a family member, then pressure you to \"confirm\" your Social Security number and other personal details.",
+      "category": "Phone Scam",
+      "firstReported": "2025-05-14",
+      "relatedScams": [
+        "Phantom Debt Collector Scam",
+        "Jury Duty Scam",
+        "Social Security Number Suspended Scam"
+      ],
+      "safetyTips": [
+        "Never confirm or give out your Social Security number, date of birth, or other personal details to an unsolicited caller",
+        "Check your local court's website to see if a lawsuit has actually been filed against you or a family member",
+        "Be wary of scare tactics and unsolicited phone calls; representatives of a reputable business or legal office will be polite and civil and won't pressure you to act immediately",
+        "Don't give out personal information about family members either; if someone asks you to validate information about another individual, hang up the phone",
+        "Report the call to the BBB Scam Tracker so others can be warned"
+      ],
+      "datePublished": "2026-10-09T21:25:57.248Z",
+      "howItWorks": "You get a call, sometimes repeated, from an unknown or blocked number from someone claiming to be a process server. They might say there is a lien on your home or that you're being taken to court over unpaid medical bills or another debt, or claim you or a family member are a \"person of interest in an important matter\" and that federal law prevents them from sharing more details until papers are served. The caller then asks you to \"confirm\" sensitive personal information such as your date of birth, address, or Social Security number, stressing urgency when you hesitate. If you push back and ask who is filing the complaint or what company the caller works for, the scammer often gets angry and threatens arrest or further legal action. In some versions the scammer already has partial personal information about a targeted family member, which they use to make the threat seem credible, or they call relatives of the target to demand the relatives contact the consumer and have them call the scammer back.",
+      "redFlags": [
+        "Caller ID is unknown or blocked and the caller claims to be a process server",
+        "Caller refuses to identify the company they work for or who filed the complaint, citing 'federal law' as the reason",
+        "You're pressured to 'confirm' your Social Security number, date of birth, or address over the phone",
+        "The caller reacts with anger or threats of arrest when you ask clarifying questions",
+        "Claims of a lien, lawsuit, or warrant that you cannot verify on your local court's website"
+      ],
+      "realExamples": [
+        "A BBB Scam Tracker report described a caller who said they were a process server with papers regarding a lien on a consumer's home, which turned out to be false after checking with the police department and town.",
+        "Another consumer reported a caller identifying as 'Roy Smith' who demanded SSN verification, threatened arrest when refused, and then called the consumer's son and a friend, threatening them with arrest if they did not contact the consumer and have them call back.",
+        "A reported voicemail claimed to be from 'Independent Process Service dispatch division' saying a parent owed medical bills and that papers would be served at home or work, directing the family to call back a given number and reference code."
+      ],
+      "source": "Better Business Bureau, https://www.bbb.org/article/scams/28919-bbb-scam-alert-this-phishing-scam-claims-a-process-server-is-looking-for-you",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Voicemail"
       ],
       "isAIDiscovered": true
     }
