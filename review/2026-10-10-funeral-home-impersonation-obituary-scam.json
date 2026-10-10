@@ -1,0 +1,60 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "87",
+    "slug": "funeral-home-impersonation-obituary-scam",
+    "title": "Funeral Home Impersonation / Obituary Scam",
+    "summary": "Scammers scour newly posted online obituaries for details, then call grieving family members posing as funeral home staff and demand urgent \"unpaid\" fees before a funeral can proceed.",
+    "category": "Phone Scam",
+    "firstReported": "2023-06-15",
+    "relatedScams": [
+      "Mystery Shopper Check Scam",
+      "Grandparent Emergency Scam",
+      "Phantom Debt Collector Scam"
+    ],
+    "safetyTips": [
+      "Hang up and call the funeral home back using the phone number from its official website or a prior invoice, not a number given by the caller",
+      "Never pay with a wire transfer, cryptocurrency, or gift cards \\u2014 legitimate funeral homes don't demand instant payment this way",
+      "Verify any new or additional charges in person or through a known, trusted contact at the funeral home before paying anything",
+      "Be extra cautious with financial requests in the days immediately following a public obituary posting",
+      "Tell other family members about the scam so a grieving relative isn't caught off guard alone"
+    ],
+    "datePublished": "2026-10-10T20:24:01.878Z",
+    "howItWorks": "After an obituary is published online, scammers mine it for the deceased's name, the funeral home, and even specific funeral directors' names, then call bereaved relatives pretending to be from the funeral home. They claim the family still owes money and that payment must be made immediately, often threatening that the funeral or burial will be delayed or canceled if the family doesn't pay right away. Because grieving families are emotionally overwhelmed and often dealing with the funeral home for the first time, they're especially vulnerable to pressure and less likely to double check suspicious details. The scammers insist on fast, hard-to-trace payment methods like wire transfers, cryptocurrency, gift cards, or prepaid cards loaded with cash, and once the money is sent it is essentially unrecoverable.",
+    "redFlags": [
+      "An unexpected call demanding immediate extra payment after funeral arrangements were already finalized",
+      "Caller pressures you to pay that same night or the service will be canceled or delayed",
+      "Payment is demanded via wire transfer, cryptocurrency, gift cards, Cash App, Venmo, Zelle, or a prepaid card loaded with cash",
+      "Caller's phone number or billing details don't match the actual funeral home's known contact information",
+      "Caller uses specific personal details pulled from the obituary to sound credible"
+    ],
+    "realExamples": [
+      "The FTC reported scammers posing as funeral staff calling bereaved families to demand bogus payments after finding them through obituaries.",
+      "A Virginia funeral directors association official described a scam sweeping the commonwealth where fraudsters target families right after an obituary is posted.",
+      "In North Carolina, impostors posing as funeral directors pressured a widow into sending a $400 cash transfer via a prepaid card bought at Dollar General, which could not be recovered, while a bank-card charge from another family member was reversed in time.",
+      "A funeral home in Decatur, Georgia reported nearly half a dozen families targeted by scammers posing as funeral home staff claiming money was owed."
+    ],
+    "source": "WSET, https://wset.com/news/local/scammers-posing-as-funeral-home-staff-target-grieving-families-va-virginia-awareness-december-2025",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Online Obituaries"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "new",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Phone Scam",
+    "suggestedAliases": [
+      "Obituary Scam",
+      "Funeral Payment Scam"
+    ],
+    "confidence": 0.55,
+    "reasoning": "This targets grieving families via obituary details and fake funeral home staff demanding urgent payment, which is distinct from existing entries like Grandparent Emergency or Phantom Debt Collector scams; however, the source only confirms scammers calling and requesting extra payments (sometimes over $1,000), not the specific payment methods (wire, crypto, gift cards) claimed in the summary, so some details exceed the source."
+  },
+  "queuedAt": "2026-10-10T20:24:07.392Z"
+}
