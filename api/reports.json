@@ -1,6 +1,6 @@
 {
-  "version": 54,
-  "lastUpdated": "2026-10-09T21:26:27.451Z",
+  "version": 55,
+  "lastUpdated": "2026-10-10T20:26:17.828Z",
   "reports": [
     {
       "id": "1",
@@ -3224,6 +3224,44 @@
       "spreadPlatforms": [
         "Phone Calls",
         "Voicemail"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "87",
+      "slug": "fake-shop-to-support-animal-shelter-tiktok-charity-scam",
+      "title": "Fake \"Shop to Support\" Animal Shelter TikTok Charity Scam",
+      "summary": "Scammers post heartstring-tugging TikTok and social media videos of \"elderly\" shelter owners making handmade pet products to save a failing animal shelter, then pocket the money when shoppers buy the never-delivered merchandise.",
+      "category": "Charity Scam",
+      "firstReported": "2025-05-28",
+      "relatedScams": [
+        "Fake Charity / Disaster Relief Scam",
+        "Fake Online Store Scam",
+        "Deepfake Celebrity Endorsement Scam"
+      ],
+      "safetyTips": [
+        "Don't give in to videos that tug at your heartstrings or create a sense of urgency, even if you're excited about the product",
+        "Check to see if the charity is real on Give.org before purchasing or donating",
+        "Look up the company name, website, and contact information, read reviews on bbb.org, and search the company's name with the word \"scam\" before buying",
+        "Only do business with companies you know and trust, or research unfamiliar companies thoroughly first",
+        "Give locally by contacting your local or state animal shelters or other agencies directly to ask how you can support them"
+      ],
+      "datePublished": "2026-10-10T20:25:43.927Z",
+      "howItWorks": "While scrolling TikTok or another social platform, a user sees a video of an older adult asking for help, often showing cats or other animals in a shelter along with captions claiming the person is struggling to keep their shelter open and is making products like cat toys or slippers to fund it. The video shows craft-store footage and a finished product, uses emotional music and urgent captions, and includes a link in the description directing viewers to a website to buy the item \"to support the cause.\" Shoppers who order the merchandise never receive anything, and it is unclear whether any money actually goes to a real charity; BBB has found the accompanying videos, photos, and backstories are frequently AI-generated or stolen from other accounts rather than depicting a real shelter or person.",
+      "redFlags": [
+        "Videos use urgent emotional pleas like \"please stay for 8 seconds to help my cat shelter from shutting down\" or \"please don't scroll for 12 seconds to help my failing animal shelter\"",
+        "The featured charity or shelter has no verifiable information, address, or nonprofit status anywhere online",
+        "Heavy use of touching music, cute animals, and elderly people designed to trigger sympathy and impulse purchases",
+        "A purchase link leads to a standalone sales website rather than a verified charity donation page",
+        "Videos and product stories appear reused across multiple accounts selling different items (cat toys, cow slippers, etc.)"
+      ],
+      "realExamples": [
+        "BBB Scam Tracker received a report describing a TikTok account called FlappyBirdUS showing \"a little old man and his wife who 'make cat toys to support their failing cat shelter'\" that led to a site called meowwings.com where buyers paid but received nothing and could find no real information about the shelter, with the same fake, AI-generated videos recycled under other accounts selling cow slippers instead."
+      ],
+      "source": "Better Business Bureau (BBB Scam Tracker / BBB of Eastern Carolinas) - https://www.bbb.org/scamtracker/lookupscam/992747 and https://lakeoconeebreeze.net/2025/06/20/bbb-scam-alert-tiktok-videos-use-sad-stories-in-fake-donation-request/",
+      "spreadPlatforms": [
+        "TikTok",
+        "Social Media"
       ],
       "isAIDiscovered": true
     }
