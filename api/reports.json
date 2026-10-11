@@ -1,6 +1,6 @@
 {
-  "version": 55,
-  "lastUpdated": "2026-10-10T20:26:17.828Z",
+  "version": 56,
+  "lastUpdated": "2026-10-11T20:44:24.355Z",
   "reports": [
     {
       "id": "1",
@@ -3262,6 +3262,46 @@
       "spreadPlatforms": [
         "TikTok",
         "Social Media"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "88",
+      "slug": "mail-theft-check-washing-check-cooking-scam",
+      "title": "Mail Theft Check Washing/Check Cooking Scam",
+      "summary": "Criminals steal checks straight out of mailboxes or USPS collection boxes, then chemically \"wash\" or digitally \"cook\" them to change the payee and amount before cashing them, often before the victim even notices the check is missing.",
+      "category": "Government Scam",
+      "firstReported": "2025-01-27",
+      "relatedScams": [
+        "Mystery Shopper Check Scam",
+        "Fake Check Scam Targeting Childcare Providers",
+        "Phantom Debt Collector Scam"
+      ],
+      "safetyTips": [
+        "Avoid mailing checks when possible; use online bill pay, electronic transfers, or hand checks directly to a postal worker or drop them inside the post office rather than in a mailbox or collection box",
+        "Write checks in black gel ink, which is more resistant to chemical washing than ballpoint pen",
+        "Regularly monitor bank statements and set up account alerts to catch unauthorized transactions quickly",
+        "Pick up mail promptly and do not leave outgoing mail in a mailbox overnight or for long periods",
+        "Report suspected mail theft or check fraud immediately to your bank, local police, and the U.S. Postal Inspection Service"
+      ],
+      "datePublished": "2026-10-11T20:44:10.456Z",
+      "howItWorks": "Fraudsters obtain legitimate, signed checks by stealing them from residential mailboxes, USPS blue collection boxes after the last pickup, or through burglary, robbery, or bribery of postal facilities/employees. Once they have a check, they either \"wash\" it using chemicals to erase the original ink and rewrite the payee and dollar amount, or they \"cook\" it by digitally editing a photographed image of the check with photo-editing software and high-end printers, which lets them manufacture multiple counterfeit checks — often in smaller amounts — from a single stolen check image. Unaltered stolen checks are sometimes deposited directly using forged endorsements. Because banking regulations require funds from deposited checks to be made available to the depositor within a short window, the forged or altered checks often clear and the money is withdrawn by the criminals before the fraud is detected by the bank, the original account holder, or law enforcement.",
+      "redFlags": [
+        "Unfamiliar transactions or a check cleared for a different amount or payee than you wrote appear on your bank statement",
+        "Your bank calls about a check or withdrawal you don't recognize",
+        "A check you mailed was never received by the intended recipient, or took unusually long to clear",
+        "You notice your residential mailbox or a nearby USPS collection box has been tampered with",
+        "Someone unexpectedly asks you to deposit and forward funds from a check you received"
+      ],
+      "realExamples": [
+        "The FBI and USPIS issued a January 2025 public service announcement warning that check fraud is on the rise, with Suspicious Activity Reports related to check fraud nearly doubling from 2021 to 2023",
+        "The PSA described five methods criminals use to obtain checks: theft from residential mailboxes left overnight, theft from USPS blue collection boxes after last pickup, burglary of USPS facilities, robbery of USPS employees, and bribery/collusion with postal employees",
+        "Officials noted fraudsters also use spoofing technology and AI-assisted voice recreation to trick vulnerable people into becoming unwitting accomplices in moving the stolen funds"
+      ],
+      "source": "FBI/IC3 Public Service Announcement, https://www.ic3.gov/PSA/2025/PSA250127",
+      "spreadPlatforms": [
+        "Postal Mail",
+        "Phone Calls"
       ],
       "isAIDiscovered": true
     }
