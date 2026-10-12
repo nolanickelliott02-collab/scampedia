@@ -1,6 +1,6 @@
 {
-  "version": 56,
-  "lastUpdated": "2026-10-11T20:44:24.355Z",
+  "version": 57,
+  "lastUpdated": "2026-10-12T02:10:10.116Z",
   "reports": [
     {
       "id": "1",
@@ -3304,6 +3304,50 @@
         "Phone Calls"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "89",
+      "slug": "senior-u-s-official-impersonation-messaging-scam",
+      "title": "Senior U.S. Official Impersonation Messaging Scam",
+      "summary": "Malicious actors send AI-generated text and voice messages pretending to be senior U.S. government officials, build rapport with the target, then move the conversation to an encrypted app to steal account access, personal documents, or funds.",
+      "category": "Government Scam",
+      "firstReported": "2025-05-15",
+      "relatedScams": [
+        "AI Voice Clone Scam",
+        "Phishing Email Scam",
+        "Smishing Text Message Scam"
+      ],
+      "safetyTips": [
+        "Do not assume a message is authentic just because it claims to be from a current or former senior U.S. official",
+        "Independently look up and call a verified phone number for the person or agency rather than using contact info provided in the message",
+        "Carefully examine the phone number, email address, and spelling used in the message for inconsistencies",
+        "Never share authentication codes, PII, or financial information over text or encrypted messaging apps",
+        "Report suspicious messages to the FBI's Internet Crime Complaint Center (IC3) and preserve the messages as evidence"
+      ],
+      "datePublished": "2026-10-12T02:09:54.703Z",
+      "howItWorks": "According to the FBI, since at least 2023 malicious actors have used smishing (fake texts) and vishing (AI-generated voice messages) that claim to come from senior U.S. state government, White House, or Cabinet-level officials, as well as members of Congress, to target officials' family members, personal acquaintances, and other contacts. The actor opens with a text, briefly engages the victim on a topic they're knowledgeable about (current events, trade or security policy, bilateral relations) to build rapport, and almost immediately asks to move the conversation to an encrypted messaging app such as Signal, Telegram, or WhatsApp. Once trust is established, the impersonator may request a wire transfer, propose a meeting with \"high-ranking officials,\" note a fake appointment to company leadership, request copies of personal documents, or simply ask about U.S. policy. Gaining access to a victim's personal or official accounts lets the actor pivot to target that person's own contacts and associates using the trusted relationship, or use the harvested contact information to impersonate others and elicit more information or funds.",
+      "redFlags": [
+        "Unsolicited text or AI-generated voice message claiming to be from a senior government official, sometimes with poor grammar or unusual phrasing",
+        "Message quickly tries to shift the conversation from SMS to an encrypted app like Signal, Telegram, or WhatsApp",
+        "Sender references current events or policy topics to build rapport before making any request",
+        "Requests for a wire transfer, personal documents, authentication codes, or other sensitive information",
+        "Promise of a meeting with other high-ranking officials or a fake leadership appointment"
+      ],
+      "realExamples": [
+        "FBI IC3 PSA I-051525-PSA (May 15, 2025) warned that since April 2025 malicious actors had impersonated senior U.S. officials using smishing and AI-generated vishing to target current and former government officials and their contacts",
+        "FBI IC3 PSA I-121925-PSA (December 19, 2025) updated the alert, noting activity dating back to 2023 involving impersonation of senior state government, White House, Cabinet-level officials, and members of Congress",
+        "The U.S. State Department Office of Inspector General issued a fraud alert describing actors texting Department personnel while posing as the Inspector General or other senior officials and pushing them to continue the conversation on Signal, Telegram, or WhatsApp"
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), https://www.ic3.gov/PSA/2025/PSA251219",
+      "spreadPlatforms": [
+        "Text Messages",
+        "Signal",
+        "Telegram",
+        "WhatsApp",
+        "Phone Calls"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }

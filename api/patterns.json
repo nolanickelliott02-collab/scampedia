@@ -1,6 +1,6 @@
 {
-  "version": 17,
-  "lastUpdated": "2026-10-10T20:26:17.828Z",
+  "version": 18,
+  "lastUpdated": "2026-10-12T02:10:10.115Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -117,7 +117,8 @@
     "person of interest",
     "failing cat shelter",
     "stay for 8 seconds",
-    "make cat toys to support"
+    "make cat toys to support",
+    "senior u s official"
   ],
   "aiTells": [
     "extra fingers",
