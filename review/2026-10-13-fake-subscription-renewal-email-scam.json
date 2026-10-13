@@ -1,0 +1,58 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "93",
+    "slug": "fake-subscription-renewal-email-scam",
+    "title": "Fake Subscription Renewal Email Scam",
+    "summary": "Scammers send urgent emails impersonating well-known subscription brands like antivirus software or satellite radio, claiming your membership is expiring or auto-renewing, to steal payment details or lure you into a phone-based scam.",
+    "category": "Shopping Scam",
+    "firstReported": "2024-01-03",
+    "relatedScams": [
+      "Phishing Email Scam",
+      "Fake Bank Fraud Alert Scam",
+      "Tech Support Pop-Up Scam"
+    ],
+    "safetyTips": [
+      "Don't click links or call phone numbers in the email; instead log into your account directly through the company's known website or app to check your actual subscription status",
+      "If you must call, use the company's verified customer service number from its official website, not one listed in the email",
+      "Keep a personal calendar of your subscriptions and auto-renewal dates so you can quickly tell when a renewal notice doesn't match reality",
+      "Never provide payment card information or online banking logins in response to an unsolicited renewal email or phone call",
+      "Report suspicious emails to the BBB Scam Tracker and the impersonated company to help warn others"
+    ],
+    "datePublished": "2026-10-13T21:40:05.443Z",
+    "howItWorks": "You receive an urgent-sounding email from what looks like a business you already have a membership or account with, stating your subscription or membership has expired or is about to auto-renew for a specific dollar amount. The email may look legitimate, including the business's logo and an invoice-style breakdown with a fake invoice number, transaction ID, and renewal date, and it often arrives suspiciously close to when a real subscription would be due. The email asks you to click a link to \"update\" payment information, sometimes dangling a discount for acting immediately, or it provides a customer service phone number to call to cancel the unwanted \"renewal.\" Victims who click the link and enter card details end up on a fake site that steals their financial information and may even charge their card, while victims who call the provided number are connected to a scammer posing as support staff who pressures them to log into online banking or move money, using fake on-screen banking confirmations to appear convincing.</howItWorks>\n<redFlags>[\"Urgent email claiming a subscription or membership is expiring or auto-renewing for a specific amount\", \"A customer service or 'cancellation' phone number embedded directly in the email rather than on the company's real website\", \"Request to click a link and enter payment card details to 'renew' or 'cancel' a subscription you don't recall signing up for\", \"Email arrives suspiciously close to a real subscription renewal date, making it seem more credible\", \"Pressure to act within 24 hours or lose a discount or avoid an unwanted charge\"]",
+    "redFlags": [
+      "Urgent email claiming a subscription or membership is expiring or auto-renewing for a specific amount",
+      "A customer service or 'cancellation' phone number embedded directly in the email rather than on the company's real website",
+      "Request to click a link and enter payment card details to 'renew' or 'cancel' a subscription you don't recall signing up for",
+      "Email arrives suspiciously close to a real subscription renewal date, making it seem more credible",
+      "Pressure to act within 24 hours or lose a discount or avoid an unwanted charge"
+    ],
+    "realExamples": [
+      "A consumer reported receiving an email claiming their Sirius XM account had expired a day after their normal renewal date, directing them to a site asking them to 'insert' credit card information.",
+      "A consumer received an email styled like an invoice with a transaction ID and renewal date, offering a number to call within 24 hours to cancel a subscription they never had; the number connected to someone who insisted the cancellation needed to proceed.",
+      "An Ohio consumer reported an email posing as Norton Antivirus support asking for personal information to renew a nonexistent subscription, with the scammer walking them through a fake pending bank deposit screen to appear credible."
+    ],
+    "source": "Better Business Bureau, https://www.bbb.org/article/news-releases/30022-bbb-scam-alert-scammers-are-impersonating-businesses-emailing-consumers-with-fake-subscription-renewal-notices",
+    "spreadPlatforms": [
+      "Email"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Phishing Email Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "other",
+    "suggestedCategory": "Tech Scam",
+    "suggestedAliases": [
+      "Fake Subscription Expiration Email Scam",
+      "Impersonation Business Email Phishing Scam"
+    ],
+    "confidence": 0.65,
+    "reasoning": "This is a subscription-themed instance of generic email phishing (fake urgent renewal notice with a link to steal payment info), which is already covered by the existing 'Phishing Email Scam' entry; the specific lure (subscription/membership renewal) is a variant rather than a structurally new scam mechanism. The source is a BBB consumer alert, not a government regulator or major news outlet, so credibility is classified as 'other'."
+  },
+  "queuedAt": "2026-10-13T21:40:11.570Z"
+}
