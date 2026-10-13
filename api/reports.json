@@ -1,6 +1,6 @@
 {
-  "version": 59,
-  "lastUpdated": "2026-10-12T23:24:08.744Z",
+  "version": 60,
+  "lastUpdated": "2026-10-13T21:38:57.780Z",
   "reports": [
     {
       "id": "1",
@@ -3423,6 +3423,47 @@
         "Mail",
         "Email",
         "Voicemail"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "92",
+      "slug": "ghost-student-financial-aid-fraud-scam",
+      "title": "\"Ghost Student\" Financial Aid Fraud Scam",
+      "summary": "Organized fraud rings use stolen identities and AI-powered bots to enroll fake \"ghost students\" in online college courses, then collect and vanish with the federal and state financial aid money.",
+      "category": "Government Scam",
+      "firstReported": "2025-05-23",
+      "relatedScams": [
+        "Student Loan Forgiveness Scam",
+        "Government Grant Scam",
+        "Unemployment Benefits Identity Theft Scam"
+      ],
+      "safetyTips": [
+        "Create and regularly monitor your StudentAid.gov account, even if you have no plans to attend college, to check for unauthorized applications",
+        "Freeze your credit with the major bureaus to make it harder for fraudsters to use your Social Security number to open financial aid or loan accounts",
+        "Report suspected identity theft immediately to the Federal Trade Commission and the Department of Education's Office of Inspector General",
+        "If you receive unexpected enrollment, transcript, or financial aid disbursement notices, contact the school's financial aid office directly using a verified phone number rather than any link in the notice"
+      ],
+      "datePublished": "2026-10-13T21:38:41.079Z",
+      "howItWorks": "Fraud rings start by harvesting stolen personal data such as names, Social Security numbers, and birthdates, often obtained through phishing attacks, healthcare breaches, or criminal marketplaces, and use it to build synthetic identities that can bypass basic verification steps in FAFSA applications and school enrollment portals. Once accepted, these identities are assigned real student accounts and financial aid packages, and automation/bots take over to submit FAFSA applications at scale, register for asynchronous or remote courses, generate human-sounding email replies, and create login activity that mimics real student behavior, since these schemes typically target online classes that require minimal in-person verification. The fake \"student\" enrolls in courses and files for federal or state financial aid; once the money is disbursed, the scammers vanish, leaving behind chaos for real students and the identity theft victims whose names were used. Victims often only discover the fraud when they try to apply for their own aid and find an account already exists in their name, or when they're contacted by loan servicers about debt they never took on.",
+      "redFlags": [
+        "A FAFSA or StudentAid.gov account already exists under your name when you've never applied",
+        "Enrollment confirmations, transcript requests, or financial aid disbursement notices for a college you never attended",
+        "Courses with large numbers of enrolled students who never log in, submit coursework, or respond to outreach after the add/drop period",
+        "Unexplained student loan debt or aid disbursement discovered only when applying for your own benefits or via a loan servicer contact"
+      ],
+      "realExamples": [
+        "California's community college system reported that nearly a third of all student applications in 2024 were flagged as fraudulent, with ghost students siphoning off $5.6 million in federal student aid and $900,000 in state aid system-wide in just the first quarter of 2025",
+        "A Houston college graduate discovered a new FAFSA application had been filed in her name years after she had already graduated, after logging into her StudentAid.gov account",
+        "The U.S. Treasury's Financial Crimes Enforcement Network (FinCEN) issued an alert in consultation with other agencies about the growing ghost student fraud scheme",
+        "The U.S. Department of Education said it has prevented more than $1 billion in student aid fraud since January 2025, though the problem continues to accelerate"
+      ],
+      "source": "Inside Higher Ed, https://www.insidehighered.com/news/institutions/community-colleges/2025/05/23/calif-community-colleges-ramp-battle-against-bots",
+      "spreadPlatforms": [
+        "Online College Enrollment Portals",
+        "FAFSA/StudentAid.gov",
+        "Phishing Email",
+        "Dark Web Identity Marketplaces"
       ],
       "isAIDiscovered": true
     }

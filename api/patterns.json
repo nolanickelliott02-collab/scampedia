@@ -1,6 +1,6 @@
 {
-  "version": 19,
-  "lastUpdated": "2026-10-12T23:22:09.605Z",
+  "version": 20,
+  "lastUpdated": "2026-10-13T21:38:57.780Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -120,7 +120,9 @@
     "make cat toys to support",
     "senior u s official",
     "phone number is under investigation",
-    "criminal activity"
+    "criminal activity",
+    "ghost student",
+    "financial aid disbursement"
   ],
   "aiTells": [
     "extra fingers",
