@@ -1,6 +1,6 @@
 {
-  "version": 60,
-  "lastUpdated": "2026-10-13T21:38:57.780Z",
+  "version": 61,
+  "lastUpdated": "2026-10-14T01:36:23.901Z",
   "reports": [
     {
       "id": "1",
@@ -3466,6 +3466,43 @@
         "Dark Web Identity Marketplaces"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "93",
+      "slug": "foreclosure-relief-mortgage-rescue-scam",
+      "title": "Foreclosure Relief / Mortgage Rescue Scam",
+      "summary": "Scammers target homeowners facing foreclosure with false promises of loan modification or \"rescue\" services, often posing as government-affiliated help while charging illegal upfront fees or stealing the title to the home.",
+      "category": "Government Scam",
+      "firstReported": "2025-06-04",
+      "relatedScams": [],
+      "safetyTips": [
+        "Know that real government officials never ask for payment to help you with your mortgage",
+        "Remember companies offering mortgage assistance or foreclosure help cannot legally collect fees up front, only after a deal is reached",
+        "Contact your actual mortgage servicer or lender directly first before working with any third party",
+        "Never sign over the title or deed to your home to anyone other than your actual lender as part of a legitimate workout",
+        "Report suspected scams immediately since a foreclosure scam can cost you your home"
+      ],
+      "datePublished": "2026-10-14T01:35:59.565Z",
+      "howItWorks": "Companies and individuals target homeowners whose financial troubles put them at risk of losing their homes, frequently using mail or email designed to look like it's from a government agency. The CFPB warns that these outfits charge up-front fees (which is illegal for mortgage assistance), tell homeowners to stop making their mortgage payments, direct payments to someone other than the actual lender or servicer, pressure victims to sign over the title to their property in a so-called \"rent to buy\" scheme, push people to sign contracts they don't understand, claim to be conducting a \"forensic audit\" of the loan, and pressure victims to act immediately. Because the homeowner is already desperate and afraid of losing their home, they are especially vulnerable to pressure tactics and unfamiliar paperwork.",
+      "redFlags": [
+        "Tells you to stop making mortgage payments",
+        "Demands an up-front fee before any help is provided",
+        "Asks you to send payments to someone other than your actual lender or servicer",
+        "Pressures you to sign over the title/deed to your home (a \"rent to buy\" scheme)",
+        "Claims to be doing a \"forensic audit\" of your loan",
+        "Pressures you to sign papers or contracts you don't understand or to act immediately"
+      ],
+      "realExamples": [
+        "A mortgage assistance or foreclosure relief scheme may charge up-front fees, tell a homeowner to stop making mortgage payments, direct payments to someone other than the lender or servicer, and pressure the homeowner to sign over the title to their property in a so-called \"rent to buy\" scheme."
+      ],
+      "source": "Consumer Financial Protection Bureau, https://www.consumerfinance.gov/consumer-tools/mortgages/how-to-spot-and-avoid-foreclosure-relief-scams/",
+      "spreadPlatforms": [
+        "Mail",
+        "Email",
+        "Phone"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
