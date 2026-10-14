@@ -1,6 +1,6 @@
 {
-  "version": 21,
-  "lastUpdated": "2026-10-14T01:36:23.901Z",
+  "version": 22,
+  "lastUpdated": "2026-10-14T20:25:21.831Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -125,7 +125,9 @@
     "financial aid disbursement",
     "forensic audit of your loan",
     "rent to buy",
-    "foreclosure relief"
+    "foreclosure relief",
+    "subscription needs to be renewed",
+    "avoid late fees"
   ],
   "aiTells": [
     "extra fingers",
