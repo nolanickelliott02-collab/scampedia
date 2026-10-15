@@ -1,6 +1,6 @@
 {
-  "version": 64,
-  "lastUpdated": "2026-10-15T01:14:04.292Z",
+  "version": 65,
+  "lastUpdated": "2026-10-15T20:09:37.045Z",
   "reports": [
     {
       "id": "1",
@@ -3622,6 +3622,49 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "97",
+      "slug": "fake-business-annual-report-filing-notice-scam",
+      "title": "Fake Business \"Annual Report\" Filing Notice Scam",
+      "summary": "Small business owners receive official-looking mailed notices demanding payment for \"annual report\" or \"annual statement\" filings from fake companies impersonating state agencies, often charging far more than the real government fee.",
+      "category": "Government Scam",
+      "firstReported": "2019-01-04",
+      "relatedScams": [
+        "Fake USPTO \"Trademark Verification Appointment\" Scam",
+        "Government Grant Scam",
+        "Fake Class Action Settlement Notice Scam"
+      ],
+      "safetyTips": [
+        "File annual reports and renewals only directly through your state's official Secretary of State or business-filing website, never through a link or QR code in unsolicited mail",
+        "Verify any company requesting a filing fee by checking your state's registered business entity database",
+        "Confirm the real, current fee for your state's annual report before paying anything",
+        "Report suspicious filing notices to your state Attorney General or Secretary of State's office",
+        "Sign up for official email or text alerts from your state's business filing portal so you can distinguish real notices from scams"
+      ],
+      "datePublished": "2026-10-15T20:09:23.180Z",
+      "howItWorks": "Scammers operating under generic-sounding names like \"Business Filing LLC,\" \"New Business Filing LLC,\" or \"National Filing Corp\" mail business owners and registered agents letters designed to look like official state notices (titled things like \"Annual Statement Past Due\" or \"[State] Annual Report\"). The letters claim a business filing fee is due, often using state seals, bureaucratic language, and urgent deadlines to appear legitimate, and direct the recipient to pay a steep fee — sometimes $125 to $175 or more — by mail or by scanning a QR code, even though the real state filing is free or costs only a small fraction of that amount when done directly through the Secretary of State's website. Some variants, such as the Michigan version, arrive in plain white envelopes with no return address. State agencies across the country, including Michigan, Pennsylvania, North Carolina, Connecticut, Washington, South Carolina and Virginia, have issued repeated warnings as the scam resurfaces every few years under new company names.",
+      "redFlags": [
+        "Notice arrives by mail in a plain envelope with no return address and demands payment via QR code",
+        "Company name sounds like a government office (e.g., 'Business Filing LLC') but is not actually a state agency",
+        "Fee requested is far higher than the state's actual annual report/filing fee",
+        "Letter creates urgency by threatening 'bad standing,' penalties, or loss of business status if not paid quickly",
+        "Official-sounding seals or letterhead that don't match the real agency's actual letterhead or domain"
+      ],
+      "realExamples": [
+        "Michigan businesses received fake 'Annual Statement Past Due' mailings in plain white envelopes with QR codes for payment, impersonating the state's LARA agency, as warned about in a Spring 2025 legal alert",
+        "North Carolina's Secretary of State warned in 2026 about misleading letters from 'Business Filing LLC' seeking $154 fees to file company annual reports",
+        "Pennsylvania's Department of State flagged mailings titled 'Pennsylvania Annual Report' from a company called 'New Business Filing LLC' that is not registered with the state, and a related site charging $136-plus for LLC filings",
+        "Connecticut officials have repeatedly warned about a recurring 'government imposter' business filing scam, first flagged in 2019 and renewed again in 2023 and 2024 under different fake entity names",
+        "Washington State's Attorney General and Secretary of State warned in December 2024 about letters targeting business registration, verification, and annual filings, some including QR codes linking to lookalike '.org' sites"
+      ],
+      "source": "Pennsylvania Department of State, https://www.pa.gov/agencies/dos/alerts-and-notices/business-and-charities-scams",
+      "spreadPlatforms": [
+        "Postal Mail",
+        "QR Codes",
+        "Email"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
