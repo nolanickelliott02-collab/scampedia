@@ -1,6 +1,6 @@
 {
-  "version": 63,
-  "lastUpdated": "2026-10-14T20:25:21.834Z",
+  "version": 64,
+  "lastUpdated": "2026-10-15T01:14:04.292Z",
   "reports": [
     {
       "id": "1",
@@ -3578,6 +3578,50 @@
         "Text Messages"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "96",
+      "slug": "money-mule-recruitment-scam",
+      "title": "Money Mule Recruitment Scam",
+      "summary": "Criminals recruit ordinary people — through fake remote jobs, online romances, or impersonation schemes — to receive and forward stolen money through their personal bank accounts, making the recruit a \"money mule\" who can face prosecution and financial liability.",
+      "category": "Employment Scam",
+      "firstReported": "2025-03-01",
+      "relatedScams": [
+        "Fake Job Offer Scam",
+        "Gold Bar & Bulk Cash Courier Scam",
+        "Romance / Military Scam"
+      ],
+      "safetyTips": [
+        "Never use your personal bank account to receive or transfer money for someone you have not met in person",
+        "Be extremely skeptical of remote job offers involving \"payment processing\" or \"funds transfer\" duties, especially if they require opening a new bank account",
+        "Don't send money to, or move money for, an online love interest or unverified acquaintance, even if they send you money first",
+        "If you think you've been used as a money mule, stop all communication and transactions immediately and notify your bank and law enforcement",
+        "Report suspected money mule activity to the FBI's Internet Crime Complaint Center (IC3.gov), the FTC (reportfraud.ftc.gov), and the FDIC OIG Hotline"
+      ],
+      "datePublished": "2026-10-15T01:13:32.355Z",
+      "howItWorks": "Fraudsters recruit \"money mules\" either knowingly or through deception to move the proceeds of fraud through the U.S. financial system. According to the FDIC OIG, criminals convince scam victims — often elderly, college students, or financially vulnerable people — to send money under false pretenses into mule accounts rather than directly to the criminals, which obscures the criminals' identities, and in some schemes criminals even dispatch couriers to physically retrieve cash, gold, or other valuables from victims while posing as law enforcement or bank officials. Separately, mules themselves are recruited intentionally or through deception, commonly by targeting job seekers with offers of convenient remote work such as a \"rebates or payments processor,\" as well as targeting students, people on dating websites, the elderly, and individuals facing financial hardship. Once a mule receives funds or collects physical assets, they are instructed to withdraw cash, buy cryptocurrency, purchase gift cards, transfer funds through additional accounts, or send money overseas — layering transactions designed to conceal the illicit origin of the funds.",
+      "redFlags": [
+        "Being asked to use a personal bank account to receive or move money for someone you have never met in person",
+        "Job postings involving \"payment processing\" or \"funds transfer\" work that require using or opening your own bank account",
+        "Unsolicited messages from strangers -- romantic partners, investment advisers, or purported government officials -- directing you to handle funds",
+        "Pressure to act quickly, secrecy about the reason for a transaction, or inconsistent explanations",
+        "Requests to convert funds to cryptocurrency, gift cards, wire transfers, or cash withdrawals",
+        "Being told to hand over cash, gold, or other valuables to a courier sent to your home, especially when the caller claims to be a government or bank employee"
+      ],
+      "realExamples": [
+        "FDIC OIG describes schemes where criminals dispatch couriers to physically retrieve cash, gold, or other valuables from victims, sometimes posing as law enforcement or bank officials, while directing the collected funds or assets through money mule accounts",
+        "FDIC OIG describes criminals recruiting money mules by offering convenient remote work opportunities, such as a \"rebates or payments processor,\" often targeting students, job seekers, people on dating websites, the elderly, and individuals experiencing financial hardship"
+      ],
+      "source": "FDIC Office of Inspector General, \"Public Service Alert: Money Mules\", https://www.fdicoig.gov/alerts/public-service-alert-money-mules",
+      "spreadPlatforms": [
+        "Email",
+        "Online Job Boards",
+        "Dating Websites/Apps",
+        "Social Media",
+        "Phone Calls"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }

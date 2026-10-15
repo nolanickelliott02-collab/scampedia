@@ -1,6 +1,6 @@
 {
-  "version": 22,
-  "lastUpdated": "2026-10-14T20:25:21.831Z",
+  "version": 23,
+  "lastUpdated": "2026-10-15T01:14:04.292Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -127,7 +127,8 @@
     "rent to buy",
     "foreclosure relief",
     "subscription needs to be renewed",
-    "avoid late fees"
+    "avoid late fees",
+    "payments processor"
   ],
   "aiTells": [
     "extra fingers",
