@@ -1,6 +1,6 @@
 {
-  "version": 65,
-  "lastUpdated": "2026-10-15T20:09:37.045Z",
+  "version": 66,
+  "lastUpdated": "2026-10-16T19:48:25.116Z",
   "reports": [
     {
       "id": "1",
@@ -3662,6 +3662,44 @@
       "spreadPlatforms": [
         "Postal Mail",
         "QR Codes",
+        "Email"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "98",
+      "slug": "booking-com-whatsapp-hotel-payment-scam",
+      "title": "Booking.com WhatsApp Hotel Payment Scam",
+      "summary": "Scammers use real reservation details leaked in a Booking.com data breach to send convincing WhatsApp messages claiming a guest's hotel payment failed, directing them to a fake payment page that steals their card details.",
+      "category": "Shopping Scam",
+      "firstReported": "2026-04-01",
+      "relatedScams": [
+        "Fake Rental Listing Scam",
+        "Phishing Email Scam",
+        "Smishing Text Message Scam"
+      ],
+      "safetyTips": [
+        "Never enter card details through a WhatsApp link for an existing stay",
+        "Verify any WhatsApp sender's number against the hotel's official contact details",
+        "Check that a payment link's web address matches the legitimate hotel or platform exactly before entering any information",
+        "Report suspicious messages to the Policía Nacional or Guardia Civil, or flag them through INCIBE's helpline"
+      ],
+      "datePublished": "2026-10-16T19:47:57.147Z",
+      "howItWorks": "After a Booking.com data breach, criminals send travelers a WhatsApp message that references their actual hotel name, exact stay dates, and real confirmation number, then claims there's a problem with the payment and includes a link to a fake site made to look like the hotel's or Booking.com's own payment page. Because the message gets so many real details correct, victims have little reason to doubt it and enter their card information to \"fix\" the supposed payment problem, handing it directly to the fraudsters. Investigators also traced some of the stolen details to hotel staff accounts compromised separately through phishing or malware, meaning the scam isn't limited to travelers who stayed during the breach window.",
+      "redFlags": [
+        "Unsolicited WhatsApp message claiming your hotel card payment failed or needs to be redone",
+        "Message includes a link to re-enter payment details on a page designed to look like the hotel's or Booking.com's own payment page",
+        "The sender knows accurate booking details (hotel name, dates, confirmation number) but contacts you through WhatsApp rather than the official app",
+        "Request for payment or card verification outside Booking.com's official app or website"
+      ],
+      "realExamples": [
+        "An April 2026 Booking.com data breach exposed personal details of more than 4,000 travelers, including about 300 cases with payment card information, which scammers then used to craft convincing WhatsApp messages referencing travelers' real hotel name, stay dates, and confirmation number",
+        "Spain's INCIBE and Guardia Civil renewed a public warning on August 13, 2026 about the scam still actively targeting travelers that summer, with Spain's consumer group OCU logging complaints from travelers who lost hundreds of euros after trusting messages containing accurate stay details"
+      ],
+      "source": "Home Exchange, https://www.homeexchange.com/blog/news-4000-travelers-exposed-the-whatsapp-hotel-scam-still-active-this-summer/",
+      "spreadPlatforms": [
+        "WhatsApp",
+        "SMS",
         "Email"
       ],
       "isAIDiscovered": true
