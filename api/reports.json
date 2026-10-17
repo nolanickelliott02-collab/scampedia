@@ -1,6 +1,6 @@
 {
-  "version": 66,
-  "lastUpdated": "2026-10-16T19:48:25.116Z",
+  "version": 67,
+  "lastUpdated": "2026-10-17T01:04:22.872Z",
   "reports": [
     {
       "id": "1",
@@ -3703,6 +3703,45 @@
         "Email"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "99",
+      "slug": "va-disability-claims-pension-poaching-fee-scam",
+      "title": "VA Disability Claims \"Pension Poaching\" Fee Scam",
+      "summary": "Scammers posing as benefits \"advisors,\" attorneys, or financial planners charge illegal fees or pressure veterans to sign over part of their VA disability or pension benefits in exchange for help filing a claim that is actually free through the VA.",
+      "category": "Government Scam",
+      "firstReported": "2022-11-21",
+      "relatedScams": [
+        "\"Veterans Savings Program\" Postcard Scam",
+        "Government Grant Scam",
+        "Advance Fee Loan Scam"
+      ],
+      "safetyTips": [
+        "Remember that applying for VA benefits is always free; VA does not charge claimants to complete the application process",
+        "Make sure all your benefits go directly to you (the veteran or beneficiary) and no one else, rather than to a caregiver's account",
+        "If you need assistance, contact VA directly through its national call center (1-800-827-1000) for help and advice completing a benefits application",
+        "Report suspicious activity to the VA Office of Inspector General (OIG) at va.gov/oig/hotline",
+        "If you believe you've been the victim of a dishonest financial planner or other dishonest actor, file a complaint with the Federal Trade Commission at www.consumercomplaints.ftc.gov"
+      ],
+      "datePublished": "2026-10-17T01:03:55.751Z",
+      "howItWorks": "A veteran is approached by someone posing as a caregiver, attorney, or financial planner who offers to help them qualify for or apply for VA benefits. Some scammers ask the veteran to pay an illegal fee for filing and submitting a VA benefits application, while others ask that future VA benefit payments be deposited directly into the scammer's or a caregiver's bank account instead of the veteran's own account. In reality, applying for VA benefits is always free, and VA does not charge claimants to complete the process; veterans can get help for free directly through VA's national call center. Falling for these scams can also lead to long-term consequences, since VA reviews the terms and conditions of assets transferred within three years before a pension claim is filed, which can disqualify a veteran from benefits they were once eligible to receive.",
+      "redFlags": [
+        "Being asked to pay a fee just to apply for or help complete a VA benefits application",
+        "Requests to have your VA benefit payments deposited into a caregiver's or someone else's bank account instead of your own",
+        "Individuals posing as caregivers, attorneys, or financial planners offering to help you \"qualify\" for or apply for VA benefits for a fee",
+        "Encouragement to place your assets into investments that provide the \"advisor\" with lucrative fees"
+      ],
+      "realExamples": [
+        "VA News reporting that pension poaching perpetrators pose as caregivers, attorneys, or financial planners to get veterans to transfer benefit payments to them or pay an illegal application fee"
+      ],
+      "source": "VA News, https://news.va.gov/111196/prevent-pension-poaching-fraud-protect-benefits/",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Email",
+        "Social Media"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
