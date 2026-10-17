@@ -1,0 +1,62 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "100",
+    "slug": "ssa-impostor-scam-using-real-employee-names-amp-fake-badges",
+    "title": "SSA Impostor Scam Using Real Employee Names &amp; Fake Badges",
+    "summary": "Scammers are impersonating Social Security Administration and SSA OIG staff by using the actual names of real employees, fabricated badge images, and cloned social media profiles to appear legitimate before demanding payment.",
+    "category": "Government Scam",
+    "firstReported": "2026-04-28",
+    "relatedScams": [
+      "Social Security Number Suspended Scam",
+      "Senior U.S. Official Impersonation Messaging Scam",
+      "Gold Bar & Bulk Cash Courier Scam"
+    ],
+    "safetyTips": [
+      "Ignore unexpected outreach claiming to be from SSA or SSA OIG, even if it includes a badge photo or a familiar-sounding name",
+      "Create your own my Social Security account at ssa.gov to monitor and protect your benefits from identity thieves",
+      "Never trust caller ID alone, since scammers can spoof government phone numbers",
+      "Remember that no legitimate government employee will ever send badge photos, demand immediate payment, or threaten arrest over the phone",
+      "If you believe you're a victim, stop all communication with the scammer, notify your financial institutions, and file a police report"
+    ],
+    "datePublished": "2026-10-17T01:05:55.097Z",
+    "howItWorks": "According to SSA's Office of the Inspector General, criminals are pulling information from the social media profiles of real SSA and SSA OIG employees to impersonate them and \"initiate contact and build trust with potential victims.\" They pair this stolen identity with a fake or doctored badge/credential image to seem official. Scammers reach out by phone, text, email, social media, or mail claiming there's a problem with your Social Security number, benefits, account, or identity, then apply pressure to act immediately and demand payment through gift cards, precious metals like gold bars, cryptocurrency, wire transfers, or cash — methods that are hard to trace and recover.",
+    "redFlags": [
+      "Contact claiming to be SSA or SSA OIG that sends a photo of a badge or credential",
+      "Urgent pressure to act immediately about a Social Security number or benefits problem",
+      "Demands for payment via gift cards, gold bars, cryptocurrency, wire transfer, or cash",
+      "Caller ID shows a government number (which can be spoofed)",
+      "The person uses a real-sounding SSA employee name or references a real employee's social media presence"
+    ],
+    "realExamples": [
+      "SSA OIG reported a surge in government imposter scams involving the misuse of real SSA and OIG employee names, fabricated badge images, and fraudulent social media profiles",
+      "Scammers used information from social media profiles to impersonate a real SSA OIG employee to initiate contact and build trust with potential victims",
+      "Victims were pressured to pay via gift cards, precious metals (gold bars), cryptocurrency, wire transfers, or cash after being told there was a problem with their Social Security number or benefits"
+    ],
+    "source": "Social Security Administration Office of the Inspector General, https://oig.ssa.gov/scam-alerts/2026-04-28-new-wave-of-imposter-scams-criminals-using-real-ssa-employee-names-and-fake-badges/",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Text Messages",
+      "Email",
+      "Social Media",
+      "Mail"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Social Security Number Suspended Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "SSA/OIG Fake Badge Imposter Scam"
+    ],
+    "confidence": 0.6,
+    "reasoning": "This is an SSA/SSA OIG impersonation scam demanding payment via gift cards, crypto, gold bars, etc. due to a supposed SSN/account problem — the same core premise as the existing 'Social Security Number Suspended Scam' entry, with the added twist of using real employee names and fabricated badge images. It overlaps significantly with both that entry and the existing 'Gold Bar & Bulk Cash Courier Scam' payment method, making it more of a variant than a wholly new pattern."
+  },
+  "queuedAt": "2026-10-17T01:05:59.895Z"
+}
