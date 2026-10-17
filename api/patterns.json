@@ -1,6 +1,6 @@
 {
-  "version": 25,
-  "lastUpdated": "2026-10-17T01:04:22.871Z",
+  "version": 28,
+  "lastUpdated": "2026-10-17T19:00:34.078Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -132,7 +132,12 @@
     "annual statement past due",
     "annual report filing",
     "bad standing",
-    "pension poaching"
+    "pension poaching",
+    "primary suspect",
+    "you are not registered to vote",
+    "recruit others to invest",
+    "is this still available for purchase",
+    "conversation lure"
   ],
   "aiTells": [
     "extra fingers",

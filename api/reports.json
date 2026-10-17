@@ -1,6 +1,6 @@
 {
-  "version": 67,
-  "lastUpdated": "2026-10-17T01:04:22.872Z",
+  "version": 70,
+  "lastUpdated": "2026-10-17T19:00:34.078Z",
   "reports": [
     {
       "id": "1",
@@ -3742,6 +3742,128 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "100",
+      "slug": "fake-u-s-supreme-court-letter-scam",
+      "title": "Fake U.S. Supreme Court Letter Scam",
+      "summary": "Scammers are mailing personally-addressed \"certificates\" on forged U.S. Supreme Court letterhead, complete with fake signatures of real justices, to pressure Social Security recipients into sending money or personal information.",
+      "category": "Government Scam",
+      "firstReported": "2025-10-08",
+      "relatedScams": [
+        "Social Security Number Suspended Scam",
+        "Senior U.S. Official Impersonation Messaging Scam",
+        "Phantom Debt Collector Scam"
+      ],
+      "safetyTips": [
+        "Know that the Supreme Court does not contact individuals about criminal investigations, bank freezes, or Social Security numbers by letter, text, or email",
+        "Never send money, gift cards, or personal/financial details based on an unsolicited \"legal\" letter",
+        "Report the letter to the SSA Office of the Inspector General and keep it as evidence instead of discarding it",
+        "Talk to someone you trust before paying or responding to any letter that demands urgent action involving your money or identity"
+      ],
+      "datePublished": "2026-10-17T18:57:18.341Z",
+      "howItWorks": "The scam arrives as a physical letter styled as an official \"certificate\" on counterfeit U.S. Supreme Court letterhead bearing forged signatures of real sitting justices. It is personally addressed to the recipient and falsely claims they are a \"primary suspect\" in criminal legal proceedings tied to identity theft and that their Social Security number has been compromised, sometimes invoking a real-sounding but misnamed federal agency and a named state attorney general for added legitimacy. The letter may use the real name of an actual SSA executive to appear authentic and claims the Supreme Court has ordered banks to freeze the recipient's assets, telling them they cannot hold more than $10,000 in any bank account or $80,000–$100,000 in investments. It pressures the victim to urgently cooperate with a named \"SSA official,\" ultimately to send money or hand over sensitive personal/financial information, falsely claiming SSA will issue them a new Social Security number. Scammers most likely follow up with text messages or telephone calls.",
+      "redFlags": [
+        "Unsolicited letter claiming to be from the U.S. Supreme Court",
+        "Letter is labeled a \"certificate\" and uses forged justice signatures",
+        "Claims you are a criminal suspect and must act urgently to avoid losing your assets",
+        "Demands you keep account balances under specific dollar thresholds or cooperate with a named official",
+        "References a misnamed federal agency (e.g., the \"Drug Enforcement Agency\" instead of the correct name)",
+        "Pressure to send money or share personal/financial information quickly"
+      ],
+      "realExamples": [
+        "The SSA Office of the Inspector General issued an October 8, 2025 alert describing letters on fake Supreme Court letterhead with forged signatures of Chief Justice John Roberts and Associate Justice Sonia Sotomayor, claiming recipients were primary suspects in legal proceedings overseen by a named state attorney general.",
+        "Reported versions of the letter claimed recipients could not hold more than $10,000 in any bank account or $80,000–$100,000 in investments, and asserted the Supreme Court had ordered financial institutions to freeze the recipient's assets, referencing an incorrectly named 'Drug Enforcement Agency' and the Department of the Treasury."
+      ],
+      "source": "Social Security Administration Office of the Inspector General, https://oig.ssa.gov/scam-alerts/2025-10-08-unexpected-letter-text-or-email-from-the-u-s-supreme-court-think-scam-first/",
+      "spreadPlatforms": [
+        "Postal Mail",
+        "Text Messages",
+        "Email"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "101",
+      "slug": "midterm-election-campaign-voter-registration-scam",
+      "title": "Midterm Election Campaign & Voter Registration Scam",
+      "summary": "Ahead of the 2026 U.S. midterms, the FBI warns scammers are impersonating candidates and campaigns using AI-cloned voices, fake political action committees, and phony voter-registration pages to steal donations, money, and personal data.",
+      "category": "Government Scam",
+      "firstReported": "2026-10-15",
+      "relatedScams": [
+        "Government Grant Scam",
+        "AI Voice Clone Scam",
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Verify any Political Action Committee, Party Committee, or Candidate Committee's registration and financial filings directly on the Federal Election Commission (FEC) website before donating",
+        "Remember that campaign donations are not investments \\u2014 they will not increase in value or be returned",
+        "Never click links in unsolicited texts or emails about voter registration; go directly to your state's official election website to check or update your registration",
+        "Do not provide personally identifiable information to callers, texters, or emailers you don't know, even if they reference a candidate or election deadline",
+        "Be skeptical of merchandise offers tied to campaigns that require upfront payment with vague delivery promises"
+      ],
+      "datePublished": "2026-10-17T18:58:52.238Z",
+      "howItWorks": "The FBI's Internet Crime Complaint Center (IC3) issued a PSA warning that scammers are impersonating political campaigns, using AI-generated voices, images, and messages to create convincing fake solicitations for donations, undelivered merchandise, or voter registration schemes designed to harvest personally identifiable information",
+      "redFlags": [
+        "A text or email claims you are not registered to vote and links to an unfamiliar \"voter registration\" page asking for personal details",
+        "A \"campaign\" or PAC guarantees your donation will grow in value or be paid back as a financial return",
+        "Someone encourages you to recruit others to \"invest\" in a political fund to increase your payout share",
+        "Unsolicited calls or messages using a candidate's cloned voice, image, or slogan to pressure urgent donations",
+        "Pressure to act quickly, before you can verify the campaign or PAC through official channels"
+      ],
+      "realExamples": [
+        "The FBI's October 15, 2026 PSA (an update to a 2024 election-cycle alert) described schemes where victims are promised financial returns on \"investments\" in campaign pools, only to lose funds or have their data compromised",
+        "A described voter-data scheme uses a text or email claiming the recipient isn't registered to vote and links to a fake state voter registration page to steal PII for identity theft",
+        "The FBI noted scammers use candidate names, images, logos and slogans to solicit fake campaign contributions and sell merchandise that is never delivered"
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3) PSA, https://www.ic3.gov/PSA/2026/PSA261015-3 ; Help Net Security, https://www.helpnetsecurity.com/2026/10/16/usa-2026-midterm-election-scams/",
+      "spreadPlatforms": [
+        "Text Messages",
+        "Email",
+        "Phone Calls",
+        "Social Media"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "102",
+      "slug": "fake-is-this-still-available-marketplace-name-lure-scam",
+      "title": "Fake \"Is This Still Available\" Marketplace Name-Lure Scam",
+      "summary": "Scammers text victims a fabricated Facebook Marketplace listing that uses the victim's own name as the \"seller,\" hoping the urge to correct the mistake will trigger a reply that confirms the phone number is active.",
+      "category": "Phone Scam",
+      "firstReported": "2026-10-06",
+      "relatedScams": [
+        "Smishing Text Message Scam",
+        "Online Marketplace Buyer Scam",
+        "Package Delivery Text Scam"
+      ],
+      "safetyTips": [
+        "Don't reply to unexpected texts about items you never listed, even to say 'wrong number' or 'that's not me' — any reply confirms your number is active",
+        "Open Facebook independently to inspect Marketplace activity, recent logins, messages, email addresses, phone numbers, and recovery settings rather than tapping links or images sent in a text",
+        "If you find a profile genuinely impersonating you, preserve the URL and report it to Facebook through its impersonation-reporting tools",
+        "Limit what you share publicly on social media, since scammers can use that information to increase the credibility of their attempts",
+        "Don't click a link, call a number supplied in the conversation, scan a QR code, or share a one-time code or screenshot of a security message"
+      ],
+      "datePublished": "2026-10-17T19:00:05.477Z",
+      "howItWorks": "Victims receive an unsolicited text (often via iMessage) asking \"Is this still available for purchase?\" with an attached screenshot of what looks like a real Facebook Marketplace listing. When the recipient looks closely, the \"seller\" name on the listing matches their own name, even though the profile photo belongs to a different person. Malwarebytes researchers describe this as a \"conversation lure\" — a message crafted to feel personal so the recipient reacts with \"that isn't me\" and replies to correct it. Researchers believe scammers pair names with phone numbers obtained from data breaches to mass-produce these personalized fake listings, and that AI tools now make it cheap and fast to generate convincing, individualized screenshots at scale for huge lists of targets. Once a victim replies at all — even just to say \"wrong number\" or \"that's not me\" — it confirms the number is active and being monitored, making it a more valuable target that can be resold to other scammers or used in other cybercrimes such as downloading malware, beginning a relationship that leads to fraud, or taking over the victim's Facebook account.",
+      "redFlags": [
+        "Unsolicited text with a Marketplace or classifieds screenshot asking if an item is 'still available'",
+        "The listing shows your own name as the seller for an item you never posted",
+        "Profile photo attached to the listing doesn't match the name or doesn't look familiar",
+        "Message arrives from an unknown number with no prior context or relationship",
+        "Urge to reply immediately to 'correct' the mistaken impersonation"
+      ],
+      "realExamples": [
+        "Malwarebytes researcher Pieter Arntz documented a case where a recipient got an iMessage asking \"Is this still available for purchase?\" with a fabricated Marketplace listing showing their own name as the seller, paired with an unrelated person's profile photo of the same name."
+      ],
+      "source": "Malwarebytes Threat Intelligence, https://www.malwarebytes.com/blog/threat-intel/2026/10/facebook-marketplace-phish-uses-your-name-and-number",
+      "spreadPlatforms": [
+        "Text Messages",
+        "iMessage",
+        "Facebook Marketplace",
+        "Social Media"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
