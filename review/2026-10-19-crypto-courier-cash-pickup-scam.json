@@ -1,0 +1,58 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "103",
+    "slug": "crypto-courier-cash-pickup-scam",
+    "title": "Crypto Courier Cash Pickup Scam",
+    "summary": "The FBI warns that cryptocurrency investment scammers are now sending in-person couriers to collect cash directly from victims' homes, bypassing bank fraud controls that block suspicious wire transfers.",
+    "category": "Investment Scam",
+    "firstReported": "2026-06-15",
+    "relatedScams": [
+      "Pig Butchering Scam",
+      "Gold Bar & Bulk Cash Courier Scam",
+      "Crypto Investment Scam"
+    ],
+    "safetyTips": [
+      "Never send cash to a stranger who arrives at your door or a meeting location, no matter what password or serial number they provide \"to prove\" legitimacy",
+      "Treat any online relationship that leads to a cryptocurrency investment \"opportunity\" with extreme skepticism, especially if you've never met the person in real life",
+      "If a financial institution blocks or flags a transfer, that is a warning sign to stop, not an obstacle to work around with cash",
+      "Talk to a trusted family member or friend before moving money into any crypto platform you were introduced to online, and report suspected fraud to the FBI's Internet Crime Complaint Center (IC3.gov)"
+    ],
+    "datePublished": "2026-10-19T21:21:08.028Z",
+    "howItWorks": "Scammers first build trust with victims through social media, unsolicited texts, dating apps, or a public persona posing as a cryptocurrency investment expert, often developing a romantic or friendly relationship over time before steering the victim toward a fraudulent crypto trading platform. The platform shows fabricated, steadily growing returns to encourage the victim to deposit more money. When the victim tries to move money through a bank and the bank flags or blocks the suspicious transfer, or when the victim tries to withdraw their \"profits,\" the scammer claims a fee, fine, or frozen/flagged account is blocking things and says the only fix is paying in cash. The scammer then arranges for a courier to meet the victim in person, at their home or a public location, to physically collect the cash. To \"prove\" the courier is legitimate, the scammer gives the victim a U.S. dollar bill serial number or a password that the courier recites or displays upon arrival. After the pickup, the victim's fake investment dashboard shows an \"increase\" in their balance, and when they try to withdraw those perceived profits, the scammer demands more cash for supposed taxes or penalties, repeating the cycle with additional courier pickups.",
+    "redFlags": [
+      "Someone you met online or who contacted you unsolicited encourages you to invest in cryptocurrency and shows a website with rapidly growing returns",
+      "You're told a bank transfer was blocked or your account was \"flagged\" and that paying in cash via an in-person courier is the only way to continue investing or withdraw funds",
+      "A stranger shows up at your home or a public meeting spot to collect cash, authenticating themselves with a dollar bill serial number or a secret password instead of any official company credential",
+      "Requests for cash escalate with new \"fees,\" \"fines,\" or \"taxes\" every time you try to withdraw supposed profits"
+    ],
+    "realExamples": [
+      "An FBI/IC3 Public Service Announcement (PSA260615) describes scammers instructing victims, usually senior citizens, to hand cash to couriers to \"protect\" funds in fraudulent cryptocurrency investment platforms, with couriers authenticating themselves via a dollar bill serial number or password.",
+      "Washington State's Department of Financial Institutions issued a consumer alert describing the same pattern: an online-met contact builds a relationship, introduces a crypto \"investment,\" then claims a fee or frozen account requires cash paid to a courier who arrives with a secret password or dollar bill serial number.",
+      "Infosecurity Magazine reported that after a cash pickup, scammers tell victims their withdrawal attempts trigger fraudulent taxes and penalties, restarting the courier cash-pickup cycle."
+    ],
+    "source": "FBI Internet Crime Complaint Center (IC3) PSA, https://www.ic3.gov/PSA/2026/PSA260615",
+    "spreadPlatforms": [
+      "Social Media",
+      "Text Messages",
+      "Dating Apps",
+      "In-Person"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Gold Bar & Bulk Cash Courier Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Investment Scam",
+    "suggestedAliases": [
+      "Crypto Cash Courier Pickup Scam"
+    ],
+    "confidence": 0.55,
+    "reasoning": "This is a specific application of the existing in-person cash/precious-metals courier pickup tradecraft (already covered by 'Gold Bar & Bulk Cash Courier Scam') layered onto the existing 'Crypto Investment Scam' pattern; the source itself notes this courier method is 'utilized across many scams, including grandparent, law enforcement impersonation, tech support, and other scams,' indicating it's a tactic variant rather than a wholly new scam category."
+  },
+  "queuedAt": "2026-10-19T21:21:13.241Z"
+}

@@ -1,0 +1,57 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "103",
+    "slug": "fake-parking-ticket-qr-code-scam",
+    "title": "Fake Parking Ticket QR Code Scam",
+    "summary": "Scammers print convincing-looking fake parking citations with a QR code and tuck them under windshield wipers, tricking drivers into scanning the code to \"pay a fine\" and instead stealing payment information or installing malware.",
+    "category": "Government Scam",
+    "firstReported": "2022-06-01",
+    "relatedScams": [
+      "QR Code Scam",
+      "Fake Toll Road Text Scam"
+    ],
+    "safetyTips": [
+      "Never scan a QR code found on a parking ticket on your windshield; instead, go directly to the city or parking authority's official website to look up and verify the citation",
+      "Compare the ticket against your city's known citation format (paper type, violation codes, badge numbers) before paying anything",
+      "If you're unsure whether a ticket is real, call the parking enforcement agency directly using a number from its official website, not one printed on the ticket",
+      "Report suspected fake citations to local police so they can warn other residents"
+    ],
+    "datePublished": "2026-10-19T21:24:38.229Z",
+    "howItWorks": "Con artists create counterfeit parking tickets that mimic real municipal citations, complete with official-looking seals, violation language, and vehicle details, then leave them on windshields in parking lots, street-sweeping zones, or near popular destinations. Unlike genuine citations, the fake tickets include a QR code urging drivers to scan it to pay the \"fine\" quickly online. Scanning the code either redirects victims to a fraudulent payment website designed to harvest credit card and personal information or triggers the download of malware onto the phone. The scam has been reported by police departments in multiple states over several years, with Scottsdale, Arizona police first warning residents in 2022, followed by more recent waves in Alhambra, California, Houston, Texas, and Santa Cruz, California.",
+    "redFlags": [
+      "A QR code on the ticket used as the only way to pay the fine",
+      "No specific violation code, officer name/badge number, or enforcement details listed on the citation",
+      "Ticket is printed on plain paper instead of the city's official citation stock (for example, Houston's real tickets use pink NCR paper)",
+      "Urgent instructions to pay immediately only through the scanned link, with no mailed notice or in-person payment option mentioned"
+    ],
+    "realExamples": [
+      "Alhambra, California police warned in mid-2024 that fake citations falsely claiming vehicles had not been moved for street sweeping were left on windshields with QR codes leading to a non-city payment website",
+      "Houston's ParkHouston agency issued a public alert in April 2025 after fake citations appeared on cars downtown; the city noted real tickets are printed on pink NCR paper, list violation codes, and never use QR codes for payment",
+      "Santa Cruz Police Department warned in June 2025 that fake parking tickets using a QR code to direct victims to a payment website had been placed on cars parked near the beach",
+      "Scottsdale, Arizona police first flagged the scam in 2022, listing a payment QR code, no listed offense, and no payment option besides online as the key red flags"
+    ],
+    "source": "Houston Public Media, https://www.houstonpublicmedia.org/articles/news/transportation/2025/04/30/520231/officials-urge-houston-drivers-to-watch-out-for-scam-parking-tickets/",
+    "spreadPlatforms": [
+      "Physical Flyers/Printed Tickets",
+      "QR Codes",
+      "Malicious Websites"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "QR Code Scam",
+    "novelty": "known-variant",
+    "severity": "low",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Fake Parking Ticket Scam"
+    ],
+    "confidence": 0.6,
+    "reasoning": "This is a specific application of the already-listed 'QR Code Scam' pattern (malicious QR codes tricking victims into fraudulent payment sites), applied to fake parking citations; the source itself only confirms one actual case in Houston and doesn't substantiate the broader multi-state claims in the summary. It overlaps closely with the existing generic QR Code Scam entry rather than constituting a wholly new mechanism."
+  },
+  "queuedAt": "2026-10-19T21:24:44.205Z"
+}
