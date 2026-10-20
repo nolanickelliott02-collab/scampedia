@@ -1,6 +1,6 @@
 {
-  "version": 28,
-  "lastUpdated": "2026-10-17T19:00:34.078Z",
+  "version": 30,
+  "lastUpdated": "2026-10-20T20:18:05.848Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -137,7 +137,9 @@
     "you are not registered to vote",
     "recruit others to invest",
     "is this still available for purchase",
-    "conversation lure"
+    "conversation lure",
+    "remove the negative reviews",
+    "phantom hacker"
   ],
   "aiTells": [
     "extra fingers",
