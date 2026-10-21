@@ -1,0 +1,57 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "108",
+    "slug": "fake-traffic-parking-court-summons-qr-code-text-scam",
+    "title": "Fake Traffic/Parking Court Summons QR Code Text Scam",
+    "summary": "Scammers send text messages designed to look like an official court notice for an unpaid parking or toll violation, complete with a fake case number, judge, and clerk of court, pressuring recipients to scan a QR code and pay immediately or face arrest or license suspension.",
+    "category": "Government Scam",
+    "firstReported": "2025-03-01",
+    "relatedScams": [
+      "Fake Toll Road Text Scam",
+      "Fake Process Server Phishing Call Scam",
+      "QR Code Scam"
+    ],
+    "safetyTips": [
+      "Do not respond to the text, click any links, or scan any QR codes in the message; delete it and block the sender",
+      "Contact your state DMV directly using a verified phone number or website if you're unsure whether you have a real violation",
+      "Remember that real courts and traffic/toll authorities do not notify people of violations or hearings via text message with a QR code",
+      "Report the scam text to your state Attorney General's consumer protection office or the FTC",
+      "Never enter payment or personal information after scanning a QR code sent in an unsolicited text"
+    ],
+    "datePublished": "2026-10-21T20:27:38.250Z",
+    "howItWorks": "Victims receive a text message formatted like an official legal document, referencing state traffic laws, a specific case number, a court hearing date and location, and the name of a judge and clerk of court. The message claims the recipient has an outstanding parking or toll violation that has triggered an \"enforcement action\" and warns that if they don't pay immediately they could face a court appearance, fines, or driver's license suspension. Instead of a simple payment link like earlier toll scams, this version embeds a QR code that the recipient is told to scan to resolve the \"case\" or pay the fine, leading to a fraudulent payment site designed to harvest money and personal/financial information. The judge, clerk, case number, and hearing details are entirely fabricated to make the notice feel legitimate.",
+    "redFlags": [
+      "Text message claims to be an official court notice about a parking or toll violation and demands immediate payment",
+      "Message includes a case number, hearing date, and named judge or clerk of court but arrived by unsolicited text",
+      "Contains a QR code instead of a link to a verified government website for resolving the matter",
+      "Uses high-pressure threats of court appearance, fines, or license suspension to rush you into acting",
+      "Asks you to pay or verify personal/financial information in response to a text rather than through an official agency portal"
+    ],
+    "realExamples": [
+      "North Carolina Attorney General Jeff Jackson issued a consumer alert warning that a text message was circulating referencing North Carolina laws, a case number, a court hearing date and location, and a non-existent judge and clerk of court, along with a QR code to trick recipients into handing over money or personal information.",
+      "The Burke County Sheriff's Office reported receiving multiple calls from residents about the same fake parking and toll violation court notice scam continuing to target the area after the initial alert was issued.",
+      "Separate reporting described variants of the scheme using fabricated court documents naming specific judges and case numbers tied to traffic, parking, or toll violations in multiple states, each directing recipients to scan a QR code to pay."
+    ],
+    "source": "NCDOJ, https://ncdoj.gov/consumer-alert-theres-a-new-parking-violation-scam-targeting-north-carolina-drivers/",
+    "spreadPlatforms": [
+      "Text Messages"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Fake Toll Road Text Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Fake Parking Violation Text Scam"
+    ],
+    "confidence": 0.6,
+    "reasoning": "This is an evolution of the existing \"Fake Toll Road Text Scam\" (government agency source explicitly contrasts it with \"earlier toll scams\"), using the same fake fine/legal-consequence pressure but adding a fabricated court case/judge and QR code instead of a payment link; it's a notable twist but closely related to an existing entry rather than a wholly new pattern."
+  },
+  "queuedAt": "2026-10-21T20:27:48.184Z"
+}
