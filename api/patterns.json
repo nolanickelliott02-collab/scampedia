@@ -1,6 +1,6 @@
 {
-  "version": 30,
-  "lastUpdated": "2026-10-20T20:18:05.848Z",
+  "version": 31,
+  "lastUpdated": "2026-10-21T20:26:44.528Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -139,7 +139,10 @@
     "is this still available for purchase",
     "conversation lure",
     "remove the negative reviews",
-    "phantom hacker"
+    "phantom hacker",
+    "time sensitive read immediately",
+    "will not negotiate further",
+    "bianlian group"
   ],
   "aiTells": [
     "extra fingers",
