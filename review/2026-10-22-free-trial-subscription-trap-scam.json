@@ -1,0 +1,62 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "110",
+    "slug": "free-trial-subscription-trap-scam",
+    "title": "Free Trial Subscription Trap Scam",
+    "summary": "Ads lure shoppers with a \"risk-free\" trial for the cost of shipping only, then quietly enroll them in an expensive recurring subscription that's deliberately hard to cancel. Regulators say this negative-option billing tactic is still actively being used by major companies and is under a renewed wave of FTC and state enforcement.",
+    "category": "Shopping Scam",
+    "firstReported": "2009-12-01",
+    "relatedScams": [
+      "Fake Online Store Scam",
+      "Fake Invoice & Subscription Renewal Scam"
+    ],
+    "safetyTips": [
+      "Read full terms and conditions before entering any payment information for a “free” trial",
+      "Set a calendar reminder a few days before the trial period ends to cancel if you don't want to keep paying",
+      "Check bank and credit card statements regularly for unrecognized recurring charges",
+      "Search the company name online with words like “complaint” or “subscription scam” before signing up",
+      "Consider using a virtual or single-use card number for trial offers so unauthorized charges can be blocked"
+    ],
+    "datePublished": "2026-10-22T20:23:59.571Z",
+    "howItWorks": "A company advertises a product or service as a \"free\" or \"risk-free\" trial, asking only for a small shipping fee or a low introductory price, which requires entering a credit or debit card number. Buried in fine print, the offer actually enrolls the shopper in a recurring \"continuity plan\" that starts billing the full price automatically once the trial period ends unless the customer proactively cancels. Companies make that cancellation step deliberately difficult — burying it behind phone-only cancellation lines, multi-step account menus, or unclear deadlines — so many people are charged repeatedly before they notice. Regulators have found this pattern not just among fly-by-night sites but in mainstream subscription services, where sign-up is one click but cancellation requires navigating far more steps.",
+    "redFlags": [
+      "Ad emphasizes a “risk-free” trial for just the cost of shipping and handling",
+      "You must enter full credit card information just to claim something “free”",
+      "Terms and conditions about recurring billing are in small print or a separate linked page",
+      "Cancellation requires calling a phone line, multi-step account navigation, or isn't available online even though sign-up was",
+      "No clear reminder before the trial converts into a paid subscription"
+    ],
+    "realExamples": [
+      "In December 2025, Instacart agreed to pay $60 million in consumer refunds to settle allegations that it failed to adequately disclose that signing up for a free trial of Instacart+ would automatically enroll consumers in a paid annual subscription with limited refund options.",
+      "In December 2025, the FTC and 21 states plus Washington, D.C. filed an amended complaint against Uber over its subscription billing and cancellation practices.",
+      "In January 2026, the FTC sued JustAnswer and its CEO, alleging consumers who signed up for a low-fee trial were enrolled without consent into a higher-priced recurring monthly subscription.",
+      "The FTC has also alleged that LA Fitness made it difficult for members to cancel add-on gym services without affecting their base membership, and that Adobe used a hidden early-termination fee to trap people into paying for subscription plans."
+    ],
+    "source": "Arnold & Porter, \"FTC and State AGs Continue To Scrutinize Subscription Practices Amidst a Possible Click-To-Cancel Rule Revival\" (Feb. 2026), https://www.arnoldporter.com/en/perspectives/advisories/2026/02/ftc-and-state-ags-continue-to-scrutinize-subscription-practices",
+    "spreadPlatforms": [
+      "Social Media",
+      "Online Ads",
+      "Email",
+      "Websites"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "new",
+    "severity": "high",
+    "urgency": "medium",
+    "sourceCredibility": "other",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Negative Option Billing Scam",
+      "Click-to-Cancel Subscription Trap",
+      "Free Trial Auto-Renewal Scam"
+    ],
+    "confidence": 0.55,
+    "reasoning": "This describes a distinct pattern (deceptive free-trial-to-recurring-billing with obstructed cancellation) not covered by existing titles like Fake Invoice & Subscription Renewal Scam (which is phone-based renewal fraud) or Fake Online Store Scam; however, the cited source is a law firm advisory about FTC/state regulatory and enforcement activity (JustAnswer, Instacart, Uber, Amazon, Chegg, LA Fitness) rather than a report specifically framing this as a 'scam' targeting consumers, so severity/urgency are inferred cautiously and the entry blurs the line between deceptive business practice and outright scam."
+  },
+  "queuedAt": "2026-10-22T20:24:05.518Z"
+}
