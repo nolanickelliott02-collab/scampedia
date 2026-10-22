@@ -207,6 +207,7 @@ function courseShell({ title, description, canonical, ogImage, jsonLd, bodyHtml,
         <a href="../privacy.html#cookies">Cookies</a>
         <a href="../terms.html">Terms of Service</a>
         <a href="../about.html">About &amp; Editorial Policy</a>
+        <a href="../accessibility.html">Accessibility</a>
         <a href="mailto:verifyguardsupport@gmail.com">Contact</a>
       </div>
     </div>
@@ -316,7 +317,7 @@ function indexPageHtml(numberedLessons, crisisPages) {
   const crisisHtml = crisisPages.map(l => `
     <a class="course-list-item course-list-item-crisis" href="${l.slug}.html">
       <span class="course-access-pill free">Free — start here if this is urgent</span>
-      <h3>${escapeHtml(l.title)}</h3>
+      <h2>${escapeHtml(l.title)}</h2>
       <p>${escapeHtml(l.summary)}</p>
     </a>
   `).join('');
@@ -324,7 +325,7 @@ function indexPageHtml(numberedLessons, crisisPages) {
   const listHtml = numberedLessons.map(l => `
     <a class="course-list-item" href="${l.slug}.html">
       <span class="course-access-pill ${l.access}">${l.access === 'free' ? 'Free' : 'Guardian'}</span>
-      <h3>${escapeHtml(l.title)}</h3>
+      <h2>${escapeHtml(l.title)}</h2>
       <p>${escapeHtml(l.summary)}</p>
     </a>
   `).join('');

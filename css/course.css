@@ -72,7 +72,7 @@ body.course-page {
   color: var(--text-2);
   margin-bottom: 24px;
 }
-.course-breadcrumb a { color: var(--accent-bright); }
+.course-breadcrumb a { color: var(--accent-bright); text-decoration: underline; }
 .course-breadcrumb a:hover { text-decoration: underline; }
 
 .course-article-header h1 {
@@ -192,7 +192,7 @@ body.course-page {
   padding: 20px 24px;
 }
 .course-list-item:hover { border-color: var(--accent); }
-.course-list-item h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.course-list-item h2 { font-size: 1.25rem; margin-bottom: 6px; }
 .course-list-item p { color: var(--text-2); }
 .course-list-item .course-access-pill {
   display: inline-block;

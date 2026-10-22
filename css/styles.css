@@ -383,7 +383,7 @@ a.ai-pill { text-decoration: none; }
   padding: 0 14px;
   transition: border-color .2s;
 }
-.sidebar-search:focus-within { border-color: var(--accent); }
+.sidebar-search:focus-within { border-color: var(--accent); outline: 3px solid var(--accent-bright); outline-offset: 2px; }
 .sidebar-search .search-icon { font-size: 14px; margin-right: 8px; }
 .sidebar-search input {
   background: none;
@@ -886,4 +886,4 @@ a.ai-pill { text-decoration: none; }
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 .sidebar-report-consent { font-size: 12px; line-height: 1.45; color: var(--text-3); margin: 2px 0 6px; }
-.sidebar-report-consent a { color: var(--accent-bright); }
+.sidebar-report-consent a { color: var(--accent-bright); text-decoration: underline; }

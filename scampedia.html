@@ -27,7 +27,7 @@
 <body>
   <a class="skip-link" href="#wiki-main">Skip to main content</a>
 
-  <nav class="nav">
+  <nav class="nav" aria-label="Main">
     <div class="nav-inner container">
       <a href="index.html" class="nav-logo">
         <img src="assets/logo-wordmark-dark.svg" alt="Scampedia" class="nav-logo-img" width="332" height="24" />
@@ -52,14 +52,14 @@
         <input type="text" id="search" placeholder="Search Scampedia…" />
       </div>
 
-      <nav class="sidebar-section">
+      <nav class="sidebar-section" aria-label="Browse">
         <div class="sidebar-heading">Browse</div>
-        <a href="#/" class="sidebar-link" data-nav="all">📚 All Articles</a>
-        <a href="#/az" class="sidebar-link" data-nav="az">🔤 A–Z Index</a>
-        <a href="#" class="sidebar-link" id="random-link">🎲 Random Scam</a>
+        <a href="#/" class="sidebar-link" data-nav="all"><span aria-hidden="true">📚</span> All Articles</a>
+        <a href="#/az" class="sidebar-link" data-nav="az"><span aria-hidden="true">🔤</span> A–Z Index</a>
+        <a href="#" class="sidebar-link" id="random-link"><span aria-hidden="true">🎲</span> Random Scam</a>
       </nav>
 
-      <nav class="sidebar-section">
+      <nav class="sidebar-section" aria-label="Categories">
         <div class="sidebar-heading">Categories</div>
         <div id="sidebar-cats"></div>
       </nav>
@@ -80,8 +80,7 @@
             placeholder="What happened? How were you contacted, what did they say, any links or numbers involved…"></textarea>
           <label for="report-scam-email" class="visually-hidden">Your email (optional)</label>
           <input type="email" id="report-scam-email" name="email" autocomplete="email" placeholder="Your email (optional)" />
-          <p class="sidebar-report-consent">Sending this emails your report (and your email, if you add one) to the Scampedia team. Please don't include anyone else's personal details. See our <a href="privacy.html">Privacy Policy</a>
-        <a href="privacy.html#cookies">Cookies</a>.</p>
+          <p class="sidebar-report-consent">Sending this emails your report (and your email, if you add one) to the Scampedia team. Please don't include anyone else's personal details. See our <a href="privacy.html">Privacy Policy</a>.</p>
           <button type="submit" class="btn btn-primary btn-sm">Send Report</button>
           <div class="report-status-live" role="status" aria-live="polite"></div>
         </form>
@@ -107,6 +106,7 @@
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
         <a href="about.html">About &amp; Editorial Policy</a>
+        <a href="accessibility.html">Accessibility</a>
         <a href="mailto:verifyguardsupport@gmail.com">Contact</a>
       </div>
     </div>

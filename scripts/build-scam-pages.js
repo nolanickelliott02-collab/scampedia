@@ -156,6 +156,7 @@ function pageShell({ title, description, canonical, ogImage, jsonLd, bodyHtml, a
         <a href="../privacy.html#cookies">Cookies</a>
         <a href="../terms.html">Terms of Service</a>
         <a href="../about.html">About &amp; Editorial Policy</a>
+        <a href="../accessibility.html">Accessibility</a>
         <a href="mailto:verifyguardsupport@gmail.com">Contact</a>
       </div>
     </div>
@@ -434,6 +435,7 @@ function buildSitemap(allReports) {
     { loc: `${SITE_ORIGIN}/about.html`, priority: '0.5' },
     { loc: `${SITE_ORIGIN}/terms.html`, priority: '0.3' },
     { loc: `${SITE_ORIGIN}/privacy.html`, priority: '0.3' },
+    { loc: `${SITE_ORIGIN}/accessibility.html`, priority: '0.3' },
   ];
   const scamUrls = allReports.map(r => ({
     loc: `${SITE_ORIGIN}/scams/${r.slug}.html`,
