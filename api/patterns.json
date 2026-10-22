@@ -1,6 +1,6 @@
 {
-  "version": 31,
-  "lastUpdated": "2026-10-21T20:26:44.528Z",
+  "version": 33,
+  "lastUpdated": "2026-10-22T20:26:21.526Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -142,7 +142,11 @@
     "phantom hacker",
     "time sensitive read immediately",
     "will not negotiate further",
-    "bianlian group"
+    "bianlian group",
+    "claim this business",
+    "heir research registry",
+    "primary potential beneficiary",
+    "check my unclaimed inheritance"
   ],
   "aiTells": [
     "extra fingers",

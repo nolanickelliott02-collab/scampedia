@@ -1,6 +1,6 @@
 {
-  "version": 76,
-  "lastUpdated": "2026-10-22T01:15:28.750Z",
+  "version": 78,
+  "lastUpdated": "2026-10-22T20:26:21.526Z",
   "reports": [
     {
       "id": "1",
@@ -4105,6 +4105,88 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "109",
+      "slug": "google-business-profile-hijacking-verification-scam",
+      "title": "Google Business Profile Hijacking & Verification Scam",
+      "summary": "Scammers target small business owners by hijacking their Google Business Profile listings through fake ownership claims, phony \"verification\" calls, and suspension threats designed to steal control of the listing or extract payment.",
+      "category": "Tech Scam",
+      "firstReported": "2024-12-01",
+      "relatedScams": [
+        "Negative Google Review Extortion Scam",
+        "Tech Support Pop-Up Scam",
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Regularly audit who has owner or manager-level access to your Google Business Profile and remove anyone who no longer needs it",
+        "Reject any ownership or manager request you don't recognize immediately and investigate how it was sent, rather than approving it without scrutiny",
+        "Remember Google Business Profiles are always free to create and manage; never pay a fee to verify, restore, or maintain a listing",
+        "Google does not cold-call business owners about their listing, so treat any such call as suspicious and manage your listing by logging in directly at business.google.com",
+        "Enable two-factor authentication on the Google account tied to your business listing"
+      ],
+      "datePublished": "2026-10-22T20:22:10.296Z",
+      "howItWorks": "Scammers exploit the fact that Google allows anyone to request ownership or manager access to a business listing by clicking \"Claim this business.\" If a scammer sends that request and an employee approves it without checking who sent it, the attacker gains full control and can change the listed phone number to reroute customer calls to themselves, alter the business address to send customers to a fake location, and lock the real owner out entirely. A second version of the scam arrives as a phone call or email claiming to be from Google business support, saying the listing has a problem, is at risk of being removed, is missing verification, or has seen suspicious activity — the caller or sender then asks for login credentials or a payment to \"restore\" or \"fix\" the account, even though Google Business Profiles are free to create and maintain and Google never cold-calls business owners or demands payment for profile maintenance.",
+      "redFlags": [
+        "An unsolicited ownership or manager-access request appears in your Google Business Profile dashboard from an account you don't recognize",
+        "A caller or emailer claiming to be from Google says your listing has a problem, is at risk of removal, or is missing verification, and asks for your login credentials or payment to fix it",
+        "Any request for payment to \"verify,\" \"restore,\" or maintain your free Google Business listing",
+        "Pressure to act immediately without time to verify the request",
+        "A communication claiming to be from Google that arrives by phone call or from an email domain that isn't @google.com"
+      ],
+      "realExamples": [
+        "Scammers submit a fraudulent ownership claim to a Google Business Profile; once an employee approves the request without checking who sent it, the attacker changes the listed phone number to route calls to themselves, alters the business address to redirect customers, and locks the original owner out entirely",
+        "A caller claims to be from Google business support, saying the profile is at risk of being removed or is missing verification, and asks for login credentials or a payment to restore the account"
+      ],
+      "source": "guard.io, \"Google Business Profile Scams: What to Know,\" https://guard.io/blog/google-business-profile-review-listing-scams",
+      "spreadPlatforms": [
+        "Email",
+        "Phone Calls",
+        "Text Messages",
+        "WhatsApp",
+        "Telegram",
+        "Google Business Profile Platform"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "110",
+      "slug": "fake-inheritance-unclaimed-estate-phishing-scam",
+      "title": "Fake Inheritance / Unclaimed Estate Phishing Scam",
+      "summary": "Scammers send polished, error-free emails claiming the recipient is a beneficiary of a large unclaimed inheritance or estate, sometimes impersonating state government employees, in order to extract upfront \"release\" fees or harvest personal data through phishing links.",
+      "category": "Government Scam",
+      "firstReported": "2025-06-24",
+      "relatedScams": [
+        "Government Grant Scam",
+        "Advance Fee Loan Scam",
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Never click links or buttons in unexpected inheritance or estate emails; go directly to your state's official unclaimed property website instead",
+        "Do not pay any fee, tax, or charge to receive an inheritance \"you didn't know you had\" \", legitimate estates never require upfront payment to release funds",
+        "Verify any claimed government agency or employee by calling the agency directly using a number from its official .gov website, not one provided in the email",
+        "Be skeptical of deadlines pressuring you to act within hours; real legal and probate processes do not operate on urgent email countdowns",
+        "Report suspicious inheritance emails to the FTC, your state Attorney General, and forward phishing emails to the appropriate reporting address"
+      ],
+      "datePublished": "2026-10-22T20:26:05.303Z",
+      "howItWorks": "Victims receive an unsolicited, professional-looking email informing them they are a \"Primary Potential Beneficiary\" of an unclaimed inheritance or estate, often from a distant relative or tied to a fabricated organization. The message creates urgency with a short deadline, warning the funds will be forfeited or reassigned if the recipient doesn't act immediately, and includes a button or link to \"claim\" the money, which actually harvests personal and financial data. In a related, more elaborate version, scammers impersonate real state government employees (such as from an insurance department or banking agency) and a foreign credit union, telling an older victim a wealthy distant relative left them an inheritance, then pressuring them to wire upfront \"release\" fees through legitimate, licensed financial institutions over an extended period before any inheritance is ever paid out.",
+      "redFlags": [
+        "Unsolicited email claiming you're owed a large unclaimed inheritance you never knew about",
+        "Artificial urgency, such as a short countdown (e.g., 48 hours) before funds are supposedly forfeited",
+        "Requests to click a button or link to 'check' or 'claim' your inheritance",
+        "Demands for upfront fees, taxes, or 'release' payments before any inheritance is delivered",
+        "Use of official-sounding but non-existent registry or agency names",
+        "Sender impersonating a government employee, bank, or foreign credit union representative"
+      ],
+      "realExamples": [
+        "A Fox News reader identified only as \"Tim C.\" received a \"Heir Research Registry\" email claiming he was a \"Primary Potential Beneficiary\" of an unclaimed estate, with a 48-hour deadline and a \"Check My Unclaimed Inheritance\" button designed to steal his data.",
+        "Pennsylvania's Insurance Department, Department of Aging, Department of Banking and Securities, State Police, and Attorney General's Office jointly warned residents after an older Pennsylvanian received an email impersonating a Commonwealth employee and a foreign credit union representative, claiming a wealthy distant relative had left a large inheritance, then was pressured to pay upfront fees through licensed financial institutions totaling hundreds of thousands of dollars over nearly a year."
+      ],
+      "source": "Fox News (CyberGuy Report) https://www.foxnews.com/tech/inheritance-scam-email-looks-real-steals-data ; Pennsylvania Insurance Department https://www.pa.gov/agencies/insurance/newsroom/shapiro-administration-warns-pennsylvanians-scammers-fake-inheritance",
+      "spreadPlatforms": [
+        "Email"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
