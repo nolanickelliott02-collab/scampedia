@@ -1,6 +1,6 @@
 {
-  "version": 75,
-  "lastUpdated": "2026-10-21T20:26:44.529Z",
+  "version": 76,
+  "lastUpdated": "2026-10-22T01:15:28.750Z",
   "reports": [
     {
       "id": "1",
@@ -4065,6 +4065,46 @@
         "Postal Mail"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "108",
+      "slug": "badbox-2-0-infected-iot-device-botnet-scam",
+      "title": "BADBOX 2.0 Infected IoT Device Botnet Scam",
+      "summary": "Cheap, off-brand smart TV boxes, projectors, car infotainment units, and digital picture frames sold online come pre-loaded with hidden malware that secretly turns your home network into a criminal proxy used for fraud and other crimes.",
+      "category": "Tech Scam",
+      "firstReported": "2023-01-01",
+      "relatedScams": [
+        "Fake VPN App Malware Scam",
+        "SpyLoan Predatory Loan App Scam",
+        "Fake CAPTCHA \"ClickFix\" Malware Scam"
+      ],
+      "safetyTips": [
+        "Avoid downloading or sideloading apps from unofficial marketplaces that advertise free streaming content",
+        "Keep device operating systems, firmware, and apps updated, and never disable built-in malware protections like Google Play Protect",
+        "Periodically monitor your home network's internet traffic for suspicious or unexplained activity and assess all IoT devices connected to home networks for suspicious activity, disconnecting any device you suspect is compromised",
+        "Report suspected compromised devices or related criminal activity to the FBI's Internet Crime Complaint Center at ic3.gov"
+      ],
+      "datePublished": "2026-10-22T01:14:55.823Z",
+      "howItWorks": "Criminals compromise low-cost, often Chinese-manufactured Internet of Things (IoT) devices such as TV streaming boxes, digital projectors, aftermarket vehicle infotainment systems, and digital picture frames, either by pre-loading malicious software onto the device before a consumer ever buys it, or by hiding a backdoor inside an app the device downloads during setup. Once the device connects to a victim's home Wi-Fi, it can be pulled into the \"BADBOX 2.0\" botnet, and criminals then sell or give away access to that compromised home network's internet connection, routing other criminals' malicious traffic through the unsuspecting victim's residential IP address to disguise it as legitimate activity and use it for other criminal purposes.",
+      "redFlags": [
+        "The device was purchased from an unofficial or suspicious app marketplace rather than a certified app store",
+        "Setup instructions tell you to disable Google Play Protect or other built-in security settings",
+        "A generic, unbranded TV streaming device is advertised as 'unlocked' or able to access free premium content",
+        "The IoT device is from an unrecognizable or off-brand manufacturer",
+        "The Android device is not Google Play Protect certified",
+        "You notice unexplained or unusual internet traffic coming from a smart device on your home network"
+      ],
+      "realExamples": [
+        "The FBI's PSA warned that cyber criminals gained unauthorized access to home networks through compromised TV streaming devices, digital projectors, aftermarket vehicle infotainment systems, digital picture frames, and other products, most of which were manufactured in China."
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), \"Home Internet Connected Devices Facilitate Criminal Activity,\" https://www.ic3.gov/PSA/2025/PSA250605",
+      "spreadPlatforms": [
+        "Online Marketplaces",
+        "Pre-installed on Purchased Hardware",
+        "Mobile/Streaming Apps"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
