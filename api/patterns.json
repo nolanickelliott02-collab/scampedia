@@ -1,6 +1,6 @@
 {
-  "version": 33,
-  "lastUpdated": "2026-10-22T20:26:21.526Z",
+  "version": 34,
+  "lastUpdated": "2026-10-23T01:15:52.923Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -146,7 +146,10 @@
     "claim this business",
     "heir research registry",
     "primary potential beneficiary",
-    "check my unclaimed inheritance"
+    "check my unclaimed inheritance",
+    "unpaid parking ticket",
+    "immediate payment or a court appearance",
+    "court enforcement action"
   ],
   "aiTells": [
     "extra fingers",

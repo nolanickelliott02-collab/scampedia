@@ -1,6 +1,6 @@
 {
-  "version": 78,
-  "lastUpdated": "2026-10-22T20:26:21.526Z",
+  "version": 79,
+  "lastUpdated": "2026-10-23T01:15:52.924Z",
   "reports": [
     {
       "id": "1",
@@ -4187,6 +4187,46 @@
         "Email"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "111",
+      "slug": "fake-municipal-court-unpaid-parking-ticket-text-scam",
+      "title": "Fake Municipal Court \"Unpaid Parking Ticket\" Text Scam",
+      "summary": "Scammers send texts and emails pretending to be a municipal court, claiming you have an unpaid parking ticket and must pay immediately or face fines, license suspension, or a court appearance.",
+      "category": "Government Scam",
+      "firstReported": "2026-02-19",
+      "relatedScams": [
+        "Jury Duty Scam",
+        "Fake Toll Road Text Scam",
+        "Phantom Debt Collector Scam"
+      ],
+      "safetyTips": [
+        "Do not click links in unsolicited texts or emails about court fines or parking tickets",
+        "Remember that government agencies generally do not conduct official business through unsolicited text messages and rarely use email unless you've requested it",
+        "If unsure whether a message is legitimate, contact the court or agency directly using a verified phone number, not one provided in the message",
+        "Report suspicious messages as spam/junk through your phone or email provider and block the sender",
+        "File a complaint with your state Attorney General's consumer protection office, including a copy of the message"
+      ],
+      "datePublished": "2026-10-23T01:15:41.665Z",
+      "howItWorks": "Victims receive a text message or email claiming to be from a municipal court — often impersonating the Philadelphia Municipal Court, though other courts or government agencies may be named — alleging they have an unpaid parking ticket requiring immediate payment or a court appearance. The message threatens escalating consequences for non-payment, such as additional fines, driver's license suspension, or court enforcement action, and includes a link for the recipient to \"pay\" the fine. The urgency and threat of legal trouble are designed to pressure the recipient into clicking the link and entering payment or personal information before they stop to verify whether the message is real.",
+      "redFlags": [
+        "Unsolicited text message or email claiming to be from a municipal court about a parking ticket",
+        "Threats of license suspension, added fines, or a court appearance if you don't pay immediately",
+        "A link embedded in the message directing you to make a payment",
+        "Pressure to act fast using fear, urgency, and embarrassment",
+        "Government business being conducted via unexpected text or email rather than official mail"
+      ],
+      "realExamples": [
+        "Pennsylvania Attorney General Dave Sunday issued a public alert describing fraudulent texts and emails impersonating Philadelphia Municipal Court over alleged unpaid parking tickets",
+        "The fraudulent messages frequently included a link directing recipients to make a payment, and warned of consequences like additional fines, license suspension, or court enforcement action for non-payment"
+      ],
+      "source": "Pennsylvania Office of Attorney General, \"Attorney General Sunday Warns Pennsylvanians of Scam Messages Impersonating Municipal Court\" - https://www.attorneygeneral.gov/taking-action/attorney-general-sunday-warns-pennsylvanians-of-scam-messages-impersonating-municipal-court/",
+      "spreadPlatforms": [
+        "Text Messages",
+        "Email"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
