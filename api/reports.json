@@ -1,6 +1,6 @@
 {
-  "version": 79,
-  "lastUpdated": "2026-10-23T01:15:52.924Z",
+  "version": 80,
+  "lastUpdated": "2026-10-23T20:13:11.346Z",
   "reports": [
     {
       "id": "1",
@@ -4227,6 +4227,46 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "112",
+      "slug": "ai-obituary-mining-graveyard-grift-scam",
+      "title": "AI Obituary Mining \"Graveyard Grift\" Scam",
+      "summary": "Scammers use AI to scan published obituaries for details on recently widowed or bereaved people, then use that personal information to craft convincing fraud pitches targeting the grieving family. One widow lost over $7,000 after fraudsters claimed to have helped her late husband hide tax evasion.",
+      "category": "AI Scam",
+      "firstReported": "2026-08-24",
+      "relatedScams": [
+        "Grandparent Emergency Scam",
+        "AI Voice Clone Scam",
+        "Fake Inheritance / Unclaimed Estate Phishing Scam"
+      ],
+      "safetyTips": [
+        "Limit sensitive details in obituaries such as full names of relatives, specific employers, schools, and exact hometown to reduce what scammers can exploit",
+        "Establish a family rule that no unexpected payment request tied to a deceased relative's affairs is made until verified with another family member or trusted advisor",
+        "If someone calls asking for personal information and insists it be handled immediately, hang up; initiate any callback yourself using a number you look up independently rather than one given by the caller",
+        "Be extra cautious with financial decisions in the weeks after a loved one's death, when grief and administrative overload make it easier to be manipulated",
+        "If you believe you've been scammed, immediately contact your bank, brokerage, credit card company, or wire transfer company, and file complaints with law enforcement and consumer complaint organizations"
+      ],
+      "datePublished": "2026-10-23T20:12:42.852Z",
+      "howItWorks": "Fraudsters use artificial intelligence to rapidly scour online obituaries and death notices, extracting names of spouses, children, employers, hometowns, and other personal details that families publish to honor loved ones. The AI helps scammers quickly identify targets, write a personalized \"scam script,\" and even generate deepfake images, voice messages, or videos, letting them send convincing phishing calls, texts, or emails to thousands of potential victims within minutes. Posing as officials or associates of the deceased, scammers then contact the surviving spouse claiming the departed left behind a hidden debt, tax problem, or legal issue that must be resolved immediately to protect the inheritance, pressuring the grieving person into an urgent payment before they have time to verify the claim with family or authorities.",
+      "redFlags": [
+        "Unsolicited call or message shortly after a death claiming the deceased owed taxes or had a hidden financial/legal problem",
+        "Caller references specific personal details (relatives' names, employer, hometown) that match an obituary",
+        "Demand for urgent payment to 'protect' an inheritance or prevent legal consequences",
+        "Pressure to act alone without checking with another family member or financial advisor first",
+        "Request for wire transfer, gift cards, or other hard-to-trace payment tied to the deceased's supposed debt"
+      ],
+      "realExamples": [
+        "A widow lost more than $7,000 after scammers used her husband's obituary to identify her, then claimed they had helped him conceal tax evasion and that she needed to pay to preserve her inheritance, according to Truecaller spokesperson Clayton LiaBraaten speaking to USA Today."
+      ],
+      "source": "Moneywise, https://moneywise.com/news/top-stories/ai-scammers-obituaries-elderly-fraud-widows",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Text Messages",
+        "Email",
+        "Online Obituary Websites"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
