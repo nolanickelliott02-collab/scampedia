@@ -96,6 +96,7 @@ function pageShell({ title, description, canonical, ogImage, jsonLd, bodyHtml, a
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-itunes-app" content="app-id=6794175364" />
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}" />
   <link rel="canonical" href="${canonical}" />
@@ -260,6 +261,12 @@ function scamPageHtml(report, allReports) {
           <ul class="wiki-redflags">${redFlags.map(f => `<li>${escapeHtml(f)}</li>`).join('')}</ul>
         </div>` : ''}
 
+        <div class="wiki-check-box">
+          <div class="wiki-check-title">Got a message like this?</div>
+          <p>Don't reply or tap any links yet. Copy the text or take a screenshot and check it with VerifyGuard first. It's free to start.</p>
+          <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/verifyguard-scam-detector/id6794175364">Check a message with VerifyGuard →</a>
+        </div>
+
         ${realExamples.length ? `
         <div class="wiki-section" id="real-examples">
           <h2 class="wiki-section-heading">Real Examples</h2>
@@ -290,7 +297,7 @@ function scamPageHtml(report, allReports) {
 
         <div class="wiki-cta">
           <div class="wiki-cta-title">Worried you're being targeted right now?</div>
-          <p>VerifyGuard scans photos, links, and messages in seconds and flags exactly these kinds of red flags automatically.</p>
+          <p>VerifyGuard checks photos, links, and messages for the warning signs of scams like this one. Free to start.</p>
           <a class="btn btn-primary" href="https://apps.apple.com/us/app/verifyguard-scam-detector/id6794175364">Protect Yourself with VerifyGuard →</a>
         </div>
 
