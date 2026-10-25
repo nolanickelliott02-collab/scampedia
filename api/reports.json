@@ -1,6 +1,6 @@
 {
-  "version": 81,
-  "lastUpdated": "2026-10-24T19:09:38.476Z",
+  "version": 82,
+  "lastUpdated": "2026-10-25T19:23:24.533Z",
   "reports": [
     {
       "id": "1",
@@ -4305,6 +4305,43 @@
         "Shopping Websites",
         "Social Media",
         "Review Platforms"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "114",
+      "slug": "fake-amazon-product-recall-text-scam",
+      "title": "Fake Amazon Product Recall Text Scam",
+      "summary": "Scammers send text messages claiming a recent Amazon purchase has been \"recalled\" for safety reasons and urge recipients to click a link to get a refund, which actually leads to a fake Amazon login page designed to steal credentials and payment details.",
+      "category": "Shopping Scam",
+      "firstReported": "2026-02-18",
+      "relatedScams": [
+        "Fake Toll Road Text Scam",
+        "Package Delivery Text Scam",
+        "Smishing Text Message Scam"
+      ],
+      "safetyTips": [
+        "Never click links in unsolicited recall or refund texts; instead open the official Amazon app or manually type amazon.com into your browser to check your orders and recall notices",
+        "Remember that legitimate recalls show up inside your Amazon account and never through random text links",
+        "Log in and check your recent orders, looking for recall notifications directly within your account, rather than trusting a link from a text message",
+        "Contact Amazon customer service through the official site if you're unsure about a recall text",
+        "Report suspicious texts to Amazon so they can investigate and shut down phishing networks"
+      ],
+      "datePublished": "2026-10-25T19:22:44.751Z",
+      "howItWorks": "Victims receive an unsolicited text (smishing) that references a recent order and claims the item has been recalled for safety reasons, urging the recipient to click a link to \"start your refund\" or \"view recall details.\" That link leads to a very real-looking but completely fake Amazon login page. Once the victim enters their email and password, scammers can hijack the account, change the password, and potentially access stored payment methods. The pages often look nearly identical to Amazon's real website, which is why this scam catches people off guard.",
+      "redFlags": [
+        "Recall notice arrives by text rather than through your Amazon account or official app",
+        "Message uses urgency and fear, such as claiming a product you bought was recalled for safety reasons, to get you to click fast",
+        "Link in the text leads to a login page instead of taking you through the official amazon.com site or app",
+        "Message promises a refund if you click through and enter your login information"
+      ],
+      "realExamples": [
+        "Guardio researchers, cited by ConsumerAffairs, found scammers sending texts claiming a recent purchase was included in an \"official recall,\" which included a link to \"start your refund\" or \"view recall details\" that led to a fake Amazon sign-in page"
+      ],
+      "source": "ConsumerAffairs, https://www.consumeraffairs.com/news/that-amazon-recall-alert-text-its-probably-a-scam-021826.html",
+      "spreadPlatforms": [
+        "Text Messages",
+        "Email"
       ],
       "isAIDiscovered": true
     }

@@ -1,6 +1,6 @@
 {
-  "version": 34,
-  "lastUpdated": "2026-10-23T01:15:52.923Z",
+  "version": 35,
+  "lastUpdated": "2026-10-25T19:23:24.533Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -149,7 +149,8 @@
     "check my unclaimed inheritance",
     "unpaid parking ticket",
     "immediate payment or a court appearance",
-    "court enforcement action"
+    "court enforcement action",
+    "recall notice"
   ],
   "aiTells": [
     "extra fingers",
