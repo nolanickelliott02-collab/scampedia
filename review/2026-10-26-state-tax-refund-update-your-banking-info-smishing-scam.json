@@ -1,0 +1,57 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "116",
+    "slug": "state-tax-refund-update-your-banking-info-smishing-scam",
+    "title": "State Tax Refund \"Update Your Banking Info\" Smishing Scam",
+    "summary": "A nationwide wave of text messages impersonating state tax/treasury departments (not the IRS) falsely claims a state income tax refund is pending and demands the recipient \"update\" bank account details via a link or be forfeited.",
+    "category": "Government Scam",
+    "firstReported": "2025-09-09",
+    "relatedScams": [
+      "Fake IRS Tax Refund Scam",
+      "Smishing Text Message Scam",
+      "Phishing Email Scam"
+    ],
+    "safetyTips": [
+      "Do not click links or reply to unsolicited texts claiming to be from a state tax or treasury department",
+      "Remember that state tax agencies generally communicate about refunds and balances through official mailed letters, not text messages asking for bank details",
+      "If unsure, contact your state's department of revenue or treasury directly using the phone number from its official website, not any number in the text",
+      "Delete the message without clicking anything, and report it to your state tax agency and the IRS",
+      "Never provide bank account or credit card numbers in response to a text message"
+    ],
+    "datePublished": "2026-10-26T21:19:11.416Z",
+    "howItWorks": "Scammers send unsolicited text messages that appear to come from a state revenue or treasury department, often spoofed from out-of-state phone numbers. The message falsely claims the taxpayer has an income tax refund waiting and that they must click a link or reply to submit or \"update\" their bank account information or the refund will be forfeited. Victims who click the link are taken to a fake state agency page designed to harvest banking credentials and other personal data. The same template has surfaced nearly simultaneously in multiple states under different agency names, suggesting a single coordinated campaign rather than isolated local fraud.",
+    "redFlags": [
+      "Unsolicited text message claiming to be from a state treasury or revenue department about a tax refund",
+      "Urgent threat that the refund will be forfeited if banking information isn't submitted immediately",
+      "Request to click a link or reply to the text to provide or 'update' bank account information",
+      "Message sent from an out-of-state or unfamiliar phone number",
+      "State tax agencies say they never send unsolicited texts requesting banking details and typically correspond by mail"
+    ],
+    "realExamples": [
+      "The Michigan Department of Treasury warned on September 15, 2025 about a nationwide text scam falsely claiming a refund had been processed and demanding payment information be submitted or the refund would be forfeited.",
+      "North Dakota's Office of State Tax Commissioner warned on September 9, 2025 of fraudulent texts appearing to come from the North Dakota Department of Revenue requesting bank or credit card account information; state officials called it the largest such attempt in years.",
+      "The Minnesota Department of Revenue and New York State Department of Taxation and Finance issued similar alerts in September 2025 about phishing texts regarding income tax refunds."
+    ],
+    "source": "Michigan Department of Treasury, https://www.michigan.gov/treasury/news/2025/09/15/be-alert-for-text-message-phishing-scam-making-the-rounds",
+    "spreadPlatforms": [
+      "Text Messages"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "known-variant",
+    "severity": "low",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Treasury Text Message Phishing Scam"
+    ],
+    "confidence": 0.55,
+    "reasoning": "The source (Michigan Dept. of Treasury) describes a smishing scheme impersonating a state treasury department about a pending refund requiring banking info updates, distinct from the existing 'Fake IRS Tax Refund Scam' (federal) and 'Smishing Text Message Scam' (generic) since it specifically targets state tax refunds via text; however, the source only documents Michigan's case, not a confirmed 'nationwide' multi-state coordinated campaign with different agency names as the candidate claims, so some details are unverified/embellished beyond the source."
+  },
+  "queuedAt": "2026-10-26T21:19:17.930Z"
+}
