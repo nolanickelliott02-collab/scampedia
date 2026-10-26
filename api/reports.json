@@ -1,6 +1,6 @@
 {
-  "version": 82,
-  "lastUpdated": "2026-10-25T19:23:24.533Z",
+  "version": 83,
+  "lastUpdated": "2026-10-26T21:18:04.865Z",
   "reports": [
     {
       "id": "1",
@@ -4342,6 +4342,44 @@
       "spreadPlatforms": [
         "Text Messages",
         "Email"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "115",
+      "slug": "ebt-snap-card-skimming-scam",
+      "title": "EBT/SNAP Card Skimming Scam",
+      "summary": "Criminals attach hidden skimming overlays to point-of-sale card readers at grocery stores and gas pumps to steal EBT/SNAP benefit card data and PINs, then clone the cards and drain victims' food assistance benefits before they can buy groceries.",
+      "category": "Government Scam",
+      "firstReported": "2026-06-26",
+      "relatedScams": [
+        "Mail Theft Check Washing/Check Cooking Scam",
+        "Unemployment Benefits Identity Theft Scam",
+        "SIM Swap Scam"
+      ],
+      "safetyTips": [
+        "Inspect ATMs, gas pumps, and point-of-sale terminals for anything loose, crooked, or damaged before inserting or swiping a card, and don't use one that looks unusual",
+        "Use tap-to-pay or chip-insert technology whenever possible instead of swiping, since skimmers mainly target the magnetic stripe",
+        "If using a debit card at a gas station, run it as a credit card to avoid entering a PIN; if that is not an option, use your hand to hide your PIN to block scammers who may be using tiny pinhole cameras above the keypad",
+        "Use ATMs in a well-lit, indoor location, which are less vulnerable targets",
+        "Be alert for skimming devices in tourist areas, which are popular targets"
+      ],
+      "datePublished": "2026-10-26T21:17:29.123Z",
+      "howItWorks": "Because many EBT cards still rely on outdated magnetic-stripe technology instead of chip or tap-to-pay, criminals place a thin, realistic-looking overlay device directly on top of a legitimate payment terminal's card slot and keypad, often disguised as part of the keypad on point-of-sale machines, making tampered machines difficult to detect. When a shopper swipes their EBT card and enters their PIN, the skimmer silently records the magnetic-stripe data, which scammers then encode onto another card with a magnetic strip. The cloned card is then used to drain the victim's benefits.",
+      "redFlags": [
+        "A card reader's keypad or card slot looks loose, crooked, bulky, damaged, or scratched compared to the rest of the terminal",
+        "The terminal requires a magnetic-stripe swipe rather than offering chip insert or tap-to-pay as an option",
+        "Skimming devices are often embedded in point-of-sale machines and disguised as keypads, making tampered terminals hard to detect",
+        "Tourist areas and locations with high concentrations of small stores are popular targets for installed skimmers"
+      ],
+      "realExamples": [
+        "A U.S. Secret Service New York Field Office operation, along with law enforcement partners including the NYPD, NYC Department of Investigation, and USDA Office of Inspector General, concluded a three-day EBT fraud and payment card skimming outreach effort, removing 35 illegal devices (15 in Brooklyn, 9 in the Bronx, 10 in Queens, and one additional device in Manhattan) and preventing an estimated $36.5 million in potential losses; nationwide in 2025, law enforcement removed more than 400 illegal skimming devices, preventing an estimated $428 million in potential fraud losses"
+      ],
+      "source": "U.S. Secret Service, https://www.secretservice.gov/newsroom/releases/2026/06/us-secret-service-new-york-field-office-skimming-operation-nets-35",
+      "spreadPlatforms": [
+        "In-Person (Point-of-Sale Terminals)",
+        "ATMs",
+        "Gas Station Pumps"
       ],
       "isAIDiscovered": true
     }

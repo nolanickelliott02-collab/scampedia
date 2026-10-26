@@ -1,6 +1,6 @@
 {
-  "version": 35,
-  "lastUpdated": "2026-10-25T19:23:24.533Z",
+  "version": 36,
+  "lastUpdated": "2026-10-26T21:18:04.865Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -150,7 +150,9 @@
     "unpaid parking ticket",
     "immediate payment or a court appearance",
     "court enforcement action",
-    "recall notice"
+    "recall notice",
+    "ebt fraud",
+    "payment card skimming"
   ],
   "aiTells": [
     "extra fingers",
