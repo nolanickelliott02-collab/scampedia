@@ -1,0 +1,60 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "116",
+    "slug": "quishing-parking-meter-qr-code-scam",
+    "title": "\"Quishing\" Parking Meter QR Code Scam",
+    "summary": "Scammers plaster fake QR code stickers over legitimate codes on parking meters and signs, leading drivers to lookalike payment pages that steal card details and silently enroll them in recurring subscription charges.",
+    "category": "Shopping Scam",
+    "firstReported": "2025-06-27",
+    "relatedScams": [
+      "QR Code Scam",
+      "Fake Municipal Court \"Unpaid Parking Ticket\" Text Scam",
+      "Fake Toll Road Text Scam"
+    ],
+    "safetyTips": [
+      "Skip scanning QR codes at parking meters entirely and instead pay via the official parking app, website, or phone number printed on the original signage",
+      "Before entering payment details, check that the URL matches the city or parking operator's real website address",
+      "Inspect the QR code sticker for signs it was placed over another code, and report suspicious stickers to the parking operator or local police",
+      "Monitor bank and card statements for small recurring charges from unfamiliar companies after using a QR code to pay for parking, and dispute them immediately"
+    ],
+    "datePublished": "2026-10-27T21:05:05.675Z",
+    "howItWorks": "Criminals print their own QR code stickers and stick them directly over the real codes on parking pay stations, ticket machines, or street signage, a trick nicknamed \"quishing\" (QR code + phishing). A driver who scans the code is taken to a slick, lookalike payment site that mimics the real parking app or council payment page. After the victim enters their card number and email to pay what looks like a normal parking fee, the site secretly signs them up for an unrelated recurring subscription or streaming-style membership that keeps billing their card every month, while the driver still hasn't actually paid for parking and can also end up fined. Investigators tied one such network to a large-scale operation using shell companies and fake subscription websites to harvest card details from thousands of victims.",
+    "redFlags": [
+      "A QR code sticker looks slightly crooked, bubbled, or stuck over something else on the meter or sign",
+      "After scanning, the payment page asks for an email address and full card details for what should be a small, simple parking fee",
+      "No parking receipt or confirmation is issued after payment, or an unexpected higher charge appears later",
+      "A later, unrelated charge shows up on the card statement from a streaming or 'membership' service you never signed up for",
+      "The payment app or company name on official signage doesn't match the site the QR code actually opens"
+    ],
+    "realExamples": [
+      "A UK driver paid a small fee via a QR code on a car park pay machine that didn't accept cash or card, and weeks later his bank blocked his card after an unauthorised recurring charge appeared from an unfamiliar website.",
+      "A Bureau of Investigative Journalism probe found nearly a third of UK local authorities and more than a dozen hospitals had car parks targeted by quishing stickers, with one city council reporting every one of its 370 ticket machines hit.",
+      "BBB Scam Tracker consumers reported scanning a parking lot QR code expecting to pay a few dollars, only to be charged $39.99 or $49.99 for an unrequested digital membership or streaming service.",
+      "In December 2025, Florida's Pinellas County Sheriff's Office issued a public warning after quishing stickers were found covering legitimate parking QR codes in the area."
+    ],
+    "source": "The Bureau of Investigative Journalism, https://www.thebureauinvestigates.com/stories/2025-06-27/quishing-new-qr-code-scam-sweeps-uk-car-parks",
+    "spreadPlatforms": [
+      "Physical Stickers on Parking Meters/Signage",
+      "Fake Websites",
+      "Mobile Payment Apps"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "QR Code Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Quishing",
+      "QR Code Car Park Scam"
+    ],
+    "confidence": 0.7,
+    "reasoning": "This is a specific application (fake QR codes on parking meters leading to lookalike payment sites and bogus subscriptions) of the already-listed \"QR Code Scam\" pattern, so it's a known variant rather than a wholly new scam category; the source confirms card theft and recurring fraudulent subscription charges tied to a global fraud network."
+  },
+  "queuedAt": "2026-10-27T21:05:11.076Z"
+}

@@ -1,0 +1,58 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "116",
+    "slug": "real-agent-name-federal-impersonation-verification-bypass-scam",
+    "title": "Real-Agent-Name Federal Impersonation Verification-Bypass Scam",
+    "summary": "FBI Newark warns that scammers are now impersonating FBI, DEA, and Secret Service agents using the real names of actual federal employees combined with spoofed official field-office phone numbers, making the calls nearly impossible for victims to verify as fake — some fraudsters even stage fake \"FBI office\" video calls.",
+    "category": "Government Scam",
+    "firstReported": "2025-09-30",
+    "relatedScams": [
+      "Senior U.S. Official Impersonation Messaging Scam",
+      "\"Phantom Hacker\" Three-Stage Tech/Bank/Government Imposter Scam",
+      "DEA/Medical Board License Revocation Impersonation Scam"
+    ],
+    "safetyTips": [
+      "Remember that legitimate federal law enforcement will never demand money over the phone or via a virtual meeting to resolve charges or avoid arrest",
+      "Don't rely on a callback to the number the caller gave you — independently look up the agency's official number yourself and call that instead",
+      "Understand that confirming an agent's name is real does not confirm the identity of the person who called you; spoofing and name-dropping can both be faked",
+      "If a supposed agent uses a video meeting platform, take photos or record the video and report it to the FBI at tips.fbi.gov",
+      "Hang up and report suspicious calls claiming to be from the FBI, DEA, or Secret Service directly to the agency rather than continuing the conversation"
+    ],
+    "datePublished": "2026-10-27T21:02:43.687Z",
+    "howItWorks": "Criminals call victims while spoofing the real phone numbers of federal law enforcement field offices and introduce themselves using the actual names of real federal agents, accusing the victim of a crime and demanding payment to make the charges go away. Because the technique relies on genuine names and numbers, a victim who tries to protect themselves by calling the agency back or looking up the agent is told the agent does in fact work there, which creates false reassurance even though the person who actually called is an impostor. In some cases victims can't reach a live person but assume the call is legitimate simply because the caller ID number looks authentic. To add another layer of believability, at least one fraudster scheduled a video call on an online meeting platform and staged the background to resemble a real FBI office, complete with a desk, an FBI seal, and a man dressed in a suit.",
+    "redFlags": [
+      "A caller claiming to be a federal agent demands money or payment over the phone or video call to resolve criminal charges",
+      "Caller ID or a callback number appears to be a legitimate federal field office number, but the person asks for immediate payment or sensitive personal information",
+      "A supposed federal agent sets up a video meeting with a staged office background instead of meeting in person",
+      "Confirming that a named agent 'works there' is treated as proof the caller is legitimate, when employment confirmation does not verify who is actually on the phone",
+      "Pressure to act immediately to avoid arrest or 'remove charges'"
+    ],
+    "realExamples": [
+      "FBI Newark's field office reported that victims in New Jersey described criminals posing as FBI, DEA, and Secret Service agents who spoofed real federal field-office phone numbers and used the names of actual agents",
+      "One fraudster staged a video call background to resemble an FBI office, complete with a desk, an FBI seal, and a man in a suit, to convince a victim the call was legitimate",
+      "Reports describe victims who called the field office to verify an agent's identity and were told the named agent did work there, even though that person was not actually the one calling them"
+    ],
+    "source": "FBI Newark, https://www.fbi.gov/contact-us/field-offices/newark/news/fbi-newark-issues-warning-about-insidious-new-twist-on-an-old-fraud-scheme",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Video Call Platforms"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "IC3/FBI Recovery Impersonation Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Federal Agent Impersonation Scam with Spoofed Caller ID"
+    ],
+    "confidence": 0.55,
+    "reasoning": "This is FBI/DEA/Secret Service agent impersonation using spoofed real field-office numbers and real agent names, which is a specific twist on the existing federal-law-enforcement impersonation pattern already covered by 'IC3/FBI Recovery Impersonation Scam' in the database; the core mechanism (impostor federal agents demanding payment to avoid charges) is the same category of scam, with the new detail being verification-proof spoofing and staged video calls rather than a wholly new scam type."
+  },
+  "queuedAt": "2026-10-27T21:02:56.071Z"
+}
