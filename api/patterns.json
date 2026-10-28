@@ -1,6 +1,6 @@
 {
-  "version": 36,
-  "lastUpdated": "2026-10-26T21:18:04.865Z",
+  "version": 37,
+  "lastUpdated": "2026-10-28T02:05:16.765Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -152,7 +152,9 @@
     "court enforcement action",
     "recall notice",
     "ebt fraud",
-    "payment card skimming"
+    "payment card skimming",
+    "ghost preparer",
+    "refuses to sign the return"
   ],
   "aiTells": [
     "extra fingers",

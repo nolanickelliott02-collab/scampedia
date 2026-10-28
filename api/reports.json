@@ -1,6 +1,6 @@
 {
-  "version": 83,
-  "lastUpdated": "2026-10-26T21:18:04.865Z",
+  "version": 84,
+  "lastUpdated": "2026-10-28T02:05:16.766Z",
   "reports": [
     {
       "id": "1",
@@ -4382,6 +4382,47 @@
         "Gas Station Pumps"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "116",
+      "slug": "ghost-tax-preparer-scam",
+      "title": "Ghost Tax Preparer Scam",
+      "summary": "Unscrupulous paid tax preparers inflate refunds with fake credits and deductions, then refuse to sign the return or include their PTIN — leaving the taxpayer legally holding the bag when the IRS comes calling.",
+      "category": "Government Scam",
+      "firstReported": "2026-03-05",
+      "relatedScams": [
+        "Fake IRS Tax Refund Scam",
+        "Impersonation Credit Repair Scheme (Fake Debt Collector/Creditor)",
+        "Student Loan Forgiveness Scam"
+      ],
+      "safetyTips": [
+        "Verify any paid preparer signs the return and enters a valid PTIN before you submit it",
+        "Never sign a blank or incomplete tax form",
+        "Be wary of preparers who exaggerate eligibility for deductions or promise credits you may not qualify for",
+        "Report suspected ghost preparers and preparer misconduct, or file a complaint about a tax return preparer, with the IRS",
+        "Rely on trusted sources and qualified tax professionals, not bad tax advice on social media"
+      ],
+      "datePublished": "2026-10-28T02:04:42.957Z",
+      "howItWorks": "A \"ghost\" preparer is paid to prepare a federal tax return but will not sign it or include a valid Preparer Tax Identification Number (PTIN), even though federal law requires any paid preparer to do both. When a preparer refuses to sign or provide a PTIN, that is a major red flag. These preparers often exploit credits by promising large refunds, and may exaggerate eligibility for deductions or claim credits that taxpayers do not qualify for, then disappear after filing, leaving the taxpayer responsible for penalties, interest, or audits. Because the taxpayer's name and Social Security number are on the return, the taxpayer — not the invisible preparer — is legally responsible for what is filed, and taxpayers should never sign a blank or incomplete return.",
+      "redFlags": [
+        "Preparer refuses to sign the return or won't provide/include a valid PTIN",
+        "Asks you to sign a blank or incomplete return",
+        "Promises unusually large refunds by exaggerating eligibility for deductions or claiming credits the taxpayer doesn't qualify for",
+        "Disappears after filing, leaving the taxpayer responsible for penalties, interest, or audits"
+      ],
+      "realExamples": [
+        "The IRS's 2026 Dirty Dozen list includes ghost preparers as item #8, warning that when a preparer refuses to sign or provide a PTIN, that is a major red flag and the taxpayer is legally responsible for what is filed."
+      ],
+      "source": "IRS, \"Be informed, not fooled by ghost preparers and tax credit scams\" and \"Dirty Dozen tax scams for 2026\" https://www.irs.gov/newsroom/be-informed-not-fooled-by-ghost-preparers-and-tax-credit-scams ; https://www.irs.gov/newsroom/dirty-dozen-tax-scams-for-2026-irs-reminds-taxpayers-to-watch-out-for-dangerous-threats",
+      "spreadPlatforms": [
+        "In-Person",
+        "Text Messages",
+        "Social Media",
+        "Word of Mouth",
+        "Local Advertising"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
