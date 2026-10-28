@@ -1,6 +1,6 @@
 {
-  "version": 37,
-  "lastUpdated": "2026-10-28T02:05:16.765Z",
+  "version": 39,
+  "lastUpdated": "2026-10-28T21:29:32.638Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -154,7 +154,11 @@
     "ebt fraud",
     "payment card skimming",
     "ghost preparer",
-    "refuses to sign the return"
+    "refuses to sign the return",
+    "digital arrest",
+    "safe accounts",
+    "help move a flight",
+    "unlock a bank account"
   ],
   "aiTells": [
     "extra fingers",

@@ -1,6 +1,6 @@
 {
-  "version": 84,
-  "lastUpdated": "2026-10-28T02:05:16.766Z",
+  "version": 87,
+  "lastUpdated": "2026-10-28T21:29:32.639Z",
   "reports": [
     {
       "id": "1",
@@ -4423,6 +4423,124 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "117",
+      "slug": "digital-arrest-scam",
+      "title": "Digital Arrest Scam",
+      "summary": "Scammers impersonate police, CBI, customs, or court officials on a video call, falsely accuse the victim of a serious crime, and claim they are now under \"digital arrest\" — forcing them to stay on camera for hours or days while transferring their savings to \"safe\" accounts to prove innocence.",
+      "category": "Government Scam",
+      "firstReported": "2024-10-28",
+      "relatedScams": [
+        "Virtual Kidnapping Scam",
+        "\"Phantom Hacker\" Three-Stage Tech/Bank/Government Imposter Scam",
+        "IC3/FBI Recovery Impersonation Scam"
+      ],
+      "safetyTips": [
+        "Know that no legitimate police force, court, or government investigator conducts arrests, hearings, or investigations over phone or video calls",
+        "Hang up immediately and independently verify by calling the agency directly using an official number, never one given by the caller",
+        "Never transfer money, share OTPs, or grant remote device access to anyone claiming to be law enforcement over a call",
+        "If pressured or isolated during a call, contact a trusted family member or the real local police in person before taking any action",
+        "Report suspicious calls to local cybercrime authorities or consumer protection agencies right away"
+      ],
+      "datePublished": "2026-10-28T21:25:32.077Z",
+      "howItWorks": "The scam begins with a phone call, often with a spoofed caller ID, in which the fraudster poses as a law-enforcement or government official and accuses the victim of a crime such as money laundering, drug trafficking, or sending illegal packages. The caller then escalates to a video call, displaying fake FIRs, arrest warrants, and official-looking IDs, and tells the victim they are now under \"digital arrest\" and must remain visible on camera and isolated from family or friends while their case is \"investigated\". Under sustained psychological pressure and threats of real arrest or criminal charges, victims are coerced into transferring money — sometimes repeatedly over days or weeks — into multiple \"safe\" bank accounts or converting funds to cryptocurrency, supposedly to verify their innocence or avoid prosecution, or into handing over OTPs, banking credentials, or remote access to their devices.",
+      "redFlags": [
+        "A caller claims you can be \"arrested\" or investigated entirely through a phone or video call",
+        "You're told to stay on camera continuously and cut off contact with family or friends while the \"investigation\" proceeds",
+        "You're pressured to move money into \"safe\" government or police accounts, or to convert it to cryptocurrency",
+        "Fake documents like arrest warrants, FIRs, or official ID cards are shown on-screen to look legitimate",
+        "The caller uses urgency and threats of immediate arrest, asset freezing, or criminal charges to prevent you from hanging up or consulting anyone"
+      ],
+      "realExamples": [
+        "A 41-year-old Kolkata businessman lost INR 7.55 million over a 12-day digital arrest after scammers accused him of money laundering starting February 23, 2025, calling constantly and keeping him under surveillance until he made multiple transactions.",
+        "A reported ₹58.13 crore fraud investigated by Mumbai cyber-police targeted a 72-year-old victim, involving multiple arrests and the discovery of thousands of fake bank accounts used for laundering."
+      ],
+      "source": "ISACA Industry News, https://www.isaca.org/resources/news-and-trends/industry-news/2025/trapped-virtually-understanding-digital-arrest-scams; Wikipedia, https://en.wikipedia.org/wiki/Digital_arrest_scam; Free Press Journal, https://www.freepressjournal.in/tech/digital-arrest-fraud-over-21900-complaints-involving-647-crore-registered-in-2026-centre-tells-supreme-court",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Video Calls (WhatsApp/Skype)",
+        "Text Messages"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "118",
+      "slug": "fake-retail-coupon-promo-code-scam",
+      "title": "Fake Retail Coupon / Promo Code Scam",
+      "summary": "Scammers post counterfeit coupons and promo codes for well-known retail brands on social media, email, and fake websites to steal personal information, payment details, or spread malware instead of delivering real discounts.",
+      "category": "Shopping Scam",
+      "firstReported": "2025-10-23",
+      "relatedScams": [
+        "Fake Online Store Scam",
+        "Brushing Scam with QR Code Twist",
+        "Online Marketplace Buyer Scam"
+      ],
+      "safetyTips": [
+        "Be skeptical of coupons offering steep discounts near or above an item's retail value",
+        "Verify any coupon directly on the retailer's official website or by calling their customer service line before using it",
+        "Never give personal or financial information to claim a coupon, and don't pay a membership fee for access to discount codes",
+        "Hover over (don't click) links in coupon emails or texts to check where they actually lead before visiting"
+      ],
+      "datePublished": "2026-10-28T21:27:32.284Z",
+      "howItWorks": "Scammers create ads or posts — often using a brand's real logo — that advertise an unusually steep discount, such as 80% off, at a popular retail store. After clicking the coupon or promo code link, the consumer either makes a purchase on a fake storefront that never ships the item, or is sent to a third-party site that asks them to enter personal and payment information in exchange for the coupon. In many cases the victim never receives any coupon or product; in others, a fake tracking number falsely shows the package as delivered, and the company becomes unreachable or stops responding when the buyer seeks a refund. Some versions require signing up for a paid coupon service with a monthly membership fee that promises digital or paper coupons that never arrive or turn out to be fake, while other variations involve sharing a link on social media in exchange for a coupon that leads to a third-party site collecting personal information.",
+      "redFlags": [
+        "Discount is unusually large, near or above the item's actual retail value, like 80% off",
+        "Coupon or deal is only found through a social media ad or shared link rather than the brand's own website",
+        "You're asked to pay a monthly membership fee or provide personal/financial information in exchange for a coupon"
+      ],
+      "realExamples": [
+        "A BBB Scam Tracker report describes a consumer who placed an order via a TikTok promo code and never received their item; a tracking number showed the package as delivered on a Sunday, but nothing arrived, and the company stopped responding to emails",
+        "Another consumer reported ordering clothing through a Facebook discount ad and paying by credit card, but the order never arrived and the tracking information turned out not to be real"
+      ],
+      "source": "Better Business Bureau, https://www.bbb.org/article/scams/22318-bbb-scam-alert-fake-retail-coupons-hit-social-media",
+      "spreadPlatforms": [
+        "Social Media",
+        "Email",
+        "Text Messages",
+        "Fake Websites"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "119",
+      "slug": "dark-sourcery-ai-chatbot-answer-poisoning-scam",
+      "title": "\"Dark Sourcery\" AI Chatbot Answer Poisoning Scam",
+      "summary": "Scammers are flooding the web with fake posts, PDFs, reviews, and support pages specifically engineered to get AI chatbots like ChatGPT, Google Gemini, and Google AI Overview to repeat fraudulent customer support phone numbers and login pages as if they were official company contact details.",
+      "category": "AI Scam",
+      "firstReported": "2026-09-23",
+      "relatedScams": [
+        "SEO Poisoning Bank Account Takeover Scam",
+        "Tech Support Pop-Up Scam",
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Never call a support number or click a login link that an AI chatbot or AI search summary gives you — go directly to the company's official app or website and find contact details there instead",
+        "Independently verify any phone number, email address, or URL for customer support, refunds, account recovery, or software downloads against the company's verified official channels before using it",
+        "Be especially cautious with AI-provided contact details for sensitive tasks like account recovery, payments, refunds, or software updates, since these are the exact categories attackers are targeting",
+        "If you already called a number from a chatbot answer and gave out payment or account information, contact your bank or card issuer immediately to dispute charges and freeze the account"
+      ],
+      "datePublished": "2026-10-28T21:29:19.053Z",
+      "howItWorks": "Researchers at Vigilance Security identified a campaign they call \"Dark Sourcery\" in which attackers borrow search engine optimization techniques, but apply them to AI answer engines instead. They mass-produce content such as fake forum posts, PDFs, reviews, and support pages seeded with fraudulent phone numbers, email addresses, and login pages, designed to be picked up and repeated by AI assistants when users ask \"what is the customer support number for [company].\" When a victim asks a chatbot for a company's support line, refund department, account recovery help, or software download link, the AI may confidently present the attacker's fabricated contact information as fact, without the user ever visiting the poisoned page that supplied it. Victims who call the fake number or visit the fake login page are then asked for credit card numbers, bank login credentials, or other payment details by someone posing as legitimate company support staff.",
+      "redFlags": [
+        "A phone number or contact link for a well-known company was provided by an AI chatbot or AI search summary rather than the company's own verified website",
+        "The 'support agent' who answers immediately asks for a credit card number, full bank login, or payment card data to 'fix' an account, refund, or booking",
+        "The support contact info surfaced by the AI cannot be found on the official company website or app when checked directly",
+        "Unsolicited offers to help move a flight, unlock a bank account, or process a refund come from a number obtained via a chatbot search rather than a number you looked up yourself"
+      ],
+      "realExamples": [
+        "Vigilance Security researchers counted tens of thousands of malicious pages seeded with fake support numbers, email addresses, login pages, and software-update instructions, affecting at least 374 companies including Fortune 100 firms, airlines, banks, travel companies, and software providers.",
+        "Named brands caught up in the campaign reportedly included Delta, Lufthansa, Qatar Airways, Chase, Bank of America, Airbnb, and TripAdvisor.",
+        "Vigilance told Dark Reading it had seen a few occurrences of people complaining about being scammed into giving up payment card details after a chatbot-provided phone number connected them to someone who offered to help move a flight or unlock a bank account before asking for credit card details."
+      ],
+      "source": "Dark Reading, https://www.darkreading.com/threat-intelligence/attackers-manipulate-ai-chatbots-mass-disinformation-phishing-campaign",
+      "spreadPlatforms": [
+        "AI Chatbots (ChatGPT, Google Gemini)",
+        "Google AI Overview / AI Search Results",
+        "Social Media",
+        "Online Forums and Reviews"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
