@@ -1,6 +1,6 @@
 {
-  "version": 39,
-  "lastUpdated": "2026-10-28T21:29:32.638Z",
+  "version": 41,
+  "lastUpdated": "2026-10-29T21:34:08.255Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -158,7 +158,13 @@
     "digital arrest",
     "safe accounts",
     "help move a flight",
-    "unlock a bank account"
+    "unlock a bank account",
+    "parcel expert",
+    "logistics department",
+    "distribution hub",
+    "welcome back",
+    "daily check-in",
+    "balance is about to expire"
   ],
   "aiTells": [
     "extra fingers",

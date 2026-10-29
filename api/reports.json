@@ -1,6 +1,6 @@
 {
-  "version": 87,
-  "lastUpdated": "2026-10-28T21:29:32.639Z",
+  "version": 89,
+  "lastUpdated": "2026-10-29T21:34:08.255Z",
   "reports": [
     {
       "id": "1",
@@ -4539,6 +4539,85 @@
         "Google AI Overview / AI Search Results",
         "Social Media",
         "Online Forums and Reviews"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "120",
+      "slug": "parcel-mule-parcel-expert-reshipping-job-scam",
+      "title": "Parcel Mule / \"Parcel Expert\" Reshipping Job Scam",
+      "summary": "Scammers recruit people via unsolicited messages for a fake work-from-home \"Parcel Expert\" job that actually involves receiving, repackaging, and reshipping merchandise bought with stolen credit cards, turning victims into unwitting mules for stolen goods.",
+      "category": "Employment Scam",
+      "firstReported": "2026-06-25",
+      "relatedScams": [
+        "Money Mule Recruitment Scam",
+        "Fake Job Offer Scam",
+        "Task-Based \"Gamified\" Job Scam"
+      ],
+      "safetyTips": [
+        "Never accept a job that requires you to receive and reship packages from your home address, especially if contacted out of the blue",
+        "Research the hiring company independently and search for complaints or scam reports rather than relying on links sent by a recruiter",
+        "Never give copies of your ID, banking information, or other sensitive documents to an online 'employer' before any formal, verifiable hiring process",
+        "Be suspicious of any job that promises high income for minimal, vague logistics work with flexible hours",
+        "Do not interact with the scammer, do not forward any packages you did not personally order, and report the incident to the proper authorities (in the US, the FTC)"
+      ],
+      "datePublished": "2026-10-29T21:32:04.485Z",
+      "howItWorks": "Targets are contacted out of the blue by email, social media DM, or WhatsApp with a job offer from someone claiming to work in a \"Logistics Department\" for a well-known retailer or shipping company. The message offers a flexible, high-paying remote role — titled something like \"Parcel Expert\" — where the victim's only duties are to receive packages at their home address, check the items against invoices, take photos, repackage them, and forward them to a \"distribution hub,\" sometimes internationally. In reality, the packages contain merchandise purchased with stolen payment card information, and the victim is unknowingly helping criminals launder stolen goods by breaking the shipping trail. Victims are often asked to hand over personal documents and banking details during a fake \"onboarding\" process, and are never actually paid for the \"work.\"",
+      "redFlags": [
+        "Unsolicited job offer for well-paid remote work received, inspecting, and reshipping packages",
+        "Legitimate companies do not ship high-value goods to a private home address of someone they just hired online",
+        "Job offer invokes trusted big-name retailers or carriers (Amazon, FedEx, Walmart, Best Buy, DHL, AliExpress, Zappos) as a trust signal",
+        "High pay for low-skill, home-based work with flexible hours and no interview",
+        "Requests to send packages onward to another address, hub, or international destination",
+        "Requests for personal ID documents or banking details during onboarding"
+      ],
+      "realExamples": [
+        "Malwarebytes documented a message reading in part: \"My name is Elena from the Logistics Department. We reviewed your profile and would like to offer you a position as a Parcel Expert\" promising a remote part-time role paying up to $5,300 a month for receiving, checking, and forwarding packages.",
+        "Malwarebytes found the companies named in these offers vary by region: a German target was recruited to work for DHL, a Spanish target received an offer for 'mercado,' and a US target got an offer referencing a company called Freight Metro, with Amazon, FedEx, Best Buy, AliExpress, and Walmart also commonly invoked."
+      ],
+      "source": "Malwarebytes, https://www.malwarebytes.com/blog/scams/2026/06/beware-of-parcel-expert-job-offers-theyre-parcel-mule-scams",
+      "spreadPlatforms": [
+        "Email",
+        "Social Media",
+        "WhatsApp",
+        "Direct Messages"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "121",
+      "slug": "fake-tiktok-rewards-loyalty-app-scam",
+      "title": "Fake TikTok \"Rewards\" / Loyalty App Scam",
+      "summary": "Scam websites dressed up as TikTok \"rewards\" or loyalty programs promise users cash for daily check-ins, referrals, and simple tasks, but the growing balance is fake and can never actually be withdrawn.",
+      "category": "Shopping Scam",
+      "firstReported": "2026-08-17",
+      "relatedScams": [
+        "Task-Based \"Gamified\" Job Scam",
+        "TikTok \"VIP Upgrade\" Crypto Inheritance DM Scam",
+        "Fake Retail Coupon / Promo Code Scam"
+      ],
+      "safetyTips": [
+        "Remember TikTok's real Creator Rewards Program is only for eligible creators who meet specific platform requirements, not for check-ins or tasks on a separate website",
+        "Don't assume a rewards site is legitimate just because it carries a TikTok logo or welcome message",
+        "Never download a third-party app or hand over banking/personal details just to 'verify' a withdrawal",
+        "Treat growing on-screen balances and countdown timers as manipulation tactics, not real money, since the numbers are generated by the site itself with no connection to TikTok's systems"
+      ],
+      "datePublished": "2026-10-29T21:33:57.921Z",
+      "howItWorks": "Victims land on a site or app built to look like a mobile shopping or loyalty program, complete with a TikTok logo, a \"welcome back\" greeting, a daily check-in tracker, and tabs for tasks, referrals, and a profile. Completing check-ins and tasks earns \"points\" that convert into a cash balance that can look like thousands of dollars, often paired with a countdown timer warning that the balance is about to expire to pressure quick action. When the user tries to redeem the low minimum withdrawal, the site always introduces one more requirement before cashing out — refer more friends, watch more videos, complete a sponsored offer through an affiliate network, or download a separate app to \"verify\" identity. None of the numbers reflect a real ledger; the balance, points, and countdown are simply invented by the site operator, who actually profits through affiliate and cost-per-action payouts or by getting victims to install adware-laden apps.",
+      "redFlags": [
+        "A site or app uses TikTok branding to offer large cash rewards for daily check-ins, referrals, or simple tasks separate from TikTok's own platform",
+        "A countdown timer claims your balance will expire if you don't act immediately",
+        "Every time you get close to withdrawing, a new requirement appears (refer more people, watch more videos, complete an offer, download an app)",
+        "The promised cash balance or points total seems unrealistically large for the small amount of effort involved"
+      ],
+      "realExamples": [
+        "Malwarebytes documented TikTok-branded rewards pages built to look like a mobile shopping or loyalty app, with a daily check-in tracker and tabs for tasks, referrals, and profile, where users were told to refer more friends, watch more videos, complete a sponsored offer, or download an app before they could withdraw their 'earnings.'"
+      ],
+      "source": "Malwarebytes, https://www.malwarebytes.com/blog/scams/2026/08/fake-tiktok-rewards-promise-cash-youll-never-get",
+      "spreadPlatforms": [
+        "Social Media",
+        "Websites",
+        "Mobile Apps"
       ],
       "isAIDiscovered": true
     }
