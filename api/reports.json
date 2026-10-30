@@ -1,6 +1,6 @@
 {
-  "version": 89,
-  "lastUpdated": "2026-10-29T21:34:08.255Z",
+  "version": 91,
+  "lastUpdated": "2026-10-30T21:17:22.434Z",
   "reports": [
     {
       "id": "1",
@@ -4618,6 +4618,83 @@
         "Social Media",
         "Websites",
         "Mobile Apps"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "122",
+      "slug": "tap-to-pay-charity-donation-scam",
+      "title": "Tap-to-Pay Charity Donation Scam",
+      "summary": "Fake fundraisers approach people in public with a phone and ask for a small tap-to-pay donation, but secretly key in a vastly larger amount before the victim taps, turning an intended $15-$20 gift into a charge of thousands of dollars.",
+      "category": "Charity Scam",
+      "firstReported": "2025-12-02",
+      "relatedScams": [
+        "Fake Charity / Disaster Relief Scam",
+        "\"Ghost Tapping\" Contactless Payment Scam"
+      ],
+      "safetyTips": [
+        "Avoid using tap-to-pay features to make donations, or at a minimum, review the details of the transaction before you tap your payment method",
+        "Always do your research before giving to a charity",
+        "Visit the secretary of state's charities search page to determine if a charity is registered, or check third-party rating companies like the Better Business Bureau's give.org, CharityWatch, or Charity Navigator",
+        "Review your financial statements after making an in-person donation to check for charges larger than you authorized",
+        "If you believe you've been a victim of a charity scam, file a complaint with the attorney general's office"
+      ],
+      "datePublished": "2026-10-30T21:15:30.665Z",
+      "howItWorks": "A solicitor — often young and well-dressed, claiming to represent a charity and sometimes offering music CDs in exchange for donations — approaches someone in a public place like a waterfront area and asks for a small donation. When the target agrees to give something like $15 or $20, the solicitor offers to accept the donation using the tap-to-pay feature on their phone. The donor agrees but does not review the transaction details before tapping. Instead of entering the small amount the donor agreed to, the solicitor secretly enters a far larger figure into the device. The victim doesn't realize what happened until they review their financial statements at a later date and discover a charge much larger than they authorized. In at least one documented case the \"charity\" involved was actually a for-profit LLC that was not registered as a charitable organization with the state or listed with the IRS as a public charity.",
+      "redFlags": [
+        "A stranger soliciting donations in a public place asks to accept the donation via tap-to-pay on their own phone rather than cash or a verifiable method",
+        "You are asked to tap your payment method without being shown or reviewing the transaction details before tapping",
+        "The \"charity\" can't be independently verified as registered with the secretary of state's charities search page or listed with the IRS as a public charity",
+        "Solicitors cluster in busy public areas like a waterfront and solicit modest donations in person"
+      ],
+      "realExamples": [
+        "The Washington State Attorney General's Office received multiple reports during the 2024 holiday season of young, well-dressed men soliciting near the Seattle waterfront claiming to collect donations for a charity called the Youth Upliftment Society, which was organized as a for-profit LLC and was not registered as a charitable organization with the Washington Secretary of State or listed with the IRS as a public charity. In one example, a donor agreed to give $15 but later identified a charge for $4,800; in another, a donor agreed to give $20 and later found a charge of nearly $5,000."
+      ],
+      "source": "Washington State Attorney General's Office, https://www.atg.wa.gov/news/news-releases/consumer-alert-watch-out-potential-scam-charities-requesting-donations-tap-pay",
+      "spreadPlatforms": [
+        "In-Person Solicitation",
+        "Mobile Payment Apps",
+        "Social Media (Reddit warnings)"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "123",
+      "slug": "search-parameter-injection-fake-support-number-scam",
+      "title": "Search Parameter Injection Fake Support Number Scam",
+      "summary": "Scammers buy sponsored Google ads that use malicious URL parameters to inject a fake \"customer support\" phone number directly into the real, legitimate website of brands like Netflix, Apple, Microsoft, and Bank of America. Because the page is 100% authentic and the address bar shows the real domain, victims have no reason to suspect the number is fraudulent.",
+      "category": "Tech Scam",
+      "firstReported": "2025-06-20",
+      "relatedScams": [
+        "Tech Support Pop-Up Scam",
+        "SEO Poisoning Bank Account Takeover Scam",
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Never trust a phone number that appears after clicking a sponsored search ad — navigate to support pages directly through the company's app or by typing the known official URL",
+        "Verify any customer service number against the back of your card, a billing statement, or the company's official app before calling",
+        "Use a browser security extension capable of detecting search/URL hijacking attempts",
+        "Never give remote access to your device or share one-time codes/passwords with anyone who called or whom you reached via a number found in search results",
+        "If you already called a suspicious number, change your passwords and monitor financial accounts immediately"
+      ],
+      "datePublished": "2026-10-30T21:17:06.625Z",
+      "howItWorks": "A person searches Google for a company's customer service number and clicks a sponsored ad that actually leads to the genuine brand website. However, the ad's URL contains crafted search-query parameters that exploit a \"reflected input vulnerability\" — the site's own search function blindly displays whatever text is fed into that parameter without sanitizing it. This lets scammers make their own phone number appear prominently inside what looks like an official search result or support section on the real page. The browser address bar shows the legitimate domain, so there's no obvious red flag. When the victim calls the number believing it's the company's real help line, scammers posing as support agents ask for login credentials, financial account details, or remote access to the victim's device under the guise of resolving an account issue.",
+      "redFlags": [
+        "A phone number embedded directly in a long, odd-looking URL with lots of encoded characters",
+        "The support number appears inside a search results box on the page rather than in the company's normal official contact page",
+        "You reached the page by clicking a sponsored/ad link from a search engine rather than typing the company's URL or using its app",
+        "The phone agent immediately asks for passwords, account credentials, or remote-access software installation",
+        "The displayed number differs from the number listed in the company's official app or billing statements"
+      ],
+      "realExamples": [
+        "Malwarebytes identified fake support numbers inserted into real pages for Apple, Bank of America, Facebook, HP, Microsoft, Netflix, and PayPal via sponsored search ads using malicious URL parameters.",
+        "Researchers found Netflix's own search function would blindly reflect whatever text was placed in its query parameter without sanitization, letting scammers display their number as if it were an official result.",
+        "Malwarebytes' Browser Guard displayed a 'Search Hijacking Detected' warning after flagging the unauthorized number insertions on these hijacked but genuine pages."
+      ],
+      "source": "Malwarebytes, https://www.malwarebytes.com/blog/news/2025/06/scammers-hijack-websites-of-bank-of-america-netflix-microsoft-and-more-to-insert-fake-phone-number",
+      "spreadPlatforms": [
+        "Google Search Ads",
+        "Web Browsers"
       ],
       "isAIDiscovered": true
     }

@@ -1,6 +1,6 @@
 {
-  "version": 41,
-  "lastUpdated": "2026-10-29T21:34:08.255Z",
+  "version": 42,
+  "lastUpdated": "2026-10-30T21:17:22.433Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -164,7 +164,8 @@
     "distribution hub",
     "welcome back",
     "daily check-in",
-    "balance is about to expire"
+    "balance is about to expire",
+    "reflected input vulnerability"
   ],
   "aiTells": [
     "extra fingers",
