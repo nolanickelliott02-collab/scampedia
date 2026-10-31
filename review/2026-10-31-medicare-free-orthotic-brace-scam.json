@@ -1,0 +1,59 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "124",
+    "slug": "medicare-free-orthotic-brace-scam",
+    "title": "Medicare Free Orthotic Brace Scam",
+    "summary": "Fraudsters cold-call Medicare beneficiaries or run TV/radio ads offering \"free\" back, knee, or shoulder braces, then use the beneficiary's Medicare number to bill the program for unnecessary equipment that is often never needed or never actually used.",
+    "category": "Government Scam",
+    "firstReported": "2019-04-01",
+    "relatedScams": [
+      "Medicare / Health Insurance Scam",
+      "Phantom Debt Collector Scam",
+      "Government Grant Scam"
+    ],
+    "safetyTips": [
+      "Hang up immediately on unsolicited calls offering free medical equipment billed to Medicare",
+      "Never give your Medicare number to a caller, telemarketer, or TV/radio ad respondent you did not contact first",
+      "Refuse delivery of, or return, any medical equipment you did not order through your own doctor, and keep records of the company and return date",
+      "Talk to a doctor you already know and trust before accepting any prescribed brace or equipment",
+      "Check your Medicare Summary Notice regularly for equipment billed that you never received or requested, and report suspicious billing to the HHS-OIG hotline"
+    ],
+    "datePublished": "2026-10-31T02:03:59.269Z",
+    "howItWorks": "According to HHS-OIG, scammers run the scheme through a chain of players: a call center airs television and radio ads or makes direct outbound calls offering Medicare beneficiaries a \"free or low-cost\" orthotic brace, then confirms the person has Medicare and transfers them to a telemedicine company for a brief phone \"consultation.\" The telemedicine doctor prescribes a brace regardless of whether it is medically necessary, and that prescription is sold on to a durable medical equipment company, which ships the brace (sometimes several unrequested braces) to the beneficiary and bills Medicare using their personal information. Because the beneficiary never actually needed or ordered the equipment, Medicare's records show they already received the item, which can make it harder to get a genuinely needed brace covered later.",
+    "redFlags": [
+      "An unsolicited call or ad offers a brace, knee sleeve, or other medical equipment described as 'free' and covered automatically by Medicare",
+      "You're asked to confirm or provide your Medicare number before any doctor you know has evaluated you",
+      "A brief phone call with an unfamiliar 'telemedicine' doctor results in an immediate prescription with no real exam",
+      "Unordered braces or medical equipment show up at your home",
+      "You receive more than one brace or device you never requested"
+    ],
+    "realExamples": [
+      "HHS-OIG announced in April 2019 that it helped dismantle what was described as one of the largest healthcare fraud schemes ever investigated in terms of Medicare billing, built around this brace scheme",
+      "HHS-OIG's published scheme breakdown describes a call center paying a telemedicine company and doctor for brace prescriptions regardless of medical necessity, then selling those prescriptions to equipment suppliers who billed Medicare"
+    ],
+    "source": "U.S. Department of Health and Human Services Office of Inspector General (HHS-OIG), \"Fraud Alert: Nationwide Brace Scam,\" https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-nationwide-brace-scam/",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Television Advertising",
+      "Radio Advertising"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Medicare / Health Insurance Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "low",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Nationwide Brace Scam"
+    ],
+    "confidence": 0.7,
+    "reasoning": "This is a specific orthotic-brace billing fraud scheme, but it falls under the broader existing 'Medicare / Health Insurance Scam' category which likely already covers Medicare billing fraud using beneficiary information; it's a narrower variant rather than a fundamentally new pattern."
+  },
+  "queuedAt": "2026-10-31T02:04:03.890Z"
+}
