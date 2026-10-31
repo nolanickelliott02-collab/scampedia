@@ -1,0 +1,61 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "124",
+    "slug": "fake-sportsbook-betting-site-scam",
+    "title": "Fake Sportsbook / Betting Site Scam",
+    "summary": "Scammers build copycat sports-betting websites and apps that mimic legitimate sportsbooks, luring bettors during high-profile events like the Super Bowl to deposit money that is never paid back as winnings.",
+    "category": "Investment Scam",
+    "firstReported": "2026-02-05",
+    "relatedScams": [
+      "Fake Trading App Scam",
+      "Fake Online Store Scam",
+      "Phishing Email Scam"
+    ],
+    "safetyTips": [
+      "Only use well-known, licensed sportsbooks downloaded directly from official app stores or typed-in URLs, never links from ads or social posts",
+      "Verify a sportsbook's license and physical operating location with your state gaming regulator before depositing funds",
+      "Never click links in unsolicited texts or emails claiming to be from a betting app's support team; log in directly through the official app instead",
+      "Use unique passwords and enable two-factor authentication on betting accounts since they often store payment methods",
+      "Be skeptical of any site demanding extra wagering before you can withdraw money you've already won"
+    ],
+    "datePublished": "2026-10-31T20:24:27.788Z",
+    "howItWorks": "Fraudsters build fake betting websites and apps that closely imitate real sportsbooks, now using AI tools to duplicate logos, layouts and other graphics so the sites look authentic. They promote these copycat platforms through sponsored search ads, social media posts, and promises of \"exclusive insider picks\" or free-bet bonuses, driving traffic ahead of major sporting events when betting volume spikes. Victims create accounts and deposit funds or enter payment details, but when they try to cash out, they're told they must wager several times their deposit before withdrawing, or their \"winnings\" simply never arrive. A related variant involves scammers impersonating betting-app customer support or sending fake account-alert texts/emails to steal login credentials, letting criminals take over real betting accounts, drain stored funds, or change withdrawal destinations.",
+    "redFlags": [
+      "Betting site or app was found through a sponsored ad or social media post rather than an official app store or known brand",
+      "Platform cannot clearly state which state or jurisdiction licenses it to operate",
+      "You're told to wager multiple times your deposit amount before any withdrawal is allowed",
+      "Unsolicited texts or emails about your betting account asking you to 'verify' your login or payment details",
+      "Promises of guaranteed wins or paid 'insider picks' tied to a specific game"
+    ],
+    "realExamples": [
+      "Ahead of Super Bowl LX, the congressional Joint Economic Committee warned that criminals were creating fake websites mimicking real gambling platforms, using AI tools to duplicate logos and visuals to fool bettors expected to wager a record $1.8 billion on the game",
+      "McAfee's security researchers described scammers creating copycat sportsbooks promoted via ads, search results and social media, where victims deposit money or payment details but winnings are never paid out, plus phishing texts/emails impersonating betting-app support to hijack accounts",
+      "A BBB Scam Tracker report described a bettor who won $30 on a deposit but was told they first had to wager thousands of dollars more in deposit-plus-promo funds before any withdrawal would be allowed"
+    ],
+    "source": "CBS News, https://www.cbsnews.com/news/super-bowl-2026-scams-betting-tickets-merchanise/",
+    "spreadPlatforms": [
+      "Social Media",
+      "Search Engine Ads",
+      "Text Messages",
+      "Email",
+      "Mobile Apps"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "new",
+    "severity": "medium",
+    "urgency": "high",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Fake Gambling Platform Scam"
+    ],
+    "confidence": 0.55,
+    "reasoning": "The source describes fake sportsbook websites mimicking FanDuel/DraftKings using AI-duplicated graphics to lure Super Bowl bettors with risk-free bonuses, then withholding payouts or demanding more deposits—distinct from existing entries like Fake Trading App Scam or Crypto Investment Scam, though it's arguably closer to a Shopping/Tech scam than Investment Scam since it doesn't involve investment returns but gambling deposits. The candidate's claim about account takeover via fake customer support and credential theft is not explicitly supported in the source text, which only covers fake sites, ticket scams, and merchandise scams, so that portion should be flagged as unverified embellishment."
+  },
+  "queuedAt": "2026-10-31T20:24:35.132Z"
+}
