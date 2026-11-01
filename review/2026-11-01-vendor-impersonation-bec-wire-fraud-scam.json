@@ -1,0 +1,58 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "124",
+    "slug": "vendor-impersonation-bec-wire-fraud-scam",
+    "title": "Vendor Impersonation BEC Wire Fraud Scam",
+    "summary": "Fraudsters spend weeks or months posing as a trusted construction contractor or vendor via email and phone, then quietly get a city or business to change the vendor's banking details, diverting a huge legitimate payment to a fraud-controlled account.",
+    "category": "Government Scam",
+    "firstReported": "2026-10-21",
+    "relatedScams": [
+      "Boss/CEO Gift Card Impersonation (BEC) Scam",
+      "Fake Invoice & Subscription Renewal Scam",
+      "Mortgage Closing Wire Fraud Scam"
+    ],
+    "safetyTips": [
+      "Before paying any invoice that includes a change to banking or contact information, call the vendor back using a phone number you already have on file, not one provided in the email",
+      "Require a documented, multi-person verification process for any change to vendor banking details, especially for large contracts",
+      "Treat any change in bank account, address, or a new point of contact as a mandatory pause-and-verify moment, regardless of how convincing the paperwork looks",
+      "Build a culture of verification among employees who handle payments and train them to recognize slow-building vendor impersonation schemes",
+      "Reconcile vendor payment confirmations directly with the vendor on a separate, trusted channel rather than relying on email replies alone"
+    ],
+    "datePublished": "2026-11-01T20:54:53.128Z",
+    "howItWorks": "A criminal first studies a real vendor relationship, often targeting large government construction or infrastructure projects, then contacts city or company employees posing as an official from that vendor. Over a period of weeks or months, the scammer builds credibility through a steady stream of authentic-looking emails, real invoices, and phone calls, gradually earning the trust of the staff who process payments. Once trust is established, the fraudster requests a \"routine\" update to the vendor's file, swapping in a new email address, mailing address, and especially new bank account details. When the next large invoice comes due, the legitimate-looking payment is approved through normal channels and wired straight into the account the criminal controls, with no malware, virus, or network breach required. The fraud is typically only discovered during an audit or when the real vendor calls asking why they were never paid.",
+    "redFlags": [
+      "A vendor contact requests a change to banking, mailing address, or contact information shortly before a large invoice is due",
+      "The request to change payment details arrives only by email or phone with no independent verification",
+      "Unusually large or one-time payments tied to big capital projects are processed without a callback to a previously known vendor number",
+      "A new or slightly altered vendor email address appears after months of normal correspondence",
+      "Internal staff feel urgency or pressure not to \"slow down\" a routine-seeming vendor payment update"
+    ],
+    "realExamples": [
+      "The City of Mobile, Alabama wired $14.7 million meant for its Regions Arena construction project to a fraudulent account after a scammer impersonating contractor B.L. Harbert International spent months building trust with city employees and ultimately got the vendor's bank account and address information changed in the city's payment system.",
+      "Mobile officials said another vendor payment was redirected to a fraudulent account around August, but the diversion was caught and the money recovered within about two days.",
+      "The Better Business Bureau of Central and South Alabama warned that another local business nearly lost over three-quarters of a million dollars to the same type of business email compromise scheme, and that other Alabama municipalities were targeted by similar construction-payment scams."
+    ],
+    "source": "1819 News (BBB warning), https://1819news.com/news/item/alabama-businesses-targeted-by-same-scam-that-cost-mobile-14-7-million",
+    "spreadPlatforms": [
+      "Email",
+      "Phone Calls"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Mortgage Closing Wire Fraud Scam",
+    "novelty": "known-variant",
+    "severity": "high",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Business Email Compromise (BEC) Vendor Scam"
+    ],
+    "confidence": 0.55,
+    "reasoning": "This is fundamentally the same Business Email Compromise (BEC) technique already represented in the database by 'Mortgage Closing Wire Fraud Scam' and 'Boss/CEO Gift Card Impersonation (BEC) Scam' — impersonating a trusted party via email to redirect a wire payment through fraudulent bank-detail changes. While the specific context (vendor/contractor impersonation targeting a city government payment) is a notable variant worth noting, it is not a fundamentally distinct scam mechanism from existing BEC entries, so it reads as a known-variant rather than a wholly new pattern."
+  },
+  "queuedAt": "2026-11-01T20:55:02.645Z"
+}
