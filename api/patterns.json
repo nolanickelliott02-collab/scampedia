@@ -1,6 +1,6 @@
 {
-  "version": 42,
-  "lastUpdated": "2026-10-30T21:17:22.433Z",
+  "version": 43,
+  "lastUpdated": "2026-11-01T20:57:10.315Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -165,7 +165,10 @@
     "welcome back",
     "daily check-in",
     "balance is about to expire",
-    "reflected input vulnerability"
+    "reflected input vulnerability",
+    "dispute or cancel the charge",
+    "renewal notice",
+    "bonus payout"
   ],
   "aiTells": [
     "extra fingers",
