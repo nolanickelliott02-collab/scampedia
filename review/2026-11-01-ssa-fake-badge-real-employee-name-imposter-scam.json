@@ -1,0 +1,60 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "124",
+    "slug": "ssa-fake-badge-real-employee-name-imposter-scam",
+    "title": "SSA Fake Badge & Real-Employee-Name Imposter Scam",
+    "summary": "Criminals are impersonating Social Security Administration and SSA Office of Inspector General staff by using real employees' names, fabricated ID badge images, and fake social media profiles to convince victims they're dealing with a genuine official.",
+    "category": "Government Scam",
+    "firstReported": "2026-04-28",
+    "relatedScams": [
+      "Social Security Number Suspended Scam",
+      "Senior U.S. Official Impersonation Messaging Scam"
+    ],
+    "safetyTips": [
+      "Ignore unexpected outreach claiming to be from SSA or SSA OIG, even if it includes a badge photo or a real-sounding employee name",
+      "Create and monitor your own my Social Security account to help protect against identity thieves",
+      "Verify official SSA social media accounts at ssa.gov/socialmedia rather than trusting a profile that contacts you directly",
+      "Report fake social media profiles directly to the platform and report the scam to IC3, the FTC, or oig.ssa.gov/report",
+      "Remember no legitimate government employee will ever send badge photos, demand immediate payment, or ask for gift cards, gold bars, cryptocurrency, wire transfers, or cash"
+    ],
+    "datePublished": "2026-11-01T01:58:09.475Z",
+    "howItWorks": "Scammers contact victims by phone, text, email, social media, or mail claiming to be from SSA, SSA OIG, or law enforcement. To appear legitimate, they use the actual name of a real SSA employee paired with a fabricated badge or credential image, and they mine information from that employee's genuine social media profiles to build a convincing fake profile and \"build trust\" before making contact. Once trust is established, they claim there is a problem with the victim's Social Security number, benefits, account, or identity, pressure the person to act immediately, and demand payment through hard-to-trace methods such as gift cards, precious metals like gold bars, cryptocurrency, wire transfers, or cash.",
+    "redFlags": [
+      "Someone claiming to be from SSA or SSA OIG sends a photo of a badge or ID credential",
+      "Caller or texter pressures you to act immediately about a Social Security number or benefits problem",
+      "Payment demanded via gift cards, gold bars, cryptocurrency, wire transfer, or cash",
+      "Threats of arrest or legal action tied to your Social Security number",
+      "Contact comes through an unsolicited social media profile claiming to belong to a government employee"
+    ],
+    "realExamples": [
+      "SSA OIG's April 28, 2026 scam alert describing a surge in imposter scams using real SSA/OIG employee names, fabricated badge images, and fraudulent social media profiles to initiate contact with victims",
+      "Earlier SSA OIG reporting on scammers sending SMS text messages containing images of forged government ID badges that used official logos and real employee names and photos pulled from sites like LinkedIn or Facebook"
+    ],
+    "source": "SSA Office of the Inspector General, https://oig.ssa.gov/scam-alerts/2026-04-28-new-wave-of-imposter-scams-criminals-using-real-ssa-employee-names-and-fake-badges/",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Text Messages",
+      "Email",
+      "Social Media",
+      "Mail"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Social Security Number Suspended Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "SSA OIG Fake Badge Scam"
+    ],
+    "confidence": 0.6,
+    "reasoning": "This is fundamentally the same SSA impersonation scheme already covered by 'Social Security Number Suspended Scam' — same agency impersonation, same false SSN/benefits problem pretext, same pressure tactics and payment methods (gift cards, crypto, wire, cash). The added twist of using real employee names, fabricated badge images, and mined social media profiles is a notable embellishment but not a structurally distinct scam category from the existing SSA entry."
+  },
+  "queuedAt": "2026-11-01T01:58:14.318Z"
+}
