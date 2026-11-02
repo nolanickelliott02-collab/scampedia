@@ -1,6 +1,6 @@
 {
-  "version": 92,
-  "lastUpdated": "2026-11-01T20:57:10.316Z",
+  "version": 93,
+  "lastUpdated": "2026-11-02T23:44:36.177Z",
   "reports": [
     {
       "id": "1",
@@ -4737,6 +4737,49 @@
         "Google Calendar",
         "Microsoft Outlook",
         "Mobile Calendar Apps"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "125",
+      "slug": "lost-pet-fake-finder-recovery-service-scam",
+      "title": "Lost Pet \"Fake Finder\" & Recovery Service Scam",
+      "summary": "Scammers monitor social media posts about missing pets and pose as the animal's finder or a professional pet-recovery service, demanding upfront payment before ever producing the pet.",
+      "category": "Shopping Scam",
+      "firstReported": "2024-06-28",
+      "relatedScams": [
+        "Fake Online Pet Sale Scam",
+        "Social Media Account Takeover Scam",
+        "Advance Fee Loan Scam"
+      ],
+      "safetyTips": [
+        "Never send money to anyone claiming to have found your pet until they provide a current photo or video proof and you've verified details only the real finder could know",
+        "Limit unique physical details (scars, microchip numbers) shared in public lost-pet posts so you can use them to verify a legitimate finder",
+        "Research any pet search/recovery company on BBB.org or Scam Tracker before paying, and be wary of firms with little to no verifiable online presence",
+        "Microchip your pet and consider a GPS tracker so you have an independent way to confirm location claims",
+        "Treat any request for payment via Cash App, Venmo, wire transfer, or gift cards as a major red flag, especially before you've seen proof of the pet"
+      ],
+      "datePublished": "2026-11-02T23:44:13.814Z",
+      "howItWorks": "After a pet owner posts a lost-pet notice with photos and contact info on Facebook or lost-pet websites, scammers search those posts to find targets. One version has a \"finder\" text or call the owner claiming to have the pet, then stalling on sending proof (a current photo or video) while pressuring the owner to send money or gift cards before they'll return the animal; some even claim the pet was hit by a car and needs emergency surgery money immediately. A second version involves fake \"pet search services\" that message the owner offering drone searches, scent-tracking dogs, or organized search parties, quoting an upfront fee (commonly around $200-$300) paid through a peer-to-peer app, promising a refund if the search fails — then simply disappearing with the money or demanding ever more fees for \"extended searches.\"",
+      "redFlags": [
+        "Someone claims to have found your pet but refuses or stalls on sending a current photo or live video of the animal",
+        "Upfront payment is demanded before the pet is returned or before any search even begins",
+        "Payment is requested via peer-to-peer apps, gift cards, or other hard-to-trace methods",
+        "The 'finder' or search company can't describe unique details of your pet or has no verifiable business presence",
+        "A claimed veterinary emergency is used to create panic and rush a payment"
+      ],
+      "realExamples": [
+        "A BBB Scam Tracker report described a scammer contacting a pet owner about a missing pet and asking for a $200 payment for a drone search, promising a refund if unsuccessful, before the company was found to have multiple other 'scam' reports.",
+        "Maryland prosecutors warned that scammers identify owners through lost-pet ads on social media, claim the pet is injured and needs immediate medical attention, and in one case convinced an owner to transfer $2,600 before realizing it was fraud.",
+        "A Green Bay, Wisconsin woman searching for her lost Pomeranian was told her dog had been hit on the highway and was asked to pay $300 upfront to a company called Pawtrail Finders before getting any further details.",
+        "An Ecorse, Michigan woman lost close to $200 via Cash App after a caller claimed to have found her missing dog and sent what turned out to be an AI-generated photo as 'proof.'",
+        "The Humane Society of Tampa Bay warned that scammers were spoofing its phone number and mimicking its voicemail to claim a missing pet needed emergency surgery and pressure victims into paying via PayPal."
+      ],
+      "source": "BBB, https://www.bbb.org/article/scams/8612-lost-pet-watch-out-for-this-text-message-scam; Patch, https://patch.com/maryland/annapolis/md-warns-new-scam-targeting-pet-owners-what-know",
+      "spreadPlatforms": [
+        "Social Media",
+        "Text Messages",
+        "Phone Calls"
       ],
       "isAIDiscovered": true
     }

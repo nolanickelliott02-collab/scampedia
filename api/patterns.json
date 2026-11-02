@@ -1,6 +1,6 @@
 {
-  "version": 43,
-  "lastUpdated": "2026-11-01T20:57:10.315Z",
+  "version": 44,
+  "lastUpdated": "2026-11-02T23:44:36.177Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -168,7 +168,8 @@
     "reflected input vulnerability",
     "dispute or cancel the charge",
     "renewal notice",
-    "bonus payout"
+    "bonus payout",
+    "pet search services"
   ],
   "aiTells": [
     "extra fingers",
