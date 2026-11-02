@@ -1,0 +1,60 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "126",
+    "slug": "funeral-home-impersonation-payment-scam",
+    "title": "Funeral Home Impersonation Payment Scam",
+    "summary": "Scammers scour online obituaries and then call or text grieving families within hours of a death, posing as the actual funeral home or director, demanding an urgent \"deposit\" to secure cremation or burial services.",
+    "category": "Government Scam",
+    "firstReported": "2023-06-01",
+    "relatedScams": [
+      "AI Obituary Mining \"Graveyard Grift\" Scam",
+      "Fake Bank Fraud Alert Scam",
+      "Phantom Debt Collector Scam"
+    ],
+    "safetyTips": [
+      "Hang up and call the funeral home back using a number you already have on file or from its General Price List \"not a number given in the suspicious call or text",
+      "Never send payment via wire transfer, gift card, PayPal, or Cash App for funeral services; legitimate funeral homes invoice through standard, verifiable billing",
+      "Resist pressure to pay immediately \"honest businesses give you time to decide, and real funeral costs are not due within hours of a death",
+      "Limit the personal and financial details included in online obituaries, and warn family members in advance that such scam calls or texts may occur",
+      "Report suspected funeral scams to the FTC at ReportFraud.ftc.gov and to local law enforcement"
+    ],
+    "datePublished": "2026-11-02T23:46:57.278Z",
+    "howItWorks": "After a death notice or obituary is posted online, fraudsters quickly search it for the deceased's name and surviving family members' contact details. They then call or text the family — often spoofing the real funeral home's phone number so the caller ID shows its actual name — claiming to be a funeral director or employee. The scammer says a payment or \"deposit\" is needed immediately or the cremation/burial will be canceled or delayed, pressuring the shocked, grieving family to pay right away via hard-to-trace methods like wire transfer, PayPal, or Cash App rather than the funeral home's normal billing process.",
+    "redFlags": [
+      "Contact comes within hours of posting an obituary and demands immediate payment or the service will be canceled",
+      "Caller ID or texts show the real funeral home's name or number (spoofed), but payment is requested via wire transfer, PayPal, or Cash App instead of normal invoicing",
+      "Scammer pressures the family not to verify or hang up, exploiting grief and confusion",
+      "Amounts or names given by the caller don't match prior paperwork or invoices from the actual funeral home",
+      "Request to pay a third party (e.g., a 'life insurance agent' or unfamiliar name) rather than the funeral home directly"
+    ],
+    "realExamples": [
+      "The FTC described the scheme in a 2023 consumer alert, saying imposters pretend to be from the funeral home and claim the funeral will be canceled unless the family pays more money immediately, calling it worthy of a \"Scammers Hall of Shame\" top-10 spot.",
+      "NBC News reported a widow, Lisa Ann Motto, was targeted the day after her husband died, with a caller using the spoofed number of the real Rainsville Funeral Home and the name of an actual funeral director.",
+      "A Georgetown County, S.C. sheriff's office reported a mother was called by a man impersonating her son's funeral home employee demanding immediate phone payment for an \"outstanding balance\" right after her son's death.",
+      "In 2026, a Harlem, Georgia woman received a text from someone posing as the real funeral home owner within hours of a preliminary obituary post, after her mother's death."
+    ],
+    "source": "NBC News, https://www.nbcnews.com/news/crime-courts/despicable-funeral-home-scam-targets-grieving-family-members-rcna99325; WRDW, https://www.wrdw.com/2026/06/04/funeral-home-imposter-scam-targets-harlem-family-hours-after-mothers-death/",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Text Messages",
+      "Spoofed Caller ID"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "AI Obituary Mining \"Graveyard Grift\" Scam",
+    "novelty": "recurring",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Funeral Home Imposter Scam"
+    ],
+    "confidence": 0.6,
+    "reasoning": "This closely mirrors the existing \"AI Obituary Mining 'Graveyard Grift' Scam\" entry — both involve scammers scouring online obituaries to identify grieving families and then impersonating funeral homes to demand urgent deposits via spoofed calls/texts and untraceable payment methods. Without clear differentiation (e.g., no AI element emphasized here, but the core mechanism of obituary mining + funeral home impersonation + urgent deposit demand is identical), this appears to be a duplicate/variant rather than a genuinely new pattern."
+  },
+  "queuedAt": "2026-11-02T23:47:07.685Z"
+}

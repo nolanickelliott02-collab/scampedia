@@ -1,0 +1,58 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "126",
+    "slug": "discount-medical-insurance-plan-scam",
+    "title": "Discount Medical Insurance Plan Scam",
+    "summary": "Scammers cold-call, text, or email consumers with \"discount\" medical insurance plans that promise big savings but provide no real coverage, leaving victims with unpaid medical bills and unauthorized bank charges.",
+    "category": "Investment Scam",
+    "firstReported": "2025-04-30",
+    "relatedScams": [
+      "Medicare / Health Insurance Scam",
+      "Advance Fee Loan Scam",
+      "Fake Invoice & Subscription Renewal Scam"
+    ],
+    "safetyTips": [
+      "Verify any insurer through your state insurance department, the ACA healthcare marketplace, or the Better Business Bureau before paying anything",
+      "Confirm with your current doctors or hospitals that they actually accept the specific plan being offered",
+      "Never feel pressured to sign up on the spot — legitimate insurance offers don't disappear in minutes",
+      "Check that the company is licensed to sell insurance in your state before enrolling",
+      "If you suspect fraud, report it to the FBI's Internet Crime Complaint Center (IC3.gov) and your state insurance commissioner"
+    ],
+    "datePublished": "2026-11-02T23:45:18.765Z",
+    "howItWorks": "The scam starts with unsolicited outreach — a call, text, or email from an unfamiliar business pitching a steeply discounted medical insurance plan, often while claiming to be a legitimate national provider. The pitch creates urgency, telling the target they must sign up immediately or lose the special low price. Victims pay premiums believing they have real health coverage, but the plans either provide no actual medical insurance or coverage so limited it leaves them with large unpaid medical bills. Some companies also make unauthorized charges to victims' bank accounts and refuse to issue refunds even after a victim cancels the plan, as happened with a company that drew more than 100 complaints before a state cease-and-desist order.",
+    "redFlags": [
+      "Unsolicited calls, texts, or emails offering deeply discounted medical insurance",
+      "High-pressure tactics claiming you must sign up immediately or lose a 'time limited' discounted price",
+      "Little to no paperwork provided after enrolling, unlike legitimate insurance plans",
+      "Company cannot confirm your doctors or hospitals actually accept the plan",
+      "Refusal to issue refunds after you try to cancel, or unexplained charges to your bank account"
+    ],
+    "realExamples": [
+      "Washington state issued a cease-and-desist order against a discount medical insurance company after receiving over 100 complaints of fraudulent practices, with victims denied promised refunds and hit with unauthorized bank charges.",
+      "A couple from Pennsylvania was pressured to sign up for a discount medical insurance plan through what they believed was a national provider, after being told to act quickly or lose the temporarily discounted price."
+    ],
+    "source": "FBI/IC3 Public Service Announcement, https://www.ic3.gov/PSA/2025/PSA250430",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Text Messages",
+      "Email"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Medicare / Health Insurance Scam",
+    "novelty": "known-variant",
+    "severity": "high",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Discount Medical Insurance Scam"
+    ],
+    "confidence": 0.65,
+    "reasoning": "This FBI-sourced scam involves fake/misleading discount medical insurance plans overlapping substantially with the existing 'Medicare / Health Insurance Scam' entry's subject matter (fraudulent health insurance offers); it's also miscategorized as 'Investment Scam' when the source is an FBI/government warning fitting the Government Scam category. While it has distinct details (cease-and-desist order, unauthorized bank charges, specific victim examples), the core pattern of fake health insurance plans promising coverage they don't provide closely matches the existing entry's likely scope."
+  },
+  "queuedAt": "2026-11-02T23:45:25.056Z"
+}
