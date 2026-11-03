@@ -1,6 +1,6 @@
 {
-  "version": 93,
-  "lastUpdated": "2026-11-02T23:44:36.177Z",
+  "version": 94,
+  "lastUpdated": "2026-11-03T22:07:35.104Z",
   "reports": [
     {
       "id": "1",
@@ -4780,6 +4780,45 @@
         "Social Media",
         "Text Messages",
         "Phone Calls"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "126",
+      "slug": "fake-fortnite-locker-value-v-bucks-reward-phishing-scam",
+      "title": "Fake Fortnite \"Locker Value\" & V-Bucks Reward Phishing Scam",
+      "summary": "Scammers build fake Fortnite reward, giveaway, and \"locker value calculator\" websites that promise free V-Bucks or cash, but actually funnel players to a fake Epic Games login page designed to steal their account credentials.",
+      "category": "Phone Scam",
+      "firstReported": "2026-07-31",
+      "relatedScams": [
+        "Fake Online Store Scam",
+        "Phishing Email Scam",
+        "Fake Class Action Settlement Notice Scam"
+      ],
+      "safetyTips": [
+        "Never enter Epic Games login credentials on any third-party site; only use fortnite.com or epicgames.com",
+        "Verify any refund, settlement, or giveaway claim directly on the official regulator or company website rather than clicking a link in the offer",
+        "Turn on two-factor authentication (2FA) on your Epic Games account so a stolen password alone can't grant account access",
+        "If you or your child already entered login details on one of these sites, change the password immediately and avoid reusing it on other accounts"
+      ],
+      "datePublished": "2026-11-03T22:07:19.799Z",
+      "howItWorks": "Scam pages mimic official Fortnite promotions and spread by the dozen every day, recycled under different names and designs. One common lure offers a cash reward tied to a fake brand \"collaboration,\" while another claims it can calculate how much a player's item locker (their collection of skins, emotes, and pickaxes) is worth in real money. Both types of pages funnel the visitor to the same destination: a convincing but fake Epic Games login page that harvests the player's username and password once entered. The scam exploits a real kernel of truth — rare or discontinued skins do resell for hundreds of dollars on unofficial marketplaces — even though Epic provides no official way to cash out V-Bucks and selling accounts violates its terms of service. A separate variant piggybacks on Epic's real $520 million FTC settlement over unwanted in-game charges, directing victims to a fake claims page that asks them to log in to receive \"V-Bucks\" through a bogus \"Epic Games Locker,\" even though the real settlement pays cash through the FTC's own process and that claim window closed in July 2025.",
+      "redFlags": [
+        "A website asks you to log in with your Epic Games account to claim a free reward, calculate your locker's value, or process a settlement payment",
+        "Offers of free V-Bucks, surprise cash rewards, or brand \"collaborations\" that don't appear on fortnite.com or epicgames.com",
+        "A site claims it can tell you what your in-game locker/skins are worth in real cash, something Epic has no official tool for",
+        "Settlement or refund claims that promise payment in V-Bucks instead of real currency through an official government or company process"
+      ],
+      "realExamples": [
+        "Malwarebytes documented fake Fortnite reward pages in July 2026 offering a fake $50 superhero-brand collaboration and a \"locker value calculator,\" both redirecting to fake Epic Games login pages",
+        "Scammers created a fake claims page referencing Epic Games' real $520 million FTC settlement, promising payouts through a bogus \"Epic Games Locker\" in V-Bucks rather than the real cash settlement process, which closed in July 2025"
+      ],
+      "source": "Malwarebytes, https://www.malwarebytes.com/blog/scams/2026/07/fake-fortnite-rewards-are-stealing-players-accounts",
+      "spreadPlatforms": [
+        "Websites",
+        "Social Media",
+        "YouTube",
+        "Email"
       ],
       "isAIDiscovered": true
     }

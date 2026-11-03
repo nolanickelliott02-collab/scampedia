@@ -1,6 +1,6 @@
 {
-  "version": 44,
-  "lastUpdated": "2026-11-02T23:44:36.177Z",
+  "version": 45,
+  "lastUpdated": "2026-11-03T22:07:35.104Z",
   "scamPatterns": [
     "grandparent",
     "grandma",
@@ -169,7 +169,10 @@
     "dispute or cancel the charge",
     "renewal notice",
     "bonus payout",
-    "pet search services"
+    "pet search services",
+    "locker value calculator",
+    "free v-bucks",
+    "epic games locker"
   ],
   "aiTells": [
     "extra fingers",
