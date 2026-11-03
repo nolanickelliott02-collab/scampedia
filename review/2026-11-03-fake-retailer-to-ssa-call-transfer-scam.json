@@ -1,0 +1,56 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "126",
+    "slug": "fake-retailer-to-ssa-call-transfer-scam",
+    "title": "Fake Retailer-to-SSA \"Call Transfer\" Scam",
+    "summary": "Scammers posing as a retailer, bank, or other agency ask about a suspicious purchase, then falsely \"transfer\" the call to a fake Social Security Administration or SSA Office of Inspector General representative who claims your identity was stolen.",
+    "category": "Government Scam",
+    "firstReported": "2026-07-29",
+    "relatedScams": [
+      "Social Security Number Suspended Scam",
+      "\"Phantom Hacker\" Three-Stage Tech/Bank/Government Imposter Scam",
+      "Phantom Debt Collector Scam"
+    ],
+    "safetyTips": [
+      "Know that legitimate companies and government agencies cannot transfer your call directly to SSA or OIG — if this happens, hang up, it is a scam every time",
+      "Never give your Social Security number, bank details, or device access to anyone who calls or is transferred to you unexpectedly",
+      "If you're concerned about a fraudulent charge, hang up and call your bank or the retailer directly using a number you look up yourself, not one given during the call",
+      "Don't trust caller ID, since scammers can fake legitimate phone numbers",
+      "Report suspected scams at oig.ssa.gov/report or ssa.gov/scam"
+    ],
+    "datePublished": "2026-11-03T03:55:42.650Z",
+    "howItWorks": "The scam starts with a phone call from someone claiming to represent a well-known retailer, bank, or another government agency, asking about a supposedly fraudulent purchase on your account. When the victim denies making the purchase, the caller says they will transfer the call to Social Security or the SSA Office of Inspector General to resolve the identity theft issue. In reality, no transfer happens at all — a second scammer, already part of the scheme, simply picks up and poses as an SSA or OIG representative. That fake representative claims the victim's Social Security number has been compromised, linked to identity theft, or used in criminal activity, pressures the victim to keep the call confidential, and may ask them to provide their Social Security number, financial information, or device access, pay for a new Social Security number, or sign a lengthy document, all under the promise of a replacement number.",
+    "redFlags": [
+      "A call that is 'transferred' from a retailer, bank, or other agency directly to someone claiming to be from SSA or OIG — SSA says this is impossible and always a scam",
+      "Being told your Social Security number is suspended, compromised, or needs to be reissued",
+      "Pressure to keep the call confidential or secret from family, friends, or your bank",
+      "Requests to pay money, provide your Social Security number or financial details, or grant remote access to your device to 'fix' the problem",
+      "Being asked to sign a lengthy document in exchange for a new Social Security number"
+    ],
+    "realExamples": [
+      "SSA OIG described a case where a call began with someone claiming to be from a major retailer about a suspicious purchase, then was passed to a fake SSA representative who claimed the victim's identity had been stolen and used to open bank accounts, before sending a lengthy document to sign and promising a new Social Security number."
+    ],
+    "source": "SSA Office of the Inspector General, https://oig.ssa.gov/scam-alerts/2026-07-29-beware-of-fake-call-transfers-to-social-security-or-oig/",
+    "spreadPlatforms": [
+      "Phone Calls"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Social Security Number Suspended Scam",
+    "novelty": "known-variant",
+    "severity": "low",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "Fake Call Transfer to SSA/OIG Scam"
+    ],
+    "confidence": 0.6,
+    "reasoning": "This is the same core SSA impersonation / \"your SSN is suspended/compromised\" scam already catalogued as \"Social Security Number Suspended Scam,\" with the specific twist of a fake retailer/bank call falsely transferring to a fake SSA/OIG rep. The underlying claims (SSN compromised, pay for new number, secrecy pressure) are identical to the existing entry's premise, making this a variant rather than a genuinely new pattern. No monetary loss is reported in the source (victim avoided loss), supporting low severity."
+  },
+  "queuedAt": "2026-11-03T03:55:47.894Z"
+}
