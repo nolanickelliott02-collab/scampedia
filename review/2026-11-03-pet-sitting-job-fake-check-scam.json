@@ -1,0 +1,62 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "127",
+    "slug": "pet-sitting-job-fake-check-scam",
+    "title": "Pet-Sitting Job Fake Check Scam",
+    "summary": "Scammers pose as a \"friendly family\" relocating to your area and offer a generous pet-sitting job, then mail a fraudulent check and ask the sitter to wire back the \"extra\" funds before the check bounces.",
+    "category": "Employment Scam",
+    "firstReported": "2019-01-01",
+    "relatedScams": [
+      "Mystery Shopper Check Scam",
+      "Fake Job Offer Scam",
+      "Fake Online Pet Sale Scam"
+    ],
+    "safetyTips": [
+      "Never deposit a check and wire money back before the check has fully cleared — banks can take weeks to detect a fake check even after crediting your account",
+      "Insist on an in-person meeting or video call with the pet owner before accepting any pet-sitting job, and verify the address and story they provide",
+      "Be suspicious of any job that pays well above market rate for the work and doesn't require a real interview",
+      "Never wire money, send gift cards, or forward funds from a check someone else sent you, especially to a third-party 'supplier'",
+      "Report suspected pet-sitting job scams to the BBB Scam Tracker or your state attorney general's office"
+    ],
+    "datePublished": "2026-11-03T22:10:02.538Z",
+    "howItWorks": "A polite-seeming \"employer\" contacts a job seeker through social media, a legitimate job site, Nextdoor, or a student email account with what looks like an excellent pet-sitting offer. They build trust by over-sharing personal details — their name, age, pets' names, and job — and explain they're moving to the victim's area and need a sitter right away, often offering a generous hourly rate or letting the victim name their price, with no in-person interview required. Once the victim accepts, the \"employer\" sends a check for far more than the agreed pay, claiming it also covers pet supplies or moving-related costs, and instructs the sitter to deposit it, keep their wages, and wire or send back the remaining balance to the employer or a \"dog utility supplier.\" Because banks credit deposited funds before the check is fully verified, the victim wires away real money days before the bank discovers the check is counterfeit, leaving the victim on the hook for the full amount.",
+    "redFlags": [
+      "A job offer with no interview, arriving via social media, Nextdoor, or an unsolicited email with generous or negotiable pay",
+      "The 'employer' shares a long personal backstory about relocating and needing a sitter immediately",
+      "You're sent a check for more than the agreed amount and told to deduct your pay and send the rest elsewhere",
+      "Requests for your home address, Social Security number, or banking details before any in-person meeting",
+      "Correspondence with grammatical errors or a refusal to meet face-to-face or video call before hiring"
+    ],
+    "realExamples": [
+      "A BBB Scam Tracker report described an 'employer' offering $35/hour for house-sitting, mail/newspaper retrieval, plant watering, and pet sitting/walking, who said a check would be sent to cover the sitter's pay plus funds for 'dog utility suppliers' to be forwarded once the check cleared.",
+      "A Raleigh, North Carolina resident reported on BBB Scam Tracker that a prospective sitter was hired to care for a dog named 'Bobby' and was told a check from the scammer's wife's employer would cover moving expenses, requiring the sitter's address before the scam was identified.",
+      "BBB officials described cases where sitters were sent a check for a large amount, told to deduct wages and use the rest to purchase supplies, resulting in victims losing their own money once the check was discovered to be fake."
+    ],
+    "source": "Yahoo News / The News & Observer, https://www.yahoo.com/news/articles/fraudsters-target-triangle-residents-dog-142758930.html",
+    "spreadPlatforms": [
+      "Social Media",
+      "Nextdoor",
+      "Email",
+      "Job Websites",
+      "Student Email Accounts"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Mystery Shopper Check Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Employment Scam",
+    "suggestedAliases": [
+      "Dog-Sitting Scam",
+      "Nextdoor Pet-Sitting Scam"
+    ],
+    "confidence": 0.55,
+    "reasoning": "This is a fake-check overpayment scam applied to pet-sitting jobs, structurally identical to the existing 'Mystery Shopper Check Scam' and 'Fake Check Scam Targeting Childcare Providers' entries (fake job offer, overpayment check, wire back 'extra' funds before check bounces). While the pet-sitting/Nextdoor angle is a specific twist, the underlying mechanism and advice overlap closely with already-cataloged fake check job scams, making it a known variant rather than a genuinely new pattern."
+  },
+  "queuedAt": "2026-11-03T22:10:07.970Z"
+}
