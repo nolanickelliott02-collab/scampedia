@@ -1,0 +1,61 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "127",
+    "slug": "fake-apple-pay-fraud-alert-vishing-scam",
+    "title": "Fake Apple Pay Fraud Alert Vishing Scam",
+    "summary": "Scammers send fake \"Apple Pay fraud alert\" emails or trigger browser pop-ups with a bogus unauthorized charge, pressuring iPhone users to call a phony \"Apple Support\" number where an agent talks them into handing over their real two-factor authentication code.",
+    "category": "Tech Scam",
+    "firstReported": "2026-02-04",
+    "relatedScams": [
+      "Tech Support Pop-Up Scam",
+      "Fake Bank Fraud Alert Scam",
+      "SIM Swap Scam"
+    ],
+    "safetyTips": [
+      "Never read a two-factor authentication code to anyone who calls or asks for it over the phone, even if they claim to be Apple support",
+      "Don't call phone numbers provided in unexpected fraud-alert emails, texts, or pop-ups; go directly to Apple's official site or app instead",
+      "If a webpage starts talking, shows a fake-looking charge, or won't let you navigate away, close the browser tab or force-quit rather than tapping any button",
+      "Check your actual Apple Pay or Wallet app directly for real transaction history instead of trusting an email or pop-up",
+      "Look up any phone number you're told to call using a scam-number checker before dialing"
+    ],
+    "datePublished": "2026-11-04T22:19:49.036Z",
+    "howItWorks": "Victims receive a realistic-looking email claiming an Apple Pay transaction was flagged as fraudulent, complete with a case number and instructions to \"reach out to us quickly to dispute this transaction\" using a provided phone number. A browser-based version has also been found: a web page (often reached via malicious ads or compromised sites) displays a hardcoded fake charge, generates a spoken alert aloud using the phone's own text-to-speech engine, then flips to an \"Apple ID locked\" warning that aggressively pushes the victim to tap a phone number and call \"Apple Support immediately.\" Once the victim calls, a scripted \"fraud department\" agent builds trust with harmless verification steps, like confirming the last four digits of the victim's phone number, then claims the transaction was only \"partially blocked\" and that the account needs to be \"fully secured.\" The agent then asks the victim to read back the two-factor authentication code that just arrived on their phone; sharing it hands the scammer live access to the victim's real Apple ID and linked payment methods.",
+    "redFlags": [
+      "An unsolicited email or pop-up claiming a specific dollar charge with a case/transaction number and a phone number to call",
+      "Your phone's browser or a webpage reads a fraud warning aloud, or the page aggressively blocks you from closing it",
+      "A caller claiming to be from Apple asks you to read back a one-time verification/2FA code",
+      "Urgent language pushing you to call back \"immediately\" to stop or dispute a charge",
+      "The phone number provided doesn't match Apple's official published support line"
+    ],
+    "realExamples": [
+      "Malwarebytes identified a fake Apple Pay web page that hardcoded a $657.00 charge, a transaction ID formatted as AP-2026-08-03-14:32, and an authorization code AUTH-8F3A2B1C, using the browser's speech synthesis API to read the fake alert aloud before pushing victims to call a number flagged as a scam line",
+      "Researchers documented phishing emails impersonating Apple Pay fraud alerts using realistic fake invoices, including one styled as a receipt for a MacBook Air, to convince victims to call a listed phone number",
+      "Security researchers described scripted vishing calls where an agent posing as Apple's fraud department verified the last four digits of a victim's phone number before asking for the Apple ID two-factor authentication code"
+    ],
+    "source": "Malwarebytes, https://www.malwarebytes.com/blog/scams/2026/08/fake-apple-pay-charge-brings-the-classic-tech-support-scam-to-your-phone",
+    "spreadPlatforms": [
+      "Email",
+      "Malicious Ads",
+      "Compromised Websites",
+      "Phone Calls",
+      "Text Messages"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Tech Scam",
+    "suggestedAliases": [
+      "Fake Apple Pay Charge Tech Support Scam"
+    ],
+    "confidence": 0.55,
+    "reasoning": "The source describes a mobile-specific tech-support scam that fakes an Apple Pay transaction and uses browser text-to-speech plus navigation-trapping tricks to push victims to call a fake Apple Support number; this is closely related to existing 'Tech Support Pop-Up Scam' and 'Fake Bank Fraud Alert Scam' entries but has distinct mechanics (Apple Pay branding, fake receipt, TTS voice alert, exit-blocking JS). The candidate's summary adds a 2FA-code-theft element via a live phone call that is not explicitly stated in the source text, which goes beyond what is verified — the source only describes it as a bait to get the victim to call and does not detail what happens on the call beyond remote access or payment requests referenced via FTC/Apple warnings, so parts of the 'How it works' section describing a scripted agent asking for 2FA codes are not directly confirmed by the source."
+  },
+  "queuedAt": "2026-11-04T22:19:55.592Z"
+}

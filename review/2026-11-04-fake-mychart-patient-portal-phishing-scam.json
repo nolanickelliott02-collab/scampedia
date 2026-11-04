@@ -1,0 +1,58 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "127",
+    "slug": "fake-mychart-patient-portal-phishing-scam",
+    "title": "Fake MyChart Patient Portal Phishing Scam",
+    "summary": "Scammers are impersonating the widely-used MyChart patient portal with emails and texts claiming urgent test results or a free Medicare gift, tricking patients into stealing credentials, installing malware, or handing over payment card data.",
+    "category": "Phone Scam",
+    "firstReported": "2026-07-26",
+    "relatedScams": [
+      "Phishing Email Scam",
+      "Smishing Text Message Scam",
+      "Medicare / Health Insurance Scam"
+    ],
+    "safetyTips": [
+      "Never click links in unexpected MyChart emails or texts — open the official MyChart app or type your health system's known portal URL directly into your browser",
+      "Verify any claimed result, bill, or message by logging into your real account separately rather than through a link",
+      "Remember MyChart does not run giveaways; treat any \"free Medicare Kit\" or \"Senior Health Package\" offer as fraudulent",
+      "Never enter a keyboard shortcut or run a command/download just to view a medical result — legitimate portals never require this",
+      "If you entered credentials on a suspicious site, change your MyChart password immediately through the official app/site and contact your healthcare organization's help desk"
+    ],
+    "datePublished": "2026-11-04T22:17:37.452Z",
+    "howItWorks": "Criminals send emails or texts branded with the MyChart name and logo, using one of two main lures. The first claims new or \"critical\" lab/test results are ready and directs the victim to a fake login page that closely copies the real MyChart site (Epic says scammers even copied code from the legitimate site); once on the fake page, a pop-up may claim an \"AI-powered review\" found alarming results and walk the victim through a \"human verification\" keyboard sequence (e.g., Windows+R, then Ctrl+V, then Enter) that secretly installs malware. The second lure offers a free \"MyChart Medicare Kit\" or \"Senior Health Package,\" directing victims through a survey and a small \"shipping fee\" payment that harvests credit card details. Neither MyChart nor Epic's systems have been breached — the campaign exploits the brand's trusted name and the fact that patients are used to receiving legitimate portal notifications.",
+    "redFlags": [
+      "Unsolicited email or text claiming test results, a Medicare Kit, or a Senior Health Package is waiting, especially with urgent or alarming language",
+      "A sign-in link that doesn't go to your specific health system's known MyChart web address",
+      "Being asked to press a keyboard combination (like Windows+R, Ctrl+V, Enter) to \"prove you're human\" or to download a program to view results",
+      "Any request for a credit card number or \"shipping fee\" to receive a free kit or reward",
+      "Sender address that only loosely resembles MyChart (e.g., 'MyChartTeams') rather than your actual provider's domain"
+    ],
+    "realExamples": [
+      "Pennsylvania's Attorney General warned in August 2026 that scammers were sending emails and texts offering a \"MyChart Medicare Kit\" with no such program actually existing, aimed at stealing passwords and personal information.",
+      "At least 41 health systems nationwide, including UC Davis Health, Penn Medicine, Texas Health Resources, and Summa Health, issued warnings about the nationwide campaign using subject lines like \"Your MyChart Medicare Kit Awaits!\" that led to surveys and small shipping-fee payment requests.",
+      "Epic Systems documented a separate \"urgent lab results\" version where a fake MyChart page displayed an alarming \"Critical Update\" about blood work and walked Windows users through a fake verification step that installed malware."
+    ],
+    "source": "Pennsylvania Office of Attorney General, https://www.attorneygeneral.gov/taking-action/ag-sunday-warns-pennsylvanians-of-phishing-scam-targeting-mychart-patient-portal-users/",
+    "spreadPlatforms": [
+      "Email",
+      "Text Messages"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "new",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Tech Scam",
+    "suggestedAliases": [
+      "MyChart Medicare Kit Scam"
+    ],
+    "confidence": 0.55,
+    "reasoning": "The cited source (PA Attorney General alert) only documents the \"MyChart Medicare Kit\" reward-email/text phishing lure aimed at harvesting passwords/personal info; it does not mention the fake lab-results/AI-powered-review/keyboard-sequence malware lure or Epic's statement about copied code, which the candidate's summary includes as fact. This is a distinct brand-impersonation phishing pattern not matching existing titles (closest are generic Phishing Email/Smishing/Medicare-Insurance scams, but none specifically target the MyChart portal brand), though the entry's detail exceeds what the provided source substantiates."
+  },
+  "queuedAt": "2026-11-04T22:17:46.106Z"
+}
