@@ -20,5 +20,5 @@ LLM-estimated figures never render as facts — not precise, not bucketed into a
 
 ## Publishing and the app's phrase list (2026-11-05)
 
-Bots never publish. They add entries to the `scampedia/pending-batch` branch, and Nick's merge of the weekly review PR is the only path to the live site. Bots also never write `api/patterns.json` (the phrase list the VerifyGuard app matches scans against); they only queue proposals in `review/phrase-queue.json`. Keep both rules when changing the pipeline. Don't describe human review in public copy until a batch has actually been reviewed and merged.
+Bots never publish. They add entries to the `scampedia/pending-batch` branch, and Nick's merge of the weekly review PR is the only path to the live site. Bots also never write `api/patterns.json` (the phrase list the VerifyGuard app matches scans against); they only queue proposals in `review/phrase-queue.json`. Keep both rules when changing the pipeline. Public copy (index.html, about.html) says new entries wait for the editor's weekly review; that copy ships in the same merge as the pipeline change, so it's never live before it's true. Don't claim any specific entry was reviewed.
 
