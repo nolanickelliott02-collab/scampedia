@@ -1,6 +1,6 @@
 {
-  "version": 95,
-  "lastUpdated": "2026-11-05T22:02:21.159Z",
+  "version": 94,
+  "lastUpdated": "2026-11-03T22:07:35.104Z",
   "reports": [
     {
       "id": "1",
@@ -4819,44 +4819,6 @@
         "Social Media",
         "YouTube",
         "Email"
-      ],
-      "isAIDiscovered": true
-    },
-    {
-      "id": "127",
-      "slug": "fake-delivery-driver-job-insurance-fraud-scam",
-      "title": "Fake Delivery Driver Job Insurance Fraud Scam",
-      "summary": "Fraudsters post bogus courier/delivery driver job ads on social media and classified sites, then harvest applicants' driving licence and car insurance details to commit identity theft and organized insurance fraud. The scam spikes seasonally around Christmas when demand for delivery jobs rises.",
-      "category": "Employment Scam",
-      "firstReported": "2025-01-01",
-      "relatedScams": [
-        "Fake Job Offer Scam",
-        "Phantom Debt Collector Scam",
-        "Parcel Mule / \"Parcel Expert\" Reshipping Job Scam"
-      ],
-      "safetyTips": [
-        "Never provide your driving licence number or insurance policy details as part of a job application before you have a signed, verifiable contract with a legitimate, registered employer",
-        "Apply to reputable companies and ideally through their official website to help ensure personal information is kept secure",
-        "Be extra cautious of delivery/courier job ads on social media and classified sites during high-demand seasonal hiring periods like Christmas",
-        "Report suspected fake job scams or identity theft for insurance purposes to the relevant national fraud reporting body, such as the IFB's confidential Cheatline"
-      ],
-      "datePublished": "2026-11-05T22:01:46.449Z",
-      "howItWorks": "Scammers advertise fake delivery driver or courier positions on social media and classified ad websites, especially during the busy Christmas hiring season. Job seekers who apply are told their application was successful and are then asked to hand over personal information as part of an onboarding process, including their name, address, date of birth, driving licence number, and car insurance details. Rather than offering real employment, the fraudsters use this stolen information to take out fraudulent insurance policies in the applicant's name or to facilitate other organized fraud schemes such as \"crash for cash\" staged collisions and \"ghost broking,\" where fake or invalid insurance policies are sold to unsuspecting third parties using the stolen identity.",
-      "redFlags": [
-        "A delivery or courier job offer that requires your driving licence number and full car insurance policy details before any formal interview or contract",
-        "Job ad appears only on social media or informal classified sites rather than established job boards or company career pages",
-        "You are told you're 'successful' very quickly with little to no vetting, interview, or verification process",
-        "Urgency tied to seasonal hiring (e.g., Christmas rush) pressuring you to submit personal details fast"
-      ],
-      "realExamples": [
-        "The Insurance Fraud Bureau (IFB) warned that job seekers were being targeted by fake delivery driver roles listed over the festive period, aiming to steal personal information for insurance scams, with several insurers reporting more people having their information stolen this way.",
-        "The IFB noted fraudsters advertise courier roles on social media and classified ad websites, telling applicants their application was successful before asking for personal details including name, address, date of birth, car insurance information and a copy of their driving licence, which may then be used to take out policies in the applicant's name or facilitate crash for cash and ghost broking schemes."
-      ],
-      "source": "Insurance Fraud Bureau, https://www.insurancefraudbureau.org/media-centre/ifb-news/2025/insurance-scam-warning-fake-delivery-driver-jobs-this-christmas",
-      "spreadPlatforms": [
-        "Social Media",
-        "Classified Ad Websites",
-        "Online Job Boards"
       ],
       "isAIDiscovered": true
     }
