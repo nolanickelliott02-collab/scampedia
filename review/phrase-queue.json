@@ -5,21 +5,30 @@
       "entryId": "127",
       "entryTitle": "Fake Delivery Driver Job Insurance Fraud Scam",
       "proposedAt": "2026-11-05T22:02:21.159Z",
-      "status": "pending"
+      "status": "rejected",
+      "reviewedBy": "nick",
+      "reviewedAt": "2026-11-05",
+      "reason": "Entry #127 rejected (UK-focused)."
     },
     {
       "phrase": "ghost broking",
       "entryId": "127",
       "entryTitle": "Fake Delivery Driver Job Insurance Fraud Scam",
       "proposedAt": "2026-11-05T22:02:21.159Z",
-      "status": "pending"
+      "status": "rejected",
+      "reviewedBy": "nick",
+      "reviewedAt": "2026-11-05",
+      "reason": "Entry #127 rejected (UK-focused)."
     },
     {
       "phrase": "courier roles",
       "entryId": "127",
       "entryTitle": "Fake Delivery Driver Job Insurance Fraud Scam",
       "proposedAt": "2026-11-05T22:02:21.159Z",
-      "status": "pending"
+      "status": "rejected",
+      "reviewedBy": "nick",
+      "reviewedAt": "2026-11-05",
+      "reason": "Entry #127 rejected (UK-focused). Also common in ordinary job messages."
     }
   ]
 }
