@@ -1,0 +1,41 @@
+name: Notify Devices of New Entries
+
+# Since 2026-11-05 entries go live only when Nick merges the weekly review
+# batch (see daily-scam-entry.yml), so the "new scam" push notification is
+# sent here, after the merge lands on main, instead of when a bot writes an
+# entry. One push per merge, for the newest entry, so a week's batch doesn't
+# send a week of notifications at once.
+on:
+  push:
+    branches: [main]
+    paths: ['api/reports.json']
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Find entries that just went live
+        id: newest
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: node scripts/newly-published.js "$BEFORE" >> "$GITHUB_OUTPUT"
+      - name: Notify devices of the newest one
+        if: steps.newest.outputs.count != '0'
+        env:
+          ENTRY_TITLE: ${{ steps.newest.outputs.title }}
+          ENTRY_SUMMARY: ${{ steps.newest.outputs.summary }}
+          ENTRY_SLUG: ${{ steps.newest.outputs.slug }}
+          NOTIFY_SECRET: ${{ secrets.SCAMPEDIA_NOTIFY_SECRET }}
+        run: |
+          curl -sS --max-time 15 -X POST "https://clever-bravery-production-2d5f.up.railway.app/api/notify-new-scam" \
+            -H "Content-Type: application/json" \
+            -H "x-notify-secret: $NOTIFY_SECRET" \
+            -d "$(node -e 'console.log(JSON.stringify({title: process.env.ENTRY_TITLE, summary: process.env.ENTRY_SUMMARY, slug: process.env.ENTRY_SLUG}))')" \
+            || echo "Push notification failed, continuing anyway."

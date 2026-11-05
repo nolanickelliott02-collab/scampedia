@@ -17,3 +17,8 @@ Four false claims shipped from one session writing homepage copy for a system th
 The common root: describing the intended end state of a feature in the same commit that started building it, before it was true. Watch for this specifically whenever copy and implementation land together — the copy is very easy to write two steps ahead of what just shipped.
 
 LLM-estimated figures never render as facts — not precise, not bucketed into a tier or label like "widespread." A guess with the edges sanded off is still a guess. If a number or category can't be sourced, either don't show it or say plainly that it's an estimate.
+
+## Publishing and the app's phrase list (2026-11-05)
+
+Bots never publish. They add entries to the `scampedia/pending-batch` branch, and Nick's merge of the weekly review PR is the only path to the live site. Bots also never write `api/patterns.json` (the phrase list the VerifyGuard app matches scans against); they only queue proposals in `review/phrase-queue.json`. Keep both rules when changing the pipeline. Don't describe human review in public copy until a batch has actually been reviewed and merged.
+

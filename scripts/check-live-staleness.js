@@ -12,7 +12,10 @@
 //
 // Run: node scripts/check-live-staleness.js
 
-const MAX_STALE_DAYS = 5;
+// 10, not 5, since 2026-11-05: entries now go live only when Nick merges the
+// weekly review batch, so up to a week without a new live entry is normal.
+// Past 10 days either the bots have stopped or the batch is waiting on him.
+const MAX_STALE_DAYS = 10;
 const DAY_MS = 24 * 60 * 60 * 1000;
 const LIVE_URL = 'https://scampedia.net/api/reports.json';
 

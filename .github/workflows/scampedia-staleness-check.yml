@@ -44,6 +44,6 @@ jobs:
               "subject": "Scampedia has gone stale",
               "content": [{
                 "type": "text/plain",
-                "value": "The live scampedia.net site has not published a new scam entry within the staleness limit. Check github.com/nolanickelliott02-collab/scampedia/actions/workflows/daily-scam-entry.yml for recent runs, and check for open PRs that need attention."
+                "value": "The live scampedia.net site has not published a new scam entry in over 10 days. Entries go live only when the open \"Scampedia: entries waiting for review\" PR is merged, so check for that PR first: github.com/nolanickelliott02-collab/scampedia/pulls. If there is no open PR, the bots have stopped adding entries: check github.com/nolanickelliott02-collab/scampedia/actions/workflows/daily-scam-entry.yml for recent runs."
               }]
             }'

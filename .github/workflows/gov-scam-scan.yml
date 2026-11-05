@@ -2,23 +2,23 @@ name: Government Scam Source Scan
 
 # Independent of daily-scam-entry.yml on purpose — this bot only searches
 # primary government sources (see scripts/generate-gov-scam.js) and only
-# publishes when its own extra .gov-domain gate passes, so it can find
+# queues an entry when its own extra .gov-domain gate passes, so it can find
 # nothing on a given day without that reflecting on the general daily bot,
-# and vice versa. Scheduled 6 hours after daily-scam-entry.yml's 17:00 UTC
-# run specifically so both jobs are never in flight at once — see the "git
-# pull --rebase" safeguard below for what happens if that's ever violated
-# anyway (e.g. two manual dispatches back to back).
+# and vice versa. Both bots add to the same review branch, so they share one
+# concurrency group and never run at the same time.
 on:
   schedule:
     - cron: '0 23 * * *'
   workflow_dispatch: {}
 
 concurrency:
-  group: gov-scam-scan
+  # Shared by both bots: they write to the same review branch.
+  group: scampedia-pending-batch
   cancel-in-progress: false
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   generate:
@@ -28,6 +28,23 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # Since 2026-11-05 nothing a bot writes goes straight to the live site.
+      # Both bots add to one branch, scampedia/pending-batch, and one open PR
+      # from it to main is Nick's weekly review: merging it is what publishes
+      # (GitHub Pages serves main). The branch picks up main first, so ids
+      # and duplicate checks see both published and still-pending entries.
+      - name: Switch to the pending review batch
+        run: |
+          git config user.name "scampedia-bot"
+          git config user.email "actions@github.com"
+          if git ls-remote --exit-code --heads origin scampedia/pending-batch >/dev/null; then
+            git switch -c scampedia/pending-batch origin/scampedia/pending-batch
+            git merge --no-edit origin/main
+          else
+            git switch -c scampedia/pending-batch
+          fi
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -37,7 +54,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/generate-gov-scam.js
-      - name: Email me if nothing published today
+      - name: Email me if nothing was added for review today
         # Same reasoning as daily-scam-entry.yml's identical step — this bot
         # shares the same silent-success-without-writing shape (confirmed
         # 2026-09-08: this run had also gone quiet for days with the job
@@ -57,9 +74,9 @@ jobs:
               console.log(JSON.stringify({
                 personalizations: [{ to: [{ email: "nolanickelliott02@gmail.com" }] }],
                 from: { email: "alerts@officialverifyguard.com", name: "Scampedia Watchdog" },
-                subject: "Government Scam Source Scan did not publish today (" + process.env.RESULT + ")",
+                subject: "Government Scam Source Scan added nothing for review today (" + process.env.RESULT + ")",
                 content: [{ type: "text/plain", value:
-                  "Today'"'"'s Government Scam Source Scan run finished without publishing anything.\n\n" +
+                  "Today'"'"'s Government Scam Source Scan run finished without adding an entry to the review batch.\n\n" +
                   "Result: " + process.env.RESULT + "\n" +
                   "Reason: " + process.env.REASON + "\n\n" +
                   "This is not necessarily broken — a gate rejecting a bad candidate is it working as designed. " +
@@ -70,49 +87,33 @@ jobs:
             ')" \
             || echo "Email alert failed, continuing anyway."
       - name: Save any triage-rejected candidates to the review queue
-        # Same gap as daily-scam-entry.yml's identical step, found
-        # 2026-09-13 — writeToReviewQueue() only writes to this runner's own
-        # disk; without a commit here, a needs-review result left zero
-        # durable record and zero real notification. Runs unconditionally
-        # (if: always()) as of 2026-09-18, not gated on result ==
-        # 'needs-review' — see the fuller comment on daily-scam-entry.yml's
-        # identical step for why: maxAttempts > 1 means the run's *final*
-        # result no longer reliably says whether review/ has anything new,
-        # confirmed for real the same day this bot's own run wrote two
-        # review files from two separate attempts. The pull --rebase guards
-        # the same rare race as the publish step below; the diff-check guard
-        # makes this a fast no-op on a run with nothing new.
+        # writeToReviewQueue() writes rejected candidates to review/ on this
+        # runner's disk; this commits them so they aren't lost when the job
+        # ends. Runs unconditionally: with maxAttempts > 1 an earlier attempt
+        # can write a review file even when the run's final result differs.
+        # The diff check makes it a no-op when nothing is new. No
+        # AI-generated text goes into the commit message.
         if: always()
         run: |
-          git config user.name "scampedia-bot"
-          git config user.email "actions@github.com"
           mkdir -p review
           git add review/
           if git diff --cached --quiet; then
             echo "No new review-queue files this run."
           else
             git commit -m "Queue candidate(s) for review from this run (gov-scam-scan)"
-            git pull --rebase --autostash origin main
-            git push origin main
           fi
       - name: Rebuild static scam pages
-        # Also rebuilds /learn/ (build:learn) — see the identical step in
-        # daily-scam-entry.yml for why build:scams alone silently erases
-        # /learn/'s sitemap entries every time this runs, and why this is
-        # deliberately not `npm run build` (skips check-content's hard
-        # failure mode here on purpose; it already ran non-blocking above
-        # in the sibling workflow's equivalent step — this bot has no
-        # course-content step of its own, and doesn't need one to justify
-        # this call: build:learn only touches /learn/ output, never gates
-        # on course review dates).
+        # Also rebuilds /learn/: build:scams rewrites sitemap.xml with scam
+        # pages only, and build:learn adds the /learn/ URLs back. Not
+        # `npm run build`, whose check-content could block a scam entry.
         if: steps.generate.outputs.result == 'written'
         run: npm run build:scams && npm run build:learn
-      - name: Publish directly to main
-        # GitHub Pages serves main directly with no separate deploy Action,
-        # so this push is what actually makes it live. The pull --rebase
-        # guards against the (normally impossible, given the 6-hour
-        # schedule offset above) case where daily-scam-entry.yml's own push
-        # landed on main in between this job's checkout and this step.
+      - name: Add the entry to the pending review batch
+        # The automated gates (structure, citation, relevance, fact-check)
+        # still run first; a rejection means this step never runs. Passing
+        # them now only gets an entry into the batch, not onto the site.
+        # api/patterns.json is not added: it's frozen (review/phrase-queue.json
+        # holds proposed phrases).
         if: steps.generate.outputs.result == 'written'
         env:
           COUNT: ${{ steps.generate.outputs.count }}
@@ -120,34 +121,29 @@ jobs:
           LAST_TITLE: ${{ steps.generate.outputs.title }}
           CITATION: ${{ steps.generate.outputs.citation }}
         run: |
-          git config user.name "scampedia-bot"
-          git config user.email "actions@github.com"
-          # Found 2026-10-02: this step staged only some of what the build
-          # step changes (build:learn also rewrites learn/, llms.txt and
-          # llms-full.txt), so `git pull --rebase` refused with "You have
-          # unstaged changes" and a fully-gated entry was lost. Stage every
-          # build output, and --autostash anything else unexpected.
-          git add api/reports.json api/patterns.json scams/ learn/ sitemap.xml llms.txt llms-full.txt
+          git add api/reports.json review/ scams/ learn/ sitemap.xml llms.txt llms-full.txt
           PLURAL="ies"; [ "$COUNT" = "1" ] && PLURAL="y"
-          git commit -m "Add $COUNT scam entr$PLURAL: $TITLES" -m "Last: $LAST_TITLE" -m "Source: $CITATION" -m "Government-sourced entry (gov-scam-scan)"
-          git pull --rebase --autostash origin main
-          git push origin main
-      - name: Notify devices of the new entry
-        if: steps.generate.outputs.result == 'written'
+          git commit -m "Add $COUNT scam entr$PLURAL: $TITLES" -m "Last: $LAST_TITLE" -m "Source: $CITATION" -m "Bot: gov-scam-scan"
+      - name: Push the batch and open the review PR if none is open
+        # Device notifications are sent when the batch is merged
+        # (notify-new-entries.yml), not here, because nothing is live yet.
+        if: always()
         env:
-          ENTRY_TITLE: ${{ steps.generate.outputs.title }}
-          ENTRY_SUMMARY: ${{ steps.generate.outputs.summary }}
-          ENTRY_SLUG: ${{ steps.generate.outputs.slug }}
-          NOTIFY_SECRET: ${{ secrets.SCAMPEDIA_NOTIFY_SECRET }}
-        # Best-effort: a failed push send must not fail this job or block
-        # anything — the entry is already live on scampedia.net/reports.json
-        # regardless of whether anyone gets pinged about it.
+          GH_TOKEN: ${{ github.token }}
         run: |
-          curl -sS --max-time 15 -X POST "https://clever-bravery-production-2d5f.up.railway.app/api/notify-new-scam" \
-            -H "Content-Type: application/json" \
-            -H "x-notify-secret: $NOTIFY_SECRET" \
-            -d "$(node -e 'console.log(JSON.stringify({title: process.env.ENTRY_TITLE, summary: process.env.ENTRY_SUMMARY, slug: process.env.ENTRY_SLUG}))')" \
-            || echo "Push notification failed, continuing anyway."
+          # Compare content, not commits: after a squash merge the branch's
+          # old commits aren't in main's history, but there's nothing new.
+          if git diff --quiet origin/main HEAD; then
+            echo "Nothing waiting for review."
+            exit 0
+          fi
+          git push origin scampedia/pending-batch
+          OPEN=$(gh pr list --head scampedia/pending-batch --base main --state open --json number --jq 'length')
+          if [ "$OPEN" = "0" ]; then
+            gh pr create --head scampedia/pending-batch --base main \
+              --title "Scampedia: entries waiting for review" \
+              --body "New entries from the Scampedia bots, held for review before they go live. Each passed the automated gates (structure, citation, relevance, fact-check). Read them in api/reports.json and the scams/ pages, plus any proposed app phrases in review/phrase-queue.json (those don't reach the app unless copied into api/patterns.json by hand). Merging publishes the entries and notifies devices once. To drop an entry, remove it on this branch before merging. The bots keep adding to this PR until it's merged."
+          fi
       - name: Alert on a real job failure (any step, not just "didn't publish")
         # Same reasoning as the identical step in daily-scam-entry.yml —
         # found 2026-09-18 when this exact bot's job failed for a real
