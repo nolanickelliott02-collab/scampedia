@@ -22,3 +22,7 @@ LLM-estimated figures never render as facts — not precise, not bucketed into a
 
 Bots never publish. They add entries to the `scampedia/pending-batch` branch, and Nick's merge of the weekly review PR is the only path to the live site. Bots also never write `api/patterns.json` (the phrase list the VerifyGuard app matches scans against); they only queue proposals in `review/phrase-queue.json`. Keep both rules when changing the pipeline. Public copy (index.html, about.html) says new entries wait for the editor's weekly review; that copy ships in the same merge as the pipeline change, so it's never live before it's true. Don't claim any specific entry was reviewed.
 
+
+## Retention of message text (VerifyGuard platform rule, 2026-11-05)
+
+Message text is never stored without the user's explicit opt-in, and opted-in scrubbed text is deleted after 180 days. This applies to anything that reaches VerifyGuard's systems, including data this repo reads or produces.
