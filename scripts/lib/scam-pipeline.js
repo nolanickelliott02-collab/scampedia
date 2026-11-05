@@ -14,8 +14,11 @@ const Anthropic = require('@anthropic-ai/sdk');
 
 const REPORTS_PATH = path.join(__dirname, '..', '..', 'api', 'reports.json');
 // Phrase list the VerifyGuard app's on-device AI Brain matches scans against
-// (synced via SyncEngine.fetchAndCachePatterns). See addScamPhrases below.
+// (synced via SyncEngine.fetchAndCachePatterns). Frozen 2026-11-05: the bots
+// never write it. Phrases they find go to PHRASE_QUEUE_PATH for Nick to
+// review; see queueScamPhrases below.
 const PATTERNS_PATH = path.join(__dirname, '..', '..', 'api', 'patterns.json');
+const PHRASE_QUEUE_PATH = path.join(__dirname, '..', '..', 'review', 'phrase-queue.json');
 const MODEL = 'claude-sonnet-5';
 
 const CATEGORIES = [
@@ -597,13 +600,14 @@ function writeGithubOutput(fields) {
 // $GITHUB_STEP_SUMMARY, which GitHub renders directly in the run's own
 // Summary tab — so "what happened and why" is visible at a glance instead
 // of requiring someone to open and read raw step logs.
-// Grows the AI Brain phrase list (api/patterns.json) from each published
-// entry, added 2026-10-02 — the list was hand-written and hadn't changed
-// since 2026-05-27, while the bots kept documenting new scams. Each match
-// in the app adds real weight to a scan's verdict, so a generic phrase
-// would flag ordinary messages; every phrase must be 2-6 words, not
+// Proposes AI Brain phrases from each new entry. Until 2026-11-05 these were
+// appended straight to api/patterns.json, which changed what the app flags
+// with no person approving it. Now they're only queued in
+// review/phrase-queue.json, and api/patterns.json changes only by hand.
+// Each match in the app adds real weight to a scan's verdict, so a generic
+// phrase would flag ordinary messages; every phrase must be 2-6 words, not
 // generic, and appear word-for-word in the entry's own fact-checked text
-// (so it can't be invented). At most 3 per entry. Returns what was added.
+// (so it can't be invented). At most 3 per entry. Returns what was queued.
 const GENERIC_PHRASES = new Set([
   'click here', 'your account', 'call us', 'thank you', 'act now', 'contact us',
   'log in', 'sign in', 'phone number', 'text message', 'credit card', 'bank account',
@@ -630,10 +634,11 @@ function acceptableScamPhrase(phrase, entryText, existing) {
   return true;
 }
 
-function addScamPhrases(candidates, report, patternsPath = PATTERNS_PATH) {
+function queueScamPhrases(candidates, report, patternsPath = PATTERNS_PATH, queuePath = PHRASE_QUEUE_PATH) {
   if (!fs.existsSync(patternsPath)) return [];
   const patterns = JSON.parse(fs.readFileSync(patternsPath, 'utf8'));
-  const existing = (patterns.scamPatterns || []).map(normalizePhrase);
+  const queue = fs.existsSync(queuePath) ? JSON.parse(fs.readFileSync(queuePath, 'utf8')) : { phrases: [] };
+  const existing = [...(patterns.scamPatterns || []), ...queue.phrases.map(q => q.phrase)].map(normalizePhrase);
   const entryText = normalizePhrase([report.summary, report.howItWorks, ...(report.redFlags || []), ...(report.realExamples || [])].join(' '));
 
   const added = [];
@@ -645,10 +650,12 @@ function addScamPhrases(candidates, report, patternsPath = PATTERNS_PATH) {
   }
   if (added.length === 0) return [];
 
-  patterns.scamPatterns = [...(patterns.scamPatterns || []), ...added];
-  patterns.version = (patterns.version || 0) + 1;
-  patterns.lastUpdated = new Date().toISOString();
-  fs.writeFileSync(patternsPath, JSON.stringify(patterns, null, 2) + '\n');
+  const proposedAt = new Date().toISOString();
+  for (const phrase of added) {
+    queue.phrases.push({ phrase, entryId: report.id ?? null, entryTitle: report.title ?? null, proposedAt, status: 'pending' });
+  }
+  fs.mkdirSync(path.dirname(queuePath), { recursive: true });
+  fs.writeFileSync(queuePath, JSON.stringify(queue, null, 2) + '\n');
   return added;
 }
 
@@ -1096,8 +1103,8 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
     }
 
     data.reports.push(newReport);
-    const addedPhrases = addScamPhrases(toArray(entry.scamPhrases), newReport);
-    if (addedPhrases.length > 0) console.log(`Added ${addedPhrases.length} AI Brain phrase(s): ${addedPhrases.join(' | ')}`);
+    const queuedPhrases = queueScamPhrases(toArray(entry.scamPhrases), newReport);
+    if (queuedPhrases.length > 0) console.log(`Queued ${queuedPhrases.length} AI Brain phrase(s) for review: ${queuedPhrases.join(' | ')}`);
     data.version = (data.version || 0) + 1;
     data.lastUpdated = new Date().toISOString();
     fs.writeFileSync(reportsPath, JSON.stringify(data, null, 2) + '\n');
@@ -1147,6 +1154,6 @@ module.exports = {
   runPipeline,
   stripCiteMarkup,
   pruneDeadCitations,
-  addScamPhrases,
+  queueScamPhrases,
   normalizePhrase,
 };

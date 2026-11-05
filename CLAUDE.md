@@ -17,3 +17,12 @@ Four false claims shipped from one session writing homepage copy for a system th
 The common root: describing the intended end state of a feature in the same commit that started building it, before it was true. Watch for this specifically whenever copy and implementation land together — the copy is very easy to write two steps ahead of what just shipped.
 
 LLM-estimated figures never render as facts — not precise, not bucketed into a tier or label like "widespread." A guess with the edges sanded off is still a guess. If a number or category can't be sourced, either don't show it or say plainly that it's an estimate.
+
+## Publishing and the app's phrase list (2026-11-05)
+
+Bots never publish. They add entries to the `scampedia/pending-batch` branch, and Nick's merge of the weekly review PR is the only path to the live site. Bots also never write `api/patterns.json` (the phrase list the VerifyGuard app matches scans against); they only queue proposals in `review/phrase-queue.json`. Keep both rules when changing the pipeline. Public copy (index.html, about.html) says new entries wait for the editor's weekly review; that copy ships in the same merge as the pipeline change, so it's never live before it's true. Don't claim any specific entry was reviewed.
+
+
+## Retention of message text (VerifyGuard platform rule, 2026-11-05)
+
+Message text is never stored without the user's explicit opt-in, and opted-in scrubbed text is deleted after 180 days. This applies to anything that reaches VerifyGuard's systems, including data this repo reads or produces.

@@ -8,7 +8,9 @@ Written for you at 11pm with no context. If something's wrong with the site righ
 
 ## How it works, in one page
 
-Two independent GitHub Actions bots research and publish one scam-database entry a day, straight to `main`, with no human in the loop — a chain of automated gates stands in for review. GitHub Pages serves `main` directly, so a successful push *is* the deploy.
+Two independent GitHub Actions bots research scam-database entries daily. From the 2026-11-05 change (branch `foundation/phase-0.5-hotfixes`) once it's merged, nothing they write goes live on its own: entries that pass the automated gates are added to the branch `scampedia/pending-batch`, and one open PR from it ("Scampedia: entries waiting for review") is Nick's weekly batch. Merging that PR is the deploy, because GitHub Pages serves `main` directly. Before that change the bots pushed straight to `main`, with the gates standing in for review.
+
+**Weekly review:** open the PR, read the new entries (`api/reports.json` diff and the `scams/` pages) and any proposed app phrases in `review/phrase-queue.json`. Drop an entry by removing it on the branch. Merge with a merge commit. `notify-new-entries.yml` then sends one device notification, for the newest entry. Proposed phrases never reach the app on their own: `api/patterns.json` is frozen and changes only when you copy an approved phrase into it by hand.
 
 ```
 17:00 UTC daily-scam-entry.yml           23:00 UTC gov-scam-scan.yml
@@ -28,15 +30,16 @@ Two independent GitHub Actions bots research and publish one scam-database entry
   [gov bot only] .gov-hostname gate
   ▼
   Fact-check gate     — a 2nd, independent Claude pass checks specific claims against
-                         the exact fetched source text (this is what stands in for
-                         "a human reads this first")
+                         the exact fetched source text
   ▼
-  written → rebuild static pages (build:scams + build:learn) → git push to main
+  written → rebuild static pages → commit to scampedia/pending-batch → open/update the review PR
+  ▼
+  Nick merges the PR (weekly) → live on scampedia.net → notify-new-entries.yml
 ```
 
 **Any gate rejecting a candidate is the system working, not a bug.** The job still ends green (no red X) — that's deliberate, so "a bad candidate got caught" and "the pipeline is broken" don't look identical in run history. A rejected day is a normal day. What's *not* normal is the same rejection reason repeating for many days in a row — see below.
 
-**A third workflow, `scampedia-staleness-check.yml`, runs independently** ~20 minutes after the daily bot, checks `https://scampedia.net/api/reports.json`'s real `lastUpdated` field over HTTP (not git state — this is what lets it catch a dead CDN/deploy, not just a dead bot), and fails if it's more than 5 days old.
+**A third workflow, `scampedia-staleness-check.yml`, runs independently** ~20 minutes after the daily bot, checks `https://scampedia.net/api/reports.json`'s real `lastUpdated` field over HTTP (not git state — this is what lets it catch a dead CDN/deploy, not just a dead bot), and fails if it's more than 10 days old (5 before the weekly review batch: a week between merges is now normal).
 
 **Key files:**
 - `scripts/lib/scam-pipeline.js` — every gate, shared by both bots
