@@ -145,6 +145,7 @@ function courseShell({ title, description, canonical, ogImage, jsonLd, bodyHtml,
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  ${suppressAppCta ? '' : '<meta name="apple-itunes-app" content="app-id=6794175364" />'}
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}" />
   <link rel="canonical" href="${canonical}" />
@@ -290,6 +291,13 @@ function lessonPageHtml(lesson, numberedLessons, volatile) {
     </div>` : ''}
 
     <div class="course-body">${bodyHtmlRaw}</div>
+
+    ${isCrisis ? '' : `
+    <div class="wiki-check-box">
+      <div class="wiki-check-title">Want a second opinion on something you got?</div>
+      <p>VerifyGuard checks photos, links, and messages for the warning signs of scams. It's free to start.</p>
+      <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/verifyguard-scam-detector/id6794175364">Get VerifyGuard →</a>
+    </div>`}
 
     ${navLinksHtml}
 
