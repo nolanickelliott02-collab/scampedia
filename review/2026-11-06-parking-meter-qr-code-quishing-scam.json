@@ -1,0 +1,60 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "129",
+    "slug": "parking-meter-qr-code-quishing-scam",
+    "title": "Parking Meter QR Code \"Quishing\" Scam",
+    "summary": "Scammers plaster fraudulent QR code stickers directly over the legitimate codes on public parking meters, sending drivers who scan them to fake payment websites that steal credit card and personal information.",
+    "category": "Government Scam",
+    "firstReported": "2025-06-01",
+    "relatedScams": [
+      "QR Code Scam",
+      "Fake Toll Road Text Scam",
+      "Brushing Scam with QR Code Twist"
+    ],
+    "safetyTips": [
+      "Don't scan QR codes stuck on parking meters; instead, pay directly through the city's official parking app or website by typing the URL yourself",
+      "Check whether the QR code looks like a sticker placed over another sticker, which can indicate tampering",
+      "Before entering payment details, verify the web address matches the official parking authority's known domain exactly",
+      "If you've already scanned a suspicious code and entered card details, contact your bank immediately to dispute charges and request a new card",
+      "Report suspicious QR codes on public parking meters to local police or the city's transportation department"
+    ],
+    "datePublished": "2026-11-06T21:56:13.918Z",
+    "howItWorks": "Fraudsters print QR code stickers that closely mimic a city's official parking payment system (like ParkNYC or ParkMobile) and physically stick them over the real QR code on parking meters or \"Pay by Phone\" signage in public parking areas. When a driver scans the sticker expecting to pay for parking, they are redirected to a convincing fake website, sometimes using a misspelled or lookalike domain, that displays the real city or app logo and asks for a credit card number, billing address, phone number, and license plate. The scammer harvests this payment and personal data, while the victim believes they've simply paid for parking, often only discovering the fraud when unauthorized charges or identity theft issues appear later.",
+    "redFlags": [
+      "A QR code sticker appears stuck on top of or next to an existing official sticker on a parking meter",
+      "The payment website URL is misspelled, uses a slightly different domain, or doesn't match the city's official parking app/site",
+      "You're asked to enter extensive personal details (license plate, phone number, billing address) just to pay for short-term parking",
+      "The meter or signage doesn't normally use QR codes for payment at all",
+      "Payment pages feel rushed or pressure you to act immediately without a way to verify the meter number"
+    ],
+    "realExamples": [
+      "A Brooklyn man was indicted in Manhattan on identity theft and criminal impersonation charges after allegedly placing fraudulent QR code stickers over legitimate ones on 64 Manhattan parking meters, directing drivers to a fake version of the city's official ParkNYC website that asked for credit card number, billing address, phone number, and license plate.",
+      "In Redondo Beach, California, scammers plastered fake QR codes on about 150 parking meters along the Esplanade and Riviera Village area, placed right next to the legitimate ParkMobile codes, redirecting victims to a fraudulent site.",
+      "The Federal Trade Commission issued a national warning about scammers placing fake QR codes over legitimate ones on parking meters to steal personal and financial information."
+    ],
+    "source": "Manhattan District Attorney's Office, https://manhattanda.org/d-a-bragg-doi-commissioner-shihata-announce-indictment-in-qr-code-parking-fraud-scheme/",
+    "spreadPlatforms": [
+      "Physical Stickers on Parking Meters",
+      "Fake Websites",
+      "Social Media (TikTok reports)"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "QR Code Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "ParkNYC QR Code Fraud",
+      "Parking Meter Quishing"
+    ],
+    "confidence": 0.6,
+    "reasoning": "This is a specific real-world instance (Manhattan DA/DOI indictment) of the broader QR Code Scam already in the database, applied to parking meters; the underlying mechanism (fake sticker over real QR code leading to phishing site) is the same pattern already catalogued, not a new scam type, though it is a concrete documented case worth noting as a variant."
+  },
+  "queuedAt": "2026-11-06T21:56:20.345Z"
+}
