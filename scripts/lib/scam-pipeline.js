@@ -638,7 +638,9 @@ const GENERIC_PHRASES = new Set([
 ]);
 const MAX_PHRASES_PER_ENTRY = 3;
 
-// Ordinary messages a phrase must not appear in (scripts/lib/safe-messages.json):
+// Ordinary messages a phrase must not appear in (scripts/lib/safe-messages.json,
+// hand-written by Claude Code, not real messages; Phase 4 replaces them with
+// the real verified safe set):
 // bank alerts, pharmacy and doctor reminders, family texts, delivery notices
 // and job messages. Added 2026-11-06 after "courier roles" was proposed; it
 // would flag any normal delivery-job text.

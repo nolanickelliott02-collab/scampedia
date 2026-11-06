@@ -1,43 +1,197 @@
 {
-  "note": "Ordinary, legitimate messages. A phrase proposed for the app's scam list is dropped if it appears in any of these, word for word. Hand-written examples of common message types, not real customer messages; they are not training or evaluation data. Add a message whenever a proposed phrase turns out to match normal mail or texts.",
+  "source": "hand-written by Claude Code",
+  "realMessages": false,
+  "note": "Hand-written by Claude Code on 2026-11-06 as examples of ordinary, legitimate messages. None of these are real messages. A phrase proposed for the app's scam list is dropped if it appears in any of them, word for word. They are not training or evaluation data. Replace this file with the real, verified safe-message set when Phase 4 builds it.",
   "messages": [
-    { "type": "bank", "text": "Chase: A purchase of $42.17 at KROGER was made on your card ending in 1234. If you don't recognize it, call the number on the back of your card." },
-    { "type": "bank", "text": "Your monthly statement is ready to view. Sign in to your account to see it." },
-    { "type": "bank", "text": "Wells Fargo: Your direct deposit of $1,250.00 has posted to your checking account." },
-    { "type": "bank", "text": "Your new debit card has shipped and should arrive within 7 to 10 business days. Activate it when it arrives." },
-    { "type": "bank", "text": "Reminder: your credit card payment of $85.00 is due on the 15th. You can pay online or in the app." },
-    { "type": "bank", "text": "Your one-time verification code is 482913. Do not share this code with anyone. We will never ask for it." },
-    { "type": "pharmacy", "text": "CVS Pharmacy: Your prescription is ready for pickup at your Main St store. Reply STOP to opt out." },
-    { "type": "pharmacy", "text": "Walgreens: It's time to refill your prescription. Tap to request a refill or call your pharmacy." },
-    { "type": "doctor", "text": "Reminder: you have an appointment with Dr. Patel on Tuesday at 10:30 AM. Reply C to confirm or call the office to reschedule." },
-    { "type": "doctor", "text": "Your test results are available. Log in to your patient portal to view them, or call the office with questions." },
-    { "type": "doctor", "text": "Your annual wellness visit is due. Call us to schedule an appointment." },
-    { "type": "insurance", "text": "Your Medicare Summary Notice is now available. It lists the services billed to Medicare in the last three months." },
-    { "type": "insurance", "text": "Your auto insurance policy renews next month. Your new declarations page is attached." },
-    { "type": "family", "text": "Hi Mom, I'm going to be late for dinner, traffic is terrible. Save me a plate!" },
-    { "type": "family", "text": "Grandpa, thanks for the birthday card! Can we call this weekend?" },
-    { "type": "family", "text": "Can you pick up milk on the way home? Also the kids need a ride to practice at 5." },
-    { "type": "family", "text": "Landed safely, will call you when I get to the hotel. Love you." },
-    { "type": "family", "text": "I lost my phone so this is my new number, save it. Talk soon!" },
-    { "type": "delivery", "text": "USPS: Your package was delivered to your front door at 2:14 PM." },
-    { "type": "delivery", "text": "Your Amazon order has shipped and will arrive Thursday. Track your package in the app." },
-    { "type": "delivery", "text": "UPS: We missed you. We'll try to deliver your package again tomorrow." },
-    { "type": "delivery", "text": "FedEx: Your package is out for delivery today. A signature may be required." },
-    { "type": "job", "text": "We have courier roles and delivery driver positions open in your area. Apply online through our careers page." },
-    { "type": "job", "text": "Thanks for applying. We'd like to schedule a phone interview this week. What times work for you?" },
-    { "type": "job", "text": "Your first paycheck will be sent by direct deposit on Friday. Please fill out your W-4 form before then." },
-    { "type": "job", "text": "Reminder: your shift starts at 7 AM tomorrow. Please bring your ID for your background check paperwork." },
-    { "type": "utility", "text": "Your electric bill of $112.40 is ready. Payment is due on the 22nd. Pay online or set up autopay." },
-    { "type": "utility", "text": "Scheduled maintenance: water service on your street will be off Tuesday from 9 AM to noon." },
-    { "type": "government", "text": "Your tax refund has been issued. You can check the status with the Where's My Refund tool on IRS.gov." },
-    { "type": "government", "text": "Your vehicle registration expires next month. Renew online at the DMV website or at any office." },
-    { "type": "government", "text": "Your Social Security benefit statement is available in your my Social Security account." },
-    { "type": "shopping", "text": "Thank you for your order! Your receipt is attached. Questions? Contact customer service." },
-    { "type": "shopping", "text": "Your return was received and your refund of $29.99 will appear on your card in 3 to 5 business days." },
-    { "type": "shopping", "text": "Your subscription will renew on the 1st. You can cancel any time in your account settings." },
-    { "type": "account", "text": "A new sign-in to your Google Account on a Mac. If this was you, you don't need to do anything." },
-    { "type": "account", "text": "Your password was changed. If you didn't make this change, reset your password right away." },
-    { "type": "community", "text": "Church potluck this Sunday after the 10 AM service. Bring a dish to share!" },
-    { "type": "community", "text": "Library reminder: the book you borrowed is due back on Friday. Renew online or at the desk." }
+    {
+      "type": "bank",
+      "text": "Chase: A purchase of $42.17 at KROGER was made on your card ending in 1234. If you don't recognize it, call the number on the back of your card.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "bank",
+      "text": "Your monthly statement is ready to view. Sign in to your account to see it.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "bank",
+      "text": "Wells Fargo: Your direct deposit of $1,250.00 has posted to your checking account.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "bank",
+      "text": "Your new debit card has shipped and should arrive within 7 to 10 business days. Activate it when it arrives.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "bank",
+      "text": "Reminder: your credit card payment of $85.00 is due on the 15th. You can pay online or in the app.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "bank",
+      "text": "Your one-time verification code is 482913. Do not share this code with anyone. We will never ask for it.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "pharmacy",
+      "text": "CVS Pharmacy: Your prescription is ready for pickup at your Main St store. Reply STOP to opt out.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "pharmacy",
+      "text": "Walgreens: It's time to refill your prescription. Tap to request a refill or call your pharmacy.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "doctor",
+      "text": "Reminder: you have an appointment with Dr. Patel on Tuesday at 10:30 AM. Reply C to confirm or call the office to reschedule.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "doctor",
+      "text": "Your test results are available. Log in to your patient portal to view them, or call the office with questions.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "doctor",
+      "text": "Your annual wellness visit is due. Call us to schedule an appointment.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "insurance",
+      "text": "Your Medicare Summary Notice is now available. It lists the services billed to Medicare in the last three months.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "insurance",
+      "text": "Your auto insurance policy renews next month. Your new declarations page is attached.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "family",
+      "text": "Hi Mom, I'm going to be late for dinner, traffic is terrible. Save me a plate!",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "family",
+      "text": "Grandpa, thanks for the birthday card! Can we call this weekend?",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "family",
+      "text": "Can you pick up milk on the way home? Also the kids need a ride to practice at 5.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "family",
+      "text": "Landed safely, will call you when I get to the hotel. Love you.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "family",
+      "text": "I lost my phone so this is my new number, save it. Talk soon!",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "delivery",
+      "text": "USPS: Your package was delivered to your front door at 2:14 PM.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "delivery",
+      "text": "Your Amazon order has shipped and will arrive Thursday. Track your package in the app.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "delivery",
+      "text": "UPS: We missed you. We'll try to deliver your package again tomorrow.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "delivery",
+      "text": "FedEx: Your package is out for delivery today. A signature may be required.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "job",
+      "text": "We have courier roles and delivery driver positions open in your area. Apply online through our careers page.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "job",
+      "text": "Thanks for applying. We'd like to schedule a phone interview this week. What times work for you?",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "job",
+      "text": "Your first paycheck will be sent by direct deposit on Friday. Please fill out your W-4 form before then.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "job",
+      "text": "Reminder: your shift starts at 7 AM tomorrow. Please bring your ID for your background check paperwork.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "utility",
+      "text": "Your electric bill of $112.40 is ready. Payment is due on the 22nd. Pay online or set up autopay.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "utility",
+      "text": "Scheduled maintenance: water service on your street will be off Tuesday from 9 AM to noon.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "government",
+      "text": "Your tax refund has been issued. You can check the status with the Where's My Refund tool on IRS.gov.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "government",
+      "text": "Your vehicle registration expires next month. Renew online at the DMV website or at any office.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "government",
+      "text": "Your Social Security benefit statement is available in your my Social Security account.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "shopping",
+      "text": "Thank you for your order! Your receipt is attached. Questions? Contact customer service.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "shopping",
+      "text": "Your return was received and your refund of $29.99 will appear on your card in 3 to 5 business days.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "shopping",
+      "text": "Your subscription will renew on the 1st. You can cancel any time in your account settings.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "account",
+      "text": "A new sign-in to your Google Account on a Mac. If this was you, you don't need to do anything.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "account",
+      "text": "Your password was changed. If you didn't make this change, reset your password right away.",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "community",
+      "text": "Church potluck this Sunday after the 10 AM service. Bring a dish to share!",
+      "source": "hand-written by Claude Code"
+    },
+    {
+      "type": "community",
+      "text": "Library reminder: the book you borrowed is due back on Friday. Renew online or at the desk.",
+      "source": "hand-written by Claude Code"
+    }
   ]
 }
