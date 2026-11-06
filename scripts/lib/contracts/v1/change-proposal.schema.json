@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://officialverifyguard.com/contracts/v1/change-proposal.schema.json",
+  "title": "ChangeProposal",
+  "description": "The only way an automated process (Scampedia bots, Dojo, training, fusion tuning) asks to change what users see. Approved or rejected only by a person, with a recorded reason.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "kind", "proposedBy", "summary", "payload", "createdAt", "status"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/proposalId" },
+    "kind": { "enum": ["fusion_weights", "entity_status", "scampedia_entry", "detection_phrase", "model_promotion"] },
+    "proposedBy": { "$ref": "common.schema.json#/$defs/actor" },
+    "summary": { "type": "string", "minLength": 1, "maxLength": 2000, "description": "Plain English: what changes for users, and why." },
+    "payload": { "type": "object" },
+    "evidenceIds": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/evidenceId" }, "uniqueItems": true },
+    "createdAt": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "status": { "enum": ["pending", "approved", "rejected", "withdrawn"] },
+    "decision": { "$ref": "common.schema.json#/$defs/decision" }
+  },
+  "allOf": [
+    { "if": { "properties": { "status": { "enum": ["approved", "rejected"] } }, "required": ["status"] }, "then": { "required": ["decision"] }, "else": { "not": { "required": ["decision"] } } }
+  ]
+}

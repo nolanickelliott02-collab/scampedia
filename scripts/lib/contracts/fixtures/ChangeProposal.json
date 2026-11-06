@@ -1,0 +1,133 @@
+{
+  "note": "Made-up example values for contract tests. Not measurements or real data.",
+  "valid": [
+    {
+      "name": "pending",
+      "value": {
+        "id": "proposal:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "kind": "fusion_weights",
+        "proposedBy": "bot:dojo",
+        "summary": "Example: raise Hive's weight from 0.6 to 0.7.",
+        "payload": {
+          "weightsVersion": "2026-11-10.1"
+        },
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "pending"
+      }
+    },
+    {
+      "name": "approved by a person",
+      "value": {
+        "id": "proposal:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "kind": "fusion_weights",
+        "proposedBy": "bot:dojo",
+        "summary": "Example: raise Hive's weight from 0.6 to 0.7.",
+        "payload": {
+          "weightsVersion": "2026-11-10.1"
+        },
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "approved",
+        "decision": {
+          "by": "human:nick",
+          "at": "2026-11-07T09:00:00.123Z",
+          "reason": "Agreement held for two weeks of shadow logs."
+        }
+      }
+    },
+    {
+      "name": "rejected by a person",
+      "value": {
+        "id": "proposal:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "kind": "fusion_weights",
+        "proposedBy": "bot:dojo",
+        "summary": "Example: raise Hive's weight from 0.6 to 0.7.",
+        "payload": {
+          "weightsVersion": "2026-11-10.1"
+        },
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "rejected",
+        "decision": {
+          "by": "human:nick",
+          "at": "2026-11-07T09:00:00.123Z",
+          "reason": "Sample too small."
+        }
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "name": "approved by a bot",
+      "why": "only a person can approve",
+      "value": {
+        "id": "proposal:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "kind": "fusion_weights",
+        "proposedBy": "bot:dojo",
+        "summary": "Example: raise Hive's weight from 0.6 to 0.7.",
+        "payload": {
+          "weightsVersion": "2026-11-10.1"
+        },
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "approved",
+        "decision": {
+          "by": "bot:dojo",
+          "at": "2026-11-07T09:00:00.123Z",
+          "reason": "Agreement held for two weeks of shadow logs."
+        }
+      }
+    },
+    {
+      "name": "approved with no decision",
+      "why": "approval needs a recorded decision",
+      "value": {
+        "id": "proposal:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "kind": "fusion_weights",
+        "proposedBy": "bot:dojo",
+        "summary": "Example: raise Hive's weight from 0.6 to 0.7.",
+        "payload": {
+          "weightsVersion": "2026-11-10.1"
+        },
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "approved"
+      }
+    },
+    {
+      "name": "decision without a reason",
+      "why": "the reason is required",
+      "value": {
+        "id": "proposal:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "kind": "fusion_weights",
+        "proposedBy": "bot:dojo",
+        "summary": "Example: raise Hive's weight from 0.6 to 0.7.",
+        "payload": {
+          "weightsVersion": "2026-11-10.1"
+        },
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "rejected",
+        "decision": {
+          "by": "human:nick",
+          "at": "2026-11-07T09:00:00.123Z"
+        }
+      }
+    },
+    {
+      "name": "pending with a decision",
+      "why": "a pending proposal has no decision",
+      "value": {
+        "id": "proposal:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "kind": "fusion_weights",
+        "proposedBy": "bot:dojo",
+        "summary": "Example: raise Hive's weight from 0.6 to 0.7.",
+        "payload": {
+          "weightsVersion": "2026-11-10.1"
+        },
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "pending",
+        "decision": {
+          "by": "human:nick",
+          "at": "2026-11-07T09:00:00.123Z",
+          "reason": "Agreement held for two weeks of shadow logs."
+        }
+      }
+    }
+  ]
+}

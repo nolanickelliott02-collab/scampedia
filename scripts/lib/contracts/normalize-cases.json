@@ -1,0 +1,43 @@
+{
+  "note": "Shared normalization test cases. Every repo's normalizer (server JS, Scampedia JS, Dojo Python, VGCore Swift) must give exactly these outputs. null means the input isn't a valid value of that type.",
+  "cases": [
+    { "type": "domain", "in": "WWW.Example.COM", "out": "example.com" },
+    { "type": "domain", "in": " paypal-secure.example. ", "out": "paypal-secure.example" },
+    { "type": "domain", "in": "https://Sub.Example.com/login", "out": "sub.example.com" },
+    { "type": "domain", "in": "not a domain", "out": null },
+    { "type": "domain", "in": "localhost", "out": null },
+
+    { "type": "url", "in": "HTTPS://WWW.Example.com/Path?utm_source=sms&id=7&fbclid=abc#top", "out": "https://www.example.com/Path?id=7" },
+    { "type": "url", "in": "example.com/pay", "out": "https://example.com/pay" },
+    { "type": "url", "in": "http://example.com:80/", "out": "http://example.com/" },
+    { "type": "url", "in": "https://example.com/?gclid=1&utm_medium=x", "out": "https://example.com/" },
+    { "type": "url", "in": "https://example.com/a?b=2&a=1", "out": "https://example.com/a?b=2&a=1" },
+    { "type": "url", "in": "javascript:alert(1)", "out": null },
+    { "type": "url", "in": "ftp://example.com/file", "out": null },
+
+    { "type": "phone", "in": "(555) 010-1234", "out": "+15550101234" },
+    { "type": "phone", "in": "+1 555.010.1234", "out": "+15550101234" },
+    { "type": "phone", "in": "1-555-010-1234", "out": "+15550101234" },
+    { "type": "phone", "in": "+44 20 7946 0958", "out": "+442079460958" },
+    { "type": "phone", "in": "12345", "out": null },
+    { "type": "phone", "in": "020 7946 0958", "out": null },
+
+    { "type": "email", "in": " Refunds@Fake-Bank.Example ", "out": "refunds@fake-bank.example" },
+    { "type": "email", "in": "not an email", "out": null },
+
+    { "type": "crypto_wallet", "in": "0x52908400098527886E0F7030069857D2E4169EE7", "out": "0x52908400098527886e0f7030069857d2e4169ee7" },
+    { "type": "crypto_wallet", "in": "0x52908400098527886e0f7030069857d2e4169ee7", "out": "0x52908400098527886e0f7030069857d2e4169ee7" },
+    { "type": "crypto_wallet", "in": "0x1234", "out": null },
+    { "type": "crypto_wallet", "in": "BC1QAR0SRRR7XFKVY5L643LYDNW9RE59GTZZWF5MDQ", "out": "bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq" },
+    { "type": "crypto_wallet", "in": "bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq", "out": "bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq" },
+    { "type": "crypto_wallet", "in": "bc1QAR0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq", "out": null },
+    { "type": "crypto_wallet", "in": "1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2", "out": "1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2" },
+    { "type": "crypto_wallet", "in": "3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy", "out": "3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy" },
+    { "type": "crypto_wallet", "in": "TJYeasTPa6gpEEfYqHNUpYRo9U5CRu6Mm1", "out": "TJYeasTPa6gpEEfYqHNUpYRo9U5CRu6Mm1" },
+    { "type": "crypto_wallet", "in": "hello", "out": null },
+
+    { "type": "payment_handle", "in": "$RefundDesk", "out": "$refunddesk" },
+    { "type": "payment_handle", "in": "@Gift.Card-Help", "out": "@gift.card-help" },
+    { "type": "payment_handle", "in": "$500", "out": null }
+  ]
+}

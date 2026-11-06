@@ -7,6 +7,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { recordPublishedSlugs } = require('./lib/published-slugs');
 
 const ROOT = path.join(__dirname, '..');
 const REPORTS_PATH = path.join(ROOT, 'api', 'reports.json');
@@ -470,6 +471,10 @@ function main() {
   fs.writeFileSync(path.join(SCAMS_DIR, 'index.html'), indexPageHtml(allReports));
   fs.writeFileSync(path.join(SCAMS_DIR, 'az.html'), azPageHtml(allReports));
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), buildSitemap(allReports));
+
+  // Permanent IDs: record any new slug so a later rename fails the tests.
+  const newSlugs = recordPublishedSlugs(allReports);
+  if (newSlugs.length) console.log(`Recorded ${newSlugs.length} new slug(s) in data/published-slugs.json`);
 
   console.log(`Built ${allReports.length} scam pages + index.html + az.html + sitemap.xml`);
 }

@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://officialverifyguard.com/contracts/v1/model-version.schema.json",
+  "title": "ModelVersion",
+  "description": "One version of something that decides verdicts: fusion weights or a classifier. Only a person can approve one, and rollback means switching back to an earlier approved version. The id must equal model:<name>@<version> (checked in code: JSON Schema can't compare two fields).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "kind",
+    "name",
+    "version",
+    "createdAt",
+    "status",
+    "dataSnapshotHash",
+    "metrics"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "common.schema.json#/$defs/modelVersionId"
+    },
+    "kind": {
+      "enum": [
+        "fusion_weights",
+        "text_classifier"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9A-Za-z.+-]+$"
+    },
+    "parentVersion": {
+      "$ref": "common.schema.json#/$defs/modelVersionId"
+    },
+    "createdAt": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "shadow",
+        "approved",
+        "rejected",
+        "retired"
+      ]
+    },
+    "dataSnapshotHash": {
+      "$ref": "common.schema.json#/$defs/sha256Hex"
+    },
+    "metrics": {
+      "type": "object",
+      "description": "Measured on the real, verified eval set. The red-team stress test is reported separately.",
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "stressMetrics": {
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "evalSetSize": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "decision": {
+      "$ref": "common.schema.json#/$defs/decision"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "approved",
+              "rejected"
+            ]
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "decision"
+        ]
+      }
+    }
+  ]
+}

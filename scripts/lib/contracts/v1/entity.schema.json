@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://officialverifyguard.com/contracts/v1/entity.schema.json",
+  "title": "Entity",
+  "description": "One thing tracked over time in the threat graph: a link, domain, phone number, email, crypto wallet or payment handle. Identified by valueHash (keyed HMAC of the normalized value). The plaintext value may only be stored once the entity is verified or published.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "type", "valueHash", "status", "firstSeen", "lastSeen"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/entityId" },
+    "type": { "$ref": "common.schema.json#/$defs/entityType" },
+    "valueHash": { "$ref": "common.schema.json#/$defs/sha256Hex" },
+    "value": { "type": "string", "minLength": 1, "maxLength": 2048, "description": "Normalized plaintext. Only when status is verified or published." },
+    "status": { "$ref": "common.schema.json#/$defs/entityStatus" },
+    "firstSeen": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "lastSeen": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "verifiedBy": { "$ref": "common.schema.json#/$defs/actor", "description": "A person, or a bot citing a trusted external source (see evidenceIds)." },
+    "verifiedAt": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "scampediaIds": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/scampediaId" }, "uniqueItems": true },
+    "evidenceIds": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/evidenceId" }, "uniqueItems": true }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "enum": ["verified", "published"] } }, "required": ["status"] },
+      "then": { "required": ["verifiedBy", "verifiedAt", "evidenceIds"], "properties": { "evidenceIds": { "type": "array", "minItems": 1 } } },
+      "else": { "not": { "required": ["value"] } }
+    }
+  ]
+}

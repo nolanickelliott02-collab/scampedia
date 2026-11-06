@@ -1,0 +1,105 @@
+{
+  "note": "Made-up example values for contract tests. Not measurements or real data.",
+  "valid": [
+    {
+      "name": "available detector",
+      "value": {
+        "detector": "hive",
+        "inputType": "image",
+        "risk": 0.91,
+        "confidence": 0.8,
+        "reasonCode": "AI_DETECTOR_HIGH",
+        "available": true
+      }
+    },
+    {
+      "name": "unavailable detector",
+      "value": {
+        "detector": "realityDefender",
+        "inputType": "image",
+        "risk": null,
+        "confidence": 0,
+        "reasonCode": "DETECTOR_UNAVAILABLE",
+        "available": false
+      }
+    },
+    {
+      "name": "with entity",
+      "value": {
+        "detector": "urlChecker",
+        "inputType": "url",
+        "risk": 0.91,
+        "confidence": 0.8,
+        "reasonCode": "SUSPICIOUS_TLD",
+        "available": true,
+        "entityId": "entity:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "observedAt": "2026-11-06T18:30:00Z"
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "name": "risk above 1",
+      "why": "risk is 0..1",
+      "value": {
+        "detector": "hive",
+        "inputType": "image",
+        "risk": 1.4,
+        "confidence": 0.8,
+        "reasonCode": "AI_DETECTOR_HIGH",
+        "available": true
+      }
+    },
+    {
+      "name": "unavailable with a score",
+      "why": "an unavailable detector has no risk",
+      "value": {
+        "detector": "realityDefender",
+        "inputType": "image",
+        "risk": 0.5,
+        "confidence": 0,
+        "reasonCode": "DETECTOR_UNAVAILABLE",
+        "available": false
+      }
+    },
+    {
+      "name": "available without a score",
+      "why": "an available detector must give a risk",
+      "value": {
+        "detector": "hive",
+        "inputType": "image",
+        "risk": null,
+        "confidence": 0.8,
+        "reasonCode": "AI_DETECTOR_HIGH",
+        "available": true
+      }
+    },
+    {
+      "name": "raw evidence",
+      "why": "raw detector evidence never enters the contract",
+      "value": {
+        "detector": "hive",
+        "inputType": "image",
+        "risk": 0.91,
+        "confidence": 0.8,
+        "reasonCode": "AI_DETECTOR_HIGH",
+        "available": true,
+        "evidence": {
+          "text": "hi"
+        }
+      }
+    },
+    {
+      "name": "bad reason code",
+      "why": "reason codes are UPPER_SNAKE",
+      "value": {
+        "detector": "hive",
+        "inputType": "image",
+        "risk": 0.91,
+        "confidence": 0.8,
+        "reasonCode": "looks bad",
+        "available": true
+      }
+    }
+  ]
+}

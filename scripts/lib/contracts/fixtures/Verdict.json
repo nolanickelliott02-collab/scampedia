@@ -1,0 +1,219 @@
+{
+  "note": "Made-up example values for contract tests. Not measurements or real data.",
+  "valid": [
+    {
+      "name": "full check",
+      "value": {
+        "level": "likely_scam",
+        "risk": 0.91,
+        "confidence": 0.8,
+        "checkLevel": "full",
+        "reasons": [
+          {
+            "reasonCode": "AI_DETECTOR_HIGH",
+            "signalIndex": 0,
+            "detector": "hive",
+            "inputType": "image",
+            "contribution": 0.62
+          }
+        ],
+        "signals": [
+          {
+            "detector": "hive",
+            "inputType": "image",
+            "risk": 0.91,
+            "confidence": 0.8,
+            "reasonCode": "AI_DETECTOR_HIGH",
+            "available": true
+          },
+          {
+            "detector": "realityDefender",
+            "inputType": "image",
+            "risk": null,
+            "confidence": 0,
+            "reasonCode": "DETECTOR_UNAVAILABLE",
+            "available": false
+          }
+        ],
+        "weightsVersion": "2026-10-29.1",
+        "createdAt": "2026-11-06T18:30:00Z"
+      }
+    },
+    {
+      "name": "unknown",
+      "value": {
+        "level": "unknown",
+        "risk": null,
+        "confidence": 0,
+        "checkLevel": "basic",
+        "reasons": [],
+        "signals": [
+          {
+            "detector": "realityDefender",
+            "inputType": "image",
+            "risk": null,
+            "confidence": 0,
+            "reasonCode": "DETECTOR_UNAVAILABLE",
+            "available": false
+          }
+        ],
+        "weightsVersion": "2026-10-29.1",
+        "createdAt": "2026-11-06T18:30:00Z"
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "name": "reason without its signal",
+      "why": "every reason points at a real signal",
+      "value": {
+        "level": "likely_scam",
+        "risk": 0.91,
+        "confidence": 0.8,
+        "checkLevel": "full",
+        "reasons": [
+          {
+            "reasonCode": "AI_DETECTOR_HIGH",
+            "signalIndex": 5
+          }
+        ],
+        "signals": [
+          {
+            "detector": "hive",
+            "inputType": "image",
+            "risk": 0.91,
+            "confidence": 0.8,
+            "reasonCode": "AI_DETECTOR_HIGH",
+            "available": true
+          },
+          {
+            "detector": "realityDefender",
+            "inputType": "image",
+            "risk": null,
+            "confidence": 0,
+            "reasonCode": "DETECTOR_UNAVAILABLE",
+            "available": false
+          }
+        ],
+        "weightsVersion": "2026-10-29.1",
+        "createdAt": "2026-11-06T18:30:00Z"
+      }
+    },
+    {
+      "name": "confident unknown",
+      "why": "unknown has confidence 0",
+      "value": {
+        "level": "unknown",
+        "risk": 0.91,
+        "confidence": 0.7,
+        "checkLevel": "full",
+        "reasons": [
+          {
+            "reasonCode": "AI_DETECTOR_HIGH",
+            "signalIndex": 0,
+            "detector": "hive",
+            "inputType": "image",
+            "contribution": 0.62
+          }
+        ],
+        "signals": [
+          {
+            "detector": "hive",
+            "inputType": "image",
+            "risk": 0.91,
+            "confidence": 0.8,
+            "reasonCode": "AI_DETECTOR_HIGH",
+            "available": true
+          },
+          {
+            "detector": "realityDefender",
+            "inputType": "image",
+            "risk": null,
+            "confidence": 0,
+            "reasonCode": "DETECTOR_UNAVAILABLE",
+            "available": false
+          }
+        ],
+        "weightsVersion": "2026-10-29.1",
+        "createdAt": "2026-11-06T18:30:00Z"
+      }
+    },
+    {
+      "name": "missing check level",
+      "why": "basic vs full must be stated",
+      "value": {
+        "level": "likely_scam",
+        "risk": 0.91,
+        "confidence": 0.8,
+        "reasons": [
+          {
+            "reasonCode": "AI_DETECTOR_HIGH",
+            "signalIndex": 0,
+            "detector": "hive",
+            "inputType": "image",
+            "contribution": 0.62
+          }
+        ],
+        "signals": [
+          {
+            "detector": "hive",
+            "inputType": "image",
+            "risk": 0.91,
+            "confidence": 0.8,
+            "reasonCode": "AI_DETECTOR_HIGH",
+            "available": true
+          },
+          {
+            "detector": "realityDefender",
+            "inputType": "image",
+            "risk": null,
+            "confidence": 0,
+            "reasonCode": "DETECTOR_UNAVAILABLE",
+            "available": false
+          }
+        ],
+        "weightsVersion": "2026-10-29.1",
+        "createdAt": "2026-11-06T18:30:00Z"
+      }
+    },
+    {
+      "name": "app verdict words",
+      "why": "levels are the fusion engine's four",
+      "value": {
+        "level": "dangerous",
+        "risk": 0.91,
+        "confidence": 0.8,
+        "checkLevel": "full",
+        "reasons": [
+          {
+            "reasonCode": "AI_DETECTOR_HIGH",
+            "signalIndex": 0,
+            "detector": "hive",
+            "inputType": "image",
+            "contribution": 0.62
+          }
+        ],
+        "signals": [
+          {
+            "detector": "hive",
+            "inputType": "image",
+            "risk": 0.91,
+            "confidence": 0.8,
+            "reasonCode": "AI_DETECTOR_HIGH",
+            "available": true
+          },
+          {
+            "detector": "realityDefender",
+            "inputType": "image",
+            "risk": null,
+            "confidence": 0,
+            "reasonCode": "DETECTOR_UNAVAILABLE",
+            "available": false
+          }
+        ],
+        "weightsVersion": "2026-10-29.1",
+        "createdAt": "2026-11-06T18:30:00Z"
+      }
+    }
+  ]
+}

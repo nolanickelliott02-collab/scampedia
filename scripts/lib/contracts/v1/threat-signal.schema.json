@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://officialverifyguard.com/contracts/v1/threat-signal.schema.json",
+  "title": "ThreatSignal",
+  "description": "One detector's report on one input, in the fusion engine's shape (server/fusion/signal.js). Raw detector evidence is never part of the contract: it can contain message text or links.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["detector", "inputType", "risk", "confidence", "reasonCode", "available"],
+  "properties": {
+    "detector": { "type": "string", "pattern": "^[a-z][a-zA-Z0-9_]{1,63}$" },
+    "inputType": { "$ref": "common.schema.json#/$defs/inputType" },
+    "risk": { "oneOf": [{ "$ref": "common.schema.json#/$defs/probability" }, { "type": "null" }] },
+    "confidence": { "$ref": "common.schema.json#/$defs/probability" },
+    "reasonCode": { "$ref": "common.schema.json#/$defs/reasonCode" },
+    "available": { "type": "boolean" },
+    "entityId": { "$ref": "common.schema.json#/$defs/entityId" },
+    "observedAt": { "$ref": "common.schema.json#/$defs/timestamp" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "available": { "const": false } } },
+      "then": { "properties": { "risk": { "type": "null" }, "confidence": { "const": 0 } } },
+      "else": { "properties": { "risk": { "type": "number" } } }
+    }
+  ]
+}

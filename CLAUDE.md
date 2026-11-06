@@ -30,3 +30,10 @@ Message text is never stored without the user's explicit opt-in, and opted-in sc
 ## Merging pull requests (Nick's rule, 2026-11-06)
 
 Never merge any pull request unless Nick says "merge #N" for that specific PR. General approval ("go ahead", "merge it", "do what you can") is not a merge instruction, and a "merge #N" covers only that PR. When unsure which PR is meant, ask.
+
+## Permanent IDs and shared contracts (Phase 1, 2026-11-06)
+
+- An entry's permanent ID is `scampedia:<slug>`, never its integer `id`. Integers get reused (id 127 was first a rejected UK entry, then the SSA fake-badge entry), and the app's built-in entries used 1-9.
+- A published slug never changes, even when the title does. `data/published-slugs.json` records every slug (the page builder adds new ones); `scripts/__tests__/permanent-ids.test.js` fails if one disappears. To take an entry down, move its slug to `retired` with a date and reason (`rollback-last-entry.js` does this).
+- `scripts/lib/contracts/` is a copy of the platform contracts from the server repo. Don't edit it here; change the server's copy and copy it over.
+- Tests run one file at a time (`--test-concurrency=1`): several tests rebuild the real site pages, and running them in parallel made `build-idempotency` fail about 1 run in 6.

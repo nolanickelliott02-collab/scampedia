@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://officialverifyguard.com/contracts/v1/common.schema.json",
+  "title": "Shared definitions",
+  "$defs": {
+    "timestamp": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,6})?Z$", "description": "UTC, ISO 8601, e.g. 2026-11-06T18:30:00Z" },
+    "probability": { "type": "number", "minimum": 0, "maximum": 1 },
+    "sha256Hex": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "uuid": { "type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
+    "scampediaId": { "type": "string", "pattern": "^scampedia:[a-z0-9]+(-[a-z0-9]+)*$", "description": "scampedia:<slug>. A published slug never changes." },
+    "entityId": { "type": "string", "pattern": "^entity:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
+    "evidenceId": { "type": "string", "pattern": "^evidence:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
+    "proposalId": { "type": "string", "pattern": "^proposal:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
+    "modelVersionId": { "type": "string", "pattern": "^model:[a-z0-9]+(-[a-z0-9]+)*@[0-9A-Za-z.+-]+$", "description": "model:<name>@<version>" },
+    "humanActor": { "type": "string", "pattern": "^human:[a-z0-9][a-z0-9._-]*$", "description": "A person. Only a person may approve." },
+    "actor": { "type": "string", "pattern": "^(human|bot|system):[a-z0-9][a-z0-9._-]*$" },
+    "reasonCode": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,63}$" },
+    "entityType": { "enum": ["url", "domain", "phone", "email", "crypto_wallet", "payment_handle"] },
+    "entityStatus": { "enum": ["observed", "candidate", "verified", "published", "disputed", "retired"] },
+    "inputType": { "enum": ["url", "phone", "image", "text"] },
+    "verdictLevel": { "enum": ["safe", "caution", "likely_scam", "unknown"] },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["by", "at", "reason"],
+      "properties": {
+        "by": { "$ref": "#/$defs/humanActor" },
+        "at": { "$ref": "#/$defs/timestamp" },
+        "reason": { "type": "string", "minLength": 1, "maxLength": 2000 }
+      }
+    }
+  }
+}
