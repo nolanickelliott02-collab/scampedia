@@ -1,6 +1,6 @@
 {
-  "version": 96,
-  "lastUpdated": "2026-11-06T16:04:45.456Z",
+  "version": 97,
+  "lastUpdated": "2026-11-06T21:52:46.470Z",
   "reports": [
     {
       "id": "1",
@@ -4865,6 +4865,46 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "128",
+      "slug": "fake-roblox-game-enhancement-tool-account-theft-scam",
+      "title": "Fake Roblox \"Game Enhancement\" Tool Account Theft Scam",
+      "summary": "Criminals disguise infostealer malware as Roblox \"game-enhancement\" tools, hacks, or cheats to steal players' login credentials and hijack accounts loaded with Robux and rare items. A Ukrainian hacking ring compromised over 610,000 accounts this way before being arrested.",
+      "category": "Tech Scam",
+      "firstReported": "2026-04-30",
+      "relatedScams": [
+        "Fake Fortnite \"Locker Value\" & V-Bucks Reward Phishing Scam",
+        "Fake VPN App Malware Scam",
+        "Social Media Account Takeover Scam"
+      ],
+      "safetyTips": [
+        "Never download game enhancements, hacks, cracks, or key generators from outside the official Roblox platform",
+        "Never share your Roblox password or login credentials with anyone, including people claiming to be friends or Roblox staff",
+        "Enable two-step verification on your Roblox account and use a strong, unique password",
+        "If you suspect an infostealer infection, clear saved browser passwords, change your Roblox and email passwords immediately, and run anti-malware software",
+        "Report suspicious tools or sellers to Roblox support within 30 days of a suspected compromise, since recovery of lost items is not guaranteed"
+      ],
+      "datePublished": "2026-11-06T21:52:16.611Z",
+      "howItWorks": "Scammers build fake \"game-enhancement\" tools, cheats, cracks, or key generators that claim to give players extra abilities or free in-game currency in Roblox. When a player downloads and installs the tool, it secretly runs infostealer malware that captures saved login credentials and session cookies from the device and sends them back to the attackers. The criminals then rank stolen accounts by value based on inventory rarity, Robux balances, and the presence of limited-edition items no longer obtainable through normal means, before selling high-value \"elite\" accounts in bulk through underground websites and closed online communities.",
+      "redFlags": [
+        "Any website or video promising a downloadable 'game enhancer,' cheat, crack, or key for Roblox",
+        "Offers of 'free Robux' or free rare items that require installing software or logging in through an unofficial link",
+        "Requests to share your Roblox password, login email, or linked payment card with a 'friend' or fellow player",
+        "Tools or sites not distributed through Roblox's own official channels"
+      ],
+      "realExamples": [
+        "Ukrainian police arrested three individuals in Lviv who allegedly compromised over 610,000 Roblox accounts between October 2025 and January 2026 by distributing infostealer malware disguised as a game-enhancement tool, profiting around $225,000 by selling the accounts.",
+        "The hacking group classified at least 357 of the 610,000 compromised accounts as high-value 'elite' accounts based on rare items, Robux balances, and limited-edition inventory, then resold them via a Russian website and closed online communities."
+      ],
+      "source": "Malwarebytes, https://www.malwarebytes.com/blog/news/2026/04/hackers-stole-hundreds-of-thousands-of-roblox-accounts-heres-what-to-do",
+      "spreadPlatforms": [
+        "Discord",
+        "TikTok",
+        "YouTube",
+        "Third-party gaming/download websites"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
