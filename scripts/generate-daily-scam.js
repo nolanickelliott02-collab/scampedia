@@ -38,6 +38,10 @@ long-running scam pattern (regardless of how old it is) that is still actively c
 today, as long as it isn't already in the existing titles list below. Older, "classic" patterns are
 just as valuable to document as brand-new ones — don't favor recency for its own sake.
 
+Scampedia's readers are in the United States. Choose scams reported as targeting people in the US,
+and prefer US sources (US agencies, US news outlets, the BBB, AARP) and US terms. Skip scams reported
+only in another country, such as a UK-only scam that uses UK terms and UK reporting channels.
+
 Do NOT invent, guess, or extrapolate from training data alone — every fact must trace back to a
 real source you actually searched for today, even for a long-established pattern (find a real,
 current source confirming it's still active — a general knowledge claim that "this scam exists" is

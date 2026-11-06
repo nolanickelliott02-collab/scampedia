@@ -74,3 +74,31 @@ test('a phrase already waiting in the queue is not queued twice', () => {
     assert.equal(readQueue().phrases.length, 1);
   });
 });
+
+test('a phrase found in an ordinary message is not queued', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'scampedia-safe-'));
+  const patterns = path.join(dir, 'patterns.json');
+  const queue = path.join(dir, 'phrase-queue.json');
+  const safe = path.join(dir, 'safe-messages.json');
+  fs.writeFileSync(patterns, JSON.stringify({ version: 2, scamPatterns: [] }));
+  fs.writeFileSync(safe, JSON.stringify({ messages: [{ type: 'job', text: 'We have courier roles open in your area.' }] }));
+  const report = {
+    id: '300', title: 'Fake Courier Job Scam',
+    summary: 'Ads for courier roles lead to a fake insurance payment.',
+    howItWorks: 'The ad offers courier roles, then asks for an upfront insurance deposit.',
+    redFlags: ['An upfront insurance deposit'], realExamples: [],
+  };
+  try {
+    const added = queueScamPhrases(['courier roles', 'upfront insurance deposit'], report, patterns, queue, safe);
+    assert.deepEqual(added, ['upfront insurance deposit']);
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('the real safe-message set blocks the three phrases rejected on 2026-11-05 where they are ordinary', () => {
+  const { loadSafeMessages } = require('../lib/scam-pipeline');
+  const safe = loadSafeMessages();
+  assert.ok(safe.length >= 30);
+  assert.ok(safe.some(m => m.includes(' courier roles ')));
+});
