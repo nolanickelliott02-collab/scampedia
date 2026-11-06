@@ -1,15 +1,15 @@
 # Content Review Queue
 
-Generated 2026-09-20 by `scripts/check-content-health.js`. Sorted soonest-due first. Re-run after any content change.
+Generated 2026-11-06 by `scripts/check-content-health.js`. Sorted soonest-due first. Re-run after any content change.
 
 ## Lessons — reviewBy date
 
 | Due | Lesson | decayRisk | Status |
 |---|---|---|---|
-| 2026-11-06 | Reverse Image Search | high | ok |
-| 2026-11-06 | I Think I've Already Been Scammed | high | ok |
-| 2026-11-07 | Content Credentials and C2PA | high | ok |
-| 2026-12-06 | Why "Just Look at the Hands" Stopped Working | medium | ok |
+| 2026-11-06 | Reverse Image Search | high | **OVERDUE by 1d** |
+| 2026-11-06 | I Think I've Already Been Scammed | high | **OVERDUE by 1d** |
+| 2026-11-07 | Content Credentials and C2PA | high | due in 0d |
+| 2026-12-06 | Why "Just Look at the Hands" Stopped Working | medium | due in 29d |
 | 2027-02-04 | Where Did This Come From? | low | ok |
 | 2027-02-04 | What to Do When You're Not Sure | low | ok |
 | 2027-02-05 | What Is It Actually Asking You to Do? | low | ok |
@@ -18,11 +18,11 @@ Generated 2026-09-20 by `scripts/check-content-health.js`. Sorted soonest-due fi
 
 | Age | Key | checkUrl | Status |
 |---|---|---|---|
-| 43d | reverse-image-search-iphone-steps | https://support.google.com/websearch/answer/1325808?hl=en&co=GENIE.Platform%3DiOS | ok |
-| 43d | reverse-image-search-desktop-steps | https://support.google.com/websearch/answer/1325808?hl=en&co=GENIE.Platform%3DDesktop | ok |
-| 43d | crisis-reporting-resources | https://reportfraud.ftc.gov/ | ok |
-| 42d | c2pa-verify-tool | https://verify.contentauthenticity.org/ | ok |
-| 42d | c2pa-metadata-limitations | https://c2pa.org/faqs/ | ok |
+| 90d | reverse-image-search-iphone-steps | https://support.google.com/websearch/answer/1325808?hl=en&co=GENIE.Platform%3DiOS | ok |
+| 90d | reverse-image-search-desktop-steps | https://support.google.com/websearch/answer/1325808?hl=en&co=GENIE.Platform%3DDesktop | ok |
+| 90d | crisis-reporting-resources | https://reportfraud.ftc.gov/ | ok |
+| 89d | c2pa-verify-tool | https://verify.contentauthenticity.org/ | ok |
+| 89d | c2pa-metadata-limitations | https://c2pa.org/faqs/ | ok |
 
 ## Screenshots — assets/learn/
 
