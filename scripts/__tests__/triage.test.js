@@ -41,11 +41,22 @@ test('a high-confidence, distinct candidate passes triage', async () => {
   const client = fakeClient({
     isDistinctPattern: true, duplicateOf: null, novelty: 'new', severity: 'medium', urgency: 'medium',
     sourceCredibility: 'government-agency', suggestedCategory: 'Delivery Scam', suggestedAliases: [],
-    confidence: 0.9, reasoning: 'Genuinely distinct pattern, well-sourced.',
+    focusesOnUS: true, confidence: 0.9, reasoning: 'Genuinely distinct pattern, well-sourced.',
   });
   const result = await triageCandidate(client, CANDIDATE, EXISTING, 'source text here');
   assert.equal(result.ok, true);
   assert.equal(result.passed, true);
+});
+
+test('a distinct, confident candidate about a non-US scam does NOT pass', async () => {
+  const client = fakeClient({
+    isDistinctPattern: true, duplicateOf: null, novelty: 'new', severity: 'medium', urgency: 'medium',
+    sourceCredibility: 'established-outlet', suggestedCategory: 'Employment Scam', suggestedAliases: [],
+    focusesOnUS: false, confidence: 0.9, reasoning: 'Distinct, but the source only describes the UK.',
+  });
+  const result = await triageCandidate(client, CANDIDATE, EXISTING, 'source text here');
+  assert.equal(result.passed, false);
+  assert.match(result.issues[0], /focusesOnUS=false/);
 });
 
 test('a low-confidence candidate does NOT pass, even if marked distinct', async () => {

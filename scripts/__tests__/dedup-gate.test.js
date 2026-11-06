@@ -58,3 +58,27 @@ test('two entries with no URL at all (org-name-only) still dedupe on title', () 
   // these titles differ, so this must NOT be flagged as a duplicate.
   assert.equal(result.ok, true);
 });
+
+test('a candidate already held for review counts as a duplicate (title or source)', () => {
+  const fs = require('node:fs');
+  const os = require('node:os');
+  const path = require('node:path');
+  const { loadHeldCandidates } = require('../lib/scam-pipeline');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'scampedia-held-'));
+  try {
+    fs.writeFileSync(path.join(dir, '2026-11-01-ssa-badge.json'), JSON.stringify({
+      botName: 'gov-scam-scan',
+      candidate: { title: 'SSA Fake Badge Imposter Scam', source: 'SSA OIG, https://oig.ssa.gov/scam-alerts/2026-04-28-badges/' },
+    }));
+    fs.writeFileSync(path.join(dir, 'phrase-queue.json'), JSON.stringify({ phrases: [] }));
+    fs.writeFileSync(path.join(dir, 'broken.json'), '{ not json');
+    const held = loadHeldCandidates(dir);
+    assert.equal(held.length, 1);
+    const sameSource = checkNotDuplicate({ title: 'SSA Real Employee Name Scam', source: 'https://www.oig.ssa.gov/scam-alerts/2026-04-28-badges' }, held);
+    assert.equal(sameSource.ok, false);
+    const sameTitle = checkNotDuplicate({ title: 'ssa fake badge imposter scam', source: 'https://example.com/z' }, held);
+    assert.equal(sameTitle.ok, false);
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});

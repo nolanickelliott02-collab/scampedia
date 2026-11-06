@@ -48,6 +48,8 @@ function toArray(value) {
 // Seen in testing: a truncated response still produced a syntactically-valid
 // tool call with literal "Placeholder" strings and an unclosed <cite> tag
 // stuffed into the required fields just to satisfy the schema.
+const REVIEW_DIR = path.join(__dirname, '..', '..', 'review');
+
 const DEGENERATE_PATTERNS = [/\bplaceholder\b/i, /<cite\b/i, /<item\b/i, /\btodo\b/i, /\blorem ipsum\b/i];
 
 // Idempotency/dedup: the only defense against a duplicate entry today is
@@ -91,6 +93,26 @@ function checkNotDuplicate(newReport, existingReports) {
     }
   }
   return { ok: true, issues: [] };
+}
+
+// Candidates the triage step held for review (review/*.json) aren't in
+// reports.json, so until 2026-11-06 the bots kept re-researching them: the
+// SSA fake-badge alert was proposed and held at least 7 times between Oct 17
+// and Nov 6. Treat held candidates like existing entries, both in the
+// prompt's do-not-propose list and in checkNotDuplicate.
+function loadHeldCandidates(reviewDir = REVIEW_DIR) {
+  if (!fs.existsSync(reviewDir)) return [];
+  const held = [];
+  for (const name of fs.readdirSync(reviewDir)) {
+    if (!name.endsWith('.json') || name === 'phrase-queue.json') continue;
+    try {
+      const { candidate } = JSON.parse(fs.readFileSync(path.join(reviewDir, name), 'utf8'));
+      if (candidate && candidate.title) held.push({ id: `held:${name}`, title: candidate.title, source: candidate.source });
+    } catch {
+      // A malformed review file shouldn't stop the run.
+    }
+  }
+  return held;
 }
 
 function stripCiteMarkup(value) {
@@ -492,8 +514,6 @@ ${sourceText.slice(0, 24000)}`;
 // claims and the real fetched source text — same discipline as
 // factCheckClaims, no web_search — so it can't invent information not
 // present in the source to answer these questions.
-const REVIEW_DIR = path.join(__dirname, '..', '..', 'review');
-
 async function triageCandidate(client, newReport, existingReports, sourceText) {
   const existingSummary = existingReports
     .map(r => `- ${r.title} (${r.category})`)
@@ -534,10 +554,11 @@ ${sourceText.slice(0, 12000)}`;
           sourceCredibility: { type: 'string', enum: ['government-agency', 'established-outlet', 'other'], description: 'Classify the cited source itself, not the claim' },
           suggestedCategory: { type: 'string' },
           suggestedAliases: { type: 'array', items: { type: 'string' }, description: '0-3 alternate names for this scam pattern, only if the source text itself uses them' },
+          focusesOnUS: { type: 'boolean', description: 'true if the source describes this scam targeting people in the United States (US agency, US victims, US companies or US terms). false if it only describes another country, e.g. a UK-only scam using UK terms and UK reporting channels' },
           confidence: { type: 'number', description: 'Your confidence (0.0-1.0) that this is a genuinely distinct, well-founded, publish-worthy pattern' },
           reasoning: { type: 'string', description: 'One or two sentences explaining the assessment' },
         },
-        required: ['isDistinctPattern', 'duplicateOf', 'novelty', 'severity', 'urgency', 'sourceCredibility', 'suggestedCategory', 'suggestedAliases', 'confidence', 'reasoning'],
+        required: ['isDistinctPattern', 'duplicateOf', 'novelty', 'severity', 'urgency', 'sourceCredibility', 'suggestedCategory', 'suggestedAliases', 'focusesOnUS', 'confidence', 'reasoning'],
         additionalProperties: false,
       },
       strict: true,
@@ -556,13 +577,15 @@ ${sourceText.slice(0, 12000)}`;
   // can't (semantic near-duplicates, thin/low-quality sourcing), not
   // duplicate its exact-key logic.
   const CONFIDENCE_THRESHOLD = 0.6;
-  const passed = assessment.isDistinctPattern && assessment.confidence >= CONFIDENCE_THRESHOLD;
+  // Scampedia's readers and the app's users are in the US (Nick, 2026-11-06,
+  // after a UK-only entry reached the weekly batch). Non-US scams are held.
+  const passed = assessment.isDistinctPattern && assessment.focusesOnUS === true && assessment.confidence >= CONFIDENCE_THRESHOLD;
 
   if (!passed) {
     return {
       ok: true, // the triage step itself ran successfully — "didn't pass triage" is a routing decision, not a pipeline error
       passed: false,
-      issues: [`confidence ${assessment.confidence} (threshold ${CONFIDENCE_THRESHOLD}), isDistinctPattern=${assessment.isDistinctPattern}${assessment.duplicateOf ? `, possible duplicate of "${assessment.duplicateOf}"` : ''}: ${assessment.reasoning}`],
+      issues: [`confidence ${assessment.confidence} (threshold ${CONFIDENCE_THRESHOLD}), isDistinctPattern=${assessment.isDistinctPattern}, focusesOnUS=${assessment.focusesOnUS}${assessment.duplicateOf ? `, possible duplicate of "${assessment.duplicateOf}"` : ''}: ${assessment.reasoning}`],
       assessment,
     };
   }
@@ -615,17 +638,29 @@ const GENERIC_PHRASES = new Set([
 ]);
 const MAX_PHRASES_PER_ENTRY = 3;
 
+// Ordinary messages a phrase must not appear in (scripts/lib/safe-messages.json):
+// bank alerts, pharmacy and doctor reminders, family texts, delivery notices
+// and job messages. Added 2026-11-06 after "courier roles" was proposed; it
+// would flag any normal delivery-job text.
+const SAFE_MESSAGES_PATH = path.join(__dirname, 'safe-messages.json');
+
+function loadSafeMessages(safePath = SAFE_MESSAGES_PATH) {
+  if (!fs.existsSync(safePath)) return [];
+  return JSON.parse(fs.readFileSync(safePath, 'utf8')).messages.map(m => ` ${normalizePhrase(m.text)} `);
+}
+
 function normalizePhrase(p) {
   return String(p || '').toLowerCase().replace(/[“”"'‘’]/g, '').replace(/[^a-z0-9$%&\- ]+/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
-function acceptableScamPhrase(phrase, entryText, existing) {
+function acceptableScamPhrase(phrase, entryText, existing, safeMessages = []) {
   const words = phrase.split(' ');
   if (words.length < 2 || words.length > 6) return false;
   if (phrase.length < 8 || phrase.length > 60) return false;
   if (GENERIC_PHRASES.has(phrase)) return false;
   if (words.filter(w => !STOPWORDS.has(w) && w.length > 2).length < 2) return false;
   if (!entryText.includes(phrase)) return false;
+  if (safeMessages.some(m => m.includes(` ${phrase} `))) return false;
   // Whole-word overlap only — a plain substring check would reject "first
   // notice" for containing the existing pattern "irs". Overlapping phrases
   // are skipped because the app would count both matches.
@@ -634,18 +669,19 @@ function acceptableScamPhrase(phrase, entryText, existing) {
   return true;
 }
 
-function queueScamPhrases(candidates, report, patternsPath = PATTERNS_PATH, queuePath = PHRASE_QUEUE_PATH) {
+function queueScamPhrases(candidates, report, patternsPath = PATTERNS_PATH, queuePath = PHRASE_QUEUE_PATH, safePath = SAFE_MESSAGES_PATH) {
   if (!fs.existsSync(patternsPath)) return [];
   const patterns = JSON.parse(fs.readFileSync(patternsPath, 'utf8'));
   const queue = fs.existsSync(queuePath) ? JSON.parse(fs.readFileSync(queuePath, 'utf8')) : { phrases: [] };
   const existing = [...(patterns.scamPatterns || []), ...queue.phrases.map(q => q.phrase)].map(normalizePhrase);
+  const safeMessages = loadSafeMessages(safePath);
   const entryText = normalizePhrase([report.summary, report.howItWorks, ...(report.redFlags || []), ...(report.realExamples || [])].join(' '));
 
   const added = [];
   for (const raw of candidates) {
     if (added.length >= MAX_PHRASES_PER_ENTRY) break;
     const phrase = normalizePhrase(raw);
-    if (!acceptableScamPhrase(phrase, entryText, [...existing, ...added])) continue;
+    if (!acceptableScamPhrase(phrase, entryText, [...existing, ...added], safeMessages)) continue;
     added.push(phrase);
   }
   if (added.length === 0) return [];
@@ -903,6 +939,8 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
 
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const existingTitles = data.reports.map(r => r.title);
+    const heldCandidates = loadHeldCandidates();
+    const doNotProposeTitles = [...existingTitles, ...heldCandidates.map(h => h.title)];
     const messages = [{ role: 'user', content: 'Find and submit (or skip) today\'s scam trend entry.' }];
     let outcome = null;
 
@@ -910,7 +948,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
       const response = await client.messages.create({
         model: MODEL,
         max_tokens: 16000,
-        system: buildSystemPrompt(existingTitles, forceSkip),
+        system: buildSystemPrompt(doNotProposeTitles, forceSkip),
         tools: toolDefinitions,
         messages,
       });
@@ -1019,7 +1057,7 @@ async function runPipeline({ buildSystemPrompt, alreadyRanToday, extraGates = []
       continue;
     }
 
-    const dedupCheck = checkNotDuplicate(newReport, data.reports);
+    const dedupCheck = checkNotDuplicate(newReport, [...data.reports, ...heldCandidates]);
     if (!dedupCheck.ok) {
       console.error('Duplicate check failed, refusing to write:', dedupCheck.issues);
       lastNonWrittenOutcome = { result: 'gate-rejected', reason: `Duplicate check: ${dedupCheck.issues.join('; ')}` };
@@ -1148,6 +1186,8 @@ module.exports = {
   reviseToSupportedClaims,
   writeToReviewQueue,
   REVIEW_DIR,
+  loadHeldCandidates,
+  loadSafeMessages,
   checkNotDuplicate,
   writeGithubOutput,
   recordOutcome,
