@@ -1,6 +1,6 @@
 {
-  "version": 95,
-  "lastUpdated": "2026-11-06T15:36:44.215Z",
+  "version": 96,
+  "lastUpdated": "2026-11-06T16:04:45.456Z",
   "reports": [
     {
       "id": "1",
@@ -4788,7 +4788,7 @@
       "slug": "fake-fortnite-locker-value-v-bucks-reward-phishing-scam",
       "title": "Fake Fortnite \"Locker Value\" & V-Bucks Reward Phishing Scam",
       "summary": "Scammers build fake Fortnite reward, giveaway, and \"locker value calculator\" websites that promise free V-Bucks or cash, but actually funnel players to a fake Epic Games login page designed to steal their account credentials.",
-      "category": "Phone Scam",
+      "category": "Tech Scam",
       "firstReported": "2026-07-31",
       "relatedScams": [
         "Fake Online Store Scam",
