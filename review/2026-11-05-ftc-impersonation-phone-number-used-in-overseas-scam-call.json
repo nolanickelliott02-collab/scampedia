@@ -1,0 +1,55 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "127",
+    "slug": "ftc-impersonation-phone-number-used-in-overseas-scam-call",
+    "title": "FTC Impersonation \"Phone Number Used in Overseas Scam\" Call",
+    "summary": "Scammers posing as FTC agents call to claim your phone number has been linked to a scam ring overseas, then transfer you to a fake \"police officer\" who eventually demands a cash \"security deposit\" to avoid arrest.",
+    "category": "Government Scam",
+    "firstReported": "2026-10-22",
+    "relatedScams": [
+      "FTC Official Impersonation Bitcoin ATM Scam",
+      "FCC Commissioner Impersonation \"Phone Number Under Investigation\" Scam",
+      "Digital Arrest Scam"
+    ],
+    "safetyTips": [
+      "Hang up: the real FTC will never call to say your phone number is involved in a crime or threaten to disconnect it",
+      "Never give personal information, ID numbers, or money to someone who calls unexpectedly claiming to be a government agent",
+      "Don't trust a phone number or website a caller tells you to search for \"verification\" — look up official agency contacts independently",
+      "Real FTC employees will never ask you to transfer money, withdraw funds, or keep the conversation secret from family or bank staff",
+      "Report suspicious calls claiming to be from the FTC at ReportFraud.ftc.gov"
+    ],
+    "datePublished": "2026-11-05T22:00:26.468Z",
+    "howItWorks": "A caller claiming to work for the FTC tells the victim that a phone has been registered under their name and number and is being used to commit scams in another country, warning that the number could be deactivated if they don't act immediately. The caller reads off a fake FTC badge number for credibility and then transfers the victim to a supposed police officer, who may give a search query so the victim can \"verify\" a fake phone number or department online. The fake officer collects personal details such as full name, address, date of birth, and state-issued ID to file a bogus report. In a later call, the victim is told they will be arrested for the nonexistent overseas crimes unless they pay a \"security deposit\" or travel to the other country to resolve it, pressuring them into wiring money or handing over funds to make the supposed charges go away.",
+    "redFlags": [
+      "Caller claims to be from the FTC and says your phone number is being used for scams in another country",
+      "You're transferred mid-call to a supposed police officer who asks for sensitive personal or ID information",
+      "Threats that your phone will be deactivated or disconnected if you don't respond immediately",
+      "Demand for a 'security deposit' or money transfer to avoid arrest or travel abroad to resolve the issue",
+      "Instructions to keep the call secret or to verify details using a phone number or search term the caller provides"
+    ],
+    "realExamples": [
+      "FTC alert described scammers calling to warn that a phone number is being used to commit scams in another country, then transferring victims to a fake police officer to file a report before demanding a security deposit",
+      "Fox59/WXIN reported the scammer reads a fake badge number, transfers victims to a fake officer who requests personal info, then pressures the victim to pay money to 'stay out of trouble'",
+      "Yahoo/PopSci coverage of the FTC's October 22 alert noted victims are told they will soon be arrested for crimes committed using their phone number unless they transfer money for a security deposit"
+    ],
+    "source": "PopSci, https://www.popsci.com/technology/ftc-phone-number-scam/",
+    "spreadPlatforms": [
+      "Phone Calls"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Digital Arrest Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [],
+    "confidence": 0.55,
+    "reasoning": "This FTC impersonation call that transfers victims to a fake police officer who threatens arrest unless a \"security deposit\" is paid closely mirrors the existing \"Digital Arrest Scam\" pattern (government/police impersonation threatening arrest to extort money) and overlaps heavily with \"FTC Official Impersonation Bitcoin ATM Scam\" and \"FTC Impersonator Fake Employee ID Refund Recovery Scam\" already in the database; while the specific \"phone number used in overseas scam ring\" hook is a distinct narrative wrinkle, the core mechanics (fake FTC badge, transfer to fake police, personal info collection, arrest threat, cash extortion) are a variant of existing patterns rather than a fundamentally new scam type."
+  },
+  "queuedAt": "2026-11-05T22:00:39.258Z"
+}
