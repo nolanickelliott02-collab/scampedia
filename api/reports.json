@@ -1,6 +1,6 @@
 {
-  "version": 97,
-  "lastUpdated": "2026-11-06T21:52:46.470Z",
+  "version": 99,
+  "lastUpdated": "2026-11-07T20:42:19.784Z",
   "reports": [
     {
       "id": "1",
@@ -4903,6 +4903,91 @@
         "TikTok",
         "YouTube",
         "Third-party gaming/download websites"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "129",
+      "slug": "fake-concert-event-ticket-resale-scam",
+      "title": "Fake Concert & Event Ticket Resale Scam",
+      "summary": "Scammers build convincing fake ticket-resale websites and social media listings — now often using AI to generate realistic PDFs with fake barcodes — to sell tickets to concerts, festivals and sporting events that don't exist or that get resold to multiple buyers.",
+      "category": "Shopping Scam",
+      "firstReported": "2026-07-28",
+      "relatedScams": [
+        "Fake Online Store Scam",
+        "Online Marketplace Buyer Scam",
+        "AI-Generated Fake Review Scam"
+      ],
+      "safetyTips": [
+        "Buy only through the event's official ticketing partner or a platform's verified resale option (e.g., Ticketmaster Verified Resale)",
+        "Confirm the seller can transfer the ticket digitally through the official app in front of you, since a PDF or screenshot proves nothing and real transfers invalidate the seller's copy",
+        "Pay with a credit card or buyer-protected service so you can dispute the charge if the ticket is fake",
+        "Avoid buying tickets through social media marketplaces or classifieds, which are hotspots for counterfeit listings",
+        "Be skeptical of prices at or below face value for a sold-out show and of pressure to decide quickly"
+      ],
+      "datePublished": "2026-11-07T20:37:24.638Z",
+      "howItWorks": "As in-demand concerts, festivals and sporting events sell out, scammers create lookalike ticketing websites, fake \"verified resale\" listings, phony waitlist pages, and social media posts (especially on Facebook Marketplace and Craigslist) offering tickets at tempting prices. Buyers pay by card, Zelle, Venmo, Cash App, wire transfer, or crypto and either receive nothing, a PDF or screenshot \"ticket\" that was already sold to several other people, or a counterfeit electronic ticket/wristband that fails to scan at the gate. Increasingly, AI tools are used to generate convincing fake ticket PDFs complete with realistic barcodes, venue branding and seat details, or to clone a legitimate resale platform's login page to steal both payment and account credentials.",
+      "redFlags": [
+        "Price for a sold-out event is at or below face value",
+        "Seller wants payment via Zelle, Venmo, Cash App, wire, gift cards, or crypto instead of a buyer-protected method",
+        "Seller refuses to transfer the ticket through the official platform app (Ticketmaster, etc.) and only offers a PDF, screenshot, or photo of a barcode",
+        "Listing found on Facebook Marketplace or Craigslist rather than an official or verified resale channel",
+        "High-pressure urgency such as 'other buyers are interested' or a fake countdown/waitlist page",
+        "Website looks like an official ticketing platform but has a slightly altered URL or recently created domain"
+      ],
+      "realExamples": [
+        "The BBB warned Lollapalooza fans in July 2026 about fake ticket websites, phony 'Wait List' pages, and counterfeit wristbands designed to steal money and personal information.",
+        "BBB data cited via Surfshark Research found that 38% of ticket scam cases in 2025 involved fake websites built to look like official resale platforms, with Facebook accounting for another 28% of cases.",
+        "A seller sends what looks like a real e-ticket, but the same barcode has already been sold to other buyers or the seller keeps a copy and uses it first, so the ticket shows as already used at the door — a pattern seen with PDFs and screenshots sent instead of an official in-app transfer."
+      ],
+      "source": "Better Business Bureau / WLS-AM, https://www.wlsam.com/2026/07/28/bbb-warns-of-ticket-scam/; Guardio, https://guard.io/blog/stubhub-ticketmaster-resale-scams-verify-ticket",
+      "spreadPlatforms": [
+        "Social Media",
+        "Facebook Marketplace",
+        "Craigslist",
+        "Fake Websites",
+        "Email",
+        "Text Messages"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "130",
+      "slug": "jewelry-swap-distraction-theft-scam",
+      "title": "Jewelry Swap Distraction Theft Scam",
+      "summary": "Thieves, often working in pairs, approach seniors in public or at home, distract them with a hug, kiss, or offer of \"gift\" jewelry, and secretly swap their real gold jewelry for cheap fakes before driving off.",
+      "category": "Shopping Scam",
+      "firstReported": "2025-04-22",
+      "relatedScams": [
+        "Grandparent Emergency Scam",
+        "Mail Theft Check Washing/Check Cooking Scam"
+      ],
+      "safetyTips": [
+        "Keep jewelry concealed or out of sight when out in public, especially gold chains and bracelets",
+        "Politely decline hugs, kisses, or physical contact from strangers and keep a safe distance",
+        "Never accept jewelry, 'blessings,' or gifts offered by people you don't know, and don't go near their vehicle",
+        "If someone does get close to you, check your jewelry immediately afterward and report any swap to police right away",
+        "Report suspicious encounters to local police promptly so they can track and link cases across a crew's activity"
+      ],
+      "datePublished": "2026-11-07T20:41:44.382Z",
+      "howItWorks": "A stranger (or a team of two) approaches an older adult who is wearing visible jewelry, often while the victim is walking, getting mail, or taking out trash. The scammer asks for directions, offers help, or claims to want to give a \"blessing\" or thank-you gift, then gets physically close with a hug, kiss, or by placing a necklace or bracelet on the victim as a supposed gift. During that brief, friendly-seeming contact, the thief actually unclasps and removes the victim's genuine gold jewelry and replaces it with a worthless imitation, so the victim does not realize anything is wrong until they look closely later, sometimes hours or days afterward. Police describe the crews as highly practiced and fast, often working from vans or cars and sometimes luring victims closer by asking them to come see people inside the vehicle.",
+      "redFlags": [
+        "A stranger initiates unexpected physical contact like a hug or kiss, or tries to put jewelry on you",
+        "Someone you don't know offers you a 'gift,' 'blessing,' or jewelry as thanks for a small favor or for directions",
+        "You're asked to come closer to a parked car to see something or someone",
+        "The approach happens near your home, mailbox, or in a parking lot and the people leave quickly afterward",
+        "The group operates in a pair or small crew, sometimes using a van or rental vehicle"
+      ],
+      "realExamples": [
+        "In New York, the NYPD said 11 incidents in Brooklyn and Queens involved over $900,000 worth of jewelry stolen, including a 76-year-old woman in Queens Village approached on March 13th by a young woman asking for directions who gave her jewelry while taking her $3,000 necklace, and three arrests were made.",
+        "An 86-year-old woman in Troy, Michigan had a $20,000 gold necklace and bracelet swapped for fakes by someone who kissed her and touched her face while she was taking out trash on Halloween.",
+        "The LAPD confirmed more than 140 distraction-theft jewelry swap reports across Los Angeles, including a 99-year-old Holocaust survivor who had her diamond necklace and ring stolen by a woman pretending to offer help."
+      ],
+      "source": "CBS New York, https://www.cbsnews.com/newyork/news/nypd-brooklyn-queens-jewelry-swap-thefts/ ; Moneywise, https://moneywise.com/news/top-stories/jewelry-swap-scam-seniors-gold-necklace-theft ; FOX LA, https://www.foxla.com/news/la-jewelry-thefts-targeting-elderly-rise-police-warn ; ClickOnDetroit, https://www.clickondetroit.com/news/local/2026/11/05/suspect-kisses-troy-woman-86-steals-20k-in-gold-jewelry-on-halloween/",
+      "spreadPlatforms": [
+        "In-Person Encounters",
+        "Public Places/Street Approaches",
+        "Door-to-Door"
       ],
       "isAIDiscovered": true
     }
