@@ -19,6 +19,7 @@ concurrency:
 permissions:
   contents: write
   pull-requests: write
+  statuses: write
 
 jobs:
   generate:
@@ -140,10 +141,14 @@ jobs:
           git push origin scampedia/pending-batch
           OPEN=$(gh pr list --head scampedia/pending-batch --base main --state open --json number --jq 'length')
           if [ "$OPEN" = "0" ]; then
+            printf '%s\n' "New entries from the Scampedia bots, held for review before they go live. Each passed the automated gates (structure, citation, relevance, fact-check). Read them in api/reports.json and the scams/ pages, plus any proposed app phrases in review/phrase-queue.json (those don't reach the app unless copied into api/patterns.json by hand). Merging publishes the entries and notifies devices once. To drop an entry, remove it on this branch before merging. The bots keep adding to this PR until it's merged." > /tmp/review-pr-body.md
             gh pr create --head scampedia/pending-batch --base main \
               --title "Scampedia: entries waiting for review" \
-              --body "New entries from the Scampedia bots, held for review before they go live. Each passed the automated gates (structure, citation, relevance, fact-check). Read them in api/reports.json and the scams/ pages, plus any proposed app phrases in review/phrase-queue.json (those don't reach the app unless copied into api/patterns.json by hand). Merging publishes the entries and notifies devices once. To drop an entry, remove it on this branch before merging. The bots keep adding to this PR until it's merged."
+              --body-file /tmp/review-pr-body.md
           fi
+          # List every entry in the diff in the description, check it, and
+          # update the final-list comment (scripts/review-pr-sync.sh).
+          scripts/review-pr-sync.sh update
       - name: Alert on a real job failure (any step, not just "didn't publish")
         # Same reasoning as the identical step in daily-scam-entry.yml —
         # found 2026-09-18 when this exact bot's job failed for a real
