@@ -22,6 +22,8 @@ LLM-estimated figures never render as facts — not precise, not bucketed into a
 
 Bots never publish. They add entries to the `scampedia/pending-batch` branch, and Nick's merge of the weekly review PR is the only path to the live site. Bots also never write `api/patterns.json` (the phrase list the VerifyGuard app matches scans against); they only queue proposals in `review/phrase-queue.json`. Keep both rules when changing the pipeline. Public copy (index.html, about.html) says new entries wait for the editor's weekly review; that copy ships in the same merge as the pipeline change, so it's never live before it's true. Don't claim any specific entry was reviewed.
 
+The review PR's description lists every entry in its diff, between `<!-- review-entries:start -->` and `<!-- review-entries:end -->` (added 2026-11-06 after PR #38's description said "no new entries" while it published one). `scripts/review-pr-sync.sh` rewrites that list; the bots run it after every push, and `.github/workflows/review-pr-entries.yml` runs it after a person pushes. It sets a "Review entries" status that fails if the list doesn't match the diff, and keeps one comment with the final list for the head commit. Don't hand-edit the list; change the branch instead.
+
 
 ## Retention of message text (VerifyGuard platform rule, 2026-11-05)
 

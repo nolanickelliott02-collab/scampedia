@@ -1,0 +1,47 @@
+name: Review entries
+
+# Keeps the weekly review PR's description listing exactly the entries in
+# its diff (Nick, 2026-11-06). The bots update it themselves after pushing,
+# because pushes made with the workflow token don't start this workflow.
+# This covers what a person does on the PR:
+#   - a push (for example, removing an entry by hand): update the list, then check
+#   - an edit to the description: check only, so a hand-edited list that
+#     no longer matches the diff fails
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, edited]
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+  statuses: write
+
+concurrency:
+  group: scampedia-review-entries
+  cancel-in-progress: false
+
+jobs:
+  entries:
+    if: github.event.pull_request.head.ref == 'scampedia/pending-batch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Update or check the entry list
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ACTION: ${{ github.event.action }}
+        run: |
+          git fetch origin main
+          if [ "$ACTION" = "edited" ]; then
+            scripts/review-pr-sync.sh check
+          else
+            scripts/review-pr-sync.sh update
+          fi
