@@ -40,6 +40,10 @@ jobs:
           ACTION: ${{ github.event.action }}
         run: |
           git fetch origin main
+          # Use main's copy of the sync scripts: a review branch made before
+          # they existed doesn't have them (PR #43, 2026-11-07). They read
+          # the branch's entries from git (HEAD), not from these files.
+          git checkout origin/main -- scripts/review-pr-sync.sh scripts/review-pr-entries.js scripts/lib/review-entries.js
           if [ "$ACTION" = "edited" ]; then
             scripts/review-pr-sync.sh check
           else
