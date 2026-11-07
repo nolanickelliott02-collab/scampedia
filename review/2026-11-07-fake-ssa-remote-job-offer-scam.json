@@ -1,0 +1,60 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "129",
+    "slug": "fake-ssa-remote-job-offer-scam",
+    "title": "Fake SSA Remote Job Offer Scam",
+    "summary": "Scammers pose as Social Security Administration recruiters offering fake remote positions like \"claims processor\" or \"virtual benefits coordinator\" to steal applicants' Social Security numbers, bank details, and IDs.",
+    "category": "Employment Scam",
+    "firstReported": "2025-06-03",
+    "relatedScams": [
+      "Fake Job Offer Scam",
+      "Government Grant Scam",
+      "SSA Imposter Scam Using Real Employee Names and Fake Badges"
+    ],
+    "safetyTips": [
+      "Verify any SSA job opening only through the official SSA careers page at www.ssa.gov/careers",
+      "Never give your Social Security number, banking information, or ID copies to an unverified recruiter",
+      "Do not respond to, click links in, or call numbers provided in unsolicited job-offer messages",
+      "Independently look up and contact the agency using publicly listed phone numbers rather than numbers given by the recruiter",
+      "Report suspected scams at ssa.gov/scam"
+    ],
+    "datePublished": "2026-11-07T02:42:08.390Z",
+    "howItWorks": "Fraudsters impersonate SSA (or other government agency) hiring staff and advertise fictitious remote job openings, using titles such as \"administrative assistant,\" \"claims processor,\" or \"virtual benefits coordinator.\" They reach out via unsolicited phone calls, texts, emails, or social media messages, sometimes using fake SSA email addresses, official-looking documents, or spoofed phone numbers to appear legitimate. Once a target expresses interest, the scammers pressure them to act quickly and then request sensitive personal information — including Social Security numbers, banking details, or copies of government-issued IDs — supposedly to process onboarding or set up payroll, which is then used for identity theft or financial fraud.",
+    "redFlags": [
+      "Unsolicited remote job offer arriving by phone call, text, email, or social media message",
+      "Claims to be from SSA or another government agency recruiting for remote positions",
+      "Pressure to act quickly or threats of missing out on the opportunity",
+      "Requests for a Social Security number, bank account details, or a copy of a government ID before any formal hiring process",
+      "Job openings not listed on the official agency careers site"
+    ],
+    "realExamples": [
+      "SSA OIG warned in 2025 that scammers were posing as hiring personnel or recruiters offering fictitious remote positions such as \"administrative assistant,\" \"claims processor,\" or \"virtual benefits coordinator,\" using fake SSA email addresses, official-looking documents, or spoofed phone numbers to request Social Security numbers, banking details, or government-issued IDs."
+    ],
+    "source": "SSA Office of the Inspector General, \"Watch Out for Remote Job Scams Claiming to be from SSA,\" https://oig.ssa.gov/scam-alerts/2025-07-15-watch-out-for-remote-job-scams-claiming-to-be-from-ssa/",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Text Messages",
+      "Email",
+      "Social Media"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Fake Job Offer Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Employment Scam",
+    "suggestedAliases": [
+      "SSA Remote Job Scam",
+      "Government Imposter Job Scam"
+    ],
+    "confidence": 0.72,
+    "reasoning": "This is a government-agency (SSA OIG) impersonation twist on the existing generic 'Fake Job Offer Scam' entry — same core mechanism (fake remote job postings, requests for personal/banking info, pressure tactics) but with SSA branding specifically. It overlaps substantially with both 'Fake Job Offer Scam' and the existing 'SSA Imposter Scam Using Real Employee Names and Fake Badges' entry, making it a known-variant rather than a wholly new pattern."
+  },
+  "queuedAt": "2026-11-07T02:42:13.808Z"
+}
