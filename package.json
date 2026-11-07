@@ -10,10 +10,11 @@
     "check-content": "node scripts/check-content-health.js",
     "build": "npm run check-content && npm run build:scams && npm run build:learn",
     "rollback:last-entry": "node scripts/rollback-last-entry.js",
-    "test": "node --test '**/__tests__/**/*.test.js'"
+    "test": "node --test --test-concurrency=1 '**/__tests__/**/*.test.js'"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.0",
+    "ajv": "8.20.0",
     "marked": "^18.0.9"
   },
   "devDependencies": {

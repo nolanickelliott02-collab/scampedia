@@ -64,6 +64,7 @@ function makeFixtureRepo() {
   // same way it does in the real repo, against a throwaway copy of the data.
   fs.copyFileSync(path.join(__dirname, '..', 'rollback-last-entry.js'), path.join(dir, 'scripts', 'rollback-last-entry.js'));
   fs.copyFileSync(path.join(__dirname, '..', 'lib', 'rollback.js'), path.join(dir, 'scripts', 'lib', 'rollback.js'));
+  fs.copyFileSync(path.join(__dirname, '..', 'lib', 'published-slugs.js'), path.join(dir, 'scripts', 'lib', 'published-slugs.js'));
   return dir;
 }
 

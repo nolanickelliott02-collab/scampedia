@@ -20,6 +20,7 @@
 const fs = require('fs');
 const path = require('path');
 const { pickMostRecentReport, removeReportById } = require('./lib/rollback');
+const { retireSlug } = require('./lib/published-slugs');
 
 const ROOT = path.join(__dirname, '..');
 const REPORTS_PATH = path.join(ROOT, 'api', 'reports.json');
@@ -56,6 +57,8 @@ function main() {
 
   const pagePath = path.join(SCAMS_DIR, `${target.slug}.html`);
   if (fs.existsSync(pagePath)) fs.unlinkSync(pagePath);
+  // The slug stays reserved (data/published-slugs.json "retired"), never reused.
+  retireSlug(target.slug, `Rolled back with rollback-last-entry.js: "${target.title}"`);
 
   console.log(`\nRemoved from api/reports.json (version ${data.version || 1} -> ${updated.version}) and deleted ${path.relative(ROOT, pagePath)}.`);
   console.log('\nNext steps to actually make this live:');

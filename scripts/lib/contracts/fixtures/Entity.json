@@ -1,0 +1,131 @@
+{
+  "note": "Made-up example values for contract tests. Not measurements or real data.",
+  "valid": [
+    {
+      "name": "observed phone, hash only",
+      "value": {
+        "id": "entity:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "type": "phone",
+        "valueHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "observed",
+        "firstSeen": "2026-11-06T18:30:00Z",
+        "lastSeen": "2026-11-07T09:00:00.123Z"
+      }
+    },
+    {
+      "name": "published domain with plaintext value",
+      "value": {
+        "id": "entity:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "type": "domain",
+        "valueHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "published",
+        "firstSeen": "2026-11-06T18:30:00Z",
+        "lastSeen": "2026-11-07T09:00:00.123Z",
+        "value": "usps-redelivery.example",
+        "verifiedBy": "bot:gov-scam-scan",
+        "verifiedAt": "2026-11-07T09:00:00.123Z",
+        "evidenceIds": [
+          "evidence:7c9e6679-7425-40de-944b-e07fc1f90ae7"
+        ],
+        "scampediaIds": [
+          "scampedia:package-delivery-text-scam"
+        ]
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "name": "plaintext on an unverified entity",
+      "why": "value is only allowed once verified or published",
+      "value": {
+        "id": "entity:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "type": "phone",
+        "valueHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "observed",
+        "firstSeen": "2026-11-06T18:30:00Z",
+        "lastSeen": "2026-11-07T09:00:00.123Z",
+        "value": "+15550101234"
+      }
+    },
+    {
+      "name": "published without evidence",
+      "why": "verified/published needs verifiedBy, verifiedAt and evidence",
+      "value": {
+        "id": "entity:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "type": "phone",
+        "valueHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "published",
+        "firstSeen": "2026-11-06T18:30:00Z",
+        "lastSeen": "2026-11-07T09:00:00.123Z"
+      }
+    },
+    {
+      "name": "published with empty evidence",
+      "why": "evidenceIds must not be empty",
+      "value": {
+        "id": "entity:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "type": "domain",
+        "valueHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "published",
+        "firstSeen": "2026-11-06T18:30:00Z",
+        "lastSeen": "2026-11-07T09:00:00.123Z",
+        "value": "usps-redelivery.example",
+        "verifiedBy": "bot:gov-scam-scan",
+        "verifiedAt": "2026-11-07T09:00:00.123Z",
+        "evidenceIds": [],
+        "scampediaIds": [
+          "scampedia:package-delivery-text-scam"
+        ]
+      }
+    },
+    {
+      "name": "integer id",
+      "why": "ids are entity:<UUID>, never integers",
+      "value": {
+        "id": "7",
+        "type": "phone",
+        "valueHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "observed",
+        "firstSeen": "2026-11-06T18:30:00Z",
+        "lastSeen": "2026-11-07T09:00:00.123Z"
+      }
+    },
+    {
+      "name": "unknown status",
+      "why": "status must be one of the lifecycle states",
+      "value": {
+        "id": "entity:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "type": "phone",
+        "valueHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "trending",
+        "firstSeen": "2026-11-06T18:30:00Z",
+        "lastSeen": "2026-11-07T09:00:00.123Z"
+      }
+    },
+    {
+      "name": "seen dates reversed",
+      "why": "firstSeen after lastSeen",
+      "value": {
+        "id": "entity:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "type": "phone",
+        "valueHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "observed",
+        "firstSeen": "2026-11-07T09:00:00.123Z",
+        "lastSeen": "2026-11-06T18:30:00Z"
+      }
+    },
+    {
+      "name": "unknown field",
+      "why": "no extra fields",
+      "value": {
+        "id": "entity:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "type": "phone",
+        "valueHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "observed",
+        "firstSeen": "2026-11-06T18:30:00Z",
+        "lastSeen": "2026-11-07T09:00:00.123Z",
+        "reportCount": 40
+      }
+    }
+  ]
+}

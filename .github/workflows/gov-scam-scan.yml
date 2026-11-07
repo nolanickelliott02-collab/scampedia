@@ -121,7 +121,7 @@ jobs:
           LAST_TITLE: ${{ steps.generate.outputs.title }}
           CITATION: ${{ steps.generate.outputs.citation }}
         run: |
-          git add api/reports.json review/ scams/ learn/ sitemap.xml llms.txt llms-full.txt
+          git add api/reports.json review/ scams/ learn/ sitemap.xml llms.txt llms-full.txt data/published-slugs.json
           PLURAL="ies"; [ "$COUNT" = "1" ] && PLURAL="y"
           git commit -m "Add $COUNT scam entr$PLURAL: $TITLES" -m "Last: $LAST_TITLE" -m "Source: $CITATION" -m "Bot: gov-scam-scan"
       - name: Push the batch and open the review PR if none is open

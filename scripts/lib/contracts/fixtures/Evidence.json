@@ -1,0 +1,92 @@
+{
+  "note": "Made-up example values for contract tests. Not measurements or real data.",
+  "valid": [
+    {
+      "name": "trusted citation",
+      "value": {
+        "id": "evidence:7c9e6679-7425-40de-944b-e07fc1f90ae7",
+        "kind": "source_citation",
+        "summary": "FTC alert describing fake USPS redelivery texts.",
+        "sourceName": "FTC Consumer Advice",
+        "sourceUrl": "https://consumer.ftc.gov/consumer-alerts/example",
+        "trusted": true,
+        "collectedAt": "2026-11-06T18:30:00Z",
+        "collectedBy": "bot:gov-scam-scan"
+      }
+    },
+    {
+      "name": "manual review",
+      "value": {
+        "id": "evidence:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "kind": "manual_review",
+        "summary": "Checked by hand against two bank alerts.",
+        "trusted": true,
+        "collectedAt": "2026-11-06T18:30:00Z",
+        "collectedBy": "human:nick"
+      }
+    },
+    {
+      "name": "user report",
+      "value": {
+        "id": "evidence:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "kind": "user_report",
+        "summary": "Reported by 3 people this week.",
+        "trusted": false,
+        "collectedAt": "2026-11-06T18:30:00Z",
+        "collectedBy": "system:evidence-reports"
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "name": "citation without a link",
+      "why": "a citation needs sourceName and sourceUrl",
+      "value": {
+        "id": "evidence:7c9e6679-7425-40de-944b-e07fc1f90ae7",
+        "kind": "source_citation",
+        "summary": "FTC alert describing fake USPS redelivery texts.",
+        "sourceName": "FTC Consumer Advice",
+        "trusted": true,
+        "collectedAt": "2026-11-06T18:30:00Z",
+        "collectedBy": "bot:gov-scam-scan"
+      }
+    },
+    {
+      "name": "http citation",
+      "why": "source links must be https",
+      "value": {
+        "id": "evidence:7c9e6679-7425-40de-944b-e07fc1f90ae7",
+        "kind": "source_citation",
+        "summary": "FTC alert describing fake USPS redelivery texts.",
+        "sourceName": "FTC Consumer Advice",
+        "sourceUrl": "http://example.com",
+        "trusted": true,
+        "collectedAt": "2026-11-06T18:30:00Z",
+        "collectedBy": "bot:gov-scam-scan"
+      }
+    },
+    {
+      "name": "manual review by a bot",
+      "why": "only a person can do a manual review",
+      "value": {
+        "id": "evidence:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "kind": "manual_review",
+        "summary": "x",
+        "collectedAt": "2026-11-06T18:30:00Z",
+        "collectedBy": "bot:dojo"
+      }
+    },
+    {
+      "name": "trusted user report",
+      "why": "user reports are never trusted on their own",
+      "value": {
+        "id": "evidence:0f8fad5b-d9cb-469f-a165-70867728950e",
+        "kind": "user_report",
+        "summary": "x",
+        "trusted": true,
+        "collectedAt": "2026-11-06T18:30:00Z",
+        "collectedBy": "system:evidence-reports"
+      }
+    }
+  ]
+}

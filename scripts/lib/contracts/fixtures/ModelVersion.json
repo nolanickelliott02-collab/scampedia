@@ -1,0 +1,145 @@
+{
+  "note": "Made-up example values for contract tests. Not measurements or real data.",
+  "valid": [
+    {
+      "name": "candidate",
+      "value": {
+        "id": "model:scam-text@0.1.0",
+        "kind": "text_classifier",
+        "name": "scam-text",
+        "version": "0.1.0",
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "candidate",
+        "dataSnapshotHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "metrics": {
+          "scamRecall": 0.81,
+          "falseAlarmRate": 0.04
+        },
+        "evalSetSize": 600
+      }
+    },
+    {
+      "name": "approved",
+      "value": {
+        "id": "model:scam-text@0.1.0",
+        "kind": "text_classifier",
+        "name": "scam-text",
+        "version": "0.1.0",
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "approved",
+        "dataSnapshotHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "metrics": {
+          "scamRecall": 0.81,
+          "falseAlarmRate": 0.04
+        },
+        "evalSetSize": 600,
+        "decision": {
+          "by": "human:nick",
+          "at": "2026-11-07T09:00:00.123Z",
+          "reason": "Agreement held for two weeks of shadow logs."
+        },
+        "stressMetrics": {
+          "redTeamRecall": 0.66
+        }
+      }
+    },
+    {
+      "name": "weights version",
+      "value": {
+        "id": "model:fusion-weights@2026-10-29.1",
+        "kind": "fusion_weights",
+        "name": "fusion-weights",
+        "version": "2026-10-29.1",
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "approved",
+        "dataSnapshotHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "metrics": {
+          "agreement": null
+        },
+        "decision": {
+          "by": "human:nick",
+          "at": "2026-11-07T09:00:00.123Z",
+          "reason": "Agreement held for two weeks of shadow logs."
+        }
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "name": "id doesn't match name and version",
+      "why": "id must be model:<name>@<version>",
+      "value": {
+        "id": "model:scam-text@9.9.9",
+        "kind": "text_classifier",
+        "name": "scam-text",
+        "version": "0.1.0",
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "candidate",
+        "dataSnapshotHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "metrics": {
+          "scamRecall": 0.81,
+          "falseAlarmRate": 0.04
+        },
+        "evalSetSize": 600
+      }
+    },
+    {
+      "name": "approved without a decision",
+      "why": "approval needs a person's recorded decision",
+      "value": {
+        "id": "model:scam-text@0.1.0",
+        "kind": "text_classifier",
+        "name": "scam-text",
+        "version": "0.1.0",
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "approved",
+        "dataSnapshotHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "metrics": {
+          "scamRecall": 0.81,
+          "falseAlarmRate": 0.04
+        },
+        "evalSetSize": 600
+      }
+    },
+    {
+      "name": "approved by a bot",
+      "why": "only a person can approve",
+      "value": {
+        "id": "model:scam-text@0.1.0",
+        "kind": "text_classifier",
+        "name": "scam-text",
+        "version": "0.1.0",
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "approved",
+        "dataSnapshotHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "metrics": {
+          "scamRecall": 0.81,
+          "falseAlarmRate": 0.04
+        },
+        "evalSetSize": 600,
+        "decision": {
+          "by": "bot:training",
+          "at": "2026-11-07T09:00:00.123Z",
+          "reason": "Agreement held for two weeks of shadow logs."
+        }
+      }
+    },
+    {
+      "name": "text metric",
+      "why": "metrics are numbers",
+      "value": {
+        "id": "model:scam-text@0.1.0",
+        "kind": "text_classifier",
+        "name": "scam-text",
+        "version": "0.1.0",
+        "createdAt": "2026-11-06T18:30:00Z",
+        "status": "candidate",
+        "dataSnapshotHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "metrics": {
+          "scamRecall": "high"
+        },
+        "evalSetSize": 600
+      }
+    }
+  ]
+}

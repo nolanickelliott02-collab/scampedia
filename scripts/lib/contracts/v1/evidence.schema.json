@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://officialverifyguard.com/contracts/v1/evidence.schema.json",
+  "title": "Evidence",
+  "description": "Why something is believed: a cited source, a detector result, a user report or a manual review. Never holds message text.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "kind", "summary", "collectedAt", "collectedBy"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/evidenceId" },
+    "kind": { "enum": ["source_citation", "detector_output", "user_report", "manual_review"] },
+    "entityId": { "$ref": "common.schema.json#/$defs/entityId" },
+    "scampediaId": { "$ref": "common.schema.json#/$defs/scampediaId" },
+    "summary": { "type": "string", "minLength": 1, "maxLength": 1000 },
+    "sourceName": { "type": "string", "minLength": 1, "maxLength": 300 },
+    "sourceUrl": { "type": "string", "pattern": "^https://", "maxLength": 2048 },
+    "trusted": { "type": "boolean", "description": "true only for a trusted external source (e.g. a .gov page) or a manual review." },
+    "collectedAt": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "collectedBy": { "$ref": "common.schema.json#/$defs/actor" }
+  },
+  "allOf": [
+    { "if": { "properties": { "kind": { "const": "source_citation" } } }, "then": { "required": ["sourceName", "sourceUrl"] } },
+    { "if": { "properties": { "kind": { "const": "manual_review" } } }, "then": { "properties": { "collectedBy": { "$ref": "common.schema.json#/$defs/humanActor" } } } },
+    { "if": { "properties": { "kind": { "const": "user_report" } } }, "then": { "properties": { "trusted": { "const": false } } } }
+  ]
+}
