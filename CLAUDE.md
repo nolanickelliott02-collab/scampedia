@@ -26,3 +26,7 @@ Bots never publish. They add entries to the `scampedia/pending-batch` branch, an
 ## Retention of message text (VerifyGuard platform rule, 2026-11-05)
 
 Message text is never stored without the user's explicit opt-in, and opted-in scrubbed text is deleted after 180 days. This applies to anything that reaches VerifyGuard's systems, including data this repo reads or produces.
+
+## Merging pull requests (Nick's rule, 2026-11-06)
+
+Never merge any pull request unless Nick says "merge #N" for that specific PR. General approval ("go ahead", "merge it", "do what you can") is not a merge instruction, and a "merge #N" covers only that PR. When unsure which PR is meant, ask.
