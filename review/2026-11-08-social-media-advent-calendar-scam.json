@@ -1,0 +1,60 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "133",
+    "slug": "social-media-advent-calendar-scam",
+    "title": "Social Media Advent Calendar Scam",
+    "summary": "Scammers run slick Facebook and Instagram ads for themed advent calendars (beauty products, wine/bourbon, crystals, Legos) that either never arrive or turn out to be cheap junk instead of the advertised item.",
+    "category": "Shopping Scam",
+    "firstReported": "2024-12-01",
+    "relatedScams": [
+      "Fake Online Store Scam",
+      "Fake Retail Coupon / Promo Code Scam",
+      "Online Marketplace Buyer Scam"
+    ],
+    "safetyTips": [
+      "Search the product and business name along with words like \"scam,\" \"complaint,\" or \"review\" before buying",
+      "Check BBB Scam Tracker and BBB.org to see if others have reported the same seller",
+      "Avoid buying on impulse from a social media ad; verify the seller has a legitimate, established website and contact information",
+      "Pay with a credit card rather than debit, wire transfer, or payment apps so you can dispute the charge if the item never arrives"
+    ],
+    "datePublished": "2026-11-08T20:53:03.159Z",
+    "howItWorks": "A shopper scrolling social media sees a professional-looking ad for a themed advent calendar, often surrounded by enthusiastic-sounding comments from \"satisfied buyers.\" The ad links to a well-designed website where the purchase goes through smoothly, and the buyer even receives a confirmation email and tracking number. In most cases the calendar never arrives because it never existed, and when the buyer tries to contact the seller, the website has vanished along with their money. In other cases, a product does ship, but it is a far cry from what was pictured, such as alcohol calendars advertised with wax-sealed drams of liquor arriving as empty plastic bottles and trinkets, or a \"crystal\" calendar shipping from overseas full of plastic junk and pebbles instead of the pictured items.",
+    "redFlags": [
+      "Advent calendar ad appears only on social media with no verifiable retailer website or contact info",
+      "Steep discount or fantastic price on a high-demand, limited item",
+      "Glowing comments under the ad that may themselves be fake",
+      "Confirmation email and tracking number are provided but the package never updates or arrives",
+      "Product received (if any) doesn't match what was pictured in the ad"
+    ],
+    "realExamples": [
+      "A BBB Scam Tracker report described an Instagram ad for a crystal advent calendar claiming to ship from California that actually shipped from Finland and arrived a month later as plastic junk with small pebbles and glass.",
+      "A consumer told BBB Scam Tracker they ordered two alcohol advent calendars advertised to contain 24 wax-sealed drams each, but received only four empty plastic bottles and some small charms.",
+      "A consumer reported seeing a Facebook ad for a Healing Crystal Advent Calendar with a professional website and tracking confirmation, but the calendar never arrived and the company turned out to be fraudulent.",
+      "UK beauty retailer Space NK confirmed fraudulent imitation websites were circulating on social media selling a sold-out version of its real advent calendar."
+    ],
+    "source": "Better Business Bureau via Neighbors Federal Credit Union, https://www.neighborsfcu.org/advent-calendar-scams/",
+    "spreadPlatforms": [
+      "Social Media",
+      "Facebook",
+      "Instagram"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Fake Online Store Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "low",
+    "sourceCredibility": "other",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Social Media Ad Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.3,
+    "reasoning": "This is a seasonal/niche application of the existing \"Fake Online Store Scam\" pattern (social media ads leading to fake e-commerce sites that take payment and never deliver or deliver inferior goods), not a structurally distinct scam mechanism. The source is a BBB blog post from 2021 describing the same fake-store/non-delivery mechanics already covered elsewhere."
+  },
+  "queuedAt": "2026-11-08T20:53:18.222Z"
+}
