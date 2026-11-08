@@ -1,6 +1,6 @@
 {
-  "version": 101,
-  "lastUpdated": "2026-11-08T02:19:51.921Z",
+  "version": 102,
+  "lastUpdated": "2026-11-08T20:54:21.631Z",
   "reports": [
     {
       "id": "1",
@@ -5067,6 +5067,43 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "133",
+      "slug": "fake-planning-zoning-permit-fee-phishing-scam",
+      "title": "Fake Planning & Zoning Permit Fee Phishing Scam",
+      "summary": "Criminals impersonate city and county planning/zoning officials and email people with active land-use permit applications, demanding fraudulent \"permit fees\" using real case details to appear legitimate. The FBI warns victims have been identified nationwide.",
+      "category": "Government Scam",
+      "firstReported": "2026-03-09",
+      "relatedScams": [
+        "Fake USPTO \"Trademark Verification Appointment\" Scam",
+        "Phishing Email Scam",
+        "Fake Municipal Court \"Unpaid Parking Ticket\" Text Scam"
+      ],
+      "safetyTips": [
+        "Call your city or county planning/zoning office directly using a phone number from its official website to confirm any fee request before paying anything",
+        "Never wire money or pay permit fees based solely on an email request, even if it includes accurate personal or property details",
+        "Check that the sender's email domain matches your local government's actual domain, not a look-alike or generic address",
+        "Report suspected incidents to the FBI's Internet Crime Complaint Center (IC3) and to your local planning department"
+      ],
+      "datePublished": "2026-11-08T20:54:07.523Z",
+      "howItWorks": "Scammers pull publicly available permit records to find people and businesses with active planning or zoning applications, then send emails that reference real property addresses, case numbers, and the names of actual city or county officials to make the message look authentic. The emails are formatted to mimic legitimate government correspondence, discussing review processes, planning commission procedures, and ordinances, and instruct the recipient to pay an outstanding permit or application fee. The sender's address uses a username similar to a real planning or zoning department but comes from a non-governmental domain, and the message is timed to arrive around when a real official communication would be expected, all designed to discourage the victim from calling the city or county office to verify the request before paying.",
+      "redFlags": [
+        "Unsolicited email demanding payment for a zoning or planning permit fee, especially via wire transfer",
+        "Sender's email domain doesn't match the official city or county government domain, even if the username looks similar",
+        "Message discourages or fails to provide an easy way to verify the fee by phone with the actual planning/zoning office",
+        "Request arrives with suspiciously well-timed, accurate details like your exact case number and property address"
+      ],
+      "realExamples": [
+        "FBI Public Service Announcement I-030926-PSA describes individuals and businesses with active land-use permit applications nationwide receiving emails citing their real permit information and being directed to pay zoning application fees via wire transfer",
+        "Local governments including Cumberland County, NC and Cook County, IL issued public advisories directing residents to the FBI PSA after residents reported receiving fraudulent planning/zoning fee emails",
+        "Security news outlets reported the criminals use email addresses with usernames similar to real planning and zoning departments but originating from non-governmental domains"
+      ],
+      "source": "Internet Crime Complaint Center (IC3) / FBI, https://www.ic3.gov/PSA/2026/PSA260309",
+      "spreadPlatforms": [
+        "Email"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
