@@ -1,6 +1,6 @@
 {
-  "version": 99,
-  "lastUpdated": "2026-11-07T20:42:19.784Z",
+  "version": 101,
+  "lastUpdated": "2026-11-08T02:19:51.921Z",
   "reports": [
     {
       "id": "1",
@@ -4990,6 +4990,83 @@
         "Door-to-Door"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "131",
+      "slug": "bankruptcy-fraud-watchdog-group-letter-scam",
+      "title": "\"Bankruptcy Fraud Watchdog Group\" Letter Scam",
+      "summary": "Scammers posing as a \"Bankruptcy Fraud Watchdog Group\" send letters to people going through bankruptcy, falsely accusing them of hiding assets and demanding a $450 \"amnesty fine\" paid in Bitcoin via QR code to avoid prosecution.",
+      "category": "Government Scam",
+      "firstReported": "2024-11-13",
+      "relatedScams": [
+        "Phantom Debt Collector Scam",
+        "Foreclosure Relief / Mortgage Rescue Scam",
+        "Government Grant Scam"
+      ],
+      "safetyTips": [
+        "Know that the real U.S. Trustee Program does not demand payment in Bitcoin or via QR code to resolve bankruptcy fraud allegations",
+        "Always share any letter accusing you of bankruptcy fraud with your bankruptcy attorney immediately, regardless of what the letter claims",
+        "Report suspicious letters to the USTP's bankruptcy fraud hotline or your local U.S. Trustee office",
+        "Never pay a legal fine or settlement via cryptocurrency QR code, which is untraceable and irreversible"
+      ],
+      "datePublished": "2026-11-08T02:18:18.295Z",
+      "howItWorks": "A scam operator calling itself the \"Bankruptcy Fraud Watchdog Group\" targets consumer debtors who are going through bankruptcy proceedings. The group sends official-looking letters falsely accusing the debtor of failing to disclose assets in their bankruptcy case and threatens referral to \"the United States Bankruptcy Trustee\" for fraud and possible criminal prosecution unless the debtor promptly pays a \"one-time amnesty fine\" of $450. Victims are told to pay via Bitcoin, scanning a QR code included in the letter, supposedly to make the accusation go away. The letters also falsely warn debtors that if they share the letter with their own attorney, they will face \"immediate referral for criminal prosecution\" — a tactic designed to isolate victims from the legal help that would normally expose the scam.",
+      "redFlags": [
+        "Unsolicited letter from an unofficial-sounding group (\"Bankruptcy Fraud Watchdog Group\") rather than the actual U.S. Trustee Program or bankruptcy court",
+        "Demand for a cryptocurrency payment, such as Bitcoin via QR code, to resolve a legal accusation",
+        "Threat of criminal prosecution unless a fast \"amnesty fine\" is paid",
+        "Instruction telling you NOT to tell your attorney or warning of consequences if you share the letter",
+        "Use of urgent legal-sounding language and a fixed settlement amount ($450) to pressure quick payment"
+      ],
+      "realExamples": [
+        "The U.S. Trustee Program issued a nationwide alert describing letters sent by the 'Bankruptcy Fraud Watchdog Group' threatening debtors with referral to 'the United States Bankruptcy Trustee' for fraud unless they paid a $450 'amnesty fine' in Bitcoin via QR code."
+      ],
+      "source": "U.S. Department of Justice, U.S. Trustee Program - https://www.justice.gov/ust/notice/us-trustee-program-warns-consumers-bankruptcy-fraud-alert-scam",
+      "spreadPlatforms": [
+        "Physical Mail"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "132",
+      "slug": "prize-linked-social-security-direct-deposit-redirect-scam",
+      "title": "Prize-Linked Social Security Direct Deposit Redirect Scam",
+      "summary": "Scammers tell victims they've won a prize or contest and, to \"claim\" it, ask them to switch their Social Security benefit direct deposit to a new account or prepaid debit card — actually hijacking the victim's monthly benefit payments.",
+      "category": "Government Scam",
+      "firstReported": "2026-09-09",
+      "relatedScams": [
+        "Lottery / Prize Notification Scam",
+        "Fake Social Security Statement Email Scam",
+        "SSA Imposter Scam Using Real Employee Names and Fake Badges"
+      ],
+      "safetyTips": [
+        "Never change your direct deposit information because of an unsolicited call, text, or prize notification",
+        "Review and change your Social Security direct deposit information yourself, safely, through your personal my Social Security account at ssa.gov/myaccount",
+        "If you think your direct deposit has already been changed without your permission, contact SSA immediately at 1-800-772-1213",
+        "No legitimate contest or prize ever requires you to redirect a federal benefit payment to claim it",
+        "Report the scam to ssa.gov/scam or to the FTC at reportfraud.ftc.gov"
+      ],
+      "datePublished": "2026-11-08T02:19:28.619Z",
+      "howItWorks": "A caller tells the victim they've won a prize or contest, and that to receive it they need to switch their Social Security direct deposit from their own bank account to a different account, such as a prepaid debit card. To make this \"switch,\" the scammer asks the victim for personal and banking information, which is then used to redirect the victim's actual Social Security benefit payments to an account the scammer controls. Victims discover they no longer receive their own Social Security payments once the deposit has been redirected, and if they try to reverse the change, the scammer may call back and become hostile.",
+      "redFlags": [
+        "An unsolicited call, text, or notification claiming you've won a prize or contest tied to Social Security",
+        "Being asked to change your Social Security direct deposit information to a prepaid debit card or unfamiliar account in order to \"claim\" a prize",
+        "Requests for personal and banking information to process a supposed prize deposit",
+        "Pressure or hostility from the caller if you try to undo a direct deposit change",
+        "Any legitimate-sounding claim that a contest or prize requires redirecting a federal benefit payment"
+      ],
+      "realExamples": [
+        "Victims have been told they'd won a contest and, to receive the prize, were asked to switch their Social Security direct deposit from their bank to a prepaid debit card, after which they lost access to their own benefit payments",
+        "Scammers who redirected a victim's direct deposit have sometimes called back and grown hostile when the victim tried to undo the change"
+      ],
+      "source": "Social Security Administration Office of the Inspector General (SSA OIG), https://oig.ssa.gov/scam-alerts/2026-09-09-beware-of-direct-deposit-offers-tied-to-prizes/",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Text Messages"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
