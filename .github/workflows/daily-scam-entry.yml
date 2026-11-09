@@ -128,7 +128,7 @@ jobs:
         # pages only, and build:learn adds the /learn/ URLs back. Not
         # `npm run build`, whose check-content could block a scam entry.
         if: steps.generate.outputs.result == 'written'
-        run: npm run build:scams && npm run build:learn
+        run: npm run build:scams && npm run build:digest && npm run build:learn
       - name: Add the entry to the pending review batch
         # The automated gates (structure, citation, relevance, fact-check)
         # still run first; a rejection means this step never runs. Passing

@@ -6,6 +6,7 @@
   "scripts": {
     "generate-daily-scam": "node scripts/generate-daily-scam.js",
     "build:scams": "node scripts/build-scam-pages.js",
+    "build:digest": "node scripts/build-weekly-digest.js",
     "build:learn": "node scripts/build-learn-pages.js",
     "check-content": "node scripts/check-content-health.js",
     "build": "npm run check-content && npm run build:scams && npm run build:learn",
