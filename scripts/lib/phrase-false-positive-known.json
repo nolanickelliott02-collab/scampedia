@@ -1,0 +1,4 @@
+{
+  "note": "Published phrases that already match an ordinary message in safe-messages.json under the app's matching rule (found 2026-11-09). Listed so CI fails only on NEW false positives. Removing or narrowing these changes what goes live, so it waits for Nick's decision. Delete an entry when its phrase is fixed.",
+  "phrases": ["grandpa", "irs", "tax refund", "social security", "medicare", "your password"]
+}
