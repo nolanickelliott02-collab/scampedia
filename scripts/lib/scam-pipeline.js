@@ -124,8 +124,38 @@ function stripCiteMarkup(value) {
   return value;
 }
 
-function findQualityIssues(report) {
+// Scampedia's readers are in the US (2026-11-09, Nick: prefer US sources and
+// terms). The prompt already asks for that; this makes it a gate. An entry
+// fails if every cited link is a non-US country site, or if its text uses
+// another country's money or reporting channels instead of US ones.
+// A country-code domain (.uk, .au, .ca, ...) other than .us. Two-letter
+// domains used generically by international sites don't count as foreign.
+const GENERIC_CC_TLDS = new Set(['us', 'io', 'co', 'ai', 'me', 'tv', 'fm', 'ly', 'gg', 'to', 'cc', 'ws']);
+const NON_US_CITATION = { test: (host) => { const tld = host.split('.').pop().toLowerCase(); return tld.length === 2 && !GENERIC_CC_TLDS.has(tld); } };
+const NON_US_TERMS = [
+  { re: /£\s?\d|\b\d+\s?(?:pounds|quid)\b/i, why: 'UK money (£)' },
+  { re: /€\s?\d|\b\d+\s?euros?\b/i, why: 'euros' },
+  { re: /\bA\$\s?\d|\bAUD\b|\bC\$\s?\d|\bCAD\b/, why: 'Australian/Canadian dollars' },
+  { re: /\bHMRC\b|\bAction Fraud\b|\bRoyal Mail\b|\bNHS\b|\bDVLA\b|\bOfcom\b|\bpostcode\b/i, why: 'UK agencies or terms' },
+  { re: /\bScamwatch\b|\bAustralian Taxation Office\b|\bmyGov\b|\bCanada Revenue Agency\b|\bCRA\b|\bCanada Post\b/, why: 'Australian or Canadian agencies' },
+];
+
+function usFocusIssues(report) {
   const issues = [];
+  const urls = extractCitationUrls(report.source);
+  const hosts = urls.map(u => { try { return new URL(u).hostname; } catch { return ''; } }).filter(Boolean);
+  if (hosts.length && hosts.every(h => NON_US_CITATION.test(h))) {
+    issues.push(`not US-focused: every citation is a non-US site (${hosts.join(', ')})`);
+  }
+  const text = [report.title, report.summary, report.howItWorks, ...(report.redFlags || []), ...(report.safetyTips || []), ...(report.realExamples || [])].join(' ');
+  for (const { re, why } of NON_US_TERMS) {
+    if (re.test(text)) issues.push(`not US-focused: uses ${why}`);
+  }
+  return issues;
+}
+
+function findQualityIssues(report) {
+  const issues = [...usFocusIssues(report)];
   const allStrings = [report.summary, report.howItWorks, report.source, ...report.safetyTips, ...report.redFlags, ...report.realExamples];
   for (const s of allStrings) {
     for (const pattern of DEGENERATE_PATTERNS) {
@@ -645,6 +675,7 @@ const MAX_PHRASES_PER_ENTRY = 3;
 // and job messages. Added 2026-11-06 after "courier roles" was proposed; it
 // would flag any normal delivery-job text.
 const SAFE_MESSAGES_PATH = path.join(__dirname, 'safe-messages.json');
+const { containsPhrase } = require('./phrase-match');
 
 function loadSafeMessages(safePath = SAFE_MESSAGES_PATH) {
   if (!fs.existsSync(safePath)) return [];
@@ -662,7 +693,9 @@ function acceptableScamPhrase(phrase, entryText, existing, safeMessages = []) {
   if (GENERIC_PHRASES.has(phrase)) return false;
   if (words.filter(w => !STOPWORDS.has(w) && w.length > 2).length < 2) return false;
   if (!entryText.includes(phrase)) return false;
-  if (safeMessages.some(m => m.includes(` ${phrase} `))) return false;
+  // The app's matching rule (whole words, common endings on the last word),
+  // so a phrase is rejected whenever the app itself would match it.
+  if (safeMessages.some(m => containsPhrase(m, phrase))) return false;
   // Whole-word overlap only — a plain substring check would reject "first
   // notice" for containing the existing pattern "irs". Overlapping phrases
   // are skipped because the app would count both matches.
@@ -1190,6 +1223,8 @@ module.exports = {
   REVIEW_DIR,
   loadHeldCandidates,
   loadSafeMessages,
+  usFocusIssues,
+  findQualityIssues,
   checkNotDuplicate,
   writeGithubOutput,
   recordOutcome,
