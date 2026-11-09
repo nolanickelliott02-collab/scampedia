@@ -39,3 +39,8 @@ Never merge any pull request unless Nick says "merge #N" for that specific PR. G
 - A published slug never changes, even when the title does. `data/published-slugs.json` records every slug (the page builder adds new ones); `scripts/__tests__/permanent-ids.test.js` fails if one disappears. To take an entry down, move its slug to `retired` with a date and reason (`rollback-last-entry.js` does this).
 - `scripts/lib/contracts/` is a copy of the platform contracts from the server repo. Don't edit it here; change the server's copy and copy it over.
 - Tests run one file at a time (`--test-concurrency=1`): several tests rebuild the real site pages, and running them in parallel made `build-idempotency` fail about 1 run in 6.
+
+## Git safety (Nick, 2026-11-09)
+
+- Never run git commands that can overwrite or discard work in Nick's folders without asking him first: `git stash pop` / `git stash apply`, `git reset --hard`, `git checkout -- <file>` / `git checkout <commit> -- <file>` / `git restore`, `git clean`, and force pushes.
+- For experiments (e.g. checking a test fails on old code), use a separate worktree (`git worktree add`) or a scratch copy, never the working tree.
