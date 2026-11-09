@@ -1,0 +1,62 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "130",
+    "slug": "viral-collectible-lafufu-fake-labubu-toy-scam",
+    "title": "Viral Collectible \"Lafufu\" Fake Labubu Toy Scam",
+    "summary": "Scammers are exploiting the Labubu plush-toy craze by building fake storefronts and social media ads that mimic Pop Mart, taking payment for \"authentic\" Labubu dolls and sending cheap counterfeits (\"Lafufus\") or nothing at all.",
+    "category": "Shopping Scam",
+    "firstReported": "2025-08-04",
+    "relatedScams": [
+      "Fake Online Store Scam",
+      "Fake Retail Coupon / Promo Code Scam",
+      "Brushing Scam with QR Code Twist"
+    ],
+    "safetyTips": [
+      "Buy Labubu and other viral collectibles only from Pop Mart's official site or verified retailers such as its listed Amazon store, not from links in social media ads",
+      "Be cautious of sponsored ads and livestream \"drops\" on TikTok or Instagram promoting hard-to-find toys at suspiciously available quantities",
+      "Pay with a credit card rather than debit card, gift card, or direct transfer so you can dispute the charge if the item never arrives or is counterfeit",
+      "Search the seller's name plus the word \"scam\" and check BBB.org before ordering, and be skeptical of glowing reviews posted only on the seller's own site",
+      "Inspect authenticity markers like the QR code, foot stamp, and tooth count before trusting a deal that seems too good to be true"
+    ],
+    "datePublished": "2026-11-07T20:39:25.617Z",
+    "howItWorks": "Scammers create websites that copy Pop Mart's official branding, product photos, and descriptions, then drive traffic to them through sponsored ads and livestreams on TikTok and Instagram that create urgency around a \"drop.\" Shoppers who click through and pay, often for bundles of six or more dolls, either wait weeks for a package that never ships before the website vanishes entirely, or receive poorly made knockoff dolls instead of the authentic collectible. When buyers contact the seller to ask if it's a scam, they are often reassured the item is \"in transit\" right up until the site disappears.",
+    "redFlags": [
+      "A \"guaranteed\" or \"100% authentic\" Labubu offer discovered through a sponsored social media ad or TikTok livestream rather than a known retailer",
+      "Website or seller account is very new, has little history, or uses urgency tactics like limited-time drops to rush a purchase",
+      "Seller images and product descriptions appear copied directly from Pop Mart's official site",
+      "Shipping times stretch far beyond what was promised, with vague reassurances when you ask if it's a scam",
+      "The company name paired with the word \"scam\" turns up complaints, or the seller's website disappears after you order"
+    ],
+    "realExamples": [
+      "BBB's Scam Tracker received over 70 reports nationwide from consumers who paid for Labubu dolls through sites advertised on TikTok and received counterfeits or nothing at all, with one consumer reporting the site disappeared about a month after their order with no delivery.",
+      "A customer who lost nearly $500 said the scam site used images and descriptions copied from Pop Mart's own website to appear authentic.",
+      "Commonly reported scam sellers identified in BBB complaints included names such as Kawaii Room, Cult Neo, Bubulands, Bears R Us, and Labubu Fantasy."
+    ],
+    "source": "BBB / WSB-TV Atlanta, https://www.wsbtv.com/news/local/atlanta/bbb-issues-warning-after-getting-complaints-websites-selling-fake-labubu-toys/BYYO77JTXZA6XNTKVMBT2MBIV4/",
+    "spreadPlatforms": [
+      "TikTok",
+      "Instagram",
+      "Social Media Ads",
+      "Fake Websites"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Fake Online Store Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Lafufu Scam",
+      "Counterfeit Labubu Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.75,
+    "reasoning": "This is a fake-storefront/counterfeit-goods scam using social media ads and a trending product, which is the same mechanism already covered by 'Fake Online Store Scam' (and similar to 'Fake Online Pet Sale Scam'); the Labubu angle is just a trending-product twist rather than a new underlying pattern."
+  },
+  "queuedAt": "2026-11-07T20:39:31.373Z"
+}

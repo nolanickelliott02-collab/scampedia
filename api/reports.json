@@ -1,6 +1,6 @@
 {
-  "version": 97,
-  "lastUpdated": "2026-11-06T21:52:46.470Z",
+  "version": 103,
+  "lastUpdated": "2026-11-09T02:34:10.162Z",
   "reports": [
     {
       "id": "1",
@@ -4905,6 +4905,244 @@
         "Third-party gaming/download websites"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "129",
+      "slug": "fake-concert-event-ticket-resale-scam",
+      "title": "Fake Concert & Event Ticket Resale Scam",
+      "summary": "Scammers build convincing fake ticket-resale websites and social media listings — now often using AI to generate realistic PDFs with fake barcodes — to sell tickets to concerts, festivals and sporting events that don't exist or that get resold to multiple buyers.",
+      "category": "Shopping Scam",
+      "firstReported": "2026-07-28",
+      "relatedScams": [
+        "Fake Online Store Scam",
+        "Online Marketplace Buyer Scam",
+        "AI-Generated Fake Review Scam"
+      ],
+      "safetyTips": [
+        "Buy only through the event's official ticketing partner or a platform's verified resale option (e.g., Ticketmaster Verified Resale)",
+        "Confirm the seller can transfer the ticket digitally through the official app in front of you, since a PDF or screenshot proves nothing and real transfers invalidate the seller's copy",
+        "Pay with a credit card or buyer-protected service so you can dispute the charge if the ticket is fake",
+        "Avoid buying tickets through social media marketplaces or classifieds, which are hotspots for counterfeit listings",
+        "Be skeptical of prices at or below face value for a sold-out show and of pressure to decide quickly"
+      ],
+      "datePublished": "2026-11-07T20:37:24.638Z",
+      "howItWorks": "As in-demand concerts, festivals and sporting events sell out, scammers create lookalike ticketing websites, fake \"verified resale\" listings, phony waitlist pages, and social media posts (especially on Facebook Marketplace and Craigslist) offering tickets at tempting prices. Buyers pay by card, Zelle, Venmo, Cash App, wire transfer, or crypto and either receive nothing, a PDF or screenshot \"ticket\" that was already sold to several other people, or a counterfeit electronic ticket/wristband that fails to scan at the gate. Increasingly, AI tools are used to generate convincing fake ticket PDFs complete with realistic barcodes, venue branding and seat details, or to clone a legitimate resale platform's login page to steal both payment and account credentials.",
+      "redFlags": [
+        "Price for a sold-out event is at or below face value",
+        "Seller wants payment via Zelle, Venmo, Cash App, wire, gift cards, or crypto instead of a buyer-protected method",
+        "Seller refuses to transfer the ticket through the official platform app (Ticketmaster, etc.) and only offers a PDF, screenshot, or photo of a barcode",
+        "Listing found on Facebook Marketplace or Craigslist rather than an official or verified resale channel",
+        "High-pressure urgency such as 'other buyers are interested' or a fake countdown/waitlist page",
+        "Website looks like an official ticketing platform but has a slightly altered URL or recently created domain"
+      ],
+      "realExamples": [
+        "The BBB warned Lollapalooza fans in July 2026 about fake ticket websites, phony 'Wait List' pages, and counterfeit wristbands designed to steal money and personal information.",
+        "BBB data cited via Surfshark Research found that 38% of ticket scam cases in 2025 involved fake websites built to look like official resale platforms, with Facebook accounting for another 28% of cases.",
+        "A seller sends what looks like a real e-ticket, but the same barcode has already been sold to other buyers or the seller keeps a copy and uses it first, so the ticket shows as already used at the door — a pattern seen with PDFs and screenshots sent instead of an official in-app transfer."
+      ],
+      "source": "Better Business Bureau / WLS-AM, https://www.wlsam.com/2026/07/28/bbb-warns-of-ticket-scam/; Guardio, https://guard.io/blog/stubhub-ticketmaster-resale-scams-verify-ticket",
+      "spreadPlatforms": [
+        "Social Media",
+        "Facebook Marketplace",
+        "Craigslist",
+        "Fake Websites",
+        "Email",
+        "Text Messages"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "130",
+      "slug": "jewelry-swap-distraction-theft-scam",
+      "title": "Jewelry Swap Distraction Theft Scam",
+      "summary": "Thieves, often working in pairs, approach seniors in public or at home, distract them with a hug, kiss, or offer of \"gift\" jewelry, and secretly swap their real gold jewelry for cheap fakes before driving off.",
+      "category": "Shopping Scam",
+      "firstReported": "2025-04-22",
+      "relatedScams": [
+        "Grandparent Emergency Scam",
+        "Mail Theft Check Washing/Check Cooking Scam"
+      ],
+      "safetyTips": [
+        "Keep jewelry concealed or out of sight when out in public, especially gold chains and bracelets",
+        "Politely decline hugs, kisses, or physical contact from strangers and keep a safe distance",
+        "Never accept jewelry, 'blessings,' or gifts offered by people you don't know, and don't go near their vehicle",
+        "If someone does get close to you, check your jewelry immediately afterward and report any swap to police right away",
+        "Report suspicious encounters to local police promptly so they can track and link cases across a crew's activity"
+      ],
+      "datePublished": "2026-11-07T20:41:44.382Z",
+      "howItWorks": "A stranger (or a team of two) approaches an older adult who is wearing visible jewelry, often while the victim is walking, getting mail, or taking out trash. The scammer asks for directions, offers help, or claims to want to give a \"blessing\" or thank-you gift, then gets physically close with a hug, kiss, or by placing a necklace or bracelet on the victim as a supposed gift. During that brief, friendly-seeming contact, the thief actually unclasps and removes the victim's genuine gold jewelry and replaces it with a worthless imitation, so the victim does not realize anything is wrong until they look closely later, sometimes hours or days afterward. Police describe the crews as highly practiced and fast, often working from vans or cars and sometimes luring victims closer by asking them to come see people inside the vehicle.",
+      "redFlags": [
+        "A stranger initiates unexpected physical contact like a hug or kiss, or tries to put jewelry on you",
+        "Someone you don't know offers you a 'gift,' 'blessing,' or jewelry as thanks for a small favor or for directions",
+        "You're asked to come closer to a parked car to see something or someone",
+        "The approach happens near your home, mailbox, or in a parking lot and the people leave quickly afterward",
+        "The group operates in a pair or small crew, sometimes using a van or rental vehicle"
+      ],
+      "realExamples": [
+        "In New York, the NYPD said 11 incidents in Brooklyn and Queens involved over $900,000 worth of jewelry stolen, including a 76-year-old woman in Queens Village approached on March 13th by a young woman asking for directions who gave her jewelry while taking her $3,000 necklace, and three arrests were made.",
+        "An 86-year-old woman in Troy, Michigan had a $20,000 gold necklace and bracelet swapped for fakes by someone who kissed her and touched her face while she was taking out trash on Halloween.",
+        "The LAPD confirmed more than 140 distraction-theft jewelry swap reports across Los Angeles, including a 99-year-old Holocaust survivor who had her diamond necklace and ring stolen by a woman pretending to offer help."
+      ],
+      "source": "CBS New York, https://www.cbsnews.com/newyork/news/nypd-brooklyn-queens-jewelry-swap-thefts/ ; Moneywise, https://moneywise.com/news/top-stories/jewelry-swap-scam-seniors-gold-necklace-theft ; FOX LA, https://www.foxla.com/news/la-jewelry-thefts-targeting-elderly-rise-police-warn ; ClickOnDetroit, https://www.clickondetroit.com/news/local/2026/11/05/suspect-kisses-troy-woman-86-steals-20k-in-gold-jewelry-on-halloween/",
+      "spreadPlatforms": [
+        "In-Person Encounters",
+        "Public Places/Street Approaches",
+        "Door-to-Door"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "131",
+      "slug": "bankruptcy-fraud-watchdog-group-letter-scam",
+      "title": "\"Bankruptcy Fraud Watchdog Group\" Letter Scam",
+      "summary": "Scammers posing as a \"Bankruptcy Fraud Watchdog Group\" send letters to people going through bankruptcy, falsely accusing them of hiding assets and demanding a $450 \"amnesty fine\" paid in Bitcoin via QR code to avoid prosecution.",
+      "category": "Government Scam",
+      "firstReported": "2024-11-13",
+      "relatedScams": [
+        "Phantom Debt Collector Scam",
+        "Foreclosure Relief / Mortgage Rescue Scam",
+        "Government Grant Scam"
+      ],
+      "safetyTips": [
+        "Know that the real U.S. Trustee Program does not demand payment in Bitcoin or via QR code to resolve bankruptcy fraud allegations",
+        "Always share any letter accusing you of bankruptcy fraud with your bankruptcy attorney immediately, regardless of what the letter claims",
+        "Report suspicious letters to the USTP's bankruptcy fraud hotline or your local U.S. Trustee office",
+        "Never pay a legal fine or settlement via cryptocurrency QR code, which is untraceable and irreversible"
+      ],
+      "datePublished": "2026-11-08T02:18:18.295Z",
+      "howItWorks": "A scam operator calling itself the \"Bankruptcy Fraud Watchdog Group\" targets consumer debtors who are going through bankruptcy proceedings. The group sends official-looking letters falsely accusing the debtor of failing to disclose assets in their bankruptcy case and threatens referral to \"the United States Bankruptcy Trustee\" for fraud and possible criminal prosecution unless the debtor promptly pays a \"one-time amnesty fine\" of $450. Victims are told to pay via Bitcoin, scanning a QR code included in the letter, supposedly to make the accusation go away. The letters also falsely warn debtors that if they share the letter with their own attorney, they will face \"immediate referral for criminal prosecution\" — a tactic designed to isolate victims from the legal help that would normally expose the scam.",
+      "redFlags": [
+        "Unsolicited letter from an unofficial-sounding group (\"Bankruptcy Fraud Watchdog Group\") rather than the actual U.S. Trustee Program or bankruptcy court",
+        "Demand for a cryptocurrency payment, such as Bitcoin via QR code, to resolve a legal accusation",
+        "Threat of criminal prosecution unless a fast \"amnesty fine\" is paid",
+        "Instruction telling you NOT to tell your attorney or warning of consequences if you share the letter",
+        "Use of urgent legal-sounding language and a fixed settlement amount ($450) to pressure quick payment"
+      ],
+      "realExamples": [
+        "The U.S. Trustee Program issued a nationwide alert describing letters sent by the 'Bankruptcy Fraud Watchdog Group' threatening debtors with referral to 'the United States Bankruptcy Trustee' for fraud unless they paid a $450 'amnesty fine' in Bitcoin via QR code."
+      ],
+      "source": "U.S. Department of Justice, U.S. Trustee Program - https://www.justice.gov/ust/notice/us-trustee-program-warns-consumers-bankruptcy-fraud-alert-scam",
+      "spreadPlatforms": [
+        "Physical Mail"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "132",
+      "slug": "prize-linked-social-security-direct-deposit-redirect-scam",
+      "title": "Prize-Linked Social Security Direct Deposit Redirect Scam",
+      "summary": "Scammers tell victims they've won a prize or contest and, to \"claim\" it, ask them to switch their Social Security benefit direct deposit to a new account or prepaid debit card — actually hijacking the victim's monthly benefit payments.",
+      "category": "Government Scam",
+      "firstReported": "2026-09-09",
+      "relatedScams": [
+        "Lottery / Prize Notification Scam",
+        "Fake Social Security Statement Email Scam",
+        "SSA Imposter Scam Using Real Employee Names and Fake Badges"
+      ],
+      "safetyTips": [
+        "Never change your direct deposit information because of an unsolicited call, text, or prize notification",
+        "Review and change your Social Security direct deposit information yourself, safely, through your personal my Social Security account at ssa.gov/myaccount",
+        "If you think your direct deposit has already been changed without your permission, contact SSA immediately at 1-800-772-1213",
+        "No legitimate contest or prize ever requires you to redirect a federal benefit payment to claim it",
+        "Report the scam to ssa.gov/scam or to the FTC at reportfraud.ftc.gov"
+      ],
+      "datePublished": "2026-11-08T02:19:28.619Z",
+      "howItWorks": "A caller tells the victim they've won a prize or contest, and that to receive it they need to switch their Social Security direct deposit from their own bank account to a different account, such as a prepaid debit card. To make this \"switch,\" the scammer asks the victim for personal and banking information, which is then used to redirect the victim's actual Social Security benefit payments to an account the scammer controls. Victims discover they no longer receive their own Social Security payments once the deposit has been redirected, and if they try to reverse the change, the scammer may call back and become hostile.",
+      "redFlags": [
+        "An unsolicited call, text, or notification claiming you've won a prize or contest tied to Social Security",
+        "Being asked to change your Social Security direct deposit information to a prepaid debit card or unfamiliar account in order to \"claim\" a prize",
+        "Requests for personal and banking information to process a supposed prize deposit",
+        "Pressure or hostility from the caller if you try to undo a direct deposit change",
+        "Any legitimate-sounding claim that a contest or prize requires redirecting a federal benefit payment"
+      ],
+      "realExamples": [
+        "Victims have been told they'd won a contest and, to receive the prize, were asked to switch their Social Security direct deposit from their bank to a prepaid debit card, after which they lost access to their own benefit payments",
+        "Scammers who redirected a victim's direct deposit have sometimes called back and grown hostile when the victim tried to undo the change"
+      ],
+      "source": "Social Security Administration Office of the Inspector General (SSA OIG), https://oig.ssa.gov/scam-alerts/2026-09-09-beware-of-direct-deposit-offers-tied-to-prizes/",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Text Messages"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "133",
+      "slug": "fake-planning-zoning-permit-fee-phishing-scam",
+      "title": "Fake Planning & Zoning Permit Fee Phishing Scam",
+      "summary": "Criminals impersonate city and county planning/zoning officials and email people with active land-use permit applications, demanding fraudulent \"permit fees\" using real case details to appear legitimate. The FBI warns victims have been identified nationwide.",
+      "category": "Government Scam",
+      "firstReported": "2026-03-09",
+      "relatedScams": [
+        "Fake USPTO \"Trademark Verification Appointment\" Scam",
+        "Phishing Email Scam",
+        "Fake Municipal Court \"Unpaid Parking Ticket\" Text Scam"
+      ],
+      "safetyTips": [
+        "Call your city or county planning/zoning office directly using a phone number from its official website to confirm any fee request before paying anything",
+        "Never wire money or pay permit fees based solely on an email request, even if it includes accurate personal or property details",
+        "Check that the sender's email domain matches your local government's actual domain, not a look-alike or generic address",
+        "Report suspected incidents to the FBI's Internet Crime Complaint Center (IC3) and to your local planning department"
+      ],
+      "datePublished": "2026-11-08T20:54:07.523Z",
+      "howItWorks": "Scammers pull publicly available permit records to find people and businesses with active planning or zoning applications, then send emails that reference real property addresses, case numbers, and the names of actual city or county officials to make the message look authentic. The emails are formatted to mimic legitimate government correspondence, discussing review processes, planning commission procedures, and ordinances, and instruct the recipient to pay an outstanding permit or application fee. The sender's address uses a username similar to a real planning or zoning department but comes from a non-governmental domain, and the message is timed to arrive around when a real official communication would be expected, all designed to discourage the victim from calling the city or county office to verify the request before paying.",
+      "redFlags": [
+        "Unsolicited email demanding payment for a zoning or planning permit fee, especially via wire transfer",
+        "Sender's email domain doesn't match the official city or county government domain, even if the username looks similar",
+        "Message discourages or fails to provide an easy way to verify the fee by phone with the actual planning/zoning office",
+        "Request arrives with suspiciously well-timed, accurate details like your exact case number and property address"
+      ],
+      "realExamples": [
+        "FBI Public Service Announcement I-030926-PSA describes individuals and businesses with active land-use permit applications nationwide receiving emails citing their real permit information and being directed to pay zoning application fees via wire transfer",
+        "Local governments including Cumberland County, NC and Cook County, IL issued public advisories directing residents to the FBI PSA after residents reported receiving fraudulent planning/zoning fee emails",
+        "Security news outlets reported the criminals use email addresses with usernames similar to real planning and zoning departments but originating from non-governmental domains"
+      ],
+      "source": "Internet Crime Complaint Center (IC3) / FBI, https://www.ic3.gov/PSA/2026/PSA260309",
+      "spreadPlatforms": [
+        "Email"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "134",
+      "slug": "end-of-life-router-botnet-proxy-scam",
+      "title": "End-of-Life Router Botnet Proxy Scam",
+      "summary": "Cybercriminals are hacking old, unsupported (\"end of life\") home and small-business routers and turning them into hidden proxy networks used to anonymize crimes like cryptocurrency theft and other illegal online activity.",
+      "category": "Tech Scam",
+      "firstReported": "2014-01-01",
+      "relatedScams": [
+        "BADBOX 2.0 Infected IoT Device Botnet Scam",
+        "Fake VPN App Malware Scam",
+        "SpyLoan Predatory Loan App Scam"
+      ],
+      "safetyTips": [
+        "Check whether your router is still supported by the manufacturer and replace it with an updated model if it has reached end of life",
+        "Disable remote administration features on your router unless you specifically need and understand them",
+        "Immediately apply any available security patches and firmware updates for your devices",
+        "Use strong, unique, random passwords and avoid reusing passwords or using password hints",
+        "Report suspected compromise or related cybercrime to the FBI's Internet Crime Complaint Center at www.ic3.gov"
+      ],
+      "datePublished": "2026-11-09T02:33:44.006Z",
+      "howItWorks": "The FBI warns that when a router reaches \"end of life,\" the manufacturer stops selling it and stops releasing software updates or security patches, leaving it exposed to known vulnerabilities that never get fixed. Criminal actors exploit these outdated devices (especially older models with remote administration left turned on) and infect them using variants of a botnet malware called TheMoon, which was first discovered on compromised routers back in 2014. Once compromised, the router is secretly turned into a proxy, meaning when the criminals use it to access a website to steal cryptocurrency or contract other illegal services, the site sees the hacked router's IP address instead of the real criminal's location, letting them operate anonymously while the router owner is left unaware their home network is being used as cover for crime.",
+      "redFlags": [
+        "A home or office router is several years old (the FBI flags routers dated 2010 or earlier as high risk) and no longer receives firmware updates",
+        "Remote administration is enabled on the router without the owner's knowledge or intentional setup",
+        "The router shows signs of infection such as overheating, connectivity problems, or settings changes the administrator does not recognize",
+        "The router brand or model is no longer supported or sold by the manufacturer"
+      ],
+      "realExamples": [
+        "The FBI describes end-of-life routers being breached by cyber actors using variants of TheMoon malware botnet, which installs proxies on victim routers to let cyber actors conduct cyber crimes anonymously, such as stealing cryptocurrency or contracting illegal services."
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), \"Cyber Criminal Proxy Services Exploiting End of Life Routers,\" https://www.ic3.gov/PSA/2025/PSA250507",
+      "spreadPlatforms": [
+        "Home Routers",
+        "Small Business Networks",
+        "Internet of Things (IoT) Devices"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
