@@ -3,8 +3,10 @@ name: Notify Devices of New Entries
 # Since 2026-11-05 entries go live only when Nick merges the weekly review
 # batch (see daily-scam-entry.yml), so the "new scam" push notification is
 # sent here, after the merge lands on main, instead of when a bot writes an
-# entry. One push per merge, for the newest entry, so a week's batch doesn't
-# send a week of notifications at once.
+# entry. One push per merge: a weekly digest ("6 new scams this week,
+# including the ...", leading with the entry most relevant to older US adults,
+# scripts/lib/digest.js) that opens the batch's "This week's new scams" page
+# (Nick, 2026-11-09).
 on:
   push:
     branches: [main]
@@ -21,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Find entries that just went live
+      - name: Find entries that just went live and build the digest
         id: newest
         env:
           BEFORE: ${{ github.event.before }}
@@ -29,28 +31,31 @@ jobs:
       # GitHub Pages deploys separately and can finish a few minutes after this
       # starts (2026-11-09: push sent 16:30:55, page live 16:33:36). Wait until the
       # entry's page is really on scampedia.net so a tapped notification never 404s.
-      - name: Wait for the entry page to be live
+      - name: Wait for the page the push opens to be live
         if: steps.newest.outputs.count != '0'
         env:
-          ENTRY_SLUG: ${{ steps.newest.outputs.slug }}
+          PAGE: ${{ steps.newest.outputs.page }}
         run: |
-          url="https://scampedia.net/scams/${ENTRY_SLUG}.html"
+          url="https://scampedia.net/scams/${PAGE}.html"
           for i in $(seq 1 40); do
             code=$(curl -s -o /dev/null -w "%{http_code}" "$url?check=$i" || true)
             if [ "$code" = "200" ]; then echo "Live after $i check(s): $url"; exit 0; fi
             sleep 15
           done
           echo "Page still not live after 10 minutes: $url. Not sending."; exit 1
-      - name: Notify devices of the newest one
+      - name: Notify devices with the weekly digest
         if: steps.newest.outputs.count != '0'
+        # The server shows `title` as the notification text when there's no
+        # summary. `url` is the page a tap should open; the server and app
+        # ignore it until they're updated to use it.
         env:
-          ENTRY_TITLE: ${{ steps.newest.outputs.title }}
-          ENTRY_SUMMARY: ${{ steps.newest.outputs.summary }}
+          DIGEST_MESSAGE: ${{ steps.newest.outputs.message }}
           ENTRY_SLUG: ${{ steps.newest.outputs.slug }}
+          PAGE: ${{ steps.newest.outputs.page }}
           NOTIFY_SECRET: ${{ secrets.SCAMPEDIA_NOTIFY_SECRET }}
         run: |
           curl -sS --max-time 15 -X POST "https://clever-bravery-production-2d5f.up.railway.app/api/notify-new-scam" \
             -H "Content-Type: application/json" \
             -H "x-notify-secret: $NOTIFY_SECRET" \
-            -d "$(node -e 'console.log(JSON.stringify({title: process.env.ENTRY_TITLE, summary: process.env.ENTRY_SUMMARY, slug: process.env.ENTRY_SLUG}))')" \
+            -d "$(node -e 'console.log(JSON.stringify({title: process.env.DIGEST_MESSAGE, slug: process.env.ENTRY_SLUG, url: "https://scampedia.net/scams/" + process.env.PAGE + ".html"}))')" \
             || echo "Push notification failed, continuing anyway."

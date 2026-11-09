@@ -479,4 +479,6 @@ function main() {
   console.log(`Built ${allReports.length} scam pages + index.html + az.html + sitemap.xml`);
 }
 
-main();
+if (require.main === module) main();
+
+module.exports = { pageShell, escapeHtml, formatDate, SITE_ORIGIN };
