@@ -16,7 +16,7 @@ permissions:
 jobs:
   notify:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,6 +26,21 @@ jobs:
         env:
           BEFORE: ${{ github.event.before }}
         run: node scripts/newly-published.js "$BEFORE" >> "$GITHUB_OUTPUT"
+      # GitHub Pages deploys separately and can finish a few minutes after this
+      # starts (2026-11-09: push sent 16:30:55, page live 16:33:36). Wait until the
+      # entry's page is really on scampedia.net so a tapped notification never 404s.
+      - name: Wait for the entry page to be live
+        if: steps.newest.outputs.count != '0'
+        env:
+          ENTRY_SLUG: ${{ steps.newest.outputs.slug }}
+        run: |
+          url="https://scampedia.net/scams/${ENTRY_SLUG}.html"
+          for i in $(seq 1 40); do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$url?check=$i" || true)
+            if [ "$code" = "200" ]; then echo "Live after $i check(s): $url"; exit 0; fi
+            sleep 15
+          done
+          echo "Page still not live after 10 minutes: $url. Not sending."; exit 1
       - name: Notify devices of the newest one
         if: steps.newest.outputs.count != '0'
         env:
