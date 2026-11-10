@@ -1,0 +1,56 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "136",
+    "slug": "fake-claim-your-ssa-benefits-retirement-application-phishing-email-scam",
+    "title": "Fake \"Claim Your SSA Benefits\" Retirement Application Phishing Email Scam",
+    "summary": "A phishing email disguised as an official Social Security Administration notice urges recipients to \"apply\" for retirement benefits starting that year, but the embedded link sends victims to a fake SSA look-alike site instead of ssa.gov.",
+    "category": "Government Scam",
+    "firstReported": "2025-02-11",
+    "relatedScams": [
+      "Fake Social Security Statement Email Scam",
+      "Government Grant Scam",
+      "Phishing Email Scam"
+    ],
+    "safetyTips": [
+      "Never click links in unsolicited emails claiming to be from SSA; go directly to ssa.gov or ssa.gov/myaccount instead",
+      "Remember government agencies always use a .gov domain for official email and websites",
+      "Delete suspicious emails and do not reply to or call numbers provided in them",
+      "Check ssa.gov/scam for current warning signs and to report suspected scam emails to SSA OIG"
+    ],
+    "datePublished": "2026-11-10T04:35:25.949Z",
+    "howItWorks": "Scammers send an email that appears to come from SSA with a subject line like \"Claim Benefits!\" telling recipients to apply for Social Security retirement benefits. The email's link is disguised to look like SSA's real web addresses, ssa.gov or socialsecurity.gov, but actually redirects anyone who clicks it to a fraudulent website designed to harvest personal information rather than process any real benefits application.",
+    "redFlags": [
+      "Unsolicited email urging you to click a link to \"apply\" or \"claim\" Social Security benefits",
+      "Link text displays what looks like ssa.gov or socialsecurity.gov but is actually disguised to go elsewhere",
+      "Urgent subject lines like \"Claim Benefits!\" pressuring immediate action",
+      "Email arrives from an address that is not a genuine .gov government address"
+    ],
+    "realExamples": [
+      "SSA OIG reported a scam email with the subject line \"Claim Benefits!\" stating \"Important: Apply for Your Social Security Benefits Starting in 2025,\" with a link disguised as SSA's official site that redirected to a fraudulent page."
+    ],
+    "source": "SSA Office of the Inspector General, https://oig.ssa.gov/scam-alerts/2025-07-17-do-not-click-the-link-to-claim-ssa-benefits/",
+    "spreadPlatforms": [
+      "Email"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Fake Social Security Statement Email Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "SSA Benefits Phishing Email Scam",
+      "Claim Benefits Email Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.25,
+    "reasoning": "This is an SSA-branded phishing email impersonation scam, essentially the same category of fraud as the existing 'Fake Social Security Statement Email Scam' and overlapping with 'SSA Imposter Scam Using Real Employee Names and Fake Badges' and 'Social Security Number Suspended Scam' — just a different pretext (retirement benefits application vs. statement), not a structurally distinct mechanism."
+  },
+  "queuedAt": "2026-11-10T04:35:31.259Z"
+}
