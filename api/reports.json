@@ -1,6 +1,6 @@
 {
-  "version": 103,
-  "lastUpdated": "2026-11-09T02:34:10.162Z",
+  "version": 104,
+  "lastUpdated": "2026-11-10T00:36:53.019Z",
   "reports": [
     {
       "id": "1",
@@ -5143,6 +5143,50 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "135",
+      "slug": "counterfeit-ozempic-semaglutide-weight-loss-drug-scam",
+      "title": "Counterfeit Ozempic / Semaglutide Weight-Loss Drug Scam",
+      "summary": "Scammers and rogue online sellers exploit the surging demand for Ozempic, Wegovy, and other semaglutide weight-loss drugs by peddling counterfeit or unapproved versions through fake online pharmacies, social media ads, med spas, and \"weight loss clinics\" — often with no prescription required.",
+      "category": "Shopping Scam",
+      "firstReported": "2024-05-15",
+      "relatedScams": [
+        "Fake Online Store Scam",
+        "Fake Retail Coupon / Promo Code Scam"
+      ],
+      "safetyTips": [
+        "Only obtain Ozempic, Wegovy, or other semaglutide drugs with a valid prescription through a state-licensed pharmacy",
+        "Be skeptical of any online pharmacy, social media seller, or spa offering these drugs cheaply or without a prescription",
+        "Check packaging carefully against the manufacturer's authentic product and report anything suspicious",
+        "If you experience unexpected side effects after using a compounded or discounted weight-loss drug, seek medical care and report it to the FDA",
+        "Avoid buying prescription weight-loss drugs promoted through TikTok or other social media videos promising dramatic results"
+      ],
+      "datePublished": "2026-11-10T00:36:37.274Z",
+      "howItWorks": "Capitalizing on nationwide shortages and sky-high prices for GLP-1 drugs like Ozempic and Wegovy, fraudulent sellers advertise cheap, no-prescription-needed semaglutide through online pharmacies, TikTok and other social platforms, and even medical spas or weight-loss clinics. Buyers receive products that are misbranded, diluted, contaminated, or contain no semaglutide at all — sometimes with dangerous unapproved ingredients substituted in by illegal compounders. Victims pay real money for injections that can be ineffective, counterfeit, or medically dangerous, and have no way to verify what they actually injected until they suffer side effects or a hospitalization.",
+      "redFlags": [
+        "Prices far below the real cost — as one investigator noted, \"if you're buying a drug legitimately priced at thousands of dollars for just $65, you should be asking questions\"",
+        "Sellers offering semaglutide, Ozempic, Wegovy, or Mounjaro without any prescription",
+        "Promotion through social media ads/influencer videos with dramatic before-and-after testimonials rather than a licensed pharmacy or doctor",
+        "Products sold by medical spas, weight-loss clinics, or online pharmacies that aren't recognizable, licensed, or verifiable",
+        "Packaging, lot numbers, or needles that look slightly different from the authentic manufacturer's product"
+      ],
+      "realExamples": [
+        "CBS News was given access to customs operations and shown seized boxes of counterfeit Ozempic, Wegovy, and Trulicity injections intercepted from online sales",
+        "Authorities arrested a Long Island woman suspected of selling misbranded Ozempic online",
+        "The FDA announced on 12/5/2025 that it had seized dozens of units of counterfeit Ozempic (semaglutide) injection 1mg distributed illegally outside Novo Nordisk's authorized supply chain",
+        "The FBI warned that a medical spa and weight-loss clinic in the South sold its own compounded weight-loss medication later found to contain an animal-grade ingredient instead of real semaglutide",
+        "At least three Americans were reported hospitalized after using suspected counterfeit semaglutide products, according to FDA records",
+        "CBS News found TikTok videos and accounts offering to ship Ozempic, Mounjaro, and Wegovy without a prescription, with nearly every transaction investigated turning out to be a scam"
+      ],
+      "source": "CBS News, https://www.cbsnews.com/news/fake-weight-loss-drugs-ozempic-wegovy-online/; ABC News (FBI PSA), https://abcnews.com/GMA/Wellness/fbi-issues-safety-warning-counterfeit-versions-weight-loss/story?id=119792958",
+      "spreadPlatforms": [
+        "Social Media",
+        "TikTok",
+        "Online Pharmacies/Websites",
+        "Medical Spas/Clinics"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
