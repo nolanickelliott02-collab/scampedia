@@ -1,0 +1,63 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "137",
+    "slug": "timeshare-exit-fee-scam",
+    "title": "Timeshare Exit Fee Scam",
+    "summary": "Companies promise retirees they can cancel or \"exit\" burdensome timeshare contracts for a large upfront fee, then vanish without delivering — a scheme federal officials say has grown so large it is now being run in part by a Mexican drug cartel.",
+    "category": "Investment Scam",
+    "firstReported": "2018-01-01",
+    "relatedScams": [
+      "Timeshare Resale Scam",
+      "Refund and Recovery \"Sucker List\" Scam",
+      "Advance Fee Loan Scam"
+    ],
+    "safetyTips": [
+      "Never pay a large upfront fee to a company promising to get you out of a timeshare contract",
+      "Contact your timeshare resort or developer directly first, since many have their own deed-back or exit programs",
+      "Research any exit company's name plus \"scam\" or \"fraud\" and check with the Better Business Bureau before signing anything",
+      "Be extremely skeptical of anyone who contacts you out of the blue claiming they can resell, rent, or help you exit a timeshare",
+      "If you already paid an exit company, do not trust a second caller who offers to recover those funds for an additional fee — this is a follow-up scam targeting the same victims"
+    ],
+    "datePublished": "2026-11-11T23:18:30.918Z",
+    "howItWorks": "Scammers target older timeshare owners through direct mail, telemarketing calls, and free lunch or dinner sales seminars at hotels and restaurants, claiming they can legally release the owner from their timeshare contract and maintenance fees for a steep upfront payment. Timeshare exit scams involve companies that charge upfront fees to terminate contracts but never deliver results.",
+    "redFlags": [
+      "A company demands a large upfront fee before providing any service, with no results ever delivered",
+      "High-pressure sales pitches at hotel or restaurant seminars claiming you cannot exit a timeshare contract on your own",
+      "Claims that your heirs will inherit crippling maintenance fees unless you sign immediately",
+      "A second company contacts you after you've already paid, offering to recover your lost money for another fee",
+      "Unsolicited calls, emails, or texts from people claiming to be timeshare brokers, attorneys, or resort representatives"
+    ],
+    "realExamples": [
+      "The Justice Department, FTC, and Wisconsin Attorney General sued a Missouri-based operation using the names Square One, Consumer Law Protection, Premier Reservations Group, Resort Transfer Group, and Timeshare Help Source for scamming consumers, mostly older adults, out of more than $90 million.",
+      "The FBI and Justice Department announced indictments against leaders of the Jalisco New Generation Cartel (CJNG), saying the cartel ran call centers in Mexico that defrauded over 6,000 Americans out of more than $400 million between 2019 and 2023 through fake timeshare resale and exit offers.",
+      "The Treasury Department sanctioned a timeshare fraud network, including a Mexican resort and associated companies and individuals, tied to the CJNG cartel's timeshare fraud operation."
+    ],
+    "source": "FBI/DOJ via Fox News, \"5 Mexican cartel bosses charged in weapons, drug trafficking, timeshare fraud schemes\", https://www.foxnews.com/us/mexican-cartel-bosses-charged-timeshare-fraud-scheme-targeting-elderly-americans-doj",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Direct Mail",
+      "Email",
+      "Text Messages",
+      "In-Person Seminars"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "known-variant",
+    "severity": "high",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Investment Scam",
+    "suggestedAliases": [
+      "Timeshare Fraud Scheme",
+      "CJNG Timeshare Fraud Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.55,
+    "reasoning": "The candidate's \"exit fee\" narrative (upfront fee to cancel a timeshare) does not match the source text, which actually describes a different timeshare scheme — promising profits from selling/renting a timeshare, then layering on fake tax/advance fees, fake lawyers, and fake government/cartel extortion calls, run by the CJNG cartel. This overlaps substantially with the existing \"Timeshare Resale Scam\" entry (promising to sell/rent timeshares for upfront fees) rather than being a clean distinct \"exit fee\" pattern, though the cartel-run, multi-layered extortion escalation and scale ($400M, 6,000 victims) add a notable new angle."
+  },
+  "queuedAt": "2026-11-11T23:18:37.170Z"
+}
