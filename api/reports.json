@@ -1,6 +1,6 @@
 {
-  "version": 104,
-  "lastUpdated": "2026-11-10T00:36:53.019Z",
+  "version": 105,
+  "lastUpdated": "2026-11-11T23:14:37.382Z",
   "reports": [
     {
       "id": "1",
@@ -5185,6 +5185,48 @@
         "TikTok",
         "Online Pharmacies/Websites",
         "Medical Spas/Clinics"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "136",
+      "slug": "ai-cloned-fake-immigration-attorney-scam",
+      "title": "AI-Cloned Fake Immigration Attorney Scam",
+      "summary": "Scammers use AI to clone the face, voice, and even signature of real, licensed immigration attorneys and law firms, then run fake social media ads and websites promising guaranteed green cards, work permits, or citizenship to lure fearful immigrants into paying thousands for services that never materialize.",
+      "category": "Government Scam",
+      "firstReported": "2025-05-01",
+      "relatedScams": [
+        "USCIS / Immigration Scam",
+        "AI Voice Clone Scam",
+        "Deepfake Celebrity Endorsement Scam"
+      ],
+      "safetyTips": [
+        "Verify any attorney's identity and license directly through your state bar association before paying or signing anything",
+        "Go to USCIS.gov directly for legitimate immigration information and check case status only through your official MyUSCIS account",
+        "Never pay legal fees or \"bond\" money through gift cards, Zelle, Western Union, or wire transfer to someone you only met on social media",
+        "Be suspicious of any immigration contact that moves the conversation off a law firm's verified website into WhatsApp or private messaging",
+        "If a lawyer's name, face, or voice is used to solicit you online, report it to the FTC, the FBI, and the state bar before sending any money"
+      ],
+      "datePublished": "2026-11-11T23:14:17.599Z",
+      "howItWorks": "Fraudsters steal an immigration attorney's publicly posted videos, photos, and law-firm branding and run them through AI tools to generate manipulated clips and cloned voices making impossible promises. Ads appear on Facebook, WhatsApp, and other platforms offering to secure green cards, work permits, or citizenship, sometimes \"without an exam\" or quickly guaranteed. Victims who comment or message are moved off the public platform into WhatsApp or Zoom, where the scammers may stage fake video \"hearings,\" send forged documents bearing distorted versions of real law-firm or American Bar Association logos, and even impersonate immigration judges or officials. Victims are instructed to pay fees, \"bond\" money, or service charges through money-transfer apps or wires; some are falsely told paying a bond will keep them \"out of jail.\" Because the scam preys on deportation fears, victims often don't report it, and some end up worse off legally after following fake guidance.",
+      "redFlags": [
+        "Immigration help offered through a Facebook, TikTok, or WhatsApp ad or comment rather than a verified attorney referral",
+        "Guarantees of a green card, work permit, or citizenship, especially promised quickly or \"without an exam\"",
+        "Requests to pay via Western Union, Zelle, or wire transfer instead of a law firm's official payment system",
+        "Virtual \"hearings\" or \"USCIS appointments\" conducted over WhatsApp or Zoom instead of official USCIS channels",
+        "Documents or contracts bearing an old, distorted, or slightly-off American Bar Association or law firm logo"
+      ],
+      "realExamples": [
+        "An immigration attorney in Doral, Florida said scammers cloned his image, name, and voice with AI to manipulate his real social media videos into making false promises of citizenship without an exam or immediate work permits, moving victims to WhatsApp to collect payment via money-transfer platforms.",
+        "The FBI's Chicago office issued a public warning about scammers posing as immigration lawyers or officials who directed victims to pay a \"bond\" under the false claim it would keep them out of jail.",
+        "The American Bar Association found fraudulent contracts bearing a distorted version of its logo promising immigration bond and court representation services signed with stolen attorney identities, and scammers posing as members of real multi-office firms."
+      ],
+      "source": "ABA Journal, \"Immigration lawyers continue to fight scammers,\" https://www.abajournal.com/news/article/immigration-lawyers-continuing-to-fight-scammers; NBC News, https://www.nbcnews.com/news/us-news/scammers-impersonate-immigration-lawyers-rcna348238",
+      "spreadPlatforms": [
+        "Social Media",
+        "WhatsApp",
+        "Facebook",
+        "Video Calls (Zoom)"
       ],
       "isAIDiscovered": true
     }
