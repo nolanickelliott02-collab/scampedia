@@ -162,6 +162,20 @@
       "entryTitle": "F-1 Visa Status Impersonation Scam Targeting Middle Eastern Students",
       "proposedAt": "2026-11-12T03:48:57.307Z",
       "status": "pending"
+    },
+    {
+      "phrase": "nonexistent transaction",
+      "entryId": "139",
+      "entryTitle": "Hijacked Mass-Texting Platform / Trusted Short Code Scam",
+      "proposedAt": "2026-11-12T22:34:53.773Z",
+      "status": "pending"
+    },
+    {
+      "phrase": "transaction that never occurred",
+      "entryId": "139",
+      "entryTitle": "Hijacked Mass-Texting Platform / Trusted Short Code Scam",
+      "proposedAt": "2026-11-12T22:34:53.773Z",
+      "status": "pending"
     }
   ]
 }
