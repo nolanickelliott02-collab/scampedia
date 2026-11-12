@@ -1,6 +1,6 @@
 {
-  "version": 107,
-  "lastUpdated": "2026-11-12T03:48:57.307Z",
+  "version": 108,
+  "lastUpdated": "2026-11-12T22:34:53.774Z",
   "reports": [
     {
       "id": "1",
@@ -5309,6 +5309,43 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "139",
+      "slug": "hijacked-mass-texting-platform-trusted-short-code-scam",
+      "title": "Hijacked Mass-Texting Platform / Trusted Short Code Scam",
+      "summary": "Hackers breach a third-party mass-texting company and use its trusted short codes to blast scam texts that appear to come from legitimate senders like state government alert systems, charities, or advocacy groups.",
+      "category": "Phone Scam",
+      "firstReported": "2025-11-14",
+      "relatedScams": [
+        "Smishing Text Message Scam",
+        "Package Delivery Text Scam",
+        "Fake Bank Fraud Alert Scam"
+      ],
+      "safetyTips": [
+        "Never call a phone number provided in an unexpected text about a transaction; instead contact the organization or bank directly using a number from its official website",
+        "Don't assume a text is legitimate just because it comes from a number or short code you've received real messages from before, since that service itself can be hacked",
+        "If you get a suspicious alert claiming to be from a state agency or charity, verify through the organization's official site or customer service line before responding",
+        "Report suspicious texts to your carrier (forward to 7726/SPAM) and to the FTC or FCC"
+      ],
+      "datePublished": "2026-11-12T22:34:24.146Z",
+      "howItWorks": "Instead of spoofing a random number, scammers break into the backend of a legitimate bulk-SMS provider that governments, nonprofits, and organizations pay to send real alerts and newsletters. Because the texts go out from the same short code or number subscribers already trust and have previously received real messages from, spam filters and recipients' own skepticism are bypassed. In the documented case, hackers compromised mass-texting company Mobile Commons and used it to push messages to subscribers of New York state alerts, the charity Catholic Relief Services, and the political organizing group Fight for a Union, all referencing a transaction that never happened and urging the recipient to call a phone number for details, funneling victims into a follow-up phone scam.",
+      "redFlags": [
+        "A text about a 'transaction' or charge arrives from a number you've previously gotten legitimate government, charity, or organizational alerts from",
+        "The message urges you to call an unfamiliar phone number rather than log into an official account or app",
+        "You receive the same canned 'transaction' message from more than one organization you follow, suggesting a shared vendor was compromised",
+        "The text creates urgency around money or account activity you don't recognize at all"
+      ],
+      "realExamples": [
+        "Hackers compromised Mobile Commons, a mass-texting vendor used by New York state, sending scam texts to roughly 160,000 of the about 188,000 people who subscribe to state alerts, referencing a transaction that never occurred and directing them to call a phone number",
+        "The same breach sent nearly identical scam texts referencing nonexistent transactions to subscribers of the charity Catholic Relief Services and the political organizing group Fight for a Union, all urging recipients to call the same 888 number, which was later disconnected",
+        "The U.S. Short Code Registry, the industry nonprofit that maintains short codes, told messaging platforms the industry is under increased attack from hackers following the incident"
+      ],
+      "source": "NBC News, https://www.nbcnewyork.com/news/national-international/hackers-breach-new-york-mass-texting-service-scam/6418532/",
+      "spreadPlatforms": [
+        "Text Messages"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
