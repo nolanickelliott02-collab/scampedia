@@ -1,6 +1,6 @@
 {
-  "version": 105,
-  "lastUpdated": "2026-11-11T23:14:37.382Z",
+  "version": 107,
+  "lastUpdated": "2026-11-12T03:48:57.307Z",
   "reports": [
     {
       "id": "1",
@@ -5229,6 +5229,86 @@
         "Video Calls (Zoom)"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "137",
+      "slug": "fake-fifa-world-cup-website-spoofing-scam",
+      "title": "Fake FIFA World Cup Website Spoofing Scam",
+      "summary": "The FBI warns that cyber criminals are spoofing FIFA's official website with lookalike domains to steal personal data and sell fake 2026 World Cup tickets and hospitality packages.",
+      "category": "Shopping Scam",
+      "firstReported": "2026-05-27",
+      "relatedScams": [
+        "Fake Concert & Event Ticket Resale Scam",
+        "Fake Online Store Scam",
+        "SEO Poisoning Bank Account Takeover Scam"
+      ],
+      "safetyTips": [
+        "Verify that the URL of the FIFA website ends in .com and is correctly entered as www.fifa.com before entering any information",
+        "Navigate to subdomains such as plus.fifa.com directly from the official FIFA homepage rather than clicking links from ads, emails, or social media",
+        "Treat any FIFA-branded job posting, ticket sale, or hospitality offer found through a search engine or social ad with suspicion and confirm it on FIFA's own site first",
+        "Report suspected spoofed FIFA sites or losses to the FBI's Internet Crime Complaint Center at ic3.gov"
+      ],
+      "datePublished": "2026-11-12T03:46:23.003Z",
+      "howItWorks": "Ahead of the 2026 FIFA World Cup, threat actors are building large numbers of websites that mimic the real fifa.com site using typosquatted or lookalike domain names. The FBI/IC3 says these fake sites are used to collect victims' personal information, sell counterfeit World Cup tickets and hospitality products, and possibly facilitate other malicious activity, including fake job and HR recruitment pages. Victims searching for tickets, hospitality packages, or even FIFA job openings can land on one of these spoofed pages, enter payment or account details, and end up with stolen credentials, stolen money, or bogus tickets that won't get them into any match.",
+      "redFlags": [
+        "Web addresses that resemble fifa.com but contain extra words, hyphens, or altered spelling, such as fifa-ticket[.]live, wvvw-fifa[.]com, or fifa-com[.]services",
+        "Ticket, hospitality, job, or HR pages reached through a search ad or social media link instead of navigating directly from the official FIFA homepage",
+        "Pressure to buy tickets or hospitality packages quickly from a site you didn't reach by typing www.fifa.com yourself"
+      ],
+      "realExamples": [
+        "The FBI identified spoofed ticket-themed domains including fifa-ticket[.]live and quiniela-fifa-2026.pages[.]dev",
+        "The FBI identified fake FIFA job/HR-themed domains including jobs-fifa[.]com, fifa-hr[.]com, fifa-careerhub[.]com, and fifa-hiring[.]com",
+        "The FBI identified lookalike/typo domains such as wvvw-fifa[.]com, ww-fifa[.]com, fifa-com[.]com, and www.fifa-com[.]services"
+      ],
+      "source": "FBI/IC3 Public Service Announcement, \"Threat Actors Spoofing FIFA Websites in Advance of the 2026 World Cup,\" I-052726-PSA, https://www.ic3.gov/PSA/2026/PSA260527",
+      "spreadPlatforms": [
+        "Websites",
+        "Search Engine Ads",
+        "Social Media"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "138",
+      "slug": "f-1-visa-status-impersonation-scam-targeting-middle-eastern-students",
+      "title": "F-1 Visa Status Impersonation Scam Targeting Middle Eastern Students",
+      "summary": "Scammers impersonate U.S. or foreign immigration/government officials to tell foreign students on F-1 visas they are \"out of status\" and must pay or share personal information immediately. The FBI says the scheme has specifically targeted students from the UAE, Saudi Arabia, Qatar, and Jordan.",
+      "category": "Government Scam",
+      "firstReported": "2024-01-01",
+      "relatedScams": [
+        "USCIS / Immigration Scam",
+        "Health Insurer + Chinese Law Enforcement Impersonation Extortion Scam",
+        "Digital Arrest Scam"
+      ],
+      "safetyTips": [
+        "Do not provide personal or financial information to unsolicited callers claiming to be immigration or government officials",
+        "Verify you are speaking with a government official by hanging up and contacting the office through a third-party obtained number, then asking for the agent or department you were speaking with",
+        "Verify that any website visited is a secure or encrypted site, as government websites are, and watch for spoofed domains like 'gov.org' mimicking '.gov'",
+        "If you believe you are the target of this scam, gather all relevant documentation and contact your home country's embassy, the FBI, or the State Department's Bureau of Diplomatic Security",
+        "Report suspected incidents to the FBI's Internet Crime Complaint Center (IC3.gov)"
+      ],
+      "datePublished": "2026-11-12T03:48:28.635Z",
+      "howItWorks": "According to the FBI's Internet Crime Complaint Center (IC3), scammers contact foreign students lawfully studying in the United States, or who are in the process of coming to the United States, and impersonate government or immigration officials claiming the student is out of status for violations of F-1 student visa requirements or otherwise facing immigration issues. Victims are threatened with prosecution or deportation and asked to pay an unknown entity or bank account to process immigration paperwork, pay university registration fees, or pay a legal fee. Scammers often claim to be from DHS, HSI, or USCIS to add credibility, may spoof phone numbers of government agencies, foreign embassies, or universities, and may use accents or language matching the purported location of the callers.",
+      "redFlags": [
+        "Unsolicited call or message claiming your student visa is suddenly out of status",
+        "Caller claims to be a government or immigration official and demands immediate action or payment",
+        "Caller sometimes claims to represent a foreign country's government instead of the U.S.",
+        "Pressure to act quickly to avoid supposed arrest, deportation, or legal consequences",
+        "Request for personal, financial, or identification details over the phone"
+      ],
+      "realExamples": [
+        "The FBI reports the scheme has thus far targeted students from the United Arab Emirates (UAE), Saudi Arabia, Qatar, and Jordan.",
+        "In some instances, scammers vary the scheme by posing as government officials from foreign countries, including the UAE and Qatar, rather than U.S. officials.",
+        "The FBI notes that in 2024, government impersonation fraud schemes of this type cost the American public over $405 million in losses from over 17,000 complaints."
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), \"Impersonation Scheme Targeting Middle Eastern Students in the United States,\" Alert Number I-051325-PSA, https://www.ic3.gov/PSA/2025/PSA250513",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Text Messages"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
