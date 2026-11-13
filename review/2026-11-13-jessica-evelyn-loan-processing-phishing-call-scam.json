@@ -1,0 +1,62 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "141",
+    "slug": "jessica-evelyn-loan-processing-phishing-call-scam",
+    "title": "\"Jessica/Evelyn\" Loan Processing Phishing Call Scam",
+    "summary": "Scammers impersonating a loan processing or debt collection company bombard consumers with harassing robocalls and voicemails from fictitious employees named \"Jessica,\" \"Evelyn,\" or \"Nancy,\" claiming a loan is almost approved but needs \"final details\" like income and bank account info.",
+    "category": "Phone Scam",
+    "firstReported": "2025-09-15",
+    "relatedScams": [
+      "Advance Fee Loan Scam",
+      "Fake Loan Approval/Follow-Up Text Scam",
+      "Phantom Debt Collector Scam"
+    ],
+    "safetyTips": [
+      "Don't call back unknown numbers left in a voicemail; if you answer and suspect a scam, just hang up",
+      "Never share your Social Security number, bank account, or income details with someone who contacted you out of the blue",
+      "Verify independently by searching the company name plus 'scam' or checking BBB Scam Tracker before engaging",
+      "If you think you may actually have a pending loan application, contact the lender directly using a number from its official website or your paperwork, not a number the caller provided",
+      "Report the call to the BBB Scam Tracker and the FTC to help track the scam's spread"
+    ],
+    "datePublished": "2026-11-13T22:20:39.128Z",
+    "howItWorks": "Victims receive a call or urgent, pre-recorded-sounding voicemail from someone claiming to work for a loan processing team at a company such as \"Lending Union's west coast branch\" or \"National Associates\" — none of which are real businesses. The caller says they have been trying to reach the person about a loan application and just need to verify a few final details, such as income or an address, to complete the approval before it \"expires.\" In reality there is no loan application, and the goal is to pressure the victim into sharing a Social Security number, bank account details, or other personal information, which the scammers then use to steal money or commit identity theft. Victims report getting multiple calls per day from constantly changing caller ID numbers, sometimes for months at a time, with the script evolving to use a new fake employee name every few months.",
+    "redFlags": [
+      "Unsolicited call or voicemail about a loan application you don't remember submitting",
+      "Caller gives only a first name (Jessica, Evelyn, Nancy) and a vague company name like 'Lending Union' or 'National Associates' that can't be verified",
+      "Pressure to act by a specific deadline or the approval will 'expire'",
+      "Request to confirm sensitive details like income, address, Social Security number, or bank account information over the phone",
+      "Multiple daily calls from different, constantly changing phone numbers"
+    ],
+    "realExamples": [
+      "BBB received over 500 Scam Tracker reports about a caller named 'Jessica' and over 1,000 about a caller named 'Evelyn' from the fake 'Lending Union' in a short span, with reports later shifting to a caller named 'Nancy' from 'National Associates'",
+      "A Kirkwood, Missouri consumer reported receiving daily recorded voicemails from 'Jessica' for more than two months, with the caller ID number changing every time",
+      "A BBB Scam Tracker report from North Carolina described a voicemail saying 'I'm the one signed your file. Everything is nearly approved and ready to go. We just need to confirm... income related question and address verification'",
+      "A Connecticut resident told BBB 'they won't stop calling; they use different numbers every day'"
+    ],
+    "source": "Better Business Bureau, https://www.bbb.org/article/scams/31315-bbb-scam-alert-receive-a-call-from-a-loan-processing-company-it-could-be-a-scam",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Voicemail",
+      "Robocalls"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Fake Loan Approval/Follow-Up Text Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Phone Scam",
+    "suggestedAliases": [
+      "Jessica/Evelyn/Nancy Loan Scam",
+      "Advance Fee Loan Phishing Call Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.3,
+    "reasoning": "This is a phone/voicemail variant of the already-documented \"Fake Loan Approval/Follow-Up Text Scam\" and overlaps heavily with \"Advance Fee Loan Scam\" and \"Phantom Debt Collector Scam\" — same core mechanic of fake loan/debt collection calls pressuring victims for personal/financial info under urgency, just with different channel (calls/voicemails vs texts) and rotating fake employee names."
+  },
+  "queuedAt": "2026-11-13T22:20:45.087Z"
+}
