@@ -1,6 +1,6 @@
 {
-  "version": 108,
-  "lastUpdated": "2026-11-12T22:34:53.774Z",
+  "version": 109,
+  "lastUpdated": "2026-11-13T22:18:16.837Z",
   "reports": [
     {
       "id": "1",
@@ -5344,6 +5344,46 @@
       "source": "NBC News, https://www.nbcnewyork.com/news/national-international/hackers-breach-new-york-mass-texting-service-scam/6418532/",
       "spreadPlatforms": [
         "Text Messages"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "140",
+      "slug": "navy-federal-military-bank-parking-lot-phone-scam",
+      "title": "Navy Federal/Military Bank \"Parking Lot\" Phone Scam",
+      "summary": "Scammers approach people in parking lots near military banks like Navy Federal Credit Union or USAA, claim to be in an emergency, and ask to \"borrow\" the victim's phone — then secretly use the victim's own banking app to drain accounts or take out loans in their name.",
+      "category": "Phone Scam",
+      "firstReported": "2022-11-16",
+      "relatedScams": [
+        "Fake Bank Fraud Alert Scam",
+        "Jewelry Swap Distraction Theft Scam",
+        "Financial Institution Support Impersonation Account Takeover Scam"
+      ],
+      "safetyTips": [
+        "Never hand your unlocked phone or banking app access to a stranger, no matter how urgent or sympathetic their story sounds",
+        "If someone needs help, offer to make the transfer yourself from your own device while keeping physical control of it, or suggest they go inside the bank for assistance",
+        "Regularly check all linked accounts, loan activity, and disputes in your banking app for anything you didn't initiate",
+        "If you're targeted, report it immediately to your bank, local police, and your state attorney general, since banks may not automatically reverse transactions that appear self-initiated",
+        "Be extra cautious in bank parking lots, where scammers specifically wait for members leaving branches of banks like Navy Federal or USAA"
+      ],
+      "datePublished": "2026-11-13T22:18:00.685Z",
+      "howItWorks": "A stranger approaches a victim in or near a parking lot by a military-affiliated bank branch, often claiming to be in a tough spot and unable to access their own bank account, sometimes even bringing along a crying child for sympathy. They ask to borrow the victim's phone to send themselves a small amount of money through the bank's mobile app, framing it as a simple favor. While holding the phone, the scammer actually takes money from the victim's other linked accounts, submits unauthorized loan applications, files fraudulent disputes, or makes additional transfers and withdrawals the victim never sees happening. Because the transactions appear to have been initiated from the victim's own device and app session, the bank may treat them as authorized, making it harder for victims to get the fraudulent charges reversed.",
+      "redFlags": [
+        "A stranger near a bank branch parking lot asks to borrow your phone or use your banking app for an urgent personal favor",
+        "The request involves a sympathetic emergency story, sometimes with a child present to build trust quickly",
+        "They want physical control of your unlocked phone rather than just your help giving directions",
+        "The transaction happens quickly and you're encouraged not to look closely at what's being entered on the screen",
+        "You later discover loan applications, transfers, or withdrawals you never authorized"
+      ],
+      "realExamples": [
+        "The FTC issued a December 2025 consumer alert describing scammers who approach people outside military banks like USAA or Navy Federal claiming they can't access their accounts and need help, then take the victim's phone and drain money from other linked accounts.",
+        "Federal prosecutors in the Hampton Roads, Virginia region indicted multiple suspects in a 'parking lot scam' targeting Navy Federal Credit Union customers, with officials citing roughly 500 victim reports and over $2 million in losses, where offenders asked to borrow phones near branches and then made unauthorized loan applications, transfers, and withdrawals via the mobile app.",
+        "A Virginia Beach attorney secured a settlement for a victim of the scheme after representing members who had strangers ask to use their phone in a parking lot near a branch, resulting in unauthorized loans and withdrawals."
+      ],
+      "source": "WTKR, \"Navy Federal 'parking lot scam' leads to another federal indictment as victims fight for justice,\" https://www.wtkr.com/investigations/navy-federal-parking-lot-scam-leads-to-another-federal-indictment-as-victims-fight-for-justice",
+      "spreadPlatforms": [
+        "In-Person",
+        "Mobile Banking Apps"
       ],
       "isAIDiscovered": true
     }
