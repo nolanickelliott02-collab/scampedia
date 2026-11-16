@@ -1,6 +1,6 @@
 {
-  "version": 112,
-  "lastUpdated": "2026-11-15T21:26:54.842Z",
+  "version": 113,
+  "lastUpdated": "2026-11-16T02:43:40.406Z",
   "reports": [
     {
       "id": "1",
@@ -5508,6 +5508,42 @@
         "QR Codes"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "144",
+      "slug": "paid-social-security-card-replacement-website-scam",
+      "title": "Paid Social Security Card Replacement Website Scam",
+      "summary": "Scammers run lookalike websites that charge people a fee to apply for, replace, or correct a Social Security card — a service the Social Security Administration always provides for free.",
+      "category": "Government Scam",
+      "firstReported": "2026-03-10",
+      "relatedScams": [
+        "Fake Social Security Statement Email Scam"
+      ],
+      "safetyTips": [
+        "Only use SSA's official site at ssa.gov/number-card or create a personal my Social Security account at ssa.gov/myaccount to manage card requests",
+        "Remember that applying for a new, replacement, or corrected Social Security card is always free directly through SSA",
+        "Call SSA directly at 1-800-772-1213 if you're unsure whether a service or communication is legitimate",
+        "Report any site or message charging for free SSA services to the SSA Office of Inspector General at oig.ssa.gov/report"
+      ],
+      "datePublished": "2026-11-16T02:43:27.863Z",
+      "howItWorks": "Someone needing a new, replacement, or corrected Social Security card — or a card for a child or after a name change — searches online or responds to an ad and lands on one of many third-party websites offering to handle the paperwork for a fee. These sites mimic the look of an official government site but are not affiliated with SSA, and after collecting payment (and often sensitive data like Social Security number, birthdate, and credit card details) they may simply pocket the money, steal the victim's identity, or both. The SSA OIG explicitly reminds the public that whether applying for a first-time card, a replacement, or a card for a name change, the Social Security Administration will help you get your new or replacement Social Security card for FREE.",
+      "redFlags": [
+        "A website or ad charges a fee for a Social Security card, correction, replacement, or Social Security Statement",
+        "The site is not an official .gov domain or doesn't match ssa.gov/number-card",
+        "Requests for your Social Security number, birthdate, and credit card information together on a third-party form",
+        "Social media accounts or ads claiming to offer expedited or 'official' card services for payment"
+      ],
+      "realExamples": [
+        "[\"SSA OIG issued a public scam alert titled 'SSA Provides New and Replacement Social Security Cards for FREE!' warning that numerous online websites offer Social Security card-related services for a fee that users are not required to use.\", \"The alert cites Section 1140 of the Social Security Act, which specifically prohibits misleading SSA-related communications and places restrictions on the charging for services that SSA provides for free."
+      ],
+      "source": "Social Security Administration Office of the Inspector General, https://oig.ssa.gov/scam-alerts/2026-03-10-ssa-provides-new-and-replacement-social-security-cards-for-free/",
+      "spreadPlatforms": [
+        "Websites",
+        "Social Media",
+        "Online Ads"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
