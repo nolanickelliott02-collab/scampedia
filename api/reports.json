@@ -1,6 +1,6 @@
 {
-  "version": 113,
-  "lastUpdated": "2026-11-16T02:43:40.406Z",
+  "version": 114,
+  "lastUpdated": "2026-11-17T23:42:50.217Z",
   "reports": [
     {
       "id": "1",
@@ -5544,6 +5544,45 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "145",
+      "slug": "addiction-treatment-center-impersonation-lead-gen-scam",
+      "title": "Addiction Treatment Center Impersonation Lead-Gen Scam",
+      "summary": "Dishonest marketers buy Google search ads using the names of real, well-known substance use disorder treatment clinics, then route callers to their own unaffiliated call centers that pretend to be the clinic the person was searching for.",
+      "category": "Shopping Scam",
+      "firstReported": "2025-06-11",
+      "relatedScams": [
+        "SEO Poisoning Bank Account Takeover Scam",
+        "Search Parameter Injection Fake Support Number Scam"
+      ],
+      "safetyTips": [
+        "Know that top search results are often paid ads and may not be the official site or number for the clinic you want",
+        "Don't assume a phone number shown in search results is legitimate — verify it against the clinic's official website before calling",
+        "Look closely at any program or center you find, and ask directly which company you're speaking with before sharing money or personal/insurance information",
+        "Use FindTreatment.gov, a federal resource, to locate verified treatment options directly rather than relying solely on search ads",
+        "Report suspected impersonation or misleading treatment ads to the FTC at ReportFraud.ftc.gov"
+      ],
+      "datePublished": "2026-11-17T23:42:16.407Z",
+      "howItWorks": "Someone searching online for help with drug or alcohol addiction often sees paid ads at the top of results. Dishonest businesses buy ads using the names of real, reputable treatment centers but list their own phone number instead. When the person calls, they are connected not to the clinic they searched for but to a third-party call center whose telemarketers pretend to be a \"centralized admissions office\" or that specific clinic. The telemarketers gain the caller's trust, collect sensitive information like insurance details, and then redirect the person — who may be in crisis — to a treatment facility owned or affiliated with the scheme instead of the one they originally wanted, delaying real care and potentially routing patients based on profit rather than medical need.",
+      "redFlags": [
+        "The phone number in a search ad doesn't match the official website or publicly listed number of the clinic you searched for",
+        "The person who answers acts like a generic 'admissions hotline' or 'treatment helpline' rather than identifying a specific facility",
+        "You're pressured to give insurance information quickly before being told which facility will actually treat you",
+        "The ad or call never clearly discloses which company or facility is actually running it",
+        "You end up referred to a completely different treatment center than the one you searched for"
+      ],
+      "realExamples": [
+        "The FTC settled with Florida-based Evoke Wellness, which allegedly disseminated at least 68,500 misleading Google ads between 2021 and 2023 impersonating other treatment centers, generating at least 3,500 calls that were secretly routed to Evoke's own call center; Evoke agreed to pay $1.9 million.",
+        "The FTC sued Mercury Marketing, LLC and affiliated entities, including Behavioral Healthcare Group of America, Malibu Detox, and Aliya Health Group, alleging a scheme that spent over $18 million on Google Ads and generated nearly 29,000 calls in one ad run, with one spoofed-number campaign routing over 3,500 calls directly to Malibu Detox instead of the clinic consumers searched for."
+      ],
+      "source": "TCPAWorld, https://tcpaworld.com/2025/07/10/deceived-at-rock-bottom-ftc-sues-over-alleged-lead-gen-scam-using-impersonation-rule/; Healthcare Dive, https://www.healthcaredive.com/news/evoke-ftc-settlement-substance-use-google-deception/750407/",
+      "spreadPlatforms": [
+        "Google Search Ads",
+        "Phone Calls",
+        "Internet Search Results"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
