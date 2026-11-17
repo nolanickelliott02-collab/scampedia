@@ -1,0 +1,61 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "145",
+    "slug": "fake-microsoft-365-outage-restore-your-messages-phishing-scam",
+    "title": "Fake Microsoft 365 Outage \"Restore Your Messages\" Phishing Scam",
+    "summary": "Scammers exploited a real Microsoft 365/Exchange Online outage to send fake \"service health\" emails warning that held messages would be deleted unless recipients clicked a \"restore\" link, which actually led to a credential-stealing fake login page.",
+    "category": "Tech Scam",
+    "firstReported": "2026-11-13",
+    "relatedScams": [
+      "Phishing Email Scam",
+      "Tech Support Pop-Up Scam",
+      "Calendar Invite Phishing Scam"
+    ],
+    "safetyTips": [
+      "Never click action buttons in unexpected 'service outage' or 'account restore' emails; go directly to your organization's official status page or admin portal instead",
+      "Verify outage-related notices through Microsoft's official Service Health Dashboard rather than links in email",
+      "Check sender addresses and hover over links before clicking; legitimate Microsoft notifications never ask you to re-enter your password through an emailed link",
+      "If you receive an unsolicited IT-support call about an outage, hang up and contact your actual IT department or Microsoft support through a known number",
+      "Report suspicious outage-themed emails to your IT/security team and enable multi-factor authentication so a stolen password alone can't grant account access"
+    ],
+    "datePublished": "2026-11-17T00:37:43.149Z",
+    "howItWorks": "When Microsoft 365 suffered a real, widely reported service disruption affecting Exchange Online and other cloud services on November 12, 2026, criminals immediately used the outage as a ready-made excuse to send convincing phishing emails. The messages claimed that a handful of emails had been \"held\" during the outage and would be permanently deleted within 24 hours unless the recipient clicked a \"RESTORE MESSAGES\" button. The emails used subject lines following a pattern like \"Outage – [six-character code]\" and sender display names combining the target organization's name with \"Outage Notification\" or \"Service Health\" to look like an internal IT alert. Clicking the button took victims to a fake Microsoft sign-in page designed to harvest their username and password. Other variants in the same campaign told users their \"inactive accounts\" were about to be deactivated and needed to be \"verified,\" while related lures used fake IT support phone calls and payment-themed messages riding the same outage story to pressure people into handing over credentials or money.",
+    "redFlags": [
+      "Urgent 24-hour deadline claiming your emails will be permanently deleted unless you click a button",
+      "Sender name combines your company name with generic terms like 'Outage Notification' or 'Service Health' rather than a real Microsoft domain",
+      "Email arrives suspiciously fast right after a real, newsworthy outage and references the incident to seem credible",
+      "Link leads to a login page asking you to re-enter your Microsoft/Outlook password to 'restore' or 'verify' access",
+      "Unsolicited phone call from 'IT support' referencing the same outage and asking you to log in or share credentials"
+    ],
+    "realExamples": [
+      "Microsoft Threat Intelligence publicly warned on November 14, 2026 that it had observed an active phishing campaign exploiting the November 12 Microsoft 365 service disruption, with emails referencing the real Exchange Online incident ID EX1550543",
+      "Security firm Field Effect detected an outage-themed credential phishing email on November 13, 2026 featuring a 'RESTORE MESSAGES' button that led to a credential-harvesting page, and noted related fake IT-support calls and payment scams using the same outage theme",
+      "A separate email variant in the same campaign claimed recipients' 'inactive accounts' were being deactivated and asked them to click a button to verify their account"
+    ],
+    "source": "Cybersecurity News, https://cybersecuritynews.com/active-password-stealing-attack-microsoft-365/ ; Field Effect, https://fieldeffect.com/blog/microsoft-365-outage-theme",
+    "spreadPlatforms": [
+      "Email",
+      "Phone Calls",
+      "Text Messages"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Phishing Email Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "high",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Tech Scam",
+    "suggestedAliases": [
+      "Outage-Themed Credential Phishing Scam",
+      "Microsoft 365 Service Health Phishing"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.3,
+    "reasoning": "This is a specific, timely instance of generic email phishing (impersonating a service outage notice to steal Microsoft credentials), which is already covered by the existing 'Phishing Email Scam' entry; the core mechanism—fake urgent notification leading to a credential-harvesting login page—is the same pattern, just using a real outage as the lure rather than a novel scam structure."
+  },
+  "queuedAt": "2026-11-17T00:37:48.778Z"
+}
