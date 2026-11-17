@@ -1,15 +1,18 @@
 'use strict';
 
 // Which entries a push to main just made live: in api/reports.json now but
-// not at the commit before the push. Prints GitHub Actions outputs (count,
-// and the newest entry's title, summary and slug) for
-// .github/workflows/notify-new-entries.yml.
+// not at the commit before the push. Prints GitHub Actions outputs for
+// .github/workflows/notify-new-entries.yml: count, the weekly digest message
+// (lib/digest.js), and the page the push opens: the batch's
+// "This week's new scams" page, or the lead entry's page if that wasn't built.
 //
 //   node scripts/newly-published.js <sha before the push>
 
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+
+const { digestMessage, digestPagePath, rankForOlderAdults } = require('./lib/digest');
 
 const REPORTS = 'api/reports.json';
 
@@ -43,9 +46,12 @@ function main() {
   const added = newlyPublished(before, after);
   console.log(`count=${added.length}`);
   if (added.length === 0) return;
-  console.log(`title=${oneLine(added[0].title)}`);
-  console.log(`summary=${oneLine(added[0].summary)}`);
-  console.log(`slug=${oneLine(added[0].slug)}`);
+  const lead = rankForOlderAdults(added)[0];
+  const digest = digestPagePath(added);
+  const digestBuilt = fs.existsSync(path.join(__dirname, '..', 'scams', `${digest}.html`));
+  console.log(`message=${oneLine(digestMessage(added))}`);
+  console.log(`slug=${oneLine(lead.slug)}`);
+  console.log(`page=${oneLine(digestBuilt ? digest : lead.slug)}`);
 }
 
 if (require.main === module) main();
