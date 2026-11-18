@@ -1,6 +1,6 @@
 {
-  "version": 114,
-  "lastUpdated": "2026-11-17T23:42:50.217Z",
+  "version": 115,
+  "lastUpdated": "2026-11-18T04:13:24.584Z",
   "reports": [
     {
       "id": "1",
@@ -5583,6 +5583,47 @@
         "Internet Search Results"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "146",
+      "slug": "counterfeit-postage-label-stamp-scam",
+      "title": "Counterfeit Postage Label & Stamp Scam",
+      "summary": "Scammers sell fake USPS shipping labels and stamps online at steep, flat-rate discounts, leaving buyers with seized, delayed, or undelivered packages and facing possible legal consequences.",
+      "category": "Delivery Scam",
+      "firstReported": "2023-02-15",
+      "relatedScams": [
+        "Fake Online Store Scam",
+        "Parcel Mule / \"Parcel Expert\" Reshipping Job Scam",
+        "Brushing Scam with QR Code Twist"
+      ],
+      "safetyTips": [
+        "Buy postage only directly from USPS.com or an Approved Postal Provider",
+        "Be suspicious of any stamps or shipping labels sold at steep, flat-rate discounts online or via social media",
+        "If a package you ordered isn't delivered because of counterfeit postage, report the seller to the Postal Inspection Service rather than only seeking a refund",
+        "Use the Postal Inspection Service's Counterfeit Postage Reporting System (CPRS) to report suspected counterfeit stamps, labels, or sellers"
+      ],
+      "datePublished": "2026-11-18T04:12:59.799Z",
+      "howItWorks": "Fraudsters run websites, social media storefronts, and pop-up ads offering USPS postage stamps or printable shipping labels at prices far below face value — sometimes a single flat fee no matter how much a package weighs or where it's going. Customers, often online sellers trying to cut shipping costs, buy and use these labels or stamps to mail packages, but the postage was never actually paid to USPS; it's a counterfeit reproduction or a fraudulently generated label. USPS's detection technology flags the fake postage, and under current rules items mailed with counterfeit postage are treated as abandoned and can be opened and disposed of at the Postal Service's discretion, while buyers who knowingly use fake postage can face action from the U.S. Postal Inspection Service.",
+      "redFlags": [
+        "Postage or shipping labels offered at one flat low price regardless of a package's weight, size, or destination",
+        "Stamps or labels advertised at a large discount (commonly 20-50% off face value) through social media, pop-up ads, or third-party e-commerce sites rather than usps.com",
+        "Seller found through an unsolicited online ad or storefront instead of USPS or an Approved Postal Provider",
+        "Being offered a job to reship packages using someone else's prepaid postage labels"
+      ],
+      "realExamples": [
+        "U.S. postal inspectors shut down LabelsBank.com and charged a Pakistani national, Faheem Akram, after the site allegedly sold more than 5.1 million counterfeit USPS postage labels to over 5,000 customers at a fixed $2 per label regardless of weight, size, or destination, causing more than $126 million in losses",
+        "USPS filed a Federal Register notice in February 2023 after finding a surge in counterfeit postage in the mail stream, warning that consumers who buy fake postage from third-party vendors must seek recourse from that vendor, not USPS",
+        "The Postal Inspection Service seized $2.5 million in counterfeit stamps shipped from China during interdictions conducted with Customs and Border Protection in New York and Los Angeles"
+      ],
+      "source": "U.S. Postal Inspection Service, https://www.uspis.gov/news/scam-article/counterfeit-postage and https://www.uspis.gov/u-s-postal-inspectors-shut-down-website-selling-millions-of-counterfeit-postage-labels",
+      "spreadPlatforms": [
+        "Websites",
+        "Social Media",
+        "Third-Party E-commerce Sites",
+        "Pop-up Ads"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
