@@ -1,0 +1,63 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "136",
+    "slug": "social-security-cola-activation-fee-scam",
+    "title": "Social Security COLA \"Activation Fee\" Scam",
+    "summary": "Scammers exploit the SSA's annual cost-of-living adjustment (COLA) announcement, falsely telling beneficiaries they must pay a fee, hand over personal/financial details, or \"activate\" their benefit increase online — even though the COLA is automatic and requires no action.",
+    "category": "Government Scam",
+    "firstReported": "2021-11-01",
+    "relatedScams": [
+      "Fake Social Security Statement Email Scam",
+      "Prize-Linked Social Security Direct Deposit Redirect Scam",
+      "SSA Imposter Scam Using Real Employee Names and Fake Badges"
+    ],
+    "safetyTips": [
+      "Remember the COLA is automatic — you never need to register, apply, or pay anything to receive it",
+      "Manage your benefits and monitor for unusual activity through your own my Social Security account at ssa.gov/myaccount instead of links sent to you",
+      "Never pay a fee or share personal/financial information in response to an unexpected contact about a benefit increase",
+      "Hang up on or ignore unsolicited contacts and call SSA directly using a number you look up yourself",
+      "Report suspected scams at ssa.gov/scam or the SSA OIG Fraud Hotline at 1-800-269-0271 (Mon-Fri, 10am-2pm ET)"
+    ],
+    "datePublished": "2026-11-10T04:37:28.286Z",
+    "howItWorks": "Each year when the Social Security Administration announces its automatic COLA, scammers piggyback on the news cycle to target beneficiaries. Posing as SSA or other government officials, they contact people by phone, text, email, social media, or letter and tell them they need to pay a fee, change their direct deposit information, or share personal or financial details in order to receive the increase. Some send links to websites designed to look official or instruct victims to download software, and some use the names or job titles of real government employees and send fake-but-convincing documents, all to make the scam feel legitimate. In reality, beneficiaries never need to register, apply, or take any action — the COLA is applied automatically to existing benefits.",
+    "redFlags": [
+      "Any unsolicited call, text, email, or letter claiming you must act to receive your Social Security COLA increase",
+      "A request to pay a fee or \"processing charge\" to activate or unlock a benefit increase",
+      "Instructions to change your direct deposit information to receive the adjustment",
+      "Links to websites that mimic the real SSA site or prompts to download software",
+      "Use of a real-sounding government employee name or title paired with a request for money or personal data"
+    ],
+    "realExamples": [
+      "SSA OIG issued an alert on October 21, 2026, after the agency announced a 3.6 percent 2027 COLA for 76 million Americans, warning that scammers were already exploiting the news by telling beneficiaries to pay fees, change direct deposit details, or share personal/financial information to \"activate\" the increase",
+      "The alert notes scammers may use the names or job titles of real government employees and send fake documents that look legitimate to make the scheme more convincing"
+    ],
+    "source": "SSA Office of the Inspector General, https://oig.ssa.gov/scam-alerts/2026-10-21-social-security-2027-cola-announced-beneficiaries-are-not-the-only-ones-looking-forward-to-the-cola/",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Text Messages",
+      "Email",
+      "Social Media",
+      "Postal Mail"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "SSA Imposter Scam Using Real Employee Names and Fake Badges",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "COLA Activation Scam",
+      "Social Security COLA Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.55,
+    "reasoning": "This is a seasonal/topical variant of the existing SSA impersonation scam category (scammers posing as SSA, using real employee names/fake documents, phishing links) already covered by \"SSA Imposter Scam Using Real Employee Names and Fake Badges\" and overlapping with \"Fake Social Security Statement Email Scam\" and \"Social Security Number Suspended Scam\" — the core mechanism (impersonate SSA, demand fee/info to trigger a benefit action) is the same, just pegged to the annual COLA news cycle rather than a distinct new method."
+  },
+  "queuedAt": "2026-11-10T04:37:33.872Z"
+}

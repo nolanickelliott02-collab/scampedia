@@ -1,0 +1,57 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "136",
+    "slug": "holiday-themed-santa-tracker-app-scam",
+    "title": "Holiday-Themed \"Santa Tracker\" App Scam",
+    "summary": "Dozens of holiday-themed apps that let kids \"video chat\" with Santa or track his sleigh are actually designed to harvest personal data, push malware, or trap families in costly in-app purchases.",
+    "category": "Tech Scam",
+    "firstReported": "2025-11-26",
+    "relatedScams": [
+      "Fake VPN App Malware Scam",
+      "Tech Support Pop-Up Scam"
+    ],
+    "safetyTips": [
+      "Review an app's privacy policy before downloading, and skip any app that doesn't have one",
+      "Turn off location services and limit camera/microphone/contact permissions for holiday-themed apps",
+      "Stick to apps from well-known, reputable developers and check reviews before letting kids use them",
+      "Monitor children's device activity and disable in-app purchases to avoid surprise charges"
+    ],
+    "datePublished": "2026-11-10T00:37:34.489Z",
+    "howItWorks": "Scammers and shady developers publish free, holiday-branded apps on official app stores that promise fun features like live video calls with Santa, sleigh-tracking maps, reindeer-feeding games, or digital Christmas/holiday wish lists. Because the apps look festive and are marketed to children, parents often download them without scrutinizing permissions or privacy policies. Once installed, some of these apps collect far more personal and location data than needed, serve disguised ads that solicit payment, hide expensive in-app purchases behind a \"free\" download, or in worse cases plant malware on the device, all while the family thinks they are simply tracking Santa's journey.",
+    "redFlags": [
+      "A \"free\" holiday app with no visible or hard-to-find privacy policy",
+      "App requests access to location, contacts, camera, or microphone far beyond what a Santa-tracking or video-chat feature should need",
+      "In-app purchases or ads that pressure users (including children) to pay for extra features",
+      "Generic, bulk-published Santa/holiday apps from unfamiliar developers flooding app stores each year"
+    ],
+    "realExamples": [
+      "BBB included 'holiday apps' as one of its 12 scams of the holidays for 2025, warning that apps letting children video chat with Santa, watch him feed reindeer, or track his sleigh on Christmas Eve may collect personal information or contain malware.",
+      "A BBB operations manager said these apps are designed to grab kids' attention without necessarily having their safety in mind, and may track more personal information from children's devices than advertised.",
+      "Local news coverage noted free versions of these apps can contain ads soliciting money or allow a virus to be put on the device."
+    ],
+    "source": "KLFY / Better Business Bureau, https://www.klfy.com/community/eye-on-scams/eye-on-scams-scam-santa-apps-stealing-data/",
+    "spreadPlatforms": [
+      "Mobile App Stores (Apple App Store, Google Play)",
+      "Social Media"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "new",
+    "severity": "low",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Tech Scam",
+    "suggestedAliases": [
+      "Fake Santa App Scam",
+      "Santa Video Call App Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.55,
+    "reasoning": "This describes a specific, child-targeted, seasonal app category (Santa trackers/video calls) warning about excessive data collection, hidden costs, and possible malware, which is distinct from existing general app/malware entries like Fake VPN App Malware Scam or Fake Roblox Tool Scam. However, the source itself is thin on concrete scam mechanics or documented losses—mostly general BBB caution about privacy policies rather than a confirmed scam pattern with evidence of harm."
+  },
+  "queuedAt": "2026-11-10T00:37:42.232Z"
+}

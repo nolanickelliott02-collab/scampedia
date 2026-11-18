@@ -1,0 +1,61 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "137",
+    "slug": "fake-airline-customer-service-loyalty-points-scam",
+    "title": "Fake Airline Customer Service Loyalty Points Scam",
+    "summary": "Scammers plant fake airline \"customer service\" phone numbers high in search results, then use the booking details travelers hand over on the call to cancel real flights, charge bogus upgrade fees, and drain frequent-flyer loyalty points.",
+    "category": "Phone Scam",
+    "firstReported": "2025-12-01",
+    "relatedScams": [
+      "Fake Flight Cancellation Text Scam",
+      "Search Parameter Injection Fake Support Number Scam",
+      "Tech Support Pop-Up Scam"
+    ],
+    "safetyTips": [
+      "Only contact airlines through the phone number listed in their official app or the airline's own website, never a number found via a general search engine query",
+      "Never read your record locator or frequent-flyer account details to an inbound or unverified caller, even if they already seem to know some of your itinerary",
+      "Pay for any airline add-ons like upgrades or fees only through the airline's official site, app, or verified payment portal, not by reading a card number over the phone to a search-result number",
+      "Regularly check your frequent-flyer/loyalty account activity for unauthorized redemptions and enable account alerts or two-factor authentication if the airline offers it",
+      "If you suspect you reached a fake support line, report the number to the real airline and to the search engine or platform where you found it"
+    ],
+    "datePublished": "2026-11-11T23:16:50.100Z",
+    "howItWorks": "Instead of hacking anything, scammers simply buy ads or flood search engines with fake websites listing phone numbers that look like an airline's official customer service line. A traveler searching for help — especially during stressful periods like flight delays or the recent government shutdown — calls the number and, believing they've reached the real airline, reads off their name and six-character record locator (confirmation code) to \"verify\" their itinerary. That's all the scammer needs: with the name and record locator, they can pull up the real reservation in the airline's own systems, confirm details convincingly, then charge the victim's card for a fake \"seat upgrade,\" and in some cases cancel the real flight outright. Separately, the same stolen personal and account details are used to log into victims' frequent-flyer loyalty accounts and drain tens or hundreds of thousands of miles/points, which get spent on flights or transferred out of the country before the victim notices.",
+    "redFlags": [
+      "A customer service number found through a general web search or ad rather than the airline's official app or airline.com",
+      "Being asked to read out your record locator/confirmation code and last name to someone who called you or whom you reached via an unverified number",
+      "A phone agent offering to sell you a paid seat upgrade on the spot during what should be a routine status check",
+      "No confirmation email arrives after paying over the phone",
+      "Sudden, unexplained redemption of your frequent-flyer miles or points, sometimes for travel in other countries"
+    ],
+    "realExamples": [
+      "A traveler called a number she found online during the 2025 federal government shutdown to check her flight status; after she gave her name and record locator the scammer confirmed her itinerary, charged her for a fake upgrade, and later canceled her flight entirely when no confirmation email arrived.",
+      "A travel expert with The Points Guy noted that a record locator plus the passenger's last name is enough for scammers operating fake airline support lines to access extensive account information, and that airlines struggle to keep these fake listings off search results because new ones reappear as fast as old ones are taken down.",
+      "A victim identified as Denise Freiji discovered her Southwest Rapid Rewards points had been spent by someone else in a single day, with large point redemptions traced to bookings in Greece, Belgium, and Brussels."
+    ],
+    "source": "ABC15 Arizona (KNXV), https://www.abc15.com/life/travel/fake-airline-customer-service-scams-are-canceling-real-flights-and-draining-millions-in-loyalty-points",
+    "spreadPlatforms": [
+      "Phone",
+      "Search Engines",
+      "Fake Websites"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Search Parameter Injection Fake Support Number Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Phone Scam",
+    "suggestedAliases": [
+      "Fake Airline Support Number Scam",
+      "Loyalty Points Phishing via Fake Customer Service"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.4,
+    "reasoning": "This closely resembles the existing 'Search Parameter Injection Fake Support Number Scam' and 'Financial Institution Support Impersonation Account Takeover Scam' patterns — scammers seed fake customer-service numbers high in search results, victims call believing it's official, and hand over verification details used for account takeover. The specific airline/loyalty-points angle is a narrower application of the same fake-support-number SEO scam pattern already in the database rather than a fundamentally new scam mechanism."
+  },
+  "queuedAt": "2026-11-11T23:16:56.173Z"
+}
