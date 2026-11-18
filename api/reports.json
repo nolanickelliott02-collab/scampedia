@@ -1,6 +1,6 @@
 {
-  "version": 115,
-  "lastUpdated": "2026-11-18T04:13:24.584Z",
+  "version": 116,
+  "lastUpdated": "2026-11-18T23:21:31.864Z",
   "reports": [
     {
       "id": "1",
@@ -5624,6 +5624,44 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "147",
+      "slug": "fake-mortgage-home-warranty-renewal-mailer-scam",
+      "title": "Fake Mortgage \"Home Warranty Renewal\" Mailer Scam",
+      "summary": "Homeowners receive official-looking mail disguised as an urgent notice from their mortgage lender, warning that a \"home warranty\" is about to lapse and must be renewed immediately for a fee — but the mailer is actually a deceptive solicitation unaffiliated with the recipient's actual mortgage company.",
+      "category": "Shopping Scam",
+      "firstReported": "2026-11-06",
+      "relatedScams": [
+        "Home Title Lock Insurance Scam",
+        "Fake Invoice & Subscription Renewal Scam",
+        "Foreclosure Relief / Mortgage Rescue Scam"
+      ],
+      "safetyTips": [
+        "Don't use the phone number printed on the mailer; call your mortgage lender directly using the number on your official statement or their verified website",
+        "Remember that mortgages do not require a home warranty, so don't let scare tactics about lapsed coverage rush you into paying",
+        "Read the fine print on any mailer claiming to be from your lender before responding or calling",
+        "If you do want a home warranty, independently research and compare several companies and check their rating on BBB.org before buying",
+        "Report suspicious mailers to BBB Scam Tracker and to the FTC at ReportFraud.ftc.gov"
+      ],
+      "datePublished": "2026-11-18T23:21:00.649Z",
+      "howItWorks": "Scammers and deceptive marketers send mass mailers designed to mimic official mortgage lender correspondence. The letter claims to be from a \"Home Warranty Dept.\" or \"Home Warranty Division,\" is often stamped \"Final Notice,\" and warns that coverage must be renewed right away or the homeowner will lose protection. Some versions are crafted to look like an actual check, complete with tear-off edges and a \"Renewal Fee Voucher\" for a set amount (commonly around $199), designed to make the recipient believe they've already been approved for something tied to their mortgage. Buried in fine print is a disclaimer that the company is not affiliated with the recipient's actual mortgage lender. Homeowners who call the number on the letter are pitched a home warranty service using high-pressure, misleading sales tactics rather than being connected to their real lender, and may hand over payment and personal information for a product they don't need or didn't ask about.",
+      "redFlags": [
+        "Letter uses urgent language like \"Final Notice,\" \"Renewal Required,\" or \"Time-Sensitive\"",
+        "The mailer is designed to resemble a check or invoice, with tear-off edges and a \"Renewal Fee Voucher\"",
+        "Fine print disclaims any affiliation with your actual mortgage lender",
+        "A phone number is listed that doesn't match the one on your real mortgage statement",
+        "The letter implies your mortgage or home warranty coverage is at risk if you don't act immediately"
+      ],
+      "realExamples": [
+        "A BBB Scam Tracker reporter described receiving a mailer made to look like a check with tear-away sides containing a \"Renewal Fee Voucher\" for $199, which was actually a home warranty sales pitch",
+        "One consumer reported that their grandmother received a 'Final Notice' letter resembling a check for $199 and called the listed number, where a sales rep pitched her a $234 warranty plan, took her debit card information, and charged her account"
+      ],
+      "source": "Better Business Bureau, https://www.bbb.org/article/scams/28701-bbb-scam-alert-this-solicitation-looks-like-a-notice-about-your-mortgage-heres-how-to-spot-it",
+      "spreadPlatforms": [
+        "Postal Mail"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
