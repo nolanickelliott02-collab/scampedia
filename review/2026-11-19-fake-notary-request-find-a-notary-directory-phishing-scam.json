@@ -1,0 +1,62 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "148",
+    "slug": "fake-notary-request-find-a-notary-directory-phishing-scam",
+    "title": "Fake Notary Request / \"Find a Notary\" Directory Phishing Scam",
+    "summary": "Scammers are mining public notary directories like FindaNotary.com to send notaries public fake notarization \"job\" requests by text, email, and social media, then pushing them onto a video call or phishing link before stealing credentials, money, or personal data.",
+    "category": "Employment Scam",
+    "firstReported": "2023-05-15",
+    "relatedScams": [
+      "Mystery Shopper Check Scam",
+      "Fake Process Server Phishing Call Scam"
+    ],
+    "safetyTips": [
+      "Never click links sent in an unsolicited notarization inquiry; verify the requester independently by phone before agreeing to anything",
+      "Decline any demand to hold a video call before paperwork details are shared — legitimate clients can describe their needs by phone or email first",
+      "Never deposit and then refund an overpayment on a signing job; the original payment can bounce weeks later, leaving you liable",
+      "Report suspicious directory-sourced inquiries to the National Notary Association and forward smishing texts to 7726 (SPAM)",
+      "Use an EIN instead of your Social Security number on business forms like W-9s tied to notary or signing work to limit identity-theft exposure"
+    ],
+    "datePublished": "2026-11-19T23:26:02.395Z",
+    "howItWorks": "Scammers pull a notary's name, phone number, and email from a public notary-lookup directory and send an unsolicited text or email posing as a signer who needs a document notarized (common pretexts include loan modifications, vehicle titles/bills of sale, or signature affidavits). The messages are often vague about the document or location, and name-drop the directory, telling the notary the client \"found\" them there. Once the notary responds and offers to help, the scammer either (1) insists on a Zoom, Teams, or Google Meet call \"to feel safe\" before confirming any appointment, using the call or an accompanying link to try to compromise the notary's email, passwords, banking logins, or device, or (2) proceeds with a fake signing assignment and sends a check or electronic payment for more than the agreed fee, then asks the notary to wire or otherwise refund the \"overpayment\" before the original payment is later found to be fraudulent. The volume of fraudulent inquiries through the directory's own contact form became so high that the National Notary Association (NNA) had to temporarily disable the public messaging feature on FindaNotary.com while it investigated.",
+    "redFlags": [
+      "Unsolicited notarization request that explicitly says the sender \"found\" the notary on a public notary directory, with vague or generic document details",
+      "Insistence on a Zoom/Teams/Meet video call before any appointment specifics (address, exact documents, fee) are confirmed",
+      "A request to click a link to \"verify,\" \"schedule,\" or \"dispute\" something instead of simply booking an appointment directly",
+      "A payment or check sent for more than the quoted notarization fee, paired with a request to refund the difference",
+      "Generic, oddly phrased texts/emails that don't answer basic follow-up questions like exact address or document type"
+    ],
+    "realExamples": [
+      "An NNA member reported: \"I just received an email stating that they found me on Find a Notary\" before being asked to notarize a loan modification",
+      "Notaries described the pattern: \"the text and email look legit, then they ask you to do a zoom before scheduling\"",
+      "A notary on the NNA site wrote that after joining FindaNotary.com, \"every single lead I've received has been a scam\" and \"they all want me to get on zoom\"",
+      "The NNA confirmed it had \"temporarily disabled the messaging feature while we review the activity\" after misuse of the directory's public inquiry tool"
+    ],
+    "source": "National Notary Association, https://www.nationalnotary.org/notary-bulletin/blog/2026/07/dont-take-the-bait-the-email-text-and-social-media-scams-targeting-notaries-right-now",
+    "spreadPlatforms": [
+      "Text Messages",
+      "Email",
+      "Social Media",
+      "Video Calls (Zoom/Teams/Google Meet)"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "other",
+    "suggestedCategory": "Employment Scam",
+    "suggestedAliases": [
+      "Fake Signing Assignment Scam",
+      "Notary Overpayment/Refund Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.45,
+    "reasoning": "The candidate entry's specific claims about scammers mining FindaNotary.com and the NNA disabling its messaging feature do not actually appear in the source text, which instead discusses general scam patterns (fake signing assignment overpayment, closing wire fraud, callback phishing, smishing, social media scams) affecting notaries broadly without mentioning a specific directory or NNA disabling a feature. The underlying 'fake signing assignment with overpayment/refund request' pattern is described in the source and overlaps conceptually with existing Fake Check Scam Targeting Childcare Providers and Mystery Shopper Check Scam entries, making it a known-variant (overpayment/refund scam) applied to a new target group (notaries) rather than a wholly new mechanism, but the directory-mining/video-call-compromise angle as framed is not substantiated by the source text."
+  },
+  "queuedAt": "2026-11-19T23:26:11.757Z"
+}
