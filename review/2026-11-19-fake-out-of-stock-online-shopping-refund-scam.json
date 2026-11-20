@@ -1,0 +1,59 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "148",
+    "slug": "fake-out-of-stock-online-shopping-refund-scam",
+    "title": "Fake \"Out of Stock\" Online Shopping Refund Scam",
+    "summary": "Scammers lure shoppers with social media ads for unfamiliar online stores, take payment for an item, then claim it's \"out of stock\" and promise a refund that never actually arrives.",
+    "category": "Shopping Scam",
+    "firstReported": "2022-12-20",
+    "relatedScams": [
+      "Fake Online Store Scam",
+      "Fake Retail Coupon / Promo Code Scam",
+      "Online Marketplace Buyer Scam"
+    ],
+    "safetyTips": [
+      "Research any unfamiliar online retailer on BBB.org before purchasing",
+      "Search the business name plus the word 'scam' and check outside reviews before you buy",
+      "Pay with a credit card rather than a debit card or bank transfer so you can dispute the charge if it goes wrong",
+      "Make sure the checkout site is secure and be extra cautious with stores you discovered only through a social media ad",
+      "If you spot this scam, report it to BBB Scam Tracker even if you didn't lose money"
+    ],
+    "datePublished": "2026-11-19T23:27:03.560Z",
+    "howItWorks": "A consumer sees an enticing ad—often on Instagram or Facebook, sometimes claiming a small \"mother/daughter\" business is going out of business and liquidating stock—for an unfamiliar online store. They click through, find the product, and check out with a credit or debit card. Shortly after the card is charged, the shopper receives an email claiming the item is actually out of stock and that they'll be refunded. The refund never comes, follow-up emails bounce or go unanswered, and the seller becomes impossible to reach. In some reported cases the item eventually ships but arrives lost or never shows up at all, while in most cases no product or money is ever delivered.",
+    "redFlags": [
+      "An appealing deal advertised through a social media ad from a business you've never heard of",
+      "You're charged immediately, then soon after get an email saying the item is 'out of stock' and a refund is coming",
+      "Attempts to contact the seller result in bounced/undeliverable emails or no response at all",
+      "Ads use urgency hooks like a store 'going out of business' or 'liquidating stock' to push a fast purchase"
+    ],
+    "realExamples": [
+      "A BBB Scam Tracker report described an Instagram ad claiming a mother/daughter business was going out of business and liquidating stock, after which the purchased item was never properly delivered",
+      "A shopper told BBB Scam Tracker they ordered an item advertised on social media, waited two months with poor contact from the seller, were told it was 'out of stock,' and when it finally shipped the package was lost",
+      "An earlier shopper reported being charged $15.98 for an order, never receiving a refund, and having their follow-up emails continuously fail to deliver, leading them to dispute the charge with their bank"
+    ],
+    "source": "Better Business Bureau, https://www.bbb.org/article/scams/27957-bbb-scam-alert-how-to-spot-an-out-of-stock-scam-before-losing-money",
+    "spreadPlatforms": [
+      "Social Media Ads (Instagram, Facebook)",
+      "Online Shopping Websites",
+      "Email"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Fake Online Store Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "other",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Out-of-Stock Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.78,
+    "reasoning": "This is essentially the same pattern as the existing \"Fake Online Store Scam\" (unfamiliar online retailer, ad-driven lure, no real product/refund delivered), with the specific twist being a fake 'out of stock' refund excuse rather than a broader generic fake store description. It's a known-variant rather than a genuinely new category, though the BBB source is credible as a consumer protection org (not a government agency)."
+  },
+  "queuedAt": "2026-11-19T23:27:08.742Z"
+}
