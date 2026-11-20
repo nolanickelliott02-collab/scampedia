@@ -1,6 +1,6 @@
 {
-  "version": 117,
-  "lastUpdated": "2026-11-20T04:02:44.087Z",
+  "version": 118,
+  "lastUpdated": "2026-11-20T22:58:07.678Z",
   "reports": [
     {
       "id": "1",
@@ -5703,6 +5703,49 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "149",
+      "slug": "ai-voice-cloned-real-estate-agent-rental-scam",
+      "title": "AI Voice-Cloned Real Estate Agent Rental Scam",
+      "summary": "Scammers steal real estate agents' real listing videos, photos, names, and license numbers from TikTok and Instagram, then use AI-cloned versions of the agents' own voices (copied from their public videos) to con apartment hunters into paying fake \"refundable\" application or deposit fees.",
+      "category": "Rental Scam",
+      "firstReported": "2025-09-25",
+      "relatedScams": [
+        "Fake Rental Listing Scam",
+        "AI Voice Clone Scam",
+        "Video Call Deepfake Extortion Scam"
+      ],
+      "safetyTips": [
+        "Independently verify an agent's identity and phone number through the brokerage's official website or main office line, never through contact info on the listing or social post itself",
+        "Never pay any application, holding, or deposit fee before physically touring the unit or verifying the listing directly with the property manager or management company",
+        "Reverse-search listing photos/videos online to see if the same content is posted under multiple names, prices, or profiles",
+        "Be skeptical of unusually cheap rent for a desirable unit, and treat urgent pressure to pay quickly as a red flag",
+        "If something feels off during a phone call, hang up and call the agent back using a number you look up independently rather than one given to you"
+      ],
+      "datePublished": "2026-11-20T22:57:50.131Z",
+      "howItWorks": "Scammers copy genuine apartment listing videos and photos that real estate agents post on TikTok and Instagram to promote actual properties, then repost them on fake profiles, sometimes advertising a real $12,000-a-month apartment for a fraction of that price. When a prospective renter messages the fake profile, the scammer poses as the real, named agent, sending doctored photos of that agent's actual license or directing victims to lookalike company websites with the real agent's photo and contact details to appear legitimate. Because many agents have posted numerous videos of themselves narrating tours, scammers harvest short samples of the agent's real voice and use AI voice-cloning software to generate phone calls that sound exactly like the real person, making victims feel confident enough to pay a \"refundable\" application or deposit fee, often a few hundred dollars, by Zelle, CashApp, or wire. Some victims who share banking details or make payments during these calls later find additional money drained from their accounts.",
+      "redFlags": [
+        "\"Agent\" or landlord insists on communicating only by text, WhatsApp, or DM and avoids a live in-person showing",
+        "You're asked to pay an application, deposit, or 'refundable' fee via Zelle, CashApp, or wire before ever touring the unit in person",
+        "The listed rent is drastically lower than comparable units or than the same video appeared elsewhere at a much higher price",
+        "The agent's voice on a phone call sounds slightly robotic, oddly paced, or inconsistent even though it matches a real agent's known voice",
+        "A real estate license photo or company website looks slightly off, or the 'agent' avoids any request to meet at a verified brokerage office"
+      ],
+      "realExamples": [
+        "NBC News found the FBI's Internet Crime Complaint Center received more than 130 real estate complaints referencing social media sites, with losses of approximately $600,000 in just the first five months of the year investigated",
+        "A video of a real $12,000-a-month New York City apartment was reposted on a fake profile claiming it was being listed for $1,700 a month",
+        "A KRON4 reporter searching for apartments on TikTok paid a $280 application fee to a fake 'agent' impersonating a real Compass agent, using what the real agent believes was an AI-generated clone of his own voicemail voice, and later found more than $2,000 in unauthorized charges from his checking account"
+      ],
+      "source": "NBC News / NBC New York, https://www.nbcnewyork.com/news/national-international/apartment-rental-scam-social-media/6415118/",
+      "spreadPlatforms": [
+        "TikTok",
+        "Instagram",
+        "WhatsApp",
+        "Text Messages",
+        "Phone Calls"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
