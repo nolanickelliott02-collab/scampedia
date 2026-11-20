@@ -1,6 +1,6 @@
 {
-  "version": 116,
-  "lastUpdated": "2026-11-18T23:21:31.864Z",
+  "version": 117,
+  "lastUpdated": "2026-11-20T04:02:44.087Z",
   "reports": [
     {
       "id": "1",
@@ -5662,6 +5662,47 @@
         "Postal Mail"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "148",
+      "slug": "fictitious-crypto-recovery-law-firm-scam",
+      "title": "Fictitious Crypto Recovery Law Firm Scam",
+      "summary": "Fraudsters pose as lawyers from real or invented law firms, contacting cryptocurrency scam victims on social media and offer to \"legally\" recover their stolen funds, then steal even more money through fake taxes and fees. The FBI says this tactic combines impersonation of government entities with exploitation of victims' desperation to recover prior losses.",
+      "category": "Investment Scam",
+      "firstReported": "2023-08-11",
+      "relatedScams": [
+        "IC3/FBI Recovery Impersonation Scam",
+        "Refund and Recovery \"Sucker List\" Scam",
+        "Crypto Investment Scam"
+      ],
+      "safetyTips": [
+        "Be extremely skeptical of anyone who contacts you unsolicited claiming they can recover cryptocurrency already lost to fraud",
+        "Independently verify any lawyer or law firm by contacting them directly through official, independently-found contact information, not numbers or links the firm provides",
+        "Never pay fees, taxes, or 'release charges' in cryptocurrency or gift cards to anyone claiming they will recover stolen funds",
+        "Report suspected fictitious law firm recovery schemes to the FBI's Internet Crime Complaint Center at ic3.gov and to your local FBI field office",
+        "Remember that legitimate law firms do not typically solicit cryptocurrency fraud victims cold via social media"
+      ],
+      "datePublished": "2026-11-20T04:02:27.978Z",
+      "howItWorks": "After someone has already lost money in a cryptocurrency investment scam, a second wave of fraudsters contacts them pretending to be attorneys or representatives of a law firm that specializes in recovering stolen crypto funds. The scammers reach victims through social media or other messaging platforms, claim to have special authorization to investigate fund-recovery cases, and sometimes operate fake websites that look legitimate. They impersonate actual, licensed lawyers and real law firms and produce fictitious legal documents bearing a legitimate firm's insignia or letterhead to appear credible. To build false trust, they also falsely claim affiliation with multiple government agencies. Once the victim is hooked, the \"law firm\" directs them to pay supposed back taxes and other fees — often demanded in cryptocurrency or prepaid gift cards — before the funds can allegedly be released, and then the scammers disappear with the new payments.",
+      "redFlags": [
+        "Being contacted out of the blue by a 'lawyer' or 'law firm' offering to recover cryptocurrency you already lost to a scam",
+        "Requests to pay recovery fees, back taxes, or other charges in cryptocurrency or prepaid gift cards",
+        "Legal documents with a law firm letterhead or insignia that arrive unsolicited via social media or messaging apps",
+        "The firm claims special authorization or affiliation with government agencies to investigate and recover funds",
+        "Pressure to act quickly before funds can supposedly be released"
+      ],
+      "realExamples": [
+        "The FBI's IC3 reported that between February 2023 and February 2024, cryptocurrency scam victims further exploited by fictitious law firms reported losses totaling over $9.9 million.",
+        "The FBI issued an August 2025 update warning that fictitious law firms are combining multiple exploitation tactics, including targeting elderly victims, exploiting their emotional state and financial need, and impersonating or falsely affiliating with government entities to appear legitimate."
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), https://www.ic3.gov/PSA/2024/PSA240624 and update https://www.ic3.gov/PSA/2025/PSA250813",
+      "spreadPlatforms": [
+        "Social Media",
+        "Messaging Apps",
+        "Fake Websites"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
