@@ -1,6 +1,6 @@
 {
-  "version": 118,
-  "lastUpdated": "2026-11-20T22:58:07.678Z",
+  "version": 119,
+  "lastUpdated": "2026-11-21T21:59:46.086Z",
   "reports": [
     {
       "id": "1",
@@ -5744,6 +5744,44 @@
         "WhatsApp",
         "Text Messages",
         "Phone Calls"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "150",
+      "slug": "ai-manipulated-airbnb-damage-claim-scam",
+      "title": "AI-Manipulated Airbnb Damage Claim Scam",
+      "summary": "Dishonest short-term rental hosts are using AI-generated or AI-altered photos of \"damage\" to file bogus reimbursement claims against guests after checkout, demanding thousands of dollars for destruction that never happened.",
+      "category": "Rental Scam",
+      "firstReported": "2025-08-06",
+      "relatedScams": [
+        "Fake Rental Listing Scam",
+        "AI-Generated Fake Review Scam",
+        "Negative Google Review Extortion Scam"
+      ],
+      "safetyTips": [
+        "Take timestamped photos and video of every room in the rental as soon as you arrive and right before you leave to document the condition of the residence",
+        "Alert the host right away, in writing and with accompanying photos, of any damage you encounter or cause during your stay so there's a record",
+        "Don't give in or pay for a claim just because the sums involved or the evidence seem intimidating if you know you did nothing wrong",
+        "Appeal the decision; according to the platform's own rules, it won't charge your credit card without advance notice or a chance to appeal before and after you've been charged",
+        "Report suspected fabricated damage claims and keep all correspondence as evidence"
+      ],
+      "datePublished": "2026-11-21T21:59:11.262Z",
+      "howItWorks": "After a guest checks out of a short-term rental, a dishonest host files a reimbursement request through the platform's Resolution Center, claiming the guest caused property damage, missing items or unexpected cleaning costs. Instead of real photos, the host submits AI-generated or AI-altered images showing things like a cracked coffee table, stained mattress, or damaged appliances that never actually occurred. The fabricated images can be convincing enough that platform support staff initially side with the host even after a \"careful review,\" leaving the guest on the hook for a large sum of money. Only after the guest pointed out visual discrepancies in the photos that would not be possible in genuine, unedited images—and after media attention—did the platform reverse course, acknowledge the manipulation, and issue a refund.",
+      "redFlags": [
+        "A reimbursement request arrives for damage, missing items, or cleaning costs that seems wildly disproportionate to the actual stay",
+        "The claim is filed through the Resolution Center and the host provides photos as the main evidence of alleged damage",
+        "Submitted damage photos show visual inconsistencies or discrepancies that would not be possible in genuine, unedited photographs",
+        "The host provides no prior documentation, inspection report, or communication about the alleged damage during the stay itself"
+      ],
+      "realExamples": [
+        "A Manhattan Airbnb superhost allegedly used AI-altered photos to accuse a London guest of causing more than $16,000 in damage, including a cracked coffee table, stained mattress, and damaged robot vacuum, sofa, microwave, TV, and air conditioner, after she ended her 2.5-month stay early; Airbnb initially sided with the host but later apologized and issued a full refund after an internal review following media scrutiny."
+      ],
+      "source": "Frommers, https://www.frommers.com/tips/money-and-currency/airbnb-scam-warning-ai-altered-photos-used-to-accuse-guest-of-16-000-in-damages/",
+      "spreadPlatforms": [
+        "Airbnb and Vacation Rental Platforms",
+        "Mobile Apps",
+        "Online Reviews/Reddit"
       ],
       "isAIDiscovered": true
     }
