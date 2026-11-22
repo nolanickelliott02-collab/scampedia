@@ -1,6 +1,6 @@
 {
-  "version": 119,
-  "lastUpdated": "2026-11-21T21:59:46.086Z",
+  "version": 120,
+  "lastUpdated": "2026-11-22T03:00:57.027Z",
   "reports": [
     {
       "id": "1",
@@ -5784,6 +5784,46 @@
         "Online Reviews/Reddit"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "151",
+      "slug": "fake-employee-self-service-website-payroll-diversion-scam",
+      "title": "Fake Employee Self-Service Website Payroll Diversion Scam",
+      "summary": "The FBI warns that criminals are buying fraudulent search engine ads that mimic employee self-service websites (payroll, unemployment, health savings, and retirement account portals) to steal login credentials and redirect victims' direct deposits to accounts the scammers control.",
+      "category": "Phone Scam",
+      "firstReported": "2025-04-24",
+      "relatedScams": [
+        "SEO Poisoning Bank Account Takeover Scam",
+        "Financial Institution Support Impersonation Account Takeover Scam",
+        "Unemployment Benefits Identity Theft Scam"
+      ],
+      "safetyTips": [
+        "Navigate to employee self-service, payroll, unemployment, or retirement portals by typing the known URL directly or using a saved bookmark instead of clicking search engine ads",
+        "Carefully check the full web address for misspellings or subtle differences before entering login credentials",
+        "Enable multi-factor authentication on payroll, HSA, unemployment, and retirement accounts where available",
+        "Regularly review pay stubs and account statements for unauthorized direct deposit or banking changes",
+        "Report suspected incidents to the FBI's Internet Crime Complaint Center at ic3.gov"
+      ],
+      "datePublished": "2026-11-22T03:00:42.152Z",
+      "howItWorks": "According to an FBI/IC3 Public Service Announcement, the FBI is warning the public that cyber criminals are targeting users of employee self-service websites owned by companies and government services, using search engine advertisements to impersonate legitimate websites and steal victim information and funds.",
+      "redFlags": [
+        "A website reached through a sponsored/ad search result rather than a bookmark or typed address",
+        "Login page URL has a minor misspelling or extra character compared to the real employee portal address",
+        "Unexpected prompts to re-enter banking, direct deposit, or login credentials on a payroll, unemployment, HSA, or retirement account site",
+        "Sudden, unauthorized changes to direct deposit or banking information on a payroll or benefits account"
+      ],
+      "realExamples": [
+        "FBI/IC3 PSA (Alert Number I-042425-PSA) describes cyber criminals using search engine advertisements that mimic legitimate business URLs with minimal differences, such as a minor misspelling, to direct victims to fake login pages.",
+        "The PSA notes criminals previously focused mainly on small business commercial bank account takeovers but have expanded to target payroll, unemployment programs, and health savings accounts to redirect payments via fraudulent wire transactions or direct deposit changes."
+      ],
+      "source": "FBI/IC3 Public Service Announcement, https://www.ic3.gov/PSA/2025/PSA250424",
+      "spreadPlatforms": [
+        "Search Engine Ads",
+        "Fake Websites",
+        "Email"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
