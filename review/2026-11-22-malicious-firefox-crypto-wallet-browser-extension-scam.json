@@ -1,0 +1,58 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "152",
+    "slug": "malicious-firefox-crypto-wallet-browser-extension-scam",
+    "title": "Malicious Firefox Crypto Wallet Browser Extension Scam",
+    "summary": "Fraudsters publish fake or trojanized Firefox browser extensions that impersonate popular crypto wallets like OKX and Rabby Wallet, tricking users into typing in their seed phrase or secretly stealing it, then draining their crypto holdings.",
+    "category": "Tech Scam",
+    "firstReported": "2026-08-01",
+    "relatedScams": [
+      "Fake VPN App Malware Scam",
+      "Crypto Investment Scam"
+    ],
+    "safetyTips": [
+      "Only install wallet extensions from links posted on the wallet's own official, verified website, and double-check the exact publisher name and spelling before adding it",
+      "Never type a seed phrase or private key into any browser extension, website, or pop-up; legitimate wallets only require it once, offline, during your own initial device setup",
+      "Store significant crypto holdings in a hardware wallet so private keys never touch an internet-connected browser",
+      "Periodically audit installed browser extensions and remove any you don't actively use or recognize, especially ones with wallet or crypto-related permissions"
+    ],
+    "datePublished": "2026-11-22T22:18:46.298Z",
+    "howItWorks": "Attackers publish extensions to the official Firefox Add-ons store, sometimes starting out as innocuous tools such as sports-score trackers to build downloads and trust before a later update turns them malicious, or launching them directly as lookalikes of real crypto wallet brands with near-identical names (such as \"0KX WEB3\" using a zero instead of the letter O). Some of the fake extensions display a counterfeit \"import wallet\" screen that simply asks victims to type in their 12- or 24-word recovery phrase or private key, even though the extension contains no real wallet functionality. Others go further by embedding modified versions of real open-source wallet code (such as Rabby Wallet's) so that when a victim creates or imports a wallet normally, the extension secretly intercepts and transmits the recovery phrase to attacker-controlled infrastructure, including servers hosted on Cloudflare Workers, before the wallet's own encryption is ever applied. Once criminals obtain the seed phrase or private key they can drain the victim's entire crypto balance, and because blockchain transactions can't be reversed, the funds are typically unrecoverable.",
+    "redFlags": [
+      "A browser extension asks you to type in your wallet's recovery/seed phrase or private key to \"import\" an existing wallet",
+      "The extension's name is a near-identical misspelling of a real wallet or exchange brand (e.g., a zero substituted for the letter O)",
+      "An extension you installed for an unrelated purpose, like a sports-score widget, suddenly starts prompting for crypto wallet credentials after an update",
+      "The extension has very few reviews or install counts despite claiming to be a major, widely-used wallet brand"
+    ],
+    "realExamples": [
+      "Security researchers at Socket identified a cluster of 77 linked Firefox extensions, including dozens confirmed malicious, some impersonating wallets like OKX and Rabby while others began as sports-score or utility apps before later updates added wallet-theft code.",
+      "One malicious extension called \"0KX WEB3\" mimicked the OKX crypto exchange by using a zero instead of the letter \"O,\" despite containing no actual wallet code inside it.",
+      "Researchers found extensions that modified Rabby Wallet's real code so that 12- or 24-word recovery phrases were intercepted and transmitted to attacker-controlled servers via Cloudflare Workers before the wallet's own local encryption took place.",
+      "A follow-up wave of 16 additional malicious Firefox extensions was flagged targeting Rabby and OKX wallet users, showing attackers continuing to release new extensions under different names after Mozilla removed earlier ones."
+    ],
+    "source": "Cybernews, https://cybernews.com/security/firefox-crypto-stealing-extensions-16-fake-tools/ ; CyberInsider, https://cyberinsider.com/40-malicious-firefox-extensions-caught-stealing-crypto-wallet-data/",
+    "spreadPlatforms": [
+      "Browser Extension Stores",
+      "Web/Internet"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "new",
+    "severity": "high",
+    "urgency": "high",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Tech Scam",
+    "suggestedAliases": [
+      "Fake Rabby/OKX Wallet Extension Scam",
+      "Crypto Wallet Clone Browser Extension Scam"
+    ],
+    "focusesOnUS": false,
+    "confidence": 0.75,
+    "reasoning": "This describes a specific, well-documented technique (trojanized Firefox extensions masquerading as sports/utility apps or crypto wallet lookalikes to steal seed phrases/private keys via fake import screens or modified wallet code) that is distinct from existing entries like Fake VPN App Malware Scam or Phishing Email Scam, as it is specific to browser extension marketplaces and crypto wallet credential theft. The source is from established cybersecurity outlets (Cybernews, CyberInsider) citing Socket's threat research, but doesn't specify US-specific targeting, framing it as a global campaign affecting Firefox users worldwide."
+  },
+  "queuedAt": "2026-11-22T22:18:54.751Z"
+}
