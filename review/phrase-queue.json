@@ -302,6 +302,27 @@
       "entryTitle": "Fake Employee Self-Service Website Payroll Diversion Scam",
       "proposedAt": "2026-11-22T03:00:57.027Z",
       "status": "pending"
+    },
+    {
+      "phrase": "gas and grocery vouchers",
+      "entryId": "152",
+      "entryTitle": "\"AAPP\" Free Gas & Grocery Card Postcard Scam",
+      "proposedAt": "2026-11-24T03:07:07.760Z",
+      "status": "pending"
+    },
+    {
+      "phrase": "processing fee",
+      "entryId": "152",
+      "entryTitle": "\"AAPP\" Free Gas & Grocery Card Postcard Scam",
+      "proposedAt": "2026-11-24T03:07:07.760Z",
+      "status": "pending"
+    },
+    {
+      "phrase": "record the details of the trade",
+      "entryId": "153",
+      "entryTitle": "SEC Impersonation Investment Scam",
+      "proposedAt": "2026-11-24T03:09:58.915Z",
+      "status": "pending"
     }
   ]
 }
