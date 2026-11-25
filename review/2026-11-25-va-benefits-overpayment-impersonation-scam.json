@@ -1,0 +1,56 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "155",
+    "slug": "va-benefits-overpayment-impersonation-scam",
+    "title": "VA Benefits Overpayment Impersonation Scam",
+    "summary": "Scammers impersonate Department of Veterans Affairs employees and tell veterans they were overpaid on their benefits and must repay the \"debt\" immediately, tricking them into sending money or handing over banking logins.",
+    "category": "Government Scam",
+    "firstReported": "2025-11-11",
+    "relatedScams": [],
+    "safetyTips": [
+      "Never click links in unexpected messages about VA debt; log into VA.gov directly or call the VA Debt Management Center at the official number to check your account",
+      "Remember that real VA overpayment notices arrive as formal mailed letters detailing the amount, reason, time period, and your appeal/payment options",
+      "Never give your VA.gov password, login, or full banking credentials to anyone contacting you by phone, text, or email",
+      "Do not pay any upfront fee or urgent debt demand through gift cards, cryptocurrency, or wire transfer",
+      "Verify any suspicious VA communication by contacting the VA directly through its official website or phone numbers rather than using contact info provided in the suspicious message"
+    ],
+    "datePublished": "2026-11-25T01:16:01.390Z",
+    "howItWorks": "Fraudsters contact veterans and benefit recipients by text, email, or phone call pretending to be VA staff from the \"Debt Management Center,\" claiming the veteran owes money because of a VA benefits overpayment. The messages often use real VA logos, formal-sounding language, and spoofed caller ID that displays \"VA\" or \"Debt Center\" to appear legitimate. Victims are pressured to act urgently, asked to click links that don't actually lead to VA.gov, or asked to provide their VA.gov login, password, or banking details to \"resolve\" the supposed debt, sometimes being told to pay via gift cards or wire transfer. In reality, legitimate VA overpayment notices are sent as formal mailed letters explaining the exact amount owed, the reason, the time period covered, appeal rights, and payment options — the VA never demands payment by text or third-party payment method.",
+    "redFlags": [
+      "Unsolicited text, email, or call claiming you owe money for a VA benefits overpayment",
+      "Caller ID spoofed to display \"VA\" or \"Debt Center\"",
+      "Links in the message that don't lead to the official VA.gov website",
+      "Requests for your VA.gov login credentials, password, or banking information",
+      "Demands for immediate payment via gift cards, wire transfer, or other untraceable methods instead of a formal mailed letter with appeal rights"
+    ],
+    "realExamples": [
+      "The VA reported receiving a surge of complaints in 2025 about bogus overpayment notifications sent to veterans and benefit recipients via text, email, and phone calls impersonating VA employees.",
+      "The Better Business Bureau highlighted fake VA overpayment notices as a top tactic scammers used against military-connected consumers, who reported about $684 million in fraud losses in 2025.",
+      "Consumer advocacy group NCOA described the scheme as a 'growing type of scam' in which a fraudster posing as a VA representative contacts a veteran by letter, email, or text and claims they received an overpayment of benefits."
+    ],
+    "source": "Better Business Bureau / WBTV, \"Veterans are being targeted by scams. Here's what to look out for so you don't become a victim.\", https://www.wbtv.com/2025/11/11/veterans-are-being-targeted-by-scams-heres-what-look-out-so-you-dont-become-victim/",
+    "spreadPlatforms": [
+      "Text Messages",
+      "Email",
+      "Phone Calls"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "new",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "VA Overpayment Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.55,
+    "reasoning": "This is a distinct VA-benefits overpayment impersonation scam, different from the existing VA-related entries (which cover pension poaching fees and veterans savings program postcards) and other government impersonation entries like SSA or Medicare scams. However, the source text is thin on specifics (no details on exact mechanics like gift cards/wire transfer that the candidate's how-it-works claims), citing only a brief VA.gov warning; the candidate's write-up contains more detail than the cited source actually supports, which is a concern for verification but not for distinctness."
+  },
+  "queuedAt": "2026-11-25T01:16:07.325Z"
+}
