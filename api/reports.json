@@ -1,6 +1,6 @@
 {
-  "version": 122,
-  "lastUpdated": "2026-11-24T03:09:58.915Z",
+  "version": 123,
+  "lastUpdated": "2026-11-25T01:15:08.993Z",
   "reports": [
     {
       "id": "1",
@@ -5903,6 +5903,43 @@
         "Social Media",
         "Text Messages",
         "Phone Calls",
+        "Email"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "154",
+      "slug": "gig-delivery-shopper-account-takeover-scam",
+      "title": "Gig Delivery Shopper Account Takeover Scam",
+      "summary": "Scammers impersonate Instacart or Shipt \"support\" to trick gig shoppers into handing over one-time passcodes, then use their shopper debit card to buy gift cards instead of groceries, defrauding both the workers' accounts and the companies.",
+      "category": "Employment Scam",
+      "firstReported": "2025-08-27",
+      "relatedScams": [
+        "Gift Card Draining Scam",
+        "SIM Swap Scam",
+        "Money Mule Recruitment Scam"
+      ],
+      "safetyTips": [
+        "Never share a one-time passcode or verification code with anyone contacting you, even if they claim to be Instacart or Shipt staff",
+        "Be wary of unsolicited calls or app messages asking you to continue deliveries on an inactive account or asking to arrange a call to add items to a shop",
+        "Routinely check your shopper account for orders or activity you did not initiate, such as unauthorized gift card purchases",
+        "Treat any request to confirm your account status via a one-time passcode as a potential scam, and contact the platform directly through official channels instead"
+      ],
+      "datePublished": "2026-11-25T01:14:34.624Z",
+      "howItWorks": "Fraudsters obtain a stolen list of Instacart or Shipt shoppers, then contact them posing as company employees, asking if they want to continue doing deliveries or claiming a customer complained that the shopper's profile image didn't match the person who made the delivery. They ask the victim to share a one-time passcode, supposedly to remove, reactivate, or confirm the account, but instead use that access to accept orders via the stolen shopper accounts. Once funds load onto the shopper's debit card to cover the cost of the goods, the scammers buy gift cards rather than the requested items, then pose as the original customer to cancel the order and get a refund. They typically use the gift cards to buy items online or acquire cryptocurrency, later exchanging the crypto for cash, leaving the real worker's account compromised.",
+      "redFlags": [
+        "Unsolicited contact from someone posing as Instacart or Shipt staff asking if you want to continue doing deliveries, especially on an inactive account",
+        "Being asked to share a one-time passcode under the pretext of removing, reactivating, or confirming your account",
+        "A claim that a customer complained your profile image didn't match the person who made the delivery, followed by a request for a verification code",
+        "Orders appearing on your account that you did not accept, followed by gift cards being purchased instead of groceries"
+      ],
+      "realExamples": [
+        "Forbes reported that eight men were indicted for hacking more than 7,500 Instacart and Shipt gig worker accounts by tricking workers into sharing one-time passcodes, defrauding the companies of as much as $30 million by using shopper debit card funds to buy gift cards instead of purchasing ordered groceries; the FBI said Instacart lost just over $16 million across 5,500 compromised accounts, while Shipt lost $14.3 million across 2,215 compromised accounts"
+      ],
+      "source": "Forbes, https://www.forbes.com/sites/thomasbrewster/2025/08/27/instacart-target-shipt-gig-workers-hacked/",
+      "spreadPlatforms": [
+        "Phone Calls",
+        "Text Messages",
         "Email"
       ],
       "isAIDiscovered": true
