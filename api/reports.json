@@ -1,6 +1,6 @@
 {
-  "version": 124,
-  "lastUpdated": "2026-11-26T00:49:02.039Z",
+  "version": 125,
+  "lastUpdated": "2026-11-26T04:56:55.445Z",
   "reports": [
     {
       "id": "1",
@@ -5981,6 +5981,47 @@
         "Instagram"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "156",
+      "slug": "nft-airdrop-crypto-wallet-draining-scam",
+      "title": "NFT Airdrop Crypto Wallet Draining Scam",
+      "summary": "Criminals send unsolicited \"free\" NFT or token airdrops to cryptocurrency wallets, then lure recipients to a phishing site to \"claim\" or \"connect\" for more rewards — stealing the victim's seed phrase and draining the wallet.",
+      "category": "Investment Scam",
+      "firstReported": "2023-08-24",
+      "relatedScams": [
+        "Crypto Investment Scam",
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Never respond to requests for passwords, seed phrases, or one-time passcodes sent to your accounts if you did not initiate the contact",
+        "If you did not sign up to participate in a marketing or rewards program and you receive an offer for free tokens, verify the offer is from the cryptocurrency provider before accepting and/or providing any information",
+        "Initiate a new call to the company using a verified customer service number if a \"representative\" reaches out to you via phone or email soliciting personal information",
+        "Do not click links or use numbers provided in suspicious emails for confirming communication is legitimate",
+        "Monitor cryptocurrency accounts for suspicious login attempts, unauthorized changes to the account, unrecognized transactions, or compromised credentials",
+        "Report suspected airdrop fraud to the FBI's Internet Crime Complaint Center at ic3.gov"
+      ],
+      "datePublished": "2026-11-26T04:56:28.505Z",
+      "howItWorks": "Scammers exploit the legitimate NFT airdrop feature built into non-custodial crypto wallets, which was originally created for marketing purposes, by sending unsolicited tokens disguised as free rewards, often targeting users of networks like Hedera Hashgraph. After an unsuspecting user receives the surprise token, a plaintext \"memo\" field attached to the transaction contains a link telling the user they can earn even more crypto by connecting their wallet to a decentralized application (dApp). That connection process asks the victim to enter login and security information, including their seed phrase, to \"complete the connection.\" Once entered, the criminals use that information to drain the victim's wallet. Criminals also advertise the same fraudulent airdrop links directly through phishing emails or on social media and third-party websites.",
+      "redFlags": [
+        "Receiving tokens, NFTs, or crypto rewards in your wallet that you never requested or signed up for",
+        "A memo or message attached to an unsolicited token containing a link to \"claim\" more rewards",
+        "Any site or prompt that asks you to enter your seed phrase, password, or one-time passcode to \"connect\" your wallet",
+        "Unsolicited outreach by email, social media, or chat promoting a free token giveaway tied to a well-known blockchain network"
+      ],
+      "realExamples": [
+        "FBI IC3 PSA describing cyber criminals defrauding cryptocurrency users through the NFT airdrop feature embedded in non-custodial wallets, disguised as free rewards for Hedera Hashgraph network users",
+        "Victims receiving unsolicited tokens with a plaintext memo linking to a dApp connection page that requested seed phrases to \"complete the connection,\" after which funds were stolen from the wallet"
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), Public Service Announcement PSA250603, https://www.ic3.gov/PSA/2025/PSA250603",
+      "spreadPlatforms": [
+        "Cryptocurrency Wallets",
+        "Email",
+        "Social Media",
+        "Third-Party Websites"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
