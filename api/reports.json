@@ -1,6 +1,6 @@
 {
-  "version": 123,
-  "lastUpdated": "2026-11-25T01:15:08.993Z",
+  "version": 124,
+  "lastUpdated": "2026-11-26T00:49:02.039Z",
   "reports": [
     {
       "id": "1",
@@ -5941,6 +5941,44 @@
         "Phone Calls",
         "Text Messages",
         "Email"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "155",
+      "slug": "fake-discounted-dmv-vehicle-registration-renewal-ad-scam",
+      "title": "Fake \"Discounted\" DMV Vehicle Registration Renewal Ad Scam",
+      "summary": "Scammers run social media ads promising 50% off vehicle registration renewal fees, then collect payment via online payment applications along with sensitive vehicle and personal data. The California DMV says it never offers such discounts and never requests payment or personal information through unofficial channels.",
+      "category": "Government Scam",
+      "firstReported": "2025-06-04",
+      "relatedScams": [
+        "Government Grant Scam",
+        "Fake Vehicle History Report Scam for Car Sellers"
+      ],
+      "safetyTips": [
+        "Only renew vehicle registration through the official DMV website or an authorized Business Partner Automation program business",
+        "Avoid offers for discounted DMV services, since the DMV does not offer special deals through unauthorized third-parties or on social media",
+        "Never respond to unsolicited or suspicious texts asking for personal or financial information",
+        "If unsure, always verify the source by contacting the DMV through official channels",
+        "Call the DMV customer service team at 800-777-0133 if you have concerns"
+      ],
+      "datePublished": "2026-11-26T00:48:31.770Z",
+      "howItWorks": "Fraudsters post deceptive advertisements on social media claiming they can help drivers renew their vehicle registration at discounted rates, offering 50% off vehicle registration renewal fees. Interested victims who respond are asked to pay through online payment applications rather than through any official government channel, and are also asked to hand over sensitive details like their license plate number, vehicle identification number (VIN), and full name. Because state law prohibits the DMV from ever discounting registration fees, any such offer is fabricated, and victims who pay simply lose their money while handing scammers personal and vehicle data.",
+      "redFlags": [
+        "Any ad or message offering a discount on DMV registration fees, since state law prohibits the DMV from offering discounted vehicle registration renewals",
+        "Requests to pay official-sounding government fees via online payment applications instead of the official DMV website",
+        "Deceptive social media advertisements offering assistance to renew vehicle registration at discounted rates",
+        "Requests for your license plate number, VIN, or full name in connection with an unofficial offer",
+        "Unsolicited or suspicious messages asking for personal or financial information"
+      ],
+      "realExamples": [
+        "Californians reported seeing deceptive social media advertisements offering 50% off vehicle registration renewal fees, which requested payment through online payment applications along with the customer's license plate, vehicle identification number, and full name."
+      ],
+      "source": "California DMV, https://www.dmv.ca.gov/portal/news-and-media/news-releases/dmv-warns-of-fraudulent-advertisements-on-discounted-vehicle-registration/",
+      "spreadPlatforms": [
+        "Social Media",
+        "Facebook",
+        "Instagram"
       ],
       "isAIDiscovered": true
     }
