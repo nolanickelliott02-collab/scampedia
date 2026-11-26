@@ -1,0 +1,61 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "156",
+    "slug": "reservation-hijack-hotel-phishing-scam",
+    "title": "Reservation Hijack Hotel Phishing Scam",
+    "summary": "Scammers who have obtained real hotel or vacation-rental booking details send travelers highly convincing \"payment problem\" messages by email, text, or WhatsApp, directing them to a fake payment page that steals their card information.",
+    "category": "Phone Scam",
+    "firstReported": "2026-06-01",
+    "relatedScams": [
+      "Booking.com WhatsApp Hotel Payment Scam",
+      "Phishing Email Scam",
+      "Smishing Text Message Scam"
+    ],
+    "safetyTips": [
+      "Don't click payment or 're-verification' links in unsolicited booking messages, even if they contain your correct name, dates, or confirmation number",
+      "If you think there's a real issue with your reservation, contact the hotel or booking platform directly using the phone number or app from your original confirmation, not any number or link in the new message",
+      "Remember that major booking platforms like Booking.com say they will never ask guests to share credit card details by email, phone, WhatsApp, or text",
+      "Check the web address carefully before entering any payment information, and be wary of pages that look right but load after clicking a shortened or unfamiliar link",
+      "Monitor your card statements closely after any hotel stay or booking, since breached reservation data can be reused in follow-up scams"
+    ],
+    "datePublished": "2026-11-26T00:50:40.307Z",
+    "howItWorks": "After compromising a hotel's systems, a property-management partner, or booking staff (often via their own phishing attacks or weak passwords), criminals obtain genuine reservation data such as the guest's name, check-in dates, confirmation number, and stay price. They then send the traveler a message claiming there is an issue, such as a declined payment or a required \"re-verification\" step, using the real booking details to make the message feel authentic. The message pushes the victim to click a link that leads to a spoofed payment or guest portal page, sometimes even a fake PDF invoice, that looks legitimate because it is pre-populated with the correct hotel name, dates, and amount. When the victim re-enters their card number to \"confirm\" or \"re-verify\" the reservation, that information is captured by the scammers. Researchers found that many of these fake pages share identical underlying templates and file structures, indicating the scam is run as a kit-based operation generating property-specific phishing pages at scale rather than being built by hand for each victim.",
+    "redFlags": [
+      "An unexpected message about a 'payment problem' or request to 're-verify' your card for a reservation you already paid for",
+      "The message arrives via SMS, WhatsApp, or a booking platform's chat rather than the official email tied to your reservation",
+      "A threat that your reservation will be cancelled within a short deadline (e.g., 24 hours) unless you confirm payment immediately",
+      "A payment link that leads to a page with a slightly different or typo-squatted domain than the hotel's or platform's real website",
+      "The message uses your real name, dates, and confirmation number but still asks you to 're-enter' payment details"
+    ],
+    "realExamples": [
+      "Gen/Norton researchers identified roughly 350 distinct hotels, hostels, B&Bs, and short-term rentals worldwide, representing about 38,000 rooms, whose guest data had been compromised and used in these phishing campaigns since late 2025.",
+      "WIRED reported that customer data from more than 350 hotels around the world may have been accessed as part of these reservation-hijacking scams to launch phishing attacks across roughly 50 countries.",
+      "Norton researchers found that many of the fraudulent webpages victims were sent to shared identical internal file paths, card-validation language, and page structures, with only the hotel name, stay dates, and price changed per victim, pointing to a kit-based scam operation."
+    ],
+    "source": "Norton (Gen Digital), \"Reservation Hijack scams: The travel scam that looks like your real hotel booking,\" https://us.norton.com/blog/online-scams/reservation-hijacking-scam",
+    "spreadPlatforms": [
+      "Email",
+      "Text Messages",
+      "WhatsApp",
+      "Booking Platform Messaging Systems"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Booking.com WhatsApp Hotel Payment Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "other",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Reservation Hijack Scam"
+    ],
+    "focusesOnUS": false,
+    "confidence": 0.75,
+    "reasoning": "This candidate describes the same core pattern already in the database as \"Booking.com WhatsApp Hotel Payment Scam\" — compromised hotel/booking systems used to send convincing payment-reverification messages via email/text/WhatsApp with real reservation details, directing victims to fake payment pages. The source text (a Norton/Gen blog referencing a Booking.com breach reported by the Guardian) is a minor variant/rebranding of the existing entry rather than a genuinely new scam category, and it does not specifically focus on US victims."
+  },
+  "queuedAt": "2026-11-26T00:50:45.947Z"
+}

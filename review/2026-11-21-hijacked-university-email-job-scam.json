@@ -1,0 +1,61 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "151",
+    "slug": "hijacked-university-email-job-scam",
+    "title": "Hijacked University Email Job Scam",
+    "summary": "Scammers compromise legitimate .edu email accounts at U.S. colleges and use them to send trusted-looking fake job and internship offers to students, who are then tricked into depositing fake checks and sending scammers gift cards.",
+    "category": "Employment Scam",
+    "firstReported": "2026-09-28",
+    "relatedScams": [
+      "Fake Job Offer Scam",
+      "Mystery Shopper Check Scam",
+      "Phishing Email Scam"
+    ],
+    "safetyTips": [
+      "Independently verify any unexpected job offer by contacting your university's career center or the supposed sender through a known, separately-looked-up phone number or email, not by replying to the message",
+      "Never deposit a check and send money, cryptocurrency, or gift cards based on funds from that same check, since banks can reverse fraudulent deposits weeks later",
+      "Enable multifactor authentication on your university email account and never enter your school credentials into a form linked from an unexpected 'verify your password' email",
+      "Remember that real law enforcement, including the FBI, will not call to threaten immediate arrest over a job dispute or demand gift cards or wire payments",
+      "Report suspicious university emails to your school's IT department so the compromised account can be secured before it's used to target others"
+    ],
+    "datePublished": "2026-11-21T22:01:19.021Z",
+    "howItWorks": "Threat actors first phish a student, staff, or faculty member's university credentials, often via a fake \"account warning\" email asking them to verify or refresh their password. Once they take over a real .edu mailbox, they use that trusted, authenticated account to blast out convincing job and internship offers (posing as university career centers, research assistant roles, remote personal assistants, secret shopper gigs, or charity staff positions) to other students, staff, and alumni. Victims who \"accept\" the job are sent a copy of a fraudulent check, often around $1,000, and told to deposit it, keep a portion as pay, and use the rest to buy gift cards in $100 increments for supposed work supplies or fees, then send the gift card codes back to the scammer. By the time the bank discovers the check is fake, the victim has already sent the gift card codes and the deposit is reversed, leaving them hundreds of dollars out of pocket. If a victim hesitates or refuses, researchers found the scammers turn aggressive, pushing other payment methods and even calling victims while impersonating an FBI agent to threaten arrest and legal action.",
+    "redFlags": [
+      "An unsolicited job or internship offer arrives from a university email address you don't recognize, especially one unrelated to your major or department",
+      "You're sent a check before doing any real work and told to deposit it and keep part of it as pay",
+      "You're instructed to buy gift cards to cover supplies, fees, or shipping and then send back the card codes or photos",
+      "The sender pressures you to act quickly, gets aggressive when you hesitate, or threatens arrest and legal action if you don't comply",
+      "The job listing is vague about actual duties but promises easy pay for minimal work"
+    ],
+    "realExamples": [
+      "Proofpoint identified a cluster of threat activity in which compromised U.S. university email accounts were used to send job and internship lures ranging from personal concierges and remote charity staff to research assistant and secret shopper roles.",
+      "Researchers documented a case where a scammer sent a fake copy of a $1,000 check and instructed the target to deposit it, keep part as pay, and buy $100 gift cards with the remainder before sending back the codes.",
+      "In one engagement, a fraudster impersonating an FBI agent using the name \"Agent Dozier Jr.\" called a target and threatened legal action and arrest after the victim resisted following payment instructions.",
+      "Proofpoint's investigation linked the operators behind the campaign to Nigeria through IP logging during the researchers' own undercover engagements with the threat actors."
+    ],
+    "source": "Proofpoint, \"From EDU Account Takeover to Job Scam Abuse: West African Fraud Actors Target Universities\", https://www.proofpoint.com/us/blog/threat-insight/edu-account-takeover-job-scam-abuse-west-african-fraud-actors-target",
+    "spreadPlatforms": [
+      "Email",
+      "University Webmail Systems"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Fake Job Offer Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Employment Scam",
+    "suggestedAliases": [
+      "Compromised .edu Account Job Scam",
+      "University Email Advance Fee Fraud"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.4,
+    "reasoning": "This is essentially the existing 'Fake Job Offer Scam' / 'Mystery Shopper Check Scam' pattern (fake check + gift card advance fee fraud) with a specific delivery mechanism (compromised university email) layered on top; the core monetization scheme (fake check deposit, gift card payback, escalating threats including fake FBI impersonation) closely mirrors already-catalogued employment and fake-check scams rather than introducing a fundamentally new scam type."
+  },
+  "queuedAt": "2026-11-21T22:01:24.977Z"
+}

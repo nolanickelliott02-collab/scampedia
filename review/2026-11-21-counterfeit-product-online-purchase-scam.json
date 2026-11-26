@@ -1,0 +1,57 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "151",
+    "slug": "counterfeit-product-online-purchase-scam",
+    "title": "Counterfeit Product Online Purchase Scam",
+    "summary": "Shoppers lured by heavily discounted social media ads for apparel, pet products, and other popular items actually receive a package — but it contains a cheap, fake, or even unsafe counterfeit instead of the real product they ordered.",
+    "category": "Shopping Scam",
+    "firstReported": "2025-04-14",
+    "relatedScams": [
+      "Fake Online Store Scam",
+      "Fake Online Pet Sale Scam"
+    ],
+    "safetyTips": [
+      "Buy directly from retailers or manufacturers you know and trust rather than clicking unfamiliar ads",
+      "Compare the price to the brand's own website; if it's dramatically cheaper, treat it as a red flag",
+      "Pay with a credit card so you can dispute the charge if the product is defective, unsafe, or counterfeit",
+      "Search the seller's name plus the word 'scam' or check BBB Scam Tracker before buying from an unfamiliar site"
+    ],
+    "datePublished": "2026-11-21T22:03:48.280Z",
+    "howItWorks": "Scammers set up lookalike websites or run social media ads mimicking well-known brands, offering popular items — most commonly apparel and pet products — at steep discounts. Unlike classic non-delivery scams, the buyer's card is charged and a package often does arrive, but it contains a low-quality knockoff instead of the genuine product. The Better Business Bureau found this pattern grew common enough in 2025 that \"counterfeit product\" joined its top-10 list of riskiest scam types for the first time, with reports concentrated in apparel and pet merchandise such as collars, toys, and treats. Because something physically shows up, victims often don't realize they've been scammed until the item fails, looks wrong, or turns out to be unsafe for a pet to use or ingest.",
+    "redFlags": [
+      "A popular, usually sold-out or pricier item is listed at a steep, 'too good to be true' discount on an unfamiliar site",
+      "The ad appeared on social media and leads to a website you've never heard of rather than the brand's official store",
+      "No verifiable third-party reviews exist anywhere except on the seller's own site",
+      "Product packaging, labeling, or quality looks noticeably different from the genuine item once it arrives"
+    ],
+    "realExamples": [
+      "BBB's 2025 Scam Tracker Risk Report added counterfeit product scams to its top-10 riskiest list for the first time, noting that 90.5% of people who reported one lost money, the highest share of any scam type.",
+      "BBB reported that customers of one online pet-product retailer were left empty-handed even after being told their items were on the way.",
+      "A BBB spokesperson described identifying a fraudulent listing when a sold-out or higher-priced item suddenly appears for a 'super cheap price on a random website you've never heard of.'"
+    ],
+    "source": "BBB 2025 Scam Tracker Risk Report, https://bbbmarketplacetrust.org/wp-content/uploads/2026/08/Risk-Report-2025-US.pdf ; Spokeo 2026 Holiday Shopping Scams Study, https://www.spokeo.com/compass/online-shopping-scams-2026/ ; NBC San Diego, https://www.nbcsandiego.com/nbc-7-responds-2/pet-shopping-buy-online/3831734/",
+    "spreadPlatforms": [
+      "Social Media",
+      "Websites/Fake Online Stores",
+      "Online Marketplaces"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Fake Online Store Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "other",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [
+      "Counterfeit Goods Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.3,
+    "reasoning": "This is essentially a sub-variant of the already-listed \"Fake Online Store Scam\" and \"AI-Generated Fake Review Scam\" type lookalike-store schemes, distinguished only by the fact that a counterfeit item is actually shipped rather than nothing arriving; the underlying mechanism (fake lookalike websites/ads mimicking brands) is already covered by existing titles like Fake Online Store Scam and Fake Retail Coupon/Promo Code Scam. It doesn't introduce a fundamentally new scam mechanism, just a different outcome (counterfeit delivery vs non-delivery) of the same fake storefront pattern."
+  },
+  "queuedAt": "2026-11-21T22:03:55.854Z"
+}

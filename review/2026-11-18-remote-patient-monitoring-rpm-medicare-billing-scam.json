@@ -1,0 +1,58 @@
+{
+  "botName": "gov-scam-scan",
+  "candidate": {
+    "id": "146",
+    "slug": "remote-patient-monitoring-rpm-medicare-billing-scam",
+    "title": "Remote Patient Monitoring (RPM) Medicare Billing Scam",
+    "summary": "Unscrupulous companies sign up Medicare enrollees for remote patient monitoring devices and services they don't need, then bill Medicare for setup, teaching, and monitoring that often never actually happens.",
+    "category": "Government Scam",
+    "firstReported": "2023-11-21",
+    "relatedScams": [
+      "Medicare / Health Insurance Scam"
+    ],
+    "safetyTips": [
+      "If someone calls offering free products that will be billed to Medicare, hang up immediately and do not provide any personal or Medicare information",
+      "Carefully review your Medicare Explanation of Benefits notices for RPM charges or other services you never ordered or received",
+      "If medical equipment is delivered that you did not order, refuse the delivery or return it, keep a record of the sender and return date, and report it",
+      "Only agree to remote patient monitoring if it is ordered directly by your own treating doctor, not a cold-calling company"
+    ],
+    "datePublished": "2026-11-18T04:10:04.563Z",
+    "howItWorks": "The scheme involves unsolicited contact by unscrupulous companies targeting Medicare beneficiaries to set up monthly billing for RPM equipment and services regardless of medical necessity. Scammers are contacting Medicare enrollees through phone solicitations (\"cold calling\"), texts, internet ads (\"click bait\"), and TV advertising, often posing as a Durable Medical Equipment Company (DME) or pharmacy. Once these organizations obtain the Medicare beneficiary's personal information, such as their Medicare number, they begin billing the Medicare program for setup of the equipment, patient education, and monthly monitoring of data, even though the equipment may never be sent, may not be FDA-approved, and the promised monthly monitoring most often never actually happens. Legitimate RPM uses devices like glucose monitors, blood pressure cuffs, scales, and cardiac rhythm devices to track patients with chronic conditions who need close monitoring, which is what makes the fake version convincing.",
+    "redFlags": [
+      "Unsolicited call, text, internet ad, or TV ad offering free remote monitoring equipment",
+      "Caller asks for your Medicare number before any doctor has prescribed monitoring",
+      "Equipment arrives that you never ordered, or monitoring is billed but never actually performed",
+      "Company contacting you identifies itself only as a generic DME supplier or pharmacy rather than your own provider"
+    ],
+    "realExamples": [
+      "HHS-OIG's November 2023 Consumer Alert describes unscrupulous companies signing up Medicare enrollees for RPM regardless of medical necessity, then billing for setup, patient teaching, and monthly monitoring that most often never actually happens",
+      "A related 2024 OIG data review found that a large share of enrollees billed for RPM did not receive all three components of the monitoring service, raising questions about whether the monitoring was ever actually performed"
+    ],
+    "source": "HHS Office of Inspector General, \"Consumer Alert: Remote Patient Monitoring,\" https://oig.hhs.gov/fraud/consumer-alerts/consumer-alert-remote-monitoring/",
+    "spreadPlatforms": [
+      "Phone Calls",
+      "Text Messages",
+      "Internet Ads",
+      "Television Ads"
+    ],
+    "isAIDiscovered": true,
+    "isGovSourced": true
+  },
+  "triage": {
+    "isDistinctPattern": false,
+    "duplicateOf": "Medicare / Health Insurance Scam",
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "medium",
+    "sourceCredibility": "government-agency",
+    "suggestedCategory": "Government Scam",
+    "suggestedAliases": [
+      "RPM Billing Fraud",
+      "Fake Remote Patient Monitoring Equipment Scam"
+    ],
+    "focusesOnUS": true,
+    "confidence": 0.6,
+    "reasoning": "This is a specific sub-type of Medicare fraud involving remote patient monitoring billing, which is a known variant of the existing broad 'Medicare / Health Insurance Scam' entry rather than a wholly new pattern category."
+  },
+  "queuedAt": "2026-11-18T04:10:09.704Z"
+}
