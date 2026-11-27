@@ -1,6 +1,6 @@
 {
-  "version": 125,
-  "lastUpdated": "2026-11-26T04:56:55.445Z",
+  "version": 126,
+  "lastUpdated": "2026-11-27T00:54:16.733Z",
   "reports": [
     {
       "id": "1",
@@ -6022,6 +6022,45 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "157",
+      "slug": "fake-tribal-tax-credit-scheme",
+      "title": "Fake \"Tribal Tax Credit\" Scheme",
+      "summary": "Promoters sell wealthy investors and tax professionals on a nonexistent \"Tribal Tax Credit\" (also marketed as a \"Native American Tax Credit\" or \"Sovereign Tribal Tax Credit\"), claiming it can wipe out federal tax bills or generate big refunds — but the IRS says no such credit exists under federal law.",
+      "category": "Government Scam",
+      "firstReported": "2024-01-01",
+      "relatedScams": [
+        "Government Grant Scam",
+        "Ghost Tax Preparer Scam",
+        "Fake IRS Tax Refund Scam"
+      ],
+      "safetyTips": [
+        "Verify any tax credit directly on IRS.gov rather than taking a promoter's word for it",
+        "Be skeptical of any tax strategy promising unusually large refunds or major liability reductions tied to tribal affiliation",
+        "Consult an independent, licensed tax professional before purchasing or claiming any unfamiliar credit",
+        "Report suspected tax fraud or scheme promoters at IRS.gov/submitatip"
+      ],
+      "datePublished": "2026-11-27T00:53:41.400Z",
+      "howItWorks": "Promoters approach taxpayers, businesses, and tax professionals offering to sell a purported \"Tribal Tax Credit\" that supposedly lets buyers dramatically cut their federal tax liability or claim large refunds. To make the scheme look legitimate, promoters falsely claim a government agreement exists allowing tribal trust fund payments to be converted into federal tax credits, misuse references to the real New Markets Tax Credit under Internal Revenue Code Section 45D, cite presidential executive orders as supposed legal authority, and point to previously accepted tax returns as \"proof\" the IRS has approved the credit — when acceptance of a return does not mean the IRS validated anything claimed on it. Investors pay to acquire these fake credits as a tax shelter and then file returns claiming them, exposing themselves to civil and criminal penalties since no federal statute or agreement actually creates a Tribal Tax Credit.",
+      "redFlags": [
+        "A promoter claims a secret or little-known government/tribal agreement lets you convert tribal trust fund payments into tax credits",
+        "The pitch promises an unusually large refund or dramatic reduction in federal tax liability tied to \"tribal\" affiliation",
+        "Promoters cite executive orders, IRC Section 45D/New Markets Tax Credit, or other real-sounding legal authority out of context",
+        "You're told that a previously accepted tax return proves the credit is valid",
+        "The credit is marketed under several interchangeable names like \"Tribal Tax Credits,\" \"Native American Tax Credits,\" or \"Sovereign Tribal Tax Credits\""
+      ],
+      "realExamples": [
+        "Bloomberg Tax first reported the so-called sovereign tribal tax credit as fake in 2024, noting that wealthy investors over the past few years were duped out of hundreds of thousands of dollars when they claimed the credit, with promoters using the guise of unfamiliar tax benefits for Native American tribes to get money from investors in exchange for the same tax benefit"
+      ],
+      "source": "IRS.gov Newsroom, \"IRS warns of tax credit scams targeting the tribal community\" https://www.irs.gov/newsroom/irs-warns-of-tax-credit-scams-targeting-the-tribal-community ; Bloomberg Tax https://news.bloombergtax.com/daily-tax-report/irs-alert-on-tribal-tax-credit-scam-gives-taxpayers-leverage",
+      "spreadPlatforms": [
+        "Financial Advisors/Promoters",
+        "Phone Calls",
+        "Email",
+        "Investment Seminars"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
