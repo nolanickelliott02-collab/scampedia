@@ -1,6 +1,6 @@
 {
-  "version": 126,
-  "lastUpdated": "2026-11-27T00:54:16.733Z",
+  "version": 127,
+  "lastUpdated": "2026-11-27T04:57:21.596Z",
   "reports": [
     {
       "id": "1",
@@ -6061,6 +6061,45 @@
         "Investment Seminars"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "158",
+      "slug": "fake-irs-digital-asset-compliance-portal-crypto-letter-scam",
+      "title": "Fake IRS \"Digital Asset Compliance Portal\" Crypto Letter Scam",
+      "summary": "Scammers are mailing official-looking fake IRS letters to cryptocurrency holders demanding they \"enroll\" in a nonexistent Digital Asset Compliance Portal by scanning a QR code, which leads to a fraudulent site designed to steal personal data and crypto credentials.",
+      "category": "Government Scam",
+      "firstReported": "2026-07-30",
+      "relatedScams": [
+        "Fake IRS Tax Refund Scam",
+        "QR Code Scam",
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Don't scan QR codes in unsolicited mail claiming to be from the IRS; the IRS does not operate a Digital Asset Compliance Portal",
+        "Go directly to IRS.gov by typing the address yourself instead of following links or codes from a letter",
+        "Never enter cryptocurrency wallet details or exchange credentials on a site reached via an unsolicited letter or text",
+        "Report suspicious IRS-related letters or websites to IRS Criminal Investigation and verify any notice through IRS.gov's official contact information"
+      ],
+      "datePublished": "2026-11-27T04:57:11.186Z",
+      "howItWorks": "Fraudsters mail physical letters, made to look like official IRS correspondence, directly to people known to hold cryptocurrency. The letter claims the recipient must register for a \"Digital Asset Compliance Portal\" before a stated deadline and includes a QR code to do so. Scanning the code takes the victim to a fraudulent website built to mimic IRS.gov. Once there, the fake site asks the victim to submit personal information, cryptocurrency wallet details, exchange account credentials, or other sensitive data, which the criminals then use to steal identities or drain digital asset accounts. The IRS confirmed the look-alike domain used in the scheme was registered only days before the fake letters were mailed out.",
+      "redFlags": [
+        "A letter claims you must 'enroll' in a 'Digital Asset Compliance Portal' before a deadline",
+        "The letter instructs you to scan a QR code to access an official-sounding tax website",
+        "The linked site looks like IRS.gov but asks for cryptocurrency wallet info or exchange login credentials",
+        "Urgency and deadline pressure tied to an unfamiliar, newly-registered web domain"
+      ],
+      "realExamples": [
+        "IRS Criminal Investigation issued a fraud alert on July 30, 2026 after fraudsters mailed fake letters directing crypto holders to a bogus 'Digital Asset Compliance Portal' site mimicking IRS.gov.",
+        "Investigators found the fraudulent domain used in the scheme had been registered only days before the letters were mailed, and the scam was identified through cooperation between a cryptocurrency exchange, a threat intelligence firm, and the IRS."
+      ],
+      "source": "IRS, https://www.irs.gov/compliance/criminal-investigation/fraud-alert-fake-irs-letters-target-cryptocurrency-holders",
+      "spreadPlatforms": [
+        "Physical Mail",
+        "Fake Websites",
+        "QR Codes"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
