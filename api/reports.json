@@ -1,6 +1,6 @@
 {
-  "version": 128,
-  "lastUpdated": "2026-11-28T00:21:52.622Z",
+  "version": 129,
+  "lastUpdated": "2026-11-28T04:44:50.295Z",
   "reports": [
     {
       "id": "1",
@@ -6133,6 +6133,45 @@
         "Online Marketplaces"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "160",
+      "slug": "kali365-device-code-phishing-as-a-service-scam",
+      "title": "Kali365 Device Code Phishing-as-a-Service Scam",
+      "summary": "A Telegram-distributed Phishing-as-a-Service kit called Kali365 tricks Microsoft 365 users into approving a \"device code\" that secretly hands attackers a working login session, letting criminals bypass MFA entirely without ever stealing a password.",
+      "category": "Tech Scam",
+      "firstReported": "2026-04-01",
+      "relatedScams": [
+        "Phishing Email Scam",
+        "SEO Poisoning Bank Account Takeover Scam"
+      ],
+      "safetyTips": [
+        "Never enter a device code into a Microsoft (or any) login page unless you personally initiated that specific sign-in attempt on another device",
+        "Organizations should create a conditional access policy blocking device code flow for all users, with limited exceptions for required business processes, after auditing legitimate dependencies",
+        "Block authentication transfer policies to prevent users from transferring authentication from computers to mobile devices",
+        "If device code flow can't be fully restricted, exclude emergency access accounts to prevent lockouts",
+        "Report suspected incidents, including phishing email headers, suspicious logins, and any unauthorized devices or active sessions, to the FBI's Internet Crime Complaint Center at ic3.gov"
+      ],
+      "datePublished": "2026-11-28T04:44:23.120Z",
+      "howItWorks": "Criminals send a phishing email impersonating trusted cloud productivity and document-sharing services, containing a \"device code\" along with instructions to visit a real, legitimate Microsoft verification page and enter it. The target follows the instructions and pastes the attacker-supplied code into Microsoft's genuine device login portal, unknowingly authorizing the attacker's device rather than their own. The attacker then captures OAuth access and refresh tokens, granting access to the victim's Microsoft 365 account. With these tokens the attacker gets persistent access to the victim's Outlook, Teams, and OneDrive without needing a password or completing any additional MFA challenges, and the Kali365 subscription service also provides subscribers with AI-generated phishing lures, automated campaign templates, and real-time tracking dashboards.",
+      "redFlags": [
+        "An unsolicited email asks you to enter a \"device code\" on a Microsoft sign-in or verification page you didn't initiate",
+        "You're asked to authenticate a device or session you don't recognize as your own",
+        "A phishing email impersonates trusted cloud productivity and document-sharing services with instructions to visit a verification page",
+        "Account activity appears in Outlook/Teams/OneDrive that you don't recall creating"
+      ],
+      "realExamples": [
+        "The FBI issued a public service announcement warning that Kali365, first seen in April 2026, enables cyber threat actors to obtain Microsoft 365 access tokens and bypass MFA without intercepting user credentials",
+        "A phishing email impersonating trusted cloud productivity and document-sharing services contains a device code with instructions to visit a legitimate Microsoft verification page; the target enters the code and unknowingly authorizes the attacker's device, and the attacker then captures OAuth access and refresh tokens granting persistent account access",
+        "The Kali365 platform subscription also provides subscribers with AI-generated phishing lures, automated campaign templates, and real-time target-tracking dashboards, lowering the skill barrier for less-technical attackers"
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), \"Kali365 Phishing-as-a-Service Kit Hijacks Microsoft 365 Access Tokens,\" https://www.ic3.gov/PSA/2026/PSA260521",
+      "spreadPlatforms": [
+        "Email",
+        "Telegram"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
