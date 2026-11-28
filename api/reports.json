@@ -1,6 +1,6 @@
 {
-  "version": 127,
-  "lastUpdated": "2026-11-27T04:57:21.596Z",
+  "version": 128,
+  "lastUpdated": "2026-11-28T00:21:52.622Z",
   "reports": [
     {
       "id": "1",
@@ -6100,6 +6100,39 @@
       ],
       "isAIDiscovered": true,
       "isGovSourced": true
+    },
+    {
+      "id": "159",
+      "slug": "third-party-we-ll-handle-your-return-scam",
+      "title": "Third-Party \"We'll Handle Your Return\" Scam",
+      "summary": "Scammers advertise on social media offering to return or exchange unwanted holiday gifts for shoppers in exchange for a fee, then disappear with the merchandise and money instead of ever processing a refund.",
+      "category": "Shopping Scam",
+      "firstReported": "2025-12-25",
+      "relatedScams": [],
+      "safetyTips": [
+        "Always return items directly through the original retailer whenever possible rather than a third party",
+        "Be cautious of any third-party return service that seems too convenient, especially ones found through social media",
+        "Act promptly on returns, but don't rush into offers that seem too good to be true",
+        "Check return policies and deadlines before the holidays, since retailers often shorten return windows or require receipts during this time"
+      ],
+      "datePublished": "2026-11-28T00:21:26.820Z",
+      "howItWorks": "After the holidays, people who don't want the hassle of standing in return lines see social media posts or messages from someone claiming to run a return-handling service: send them your unwanted gift (or let them pick it up) along with a fee, and they'll take it back to the store and get you your refund. Victims ship their merchandise or arrange for pickup and pay the requested fee, believing someone else is handling the return for them. Once the item and payment are sent, communication stops, and in many cases consumers never see their items again and never receive the promised refund.",
+      "redFlags": [
+        "A stranger on social media offers to handle your store return or exchange for a fee",
+        "You're asked to ship the item or hand it over before any refund is confirmed",
+        "Communication stops completely once the item and fee have been sent",
+        "The offer appears as an unsolicited post or DM rather than through an official retailer channel"
+      ],
+      "realExamples": [
+        "BBB reported a case where someone posted on social media offering, \"If you don't like dealing with your returns, I'll take care of them for you. My company will take care of them for you. We'll even pick them up, or you can ship them back to me,\" after which victims shipped merchandise or arranged pickup and paid a fee, believing someone else was handling the return, only for communication to stop afterward and no refund to ever be received."
+      ],
+      "source": "BBB via WBRC, https://www.wbrc.com/2025/12/26/holiday-returns-can-get-tricky-bbb-warns-shoppers-slow-down-stay-alert/",
+      "spreadPlatforms": [
+        "Social Media",
+        "Direct Message",
+        "Online Marketplaces"
+      ],
+      "isAIDiscovered": true
     }
   ]
 }
