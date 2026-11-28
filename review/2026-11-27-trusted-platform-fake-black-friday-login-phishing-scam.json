@@ -1,0 +1,57 @@
+{
+  "botName": "daily-scam-entry",
+  "candidate": {
+    "id": "158",
+    "slug": "trusted-platform-fake-black-friday-login-phishing-scam",
+    "title": "Trusted-Platform Fake Black Friday Login-Phishing Scam",
+    "summary": "Scammers are building fake Black Friday \"deal\" pages on free, trusted platforms like Google Sites, Blogger, and GitHub Pages and spreading them through Facebook buy/sell groups — skipping the lookalike domains and holiday keywords shoppers are trained to spot, and aiming to steal account logins rather than payment card numbers.",
+    "category": "Shopping Scam",
+    "firstReported": "2026-11-23",
+    "relatedScams": [],
+    "safetyTips": [
+      "Go directly to a retailer's official app or website to check sales instead of clicking links shared in Facebook groups or ads",
+      "Never enter login credentials for an unrelated account (email, bank, airline, crypto wallet) on a page you reached through a shopping deal link",
+      "Use unique passwords for every account and enable two-factor authentication so a stolen login alone can't be used to drain funds",
+      "Remember that a trustworthy-looking root domain (like sites.google.com) doesn't guarantee the specific page on it is legitimate",
+      "Report suspected fake deal pages to the platform (Facebook, Google) and to the FTC at ReportFraud.ftc.gov"
+    ],
+    "datePublished": "2026-11-27T00:56:15.247Z",
+    "howItWorks": "Instead of registering a copycat domain like \"target-blackfriday-sale.com,\" scammers now host fake sale pages directly on legitimate free website builders such as Google Sites, Blogger, and GitHub Pages, which carry a trusted root domain that passes most shoppers' usual \"check the web address\" habit. According to cybersecurity firm Doppel, this season's fake pages began appearing on September 1 — more than a month earlier than the prior year — and the typical lure is a post in a Facebook group or a page on one of these trusted hosts, carrying a retailer's sale language on behalf of a software, payment, travel, or crypto brand, and asking the visitor to log in. Rather than impersonating retailers outright (which make up only about 10% of the sale-themed fake pages found), the pages borrow the branding of software, payment, travel, and crypto companies, and more than a third are built to harvest existing account credentials instead of credit card data. About half of confirmed social-media brand impersonation happens inside Facebook groups, with the vast majority of the fraudulent ads driving traffic running through Facebook Ads itself, giving the posts the appearance of being vetted by the group or platform.",
+    "redFlags": [
+      "A \"deal\" page lives on a generic free-hosting address (sites.google.com, blogspot.com, github.io) rather than the retailer's actual domain",
+      "The page never mentions the holiday by name or uses a lookalike brand domain — the one trick most shoppers check for",
+      "You're asked to log in to an existing account (email, payment app, airline, crypto exchange) just to view or claim a discount",
+      "The deal was shared inside a Facebook buy/sell/deal group rather than found directly on the retailer's own site or app",
+      "Discounts advertised are unusually steep (up to 65% off) for software, travel, payment, or crypto brands rather than typical retail goods"
+    ],
+    "realExamples": [
+      "Doppel researchers tracked fake Black Friday-themed pages beginning September 1, 2026, over a month earlier than the previous season, with most lacking holiday keywords or lookalike domains",
+      "About one in four lookalike pages identified were hosted on legitimate platforms such as Google Sites, Blogger, and GitHub Pages",
+      "More than a third of the fraudulent lookalike sites were designed to steal login credentials for existing accounts rather than payment information",
+      "Retailers accounted for only about 10% of the sale-themed fraudulent pages, with software, payment, travel, and crypto brands impersonated instead"
+    ],
+    "source": "Help Net Security, https://www.helpnetsecurity.com/2026/11/23/black-friday-scams-doppel-report/",
+    "spreadPlatforms": [
+      "Facebook Groups",
+      "Facebook Ads",
+      "Google Sites",
+      "Blogger",
+      "GitHub Pages"
+    ],
+    "isAIDiscovered": true
+  },
+  "triage": {
+    "isDistinctPattern": true,
+    "duplicateOf": null,
+    "novelty": "known-variant",
+    "severity": "medium",
+    "urgency": "high",
+    "sourceCredibility": "established-outlet",
+    "suggestedCategory": "Shopping Scam",
+    "suggestedAliases": [],
+    "focusesOnUS": false,
+    "confidence": 0.55,
+    "reasoning": "This describes a specific, timely tactic—hosting fake Black Friday login-phishing pages on trusted free platforms (Google Sites, Blogger, GitHub Pages) and distributing via Facebook groups/ads to harvest account credentials rather than card data. It overlaps conceptually with 'Fake Online Store Scam' and 'Fake Retail Coupon/Promo Code Scam' but the specific mechanism (trusted-domain hosting to evade URL-checking habits, cloaking, credential theft focus, non-retailer brand impersonation) is a distinct enough variant to warrant separate documentation; the source is a credible cybersecurity-industry press report (Help Net Security citing Doppel) but doesn't specify US-specific targeting, only general shopper/holiday context."
+  },
+  "queuedAt": "2026-11-27T00:56:22.222Z"
+}

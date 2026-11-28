@@ -1,6 +1,6 @@
 {
-  "version": 124,
-  "lastUpdated": "2026-11-26T00:49:02.039Z",
+  "version": 129,
+  "lastUpdated": "2026-11-28T04:44:50.295Z",
   "reports": [
     {
       "id": "1",
@@ -5981,6 +5981,197 @@
         "Instagram"
       ],
       "isAIDiscovered": true
+    },
+    {
+      "id": "156",
+      "slug": "nft-airdrop-crypto-wallet-draining-scam",
+      "title": "NFT Airdrop Crypto Wallet Draining Scam",
+      "summary": "Criminals send unsolicited \"free\" NFT or token airdrops to cryptocurrency wallets, then lure recipients to a phishing site to \"claim\" or \"connect\" for more rewards — stealing the victim's seed phrase and draining the wallet.",
+      "category": "Investment Scam",
+      "firstReported": "2023-08-24",
+      "relatedScams": [
+        "Crypto Investment Scam",
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Never respond to requests for passwords, seed phrases, or one-time passcodes sent to your accounts if you did not initiate the contact",
+        "If you did not sign up to participate in a marketing or rewards program and you receive an offer for free tokens, verify the offer is from the cryptocurrency provider before accepting and/or providing any information",
+        "Initiate a new call to the company using a verified customer service number if a \"representative\" reaches out to you via phone or email soliciting personal information",
+        "Do not click links or use numbers provided in suspicious emails for confirming communication is legitimate",
+        "Monitor cryptocurrency accounts for suspicious login attempts, unauthorized changes to the account, unrecognized transactions, or compromised credentials",
+        "Report suspected airdrop fraud to the FBI's Internet Crime Complaint Center at ic3.gov"
+      ],
+      "datePublished": "2026-11-26T04:56:28.505Z",
+      "howItWorks": "Scammers exploit the legitimate NFT airdrop feature built into non-custodial crypto wallets, which was originally created for marketing purposes, by sending unsolicited tokens disguised as free rewards, often targeting users of networks like Hedera Hashgraph. After an unsuspecting user receives the surprise token, a plaintext \"memo\" field attached to the transaction contains a link telling the user they can earn even more crypto by connecting their wallet to a decentralized application (dApp). That connection process asks the victim to enter login and security information, including their seed phrase, to \"complete the connection.\" Once entered, the criminals use that information to drain the victim's wallet. Criminals also advertise the same fraudulent airdrop links directly through phishing emails or on social media and third-party websites.",
+      "redFlags": [
+        "Receiving tokens, NFTs, or crypto rewards in your wallet that you never requested or signed up for",
+        "A memo or message attached to an unsolicited token containing a link to \"claim\" more rewards",
+        "Any site or prompt that asks you to enter your seed phrase, password, or one-time passcode to \"connect\" your wallet",
+        "Unsolicited outreach by email, social media, or chat promoting a free token giveaway tied to a well-known blockchain network"
+      ],
+      "realExamples": [
+        "FBI IC3 PSA describing cyber criminals defrauding cryptocurrency users through the NFT airdrop feature embedded in non-custodial wallets, disguised as free rewards for Hedera Hashgraph network users",
+        "Victims receiving unsolicited tokens with a plaintext memo linking to a dApp connection page that requested seed phrases to \"complete the connection,\" after which funds were stolen from the wallet"
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), Public Service Announcement PSA250603, https://www.ic3.gov/PSA/2025/PSA250603",
+      "spreadPlatforms": [
+        "Cryptocurrency Wallets",
+        "Email",
+        "Social Media",
+        "Third-Party Websites"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "157",
+      "slug": "fake-tribal-tax-credit-scheme",
+      "title": "Fake \"Tribal Tax Credit\" Scheme",
+      "summary": "Promoters sell wealthy investors and tax professionals on a nonexistent \"Tribal Tax Credit\" (also marketed as a \"Native American Tax Credit\" or \"Sovereign Tribal Tax Credit\"), claiming it can wipe out federal tax bills or generate big refunds — but the IRS says no such credit exists under federal law.",
+      "category": "Government Scam",
+      "firstReported": "2024-01-01",
+      "relatedScams": [
+        "Government Grant Scam",
+        "Ghost Tax Preparer Scam",
+        "Fake IRS Tax Refund Scam"
+      ],
+      "safetyTips": [
+        "Verify any tax credit directly on IRS.gov rather than taking a promoter's word for it",
+        "Be skeptical of any tax strategy promising unusually large refunds or major liability reductions tied to tribal affiliation",
+        "Consult an independent, licensed tax professional before purchasing or claiming any unfamiliar credit",
+        "Report suspected tax fraud or scheme promoters at IRS.gov/submitatip"
+      ],
+      "datePublished": "2026-11-27T00:53:41.400Z",
+      "howItWorks": "Promoters approach taxpayers, businesses, and tax professionals offering to sell a purported \"Tribal Tax Credit\" that supposedly lets buyers dramatically cut their federal tax liability or claim large refunds. To make the scheme look legitimate, promoters falsely claim a government agreement exists allowing tribal trust fund payments to be converted into federal tax credits, misuse references to the real New Markets Tax Credit under Internal Revenue Code Section 45D, cite presidential executive orders as supposed legal authority, and point to previously accepted tax returns as \"proof\" the IRS has approved the credit — when acceptance of a return does not mean the IRS validated anything claimed on it. Investors pay to acquire these fake credits as a tax shelter and then file returns claiming them, exposing themselves to civil and criminal penalties since no federal statute or agreement actually creates a Tribal Tax Credit.",
+      "redFlags": [
+        "A promoter claims a secret or little-known government/tribal agreement lets you convert tribal trust fund payments into tax credits",
+        "The pitch promises an unusually large refund or dramatic reduction in federal tax liability tied to \"tribal\" affiliation",
+        "Promoters cite executive orders, IRC Section 45D/New Markets Tax Credit, or other real-sounding legal authority out of context",
+        "You're told that a previously accepted tax return proves the credit is valid",
+        "The credit is marketed under several interchangeable names like \"Tribal Tax Credits,\" \"Native American Tax Credits,\" or \"Sovereign Tribal Tax Credits\""
+      ],
+      "realExamples": [
+        "Bloomberg Tax first reported the so-called sovereign tribal tax credit as fake in 2024, noting that wealthy investors over the past few years were duped out of hundreds of thousands of dollars when they claimed the credit, with promoters using the guise of unfamiliar tax benefits for Native American tribes to get money from investors in exchange for the same tax benefit"
+      ],
+      "source": "IRS.gov Newsroom, \"IRS warns of tax credit scams targeting the tribal community\" https://www.irs.gov/newsroom/irs-warns-of-tax-credit-scams-targeting-the-tribal-community ; Bloomberg Tax https://news.bloombergtax.com/daily-tax-report/irs-alert-on-tribal-tax-credit-scam-gives-taxpayers-leverage",
+      "spreadPlatforms": [
+        "Financial Advisors/Promoters",
+        "Phone Calls",
+        "Email",
+        "Investment Seminars"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "158",
+      "slug": "fake-irs-digital-asset-compliance-portal-crypto-letter-scam",
+      "title": "Fake IRS \"Digital Asset Compliance Portal\" Crypto Letter Scam",
+      "summary": "Scammers are mailing official-looking fake IRS letters to cryptocurrency holders demanding they \"enroll\" in a nonexistent Digital Asset Compliance Portal by scanning a QR code, which leads to a fraudulent site designed to steal personal data and crypto credentials.",
+      "category": "Government Scam",
+      "firstReported": "2026-07-30",
+      "relatedScams": [
+        "Fake IRS Tax Refund Scam",
+        "QR Code Scam",
+        "Phishing Email Scam"
+      ],
+      "safetyTips": [
+        "Don't scan QR codes in unsolicited mail claiming to be from the IRS; the IRS does not operate a Digital Asset Compliance Portal",
+        "Go directly to IRS.gov by typing the address yourself instead of following links or codes from a letter",
+        "Never enter cryptocurrency wallet details or exchange credentials on a site reached via an unsolicited letter or text",
+        "Report suspicious IRS-related letters or websites to IRS Criminal Investigation and verify any notice through IRS.gov's official contact information"
+      ],
+      "datePublished": "2026-11-27T04:57:11.186Z",
+      "howItWorks": "Fraudsters mail physical letters, made to look like official IRS correspondence, directly to people known to hold cryptocurrency. The letter claims the recipient must register for a \"Digital Asset Compliance Portal\" before a stated deadline and includes a QR code to do so. Scanning the code takes the victim to a fraudulent website built to mimic IRS.gov. Once there, the fake site asks the victim to submit personal information, cryptocurrency wallet details, exchange account credentials, or other sensitive data, which the criminals then use to steal identities or drain digital asset accounts. The IRS confirmed the look-alike domain used in the scheme was registered only days before the fake letters were mailed out.",
+      "redFlags": [
+        "A letter claims you must 'enroll' in a 'Digital Asset Compliance Portal' before a deadline",
+        "The letter instructs you to scan a QR code to access an official-sounding tax website",
+        "The linked site looks like IRS.gov but asks for cryptocurrency wallet info or exchange login credentials",
+        "Urgency and deadline pressure tied to an unfamiliar, newly-registered web domain"
+      ],
+      "realExamples": [
+        "IRS Criminal Investigation issued a fraud alert on July 30, 2026 after fraudsters mailed fake letters directing crypto holders to a bogus 'Digital Asset Compliance Portal' site mimicking IRS.gov.",
+        "Investigators found the fraudulent domain used in the scheme had been registered only days before the letters were mailed, and the scam was identified through cooperation between a cryptocurrency exchange, a threat intelligence firm, and the IRS."
+      ],
+      "source": "IRS, https://www.irs.gov/compliance/criminal-investigation/fraud-alert-fake-irs-letters-target-cryptocurrency-holders",
+      "spreadPlatforms": [
+        "Physical Mail",
+        "Fake Websites",
+        "QR Codes"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
+    },
+    {
+      "id": "159",
+      "slug": "third-party-we-ll-handle-your-return-scam",
+      "title": "Third-Party \"We'll Handle Your Return\" Scam",
+      "summary": "Scammers advertise on social media offering to return or exchange unwanted holiday gifts for shoppers in exchange for a fee, then disappear with the merchandise and money instead of ever processing a refund.",
+      "category": "Shopping Scam",
+      "firstReported": "2025-12-25",
+      "relatedScams": [],
+      "safetyTips": [
+        "Always return items directly through the original retailer whenever possible rather than a third party",
+        "Be cautious of any third-party return service that seems too convenient, especially ones found through social media",
+        "Act promptly on returns, but don't rush into offers that seem too good to be true",
+        "Check return policies and deadlines before the holidays, since retailers often shorten return windows or require receipts during this time"
+      ],
+      "datePublished": "2026-11-28T00:21:26.820Z",
+      "howItWorks": "After the holidays, people who don't want the hassle of standing in return lines see social media posts or messages from someone claiming to run a return-handling service: send them your unwanted gift (or let them pick it up) along with a fee, and they'll take it back to the store and get you your refund. Victims ship their merchandise or arrange for pickup and pay the requested fee, believing someone else is handling the return for them. Once the item and payment are sent, communication stops, and in many cases consumers never see their items again and never receive the promised refund.",
+      "redFlags": [
+        "A stranger on social media offers to handle your store return or exchange for a fee",
+        "You're asked to ship the item or hand it over before any refund is confirmed",
+        "Communication stops completely once the item and fee have been sent",
+        "The offer appears as an unsolicited post or DM rather than through an official retailer channel"
+      ],
+      "realExamples": [
+        "BBB reported a case where someone posted on social media offering, \"If you don't like dealing with your returns, I'll take care of them for you. My company will take care of them for you. We'll even pick them up, or you can ship them back to me,\" after which victims shipped merchandise or arranged pickup and paid a fee, believing someone else was handling the return, only for communication to stop afterward and no refund to ever be received."
+      ],
+      "source": "BBB via WBRC, https://www.wbrc.com/2025/12/26/holiday-returns-can-get-tricky-bbb-warns-shoppers-slow-down-stay-alert/",
+      "spreadPlatforms": [
+        "Social Media",
+        "Direct Message",
+        "Online Marketplaces"
+      ],
+      "isAIDiscovered": true
+    },
+    {
+      "id": "160",
+      "slug": "kali365-device-code-phishing-as-a-service-scam",
+      "title": "Kali365 Device Code Phishing-as-a-Service Scam",
+      "summary": "A Telegram-distributed Phishing-as-a-Service kit called Kali365 tricks Microsoft 365 users into approving a \"device code\" that secretly hands attackers a working login session, letting criminals bypass MFA entirely without ever stealing a password.",
+      "category": "Tech Scam",
+      "firstReported": "2026-04-01",
+      "relatedScams": [
+        "Phishing Email Scam",
+        "SEO Poisoning Bank Account Takeover Scam"
+      ],
+      "safetyTips": [
+        "Never enter a device code into a Microsoft (or any) login page unless you personally initiated that specific sign-in attempt on another device",
+        "Organizations should create a conditional access policy blocking device code flow for all users, with limited exceptions for required business processes, after auditing legitimate dependencies",
+        "Block authentication transfer policies to prevent users from transferring authentication from computers to mobile devices",
+        "If device code flow can't be fully restricted, exclude emergency access accounts to prevent lockouts",
+        "Report suspected incidents, including phishing email headers, suspicious logins, and any unauthorized devices or active sessions, to the FBI's Internet Crime Complaint Center at ic3.gov"
+      ],
+      "datePublished": "2026-11-28T04:44:23.120Z",
+      "howItWorks": "Criminals send a phishing email impersonating trusted cloud productivity and document-sharing services, containing a \"device code\" along with instructions to visit a real, legitimate Microsoft verification page and enter it. The target follows the instructions and pastes the attacker-supplied code into Microsoft's genuine device login portal, unknowingly authorizing the attacker's device rather than their own. The attacker then captures OAuth access and refresh tokens, granting access to the victim's Microsoft 365 account. With these tokens the attacker gets persistent access to the victim's Outlook, Teams, and OneDrive without needing a password or completing any additional MFA challenges, and the Kali365 subscription service also provides subscribers with AI-generated phishing lures, automated campaign templates, and real-time tracking dashboards.",
+      "redFlags": [
+        "An unsolicited email asks you to enter a \"device code\" on a Microsoft sign-in or verification page you didn't initiate",
+        "You're asked to authenticate a device or session you don't recognize as your own",
+        "A phishing email impersonates trusted cloud productivity and document-sharing services with instructions to visit a verification page",
+        "Account activity appears in Outlook/Teams/OneDrive that you don't recall creating"
+      ],
+      "realExamples": [
+        "The FBI issued a public service announcement warning that Kali365, first seen in April 2026, enables cyber threat actors to obtain Microsoft 365 access tokens and bypass MFA without intercepting user credentials",
+        "A phishing email impersonating trusted cloud productivity and document-sharing services contains a device code with instructions to visit a legitimate Microsoft verification page; the target enters the code and unknowingly authorizes the attacker's device, and the attacker then captures OAuth access and refresh tokens granting persistent account access",
+        "The Kali365 platform subscription also provides subscribers with AI-generated phishing lures, automated campaign templates, and real-time target-tracking dashboards, lowering the skill barrier for less-technical attackers"
+      ],
+      "source": "FBI Internet Crime Complaint Center (IC3), \"Kali365 Phishing-as-a-Service Kit Hijacks Microsoft 365 Access Tokens,\" https://www.ic3.gov/PSA/2026/PSA260521",
+      "spreadPlatforms": [
+        "Email",
+        "Telegram"
+      ],
+      "isAIDiscovered": true,
+      "isGovSourced": true
     }
   ]
 }
